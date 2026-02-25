@@ -1,0 +1,198 @@
+{
+  "pid": 67089,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 67095,
+      "ppid": 67089,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Minimized -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\evt_7f2ad868.txt'\"",
+      "children": [
+        {
+          "pid": 67099,
+          "ppid": 67095,
+          "name": "rundll32.exe",
+          "command": "rundll32.exe \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\helper.dll\",DllRegisterServer",
+          "children": [
+            {
+              "pid": 67104,
+              "ppid": 67099,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\who_66201b84.txt\"",
+              "children": [
+                {
+                  "pid": 67111,
+                  "ppid": 67104,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /v",
+                  "children": [
+                    {
+                      "pid": 67114,
+                      "ppid": 67111,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv > \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\who_93483f6f.txt\"",
+                      "children": [
+                        {
+                          "pid": 67120,
+                          "ppid": 67114,
+                          "name": "regsvr32.exe",
+                          "command": "regsvr32.exe /s \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\diagext.dll\"",
+                          "children": [
+                            {
+                              "pid": 67122,
+                              "ppid": 67120,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 8 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 67123,
+                                  "ppid": 67122,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 3 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 67125,
+                                      "ppid": 67123,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                      "children": [
+                                        {
+                                          "pid": 67130,
+                                          "ppid": 67125,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Northwind\\Logs\\deploy.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 67135,
+                                              "ppid": 67130,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all",
+                                              "children": [
+                                                {
+                                                  "pid": 67139,
+                                                  "ppid": 67135,
+                                                  "name": "cmd.exe",
+                                                  "command": "cmd.exe /c \"tasklist.exe /v\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 67145,
+                                                      "ppid": 67139,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -File \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\BuildPack_1ac8fe17.ps1\" -Host \"ENG-558\" -Mode Verify",
+                                                      "children": [
+                                                        {
+                                                          "pid": 67149,
+                                                          "ppid": 67145,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 67155,
+                                                              "ppid": 67149,
+                                                              "name": "findstr.exe",
+                                                              "command": "findstr.exe /i \"certificate\" \"C:\\ProgramData\\Wingtip\\Logs\\deploy.log\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 67160,
+                                                                  "ppid": 67155,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 67166,
+                                                                      "ppid": 67160,
+                                                                      "name": "findstr.exe",
+                                                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Fabrikam\\Logs\\support.log\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 67168,
+                                                                          "ppid": 67166,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 15 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 67172,
+                                                                              "ppid": 67168,
+                                                                              "name": "findstr.exe",
+                                                                              "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Litware\\Logs\\deploy.log\"",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 67178,
+                                                                          "ppid": 67166,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 67179,
+                                                                              "ppid": 67178,
+                                                                              "name": "timeout.exe",
+                                                                              "command": "timeout.exe /t 2 /nobreak",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 67184,
+                                                                                  "ppid": 67179,
+                                                                                  "name": "ping.exe",
+                                                                                  "command": "ping.exe -n 24 127.0.0.1 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 67188,
+                                                                                      "ppid": 67184,
+                                                                                      "name": "choice.exe",
+                                                                                      "command": "choice.exe /d y /t 12 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 67194,
+                                                                                          "ppid": 67188,
+                                                                                          "name": "choice.exe",
+                                                                                          "command": "choice.exe /d y /t 7 > nul",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

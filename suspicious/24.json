@@ -1,0 +1,236 @@
+{
+  "pid": 53257,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 53259,
+      "ppid": 53257,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\karthik.nair\\AppData\\Local\\Temp\\LoginInit_b577df0e.js\"",
+      "children": [
+        {
+          "pid": 53261,
+          "ppid": 53259,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+          "children": [
+            {
+              "pid": 53267,
+              "ppid": 53261,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"hostname\"",
+              "children": [
+                {
+                  "pid": 53269,
+                  "ppid": 53267,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups > \"C:\\Users\\karthik.nair\\AppData\\Local\\Temp\\who_5b4df408.txt\"",
+                  "children": [
+                    {
+                      "pid": 53270,
+                      "ppid": 53269,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -WindowStyle Minimized -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\karthik.nair\\AppData\\Local\\Temp\\diag_531dd089.txt'\"",
+                      "children": [
+                        {
+                          "pid": 53274,
+                          "ppid": 53270,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /v",
+                          "children": [
+                            {
+                              "pid": 53281,
+                              "ppid": 53274,
+                              "name": "wevtutil.exe",
+                              "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Wingtip\\Logs\\Security_bbe1bafc.evtx\"",
+                              "children": [
+                                {
+                                  "pid": 53287,
+                                  "ppid": 53281,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /v",
+                                  "children": [
+                                    {
+                                      "pid": 53289,
+                                      "ppid": 53287,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\karthik.nair\\AppData\\Local\\Temp\\host_5fc71779.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 53291,
+                                          "ppid": 53289,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Northwind\\Logs\\System_75a575d7.evtx\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 53295,
+                          "ppid": 53270,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 11 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 53296,
+                              "ppid": 53295,
+                              "name": "wevtutil.exe",
+                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\BlueYonder\\Logs\\Application_c8bd4416.evtx\"",
+                              "children": [
+                                {
+                                  "pid": 53303,
+                                  "ppid": 53296,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all > \"C:\\Users\\karthik.nair\\AppData\\Local\\Temp\\who_c65bc625.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 53304,
+                                      "ppid": 53303,
+                                      "name": "cmd.exe",
+                                      "command": "cmd.exe /c \"reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s\"",
+                                      "children": [
+                                        {
+                                          "pid": 53310,
+                                          "ppid": 53304,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 23 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 53314,
+                                              "ppid": 53310,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\karthik.nair\\AppData\\Local\\Temp\\host_abe7c17a.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 53318,
+                                                  "ppid": 53314,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 9 > nul",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 53325,
+                                          "ppid": 53304,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 18 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 53332,
+                                              "ppid": 53325,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\karthik.nair\\AppData\\Local\\Temp\\host_bfff6ebf.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 53333,
+                                                  "ppid": 53332,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Litware\\Logs\\System_3999729a.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 53337,
+                                                      "ppid": 53333,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 53340,
+                                                          "ppid": 53337,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /svc",
+                                                          "children": [
+                                                            {
+                                                              "pid": 53345,
+                                                              "ppid": 53340,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\karthik.nair\\AppData\\Local\\Temp\\host_3ec9c866.txt\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 53349,
+                                              "ppid": 53325,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all > \"C:\\Users\\karthik.nair\\AppData\\Local\\Temp\\who_26a40661.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 53353,
+                                                  "ppid": 53349,
+                                                  "name": "schtasks.exe",
+                                                  "command": "schtasks.exe /query /fo LIST /v",
+                                                  "children": [
+                                                    {
+                                                      "pid": 53354,
+                                                      "ppid": 53353,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups > \"C:\\Users\\karthik.nair\\AppData\\Local\\Temp\\who_0fde8e54.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 53358,
+                                                          "ppid": 53354,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\karthik.nair\\AppData\\Local\\Temp\\host_fdeff916.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 53361,
+                                                              "ppid": 53358,
+                                                              "name": "wevtutil.exe",
+                                                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Woodgrove\\Logs\\Microsoft-Windows-TaskScheduler_Operational_ddfa0c0c.evtx\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 53367,
+                                                                  "ppid": 53361,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 7 > nul",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

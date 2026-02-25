@@ -1,0 +1,236 @@
+{
+  "pid": 61162,
+  "ppid": 0,
+  "name": "taskhostw.exe",
+  "command": "taskhostw.exe -k Schedule",
+  "children": [
+    {
+      "pid": 61163,
+      "ppid": 61162,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 17 /nobreak",
+      "children": [
+        {
+          "pid": 61170,
+          "ppid": 61163,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /create /tn \"\\Wingtip\\Profile\\Verify\" /tr \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\run_37e89a2f.cmd\" /sc once /st 21:46 /f /ru \"CORP\\priya.jain\"",
+          "children": [
+            {
+              "pid": 61176,
+              "ppid": 61170,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+              "children": [
+                {
+                  "pid": 61182,
+                  "ppid": 61176,
+                  "name": "reg.exe",
+                  "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                  "children": [
+                    {
+                      "pid": 61185,
+                      "ppid": 61182,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /svc",
+                      "children": [
+                        {
+                          "pid": 61189,
+                          "ppid": 61185,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 61195,
+                              "ppid": 61189,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 6 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 61196,
+                                  "ppid": 61195,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /svc",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 61197,
+                      "ppid": 61182,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\who_72af79a4.txt\"",
+                      "children": [
+                        {
+                          "pid": 61202,
+                          "ppid": 61197,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /run /tn \"\\Contoso\\Support\\Diag\"",
+                          "children": [
+                            {
+                              "pid": 61220,
+                              "ppid": 61202,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 61224,
+                                  "ppid": 61220,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 61228,
+                                      "ppid": 61224,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                      "children": [
+                                        {
+                                          "pid": 61229,
+                                          "ppid": 61228,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\diag_7f08f29f.txt'\"",
+                                          "children": [
+                                            {
+                                              "pid": 61234,
+                                              "ppid": 61229,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                              "children": [
+                                                {
+                                                  "pid": 61240,
+                                                  "ppid": 61234,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 61246,
+                                                      "ppid": 61240,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 15 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 61250,
+                                                          "ppid": 61246,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 61251,
+                                                              "ppid": 61250,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 18 127.0.0.1 > nul",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 61254,
+                                                  "ppid": 61234,
+                                                  "name": "schtasks.exe",
+                                                  "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+                                                  "children": [
+                                                    {
+                                                      "pid": 61261,
+                                                      "ppid": 61254,
+                                                      "name": "reg.exe",
+                                                      "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                                      "children": [
+                                                        {
+                                                          "pid": 61262,
+                                                          "ppid": 61261,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 61264,
+                                                              "ppid": 61262,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 24 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 61267,
+                                                                  "ppid": 61264,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /all > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\who_5b3d235d.txt\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 61203,
+      "ppid": 61162,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\host_83fa5bf0.txt\"",
+      "children": [
+        {
+          "pid": 61206,
+          "ppid": 61203,
+          "name": "ping.exe",
+          "command": "ping.exe -n 21 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 61213,
+              "ppid": 61206,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\who_78ba18e6.txt\"",
+              "children": [
+                {
+                  "pid": 61214,
+                  "ppid": 61213,
+                  "name": "reg.exe",
+                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                  "children": [
+                    {
+                      "pid": 61215,
+                      "ppid": 61214,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\who_bacc5522.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

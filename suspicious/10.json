@@ -1,0 +1,245 @@
+{
+  "pid": 51478,
+  "ppid": 0,
+  "name": "ccmexec.exe",
+  "command": "ccmexec.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 51479,
+      "ppid": 51478,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"whoami /all\"",
+      "children": [
+        {
+          "pid": 51482,
+          "ppid": 51479,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 6 /nobreak",
+          "children": [
+            {
+              "pid": 51489,
+              "ppid": 51482,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-Service | Out-File 'C:\\Users\\rahul.nair\\AppData\\Local\\Temp\\inv_a31d7dea.txt'\"",
+              "children": [
+                {
+                  "pid": 51496,
+                  "ppid": 51489,
+                  "name": "ipconfig.exe",
+                  "command": "ipconfig.exe /displaydns",
+                  "children": [
+                    {
+                      "pid": 51501,
+                      "ppid": 51496,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 26 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 51503,
+                          "ppid": 51501,
+                          "name": "wmic.exe",
+                          "command": "wmic.exe qfe get HotFixID,InstalledOn",
+                          "children": [
+                            {
+                              "pid": 51509,
+                              "ppid": 51503,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\rahul.nair\\AppData\\Local\\Temp\\host_72f97d0a.txt\"",
+                              "children": [
+                                {
+                                  "pid": 51510,
+                                  "ppid": 51509,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\rahul.nair\\AppData\\Local\\Temp\\host_6b2d217a.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 51512,
+                                      "ppid": 51510,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups > \"C:\\Users\\rahul.nair\\AppData\\Local\\Temp\\who_49089311.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 51514,
+                                          "ppid": 51512,
+                                          "name": "schtasks.exe",
+                                          "command": "schtasks.exe /query /fo LIST /v",
+                                          "children": [
+                                            {
+                                              "pid": 51517,
+                                              "ppid": 51514,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 51522,
+                                                  "ppid": 51517,
+                                                  "name": "schtasks.exe",
+                                                  "command": "schtasks.exe /query /fo LIST /v",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 51524,
+                                  "ppid": 51509,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 51528,
+                                      "ppid": 51524,
+                                      "name": "schtasks.exe",
+                                      "command": "schtasks.exe /query /fo LIST /v",
+                                      "children": [
+                                        {
+                                          "pid": 51529,
+                                          "ppid": 51528,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\BlueYonder\\Logs\\diag.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 51534,
+                                              "ppid": 51529,
+                                              "name": "ipconfig.exe",
+                                              "command": "ipconfig.exe /all",
+                                              "children": [
+                                                {
+                                                  "pid": 51536,
+                                                  "ppid": 51534,
+                                                  "name": "ping.exe",
+                                                  "command": "ping.exe -n 25 127.0.0.1 > nul",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 51542,
+                                              "ppid": 51529,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Contoso\\Logs\\deploy.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 51545,
+                                                  "ppid": 51542,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Contoso\\Logs\\Application_1cf9fd54.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 51547,
+                                                      "ppid": 51545,
+                                                      "name": "schtasks.exe",
+                                                      "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+                                                      "children": [
+                                                        {
+                                                          "pid": 51553,
+                                                          "ppid": 51547,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 4 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 51558,
+                                                              "ppid": 51553,
+                                                              "name": "netsh.exe",
+                                                              "command": "netsh.exe winhttp show proxy > \"C:\\ProgramData\\Fabrikam\\Logs\\net_7f505005.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 51564,
+                                                                  "ppid": 51558,
+                                                                  "name": "schtasks.exe",
+                                                                  "command": "schtasks.exe /query /tn \"\\Contoso\\Support\\Diag\" /v /fo LIST",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 51565,
+                                                                      "ppid": 51564,
+                                                                      "name": "netsh.exe",
+                                                                      "command": "netsh.exe winhttp show proxy > \"C:\\ProgramData\\Northwind\\Logs\\net_e30ee8cf.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 51568,
+                                                                          "ppid": 51565,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups > \"C:\\Users\\rahul.nair\\AppData\\Local\\Temp\\who_d6934142.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 51570,
+                                                                              "ppid": 51568,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 51571,
+                                                                                  "ppid": 51570,
+                                                                                  "name": "timeout.exe",
+                                                                                  "command": "timeout.exe /t 18 /nobreak",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 51577,
+                                                                                      "ppid": 51571,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe > \"C:\\Users\\rahul.nair\\AppData\\Local\\Temp\\who_ff387981.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 51584,
+                                                                                          "ppid": 51577,
+                                                                                          "name": "cmd.exe",
+                                                                                          "command": "cmd.exe /c \"findstr.exe /i \"failed\" \"C:\\ProgramData\\Contoso\\Logs\\update.log\"\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 51587,
+                                                                                              "ppid": 51584,
+                                                                                              "name": "findstr.exe",
+                                                                                              "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Woodgrove\\Logs\\profile.log\"",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

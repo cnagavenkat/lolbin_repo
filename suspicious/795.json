@@ -1,0 +1,181 @@
+{
+  "pid": 148229,
+  "ppid": 0,
+  "name": "winlogon.exe",
+  "command": "winlogon.exe /silent",
+  "children": [
+    {
+      "pid": 148232,
+      "ppid": 148229,
+      "name": "ping.exe",
+      "command": "ping.exe -n 10 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 148234,
+          "ppid": 148232,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /create /tn \"\\Contoso\\Support\\Cleanup\" /tr \"C:\\ProgramData\\Fabrikam\\Client\\sync_0a427033.vbs\" /sc daily /st 09:24 /f",
+          "children": [
+            {
+              "pid": 148240,
+              "ppid": 148234,
+              "name": "quser.exe",
+              "command": "quser.exe /server:SUP-841",
+              "children": [
+                {
+                  "pid": 148242,
+                  "ppid": 148240,
+                  "name": "cmd.exe",
+                  "command": "cmd.exe /c \"quser.exe /server:ENG-630\"",
+                  "children": [
+                    {
+                      "pid": 148243,
+                      "ppid": 148242,
+                      "name": "quser.exe",
+                      "command": "quser.exe /server:BLD-245",
+                      "children": [
+                        {
+                          "pid": 148246,
+                          "ppid": 148243,
+                          "name": "cscript.exe",
+                          "command": "cscript.exe //nologo \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\Deploy_b46a83af.wsf\" /quiet",
+                          "children": [
+                            {
+                              "pid": 148247,
+                              "ppid": 148246,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 14 > nul",
+                              "children": [
+                                {
+                                  "pid": 148249,
+                                  "ppid": 148247,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 15 /nobreak",
+                                  "children": [
+                                    {
+                                      "pid": 148254,
+                                      "ppid": 148249,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\host_8ebf9065.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 148258,
+                                          "ppid": 148254,
+                                          "name": "quser.exe",
+                                          "command": "quser.exe /server:OPS-279",
+                                          "children": [
+                                            {
+                                              "pid": 148259,
+                                              "ppid": 148258,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\host_672e2ed0.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 148263,
+                                                  "ppid": 148259,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 148269,
+                                      "ppid": 148249,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"RuntimeAssist\" /t REG_SZ /d \"C:\\ProgramData\\Alpine\\Patch\\Build_a245fc49.ps1\" /f",
+                                      "children": [
+                                        {
+                                          "pid": 148270,
+                                          "ppid": 148269,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\host_cede1049.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 148276,
+                                              "ppid": 148270,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv",
+                                              "children": [
+                                                {
+                                                  "pid": 148277,
+                                                  "ppid": 148276,
+                                                  "name": "quser.exe",
+                                                  "command": "quser.exe /server:BLD-622",
+                                                  "children": [
+                                                    {
+                                                      "pid": 148284,
+                                                      "ppid": 148277,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 148285,
+                                          "ppid": 148269,
+                                          "name": "quser.exe",
+                                          "command": "quser.exe /server:SUP-981",
+                                          "children": [
+                                            {
+                                              "pid": 148291,
+                                              "ppid": 148285,
+                                              "name": "quser.exe",
+                                              "command": "quser.exe /server:BLD-826",
+                                              "children": [
+                                                {
+                                                  "pid": 148295,
+                                                  "ppid": 148291,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 9 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 148299,
+                                                      "ppid": 148295,
+                                                      "name": "schtasks.exe",
+                                                      "command": "schtasks.exe /query /fo LIST /v",
+                                                      "children": [
+                                                        {
+                                                          "pid": 148304,
+                                                          "ppid": 148299,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\who_da68ca3d.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

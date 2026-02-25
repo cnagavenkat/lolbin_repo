@@ -1,0 +1,172 @@
+{
+  "pid": 116665,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe /startup",
+  "children": [
+    {
+      "pid": 116670,
+      "ppid": 116665,
+      "name": "quser.exe",
+      "command": "quser.exe /server:WS-837",
+      "children": [
+        {
+          "pid": 116671,
+          "ppid": 116670,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 2 > nul",
+          "children": [
+            {
+              "pid": 116677,
+              "ppid": 116671,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe",
+              "children": [
+                {
+                  "pid": 116683,
+                  "ppid": 116677,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe",
+                  "children": [
+                    {
+                      "pid": 116687,
+                      "ppid": 116683,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 8 /nobreak",
+                      "children": [
+                        {
+                          "pid": 116695,
+                          "ppid": 116687,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                          "children": [
+                            {
+                              "pid": 116697,
+                              "ppid": 116695,
+                              "name": "wmic.exe",
+                              "command": "wmic.exe os get Caption,Version,BuildNumber /value",
+                              "children": [
+                                {
+                                  "pid": 116703,
+                                  "ppid": 116697,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+                                  "children": [
+                                    {
+                                      "pid": 116710,
+                                      "ppid": 116703,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\host_7bf17d5a.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 116712,
+                                          "ppid": 116710,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups",
+                                          "children": [
+                                            {
+                                              "pid": 116717,
+                                              "ppid": 116712,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Woodgrove\\Logs\\support.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 116720,
+                                                  "ppid": 116717,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\host_c62dd054.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 116721,
+                                                      "ppid": 116720,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 116725,
+                                                  "ppid": 116717,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 116726,
+                                                      "ppid": 116725,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /priv > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\who_7eba0801.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 116727,
+                                                          "ppid": 116726,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\who_244a95e3.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 116729,
+                                                              "ppid": 116727,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 116734,
+                                                          "ppid": 116726,
+                                                          "name": "wevtutil.exe",
+                                                          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Alpine\\Logs\\Microsoft-Windows-TaskScheduler_Operational_0283c934.evtx\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 116737,
+                                                              "ppid": 116734,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 116688,
+      "ppid": 116665,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\host_d5c1b577.txt\"",
+      "children": [
+        {
+          "pid": 116692,
+          "ppid": 116688,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\host_3eea6d1f.txt\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

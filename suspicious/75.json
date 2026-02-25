@@ -1,0 +1,214 @@
+{
+  "pid": 59745,
+  "ppid": 0,
+  "name": "ccmexec.exe",
+  "command": "ccmexec.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 59746,
+      "ppid": 59745,
+      "name": "schtasks.exe",
+      "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+      "children": [
+        {
+          "pid": 59752,
+          "ppid": 59746,
+          "name": "nltest.exe",
+          "command": "nltest.exe /sc_query:FINLAB",
+          "children": [
+            {
+              "pid": 59757,
+              "ppid": 59752,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 20 > nul",
+              "children": [
+                {
+                  "pid": 59761,
+                  "ppid": 59757,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Minimized -ExecutionPolicy Bypass -File \"C:\\Users\\kiran.kulkarni\\AppData\\Local\\Temp\\BuildPack_7c054dfc.ps1\" -Host \"APP-210\" -Mode Verify",
+                  "children": [
+                    {
+                      "pid": 59765,
+                      "ppid": 59761,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\kiran.kulkarni\\AppData\\Local\\Temp\\host_2fb51141.txt\"",
+                      "children": [
+                        {
+                          "pid": 59768,
+                          "ppid": 59765,
+                          "name": "nltest.exe",
+                          "command": "nltest.exe /sc_query:BFSI",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 59771,
+                      "ppid": 59761,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 59776,
+                          "ppid": 59771,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                          "children": [
+                            {
+                              "pid": 59777,
+                              "ppid": 59776,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe",
+                              "children": [
+                                {
+                                  "pid": 59784,
+                                  "ppid": 59777,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Alpine\\Logs\\Application_6596c2aa.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 59785,
+                                      "ppid": 59784,
+                                      "name": "nltest.exe",
+                                      "command": "nltest.exe /domain_trusts",
+                                      "children": [
+                                        {
+                                          "pid": 59790,
+                                          "ppid": 59785,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv > \"C:\\Users\\kiran.kulkarni\\AppData\\Local\\Temp\\who_46957d1f.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 59794,
+                                              "ppid": 59790,
+                                              "name": "nltest.exe",
+                                              "command": "nltest.exe /domain_trusts",
+                                              "children": [
+                                                {
+                                                  "pid": 59801,
+                                                  "ppid": 59794,
+                                                  "name": "nltest.exe",
+                                                  "command": "nltest.exe /dclist:ACME",
+                                                  "children": [
+                                                    {
+                                                      "pid": 59802,
+                                                      "ppid": 59801,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 19 /nobreak",
+                                                      "children": [
+                                                        {
+                                                          "pid": 59809,
+                                                          "ppid": 59802,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all > \"C:\\Users\\kiran.kulkarni\\AppData\\Local\\Temp\\who_12219abd.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 59816,
+                                                              "ppid": 59809,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\kiran.kulkarni\\AppData\\Local\\Temp\\host_e7977e8b.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 59823,
+                                                                  "ppid": 59816,
+                                                                  "name": "nltest.exe",
+                                                                  "command": "nltest.exe /sc_query:ACME",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 59827,
+                                                                      "ppid": 59823,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 59829,
+                                                                          "ppid": 59827,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\kiran.kulkarni\\AppData\\Local\\Temp\\host_3870b14a.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 59834,
+                                                                              "ppid": 59829,
+                                                                              "name": "nltest.exe",
+                                                                              "command": "nltest.exe /domain_trusts",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 59836,
+                                                                                  "ppid": 59834,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /all > \"C:\\Users\\kiran.kulkarni\\AppData\\Local\\Temp\\who_e94dfbe4.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 59841,
+                                                                                      "ppid": 59836,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 59848,
+                                                                                          "ppid": 59841,
+                                                                                          "name": "powershell.exe",
+                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 59850,
+                                                                                              "ppid": 59848,
+                                                                                              "name": "ping.exe",
+                                                                                              "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 59852,
+                                                                                                  "ppid": 59850,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /all > \"C:\\Users\\kiran.kulkarni\\AppData\\Local\\Temp\\who_57832a17.txt\"",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

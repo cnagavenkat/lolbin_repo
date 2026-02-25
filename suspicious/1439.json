@@ -1,0 +1,315 @@
+{
+  "pid": 226876,
+  "ppid": 0,
+  "name": "scriptlauncher.exe",
+  "command": "scriptlauncher.exe /startup",
+  "children": [
+    {
+      "pid": 226881,
+      "ppid": 226876,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\akash.gupta\\AppData\\Local\\Temp\\LoginInit_85f41700.js\"",
+      "children": [
+        {
+          "pid": 226886,
+          "ppid": 226881,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 13 > nul",
+          "children": [
+            {
+              "pid": 226888,
+              "ppid": 226886,
+              "name": "bitsadmin.exe",
+              "command": "bitsadmin.exe /transfer Job53f43d75 /download /priority NORMAL \"http://intra-update.corp.local/patch/runtime.cab\" \"C:\\ProgramData\\Alpine\\Updater\\agent.cab\"",
+              "children": [
+                {
+                  "pid": 226890,
+                  "ppid": 226888,
+                  "name": "findstr.exe",
+                  "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Alpine\\Logs\\deploy.log\"",
+                  "children": [
+                    {
+                      "pid": 226892,
+                      "ppid": 226890,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                      "children": [
+                        {
+                          "pid": 226895,
+                          "ppid": 226892,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                          "children": [
+                            {
+                              "pid": 226898,
+                              "ppid": 226895,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Litware\\Logs\\update.log\"",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 226901,
+                      "ppid": 226890,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 17 /nobreak",
+                      "children": [
+                        {
+                          "pid": 226905,
+                          "ppid": 226901,
+                          "name": "cmd.exe",
+                          "command": "cmd.exe /c \"ver\"",
+                          "children": [
+                            {
+                              "pid": 226910,
+                              "ppid": 226905,
+                              "name": "bitsadmin.exe",
+                              "command": "bitsadmin.exe /info Job999ae0b5 /verbose",
+                              "children": [
+                                {
+                                  "pid": 226915,
+                                  "ppid": 226910,
+                                  "name": "bitsadmin.exe",
+                                  "command": "bitsadmin.exe /info Jobc497485f /verbose",
+                                  "children": [
+                                    {
+                                      "pid": 226921,
+                                      "ppid": 226915,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv",
+                                      "children": [
+                                        {
+                                          "pid": 226924,
+                                          "ppid": 226921,
+                                          "name": "bitsadmin.exe",
+                                          "command": "bitsadmin.exe /info Job41a14f68 /verbose",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 226928,
+                              "ppid": 226905,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\akash.gupta\\AppData\\Local\\Temp\\who_9084460e.txt\"",
+                              "children": [
+                                {
+                                  "pid": 226934,
+                                  "ppid": 226928,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\akash.gupta\\AppData\\Local\\Temp\\host_aa083d5b.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 226935,
+                                      "ppid": 226934,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Litware\\Logs\\deploy.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 226940,
+                                          "ppid": 226935,
+                                          "name": "bitsadmin.exe",
+                                          "command": "bitsadmin.exe /info Jobc97bf1f2 /verbose",
+                                          "children": [
+                                            {
+                                              "pid": 226941,
+                                              "ppid": 226940,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv > \"C:\\Users\\akash.gupta\\AppData\\Local\\Temp\\who_8186976e.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 226943,
+                                                  "ppid": 226941,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Alpine\\Logs\\profile.log\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 226947,
+                                                      "ppid": 226943,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\akash.gupta\\AppData\\Local\\Temp\\host_dd8f9254.txt\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 226953,
+                                      "ppid": 226934,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all > \"C:\\Users\\akash.gupta\\AppData\\Local\\Temp\\who_3ac397a9.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 226955,
+                                          "ppid": 226953,
+                                          "name": "cscript.exe",
+                                          "command": "cscript.exe //nologo \"C:\\IT\\Maint\\Cert_9a5d77ed.wsf\" /collect",
+                                          "children": [
+                                            {
+                                              "pid": 226961,
+                                              "ppid": 226955,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Woodgrove\\Logs\\diag.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 226967,
+                                                  "ppid": 226961,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /svc",
+                                                  "children": [
+                                                    {
+                                                      "pid": 226972,
+                                                      "ppid": 226967,
+                                                      "name": "bitsadmin.exe",
+                                                      "command": "bitsadmin.exe /info Job50c2e527 /verbose",
+                                                      "children": [
+                                                        {
+                                                          "pid": 226975,
+                                                          "ppid": 226972,
+                                                          "name": "bitsadmin.exe",
+                                                          "command": "bitsadmin.exe /info Job173d375a /verbose",
+                                                          "children": [
+                                                            {
+                                                              "pid": 226976,
+                                                              "ppid": 226975,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/all' -Wait\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 226980,
+                                                                  "ppid": 226976,
+                                                                  "name": "bitsadmin.exe",
+                                                                  "command": "bitsadmin.exe /info Job67969a51 /verbose",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 226994,
+                                                                      "ppid": 226980,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 226995,
+                                                                          "ppid": 226994,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 227001,
+                                                                              "ppid": 226995,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\akash.gupta\\AppData\\Local\\Temp\\host_1532c49d.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 227003,
+                                                                                  "ppid": 227001,
+                                                                                  "name": "choice.exe",
+                                                                                  "command": "choice.exe /d y /t 25 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 227008,
+                                                                                      "ppid": 227003,
+                                                                                      "name": "timeout.exe",
+                                                                                      "command": "timeout.exe /t 25 /nobreak",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 227015,
+                                                                                          "ppid": 227008,
+                                                                                          "name": "cmd.exe",
+                                                                                          "command": "cmd.exe /c \"findstr.exe /i \"task\" \"C:\\ProgramData\\BlueYonder\\Logs\\diag.log\"\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 227016,
+                                                                                              "ppid": 227015,
+                                                                                              "name": "bitsadmin.exe",
+                                                                                              "command": "bitsadmin.exe /info Jobfeaabee8 /verbose",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 226985,
+      "ppid": 226876,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\akash.gupta\\AppData\\Local\\Temp\\host_6c855797.txt\"",
+      "children": [
+        {
+          "pid": 226987,
+          "ppid": 226985,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+          "children": [
+            {
+              "pid": 226988,
+              "ppid": 226987,
+              "name": "ping.exe",
+              "command": "ping.exe -n 26 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 226989,
+                  "ppid": 226988,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

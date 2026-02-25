@@ -1,0 +1,227 @@
+{
+  "pid": 188302,
+  "ppid": 0,
+  "name": "CertMgrUI.exe",
+  "command": "CertMgrUI.exe /startup",
+  "children": [
+    {
+      "pid": 188308,
+      "ppid": 188302,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Minimized -Command \"Get-Service | Out-File 'C:\\Users\\isha.singh\\AppData\\Local\\Temp\\sched_bdfc4fe1.txt'\"",
+      "children": [
+        {
+          "pid": 188311,
+          "ppid": 188308,
+          "name": "certutil.exe",
+          "command": "certutil.exe -verify \"C:\\Users\\Public\\agent_signing.cer\"",
+          "children": [
+            {
+              "pid": 188312,
+              "ppid": 188311,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /svc",
+              "children": [
+                {
+                  "pid": 188315,
+                  "ppid": 188312,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 23 > nul",
+                  "children": [
+                    {
+                      "pid": 188318,
+                      "ppid": 188315,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\isha.singh\\AppData\\Local\\Temp\\host_8654bb12.txt\"",
+                      "children": [
+                        {
+                          "pid": 188323,
+                          "ppid": 188318,
+                          "name": "certutil.exe",
+                          "command": "certutil.exe -addstore Root \"C:\\Users\\isha.singh\\AppData\\Local\\Temp\\intermediate.cer\"",
+                          "children": [
+                            {
+                              "pid": 188328,
+                              "ppid": 188323,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /v",
+                              "children": [
+                                {
+                                  "pid": 188333,
+                                  "ppid": 188328,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe",
+                                  "children": [
+                                    {
+                                      "pid": 188338,
+                                      "ppid": 188333,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\isha.singh\\AppData\\Local\\Temp\\host_47c13e78.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 188341,
+                                          "ppid": 188338,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\isha.singh\\AppData\\Local\\Temp\\host_3c76f674.txt\"' -Wait\"",
+                                          "children": [
+                                            {
+                                              "pid": 188346,
+                                              "ppid": 188341,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 188349,
+                              "ppid": 188323,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 5 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 188352,
+                                  "ppid": 188349,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /svc",
+                                  "children": [
+                                    {
+                                      "pid": 188356,
+                                      "ppid": 188352,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\isha.singh\\AppData\\Local\\Temp\\host_afe3c8b9.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 188362,
+                                          "ppid": 188356,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\isha.singh\\AppData\\Local\\Temp\\host_13f7f65f.txt\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 188365,
+                                      "ppid": 188352,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\isha.singh\\AppData\\Local\\Temp\\host_4d95560b.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 188372,
+                                          "ppid": 188365,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups",
+                                          "children": [
+                                            {
+                                              "pid": 188374,
+                                              "ppid": 188372,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups > \"C:\\Users\\isha.singh\\AppData\\Local\\Temp\\who_59cc8558.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 188380,
+                                                  "ppid": 188374,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /v",
+                                                  "children": [
+                                                    {
+                                                      "pid": 188384,
+                                                      "ppid": 188380,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 188385,
+                                                          "ppid": 188384,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 188386,
+                                          "ppid": 188365,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 188389,
+                                              "ppid": 188386,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 6 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 188393,
+                                                  "ppid": 188389,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 188406,
+                                                      "ppid": 188393,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 188408,
+                                                          "ppid": 188406,
+                                                          "name": "netsh.exe",
+                                                          "command": "netsh.exe winhttp show proxy > \"C:\\ProgramData\\Fabrikam\\Logs\\net_6cfa49a0.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 188397,
+      "ppid": 188302,
+      "name": "ping.exe",
+      "command": "ping.exe -n 24 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 188403,
+          "ppid": 188397,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\isha.singh\\AppData\\Local\\Temp\\host_61e5bf4f.txt\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

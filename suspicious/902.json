@@ -1,0 +1,262 @@
+{
+  "pid": 162220,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 162222,
+      "ppid": 162220,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"whoami /all\"",
+      "children": [
+        {
+          "pid": 162227,
+          "ppid": 162222,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 18 /nobreak",
+          "children": [
+            {
+              "pid": 162234,
+              "ppid": 162227,
+              "name": "sc.exe",
+              "command": "sc.exe query \"WinRM\"",
+              "children": [
+                {
+                  "pid": 162238,
+                  "ppid": 162234,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                  "children": [
+                    {
+                      "pid": 162244,
+                      "ppid": 162238,
+                      "name": "wmic.exe",
+                      "command": "wmic.exe os get Caption,Version,BuildNumber /value",
+                      "children": [
+                        {
+                          "pid": 162262,
+                          "ppid": 162244,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\who_f47df678.txt\"",
+                          "children": [
+                            {
+                              "pid": 162266,
+                              "ppid": 162262,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /svc",
+                              "children": [
+                                {
+                                  "pid": 162268,
+                                  "ppid": 162266,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Fabrikam\\Logs\\System_feec3c98.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 162274,
+                                      "ppid": 162268,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\host_71b27fe1.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 162276,
+                                          "ppid": 162274,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\BlueYonder\\Logs\\profile.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 162277,
+                                              "ppid": 162276,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                              "children": [
+                                                {
+                                                  "pid": 162283,
+                                                  "ppid": 162277,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 3 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 162290,
+                                                      "ppid": 162283,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 162295,
+                                                          "ppid": 162290,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /svc",
+                                                          "children": [
+                                                            {
+                                                              "pid": 162299,
+                                                              "ppid": 162295,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 162304,
+                                                                  "ppid": 162299,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /priv > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\who_7b30c26e.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 162311,
+                                                                      "ppid": 162304,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /groups",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 162317,
+                                                                          "ppid": 162311,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 162324,
+                                                                              "ppid": 162317,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\who_8f295e16.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 162327,
+                                                                                  "ppid": 162324,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 162330,
+                                                                                      "ppid": 162327,
+                                                                                      "name": "tasklist.exe",
+                                                                                      "command": "tasklist.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 162333,
+                                                                                          "ppid": 162330,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 162335,
+                                                                                              "ppid": 162333,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /priv > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\who_e613e9be.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 162337,
+                                                                                                  "ppid": 162335,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 162338,
+                                                                                                      "ppid": 162337,
+                                                                                                      "name": "timeout.exe",
+                                                                                                      "command": "timeout.exe /t 21 /nobreak",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 162341,
+                                                                                                          "ppid": 162338,
+                                                                                                          "name": "ping.exe",
+                                                                                                          "command": "ping.exe -n 19 127.0.0.1 > nul",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 162346,
+                                                                                                              "ppid": 162341,
+                                                                                                              "name": "whoami.exe",
+                                                                                                              "command": "whoami.exe /priv",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 162347,
+                                                                                                                  "ppid": 162346,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe /groups > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\who_291349a3.txt\"",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 162353,
+                                                                                                                      "ppid": 162347,
+                                                                                                                      "name": "whoami.exe",
+                                                                                                                      "command": "whoami.exe /groups",
+                                                                                                                      "children": []
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 162246,
+      "ppid": 162220,
+      "name": "whoami.exe",
+      "command": "whoami.exe /priv > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\who_e35da08e.txt\"",
+      "children": [
+        {
+          "pid": 162251,
+          "ppid": 162246,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe",
+          "children": [
+            {
+              "pid": 162256,
+              "ppid": 162251,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

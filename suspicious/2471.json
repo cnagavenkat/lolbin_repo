@@ -1,0 +1,300 @@
+{
+  "pid": 371504,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 371508,
+      "ppid": 371504,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"ver\"",
+      "children": [
+        {
+          "pid": 371511,
+          "ppid": 371508,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+          "children": [
+            {
+              "pid": 371516,
+              "ppid": 371511,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"ver\"",
+              "children": [
+                {
+                  "pid": 371518,
+                  "ppid": 371516,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": [
+                    {
+                      "pid": 371519,
+                      "ppid": 371518,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 6 > nul",
+                      "children": [
+                        {
+                          "pid": 371521,
+                          "ppid": 371519,
+                          "name": "wevtutil.exe",
+                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_0996e861.evtx\"",
+                          "children": [
+                            {
+                              "pid": 371525,
+                              "ppid": 371521,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /create /tn \"\\Litware\\Support\\Cleanup\" /tr \"C:\\IT\\Runbooks\\diag_2dc671da.cmd\" /sc onlogon /f",
+                              "children": [
+                                {
+                                  "pid": 371529,
+                                  "ppid": 371525,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\pooja.singh\\AppData\\Local\\Temp\\host_a05a23f2.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 371534,
+                                      "ppid": 371529,
+                                      "name": "schtasks.exe",
+                                      "command": "schtasks.exe /run /tn \"\\Contoso\\Support\\Diag\"",
+                                      "children": [
+                                        {
+                                          "pid": 371538,
+                                          "ppid": 371534,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 14 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 371545,
+                                              "ppid": 371538,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 6 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 371546,
+                                                  "ppid": 371545,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv",
+                                                  "children": [
+                                                    {
+                                                      "pid": 371548,
+                                                      "ppid": 371546,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\Users\\Public\\BuildPack_aebb3a9c.ps1\" -Host \"WS-458\" -Mode Full",
+                                                      "children": [
+                                                        {
+                                                          "pid": 371553,
+                                                          "ppid": 371548,
+                                                          "name": "quser.exe",
+                                                          "command": "quser.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 371556,
+                                                              "ppid": 371553,
+                                                              "name": "quser.exe",
+                                                              "command": "quser.exe /server:APP-308",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 371579,
+                                                                  "ppid": 371556,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 371586,
+                                                                      "ppid": 371579,
+                                                                      "name": "findstr.exe",
+                                                                      "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Wingtip\\Logs\\update.log\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 371593,
+                                                                          "ppid": 371586,
+                                                                          "name": "wevtutil.exe",
+                                                                          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\BlueYonder\\Logs\\Microsoft-Windows-TaskScheduler_Operational_a5675d56.evtx\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 371595,
+                                                                              "ppid": 371593,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /groups",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 371600,
+                                                                                  "ppid": 371595,
+                                                                                  "name": "wevtutil.exe",
+                                                                                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Litware\\Logs\\Security_d15a876e.evtx\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 371602,
+                                                                                      "ppid": 371600,
+                                                                                      "name": "wevtutil.exe",
+                                                                                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Northwind\\Logs\\Application_e3b5d03c.evtx\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 371607,
+                                                                                          "ppid": 371602,
+                                                                                          "name": "wevtutil.exe",
+                                                                                          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Fabrikam\\Logs\\Microsoft-Windows-TaskScheduler_Operational_273f4ab9.evtx\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 371613,
+                                                                                              "ppid": 371607,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /priv > \"C:\\Users\\pooja.singh\\AppData\\Local\\Temp\\who_3939b0a0.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 371617,
+                                                                                                  "ppid": 371613,
+                                                                                                  "name": "ping.exe",
+                                                                                                  "command": "ping.exe -n 14 127.0.0.1 > nul",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 371621,
+                                                                                                      "ppid": 371617,
+                                                                                                      "name": "wevtutil.exe",
+                                                                                                      "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Wingtip\\Logs\\System_56f648db.evtx\"",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                },
+                                                                                                {
+                                                                                                  "pid": 371622,
+                                                                                                  "ppid": 371613,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /all > \"C:\\Users\\pooja.singh\\AppData\\Local\\Temp\\who_b23cf2ce.txt\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 371625,
+                                                                                                      "ppid": 371622,
+                                                                                                      "name": "whoami.exe",
+                                                                                                      "command": "whoami.exe /groups",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 371631,
+                                                                                                          "ppid": 371625,
+                                                                                                          "name": "powershell.exe",
+                                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 371637,
+                                                                                                              "ppid": 371631,
+                                                                                                              "name": "timeout.exe",
+                                                                                                              "command": "timeout.exe /t 22 /nobreak",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 371643,
+                                                                                                                  "ppid": 371637,
+                                                                                                                  "name": "wevtutil.exe",
+                                                                                                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Wingtip\\Logs\\System_c8621898.evtx\"",
+                                                                                                                  "children": []
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "pid": 371649,
+                                                                                                          "ppid": 371625,
+                                                                                                          "name": "hostname.exe",
+                                                                                                          "command": "hostname.exe",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 371656,
+                                                                                                              "ppid": 371649,
+                                                                                                              "name": "wevtutil.exe",
+                                                                                                              "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Fabrikam\\Logs\\Security_dbb607f2.evtx\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 371662,
+                                                                                                                  "ppid": 371656,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe /priv > \"C:\\Users\\pooja.singh\\AppData\\Local\\Temp\\who_eca26623.txt\"",
+                                                                                                                  "children": []
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 371559,
+      "ppid": 371504,
+      "name": "wevtutil.exe",
+      "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_ee0bc6aa.evtx\"",
+      "children": [
+        {
+          "pid": 371563,
+          "ppid": 371559,
+          "name": "wevtutil.exe",
+          "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Fabrikam\\Logs\\Application_80aa8579.evtx\"",
+          "children": [
+            {
+              "pid": 371570,
+              "ppid": 371563,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv",
+              "children": [
+                {
+                  "pid": 371577,
+                  "ppid": 371570,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\pooja.singh\\AppData\\Local\\Temp\\host_f36bb6e0.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

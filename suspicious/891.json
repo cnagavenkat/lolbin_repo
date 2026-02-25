@@ -1,0 +1,243 @@
+{
+  "pid": 160882,
+  "ppid": 0,
+  "name": "taskhostw.exe",
+  "command": "taskhostw.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 160885,
+      "ppid": 160882,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\aarav.mishra\\AppData\\Local\\Temp\\Diag_167ccb83.vbs\" /apply",
+      "children": [
+        {
+          "pid": 160886,
+          "ppid": 160885,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 6 > nul",
+          "children": [
+            {
+              "pid": 160887,
+              "ppid": 160886,
+              "name": "sc.exe",
+              "command": "sc.exe query \"wuauserv\"",
+              "children": [
+                {
+                  "pid": 160893,
+                  "ppid": 160887,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 160899,
+                      "ppid": 160893,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all > \"C:\\Users\\aarav.mishra\\AppData\\Local\\Temp\\who_62ec97d0.txt\"",
+                      "children": [
+                        {
+                          "pid": 160905,
+                          "ppid": 160899,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe",
+                          "children": [
+                            {
+                              "pid": 160906,
+                              "ppid": 160905,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 160911,
+                          "ppid": 160899,
+                          "name": "wmic.exe",
+                          "command": "wmic.exe service get Name,StartMode,State",
+                          "children": [
+                            {
+                              "pid": 160914,
+                              "ppid": 160911,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 23 > nul",
+                              "children": [
+                                {
+                                  "pid": 160921,
+                                  "ppid": 160914,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+                                  "children": [
+                                    {
+                                      "pid": 160922,
+                                      "ppid": 160921,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups > \"C:\\Users\\aarav.mishra\\AppData\\Local\\Temp\\who_ad79db9c.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 160923,
+                                          "ppid": 160922,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 21 > nul",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 160930,
+                              "ppid": 160911,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\aarav.mishra\\AppData\\Local\\Temp\\host_40521283.txt\"",
+                              "children": [
+                                {
+                                  "pid": 160931,
+                                  "ppid": 160930,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Alpine\\Logs\\System_38eed16e.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 160937,
+                                      "ppid": 160931,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 160962,
+                                          "ppid": 160937,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 20 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 160966,
+                                              "ppid": 160962,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Northwind\\Logs\\deploy.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 160967,
+                                                  "ppid": 160966,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 160972,
+                                                      "ppid": 160967,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": [
+                                                        {
+                                                          "pid": 160973,
+                                                          "ppid": 160972,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 24 127.0.0.1 > nul",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 160980,
+                                                  "ppid": 160966,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 160987,
+                                                      "ppid": 160980,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /all",
+                                                      "children": [
+                                                        {
+                                                          "pid": 160994,
+                                                          "ppid": 160987,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 160999,
+                                                              "ppid": 160994,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 161002,
+                                                                  "ppid": 160999,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 161006,
+                                                                      "ppid": 161002,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 160944,
+      "ppid": 160882,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe",
+      "children": [
+        {
+          "pid": 160948,
+          "ppid": 160944,
+          "name": "whoami.exe",
+          "command": "whoami.exe > \"C:\\Users\\aarav.mishra\\AppData\\Local\\Temp\\who_9d3e489a.txt\"",
+          "children": [
+            {
+              "pid": 160951,
+              "ppid": 160948,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv",
+              "children": [
+                {
+                  "pid": 160958,
+                  "ppid": 160951,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 10 127.0.0.1 > nul",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

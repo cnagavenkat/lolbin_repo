@@ -1,0 +1,317 @@
+{
+  "pid": 371863,
+  "ppid": 0,
+  "name": "IRRunner.exe",
+  "command": "IRRunner.exe /startup",
+  "children": [
+    {
+      "pid": 371864,
+      "ppid": 371863,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Hidden -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\evt_5c1d098e.txt'\"",
+      "children": [
+        {
+          "pid": 371869,
+          "ppid": 371864,
+          "name": "bitsadmin.exe",
+          "command": "bitsadmin.exe /transfer Job4aea9eaa /download /priority NORMAL \"http://helpdesk-tools.corp.local/tools/runner.exe\" \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\bridge.bin\"",
+          "children": [
+            {
+              "pid": 371873,
+              "ppid": 371869,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups",
+              "children": [
+                {
+                  "pid": 371874,
+                  "ppid": 371873,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\who_e7378e32.txt\"",
+                  "children": [
+                    {
+                      "pid": 371875,
+                      "ppid": 371874,
+                      "name": "expand.exe",
+                      "command": "expand.exe \"C:\\Users\\Public\\runtime.cab\" -F:* \"C:\\Program Files\\Alpine\\Patch\"",
+                      "children": [
+                        {
+                          "pid": 371881,
+                          "ppid": 371875,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\host_9e02efd7.txt\"",
+                          "children": [
+                            {
+                              "pid": 371882,
+                              "ppid": 371881,
+                              "name": "regsvr32.exe",
+                              "command": "regsvr32.exe /s /n /i:user \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\helper.dll\"",
+                              "children": [
+                                {
+                                  "pid": 371883,
+                                  "ppid": 371882,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 371889,
+                                      "ppid": 371883,
+                                      "name": "msiexec.exe",
+                                      "command": "msiexec.exe /i \"C:\\Users\\Public\\runtime.msi\" /qn /l*v \"C:\\ProgramData\\Wingtip\\Logs\\msi_e4889aa5.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 371896,
+                                          "ppid": 371889,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                                          "children": [
+                                            {
+                                              "pid": 371903,
+                                              "ppid": 371896,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\host_6f7c6b81.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 371908,
+                                                  "ppid": 371903,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Get-Service | Out-File 'C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\evt_11ee07e6.txt'\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 371912,
+                                                      "ppid": 371908,
+                                                      "name": "bitsadmin.exe",
+                                                      "command": "bitsadmin.exe /info Job68911d20 /verbose",
+                                                      "children": [
+                                                        {
+                                                          "pid": 371917,
+                                                          "ppid": 371912,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 19 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 371923,
+                                                              "ppid": 371917,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 15 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 371928,
+                                                                  "ppid": 371923,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\who_ee132158.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 371940,
+                                                                      "ppid": 371928,
+                                                                      "name": "bitsadmin.exe",
+                                                                      "command": "bitsadmin.exe /info Job66a40d75 /verbose",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 371966,
+                                                                          "ppid": 371940,
+                                                                          "name": "bitsadmin.exe",
+                                                                          "command": "bitsadmin.exe /info Job4360ab5a /verbose",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 371972,
+                                                                              "ppid": 371966,
+                                                                              "name": "timeout.exe",
+                                                                              "command": "timeout.exe /t 20 /nobreak",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 371978,
+                                                                                  "ppid": 371972,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 371979,
+                                                                                      "ppid": 371978,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\host_d5e3f09b.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 371985,
+                                                                                          "ppid": 371979,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 371992,
+                                                                                              "ppid": 371985,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /all",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 371996,
+                                                                                                  "ppid": 371992,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /groups",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 372002,
+                                                                                                      "ppid": 371996,
+                                                                                                      "name": "whoami.exe",
+                                                                                                      "command": "whoami.exe /all > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\who_957e6733.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 372008,
+                                                                                                          "ppid": 372002,
+                                                                                                          "name": "bitsadmin.exe",
+                                                                                                          "command": "bitsadmin.exe /info Job4230d551 /verbose",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 372015,
+                                                                                                              "ppid": 372008,
+                                                                                                              "name": "whoami.exe",
+                                                                                                              "command": "whoami.exe /groups",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 372021,
+                                                                                                                  "ppid": 372015,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 372028,
+                                                                                                                      "ppid": 372021,
+                                                                                                                      "name": "hostname.exe",
+                                                                                                                      "command": "hostname.exe > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\host_395e66cd.txt\"",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 372030,
+                                                                                                                          "ppid": 372028,
+                                                                                                                          "name": "cmd.exe",
+                                                                                                                          "command": "cmd.exe /c \"whoami.exe /all\"",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "pid": 372033,
+                                                                                                                              "ppid": 372030,
+                                                                                                                              "name": "timeout.exe",
+                                                                                                                              "command": "timeout.exe /t 3 /nobreak",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "pid": 372034,
+                                                                                                                                  "ppid": 372033,
+                                                                                                                                  "name": "whoami.exe",
+                                                                                                                                  "command": "whoami.exe /groups",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "pid": 372040,
+                                                                                                                                      "ppid": 372034,
+                                                                                                                                      "name": "powershell.exe",
+                                                                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "pid": 372045,
+                                                                                                                                          "ppid": 372040,
+                                                                                                                                          "name": "whoami.exe",
+                                                                                                                                          "command": "whoami.exe > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\who_f42e0b32.txt\"",
+                                                                                                                                          "children": []
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 371933,
+      "ppid": 371863,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 24 > nul",
+      "children": [
+        {
+          "pid": 371934,
+          "ppid": 371933,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\who_4a4f8905.txt\"",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 371946,
+      "ppid": 371863,
+      "name": "bitsadmin.exe",
+      "command": "bitsadmin.exe /info Job6b32ca32 /verbose",
+      "children": [
+        {
+          "pid": 371952,
+          "ppid": 371946,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 19 /nobreak",
+          "children": [
+            {
+              "pid": 371959,
+              "ppid": 371952,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\who_2497bb3e.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

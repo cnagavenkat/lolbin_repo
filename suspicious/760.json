@@ -1,0 +1,190 @@
+{
+  "pid": 144106,
+  "ppid": 0,
+  "name": "userinit.exe",
+  "command": "userinit.exe /service",
+  "children": [
+    {
+      "pid": 144107,
+      "ppid": 144106,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\Assist_4e524f43.js\"",
+      "children": [
+        {
+          "pid": 144112,
+          "ppid": 144107,
+          "name": "certutil.exe",
+          "command": "certutil.exe -addstore Root \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\intermediate.cer\"",
+          "children": [
+            {
+              "pid": 144113,
+              "ppid": 144112,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"whoami.exe /groups\"",
+              "children": [
+                {
+                  "pid": 144120,
+                  "ppid": 144113,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\host_b1d111ee.txt\"",
+                  "children": [
+                    {
+                      "pid": 144126,
+                      "ppid": 144120,
+                      "name": "wscript.exe",
+                      "command": "wscript.exe //nologo \"C:\\Users\\Public\\LoginInit_bebfdd22.vbs\"",
+                      "children": [
+                        {
+                          "pid": 144131,
+                          "ppid": 144126,
+                          "name": "net.exe",
+                          "command": "net.exe use Z: \"\\\\ops\\maint\" /persistent:no",
+                          "children": [
+                            {
+                              "pid": 144132,
+                              "ppid": 144131,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                              "children": [
+                                {
+                                  "pid": 144139,
+                                  "ppid": 144132,
+                                  "name": "net.exe",
+                                  "command": "net.exe use R: /delete /y",
+                                  "children": [
+                                    {
+                                      "pid": 144146,
+                                      "ppid": 144139,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 2 /nobreak",
+                                      "children": [
+                                        {
+                                          "pid": 144149,
+                                          "ppid": 144146,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all > \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\who_cdf982ab.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 144155,
+                                              "ppid": 144149,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Get-Service | Out-File 'C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\evt_0c080cd3.txt'\"",
+                                              "children": [
+                                                {
+                                                  "pid": 144158,
+                                                  "ppid": 144155,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups > \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\who_47a65fbc.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 144160,
+                                                      "ppid": 144158,
+                                                      "name": "cmd.exe",
+                                                      "command": "cmd.exe /c \"whoami.exe /groups\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 144165,
+                                                          "ppid": 144160,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 18 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 144172,
+                                                              "ppid": 144165,
+                                                              "name": "net.exe",
+                                                              "command": "net.exe use Z: \"\\\\deploy\\packages\" /persistent:no",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 144175,
+                                                                  "ppid": 144172,
+                                                                  "name": "net.exe",
+                                                                  "command": "net.exe use S: /delete /y",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 144177,
+                                                                      "ppid": 144175,
+                                                                      "name": "net.exe",
+                                                                      "command": "net.exe use V: \"\\\\ops\\maint\" /persistent:no",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 144180,
+                                                          "ppid": 144160,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 144185,
+                                                              "ppid": 144180,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe > \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\who_167e6278.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 144192,
+                                                                  "ppid": 144185,
+                                                                  "name": "net.exe",
+                                                                  "command": "net.exe use V: /delete /y",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 144194,
+                                                                      "ppid": 144192,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\host_58a9745f.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 144196,
+                                                                          "ppid": 144194,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 4 127.0.0.1 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 144201,
+                                                                              "ppid": 144196,
+                                                                              "name": "net.exe",
+                                                                              "command": "net.exe use S: \"\\\\corp\\login\" /persistent:no",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

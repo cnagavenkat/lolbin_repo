@@ -1,0 +1,166 @@
+{
+  "pid": 143246,
+  "ppid": 0,
+  "name": "winlogon.exe",
+  "command": "winlogon.exe /silent",
+  "children": [
+    {
+      "pid": 143251,
+      "ppid": 143246,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"ver\"",
+      "children": [
+        {
+          "pid": 143256,
+          "ppid": 143251,
+          "name": "pcalua.exe",
+          "command": "pcalua.exe -a \"C:\\Users\\Public\\legacy_setup.exe\"",
+          "children": [
+            {
+              "pid": 143260,
+              "ppid": 143256,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+              "children": [
+                {
+                  "pid": 143262,
+                  "ppid": 143260,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 20 > nul",
+                  "children": [
+                    {
+                      "pid": 143266,
+                      "ppid": 143262,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\host_8a60e245.txt\"",
+                      "children": [
+                        {
+                          "pid": 143270,
+                          "ppid": 143266,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                          "children": [
+                            {
+                              "pid": 143274,
+                              "ppid": 143270,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\who_e3031849.txt\"",
+                              "children": [
+                                {
+                                  "pid": 143279,
+                                  "ppid": 143274,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\host_6c52377b.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 143281,
+                                      "ppid": 143279,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /v",
+                                      "children": [
+                                        {
+                                          "pid": 143288,
+                                          "ppid": 143281,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+                                          "children": [
+                                            {
+                                              "pid": 143292,
+                                              "ppid": 143288,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\host_3a71374e.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 143298,
+                                                  "ppid": 143292,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\inv_de39771f.txt'\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 143304,
+                                                      "ppid": 143298,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\who_70718eaf.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 143309,
+                                                          "ppid": 143304,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 21\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 143311,
+                                                              "ppid": 143309,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 143312,
+                                                          "ppid": 143304,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 143319,
+                                                              "ppid": 143312,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 143325,
+                                                                  "ppid": 143319,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /priv",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 143329,
+                                                                      "ppid": 143325,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /priv > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\who_3940a6ee.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 143331,
+                                                                          "ppid": 143329,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

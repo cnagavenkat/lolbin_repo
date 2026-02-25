@@ -1,0 +1,268 @@
+{
+  "pid": 56480,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 56482,
+      "ppid": 56480,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+      "children": [
+        {
+          "pid": 56489,
+          "ppid": 56482,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /create /tn \"\\Alpine\\Support\\Verify\" /tr \"C:\\ProgramData\\Contoso\\Bridge\\diag_4a5648b3.ps1\" /sc once /st 17:16 /f /ru SYSTEM",
+          "children": [
+            {
+              "pid": 56490,
+              "ppid": 56489,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 56493,
+                  "ppid": 56490,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 56499,
+                      "ppid": 56493,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all > \"C:\\Users\\nisha.kulkarni\\AppData\\Local\\Temp\\who_e8cc47a3.txt\"",
+                      "children": [
+                        {
+                          "pid": 56505,
+                          "ppid": 56499,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /groups > \"C:\\Users\\nisha.kulkarni\\AppData\\Local\\Temp\\who_65a3481f.txt\"",
+                          "children": [
+                            {
+                              "pid": 56509,
+                              "ppid": 56505,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                              "children": [
+                                {
+                                  "pid": 56514,
+                                  "ppid": 56509,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 21 127.0.0.1 > nul",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 56518,
+                          "ppid": 56499,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /run /tn \"\\Contoso\\Support\\Diag\"",
+                          "children": [
+                            {
+                              "pid": 56522,
+                              "ppid": 56518,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 56529,
+                                  "ppid": 56522,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+                                  "children": [
+                                    {
+                                      "pid": 56536,
+                                      "ppid": 56529,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 56538,
+                                  "ppid": 56522,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /v",
+                                  "children": [
+                                    {
+                                      "pid": 56543,
+                                      "ppid": 56538,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\nisha.kulkarni\\AppData\\Local\\Temp\\inv_33e43dc6.txt'\"",
+                                      "children": [
+                                        {
+                                          "pid": 56548,
+                                          "ppid": 56543,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 7 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 56555,
+                                              "ppid": 56548,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 56560,
+                                                  "ppid": 56555,
+                                                  "name": "reg.exe",
+                                                  "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                                  "children": [
+                                                    {
+                                                      "pid": 56567,
+                                                      "ppid": 56560,
+                                                      "name": "schtasks.exe",
+                                                      "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+                                                      "children": [
+                                                        {
+                                                          "pid": 56574,
+                                                          "ppid": 56567,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv > \"C:\\Users\\nisha.kulkarni\\AppData\\Local\\Temp\\who_5b1fcfdb.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 56580,
+                                                              "ppid": 56574,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 56584,
+                                                                  "ppid": 56580,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 3 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 56585,
+                                                                      "ppid": 56584,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 56591,
+                                                                          "ppid": 56585,
+                                                                          "name": "reg.exe",
+                                                                          "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 56597,
+                                                                              "ppid": 56591,
+                                                                              "name": "ping.exe",
+                                                                              "command": "ping.exe -n 15 127.0.0.1 > nul",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 56602,
+                                                              "ppid": 56574,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\nisha.kulkarni\\AppData\\Local\\Temp\\host_081cfdb5.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 56605,
+                                                                  "ppid": 56602,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\nisha.kulkarni\\AppData\\Local\\Temp\\host_44a6004b.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 56610,
+                                                                      "ppid": 56605,
+                                                                      "name": "reg.exe",
+                                                                      "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 56617,
+                                                                          "ppid": 56610,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv > \"C:\\Users\\nisha.kulkarni\\AppData\\Local\\Temp\\who_ed425f43.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 56621,
+                                                                              "ppid": 56617,
+                                                                              "name": "cmd.exe",
+                                                                              "command": "cmd.exe /c \"hostname.exe\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 56622,
+                                                                                  "ppid": 56621,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 56624,
+                                                                                      "ppid": 56622,
+                                                                                      "name": "reg.exe",
+                                                                                      "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 56626,
+                                                                                          "ppid": 56624,
+                                                                                          "name": "reg.exe",
+                                                                                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 56633,
+                                                                                              "ppid": 56626,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /priv > \"C:\\Users\\nisha.kulkarni\\AppData\\Local\\Temp\\who_313d8112.txt\"",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

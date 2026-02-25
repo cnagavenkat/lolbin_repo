@@ -1,0 +1,166 @@
+{
+  "pid": 189448,
+  "ppid": 0,
+  "name": "CertMgrUI.exe",
+  "command": "CertMgrUI.exe /startup",
+  "children": [
+    {
+      "pid": 189452,
+      "ppid": 189448,
+      "name": "certutil.exe",
+      "command": "certutil.exe -dump \"C:\\Users\\Public\\corp_root.cer\"",
+      "children": [
+        {
+          "pid": 189456,
+          "ppid": 189452,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 189460,
+              "ppid": 189456,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 9 > nul",
+              "children": [
+                {
+                  "pid": 189463,
+                  "ppid": 189460,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 13 /nobreak",
+                  "children": [
+                    {
+                      "pid": 189467,
+                      "ppid": 189463,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 189469,
+                          "ppid": 189467,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv > \"C:\\Users\\pooja.gupta\\AppData\\Local\\Temp\\who_e04b103d.txt\"",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 189470,
+                      "ppid": 189463,
+                      "name": "forfiles.exe",
+                      "command": "forfiles.exe /P \"C:\\Users\\pooja.gupta\\AppData\\Local\\Temp\" /M *.cab /D -42 /C \"cmd /c echo archived @file\"",
+                      "children": [
+                        {
+                          "pid": 189475,
+                          "ppid": 189470,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 7 > nul",
+                          "children": [
+                            {
+                              "pid": 189481,
+                              "ppid": 189475,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 189483,
+                                  "ppid": 189481,
+                                  "name": "findstr.exe",
+                                  "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Northwind\\Logs\\profile.log\"",
+                                  "children": [
+                                    {
+                                      "pid": 189484,
+                                      "ppid": 189483,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\pooja.gupta\\AppData\\Local\\Temp\\host_c2df7693.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 189486,
+                                          "ppid": 189484,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 189492,
+                                              "ppid": 189486,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\pooja.gupta\\AppData\\Local\\Temp\\host_eee81adf.txt\"' -Wait\"",
+                                              "children": [
+                                                {
+                                                  "pid": 189495,
+                                                  "ppid": 189492,
+                                                  "name": "reg.exe",
+                                                  "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                                  "children": [
+                                                    {
+                                                      "pid": 189501,
+                                                      "ppid": 189495,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 19 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 189508,
+                                                          "ppid": 189501,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\pooja.gupta\\AppData\\Local\\Temp\\host_9c20220b.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 189513,
+                                                              "ppid": 189508,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups > \"C:\\Users\\pooja.gupta\\AppData\\Local\\Temp\\who_f4fd9304.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 189519,
+                                                                  "ppid": 189513,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\pooja.gupta\\AppData\\Local\\Temp\\host_3f2b1095.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 189524,
+                                                                      "ppid": 189519,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\pooja.gupta\\AppData\\Local\\Temp\\host_e40b918f.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 189529,
+                                                                          "ppid": 189524,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 11 127.0.0.1 > nul",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

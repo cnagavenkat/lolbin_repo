@@ -1,0 +1,174 @@
+{
+  "pid": 305071,
+  "ppid": 0,
+  "name": "BackupAgent.exe",
+  "command": "BackupAgent.exe /diag",
+  "children": [
+    {
+      "pid": 305072,
+      "ppid": 305071,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"set\"",
+      "children": [
+        {
+          "pid": 305075,
+          "ppid": 305072,
+          "name": "vssadmin.exe",
+          "command": "vssadmin.exe list shadowstorage",
+          "children": [
+            {
+              "pid": 305082,
+              "ppid": 305075,
+              "name": "whoami.exe",
+              "command": "whoami.exe",
+              "children": [
+                {
+                  "pid": 305087,
+                  "ppid": 305082,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 305091,
+                      "ppid": 305087,
+                      "name": "wmic.exe",
+                      "command": "wmic.exe service get Name,StartMode,State",
+                      "children": [
+                        {
+                          "pid": 305096,
+                          "ppid": 305091,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe",
+                          "children": [
+                            {
+                              "pid": 305102,
+                              "ppid": 305096,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\neha.nair\\AppData\\Local\\Temp\\who_0ab8219b.txt\"",
+                              "children": [
+                                {
+                                  "pid": 305108,
+                                  "ppid": 305102,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe",
+                                  "children": [
+                                    {
+                                      "pid": 305113,
+                                      "ppid": 305108,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\neha.nair\\AppData\\Local\\Temp\\host_2d3cbc7a.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 305120,
+                                          "ppid": 305113,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe",
+                                          "children": [
+                                            {
+                                              "pid": 305126,
+                                              "ppid": 305120,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 305132,
+                                                  "ppid": 305126,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 305135,
+                                  "ppid": 305102,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /svc",
+                                  "children": [
+                                    {
+                                      "pid": 305140,
+                                      "ppid": 305135,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\BlueYonder\\Logs\\Application_784eac44.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 305141,
+                                          "ppid": 305140,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\neha.nair\\AppData\\Local\\Temp\\host_fc6a96dd.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 305144,
+                                              "ppid": 305141,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 3 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 305145,
+                                                  "ppid": 305144,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\neha.nair\\AppData\\Local\\Temp\\host_cd2d1777.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 305147,
+                                                      "ppid": 305145,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -File \"C:\\Users\\Public\\BuildPack_1bbf111a.ps1\" -Host \"APP-482\" -Mode Quick",
+                                                      "children": [
+                                                        {
+                                                          "pid": 305152,
+                                                          "ppid": 305147,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv > \"C:\\Users\\neha.nair\\AppData\\Local\\Temp\\who_8643cbb2.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 305158,
+                                                              "ppid": 305152,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\neha.nair\\AppData\\Local\\Temp\\host_0f5cf4d0.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 305165,
+                                                                  "ppid": 305158,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

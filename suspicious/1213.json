@@ -1,0 +1,157 @@
+{
+  "pid": 198070,
+  "ppid": 0,
+  "name": "mmc.exe",
+  "command": "mmc.exe /service",
+  "children": [
+    {
+      "pid": 198072,
+      "ppid": 198070,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\ananya.verma\\AppData\\Local\\Temp\\evt_666123a4.txt'\"",
+      "children": [
+        {
+          "pid": 198075,
+          "ppid": 198072,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 8 /nobreak",
+          "children": [
+            {
+              "pid": 198080,
+              "ppid": 198075,
+              "name": "certutil.exe",
+              "command": "certutil.exe -urlcache -split -f \"http://support.wingtipsoft.com/certs/workstation.cer\" \"C:\\Users\\Public\\cache.cer\"",
+              "children": [
+                {
+                  "pid": 198084,
+                  "ppid": 198080,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 20 /nobreak",
+                  "children": [
+                    {
+                      "pid": 198091,
+                      "ppid": 198084,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\ananya.verma\\AppData\\Local\\Temp\\host_5bc5edd0.txt\"",
+                      "children": [
+                        {
+                          "pid": 198092,
+                          "ppid": 198091,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\ananya.verma\\AppData\\Local\\Temp\\evt_808c8e1e.txt'\"",
+                          "children": [
+                            {
+                              "pid": 198097,
+                              "ppid": 198092,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 6 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 198101,
+                                  "ppid": 198097,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\ananya.verma\\AppData\\Local\\Temp\\host_b8b68fdf.txt\"",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 198103,
+                              "ppid": 198092,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe",
+                              "children": [
+                                {
+                                  "pid": 198104,
+                                  "ppid": 198103,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups",
+                                  "children": [
+                                    {
+                                      "pid": 198107,
+                                      "ppid": 198104,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Litware\\Logs\\diag.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 198108,
+                                          "ppid": 198107,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 16 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 198111,
+                                              "ppid": 198108,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 24 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 198118,
+                                                  "ppid": 198111,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv",
+                                                  "children": [
+                                                    {
+                                                      "pid": 198119,
+                                                      "ppid": 198118,
+                                                      "name": "cmd.exe",
+                                                      "command": "cmd.exe /c \"whoami.exe /priv > \"C:\\Users\\ananya.verma\\AppData\\Local\\Temp\\who_f94d8621.txt\"\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 198121,
+                                                          "ppid": 198119,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups > \"C:\\Users\\ananya.verma\\AppData\\Local\\Temp\\who_e41f3e60.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 198122,
+                                                              "ppid": 198121,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 198129,
+                                              "ppid": 198108,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                                              "children": [
+                                                {
+                                                  "pid": 198134,
+                                                  "ppid": 198129,
+                                                  "name": "makecab.exe",
+                                                  "command": "makecab.exe \"C:\\Users\\ananya.verma\\AppData\\Local\\Temp\\trace.etl\" \"C:\\Users\\ananya.verma\\AppData\\Local\\Temp\\trace.cab\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

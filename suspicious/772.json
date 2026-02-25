@@ -1,0 +1,150 @@
+{
+  "pid": 145451,
+  "ppid": 0,
+  "name": "gpscript.exe",
+  "command": "gpscript.exe /session",
+  "children": [
+    {
+      "pid": 145456,
+      "ppid": 145451,
+      "name": "pcalua.exe",
+      "command": "pcalua.exe -a \"C:\\Users\\Public\\compattool.exe\"",
+      "children": [
+        {
+          "pid": 145463,
+          "ppid": 145456,
+          "name": "ping.exe",
+          "command": "ping.exe -n 5 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 145470,
+              "ppid": 145463,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 11\"",
+              "children": [
+                {
+                  "pid": 145476,
+                  "ppid": 145470,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 11 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 145482,
+                      "ppid": 145476,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 145487,
+                          "ppid": 145482,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 3 /nobreak",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 145488,
+                      "ppid": 145476,
+                      "name": "reg.exe",
+                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                      "children": [
+                        {
+                          "pid": 145489,
+                          "ppid": 145488,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 21 > nul",
+                          "children": [
+                            {
+                              "pid": 145491,
+                              "ppid": 145489,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe",
+                              "children": [
+                                {
+                                  "pid": 145494,
+                                  "ppid": 145491,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\host_c1dd79c8.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 145501,
+                                      "ppid": 145494,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\diag_f2f7d365.txt'\"",
+                                      "children": [
+                                        {
+                                          "pid": 145507,
+                                          "ppid": 145501,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 18 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 145512,
+                                              "ppid": 145507,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\host_a833e65f.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 145514,
+                                                  "ppid": 145512,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 145518,
+                                                      "ppid": 145514,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\host_ee63a5e2.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 145523,
+                                                          "ppid": 145518,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\who_4ffdc00d.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 145526,
+                                                              "ppid": 145523,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 145528,
+                                                                  "ppid": 145526,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\who_102bb3bd.txt\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

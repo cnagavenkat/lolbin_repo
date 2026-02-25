@@ -1,0 +1,251 @@
+{
+  "pid": 109887,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 109892,
+      "ppid": 109887,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Minimized -Command \"Get-Service | Out-File 'C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\evt_71a8b582.txt'\"",
+      "children": [
+        {
+          "pid": 109897,
+          "ppid": 109892,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+          "children": [
+            {
+              "pid": 109904,
+              "ppid": 109897,
+              "name": "nltest.exe",
+              "command": "nltest.exe /sc_query:FINLAB",
+              "children": [
+                {
+                  "pid": 109906,
+                  "ppid": 109904,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                  "children": [
+                    {
+                      "pid": 109911,
+                      "ppid": 109906,
+                      "name": "ipconfig.exe",
+                      "command": "ipconfig.exe /all",
+                      "children": [
+                        {
+                          "pid": 109914,
+                          "ppid": 109911,
+                          "name": "ipconfig.exe",
+                          "command": "ipconfig.exe /allcompartments /all",
+                          "children": [
+                            {
+                              "pid": 109920,
+                              "ppid": 109914,
+                              "name": "ipconfig.exe",
+                              "command": "ipconfig.exe /allcompartments /all",
+                              "children": [
+                                {
+                                  "pid": 109927,
+                                  "ppid": 109920,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\who_fcbceb9b.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 109928,
+                                      "ppid": 109927,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 8 /nobreak",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 109930,
+                      "ppid": 109906,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 11 /nobreak",
+                      "children": [
+                        {
+                          "pid": 109947,
+                          "ppid": 109930,
+                          "name": "wmic.exe",
+                          "command": "wmic.exe qfe get HotFixID,InstalledOn",
+                          "children": [
+                            {
+                              "pid": 109949,
+                              "ppid": 109947,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 16 > nul",
+                              "children": [
+                                {
+                                  "pid": 109951,
+                                  "ppid": 109949,
+                                  "name": "ipconfig.exe",
+                                  "command": "ipconfig.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 109955,
+                                      "ppid": 109951,
+                                      "name": "ipconfig.exe",
+                                      "command": "ipconfig.exe /all",
+                                      "children": [
+                                        {
+                                          "pid": 109960,
+                                          "ppid": 109955,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 109973,
+                                              "ppid": 109960,
+                                              "name": "ipconfig.exe",
+                                              "command": "ipconfig.exe /displaydns",
+                                              "children": [
+                                                {
+                                                  "pid": 109980,
+                                                  "ppid": 109973,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 109985,
+                                                      "ppid": 109980,
+                                                      "name": "wevtutil.exe",
+                                                      "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Contoso\\Logs\\System_1e878298.evtx\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 109988,
+                                                          "ppid": 109985,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 110002,
+                                                              "ppid": 109988,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\who_78f8a760.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 110007,
+                                                                  "ppid": 110002,
+                                                                  "name": "ipconfig.exe",
+                                                                  "command": "ipconfig.exe /allcompartments /all",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 109932,
+      "ppid": 109887,
+      "name": "whoami.exe",
+      "command": "whoami.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\who_50870469.txt\"",
+      "children": [
+        {
+          "pid": 109936,
+          "ppid": 109932,
+          "name": "ipconfig.exe",
+          "command": "ipconfig.exe /all",
+          "children": [
+            {
+              "pid": 109941,
+              "ppid": 109936,
+              "name": "ping.exe",
+              "command": "ping.exe -n 8 127.0.0.1 > nul",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 109961,
+      "ppid": 109887,
+      "name": "ipconfig.exe",
+      "command": "ipconfig.exe /all",
+      "children": [
+        {
+          "pid": 109965,
+          "ppid": 109961,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\host_f1e7f6cd.txt\"",
+          "children": [
+            {
+              "pid": 109966,
+              "ppid": 109965,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"ipconfig.exe /allcompartments /all\"",
+              "children": [
+                {
+                  "pid": 109968,
+                  "ppid": 109966,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe",
+                  "children": [
+                    {
+                      "pid": 109970,
+                      "ppid": 109968,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\who_c481f5c7.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 109993,
+      "ppid": 109887,
+      "name": "ping.exe",
+      "command": "ping.exe -n 12 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 109996,
+          "ppid": 109993,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\host_3e94f98e.txt\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

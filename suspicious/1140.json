@@ -1,0 +1,126 @@
+{
+  "pid": 190849,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 190850,
+      "ppid": 190849,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Tools\\Support_f5c8efbe.wsf\" /repair",
+      "children": [
+        {
+          "pid": 190857,
+          "ppid": 190850,
+          "name": "certutil.exe",
+          "command": "certutil.exe -store -user Root",
+          "children": [
+            {
+              "pid": 190860,
+              "ppid": 190857,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 16 > nul",
+              "children": [
+                {
+                  "pid": 190867,
+                  "ppid": 190860,
+                  "name": "regsvr32.exe",
+                  "command": "regsvr32.exe /s /n /i:user \"C:\\ProgramData\\Woodgrove\\Support\\plugin.dll\"",
+                  "children": [
+                    {
+                      "pid": 190872,
+                      "ppid": 190867,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /v",
+                      "children": [
+                        {
+                          "pid": 190879,
+                          "ppid": 190872,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv",
+                          "children": [
+                            {
+                              "pid": 190896,
+                              "ppid": 190879,
+                              "name": "rundll32.exe",
+                              "command": "rundll32.exe \"C:\\Build\\dist\\d78e3844\\diagext.dll\",DllRegisterServer",
+                              "children": [
+                                {
+                                  "pid": 190903,
+                                  "ppid": 190896,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 190909,
+                                      "ppid": 190903,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Wingtip\\Logs\\support.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 190912,
+                                          "ppid": 190909,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": [
+                                            {
+                                              "pid": 190919,
+                                              "ppid": 190912,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\pooja.bose\\AppData\\Local\\Temp\\host_2108dc15.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 190922,
+                                                  "ppid": 190919,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 24 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 190928,
+                                                      "ppid": 190922,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 190883,
+      "ppid": 190849,
+      "name": "whoami.exe",
+      "command": "whoami.exe /groups",
+      "children": [
+        {
+          "pid": 190889,
+          "ppid": 190883,
+          "name": "whoami.exe",
+          "command": "whoami.exe",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

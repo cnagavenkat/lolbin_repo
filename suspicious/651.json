@@ -1,0 +1,251 @@
+{
+  "pid": 131295,
+  "ppid": 0,
+  "name": "userinit.exe",
+  "command": "userinit.exe /startup",
+  "children": [
+    {
+      "pid": 131299,
+      "ppid": 131295,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+      "children": [
+        {
+          "pid": 131304,
+          "ppid": 131299,
+          "name": "forfiles.exe",
+          "command": "forfiles.exe /P \"C:\\Users\\varun.das\\AppData\\Local\\Temp\" /M *.etl /D -7 /C \"cmd /c echo archived @file\"",
+          "children": [
+            {
+              "pid": 131307,
+              "ppid": 131304,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\varun.das\\AppData\\Local\\Temp\\who_d3646570.txt\"",
+              "children": [
+                {
+                  "pid": 131313,
+                  "ppid": 131307,
+                  "name": "reg.exe",
+                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                  "children": [
+                    {
+                      "pid": 131320,
+                      "ppid": 131313,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 16 > nul",
+                      "children": [
+                        {
+                          "pid": 131323,
+                          "ppid": 131320,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe",
+                          "children": [
+                            {
+                              "pid": 131327,
+                              "ppid": 131323,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /query /fo LIST /v",
+                              "children": [
+                                {
+                                  "pid": 131340,
+                                  "ppid": 131327,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /c \"whoami.exe /priv > \"C:\\Users\\varun.das\\AppData\\Local\\Temp\\who_fd9bc7ff.txt\"\"",
+                                  "children": [
+                                    {
+                                      "pid": 131344,
+                                      "ppid": 131340,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv > \"C:\\Users\\varun.das\\AppData\\Local\\Temp\\who_1d4e54c0.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 131345,
+                                          "ppid": 131344,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\varun.das\\AppData\\Local\\Temp\\host_4a5b24fa.txt\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 131351,
+                                      "ppid": 131340,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Fabrikam\\Logs\\support.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 131354,
+                                          "ppid": 131351,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all > \"C:\\Users\\varun.das\\AppData\\Local\\Temp\\who_9b63aa38.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 131357,
+                                              "ppid": 131354,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv",
+                                              "children": [
+                                                {
+                                                  "pid": 131364,
+                                                  "ppid": 131357,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv > \"C:\\Users\\varun.das\\AppData\\Local\\Temp\\who_6f66aa9d.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 131371,
+                                                      "ppid": 131364,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'tasklist.exe' -ArgumentList '/v' -Wait\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 131374,
+                                                          "ppid": 131371,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\varun.das\\AppData\\Local\\Temp\\host_7ec7e5f3.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 131378,
+                                                              "ppid": 131374,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 131384,
+                                                                  "ppid": 131378,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 131387,
+                                                                      "ppid": 131384,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 8 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 131389,
+                                                                          "ppid": 131387,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe /svc",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 131392,
+                                                                              "ppid": 131389,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 131399,
+                                                                                  "ppid": 131392,
+                                                                                  "name": "timeout.exe",
+                                                                                  "command": "timeout.exe /t 25 /nobreak",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 131405,
+                                                                  "ppid": 131378,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /v",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 131425,
+                                                                      "ppid": 131405,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 131431,
+                                                                          "ppid": 131425,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 9 /nobreak",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 131329,
+      "ppid": 131295,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe /v",
+      "children": [
+        {
+          "pid": 131333,
+          "ppid": 131329,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /v",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 131409,
+      "ppid": 131295,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\varun.das\\AppData\\Local\\Temp\\host_1adb37c7.txt\"",
+      "children": [
+        {
+          "pid": 131413,
+          "ppid": 131409,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\varun.das\\AppData\\Local\\Temp\\host_dd4d9225.txt\"",
+          "children": [
+            {
+              "pid": 131418,
+              "ppid": 131413,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv > \"C:\\Users\\varun.das\\AppData\\Local\\Temp\\who_675db23e.txt\"",
+              "children": [
+                {
+                  "pid": 131422,
+                  "ppid": 131418,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

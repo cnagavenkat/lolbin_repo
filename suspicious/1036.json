@@ -1,0 +1,229 @@
+{
+  "pid": 180287,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 180292,
+      "ppid": 180287,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Minimized -File \"C:\\ProgramData\\Wingtip\\Profile\\CollectInventory_2ef6974e.ps1\" -Host \"SUP-144\" -Mode Verify",
+      "children": [
+        {
+          "pid": 180299,
+          "ppid": 180292,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 3 > nul",
+          "children": [
+            {
+              "pid": 180304,
+              "ppid": 180299,
+              "name": "sc.exe",
+              "command": "sc.exe query \"Dnscache\"",
+              "children": [
+                {
+                  "pid": 180305,
+                  "ppid": 180304,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 17 > nul",
+                  "children": [
+                    {
+                      "pid": 180311,
+                      "ppid": 180305,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\ananya.verma\\AppData\\Local\\Temp\\host_9e910fa9.txt\"",
+                      "children": [
+                        {
+                          "pid": 180312,
+                          "ppid": 180311,
+                          "name": "wmic.exe",
+                          "command": "wmic.exe os get Caption,Version,BuildNumber /value",
+                          "children": [
+                            {
+                              "pid": 180317,
+                              "ppid": 180312,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 180318,
+                                  "ppid": 180317,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\BlueYonder\\Logs\\Microsoft-Windows-TaskScheduler_Operational_a757117a.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 180321,
+                                      "ppid": 180318,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\ananya.verma\\AppData\\Local\\Temp\\host_d6242a84.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 180327,
+                                          "ppid": 180321,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Fabrikam\\Logs\\support.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 180334,
+                                              "ppid": 180327,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 180341,
+                                                  "ppid": 180334,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 180342,
+                                                      "ppid": 180341,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 180346,
+                                                          "ppid": 180342,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 180351,
+                                                              "ppid": 180346,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 180357,
+                                              "ppid": 180327,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 180362,
+                                                  "ppid": 180357,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 180367,
+                                                      "ppid": 180362,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 24 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 180371,
+                                                          "ppid": 180367,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 13 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 180372,
+                                                              "ppid": 180371,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 20 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 180375,
+                                                                  "ppid": 180372,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\ananya.verma\\AppData\\Local\\Temp\\host_9ea7b986.txt\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 180381,
+                                                  "ppid": 180357,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 22 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 180388,
+                                                      "ppid": 180381,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe > \"C:\\Users\\ananya.verma\\AppData\\Local\\Temp\\who_f64e5531.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 180391,
+                                                          "ppid": 180388,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 180398,
+                                                              "ppid": 180391,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 180401,
+                                                                  "ppid": 180398,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 3 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 180405,
+                                                                      "ppid": 180401,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 180410,
+                                                                          "ppid": 180405,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /all > \"C:\\Users\\ananya.verma\\AppData\\Local\\Temp\\who_dc2b0709.txt\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "pid": 241124,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe /silent",
+  "children": [
+    {
+      "pid": 241125,
+      "ppid": 241124,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\LoginInit_855e5516.wsf\"",
+      "children": [
+        {
+          "pid": 241129,
+          "ppid": 241125,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 9 > nul",
+          "children": [
+            {
+              "pid": 241130,
+              "ppid": 241129,
+              "name": "mshta.exe",
+              "command": "mshta.exe \"http://bldsrv.corp.local/scripts/sync.hta\"",
+              "children": [
+                {
+                  "pid": 241131,
+                  "ppid": 241130,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                  "children": [
+                    {
+                      "pid": 241132,
+                      "ppid": 241131,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\who_8a6e712f.txt\"",
+                      "children": [
+                        {
+                          "pid": 241139,
+                          "ppid": 241132,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 21 > nul",
+                          "children": [
+                            {
+                              "pid": 241145,
+                              "ppid": 241139,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 241148,
+                                  "ppid": 241145,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\who_3233a32c.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 241152,
+                                      "ppid": 241148,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\who_6e274ee2.txt\"",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 241158,
+                          "ppid": 241132,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'timeout.exe' -ArgumentList '/t 15 /nobreak' -Wait\"",
+                          "children": [
+                            {
+                              "pid": 241160,
+                              "ppid": 241158,
+                              "name": "wmic.exe",
+                              "command": "wmic.exe qfe get HotFixID,InstalledOn",
+                              "children": [
+                                {
+                                  "pid": 241165,
+                                  "ppid": 241160,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups",
+                                  "children": [
+                                    {
+                                      "pid": 241172,
+                                      "ppid": 241165,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups",
+                                      "children": [
+                                        {
+                                          "pid": 241176,
+                                          "ppid": 241172,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 11 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 241183,
+                                              "ppid": 241176,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 241186,
+                                  "ppid": 241160,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 241192,
+                                      "ppid": 241186,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\host_4615a317.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 241195,
+                                          "ppid": 241192,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\host_95e8fcdc.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 241199,
+                                              "ppid": 241195,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Contoso\\Logs\\Microsoft-Windows-TaskScheduler_Operational_444882e3.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 241206,
+                                                  "ppid": 241199,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\host_6e6bd144.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 241211,
+                                                      "ppid": 241206,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 241218,
+                                                          "ppid": 241211,
+                                                          "name": "findstr.exe",
+                                                          "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Contoso\\Logs\\update.log\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 241224,
+                                                              "ppid": 241218,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 3 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 241228,
+                                                                  "ppid": 241224,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 241230,
+                                                                      "ppid": 241228,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\host_a6342449.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 241237,
+                                                                          "ppid": 241230,
+                                                                          "name": "cmd.exe",
+                                                                          "command": "cmd.exe /c \"whoami.exe /all > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\who_e81c522e.txt\"\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

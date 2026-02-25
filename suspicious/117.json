@@ -1,0 +1,262 @@
+{
+  "pid": 65225,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 65226,
+      "ppid": 65225,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"tasklist /svc\"",
+      "children": [
+        {
+          "pid": 65232,
+          "ppid": 65226,
+          "name": "rundll32.exe",
+          "command": "rundll32.exe \"C:\\Build\\out\\3810ca66\\bridge.dll\",Launch",
+          "children": [
+            {
+              "pid": 65233,
+              "ppid": 65232,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /v",
+              "children": [
+                {
+                  "pid": 65236,
+                  "ppid": 65233,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'choice.exe' -ArgumentList '/d y /t 6 > nul' -Wait\"",
+                  "children": [
+                    {
+                      "pid": 65239,
+                      "ppid": 65236,
+                      "name": "findstr.exe",
+                      "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Northwind\\Logs\\deploy.log\"",
+                      "children": [
+                        {
+                          "pid": 65245,
+                          "ppid": 65239,
+                          "name": "regsvr32.exe",
+                          "command": "regsvr32.exe /s /n /i:user \"C:\\Build\\out\\5edc1ff5\\diagext.dll\"",
+                          "children": [
+                            {
+                              "pid": 65250,
+                              "ppid": 65245,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                              "children": [
+                                {
+                                  "pid": 65257,
+                                  "ppid": 65250,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 65261,
+                                      "ppid": 65257,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv",
+                                      "children": [
+                                        {
+                                          "pid": 65263,
+                                          "ppid": 65261,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 65266,
+                                              "ppid": 65263,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                              "children": [
+                                                {
+                                                  "pid": 65267,
+                                                  "ppid": 65266,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -File \"C:\\ProgramData\\Contoso\\Profile\\RunDiagnostics_3c55467f.ps1\" -Host \"WS-445\" -Mode Delta",
+                                                  "children": [
+                                                    {
+                                                      "pid": 65273,
+                                                      "ppid": 65267,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 21 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 65279,
+                                                          "ppid": 65273,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 65286,
+                                                              "ppid": 65279,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 65289,
+                                                                  "ppid": 65286,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 5 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 65296,
+                                                                      "ppid": 65289,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /priv > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\who_90256262.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 65299,
+                                                                          "ppid": 65296,
+                                                                          "name": "findstr.exe",
+                                                                          "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Litware\\Logs\\update.log\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 65301,
+                                                                              "ppid": 65299,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 65304,
+                                                                                  "ppid": 65301,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /v",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 65305,
+                                                                                      "ppid": 65304,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /priv",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 65312,
+                                                                                          "ppid": 65305,
+                                                                                          "name": "timeout.exe",
+                                                                                          "command": "timeout.exe /t 5 /nobreak",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 65318,
+                                                                                              "ppid": 65312,
+                                                                                              "name": "tasklist.exe",
+                                                                                              "command": "tasklist.exe /svc",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 65319,
+                                                                                                  "ppid": 65318,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /all > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\who_b801c1e4.txt\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 65325,
+                                                                                                      "ppid": 65319,
+                                                                                                      "name": "findstr.exe",
+                                                                                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Wingtip\\Logs\\profile.log\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 65328,
+                                                                                                          "ppid": 65325,
+                                                                                                          "name": "findstr.exe",
+                                                                                                          "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Wingtip\\Logs\\deploy.log\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 65332,
+                                                                                                              "ppid": 65328,
+                                                                                                              "name": "whoami.exe",
+                                                                                                              "command": "whoami.exe /all > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\who_6b828ff7.txt\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 65335,
+                                                                                                                  "ppid": 65332,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\who_693b780d.txt\"",
+                                                                                                                  "children": []
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                          "pid": 65341,
+                                                                                                          "ppid": 65325,
+                                                                                                          "name": "whoami.exe",
+                                                                                                          "command": "whoami.exe > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\who_0a2be89d.txt\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 65348,
+                                                                                                              "ppid": 65341,
+                                                                                                              "name": "timeout.exe",
+                                                                                                              "command": "timeout.exe /t 7 /nobreak",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 65350,
+                                                                                                                  "ppid": 65348,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe /all",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 65357,
+                                                                                                                      "ppid": 65350,
+                                                                                                                      "name": "findstr.exe",
+                                                                                                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Litware\\Logs\\support.log\"",
+                                                                                                                      "children": []
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

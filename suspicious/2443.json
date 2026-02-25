@@ -1,0 +1,373 @@
+{
+  "pid": 366368,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 366375,
+      "ppid": 366368,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"set\"",
+      "children": [
+        {
+          "pid": 366381,
+          "ppid": 366375,
+          "name": "wevtutil.exe",
+          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Litware\\Logs\\Microsoft-Windows-TaskScheduler_Operational_3e0b181c.evtx\"",
+          "children": [
+            {
+              "pid": 366384,
+              "ppid": 366381,
+              "name": "schtasks.exe",
+              "command": "schtasks.exe /create /tn \"\\Northwind\\Maint\\Diag\" /tr \"C:\\IT\\Runbooks\\sync_6968da85.ps1\" /sc onlogon /f",
+              "children": [
+                {
+                  "pid": 366388,
+                  "ppid": 366384,
+                  "name": "quser.exe",
+                  "command": "quser.exe /server:OPS-910",
+                  "children": [
+                    {
+                      "pid": 366391,
+                      "ppid": 366388,
+                      "name": "wevtutil.exe",
+                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Contoso\\Logs\\Application_d01e3515.evtx\"",
+                      "children": [
+                        {
+                          "pid": 366394,
+                          "ppid": 366391,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                          "children": [
+                            {
+                              "pid": 366401,
+                              "ppid": 366394,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /run /tn \"\\Contoso\\Support\\Diag\"",
+                              "children": [
+                                {
+                                  "pid": 366403,
+                                  "ppid": 366401,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                                  "children": [
+                                    {
+                                      "pid": 366405,
+                                      "ppid": 366403,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 366410,
+                                          "ppid": 366405,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Minimized -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\diag_d82d5f70.txt'\"",
+                                          "children": [
+                                            {
+                                              "pid": 366416,
+                                              "ppid": 366410,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Contoso\\Logs\\Microsoft-Windows-TaskScheduler_Operational_1c831869.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 366417,
+                                                  "ppid": 366416,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Northwind\\Logs\\deploy.log\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 366421,
+                                                      "ppid": 366417,
+                                                      "name": "quser.exe",
+                                                      "command": "quser.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 366427,
+                                                          "ppid": 366421,
+                                                          "name": "cmd.exe",
+                                                          "command": "cmd.exe /c \"whoami.exe /groups > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\who_f6ad0ec7.txt\"\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 366432,
+                                                              "ppid": 366427,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 366433,
+                                                                  "ppid": 366432,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /all > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\who_81965ac4.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 366439,
+                                                                      "ppid": 366433,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /all > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\who_82687de9.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 366441,
+                                                                          "ppid": 366439,
+                                                                          "name": "wevtutil.exe",
+                                                                          "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Contoso\\Logs\\Application_96189b6e.evtx\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 366443,
+                                                                              "ppid": 366441,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\host_21646f1c.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 366444,
+                                                                                  "ppid": 366443,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /all",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 366447,
+                                                                                      "ppid": 366444,
+                                                                                      "name": "timeout.exe",
+                                                                                      "command": "timeout.exe /t 12 /nobreak",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 366454,
+                                                                                          "ppid": 366447,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\who_9488e0d4.txt\"",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 366461,
+                                                                          "ppid": 366439,
+                                                                          "name": "quser.exe",
+                                                                          "command": "quser.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 366464,
+                                                                              "ppid": 366461,
+                                                                              "name": "quser.exe",
+                                                                              "command": "quser.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 366468,
+                                                                                  "ppid": 366464,
+                                                                                  "name": "quser.exe",
+                                                                                  "command": "quser.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 366475,
+                                                                                      "ppid": 366468,
+                                                                                      "name": "quser.exe",
+                                                                                      "command": "quser.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 366479,
+                                                                                          "ppid": 366475,
+                                                                                          "name": "quser.exe",
+                                                                                          "command": "quser.exe",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 366484,
+                                                                                              "ppid": 366479,
+                                                                                              "name": "wevtutil.exe",
+                                                                                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Northwind\\Logs\\Application_9420a79c.evtx\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 366491,
+                                                                                                  "ppid": 366484,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /priv",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 366493,
+                                                                                                      "ppid": 366491,
+                                                                                                      "name": "quser.exe",
+                                                                                                      "command": "quser.exe",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 366498,
+                                                                                                          "ppid": 366493,
+                                                                                                          "name": "hostname.exe",
+                                                                                                          "command": "hostname.exe > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\host_45376dfe.txt\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 366501,
+                                                                                                              "ppid": 366498,
+                                                                                                              "name": "wevtutil.exe",
+                                                                                                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Contoso\\Logs\\Microsoft-Windows-TaskScheduler_Operational_49545ec5.evtx\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 366508,
+                                                                                                                  "ppid": 366501,
+                                                                                                                  "name": "hostname.exe",
+                                                                                                                  "command": "hostname.exe",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 366515,
+                                                                                                                      "ppid": 366508,
+                                                                                                                      "name": "wevtutil.exe",
+                                                                                                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Alpine\\Logs\\Microsoft-Windows-TaskScheduler_Operational_0afc71ef.evtx\"",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 366521,
+                                                                                                                          "ppid": 366515,
+                                                                                                                          "name": "hostname.exe",
+                                                                                                                          "command": "hostname.exe",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "pid": 366528,
+                                                                                                                              "ppid": 366521,
+                                                                                                                              "name": "powershell.exe",
+                                                                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "pid": 366531,
+                                                                                                                                  "ppid": 366528,
+                                                                                                                                  "name": "wevtutil.exe",
+                                                                                                                                  "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\BlueYonder\\Logs\\Microsoft-Windows-TaskScheduler_Operational_91b1e063.evtx\"",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "pid": 366538,
+                                                                                                                                      "ppid": 366531,
+                                                                                                                                      "name": "quser.exe",
+                                                                                                                                      "command": "quser.exe",
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "pid": 366542,
+                                                                                                                                          "ppid": 366538,
+                                                                                                                                          "name": "quser.exe",
+                                                                                                                                          "command": "quser.exe /server:BLD-405",
+                                                                                                                                          "children": []
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                  "pid": 366549,
+                                                                                                                                  "ppid": 366528,
+                                                                                                                                  "name": "choice.exe",
+                                                                                                                                  "command": "choice.exe /d y /t 4 > nul",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "pid": 366552,
+                                                                                                                                      "ppid": 366549,
+                                                                                                                                      "name": "wevtutil.exe",
+                                                                                                                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Fabrikam\\Logs\\Microsoft-Windows-TaskScheduler_Operational_886b5939.evtx\"",
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "pid": 366558,
+                                                                                                                                          "ppid": 366552,
+                                                                                                                                          "name": "hostname.exe",
+                                                                                                                                          "command": "hostname.exe > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\host_ba539da1.txt\"",
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "pid": 366564,
+                                                                                                                                              "ppid": 366558,
+                                                                                                                                              "name": "cmd.exe",
+                                                                                                                                              "command": "cmd.exe /c \"quser.exe\"",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "pid": 366565,
+                                                                                                                                                  "ppid": 366564,
+                                                                                                                                                  "name": "whoami.exe",
+                                                                                                                                                  "command": "whoami.exe /priv",
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "pid": 366569,
+                                                                                                                                                      "ppid": 366565,
+                                                                                                                                                      "name": "wevtutil.exe",
+                                                                                                                                                      "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Alpine\\Logs\\System_8bc69e94.evtx\"",
+                                                                                                                                                      "children": [
+                                                                                                                                                        {
+                                                                                                                                                          "pid": 366573,
+                                                                                                                                                          "ppid": 366569,
+                                                                                                                                                          "name": "powershell.exe",
+                                                                                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+                                                                                                                                                          "children": []
+                                                                                                                                                        }
+                                                                                                                                                      ]
+                                                                                                                                                    }
+                                                                                                                                                  ]
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            }
+                                                                                                                                          ]
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

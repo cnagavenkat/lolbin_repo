@@ -1,0 +1,251 @@
+{
+  "pid": 302764,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 302768,
+      "ppid": 302764,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 3 /nobreak",
+      "children": [
+        {
+          "pid": 302775,
+          "ppid": 302768,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /fo LIST /v",
+          "children": [
+            {
+              "pid": 302780,
+              "ppid": 302775,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\host_87d04c61.txt\"",
+              "children": [
+                {
+                  "pid": 302781,
+                  "ppid": 302780,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\who_a4a4dd68.txt\"",
+                  "children": [
+                    {
+                      "pid": 302787,
+                      "ppid": 302781,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 302789,
+                          "ppid": 302787,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 302791,
+                      "ppid": 302781,
+                      "name": "vssadmin.exe",
+                      "command": "vssadmin.exe list shadows",
+                      "children": [
+                        {
+                          "pid": 302798,
+                          "ppid": 302791,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 18 /nobreak",
+                          "children": [
+                            {
+                              "pid": 302802,
+                              "ppid": 302798,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 4 /nobreak",
+                              "children": [
+                                {
+                                  "pid": 302803,
+                                  "ppid": 302802,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /c \"whoami.exe /priv > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\who_b11100a3.txt\"\"",
+                                  "children": [
+                                    {
+                                      "pid": 302806,
+                                      "ppid": 302803,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Fabrikam\\Logs\\System_1f5f713a.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 302811,
+                                          "ppid": 302806,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\host_3848c4c0.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 302816,
+                                              "ppid": 302811,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\who_513f32ee.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 302818,
+                                                  "ppid": 302816,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 302820,
+                                                      "ppid": 302818,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 302823,
+                                          "ppid": 302806,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv",
+                                          "children": [
+                                            {
+                                              "pid": 302824,
+                                              "ppid": 302823,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\host_fc453fab.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 302839,
+                                                  "ppid": 302824,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\host_a2ea38b8.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 302846,
+                                                      "ppid": 302839,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\diag_5fc593b8.txt'\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 302850,
+                                                          "ppid": 302846,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all",
+                                                          "children": [
+                                                            {
+                                                              "pid": 302856,
+                                                              "ppid": 302850,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 302870,
+                                                                  "ppid": 302856,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 302876,
+                                                                      "ppid": 302870,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\host_a81cd83d.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 302882,
+                                                                          "ppid": 302876,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 302826,
+      "ppid": 302764,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 302830,
+          "ppid": 302826,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\who_3001f0e5.txt\"",
+          "children": [
+            {
+              "pid": 302832,
+              "ppid": 302830,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 302833,
+                  "ppid": 302832,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\who_65cd9fc6.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 302862,
+      "ppid": 302764,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+      "children": [
+        {
+          "pid": 302863,
+          "ppid": 302862,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 4 /nobreak",
+          "children": [
+            {
+              "pid": 302866,
+              "ppid": 302863,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

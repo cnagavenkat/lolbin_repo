@@ -1,0 +1,150 @@
+{
+  "pid": 141177,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 141178,
+      "ppid": 141177,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\arjun.sharma\\AppData\\Local\\Temp\\diag_87ff7f45.txt'\"",
+      "children": [
+        {
+          "pid": 141184,
+          "ppid": 141178,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 8 /nobreak",
+          "children": [
+            {
+              "pid": 141187,
+              "ppid": 141184,
+              "name": "net.exe",
+              "command": "net.exe use Y: \"\\\\bldsrv\\drops\" /persistent:no",
+              "children": [
+                {
+                  "pid": 141201,
+                  "ppid": 141187,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": [
+                    {
+                      "pid": 141203,
+                      "ppid": 141201,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\arjun.sharma\\AppData\\Local\\Temp\\host_ee4ec476.txt\"",
+                      "children": [
+                        {
+                          "pid": 141207,
+                          "ppid": 141203,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe > \"C:\\Users\\arjun.sharma\\AppData\\Local\\Temp\\who_91deb4bf.txt\"",
+                          "children": [
+                            {
+                              "pid": 141210,
+                              "ppid": 141207,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /create /tn \"\\Alpine\\Maint\\Diag\" /tr \"C:\\ProgramData\\Northwind\\Updater\\run_55ea9ed2.vbs\" /sc onlogon /f /ru SYSTEM",
+                              "children": [
+                                {
+                                  "pid": 141214,
+                                  "ppid": 141210,
+                                  "name": "quser.exe",
+                                  "command": "quser.exe /server:WS-491",
+                                  "children": [
+                                    {
+                                      "pid": 141217,
+                                      "ppid": 141214,
+                                      "name": "schtasks.exe",
+                                      "command": "schtasks.exe /run /tn \"\\Contoso\\Support\\Diag\"",
+                                      "children": [
+                                        {
+                                          "pid": 141222,
+                                          "ppid": 141217,
+                                          "name": "quser.exe",
+                                          "command": "quser.exe /server:ENG-530",
+                                          "children": [
+                                            {
+                                              "pid": 141223,
+                                              "ppid": 141222,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 141226,
+                                                  "ppid": 141223,
+                                                  "name": "reg.exe",
+                                                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                                  "children": [
+                                                    {
+                                                      "pid": 141233,
+                                                      "ppid": 141226,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 18 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 141236,
+                                                          "ppid": 141233,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 9 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 141243,
+                                                              "ppid": 141236,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 25 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 141248,
+                                                                  "ppid": 141243,
+                                                                  "name": "quser.exe",
+                                                                  "command": "quser.exe /server:APP-979",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 141191,
+      "ppid": 141177,
+      "name": "quser.exe",
+      "command": "quser.exe /server:LAP-251",
+      "children": [
+        {
+          "pid": 141195,
+          "ppid": 141191,
+          "name": "whoami.exe",
+          "command": "whoami.exe /groups > \"C:\\Users\\arjun.sharma\\AppData\\Local\\Temp\\who_5534953a.txt\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

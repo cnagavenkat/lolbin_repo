@@ -1,0 +1,315 @@
+{
+  "pid": 272018,
+  "ppid": 0,
+  "name": "msbuild.exe",
+  "command": "msbuild.exe \"C:\\src\\Bridge\\Bridge.csproj\" /t:Build /p:Configuration=Release",
+  "children": [
+    {
+      "pid": 272023,
+      "ppid": 272018,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -ExecutionPolicy Bypass -File \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\BuildPack_70a1c285.ps1\" -Host \"LAP-187\" -Mode Delta",
+      "children": [
+        {
+          "pid": 272025,
+          "ppid": 272023,
+          "name": "msiexec.exe",
+          "command": "msiexec.exe /i \"C:\\ProgramData\\Litware\\Updater\\support.msi\" /passive /l*v \"C:\\ProgramData\\BlueYonder\\Logs\\msi_b0c1a95d.log\"",
+          "children": [
+            {
+              "pid": 272028,
+              "ppid": 272025,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups",
+              "children": [
+                {
+                  "pid": 272035,
+                  "ppid": 272028,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 21\"",
+                  "children": [
+                    {
+                      "pid": 272036,
+                      "ppid": 272035,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 24 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 272037,
+                          "ppid": 272036,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /create /tn \"\\Litware\\Profile\\Diag\" /tr \"C:\\IT\\Scripts\\post_91409404.ps1\" /sc minute /mo 30 /f /ru SYSTEM",
+                          "children": [
+                            {
+                              "pid": 272043,
+                              "ppid": 272037,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 7 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 272050,
+                                  "ppid": 272043,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 10 /nobreak",
+                                  "children": [
+                                    {
+                                      "pid": 272056,
+                                      "ppid": 272050,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\who_feaf7578.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 272059,
+                                          "ppid": 272056,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": [
+                                            {
+                                              "pid": 272063,
+                                              "ppid": 272059,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 9 127.0.0.1 > nul",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 272070,
+                              "ppid": 272037,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all",
+                              "children": [
+                                {
+                                  "pid": 272071,
+                                  "ppid": 272070,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 5 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 272076,
+                                      "ppid": 272071,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv",
+                                      "children": [
+                                        {
+                                          "pid": 272077,
+                                          "ppid": 272076,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\who_b5968e95.txt\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 272082,
+                                  "ppid": 272070,
+                                  "name": "schtasks.exe",
+                                  "command": "schtasks.exe /run /tn \"\\Contoso\\Support\\Diag\"",
+                                  "children": [
+                                    {
+                                      "pid": 272089,
+                                      "ppid": 272082,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all",
+                                      "children": [
+                                        {
+                                          "pid": 272094,
+                                          "ppid": 272089,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 272099,
+                                              "ppid": 272094,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 272105,
+                                                  "ppid": 272099,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Alpine\\Logs\\profile.log\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 272107,
+                                                      "ppid": 272105,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 25 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 272113,
+                                                          "ppid": 272107,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 272120,
+                                                              "ppid": 272113,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 272127,
+                                                                  "ppid": 272120,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 272128,
+                                                                      "ppid": 272127,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /priv > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\who_a50f120e.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 272131,
+                                                                          "ppid": 272128,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 272132,
+                                                                              "ppid": 272131,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /groups > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\who_bc12aca2.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 272137,
+                                                                                  "ppid": 272132,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 272138,
+                                                                                      "ppid": 272137,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 272142,
+                                                                                          "ppid": 272138,
+                                                                                          "name": "timeout.exe",
+                                                                                          "command": "timeout.exe /t 7 /nobreak",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 272148,
+                                                                                              "ppid": 272142,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /priv",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "pid": 272152,
+                                                                              "ppid": 272131,
+                                                                              "name": "ping.exe",
+                                                                              "command": "ping.exe -n 20 127.0.0.1 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 272153,
+                                                                                  "ppid": 272152,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 272155,
+                                                                                      "ppid": 272153,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /priv",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 272156,
+                                                                                          "ppid": 272155,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\host_b1602afe.txt\"",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    },
+                                                                                    {
+                                                                                      "pid": 272158,
+                                                                                      "ppid": 272153,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 272163,
+                                                                                          "ppid": 272158,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\who_2d5ac1d4.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 272169,
+                                                                                              "ppid": 272163,
+                                                                                              "name": "powershell.exe",
+                                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\host_7904208a.txt\"' -Wait\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 272173,
+                                                                                                  "ppid": 272169,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /priv > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\who_a274d34f.txt\"",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

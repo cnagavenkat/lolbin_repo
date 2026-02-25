@@ -1,0 +1,235 @@
+{
+  "pid": 323130,
+  "ppid": 0,
+  "name": "outlook.exe",
+  "command": "outlook.exe /recycle",
+  "children": [
+    {
+      "pid": 323137,
+      "ppid": 323130,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Runbooks\\Deploy_ab7c4800.wsf\" /apply",
+      "children": [
+        {
+          "pid": 323138,
+          "ppid": 323137,
+          "name": "reg.exe",
+          "command": "reg.exe import \"C:\\Build\\obj\\ba85acd6\\Client_d4e8b59a.reg\"",
+          "children": [
+            {
+              "pid": 323142,
+              "ppid": 323138,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\rahul.patel\\AppData\\Local\\Temp\\host_9fcfdabc.txt\"",
+              "children": [
+                {
+                  "pid": 323148,
+                  "ppid": 323142,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 6 /nobreak",
+                  "children": [
+                    {
+                      "pid": 323154,
+                      "ppid": 323148,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\rahul.patel\\AppData\\Local\\Temp\\who_01199b5a.txt\"",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "pid": 323160,
+                  "ppid": 323142,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 323167,
+                      "ppid": 323160,
+                      "name": "wscript.exe",
+                      "command": "wscript.exe //nologo \"C:\\Users\\rahul.patel\\AppData\\Local\\Temp\\LoginInit_7146472f.vbs\"",
+                      "children": [
+                        {
+                          "pid": 323173,
+                          "ppid": 323167,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\rahul.patel\\AppData\\Local\\Temp\\host_f25b3b23.txt\"",
+                          "children": [
+                            {
+                              "pid": 323179,
+                              "ppid": 323173,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /create /tn \"\\Litware\\Maint\\Cleanup\" /tr \"C:\\ProgramData\\Contoso\\Collector\\post_3c82aa99.cmd\" /sc daily /st 00:37 /f",
+                              "children": [
+                                {
+                                  "pid": 323184,
+                                  "ppid": 323179,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 4 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 323189,
+                                      "ppid": 323184,
+                                      "name": "schtasks.exe",
+                                      "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+                                      "children": [
+                                        {
+                                          "pid": 323193,
+                                          "ppid": 323189,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 18 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 323198,
+                                              "ppid": 323193,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 323199,
+                                                  "ppid": 323198,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 323202,
+                                                      "ppid": 323199,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups > \"C:\\Users\\rahul.patel\\AppData\\Local\\Temp\\who_dc4984ca.txt\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 323205,
+                                                  "ppid": 323198,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\rahul.patel\\AppData\\Local\\Temp\\host_9e908533.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 323211,
+                                                      "ppid": 323205,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 323214,
+                                                          "ppid": 323211,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all > \"C:\\Users\\rahul.patel\\AppData\\Local\\Temp\\who_3ffb3a67.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 323233,
+                                                              "ppid": 323214,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 323250,
+                                                                  "ppid": 323233,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 323252,
+                                                                      "ppid": 323250,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\rahul.patel\\AppData\\Local\\Temp\\host_dfa6aa83.txt\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 323220,
+      "ppid": 323130,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 323221,
+          "ppid": 323220,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\rahul.patel\\AppData\\Local\\Temp\\host_054823d4.txt\"",
+          "children": [
+            {
+              "pid": 323226,
+              "ppid": 323221,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 323232,
+                  "ppid": 323226,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 323234,
+      "ppid": 323130,
+      "name": "whoami.exe",
+      "command": "whoami.exe",
+      "children": [
+        {
+          "pid": 323238,
+          "ppid": 323234,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 323240,
+              "ppid": 323238,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 323244,
+                  "ppid": 323240,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "pid": 66648,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 66651,
+      "ppid": 66648,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\sched_6f15e6da.txt'\"",
+      "children": [
+        {
+          "pid": 66653,
+          "ppid": 66651,
+          "name": "cmd.exe",
+          "command": "cmd.exe /k \"echo maintenance step\"",
+          "children": [
+            {
+              "pid": 66655,
+              "ppid": 66653,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 66662,
+                  "ppid": 66655,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-Service | Out-File 'C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\diag_b5525986.txt'\"",
+                  "children": [
+                    {
+                      "pid": 66667,
+                      "ppid": 66662,
+                      "name": "wevtutil.exe",
+                      "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Contoso\\Logs\\System_fb834a23.evtx\"",
+                      "children": [
+                        {
+                          "pid": 66671,
+                          "ppid": 66667,
+                          "name": "wevtutil.exe",
+                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Fabrikam\\Logs\\System_dda777a2.evtx\"",
+                          "children": [
+                            {
+                              "pid": 66672,
+                              "ppid": 66671,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                              "children": [
+                                {
+                                  "pid": 66677,
+                                  "ppid": 66672,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 25 /nobreak",
+                                  "children": [
+                                    {
+                                      "pid": 66681,
+                                      "ppid": 66677,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Contoso\\Logs\\Microsoft-Windows-TaskScheduler_Operational_0115f441.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 66688,
+                                          "ppid": 66681,
+                                          "name": "schtasks.exe",
+                                          "command": "schtasks.exe /query /tn \"\\Contoso\\Support\\Diag\" /v /fo LIST",
+                                          "children": [
+                                            {
+                                              "pid": 66692,
+                                              "ppid": 66688,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\host_bb671402.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 66696,
+                                                  "ppid": 66692,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 13 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 66702,
+                                                      "ppid": 66696,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\who_ef157642.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 66709,
+                                                          "ppid": 66702,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 66710,
+                                                              "ppid": 66709,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 66715,
+                                                                  "ppid": 66710,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'wevtutil.exe' -ArgumentList 'epl \"System\" \"C:\\ProgramData\\Contoso\\Logs\\System_846b5943.evtx\"' -Wait\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 66721,
+                                                                      "ppid": 66715,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 66728,
+                                                                          "ppid": 66721,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 9 127.0.0.1 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 66733,
+                                                                              "ppid": 66728,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\host_3dd5a04b.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 66735,
+                                                                                  "ppid": 66733,
+                                                                                  "name": "timeout.exe",
+                                                                                  "command": "timeout.exe /t 4 /nobreak",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 66741,
+                                                                                      "ppid": 66735,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\host_93ce3ec4.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 66742,
+                                                                                          "ppid": 66741,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 66746,
+                                                                                              "ppid": 66742,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /groups > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\who_e12a8cc8.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 66753,
+                                                                                                  "ppid": 66746,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\host_c40864f2.txt\"",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    },
+                                                                                    {
+                                                                                      "pid": 66758,
+                                                                                      "ppid": 66735,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 66762,
+                                                                                          "ppid": 66758,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /groups > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\who_5badb097.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 66764,
+                                                                                              "ppid": 66762,
+                                                                                              "name": "powershell.exe",
+                                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 66765,
+                                                                                                  "ppid": 66764,
+                                                                                                  "name": "tasklist.exe",
+                                                                                                  "command": "tasklist.exe /svc",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 66770,
+                                                                                                      "ppid": 66765,
+                                                                                                      "name": "wevtutil.exe",
+                                                                                                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Northwind\\Logs\\Application_ceb34f80.evtx\"",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

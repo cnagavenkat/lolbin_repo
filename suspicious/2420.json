@@ -1,0 +1,364 @@
+{
+  "pid": 362496,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 362497,
+      "ppid": 362496,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\kiran.nair\\AppData\\Local\\Temp\\LoginInit_0565477b.vbs\"",
+      "children": [
+        {
+          "pid": 362502,
+          "ppid": 362497,
+          "name": "ping.exe",
+          "command": "ping.exe -n 24 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 362508,
+              "ppid": 362502,
+              "name": "nltest.exe",
+              "command": "nltest.exe /dsgetdc:OPS",
+              "children": [
+                {
+                  "pid": 362512,
+                  "ppid": 362508,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'quser.exe' -ArgumentList '' -Wait\"",
+                  "children": [
+                    {
+                      "pid": 362514,
+                      "ppid": 362512,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/all' -Wait\"",
+                      "children": [
+                        {
+                          "pid": 362516,
+                          "ppid": 362514,
+                          "name": "quser.exe",
+                          "command": "quser.exe",
+                          "children": [
+                            {
+                              "pid": 362520,
+                              "ppid": 362516,
+                              "name": "wmic.exe",
+                              "command": "wmic.exe computersystem get Manufacturer,Model,Domain /value",
+                              "children": [
+                                {
+                                  "pid": 362523,
+                                  "ppid": 362520,
+                                  "name": "ipconfig.exe",
+                                  "command": "ipconfig.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 362530,
+                                      "ppid": 362523,
+                                      "name": "cmd.exe",
+                                      "command": "cmd.exe /c \"ipconfig.exe /displaydns\"",
+                                      "children": [
+                                        {
+                                          "pid": 362536,
+                                          "ppid": 362530,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 362538,
+                                              "ppid": 362536,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\kiran.nair\\AppData\\Local\\Temp\\host_af352d4e.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 362542,
+                                                  "ppid": 362538,
+                                                  "name": "quser.exe",
+                                                  "command": "quser.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 362546,
+                                                      "ppid": 362542,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -WindowStyle Minimized -File \"C:\\Users\\kiran.nair\\AppData\\Local\\Temp\\TrustRefresh_729a3f43.ps1\" -Host \"ENG-446\" -Mode Quick",
+                                                      "children": [
+                                                        {
+                                                          "pid": 362549,
+                                                          "ppid": 362546,
+                                                          "name": "ipconfig.exe",
+                                                          "command": "ipconfig.exe /all",
+                                                          "children": [
+                                                            {
+                                                              "pid": 362552,
+                                                              "ppid": 362549,
+                                                              "name": "schtasks.exe",
+                                                              "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 362553,
+                                                                  "ppid": 362552,
+                                                                  "name": "quser.exe",
+                                                                  "command": "quser.exe /server:ENG-701",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 362559,
+                                                                      "ppid": 362553,
+                                                                      "name": "ping.exe",
+                                                                      "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 362565,
+                                                                          "ppid": 362559,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 362568,
+                                                                              "ppid": 362565,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\kiran.nair\\AppData\\Local\\Temp\\host_2bbfba62.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 362573,
+                                                                                  "ppid": 362568,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 362574,
+                                                                                      "ppid": 362573,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 362577,
+                                                                                          "ppid": 362574,
+                                                                                          "name": "quser.exe",
+                                                                                          "command": "quser.exe /server:SUP-721",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 362579,
+                                                                                              "ppid": 362577,
+                                                                                              "name": "ping.exe",
+                                                                                              "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "pid": 362584,
+                                                                                  "ppid": 362568,
+                                                                                  "name": "quser.exe",
+                                                                                  "command": "quser.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 362588,
+                                                                                      "ppid": 362584,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\kiran.nair\\AppData\\Local\\Temp\\host_fea121f0.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 362589,
+                                                                                          "ppid": 362588,
+                                                                                          "name": "choice.exe",
+                                                                                          "command": "choice.exe /d y /t 15 > nul",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 362594,
+                                                                                              "ppid": 362589,
+                                                                                              "name": "ipconfig.exe",
+                                                                                              "command": "ipconfig.exe /all",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 362595,
+                                                                                                  "ppid": 362594,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /priv > \"C:\\Users\\kiran.nair\\AppData\\Local\\Temp\\who_198001c8.txt\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 362596,
+                                                                                                      "ppid": 362595,
+                                                                                                      "name": "whoami.exe",
+                                                                                                      "command": "whoami.exe /priv",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 362600,
+                                                                                                          "ppid": 362596,
+                                                                                                          "name": "ipconfig.exe",
+                                                                                                          "command": "ipconfig.exe /displaydns",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 362604,
+                                                                                                              "ppid": 362600,
+                                                                                                              "name": "cmd.exe",
+                                                                                                              "command": "cmd.exe /c \"hostname.exe\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 362606,
+                                                                                                                  "ppid": 362604,
+                                                                                                                  "name": "ping.exe",
+                                                                                                                  "command": "ping.exe -n 22 127.0.0.1 > nul",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 362610,
+                                                                                                                      "ppid": 362606,
+                                                                                                                      "name": "ipconfig.exe",
+                                                                                                                      "command": "ipconfig.exe /all",
+                                                                                                                      "children": []
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "pid": 362614,
+                                                                                                      "ppid": 362595,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\kiran.nair\\AppData\\Local\\Temp\\host_8a61c8e9.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 362617,
+                                                                                                          "ppid": 362614,
+                                                                                                          "name": "quser.exe",
+                                                                                                          "command": "quser.exe",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 362620,
+                                                                                                              "ppid": 362617,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 362624,
+                                                                                                                  "ppid": 362620,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe /all > \"C:\\Users\\kiran.nair\\AppData\\Local\\Temp\\who_09650e96.txt\"",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 362627,
+                                                                                                                      "ppid": 362624,
+                                                                                                                      "name": "ipconfig.exe",
+                                                                                                                      "command": "ipconfig.exe /displaydns",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 362632,
+                                                                                                                          "ppid": 362627,
+                                                                                                                          "name": "quser.exe",
+                                                                                                                          "command": "quser.exe /server:LAP-370",
+                                                                                                                          "children": []
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                      "pid": 362635,
+                                                                                                                      "ppid": 362624,
+                                                                                                                      "name": "ipconfig.exe",
+                                                                                                                      "command": "ipconfig.exe /allcompartments /all",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 362637,
+                                                                                                                          "ppid": 362635,
+                                                                                                                          "name": "powershell.exe",
+                                                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "pid": 362644,
+                                                                                                                              "ppid": 362637,
+                                                                                                                              "name": "ipconfig.exe",
+                                                                                                                              "command": "ipconfig.exe /all",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "pid": 362651,
+                                                                                                                                  "ppid": 362644,
+                                                                                                                                  "name": "hostname.exe",
+                                                                                                                                  "command": "hostname.exe > \"C:\\Users\\kiran.nair\\AppData\\Local\\Temp\\host_6f800699.txt\"",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "pid": 362657,
+                                                                                                                                      "ppid": 362651,
+                                                                                                                                      "name": "whoami.exe",
+                                                                                                                                      "command": "whoami.exe > \"C:\\Users\\kiran.nair\\AppData\\Local\\Temp\\who_0e0efef4.txt\"",
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "pid": 362658,
+                                                                                                                                          "ppid": 362657,
+                                                                                                                                          "name": "ping.exe",
+                                                                                                                                          "command": "ping.exe -n 5 127.0.0.1 > nul",
+                                                                                                                                          "children": []
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

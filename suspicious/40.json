@@ -1,0 +1,267 @@
+{
+  "pid": 55316,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 55319,
+      "ppid": 55316,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\farhan.gupta\\AppData\\Local\\Temp\\TemplateRun_7d285171.js\"",
+      "children": [
+        {
+          "pid": 55322,
+          "ppid": 55319,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+          "children": [
+            {
+              "pid": 55323,
+              "ppid": 55322,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /v",
+              "children": [
+                {
+                  "pid": 55328,
+                  "ppid": 55323,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\Public\\RunDiagnostics_3b0574af.ps1\" -Host \"ENG-499\" -Mode Quick",
+                  "children": [
+                    {
+                      "pid": 55329,
+                      "ppid": 55328,
+                      "name": "nltest.exe",
+                      "command": "nltest.exe /dsgetdc:DEVOPS",
+                      "children": [
+                        {
+                          "pid": 55335,
+                          "ppid": 55329,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv",
+                          "children": [
+                            {
+                              "pid": 55338,
+                              "ppid": 55335,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                              "children": [
+                                {
+                                  "pid": 55345,
+                                  "ppid": 55338,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 16 /nobreak",
+                                  "children": [
+                                    {
+                                      "pid": 55350,
+                                      "ppid": 55345,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups > \"C:\\Users\\farhan.gupta\\AppData\\Local\\Temp\\who_4c6b0973.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 55352,
+                                          "ppid": 55350,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all > \"C:\\Users\\farhan.gupta\\AppData\\Local\\Temp\\who_e09f32e5.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 55355,
+                                              "ppid": 55352,
+                                              "name": "nltest.exe",
+                                              "command": "nltest.exe /sc_query:ENG",
+                                              "children": [
+                                                {
+                                                  "pid": 55356,
+                                                  "ppid": 55355,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\farhan.gupta\\AppData\\Local\\Temp\\host_c75c41c2.txt\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 55359,
+                                  "ppid": 55338,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 21 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 55365,
+                                      "ppid": 55359,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\farhan.gupta\\AppData\\Local\\Temp\\host_b63fbd28.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 55370,
+                                          "ppid": 55365,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": [
+                                            {
+                                              "pid": 55376,
+                                              "ppid": 55370,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 55381,
+                                                  "ppid": 55376,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /svc",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 55382,
+                                      "ppid": 55359,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 13 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 55384,
+                                          "ppid": 55382,
+                                          "name": "nltest.exe",
+                                          "command": "nltest.exe /dsgetdc:OPS",
+                                          "children": [
+                                            {
+                                              "pid": 55390,
+                                              "ppid": 55384,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Wingtip\\Logs\\Microsoft-Windows-TaskScheduler_Operational_f0b4ed05.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 55394,
+                                                  "ppid": 55390,
+                                                  "name": "nltest.exe",
+                                                  "command": "nltest.exe /dclist:RESEARCH",
+                                                  "children": [
+                                                    {
+                                                      "pid": 55401,
+                                                      "ppid": 55394,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe > \"C:\\Users\\farhan.gupta\\AppData\\Local\\Temp\\who_9fb7d3c0.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 55405,
+                                                          "ppid": 55401,
+                                                          "name": "nltest.exe",
+                                                          "command": "nltest.exe /dclist:CORP",
+                                                          "children": [
+                                                            {
+                                                              "pid": 55408,
+                                                              "ppid": 55405,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 55410,
+                                                                  "ppid": 55408,
+                                                                  "name": "nltest.exe",
+                                                                  "command": "nltest.exe /domain_trusts",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 55412,
+                                                              "ppid": 55405,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\farhan.gupta\\AppData\\Local\\Temp\\host_faa95650.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 55415,
+                                                                  "ppid": 55412,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe > \"C:\\Users\\farhan.gupta\\AppData\\Local\\Temp\\who_69d6cc43.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 55421,
+                                                                      "ppid": 55415,
+                                                                      "name": "nltest.exe",
+                                                                      "command": "nltest.exe /dclist:CORP",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 55424,
+                                                                          "ppid": 55421,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 55428,
+                                                                              "ppid": 55424,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all > \"C:\\Users\\farhan.gupta\\AppData\\Local\\Temp\\who_b1d85576.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 55433,
+                                                                                  "ppid": 55428,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /svc",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 55440,
+                                                                  "ppid": 55412,
+                                                                  "name": "nltest.exe",
+                                                                  "command": "nltest.exe /sc_query:DEVOPS",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 55441,
+                                                                      "ppid": 55440,
+                                                                      "name": "nltest.exe",
+                                                                      "command": "nltest.exe /dclist:DEVOPS",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

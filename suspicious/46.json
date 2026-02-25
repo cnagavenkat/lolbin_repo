@@ -1,0 +1,174 @@
+{
+  "pid": 56077,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 56082,
+      "ppid": 56077,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\ProgramData\\Woodgrove\\Support\\Support_91329bbd.wsf\" /verify",
+      "children": [
+        {
+          "pid": 56085,
+          "ppid": 56082,
+          "name": "whoami.exe",
+          "command": "whoami.exe /all > \"C:\\Users\\aditya.nair\\AppData\\Local\\Temp\\who_b586a3da.txt\"",
+          "children": [
+            {
+              "pid": 56091,
+              "ppid": 56085,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'wmic.exe' -ArgumentList 'service get Name,StartMode,State' -Wait\"",
+              "children": [
+                {
+                  "pid": 56097,
+                  "ppid": 56091,
+                  "name": "findstr.exe",
+                  "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\BlueYonder\\Logs\\update.log\"",
+                  "children": [
+                    {
+                      "pid": 56104,
+                      "ppid": 56097,
+                      "name": "net.exe",
+                      "command": "net.exe use Z: \"\\\\deploy\\packages\" /persistent:no",
+                      "children": [
+                        {
+                          "pid": 56107,
+                          "ppid": 56104,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                          "children": [
+                            {
+                              "pid": 56111,
+                              "ppid": 56107,
+                              "name": "net.exe",
+                              "command": "net.exe use Y: \"\\\\deploy\\packages\" /persistent:no",
+                              "children": [
+                                {
+                                  "pid": 56118,
+                                  "ppid": 56111,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\aditya.nair\\AppData\\Local\\Temp\\who_522c93c9.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 56119,
+                                      "ppid": 56118,
+                                      "name": "makecab.exe",
+                                      "command": "makecab.exe \"C:\\Users\\aditya.nair\\AppData\\Local\\Temp\\trace.etl\" \"C:\\Users\\aditya.nair\\AppData\\Local\\Temp\\trace.cab\"",
+                                      "children": [
+                                        {
+                                          "pid": 56122,
+                                          "ppid": 56119,
+                                          "name": "net.exe",
+                                          "command": "net.exe use S: /delete /y",
+                                          "children": [
+                                            {
+                                              "pid": 56123,
+                                              "ppid": 56122,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 56127,
+                                                  "ppid": 56123,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv > \"C:\\Users\\aditya.nair\\AppData\\Local\\Temp\\who_de047cd7.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 56131,
+                                                      "ppid": 56127,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 20 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 56138,
+                                                          "ppid": 56131,
+                                                          "name": "findstr.exe",
+                                                          "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\BlueYonder\\Logs\\update.log\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 56141,
+                                                              "ppid": 56138,
+                                                              "name": "net.exe",
+                                                              "command": "net.exe use T: \"\\\\deploy\\packages\" /persistent:no",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 56144,
+                                                  "ppid": 56123,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups",
+                                                  "children": [
+                                                    {
+                                                      "pid": 56150,
+                                                      "ppid": 56144,
+                                                      "name": "net.exe",
+                                                      "command": "net.exe use S: \"\\\\bldsrv\\drops\" /persistent:no",
+                                                      "children": [
+                                                        {
+                                                          "pid": 56153,
+                                                          "ppid": 56150,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv > \"C:\\Users\\aditya.nair\\AppData\\Local\\Temp\\who_abaf040b.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 56159,
+                                                              "ppid": 56153,
+                                                              "name": "findstr.exe",
+                                                              "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Woodgrove\\Logs\\deploy.log\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 56166,
+                                                                  "ppid": 56159,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 56167,
+                                                                      "ppid": 56166,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'net.exe' -ArgumentList 'use W: \"\\\\bldsrv\\drops\" /persistent:no' -Wait\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

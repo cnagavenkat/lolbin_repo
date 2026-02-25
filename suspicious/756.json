@@ -1,0 +1,252 @@
+{
+  "pid": 143613,
+  "ppid": 0,
+  "name": "gpscript.exe",
+  "command": "gpscript.exe /session",
+  "children": [
+    {
+      "pid": 143615,
+      "ppid": 143613,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\Users\\Public\\CollectInventory_3b18c633.ps1\" -Host \"ENG-360\" -Mode Quick",
+      "children": [
+        {
+          "pid": 143621,
+          "ppid": 143615,
+          "name": "ping.exe",
+          "command": "ping.exe -n 3 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 143624,
+              "ppid": 143621,
+              "name": "net.exe",
+              "command": "net.exe use Z: \"\\\\ops\\maint\" /persistent:no",
+              "children": [
+                {
+                  "pid": 143628,
+                  "ppid": 143624,
+                  "name": "quser.exe",
+                  "command": "quser.exe /server:BLD-806",
+                  "children": [
+                    {
+                      "pid": 143631,
+                      "ppid": 143628,
+                      "name": "schtasks.exe",
+                      "command": "schtasks.exe /create /tn \"\\Wingtip\\Support\\Verify\" /tr \"C:\\ProgramData\\Alpine\\Build\\sync_f6c53a97.cmd\" /sc once /st 22:38 /f /ru SYSTEM",
+                      "children": [
+                        {
+                          "pid": 143635,
+                          "ppid": 143631,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\host_cceb5534.txt\"",
+                          "children": [
+                            {
+                              "pid": 143640,
+                              "ppid": 143635,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 26 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 143647,
+                                  "ppid": 143640,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 6 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 143651,
+                                      "ppid": 143647,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 18 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 143653,
+                                          "ppid": 143651,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 23 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 143660,
+                                              "ppid": 143653,
+                                              "name": "quser.exe",
+                                              "command": "quser.exe /server:LAP-523",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 143661,
+                                  "ppid": 143640,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /c \"schtasks.exe /run /tn \"\\Contoso\\Support\\Diag\"\"",
+                                  "children": [
+                                    {
+                                      "pid": 143664,
+                                      "ppid": 143661,
+                                      "name": "quser.exe",
+                                      "command": "quser.exe /server:WS-757",
+                                      "children": [
+                                        {
+                                          "pid": 143666,
+                                          "ppid": 143664,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 17 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 143673,
+                                              "ppid": 143666,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\host_bd362741.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 143677,
+                                                  "ppid": 143673,
+                                                  "name": "reg.exe",
+                                                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                                  "children": [
+                                                    {
+                                                      "pid": 143681,
+                                                      "ppid": 143677,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 143688,
+                                                          "ppid": 143681,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv",
+                                                          "children": [
+                                                            {
+                                                              "pid": 143694,
+                                                              "ppid": 143688,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 143695,
+                                                                  "ppid": 143694,
+                                                                  "name": "quser.exe",
+                                                                  "command": "quser.exe /server:OPS-775",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 143696,
+                                                                      "ppid": 143695,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 143698,
+                                                                          "ppid": 143696,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /all",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 143700,
+                                                                  "ppid": 143694,
+                                                                  "name": "timeout.exe",
+                                                                  "command": "timeout.exe /t 3 /nobreak",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 143707,
+                                                                      "ppid": 143700,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\host_9610eec6.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 143710,
+                                                                          "ppid": 143707,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 21 127.0.0.1 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 143711,
+                                                                              "ppid": 143710,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe > \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\who_b9ef29c8.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 143718,
+                                                                                  "ppid": 143711,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /groups > \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\who_7053481f.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 143722,
+                                                                                      "ppid": 143718,
+                                                                                      "name": "choice.exe",
+                                                                                      "command": "choice.exe /d y /t 7 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 143728,
+                                                                                          "ppid": 143722,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "pid": 143730,
+                                                                              "ppid": 143710,
+                                                                              "name": "choice.exe",
+                                                                              "command": "choice.exe /d y /t 5 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 143733,
+                                                                                  "ppid": 143730,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\host_3e1dcdcc.txt\"",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "pid": 166520,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 166526,
+      "ppid": 166520,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"hostname\"",
+      "children": [
+        {
+          "pid": 166531,
+          "ppid": 166526,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 16 /nobreak",
+          "children": [
+            {
+              "pid": 166536,
+              "ppid": 166531,
+              "name": "wevtutil.exe",
+              "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Woodgrove\\Logs\\System_4511ed09.evtx\"",
+              "children": [
+                {
+                  "pid": 166542,
+                  "ppid": 166536,
+                  "name": "findstr.exe",
+                  "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Fabrikam\\Logs\\update.log\"",
+                  "children": [
+                    {
+                      "pid": 166543,
+                      "ppid": 166542,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\karthik.sharma\\AppData\\Local\\Temp\\host_e75db075.txt\"' -Wait\"",
+                      "children": [
+                        {
+                          "pid": 166549,
+                          "ppid": 166543,
+                          "name": "cmd.exe",
+                          "command": "cmd.exe /c \"hostname.exe\"",
+                          "children": [
+                            {
+                              "pid": 166560,
+                              "ppid": 166549,
+                              "name": "makecab.exe",
+                              "command": "makecab.exe \"C:\\ProgramData\\BlueYonder\\Logs\\diag.txt\" \"C:\\ProgramData\\BlueYonder\\Logs\\diag.cab\"",
+                              "children": [
+                                {
+                                  "pid": 166564,
+                                  "ppid": 166560,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                                  "children": [
+                                    {
+                                      "pid": 166566,
+                                      "ppid": 166564,
+                                      "name": "forfiles.exe",
+                                      "command": "forfiles.exe /P \"C:\\Users\\Public\" /M *.log /D -40 /C \"cmd /c del /q @path\"",
+                                      "children": [
+                                        {
+                                          "pid": 166572,
+                                          "ppid": 166566,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                          "children": [
+                                            {
+                                              "pid": 166575,
+                                              "ppid": 166572,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all > \"C:\\Users\\karthik.sharma\\AppData\\Local\\Temp\\who_ecec6b5f.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 166576,
+                                                  "ppid": 166575,
+                                                  "name": "schtasks.exe",
+                                                  "command": "schtasks.exe /create /tn \"\\BlueYonder\\Profile\\Sync\" /tr \"C:\\IT\\Scripts\\post_3116b591.cmd\" /sc once /st 11:39 /f /ru SYSTEM",
+                                                  "children": [
+                                                    {
+                                                      "pid": 166581,
+                                                      "ppid": 166576,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\karthik.sharma\\AppData\\Local\\Temp\\host_90ce7f81.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 166586,
+                                                          "ppid": 166581,
+                                                          "name": "findstr.exe",
+                                                          "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Fabrikam\\Logs\\profile.log\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 166589,
+                                                              "ppid": 166586,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups > \"C:\\Users\\karthik.sharma\\AppData\\Local\\Temp\\who_9d4f94e4.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 166595,
+                                                                  "ppid": 166589,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 166599,
+                                                                      "ppid": 166595,
+                                                                      "name": "findstr.exe",
+                                                                      "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Litware\\Logs\\deploy.log\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 166602,
+                                                                          "ppid": 166599,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups > \"C:\\Users\\karthik.sharma\\AppData\\Local\\Temp\\who_2421f685.txt\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 166607,
+                                                                  "ppid": 166589,
+                                                                  "name": "findstr.exe",
+                                                                  "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Wingtip\\Logs\\update.log\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 166614,
+                                                                      "ppid": 166607,
+                                                                      "name": "ping.exe",
+                                                                      "command": "ping.exe -n 24 127.0.0.1 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 166619,
+                                                                          "ppid": 166614,
+                                                                          "name": "findstr.exe",
+                                                                          "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Alpine\\Logs\\update.log\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 166620,
+                                                                              "ppid": 166619,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 166555,
+      "ppid": 166520,
+      "name": "findstr.exe",
+      "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Woodgrove\\Logs\\diag.log\"",
+      "children": [
+        {
+          "pid": 166557,
+          "ppid": 166555,
+          "name": "ping.exe",
+          "command": "ping.exe -n 7 127.0.0.1 > nul",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

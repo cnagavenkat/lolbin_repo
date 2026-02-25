@@ -1,0 +1,267 @@
+{
+  "pid": 111895,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 111900,
+      "ppid": 111895,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Deploy\\Profile_39fa7440.wsf\" /quiet",
+      "children": [
+        {
+          "pid": 111903,
+          "ppid": 111900,
+          "name": "cmd.exe",
+          "command": "cmd.exe /k \"echo maintenance step\"",
+          "children": [
+            {
+              "pid": 111906,
+              "ppid": 111903,
+              "name": "ipconfig.exe",
+              "command": "ipconfig.exe /displaydns",
+              "children": [
+                {
+                  "pid": 111912,
+                  "ppid": 111906,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                  "children": [
+                    {
+                      "pid": 111915,
+                      "ppid": 111912,
+                      "name": "ipconfig.exe",
+                      "command": "ipconfig.exe /displaydns",
+                      "children": [
+                        {
+                          "pid": 111917,
+                          "ppid": 111915,
+                          "name": "findstr.exe",
+                          "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Wingtip\\Logs\\deploy.log\"",
+                          "children": [
+                            {
+                              "pid": 111922,
+                              "ppid": 111917,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Woodgrove\\Logs\\deploy.log\"",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 111924,
+                          "ppid": 111915,
+                          "name": "wmic.exe",
+                          "command": "wmic.exe computersystem get Manufacturer,Model,Domain /value",
+                          "children": [
+                            {
+                              "pid": 111931,
+                              "ppid": 111924,
+                              "name": "ipconfig.exe",
+                              "command": "ipconfig.exe /displaydns",
+                              "children": [
+                                {
+                                  "pid": 111936,
+                                  "ppid": 111931,
+                                  "name": "ipconfig.exe",
+                                  "command": "ipconfig.exe /allcompartments /all",
+                                  "children": [
+                                    {
+                                      "pid": 111939,
+                                      "ppid": 111936,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Wingtip\\Logs\\update.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 111941,
+                                          "ppid": 111939,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Wingtip\\Logs\\update.log\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 111943,
+                              "ppid": 111924,
+                              "name": "quser.exe",
+                              "command": "quser.exe /server:APP-336",
+                              "children": [
+                                {
+                                  "pid": 111945,
+                                  "ppid": 111943,
+                                  "name": "ipconfig.exe",
+                                  "command": "ipconfig.exe /allcompartments /all",
+                                  "children": [
+                                    {
+                                      "pid": 111951,
+                                      "ppid": 111945,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+                                      "children": [
+                                        {
+                                          "pid": 111955,
+                                          "ppid": 111951,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\BlueYonder\\Logs\\Security_b1ad9ea4.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 111961,
+                                              "ppid": 111955,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 25 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 111968,
+                                                  "ppid": 111961,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\who_cf9b05f7.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 111971,
+                                                      "ppid": 111968,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 111972,
+                                                          "ppid": 111971,
+                                                          "name": "ipconfig.exe",
+                                                          "command": "ipconfig.exe /displaydns",
+                                                          "children": [
+                                                            {
+                                                              "pid": 111977,
+                                                              "ppid": 111972,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 13 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 111980,
+                                                                  "ppid": 111977,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 111987,
+                                                                      "ppid": 111980,
+                                                                      "name": "findstr.exe",
+                                                                      "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Woodgrove\\Logs\\deploy.log\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 111988,
+                                                                          "ppid": 111987,
+                                                                          "name": "findstr.exe",
+                                                                          "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\BlueYonder\\Logs\\support.log\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 111989,
+                                                              "ppid": 111972,
+                                                              "name": "ipconfig.exe",
+                                                              "command": "ipconfig.exe /allcompartments /all",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 111993,
+                                                                  "ppid": 111989,
+                                                                  "name": "findstr.exe",
+                                                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Wingtip\\Logs\\diag.log\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 112000,
+                                                                      "ppid": 111993,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 21 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 112001,
+                                                                          "ppid": 112000,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /all",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 112002,
+                                                                  "ppid": 111989,
+                                                                  "name": "ipconfig.exe",
+                                                                  "command": "ipconfig.exe /all",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 112005,
+                                                                      "ppid": 112002,
+                                                                      "name": "cmd.exe",
+                                                                      "command": "cmd.exe /c \"quser.exe /server:LAP-518\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 112012,
+                                                                          "ppid": 112005,
+                                                                          "name": "ipconfig.exe",
+                                                                          "command": "ipconfig.exe /displaydns",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 112015,
+                                                                              "ppid": 112012,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 112022,
+                                                                                  "ppid": 112015,
+                                                                                  "name": "findstr.exe",
+                                                                                  "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\BlueYonder\\Logs\\support.log\"",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

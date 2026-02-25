@@ -1,0 +1,332 @@
+{
+  "pid": 67679,
+  "ppid": 0,
+  "name": "taskhostw.exe",
+  "command": "taskhostw.exe -k Schedule",
+  "children": [
+    {
+      "pid": 67684,
+      "ppid": 67679,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\Contoso\\Support\\Assist_ef1d2623.vbs\"",
+      "children": [
+        {
+          "pid": 67687,
+          "ppid": 67684,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 6 /nobreak",
+          "children": [
+            {
+              "pid": 67689,
+              "ppid": 67687,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"hostname\"",
+              "children": [
+                {
+                  "pid": 67693,
+                  "ppid": 67689,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\who_23d982b8.txt\"",
+                  "children": [
+                    {
+                      "pid": 67699,
+                      "ppid": 67693,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe  -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\priya.nair\\AppData\\Local\\Temp\\evt_a3f4440c.txt'\"",
+                      "children": [
+                        {
+                          "pid": 67701,
+                          "ppid": 67699,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 13 > nul",
+                          "children": [
+                            {
+                              "pid": 67706,
+                              "ppid": 67701,
+                              "name": "wevtutil.exe",
+                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Northwind\\Logs\\Microsoft-Windows-TaskScheduler_Operational_1f2a4d7f.evtx\"",
+                              "children": [
+                                {
+                                  "pid": 67708,
+                                  "ppid": 67706,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Northwind\\Logs\\Microsoft-Windows-TaskScheduler_Operational_de9a9929.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 67709,
+                                      "ppid": 67708,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                      "children": [
+                                        {
+                                          "pid": 67711,
+                                          "ppid": 67709,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe",
+                                          "children": [
+                                            {
+                                              "pid": 67717,
+                                              "ppid": 67711,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 10 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 67721,
+                                                  "ppid": 67717,
+                                                  "name": "schtasks.exe",
+                                                  "command": "schtasks.exe /query /tn \"\\Contoso\\Support\\Diag\" /v /fo LIST",
+                                                  "children": [
+                                                    {
+                                                      "pid": 67722,
+                                                      "ppid": 67721,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 7 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 67726,
+                                                          "ppid": 67722,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 67728,
+                                                              "ppid": 67726,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 67730,
+                                                                  "ppid": 67728,
+                                                                  "name": "timeout.exe",
+                                                                  "command": "timeout.exe /t 19 /nobreak",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 67752,
+                                                                      "ppid": 67730,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'timeout.exe' -ArgumentList '/t 19 /nobreak' -Wait\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 67753,
+                                                                          "ppid": 67752,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 67757,
+                                                                              "ppid": 67753,
+                                                                              "name": "ping.exe",
+                                                                              "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 67762,
+                                                                                  "ppid": 67757,
+                                                                                  "name": "wevtutil.exe",
+                                                                                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Fabrikam\\Logs\\Security_eb553105.evtx\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 67767,
+                                                                                      "ppid": 67762,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_21ae3afa.txt\"",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 67768,
+                                                                          "ppid": 67752,
+                                                                          "name": "wevtutil.exe",
+                                                                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Alpine\\Logs\\Security_9173e4ad.evtx\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 67772,
+                                                                              "ppid": 67768,
+                                                                              "name": "wevtutil.exe",
+                                                                              "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\BlueYonder\\Logs\\System_ecef95cd.evtx\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 67778,
+                                                                                  "ppid": 67772,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 67784,
+                                                                                      "ppid": 67778,
+                                                                                      "name": "choice.exe",
+                                                                                      "command": "choice.exe /d y /t 6 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 67791,
+                                                                                          "ppid": 67784,
+                                                                                          "name": "tasklist.exe",
+                                                                                          "command": "tasklist.exe /v",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 67795,
+                                                                                              "ppid": 67791,
+                                                                                              "name": "choice.exe",
+                                                                                              "command": "choice.exe /d y /t 22 > nul",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 67801,
+                                                                                                  "ppid": 67795,
+                                                                                                  "name": "tasklist.exe",
+                                                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 67805,
+                                                                                                      "ppid": 67801,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 67807,
+                                                                                                          "ppid": 67805,
+                                                                                                          "name": "hostname.exe",
+                                                                                                          "command": "hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_fcebea06.txt\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 67813,
+                                                                                                              "ppid": 67807,
+                                                                                                              "name": "wevtutil.exe",
+                                                                                                              "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\BlueYonder\\Logs\\Security_4f7d387e.evtx\"",
+                                                                                                              "children": []
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            },
+                                                                                            {
+                                                                                              "pid": 67819,
+                                                                                              "ppid": 67791,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_a40386de.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 67823,
+                                                                                                  "ppid": 67819,
+                                                                                                  "name": "cmd.exe",
+                                                                                                  "command": "cmd.exe /c \"tasklist.exe /fi \"imagename eq svchost.exe\"\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 67827,
+                                                                                                      "ppid": 67823,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_b5c135a8.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 67828,
+                                                                                                          "ppid": 67827,
+                                                                                                          "name": "tasklist.exe",
+                                                                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 67835,
+                                                                                                              "ppid": 67828,
+                                                                                                              "name": "timeout.exe",
+                                                                                                              "command": "timeout.exe /t 11 /nobreak",
+                                                                                                              "children": []
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 67735,
+      "ppid": 67679,
+      "name": "wevtutil.exe",
+      "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Litware\\Logs\\System_7ff0d8cb.evtx\"",
+      "children": [
+        {
+          "pid": 67739,
+          "ppid": 67735,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 67742,
+              "ppid": 67739,
+              "name": "wevtutil.exe",
+              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Fabrikam\\Logs\\Application_af50d99c.evtx\"",
+              "children": [
+                {
+                  "pid": 67745,
+                  "ppid": 67742,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\who_fefd7be3.txt\"",
+                  "children": [
+                    {
+                      "pid": 67748,
+                      "ppid": 67745,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\who_d4d9cb18.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

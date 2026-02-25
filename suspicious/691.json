@@ -1,0 +1,173 @@
+{
+  "pid": 136111,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 136113,
+      "ppid": 136111,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\arjun.iyer\\AppData\\Local\\Temp\\Assist_6c146e9e.wsf\"",
+      "children": [
+        {
+          "pid": 136117,
+          "ppid": 136113,
+          "name": "forfiles.exe",
+          "command": "forfiles.exe /P \"C:\\Build\\out\\813c0e1b\" /M *.tmp /D -12 /C \"cmd /c type nul > @path\"",
+          "children": [
+            {
+              "pid": 136120,
+              "ppid": 136117,
+              "name": "ping.exe",
+              "command": "ping.exe -n 26 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 136121,
+                  "ppid": 136120,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 136127,
+                      "ppid": 136121,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\arjun.iyer\\AppData\\Local\\Temp\\who_85d22e5d.txt\"",
+                      "children": [
+                        {
+                          "pid": 136129,
+                          "ppid": 136127,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 136133,
+                              "ppid": 136129,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\arjun.iyer\\AppData\\Local\\Temp\\host_122a1dbc.txt\"",
+                              "children": [
+                                {
+                                  "pid": 136137,
+                                  "ppid": 136133,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 136143,
+                      "ppid": 136121,
+                      "name": "reg.exe",
+                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                      "children": [
+                        {
+                          "pid": 136147,
+                          "ppid": 136143,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all > \"C:\\Users\\arjun.iyer\\AppData\\Local\\Temp\\who_2a5b536c.txt\"",
+                          "children": [
+                            {
+                              "pid": 136152,
+                              "ppid": 136147,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all",
+                              "children": [
+                                {
+                                  "pid": 136156,
+                                  "ppid": 136152,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                  "children": [
+                                    {
+                                      "pid": 136163,
+                                      "ppid": 136156,
+                                      "name": "schtasks.exe",
+                                      "command": "schtasks.exe /query /tn \"\\Contoso\\Support\\Diag\" /v /fo LIST",
+                                      "children": [
+                                        {
+                                          "pid": 136167,
+                                          "ppid": 136163,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 4 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 136168,
+                                              "ppid": 136167,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+                                              "children": [
+                                                {
+                                                  "pid": 136174,
+                                                  "ppid": 136168,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups > \"C:\\Users\\arjun.iyer\\AppData\\Local\\Temp\\who_e9ded226.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 136175,
+                                                      "ppid": 136174,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 136178,
+                                                          "ppid": 136175,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 18 > nul",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 136182,
+                                              "ppid": 136167,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                                              "children": [
+                                                {
+                                                  "pid": 136189,
+                                                  "ppid": 136182,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\BlueYonder\\Logs\\profile.log\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 136192,
+                                                      "ppid": 136189,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

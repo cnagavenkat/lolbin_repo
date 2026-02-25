@@ -1,0 +1,165 @@
+{
+  "pid": 107612,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe ",
+  "children": [
+    {
+      "pid": 107613,
+      "ppid": 107612,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\Assist_bc07d385.wsf\"",
+      "children": [
+        {
+          "pid": 107615,
+          "ppid": 107613,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+          "children": [
+            {
+              "pid": 107620,
+              "ppid": 107615,
+              "name": "wevtutil.exe",
+              "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Woodgrove\\Logs\\Security_0040221a.evtx\"",
+              "children": [
+                {
+                  "pid": 107624,
+                  "ppid": 107620,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\who_7f6c35e1.txt\"",
+                  "children": [
+                    {
+                      "pid": 107625,
+                      "ppid": 107624,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                      "children": [
+                        {
+                          "pid": 107630,
+                          "ppid": 107625,
+                          "name": "quser.exe",
+                          "command": "quser.exe /server:OPS-830",
+                          "children": [
+                            {
+                              "pid": 107634,
+                              "ppid": 107630,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\host_3b61d475.txt\"",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 107641,
+                  "ppid": 107620,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 107644,
+                      "ppid": 107641,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe",
+                      "children": [
+                        {
+                          "pid": 107646,
+                          "ppid": 107644,
+                          "name": "makecab.exe",
+                          "command": "makecab.exe \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\trace.etl\" \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\trace.cab\"",
+                          "children": [
+                            {
+                              "pid": 107650,
+                              "ppid": 107646,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 22 > nul",
+                              "children": [
+                                {
+                                  "pid": 107654,
+                                  "ppid": 107650,
+                                  "name": "quser.exe",
+                                  "command": "quser.exe /server:OPS-857",
+                                  "children": [
+                                    {
+                                      "pid": 107661,
+                                      "ppid": 107654,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 107666,
+                                          "ppid": 107661,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all > \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\who_feb94ec4.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 107669,
+                                              "ppid": 107666,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all",
+                                              "children": [
+                                                {
+                                                  "pid": 107674,
+                                                  "ppid": 107669,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 107676,
+                                  "ppid": 107650,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /v",
+                                  "children": [
+                                    {
+                                      "pid": 107681,
+                                      "ppid": 107676,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv",
+                                      "children": [
+                                        {
+                                          "pid": 107685,
+                                          "ppid": 107681,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\sched_02264526.txt'\"",
+                                          "children": [
+                                            {
+                                              "pid": 107688,
+                                              "ppid": 107685,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

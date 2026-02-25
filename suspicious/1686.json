@@ -1,0 +1,269 @@
+{
+  "pid": 257323,
+  "ppid": 0,
+  "name": "devenv.exe",
+  "command": "devenv.exe \"C:\\src\\Bridge\\Support.sln\"",
+  "children": [
+    {
+      "pid": 257327,
+      "ppid": 257323,
+      "name": "wmic.exe",
+      "command": "wmic.exe computersystem get Manufacturer,Model,Domain /value",
+      "children": [
+        {
+          "pid": 257334,
+          "ppid": 257327,
+          "name": "whoami.exe",
+          "command": "whoami.exe",
+          "children": [
+            {
+              "pid": 257336,
+              "ppid": 257334,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\akash.jain\\AppData\\Local\\Temp\\diag_1ab13f68.txt'\"",
+              "children": [
+                {
+                  "pid": 257339,
+                  "ppid": 257336,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": [
+                    {
+                      "pid": 257340,
+                      "ppid": 257339,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": [
+                        {
+                          "pid": 257341,
+                          "ppid": 257340,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /svc",
+                          "children": [
+                            {
+                              "pid": 257344,
+                              "ppid": 257341,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\akash.jain\\AppData\\Local\\Temp\\who_9e2d1cb3.txt\"",
+                              "children": [
+                                {
+                                  "pid": 257346,
+                                  "ppid": 257344,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 257348,
+                                      "ppid": 257346,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 257355,
+                          "ppid": 257340,
+                          "name": "cmd.exe",
+                          "command": "cmd.exe /c \"timeout.exe /t 6 /nobreak\"",
+                          "children": [
+                            {
+                              "pid": 257361,
+                              "ppid": 257355,
+                              "name": "makecab.exe",
+                              "command": "makecab.exe \"C:\\Users\\akash.jain\\AppData\\Local\\Temp\\diag.txt\" \"C:\\Users\\akash.jain\\AppData\\Local\\Temp\\diag.cab\"",
+                              "children": [
+                                {
+                                  "pid": 257368,
+                                  "ppid": 257361,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /v",
+                                  "children": [
+                                    {
+                                      "pid": 257374,
+                                      "ppid": 257368,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 13 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 257377,
+                                          "ppid": 257374,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Woodgrove\\Logs\\System_ee252d3c.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 257382,
+                                              "ppid": 257377,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                              "children": [
+                                                {
+                                                  "pid": 257389,
+                                                  "ppid": 257382,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 257391,
+                                                      "ppid": 257389,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups",
+                                                      "children": [
+                                                        {
+                                                          "pid": 257395,
+                                                          "ppid": 257391,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 24 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 257399,
+                                                              "ppid": 257395,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /v",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 257405,
+                                                                  "ppid": 257399,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe > \"C:\\Users\\akash.jain\\AppData\\Local\\Temp\\who_a131bbcc.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 257407,
+                                                                      "ppid": 257405,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 20 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 257411,
+                                                                          "ppid": 257407,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 257413,
+                                                                              "ppid": 257411,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe /v",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 257416,
+                                                                                  "ppid": 257413,
+                                                                                  "name": "powershell.exe",
+                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 257420,
+                                                                                      "ppid": 257416,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 257425,
+                                                                                          "ppid": 257420,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /priv > \"C:\\Users\\akash.jain\\AppData\\Local\\Temp\\who_5f775ab5.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 257430,
+                                                                                              "ppid": 257425,
+                                                                                              "name": "powershell.exe",
+                                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 257435,
+                                                                                                  "ppid": 257430,
+                                                                                                  "name": "ping.exe",
+                                                                                                  "command": "ping.exe -n 3 127.0.0.1 > nul",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 257445,
+                                                                                                      "ppid": 257435,
+                                                                                                      "name": "whoami.exe",
+                                                                                                      "command": "whoami.exe /all > \"C:\\Users\\akash.jain\\AppData\\Local\\Temp\\who_8d9423c1.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 257450,
+                                                                                                          "ppid": 257445,
+                                                                                                          "name": "hostname.exe",
+                                                                                                          "command": "hostname.exe > \"C:\\Users\\akash.jain\\AppData\\Local\\Temp\\host_ac2dcf7b.txt\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 257456,
+                                                                                                              "ppid": 257450,
+                                                                                                              "name": "ping.exe",
+                                                                                                              "command": "ping.exe -n 15 127.0.0.1 > nul",
+                                                                                                              "children": []
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 257440,
+      "ppid": 257323,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 257444,
+          "ppid": 257440,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

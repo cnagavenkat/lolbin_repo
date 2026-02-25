@@ -1,0 +1,285 @@
+{
+  "pid": 75979,
+  "ppid": 0,
+  "name": "taskhostw.exe",
+  "command": "taskhostw.exe -k Schedule",
+  "children": [
+    {
+      "pid": 75981,
+      "ppid": 75979,
+      "name": "ping.exe",
+      "command": "ping.exe -n 22 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 75984,
+          "ppid": 75981,
+          "name": "wmic.exe",
+          "command": "wmic.exe computersystem get Manufacturer,Model,Domain /value",
+          "children": [
+            {
+              "pid": 75990,
+              "ppid": 75984,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 75993,
+                  "ppid": 75990,
+                  "name": "sc.exe",
+                  "command": "sc.exe query \"LanmanWorkstation\"",
+                  "children": [
+                    {
+                      "pid": 75996,
+                      "ppid": 75993,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all > \"C:\\Users\\vivaan.jain\\AppData\\Local\\Temp\\who_2b5151e1.txt\"",
+                      "children": [
+                        {
+                          "pid": 76003,
+                          "ppid": 75996,
+                          "name": "wevtutil.exe",
+                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Alpine\\Logs\\Security_d3e9473f.evtx\"",
+                          "children": [
+                            {
+                              "pid": 76010,
+                              "ppid": 76003,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Wingtip\\Logs\\support.log\"",
+                              "children": [
+                                {
+                                  "pid": 76011,
+                                  "ppid": 76010,
+                                  "name": "sc.exe",
+                                  "command": "sc.exe qc \"Schedule\"",
+                                  "children": [
+                                    {
+                                      "pid": 76013,
+                                      "ppid": 76011,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 76020,
+                                          "ppid": 76013,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Alpine\\Logs\\update.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 76021,
+                                              "ppid": 76020,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 21\"",
+                                              "children": [
+                                                {
+                                                  "pid": 76028,
+                                                  "ppid": 76021,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -WindowStyle Minimized -Command \"Get-Service | Out-File 'C:\\Users\\vivaan.jain\\AppData\\Local\\Temp\\inv_236fc3f6.txt'\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 76035,
+                                                      "ppid": 76028,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 76040,
+                                                          "ppid": 76035,
+                                                          "name": "findstr.exe",
+                                                          "command": "findstr.exe /i \"certificate\" \"C:\\ProgramData\\Wingtip\\Logs\\deploy.log\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 76045,
+                                                              "ppid": 76040,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 76052,
+                                                                  "ppid": 76045,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe > \"C:\\Users\\vivaan.jain\\AppData\\Local\\Temp\\who_7d28470d.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 76055,
+                                                                      "ppid": 76052,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 76057,
+                                                                          "ppid": 76055,
+                                                                          "name": "findstr.exe",
+                                                                          "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\BlueYonder\\Logs\\deploy.log\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 76060,
+                                                                              "ppid": 76057,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 76062,
+                                                                                  "ppid": 76060,
+                                                                                  "name": "powershell.exe",
+                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 76065,
+                                                                                      "ppid": 76062,
+                                                                                      "name": "tasklist.exe",
+                                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "pid": 76070,
+                                                                                  "ppid": 76060,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /v",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 76073,
+                                                                                      "ppid": 76070,
+                                                                                      "name": "powershell.exe",
+                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 76074,
+                                                                                          "ppid": 76073,
+                                                                                          "name": "tasklist.exe",
+                                                                                          "command": "tasklist.exe /svc",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 76089,
+                                                                                              "ppid": 76074,
+                                                                                              "name": "wevtutil.exe",
+                                                                                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Northwind\\Logs\\Application_4503d2ec.evtx\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 76092,
+                                                                                                  "ppid": 76089,
+                                                                                                  "name": "tasklist.exe",
+                                                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 76095,
+                                                                                                      "ppid": 76092,
+                                                                                                      "name": "findstr.exe",
+                                                                                                      "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Woodgrove\\Logs\\support.log\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 76097,
+                                                                                                          "ppid": 76095,
+                                                                                                          "name": "choice.exe",
+                                                                                                          "command": "choice.exe /d y /t 15 > nul",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 76102,
+                                                                                                              "ppid": 76097,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe > \"C:\\Users\\vivaan.jain\\AppData\\Local\\Temp\\host_855055d3.txt\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 76103,
+                                                                                                                  "ppid": 76102,
+                                                                                                                  "name": "wevtutil.exe",
+                                                                                                                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Alpine\\Logs\\Security_f8f88941.evtx\"",
+                                                                                                                  "children": []
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 76075,
+      "ppid": 75979,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"tasklist.exe /svc\"",
+      "children": [
+        {
+          "pid": 76080,
+          "ppid": 76075,
+          "name": "wevtutil.exe",
+          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Fabrikam\\Logs\\Security_4bd64fb0.evtx\"",
+          "children": [
+            {
+              "pid": 76082,
+              "ppid": 76080,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 12 > nul",
+              "children": [
+                {
+                  "pid": 76086,
+                  "ppid": 76082,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 19 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 76087,
+                      "ppid": 76086,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

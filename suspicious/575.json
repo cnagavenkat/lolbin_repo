@@ -1,0 +1,260 @@
+{
+  "pid": 122890,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 122891,
+      "ppid": 122890,
+      "name": "ping.exe",
+      "command": "ping.exe -n 9 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 122892,
+          "ppid": 122891,
+          "name": "nltest.exe",
+          "command": "nltest.exe /dsgetdc:OPS",
+          "children": [
+            {
+              "pid": 122895,
+              "ppid": 122892,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 8 > nul",
+              "children": [
+                {
+                  "pid": 122896,
+                  "ppid": 122895,
+                  "name": "ipconfig.exe",
+                  "command": "ipconfig.exe /displaydns",
+                  "children": [
+                    {
+                      "pid": 122901,
+                      "ppid": 122896,
+                      "name": "wmic.exe",
+                      "command": "wmic.exe os get Caption,Version,BuildNumber /value",
+                      "children": [
+                        {
+                          "pid": 122904,
+                          "ppid": 122901,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv",
+                          "children": [
+                            {
+                              "pid": 122909,
+                              "ppid": 122904,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\host_72c2c121.txt\"",
+                              "children": [
+                                {
+                                  "pid": 122916,
+                                  "ppid": 122909,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 122922,
+                                      "ppid": 122916,
+                                      "name": "ipconfig.exe",
+                                      "command": "ipconfig.exe /allcompartments /all",
+                                      "children": [
+                                        {
+                                          "pid": 122925,
+                                          "ppid": 122922,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Wingtip\\Logs\\Security_197e9266.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 122931,
+                                              "ppid": 122925,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 122937,
+                                                  "ppid": 122931,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 122942,
+                                                      "ppid": 122937,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 122944,
+                                                          "ppid": 122942,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\host_3bc8140b.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 122951,
+                                                              "ppid": 122944,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 122957,
+                                                          "ppid": 122942,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe > \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\who_51b8ebad.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 122963,
+                                                              "ppid": 122957,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 9 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 122967,
+                                                                  "ppid": 122963,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups > \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\who_27e5830d.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 122973,
+                                                                      "ppid": 122967,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /all > \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\who_d15bd57f.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 122974,
+                                                                          "ppid": 122973,
+                                                                          "name": "ipconfig.exe",
+                                                                          "command": "ipconfig.exe /allcompartments /all",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 122975,
+                                                                              "ppid": 122974,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\host_d90c6cf2.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 122976,
+                                                                                  "ppid": 122975,
+                                                                                  "name": "powershell.exe",
+                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/groups' -Wait\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 122979,
+                                                                                      "ppid": 122976,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\host_eee8d418.txt\"",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "pid": 122981,
+                                                                      "ppid": 122967,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 122988,
+                                                                          "ppid": 122981,
+                                                                          "name": "ipconfig.exe",
+                                                                          "command": "ipconfig.exe /allcompartments /all",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 122995,
+                                                                              "ppid": 122988,
+                                                                              "name": "ipconfig.exe",
+                                                                              "command": "ipconfig.exe /allcompartments /all",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 123001,
+                                                                                  "ppid": 122995,
+                                                                                  "name": "ipconfig.exe",
+                                                                                  "command": "ipconfig.exe /all",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 123023,
+                                                                                      "ppid": 123001,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /groups > \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\who_f451bef5.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 123025,
+                                                                                          "ppid": 123023,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 123008,
+      "ppid": 122890,
+      "name": "whoami.exe",
+      "command": "whoami.exe /groups > \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\who_31f503cf.txt\"",
+      "children": [
+        {
+          "pid": 123015,
+          "ppid": 123008,
+          "name": "whoami.exe",
+          "command": "whoami.exe > \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\who_b45d741f.txt\"",
+          "children": [
+            {
+              "pid": 123016,
+              "ppid": 123015,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\rohan.menon\\AppData\\Local\\Temp\\host_188fea6f.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

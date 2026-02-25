@@ -1,0 +1,172 @@
+{
+  "pid": 107918,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Scripts\\Runbook_af257c7b.ps1\"",
+  "children": [
+    {
+      "pid": 107920,
+      "ppid": 107918,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\BlueYonder\\Collector\\Sync_f8b03f7a.js\"",
+      "children": [
+        {
+          "pid": 107923,
+          "ppid": 107920,
+          "name": "nltest.exe",
+          "command": "nltest.exe /sc_query:ACME",
+          "children": [
+            {
+              "pid": 107926,
+              "ppid": 107923,
+              "name": "wevtutil.exe",
+              "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Fabrikam\\Logs\\System_fc8e4bd9.evtx\"",
+              "children": [
+                {
+                  "pid": 107932,
+                  "ppid": 107926,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 5 > nul",
+                  "children": [
+                    {
+                      "pid": 107935,
+                      "ppid": 107932,
+                      "name": "wmic.exe",
+                      "command": "wmic.exe qfe get HotFixID,InstalledOn",
+                      "children": [
+                        {
+                          "pid": 107949,
+                          "ppid": 107935,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 107952,
+                              "ppid": 107949,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 10 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 107959,
+                                  "ppid": 107952,
+                                  "name": "ipconfig.exe",
+                                  "command": "ipconfig.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 107961,
+                                      "ppid": 107959,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 21 /nobreak",
+                                      "children": [
+                                        {
+                                          "pid": 107963,
+                                          "ppid": 107961,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 10 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 107969,
+                                              "ppid": 107963,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe > \"C:\\Users\\nisha.gupta\\AppData\\Local\\Temp\\who_394303c2.txt\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 107973,
+                              "ppid": 107949,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                              "children": [
+                                {
+                                  "pid": 107980,
+                                  "ppid": 107973,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\nisha.gupta\\AppData\\Local\\Temp\\host_12cae4e8.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 107986,
+                                      "ppid": 107980,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                      "children": [
+                                        {
+                                          "pid": 107992,
+                                          "ppid": 107986,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+                                          "children": [
+                                            {
+                                              "pid": 107997,
+                                              "ppid": 107992,
+                                              "name": "ipconfig.exe",
+                                              "command": "ipconfig.exe /displaydns",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 107936,
+      "ppid": 107918,
+      "name": "ipconfig.exe",
+      "command": "ipconfig.exe /all",
+      "children": [
+        {
+          "pid": 107942,
+          "ppid": 107936,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+          "children": [
+            {
+              "pid": 107946,
+              "ppid": 107942,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 107974,
+      "ppid": 107918,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\nisha.gupta\\AppData\\Local\\Temp\\host_b413564e.txt\"",
+      "children": [
+        {
+          "pid": 107975,
+          "ppid": 107974,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 24 > nul",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

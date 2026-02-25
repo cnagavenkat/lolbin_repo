@@ -1,0 +1,205 @@
+{
+  "pid": 167729,
+  "ppid": 0,
+  "name": "taskhostw.exe",
+  "command": "taskhostw.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 167732,
+      "ppid": 167729,
+      "name": "wevtutil.exe",
+      "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_fa2ea43b.evtx\"",
+      "children": [
+        {
+          "pid": 167739,
+          "ppid": 167732,
+          "name": "findstr.exe",
+          "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Woodgrove\\Logs\\deploy.log\"",
+          "children": [
+            {
+              "pid": 167744,
+              "ppid": 167739,
+              "name": "makecab.exe",
+              "command": "makecab.exe \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\diag.txt\" \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\diag.cab\"",
+              "children": [
+                {
+                  "pid": 167750,
+                  "ppid": 167744,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\who_23c72c6f.txt\"",
+                  "children": [
+                    {
+                      "pid": 167755,
+                      "ppid": 167750,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\who_ef402a7f.txt\"",
+                      "children": [
+                        {
+                          "pid": 167757,
+                          "ppid": 167755,
+                          "name": "forfiles.exe",
+                          "command": "forfiles.exe /P \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\" /M *.cab /D -35 /C \"cmd /c echo archived @file\"",
+                          "children": [
+                            {
+                              "pid": 167761,
+                              "ppid": 167757,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Litware\\Logs\\deploy.log\"",
+                              "children": [
+                                {
+                                  "pid": 167765,
+                                  "ppid": 167761,
+                                  "name": "schtasks.exe",
+                                  "command": "schtasks.exe /create /tn \"\\Litware\\Deploy\\Cleanup\" /tr \"C:\\IT\\Runbooks\\diag_57ead88f.cmd\" /sc minute /mo 30 /f /ru \"ENG\\akash.reddy\"",
+                                  "children": [
+                                    {
+                                      "pid": 167768,
+                                      "ppid": 167765,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Fabrikam\\Logs\\update.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 167769,
+                                          "ppid": 167768,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                          "children": [
+                                            {
+                                              "pid": 167774,
+                                              "ppid": 167769,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\who_0a2405c7.txt\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 167779,
+                                      "ppid": 167765,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\who_92ff5f94.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 167780,
+                                          "ppid": 167779,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 167786,
+                                              "ppid": 167780,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Northwind\\Logs\\deploy.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 167791,
+                                                  "ppid": 167786,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\host_400799ec.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 167796,
+                                                      "ppid": 167791,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 6 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 167797,
+                                                          "ppid": 167796,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 167799,
+                                              "ppid": 167780,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Contoso\\Logs\\profile.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 167803,
+                                                  "ppid": 167799,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Litware\\Logs\\diag.log\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 167805,
+                                                      "ppid": 167803,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\host_c5772003.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 167812,
+                                                          "ppid": 167805,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 167813,
+                                                              "ppid": 167812,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 167816,
+                                                                  "ppid": 167813,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\host_816a4ce7.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 167820,
+                                                                      "ppid": 167816,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\aditya.mishra\\AppData\\Local\\Temp\\host_4839650f.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 167821,
+                                                                          "ppid": 167820,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /all",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

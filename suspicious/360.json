@@ -1,0 +1,228 @@
+{
+  "pid": 98107,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 98110,
+      "ppid": 98107,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"echo maintenance step\"",
+      "children": [
+        {
+          "pid": 98115,
+          "ppid": 98110,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+          "children": [
+            {
+              "pid": 98120,
+              "ppid": 98115,
+              "name": "bitsadmin.exe",
+              "command": "bitsadmin.exe /transfer Job6b1a81f0 /download /priority NORMAL \"http://helpdesk-tools.corp.local/patch/runtime.cab\" \"C:\\Users\\Public\\bridge.bin\"",
+              "children": [
+                {
+                  "pid": 98122,
+                  "ppid": 98120,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 98127,
+                      "ppid": 98122,
+                      "name": "findstr.exe",
+                      "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Contoso\\Logs\\deploy.log\"",
+                      "children": [
+                        {
+                          "pid": 98133,
+                          "ppid": 98127,
+                          "name": "extrac32.exe",
+                          "command": "extrac32.exe /Y \"C:\\Users\\Public\\tools.cab\" /E /L \"C:\\Build\\out\\14d207d5\"",
+                          "children": [
+                            {
+                              "pid": 98137,
+                              "ppid": 98133,
+                              "name": "bitsadmin.exe",
+                              "command": "bitsadmin.exe /info Job4b2bcd7a /verbose",
+                              "children": [
+                                {
+                                  "pid": 98143,
+                                  "ppid": 98137,
+                                  "name": "bitsadmin.exe",
+                                  "command": "bitsadmin.exe /info Job08b3a227 /verbose",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 98144,
+                              "ppid": 98133,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\aditya.bose\\AppData\\Local\\Temp\\who_56b54792.txt\"",
+                              "children": [
+                                {
+                                  "pid": 98147,
+                                  "ppid": 98144,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 98150,
+                                      "ppid": 98147,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 98151,
+                                          "ppid": 98150,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 20 /nobreak",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 98153,
+                                  "ppid": 98144,
+                                  "name": "bitsadmin.exe",
+                                  "command": "bitsadmin.exe /info Job733bdd2f /verbose",
+                                  "children": [
+                                    {
+                                      "pid": 98156,
+                                      "ppid": 98153,
+                                      "name": "bitsadmin.exe",
+                                      "command": "bitsadmin.exe /info Job80e147e3 /verbose",
+                                      "children": [
+                                        {
+                                          "pid": 98160,
+                                          "ppid": 98156,
+                                          "name": "cmd.exe",
+                                          "command": "cmd.exe /k \"whoami /all\"",
+                                          "children": [
+                                            {
+                                              "pid": 98161,
+                                              "ppid": 98160,
+                                              "name": "bitsadmin.exe",
+                                              "command": "bitsadmin.exe /info Job2ef8613e /verbose",
+                                              "children": [
+                                                {
+                                                  "pid": 98164,
+                                                  "ppid": 98161,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 98167,
+                                                      "ppid": 98164,
+                                                      "name": "msiexec.exe",
+                                                      "command": "msiexec.exe /i \"C:\\Users\\Public\\runtime.msi\" /qn /l*v \"C:\\ProgramData\\Alpine\\Logs\\msi_969a4fcd.log\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 98180,
+                                                          "ppid": 98167,
+                                                          "name": "bitsadmin.exe",
+                                                          "command": "bitsadmin.exe /info Jobafd197e9 /verbose",
+                                                          "children": [
+                                                            {
+                                                              "pid": 98186,
+                                                              "ppid": 98180,
+                                                              "name": "findstr.exe",
+                                                              "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Northwind\\Logs\\deploy.log\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 98189,
+                                                                  "ppid": 98186,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\aditya.bose\\AppData\\Local\\Temp\\host_73625650.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 98193,
+                                                                      "ppid": 98189,
+                                                                      "name": "findstr.exe",
+                                                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Litware\\Logs\\support.log\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 98200,
+                                                                          "ppid": 98193,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 98202,
+                                                                              "ppid": 98200,
+                                                                              "name": "bitsadmin.exe",
+                                                                              "command": "bitsadmin.exe /info Jobc0399cb3 /verbose",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 98207,
+                                                                                  "ppid": 98202,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 98209,
+                                                                                      "ppid": 98207,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\aditya.bose\\AppData\\Local\\Temp\\host_cd46aec1.txt\"",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 98168,
+      "ppid": 98107,
+      "name": "findstr.exe",
+      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Wingtip\\Logs\\diag.log\"",
+      "children": [
+        {
+          "pid": 98174,
+          "ppid": 98168,
+          "name": "ping.exe",
+          "command": "ping.exe -n 4 127.0.0.1 > nul",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

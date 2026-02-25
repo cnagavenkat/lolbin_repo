@@ -1,0 +1,187 @@
+{
+  "pid": 188737,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 188738,
+      "ppid": 188737,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\rohan.singh\\AppData\\Local\\Temp\\inv_1a3259a4.txt'\"",
+      "children": [
+        {
+          "pid": 188743,
+          "ppid": 188738,
+          "name": "certutil.exe",
+          "command": "certutil.exe -verify \"C:\\Users\\rohan.singh\\AppData\\Local\\Temp\\corp_root.cer\"",
+          "children": [
+            {
+              "pid": 188746,
+              "ppid": 188743,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 19 > nul",
+              "children": [
+                {
+                  "pid": 188747,
+                  "ppid": 188746,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups",
+                  "children": [
+                    {
+                      "pid": 188752,
+                      "ppid": 188747,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-Service | Out-File 'C:\\Users\\rohan.singh\\AppData\\Local\\Temp\\evt_4068f213.txt'\"",
+                      "children": [
+                        {
+                          "pid": 188757,
+                          "ppid": 188752,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 20 > nul",
+                          "children": [
+                            {
+                              "pid": 188759,
+                              "ppid": 188757,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe",
+                              "children": [
+                                {
+                                  "pid": 188766,
+                                  "ppid": 188759,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 24 /nobreak",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 188773,
+                              "ppid": 188757,
+                              "name": "makecab.exe",
+                              "command": "makecab.exe \"C:\\Users\\rohan.singh\\AppData\\Local\\Temp\\support.log\" \"C:\\Users\\rohan.singh\\AppData\\Local\\Temp\\support.cab\"",
+                              "children": [
+                                {
+                                  "pid": 188774,
+                                  "ppid": 188773,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 188779,
+                                      "ppid": 188774,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 15 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 188784,
+                                          "ppid": 188779,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe > \"C:\\Users\\rohan.singh\\AppData\\Local\\Temp\\who_3eeffd45.txt\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 188789,
+                                  "ppid": 188773,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 188795,
+                                      "ppid": 188789,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe",
+                                      "children": [
+                                        {
+                                          "pid": 188802,
+                                          "ppid": 188795,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": [
+                                            {
+                                              "pid": 188806,
+                                              "ppid": 188802,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 188813,
+                                      "ppid": 188789,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Woodgrove\\Logs\\Microsoft-Windows-TaskScheduler_Operational_2994b611.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 188815,
+                                          "ppid": 188813,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv > \"C:\\Users\\rohan.singh\\AppData\\Local\\Temp\\who_60976933.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 188820,
+                                              "ppid": 188815,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 14 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 188822,
+                                                  "ppid": 188820,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 10 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 188823,
+                                                      "ppid": 188822,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/groups' -Wait\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 188828,
+                                          "ppid": 188813,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 188832,
+                                              "ppid": 188828,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\rohan.singh\\AppData\\Local\\Temp\\host_512bb88d.txt\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

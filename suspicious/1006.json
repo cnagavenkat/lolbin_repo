@@ -1,0 +1,230 @@
+{
+  "pid": 176357,
+  "ppid": 0,
+  "name": "taskhostw.exe",
+  "command": "taskhostw.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 176358,
+      "ppid": 176357,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"hostname\"",
+      "children": [
+        {
+          "pid": 176360,
+          "ppid": 176358,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\sched_0879b2ba.txt'\"",
+          "children": [
+            {
+              "pid": 176363,
+              "ppid": 176360,
+              "name": "ping.exe",
+              "command": "ping.exe -n 26 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 176370,
+                  "ppid": 176363,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 176372,
+                      "ppid": 176370,
+                      "name": "schtasks.exe",
+                      "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+                      "children": [
+                        {
+                          "pid": 176378,
+                          "ppid": 176372,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+                          "children": [
+                            {
+                              "pid": 176385,
+                              "ppid": 176378,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\who_4b0b697f.txt\"",
+                              "children": [
+                                {
+                                  "pid": 176389,
+                                  "ppid": 176385,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Woodgrove\\Logs\\Microsoft-Windows-TaskScheduler_Operational_cfe8917c.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 176394,
+                                      "ppid": 176389,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 25 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 176398,
+                                          "ppid": 176394,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": [
+                                            {
+                                              "pid": 176403,
+                                              "ppid": 176398,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                                              "children": [
+                                                {
+                                                  "pid": 176405,
+                                                  "ppid": 176403,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Wingtip\\Logs\\profile.log\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 176410,
+                                                      "ppid": 176405,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\who_1b6d32d6.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 176416,
+                                                          "ppid": 176410,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\host_fbf9cefc.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 176418,
+                                                              "ppid": 176416,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /svc",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 176419,
+                                                                  "ppid": 176418,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 176426,
+                                                                      "ppid": 176419,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /groups > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\who_0c35c63b.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 176430,
+                                                                          "ppid": 176426,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe /v",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 176437,
+                                                                              "ppid": 176430,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 176443,
+                                                                                  "ppid": 176437,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 176445,
+                                                                                      "ppid": 176443,
+                                                                                      "name": "choice.exe",
+                                                                                      "command": "choice.exe /d y /t 6 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 176450,
+                                                                                          "ppid": 176445,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /priv > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\who_8c06d65e.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 176451,
+                                                                                              "ppid": 176450,
+                                                                                              "name": "choice.exe",
+                                                                                              "command": "choice.exe /d y /t 25 > nul",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 176457,
+                                                                                                  "ppid": 176451,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /all > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\who_b88da277.txt\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 176460,
+                                                                                                      "ppid": 176457,
+                                                                                                      "name": "timeout.exe",
+                                                                                                      "command": "timeout.exe /t 8 /nobreak",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 176467,
+                                                                                                          "ppid": 176460,
+                                                                                                          "name": "tasklist.exe",
+                                                                                                          "command": "tasklist.exe /svc",
+                                                                                                          "children": []
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                },
+                                                                                                {
+                                                                                                  "pid": 176469,
+                                                                                                  "ppid": 176451,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\host_f9fe866b.txt\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 176470,
+                                                                                                      "ppid": 176469,
+                                                                                                      "name": "tasklist.exe",
+                                                                                                      "command": "tasklist.exe",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

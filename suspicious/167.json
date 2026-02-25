@@ -1,0 +1,222 @@
+{
+  "pid": 71663,
+  "ppid": 0,
+  "name": "ccmexec.exe",
+  "command": "ccmexec.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 71668,
+      "ppid": 71663,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"hostname\"",
+      "children": [
+        {
+          "pid": 71670,
+          "ppid": 71668,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+          "children": [
+            {
+              "pid": 71672,
+              "ppid": 71670,
+              "name": "schtasks.exe",
+              "command": "schtasks.exe /create /tn \"\\Northwind\\Deploy\\Cleanup\" /tr \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\run_88566e7a.ps1\" /sc daily /st 09:57 /f /ru SYSTEM",
+              "children": [
+                {
+                  "pid": 71679,
+                  "ppid": 71672,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\host_4e73f0f8.txt\"",
+                  "children": [
+                    {
+                      "pid": 71684,
+                      "ppid": 71679,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                      "children": [
+                        {
+                          "pid": 71691,
+                          "ppid": 71684,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /run /tn \"\\Microsoft\\Windows\\WDI\\ResolutionHost\"",
+                          "children": [
+                            {
+                              "pid": 71693,
+                              "ppid": 71691,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe",
+                              "children": [
+                                {
+                                  "pid": 71699,
+                                  "ppid": 71693,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 71701,
+                                      "ppid": 71699,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\inv_535aed64.txt'\"",
+                                      "children": [
+                                        {
+                                          "pid": 71702,
+                                          "ppid": 71701,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                          "children": [
+                                            {
+                                              "pid": 71704,
+                                              "ppid": 71702,
+                                              "name": "schtasks.exe",
+                                              "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+                                              "children": [
+                                                {
+                                                  "pid": 71707,
+                                                  "ppid": 71704,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 71711,
+                                                      "ppid": 71707,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\who_894bac8d.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 71713,
+                                                          "ppid": 71711,
+                                                          "name": "cmd.exe",
+                                                          "command": "cmd.exe /c \"reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 71717,
+                                                              "ppid": 71713,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 71724,
+                                                                  "ppid": 71717,
+                                                                  "name": "reg.exe",
+                                                                  "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 71730,
+                                                                      "ppid": 71724,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /svc",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 71733,
+                                                                          "ppid": 71730,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 12 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 71734,
+                                                                              "ppid": 71733,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\who_6218ecb5.txt\"",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 71737,
+                                                                  "ppid": 71717,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 71739,
+                                                                      "ppid": 71737,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\host_a86146c6.txt\"' -Wait\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 71744,
+                                                                          "ppid": 71739,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\who_3ac2eca4.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 71747,
+                                                                              "ppid": 71744,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\who_0a71310f.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 71754,
+                                                                                  "ppid": 71747,
+                                                                                  "name": "reg.exe",
+                                                                                  "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 71761,
+                                                                                      "ppid": 71754,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 71765,
+                                                                                          "ppid": 71761,
+                                                                                          "name": "powershell.exe",
+                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 71767,
+                                                                                              "ppid": 71765,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /groups",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

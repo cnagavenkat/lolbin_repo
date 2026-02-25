@@ -1,0 +1,236 @@
+{
+  "pid": 304215,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 304217,
+      "ppid": 304215,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"hostname\"",
+      "children": [
+        {
+          "pid": 304218,
+          "ppid": 304217,
+          "name": "vssadmin.exe",
+          "command": "vssadmin.exe list shadows",
+          "children": [
+            {
+              "pid": 304219,
+              "ppid": 304218,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 16 > nul",
+              "children": [
+                {
+                  "pid": 304221,
+                  "ppid": 304219,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups",
+                  "children": [
+                    {
+                      "pid": 304222,
+                      "ppid": 304221,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                      "children": [
+                        {
+                          "pid": 304224,
+                          "ppid": 304222,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": [
+                            {
+                              "pid": 304226,
+                              "ppid": 304224,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\vivaan.menon\\AppData\\Local\\Temp\\who_7f3b88b1.txt\"",
+                              "children": [
+                                {
+                                  "pid": 304228,
+                                  "ppid": 304226,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 23 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 304232,
+                                      "ppid": 304228,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 304236,
+                          "ppid": 304222,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv",
+                          "children": [
+                            {
+                              "pid": 304237,
+                              "ppid": 304236,
+                              "name": "wevtutil.exe",
+                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Woodgrove\\Logs\\Application_0c1f10a7.evtx\"",
+                              "children": [
+                                {
+                                  "pid": 304242,
+                                  "ppid": 304237,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\vivaan.menon\\AppData\\Local\\Temp\\host_e642d02b.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 304243,
+                                      "ppid": 304242,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv > \"C:\\Users\\vivaan.menon\\AppData\\Local\\Temp\\who_969ec34c.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 304248,
+                                          "ppid": 304243,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Northwind\\Logs\\update.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 304251,
+                                              "ppid": 304248,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all",
+                                              "children": [
+                                                {
+                                                  "pid": 304256,
+                                                  "ppid": 304251,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 304262,
+                                                      "ppid": 304256,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 14 /nobreak",
+                                                      "children": [
+                                                        {
+                                                          "pid": 304264,
+                                                          "ppid": 304262,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 6 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 304270,
+                                                              "ppid": 304264,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe > \"C:\\Users\\vivaan.menon\\AppData\\Local\\Temp\\who_f06ff7d7.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 304275,
+                                                                  "ppid": 304270,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 22 > nul",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 304277,
+                                                          "ppid": 304262,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /svc",
+                                                          "children": [
+                                                            {
+                                                              "pid": 304278,
+                                                              "ppid": 304277,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 304284,
+                                                                  "ppid": 304278,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /v",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 304287,
+                                                                      "ppid": 304284,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /v",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 304289,
+                                                                  "ppid": 304278,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 304295,
+                                                                      "ppid": 304289,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /all > \"C:\\Users\\vivaan.menon\\AppData\\Local\\Temp\\who_ed1e84ef.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 304302,
+                                                                          "ppid": 304295,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 304305,
+                                                                              "ppid": 304302,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 304310,
+                                                                                  "ppid": 304305,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\vivaan.menon\\AppData\\Local\\Temp\\host_516f1fab.txt\"",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

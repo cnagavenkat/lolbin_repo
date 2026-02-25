@@ -1,0 +1,196 @@
+{
+  "pid": 300733,
+  "ppid": 0,
+  "name": "BackupAgent.exe",
+  "command": "BackupAgent.exe /session",
+  "children": [
+    {
+      "pid": 300740,
+      "ppid": 300733,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"hostname\"",
+      "children": [
+        {
+          "pid": 300747,
+          "ppid": 300740,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 2 > nul",
+          "children": [
+            {
+              "pid": 300754,
+              "ppid": 300747,
+              "name": "cmd.exe",
+              "command": "cmd.exe /k \"tasklist /svc\"",
+              "children": [
+                {
+                  "pid": 300755,
+                  "ppid": 300754,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 300762,
+                      "ppid": 300755,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 300766,
+                          "ppid": 300762,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 300772,
+                      "ppid": 300755,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                      "children": [
+                        {
+                          "pid": 300778,
+                          "ppid": 300772,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                          "children": [
+                            {
+                              "pid": 300782,
+                              "ppid": 300778,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 23 > nul",
+                              "children": [
+                                {
+                                  "pid": 300785,
+                                  "ppid": 300782,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 300790,
+                                      "ppid": 300785,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all",
+                                      "children": [
+                                        {
+                                          "pid": 300804,
+                                          "ppid": 300790,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Alpine\\Logs\\Security_15292afc.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 300807,
+                                              "ppid": 300804,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /svc",
+                                              "children": [
+                                                {
+                                                  "pid": 300813,
+                                                  "ppid": 300807,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 300819,
+                                                      "ppid": 300813,
+                                                      "name": "makecab.exe",
+                                                      "command": "makecab.exe \"C:\\ProgramData\\Fabrikam\\Logs\\support.log\" \"C:\\ProgramData\\Fabrikam\\Logs\\support.cab\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 300823,
+                                                          "ppid": 300819,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 300827,
+                                                              "ppid": 300823,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 300832,
+                                                                  "ppid": 300827,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 300835,
+                                                                      "ppid": 300832,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 22 > nul",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 300837,
+                                                          "ppid": 300819,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv",
+                                                          "children": [
+                                                            {
+                                                              "pid": 300840,
+                                                              "ppid": 300837,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 300793,
+      "ppid": 300733,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe /svc",
+      "children": [
+        {
+          "pid": 300795,
+          "ppid": 300793,
+          "name": "whoami.exe",
+          "command": "whoami.exe > \"C:\\Users\\pooja.mishra\\AppData\\Local\\Temp\\who_d04d0b96.txt\"",
+          "children": [
+            {
+              "pid": 300801,
+              "ppid": 300795,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "pid": 110012,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 110014,
+      "ppid": 110012,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Maint\\Diag_0f0766aa.wsf\" /verify",
+      "children": [
+        {
+          "pid": 110016,
+          "ppid": 110014,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+          "children": [
+            {
+              "pid": 110017,
+              "ppid": 110016,
+              "name": "wevtutil.exe",
+              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Contoso\\Logs\\Microsoft-Windows-TaskScheduler_Operational_56cae7e6.evtx\"",
+              "children": [
+                {
+                  "pid": 110022,
+                  "ppid": 110017,
+                  "name": "quser.exe",
+                  "command": "quser.exe",
+                  "children": [
+                    {
+                      "pid": 110026,
+                      "ppid": 110022,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+                      "children": [
+                        {
+                          "pid": 110029,
+                          "ppid": 110026,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 13 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 110033,
+                              "ppid": 110029,
+                              "name": "makecab.exe",
+                              "command": "makecab.exe \"C:\\ProgramData\\Contoso\\Logs\\diag.txt\" \"C:\\ProgramData\\Contoso\\Logs\\diag.cab\"",
+                              "children": [
+                                {
+                                  "pid": 110034,
+                                  "ppid": 110033,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 5 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 110038,
+                                      "ppid": 110034,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 23 /nobreak",
+                                      "children": [
+                                        {
+                                          "pid": 110040,
+                                          "ppid": 110038,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\nisha.das\\AppData\\Local\\Temp\\host_ce080645.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 110045,
+                                              "ppid": 110040,
+                                              "name": "quser.exe",
+                                              "command": "quser.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 110047,
+                                                  "ppid": 110045,
+                                                  "name": "cmd.exe",
+                                                  "command": "cmd.exe /c \"ping.exe -n 13 127.0.0.1 > nul\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 110048,
+                                              "ppid": 110040,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /v",
+                                              "children": [
+                                                {
+                                                  "pid": 110055,
+                                                  "ppid": 110048,
+                                                  "name": "cmd.exe",
+                                                  "command": "cmd.exe /c \"hostname.exe\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 110060,
+                                                      "ppid": 110055,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 20 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 110067,
+                                                          "ppid": 110060,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\ProgramData\\Alpine\\Runtime\\BuildPack_bce6e788.ps1\" -Host \"LAP-397\" -Mode Quick",
+                                                          "children": [
+                                                            {
+                                                              "pid": 110068,
+                                                              "ppid": 110067,
+                                                              "name": "quser.exe",
+                                                              "command": "quser.exe",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

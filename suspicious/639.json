@@ -1,0 +1,323 @@
+{
+  "pid": 129737,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 129742,
+      "ppid": 129737,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -ExecutionPolicy Bypass -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\inv_797f27f4.txt'\"",
+      "children": [
+        {
+          "pid": 129745,
+          "ppid": 129742,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 16 /nobreak",
+          "children": [
+            {
+              "pid": 129746,
+              "ppid": 129745,
+              "name": "net.exe",
+              "command": "net.exe use W: \"\\\\deploy\\packages\" /persistent:no",
+              "children": [
+                {
+                  "pid": 129750,
+                  "ppid": 129746,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 129754,
+                      "ppid": 129750,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 129759,
+                          "ppid": 129754,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 129764,
+                              "ppid": 129759,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /create /tn \"\\Contoso\\Deploy\\Diag\" /tr \"C:\\ProgramData\\Northwind\\Bridge\\diag_370af677.ps1\" /sc minute /mo 30 /f /ru SYSTEM",
+                              "children": [
+                                {
+                                  "pid": 129768,
+                                  "ppid": 129764,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups",
+                                  "children": [
+                                    {
+                                      "pid": 129769,
+                                      "ppid": 129768,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 129774,
+                                          "ppid": 129769,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\who_26d5312e.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 129781,
+                                              "ppid": 129774,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all",
+                                              "children": [
+                                                {
+                                                  "pid": 129785,
+                                                  "ppid": 129781,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 129786,
+                                  "ppid": 129764,
+                                  "name": "quser.exe",
+                                  "command": "quser.exe /server:OPS-714",
+                                  "children": [
+                                    {
+                                      "pid": 129814,
+                                      "ppid": 129786,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\who_8c8d0a8c.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 129816,
+                                          "ppid": 129814,
+                                          "name": "cmd.exe",
+                                          "command": "cmd.exe /c \"schtasks.exe /run /tn \"\\Litware\\Maint\\Cleanup\"\"",
+                                          "children": [
+                                            {
+                                              "pid": 129823,
+                                              "ppid": 129816,
+                                              "name": "quser.exe",
+                                              "command": "quser.exe /server:SUP-648",
+                                              "children": [
+                                                {
+                                                  "pid": 129848,
+                                                  "ppid": 129823,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 129853,
+                                                      "ppid": 129848,
+                                                      "name": "reg.exe",
+                                                      "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                                      "children": [
+                                                        {
+                                                          "pid": 129860,
+                                                          "ppid": 129853,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all",
+                                                          "children": [
+                                                            {
+                                                              "pid": 129864,
+                                                              "ppid": 129860,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\host_076f8fc7.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 129871,
+                                                                  "ppid": 129864,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\host_69efafb2.txt\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 129876,
+                                                              "ppid": 129860,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 5 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 129883,
+                                                                  "ppid": 129876,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 129889,
+                                                                      "ppid": 129883,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 25 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 129894,
+                                                                          "ppid": 129889,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 129900,
+                                                                              "ppid": 129894,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\who_2c9138fe.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 129907,
+                                                                                  "ppid": 129900,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\host_33f2da0c.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 129910,
+                                                                                      "ppid": 129907,
+                                                                                      "name": "ping.exe",
+                                                                                      "command": "ping.exe -n 4 127.0.0.1 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 129913,
+                                                                                          "ppid": 129910,
+                                                                                          "name": "timeout.exe",
+                                                                                          "command": "timeout.exe /t 16 /nobreak",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 129915,
+                                                                                              "ppid": 129913,
+                                                                                              "name": "timeout.exe",
+                                                                                              "command": "timeout.exe /t 15 /nobreak",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 129788,
+      "ppid": 129737,
+      "name": "quser.exe",
+      "command": "quser.exe /server:SUP-437",
+      "children": [
+        {
+          "pid": 129795,
+          "ppid": 129788,
+          "name": "quser.exe",
+          "command": "quser.exe /server:LAP-239",
+          "children": [
+            {
+              "pid": 129798,
+              "ppid": 129795,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 24 /nobreak",
+              "children": [
+                {
+                  "pid": 129805,
+                  "ppid": 129798,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 9 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 129807,
+                      "ppid": 129805,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 12 > nul",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 129828,
+      "ppid": 129737,
+      "name": "quser.exe",
+      "command": "quser.exe /server:SUP-587",
+      "children": [
+        {
+          "pid": 129830,
+          "ppid": 129828,
+          "name": "quser.exe",
+          "command": "quser.exe /server:OPS-553",
+          "children": [
+            {
+              "pid": 129836,
+              "ppid": 129830,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv > \"C:\\Users\\suresh.nair\\AppData\\Local\\Temp\\who_90a6313b.txt\"",
+              "children": [
+                {
+                  "pid": 129838,
+                  "ppid": 129836,
+                  "name": "quser.exe",
+                  "command": "quser.exe /server:APP-843",
+                  "children": [
+                    {
+                      "pid": 129845,
+                      "ppid": 129838,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 23 > nul",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

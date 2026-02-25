@@ -1,0 +1,246 @@
+{
+  "pid": 153275,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 153276,
+      "ppid": 153275,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"echo maintenance step\"",
+      "children": [
+        {
+          "pid": 153283,
+          "ppid": 153276,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 22 > nul",
+          "children": [
+            {
+              "pid": 153289,
+              "ppid": 153283,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe",
+              "children": [
+                {
+                  "pid": 153296,
+                  "ppid": 153289,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 22 > nul",
+                  "children": [
+                    {
+                      "pid": 153300,
+                      "ppid": 153296,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 16 > nul",
+                      "children": [
+                        {
+                          "pid": 153303,
+                          "ppid": 153300,
+                          "name": "wevtutil.exe",
+                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_df501b5b.evtx\"",
+                          "children": [
+                            {
+                              "pid": 153304,
+                              "ppid": 153303,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 153305,
+                                  "ppid": 153304,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\host_6045725c.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 153307,
+                                      "ppid": 153305,
+                                      "name": "makecab.exe",
+                                      "command": "makecab.exe \"C:\\ProgramData\\Wingtip\\Logs\\support.log\" \"C:\\ProgramData\\Wingtip\\Logs\\support.cab\"",
+                                      "children": [
+                                        {
+                                          "pid": 153313,
+                                          "ppid": 153307,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 8 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 153314,
+                                              "ppid": 153313,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 153315,
+                                                  "ppid": 153314,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv",
+                                                  "children": [
+                                                    {
+                                                      "pid": 153322,
+                                                      "ppid": 153315,
+                                                      "name": "schtasks.exe",
+                                                      "command": "schtasks.exe /create /tn \"\\Litware\\Maint\\Sync\" /tr \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\sync_894478a0.ps1\" /sc daily /st 12:11 /f /ru \"OPS\\aditya.reddy\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 153328,
+                                                          "ppid": 153322,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\host_0b9f90cd.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 153331,
+                                                              "ppid": 153328,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 153337,
+                                                                  "ppid": 153331,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 153341,
+                                                                      "ppid": 153337,
+                                                                      "name": "netsh.exe",
+                                                                      "command": "netsh.exe interface ipv4 show config > \"C:\\ProgramData\\Contoso\\Logs\\net_9cbdc845.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 153345,
+                                                                          "ppid": 153341,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 153350,
+                                                                              "ppid": 153345,
+                                                                              "name": "choice.exe",
+                                                                              "command": "choice.exe /d y /t 17 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 153356,
+                                                                                  "ppid": 153350,
+                                                                                  "name": "netsh.exe",
+                                                                                  "command": "netsh.exe advfirewall show allprofiles > \"C:\\ProgramData\\Alpine\\Logs\\net_d54c5faa.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 153358,
+                                                                                      "ppid": 153356,
+                                                                                      "name": "ping.exe",
+                                                                                      "command": "ping.exe -n 25 127.0.0.1 > nul",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "pid": 153359,
+                                                                                  "ppid": 153350,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /all > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\who_dd904e9a.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 153365,
+                                                                                      "ppid": 153359,
+                                                                                      "name": "netsh.exe",
+                                                                                      "command": "netsh.exe interface ipv4 show config > \"C:\\ProgramData\\BlueYonder\\Logs\\net_012ff5da.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 153372,
+                                                                                          "ppid": 153365,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\host_6ba031f7.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 153377,
+                                                                                              "ppid": 153372,
+                                                                                              "name": "netsh.exe",
+                                                                                              "command": "netsh.exe wlan show profiles > \"C:\\ProgramData\\Woodgrove\\Logs\\net_b694c7ee.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 153382,
+                                                                                                  "ppid": 153377,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 153388,
+                                                                                                      "ppid": 153382,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 153389,
+                                                                                                          "ppid": 153388,
+                                                                                                          "name": "hostname.exe",
+                                                                                                          "command": "hostname.exe",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 153396,
+                                                                                                              "ppid": 153389,
+                                                                                                              "name": "netsh.exe",
+                                                                                                              "command": "netsh.exe wlan show profiles > \"C:\\ProgramData\\Fabrikam\\Logs\\net_4694a4e5.txt\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 153402,
+                                                                                                                  "ppid": 153396,
+                                                                                                                  "name": "netsh.exe",
+                                                                                                                  "command": "netsh.exe advfirewall show allprofiles > \"C:\\ProgramData\\Fabrikam\\Logs\\net_7a44d2d8.txt\"",
+                                                                                                                  "children": []
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

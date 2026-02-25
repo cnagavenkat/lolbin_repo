@@ -1,0 +1,205 @@
+{
+  "pid": 135110,
+  "ppid": 0,
+  "name": "userinit.exe",
+  "command": "userinit.exe /silent",
+  "children": [
+    {
+      "pid": 135113,
+      "ppid": 135110,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 16 /nobreak",
+      "children": [
+        {
+          "pid": 135114,
+          "ppid": 135113,
+          "name": "regsvr32.exe",
+          "command": "regsvr32.exe /s \"C:\\Build\\dist\\d033fedd\\diagext.dll\"",
+          "children": [
+            {
+              "pid": 135117,
+              "ppid": 135114,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 5 /nobreak",
+              "children": [
+                {
+                  "pid": 135119,
+                  "ppid": 135117,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 13 /nobreak",
+                  "children": [
+                    {
+                      "pid": 135124,
+                      "ppid": 135119,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 25 > nul",
+                      "children": [
+                        {
+                          "pid": 135130,
+                          "ppid": 135124,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\pooja.singh\\AppData\\Local\\Temp\\host_9aa55bcf.txt\"",
+                          "children": [
+                            {
+                              "pid": 135134,
+                              "ppid": 135130,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 135138,
+                  "ppid": 135117,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 21\"",
+                  "children": [
+                    {
+                      "pid": 135139,
+                      "ppid": 135138,
+                      "name": "reg.exe",
+                      "command": "reg.exe add \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"UpdaterAssist\" /t REG_SZ /d \"C:\\ProgramData\\Alpine\\Bridge\\Runtime_3938c2fc.cmd\" /f",
+                      "children": [
+                        {
+                          "pid": 135143,
+                          "ppid": 135139,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\pooja.singh\\AppData\\Local\\Temp\\host_5ced2734.txt\"",
+                          "children": [
+                            {
+                              "pid": 135147,
+                              "ppid": 135143,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all",
+                              "children": [
+                                {
+                                  "pid": 135149,
+                                  "ppid": 135147,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\pooja.singh\\AppData\\Local\\Temp\\host_3c74463e.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 135155,
+                                      "ppid": 135149,
+                                      "name": "rundll32.exe",
+                                      "command": "rundll32.exe \"C:\\Users\\pooja.singh\\AppData\\Local\\Temp\\bridge.dll\",EntryPoint",
+                                      "children": [
+                                        {
+                                          "pid": 135159,
+                                          "ppid": 135155,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv > \"C:\\Users\\pooja.singh\\AppData\\Local\\Temp\\who_bdef2549.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 135160,
+                                              "ppid": 135159,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\ProgramData\\BlueYonder\\Collector\\TrustRefresh_89905da4.ps1\" -Host \"ENG-698\" -Mode Verify",
+                                              "children": [
+                                                {
+                                                  "pid": 135163,
+                                                  "ppid": 135160,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /v",
+                                                  "children": [
+                                                    {
+                                                      "pid": 135167,
+                                                      "ppid": 135163,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 135170,
+                                                          "ppid": 135167,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /v",
+                                                          "children": [
+                                                            {
+                                                              "pid": 135171,
+                                                              "ppid": 135170,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 18 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 135178,
+                                                                  "ppid": 135171,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\pooja.singh\\AppData\\Local\\Temp\\host_d8fe7f0c.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 135184,
+                                                                      "ppid": 135178,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 135191,
+                                                      "ppid": 135163,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 5 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 135198,
+                                                          "ppid": 135191,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /v",
+                                                          "children": [
+                                                            {
+                                                              "pid": 135202,
+                                                              "ppid": 135198,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 135206,
+                                                                  "ppid": 135202,
+                                                                  "name": "cmd.exe",
+                                                                  "command": "cmd.exe /c \"whoami.exe /groups > \"C:\\Users\\pooja.singh\\AppData\\Local\\Temp\\who_57cf784f.txt\"\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

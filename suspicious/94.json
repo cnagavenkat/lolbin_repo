@@ -1,0 +1,254 @@
+{
+  "pid": 62332,
+  "ppid": 0,
+  "name": "ccmexec.exe",
+  "command": "ccmexec.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 62333,
+      "ppid": 62332,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\Public\\Diag_41debf19.wsf\" /apply",
+      "children": [
+        {
+          "pid": 62337,
+          "ppid": 62333,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+          "children": [
+            {
+              "pid": 62343,
+              "ppid": 62337,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\arjun.singh\\AppData\\Local\\Temp\\host_4788ab88.txt\"",
+              "children": [
+                {
+                  "pid": 62345,
+                  "ppid": 62343,
+                  "name": "nltest.exe",
+                  "command": "nltest.exe /dclist:ACME",
+                  "children": [
+                    {
+                      "pid": 62347,
+                      "ppid": 62345,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\arjun.singh\\AppData\\Local\\Temp\\BuildPack_f3b86c84.ps1\" -Host \"APP-976\" -Mode Full",
+                      "children": [
+                        {
+                          "pid": 62352,
+                          "ppid": 62347,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /v",
+                          "children": [
+                            {
+                              "pid": 62357,
+                              "ppid": 62352,
+                              "name": "nltest.exe",
+                              "command": "nltest.exe /domain_trusts",
+                              "children": [
+                                {
+                                  "pid": 62360,
+                                  "ppid": 62357,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 17 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 62366,
+                                      "ppid": 62360,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 62370,
+                                          "ppid": 62366,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 62374,
+                          "ppid": 62347,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 5 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 62377,
+                              "ppid": 62374,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                              "children": [
+                                {
+                                  "pid": 62384,
+                                  "ppid": 62377,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /v",
+                                  "children": [
+                                    {
+                                      "pid": 62389,
+                                      "ppid": 62384,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\arjun.singh\\AppData\\Local\\Temp\\host_0d7bebf3.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 62393,
+                                          "ppid": 62389,
+                                          "name": "nltest.exe",
+                                          "command": "nltest.exe /dclist:ENG",
+                                          "children": [
+                                            {
+                                              "pid": 62396,
+                                              "ppid": 62393,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Litware\\Logs\\Security_6f914ca5.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 62399,
+                                                  "ppid": 62396,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\arjun.singh\\AppData\\Local\\Temp\\host_8a95d395.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 62401,
+                                                      "ppid": 62399,
+                                                      "name": "nltest.exe",
+                                                      "command": "nltest.exe /sc_query:ENG",
+                                                      "children": [
+                                                        {
+                                                          "pid": 62408,
+                                                          "ppid": 62401,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /v",
+                                                          "children": [
+                                                            {
+                                                              "pid": 62413,
+                                                              "ppid": 62408,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 62415,
+                                                                  "ppid": 62413,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /svc",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 62420,
+                                                                      "ppid": 62415,
+                                                                      "name": "timeout.exe",
+                                                                      "command": "timeout.exe /t 14 /nobreak",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 62426,
+                                                                          "ppid": 62420,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 62432,
+                                                                              "ppid": 62426,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 62434,
+                                                                                  "ppid": 62432,
+                                                                                  "name": "nltest.exe",
+                                                                                  "command": "nltest.exe /sc_query:OPS",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 62438,
+                                                                                      "ppid": 62434,
+                                                                                      "name": "tasklist.exe",
+                                                                                      "command": "tasklist.exe /svc",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 62443,
+                                                                                          "ppid": 62438,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\arjun.singh\\AppData\\Local\\Temp\\host_bdc0a794.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 62444,
+                                                                                              "ppid": 62443,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /all > \"C:\\Users\\arjun.singh\\AppData\\Local\\Temp\\who_0f248f0a.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 62445,
+                                                                                                  "ppid": 62444,
+                                                                                                  "name": "tasklist.exe",
+                                                                                                  "command": "tasklist.exe",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 62452,
+                                                                                                      "ppid": 62445,
+                                                                                                      "name": "tasklist.exe",
+                                                                                                      "command": "tasklist.exe /svc",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 62457,
+                                                                                                          "ppid": 62452,
+                                                                                                          "name": "tasklist.exe",
+                                                                                                          "command": "tasklist.exe /svc",
+                                                                                                          "children": []
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

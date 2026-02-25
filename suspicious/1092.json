@@ -1,0 +1,204 @@
+{
+  "pid": 185970,
+  "ppid": 0,
+  "name": "mmc.exe",
+  "command": "mmc.exe /service",
+  "children": [
+    {
+      "pid": 185974,
+      "ppid": 185970,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\Users\\Public\\ProfileInit_ab55ee88.ps1\" -Host \"LAP-474\" -Mode Delta",
+      "children": [
+        {
+          "pid": 185978,
+          "ppid": 185974,
+          "name": "certutil.exe",
+          "command": "certutil.exe -verify \"C:\\Users\\varun.reddy\\AppData\\Local\\Temp\\agent_signing.cer\"",
+          "children": [
+            {
+              "pid": 185985,
+              "ppid": 185978,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 185992,
+                  "ppid": 185985,
+                  "name": "cmd.exe",
+                  "command": "cmd.exe /c \"hostname.exe\"",
+                  "children": [
+                    {
+                      "pid": 185995,
+                      "ppid": 185992,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 186000,
+                          "ppid": 185995,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 186002,
+                  "ppid": 185985,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 19 /nobreak",
+                  "children": [
+                    {
+                      "pid": 186003,
+                      "ppid": 186002,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 186006,
+                          "ppid": 186003,
+                          "name": "certutil.exe",
+                          "command": "certutil.exe -addstore CA \"C:\\Users\\Public\\workstation.cer\"",
+                          "children": [
+                            {
+                              "pid": 186009,
+                              "ppid": 186006,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all",
+                              "children": [
+                                {
+                                  "pid": 186016,
+                                  "ppid": 186009,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 186022,
+                                      "ppid": 186016,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                      "children": [
+                                        {
+                                          "pid": 186029,
+                                          "ppid": 186022,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /svc",
+                                          "children": [
+                                            {
+                                              "pid": 186032,
+                                              "ppid": 186029,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 186052,
+                                                  "ppid": 186032,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Wingtip\\Logs\\System_71a267dd.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 186061,
+                                                      "ppid": 186052,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\varun.reddy\\AppData\\Local\\Temp\\host_adbd8473.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 186065,
+                                                          "ppid": 186061,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 12 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 186070,
+                                                              "ppid": 186065,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 10 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 186074,
+                                                                  "ppid": 186070,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 186037,
+      "ppid": 185970,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+      "children": [
+        {
+          "pid": 186043,
+          "ppid": 186037,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 186047,
+              "ppid": 186043,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+              "children": [
+                {
+                  "pid": 186048,
+                  "ppid": 186047,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /v",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 186053,
+      "ppid": 185970,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 186060,
+          "ppid": 186053,
+          "name": "whoami.exe",
+          "command": "whoami.exe /all > \"C:\\Users\\varun.reddy\\AppData\\Local\\Temp\\who_604d7787.txt\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

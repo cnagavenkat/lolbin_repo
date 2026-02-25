@@ -1,0 +1,261 @@
+{
+  "pid": 64732,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 64733,
+      "ppid": 64732,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"tasklist /svc\"",
+      "children": [
+        {
+          "pid": 64740,
+          "ppid": 64733,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 11 /nobreak",
+          "children": [
+            {
+              "pid": 64743,
+              "ppid": 64740,
+              "name": "reg.exe",
+              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+              "children": [
+                {
+                  "pid": 64747,
+                  "ppid": 64743,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups",
+                  "children": [
+                    {
+                      "pid": 64748,
+                      "ppid": 64747,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 9 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 64749,
+                          "ppid": 64748,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 4 > nul",
+                          "children": [
+                            {
+                              "pid": 64750,
+                              "ppid": 64749,
+                              "name": "nltest.exe",
+                              "command": "nltest.exe /sc_query:RESEARCH",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 64753,
+                  "ppid": 64743,
+                  "name": "cmd.exe",
+                  "command": "cmd.exe /c \"whoami.exe /priv > \"C:\\Users\\ananya.nair\\AppData\\Local\\Temp\\who_310b7549.txt\"\"",
+                  "children": [
+                    {
+                      "pid": 64758,
+                      "ppid": 64753,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\Public\\CollectInventory_7cac1da1.ps1\" -Host \"OPS-225\" -Mode Delta",
+                      "children": [
+                        {
+                          "pid": 64763,
+                          "ppid": 64758,
+                          "name": "nltest.exe",
+                          "command": "nltest.exe /dclist:DEVOPS",
+                          "children": [
+                            {
+                              "pid": 64766,
+                              "ppid": 64763,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 17 > nul",
+                              "children": [
+                                {
+                                  "pid": 64767,
+                                  "ppid": 64766,
+                                  "name": "netsh.exe",
+                                  "command": "netsh.exe interface ipv4 show config",
+                                  "children": [
+                                    {
+                                      "pid": 64772,
+                                      "ppid": 64767,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups > \"C:\\Users\\ananya.nair\\AppData\\Local\\Temp\\who_2f4c4cf6.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 64777,
+                                          "ppid": 64772,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 11 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 64783,
+                                              "ppid": 64777,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 3 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 64784,
+                                                  "ppid": 64783,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Woodgrove\\Logs\\Microsoft-Windows-TaskScheduler_Operational_6429d252.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 64787,
+                                                      "ppid": 64784,
+                                                      "name": "nltest.exe",
+                                                      "command": "nltest.exe /dclist:RESEARCH",
+                                                      "children": [
+                                                        {
+                                                          "pid": 64788,
+                                                          "ppid": 64787,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 64789,
+                                                              "ppid": 64788,
+                                                              "name": "nltest.exe",
+                                                              "command": "nltest.exe /dclist:BFSI",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 64793,
+                                                                  "ppid": 64789,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 64798,
+                                                                      "ppid": 64793,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 64801,
+                                                                          "ppid": 64798,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 64806,
+                                                                              "ppid": 64801,
+                                                                              "name": "choice.exe",
+                                                                              "command": "choice.exe /d y /t 19 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 64813,
+                                                                                  "ppid": 64806,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 64814,
+                                                                                      "ppid": 64813,
+                                                                                      "name": "nltest.exe",
+                                                                                      "command": "nltest.exe /dclist:OPS",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 64818,
+                                                                                          "ppid": 64814,
+                                                                                          "name": "timeout.exe",
+                                                                                          "command": "timeout.exe /t 22 /nobreak",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "pid": 64823,
+                                                                              "ppid": 64801,
+                                                                              "name": "ping.exe",
+                                                                              "command": "ping.exe -n 25 127.0.0.1 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 64824,
+                                                                                  "ppid": 64823,
+                                                                                  "name": "nltest.exe",
+                                                                                  "command": "nltest.exe /dclist:ENG",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 64830,
+                                                                                      "ppid": 64824,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\ananya.nair\\AppData\\Local\\Temp\\host_05ece9f9.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 64834,
+                                                                                          "ppid": 64830,
+                                                                                          "name": "powershell.exe",
+                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 64841,
+                                                                                              "ppid": 64834,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /priv > \"C:\\Users\\ananya.nair\\AppData\\Local\\Temp\\who_4347044f.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 64845,
+                                                                                                  "ppid": 64841,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe > \"C:\\Users\\ananya.nair\\AppData\\Local\\Temp\\host_bec6fea6.txt\"",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

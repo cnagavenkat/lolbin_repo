@@ -1,0 +1,284 @@
+{
+  "pid": 117893,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 117897,
+      "ppid": 117893,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"whoami /all\"",
+      "children": [
+        {
+          "pid": 117898,
+          "ppid": 117897,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 21\"",
+          "children": [
+            {
+              "pid": 117901,
+              "ppid": 117898,
+              "name": "quser.exe",
+              "command": "quser.exe /server:LAP-703",
+              "children": [
+                {
+                  "pid": 117905,
+                  "ppid": 117901,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\who_63b63c73.txt\"",
+                  "children": [
+                    {
+                      "pid": 117911,
+                      "ppid": 117905,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\host_e4deb9e9.txt\"",
+                      "children": [
+                        {
+                          "pid": 117917,
+                          "ppid": 117911,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                          "children": [
+                            {
+                              "pid": 117920,
+                              "ppid": 117917,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\host_de334ba7.txt\"",
+                              "children": [
+                                {
+                                  "pid": 117921,
+                                  "ppid": 117920,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 117926,
+                  "ppid": 117901,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 117927,
+                      "ppid": 117926,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /svc",
+                      "children": [
+                        {
+                          "pid": 117934,
+                          "ppid": 117927,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\host_c8279f26.txt\"",
+                          "children": [
+                            {
+                              "pid": 117937,
+                              "ppid": 117934,
+                              "name": "wmic.exe",
+                              "command": "wmic.exe service get Name,StartMode,State",
+                              "children": [
+                                {
+                                  "pid": 117944,
+                                  "ppid": 117937,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                                  "children": [
+                                    {
+                                      "pid": 117951,
+                                      "ppid": 117944,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Woodgrove\\Logs\\update.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 117957,
+                                          "ppid": 117951,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Woodgrove\\Logs\\System_142cded3.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 117960,
+                                              "ppid": 117957,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\host_d483972d.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 117964,
+                                                  "ppid": 117960,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Wingtip\\Logs\\System_98b3ecf1.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 117970,
+                                                      "ppid": 117964,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /priv > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\who_26f72a12.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 117976,
+                                                          "ppid": 117970,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 117982,
+                                                              "ppid": 117976,
+                                                              "name": "wevtutil.exe",
+                                                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Alpine\\Logs\\Microsoft-Windows-TaskScheduler_Operational_975d2655.evtx\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 117983,
+                                                  "ppid": 117960,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups",
+                                                  "children": [
+                                                    {
+                                                      "pid": 117984,
+                                                      "ppid": 117983,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\who_18421794.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 117989,
+                                                          "ppid": 117984,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\host_7f4e089f.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 117991,
+                                                              "ppid": 117989,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 117997,
+                                                                  "ppid": 117991,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 8 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 118001,
+                                                                      "ppid": 117997,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 8 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 118002,
+                                                                          "ppid": 118001,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\host_aa0cfd1c.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 118026,
+                                                                              "ppid": 118002,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\host_9cc6a54a.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 118031,
+                                                                                  "ppid": 118026,
+                                                                                  "name": "cmd.exe",
+                                                                                  "command": "cmd.exe /c \"hostname.exe\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 118038,
+                                                                                      "ppid": 118031,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 118004,
+      "ppid": 117893,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+      "children": [
+        {
+          "pid": 118007,
+          "ppid": 118004,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+          "children": [
+            {
+              "pid": 118009,
+              "ppid": 118007,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 22 > nul",
+              "children": [
+                {
+                  "pid": 118016,
+                  "ppid": 118009,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\who_46a17070.txt\"",
+                  "children": [
+                    {
+                      "pid": 118023,
+                      "ppid": 118016,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 3 127.0.0.1 > nul",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

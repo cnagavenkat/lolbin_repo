@@ -1,0 +1,261 @@
+{
+  "pid": 71214,
+  "ppid": 0,
+  "name": "taskhostw.exe",
+  "command": "taskhostw.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 71219,
+      "ppid": 71214,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"echo maintenance step\"",
+      "children": [
+        {
+          "pid": 71222,
+          "ppid": 71219,
+          "name": "wevtutil.exe",
+          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Fabrikam\\Logs\\Microsoft-Windows-TaskScheduler_Operational_ae85eaa1.evtx\"",
+          "children": [
+            {
+              "pid": 71225,
+              "ppid": 71222,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 71231,
+                  "ppid": 71225,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 4 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 71237,
+                      "ppid": 71231,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe  -File \"C:\\IT\\Scripts\\BuildPack_a0cdf973.ps1\" -Host \"APP-460\" -Mode Quick",
+                      "children": [
+                        {
+                          "pid": 71250,
+                          "ppid": 71237,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\arjun.jain\\AppData\\Local\\Temp\\host_21f68a4e.txt\"",
+                          "children": [
+                            {
+                              "pid": 71254,
+                              "ppid": 71250,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                              "children": [
+                                {
+                                  "pid": 71255,
+                                  "ppid": 71254,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /v",
+                                  "children": [
+                                    {
+                                      "pid": 71261,
+                                      "ppid": 71255,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /svc",
+                                      "children": [
+                                        {
+                                          "pid": 71267,
+                                          "ppid": 71261,
+                                          "name": "schtasks.exe",
+                                          "command": "schtasks.exe /query /fo LIST /v",
+                                          "children": [
+                                            {
+                                              "pid": 71272,
+                                              "ppid": 71267,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv",
+                                              "children": [
+                                                {
+                                                  "pid": 71277,
+                                                  "ppid": 71272,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\arjun.jain\\AppData\\Local\\Temp\\host_3ad13aa4.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 71281,
+                                                      "ppid": 71277,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\arjun.jain\\AppData\\Local\\Temp\\host_c9d0b145.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 71304,
+                                                          "ppid": 71281,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups",
+                                                          "children": [
+                                                            {
+                                                              "pid": 71310,
+                                                              "ppid": 71304,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 71313,
+                                                                  "ppid": 71310,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 71315,
+                                                                      "ppid": 71313,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /svc",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 71320,
+                                                                          "ppid": 71315,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups > \"C:\\Users\\arjun.jain\\AppData\\Local\\Temp\\who_965bc9ae.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 71327,
+                                                                              "ppid": 71320,
+                                                                              "name": "powershell.exe",
+                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 71331,
+                                                                                  "ppid": 71327,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 71336,
+                                                                                      "ppid": 71331,
+                                                                                      "name": "wevtutil.exe",
+                                                                                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Contoso\\Logs\\Application_32438643.evtx\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 71343,
+                                                                                          "ppid": 71336,
+                                                                                          "name": "wevtutil.exe",
+                                                                                          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Fabrikam\\Logs\\Microsoft-Windows-TaskScheduler_Operational_625b794a.evtx\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 71346,
+                                                                                              "ppid": 71343,
+                                                                                              "name": "tasklist.exe",
+                                                                                              "command": "tasklist.exe /svc",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 71352,
+                                                                                                  "ppid": 71346,
+                                                                                                  "name": "tasklist.exe",
+                                                                                                  "command": "tasklist.exe /v",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 71358,
+                                                                                                      "ppid": 71352,
+                                                                                                      "name": "powershell.exe",
+                                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 71244,
+      "ppid": 71214,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe /v",
+      "children": [
+        {
+          "pid": 71245,
+          "ppid": 71244,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /svc",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 71284,
+      "ppid": 71214,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 16 > nul",
+      "children": [
+        {
+          "pid": 71287,
+          "ppid": 71284,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\arjun.jain\\AppData\\Local\\Temp\\host_f2cdc37a.txt\"",
+          "children": [
+            {
+              "pid": 71289,
+              "ppid": 71287,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all",
+              "children": [
+                {
+                  "pid": 71296,
+                  "ppid": 71289,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups > \"C:\\Users\\arjun.jain\\AppData\\Local\\Temp\\who_0c344a9c.txt\"",
+                  "children": [
+                    {
+                      "pid": 71302,
+                      "ppid": 71296,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\arjun.jain\\AppData\\Local\\Temp\\host_92930e1b.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

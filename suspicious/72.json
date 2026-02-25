@@ -1,0 +1,198 @@
+{
+  "pid": 59390,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 59394,
+      "ppid": 59390,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"tasklist /svc\"",
+      "children": [
+        {
+          "pid": 59398,
+          "ppid": 59394,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe",
+          "children": [
+            {
+              "pid": 59402,
+              "ppid": 59398,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -File \"C:\\Users\\Public\\TrustRefresh_e3412db8.ps1\" -Host \"APP-715\" -Mode Verify",
+              "children": [
+                {
+                  "pid": 59403,
+                  "ppid": 59402,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe",
+                  "children": [
+                    {
+                      "pid": 59405,
+                      "ppid": 59403,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 59408,
+                          "ppid": 59405,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                          "children": [
+                            {
+                              "pid": 59414,
+                              "ppid": 59408,
+                              "name": "wevtutil.exe",
+                              "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\BlueYonder\\Logs\\Security_ba11096b.evtx\"",
+                              "children": [
+                                {
+                                  "pid": 59416,
+                                  "ppid": 59414,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Litware\\Logs\\Security_f0d79803.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 59418,
+                                      "ppid": 59416,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\kiran.gupta\\AppData\\Local\\Temp\\host_98937557.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 59425,
+                                          "ppid": 59418,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Wingtip\\Logs\\System_48a28f34.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 59430,
+                                              "ppid": 59425,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\kiran.gupta\\AppData\\Local\\Temp\\host_73470ce3.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 59436,
+                                                  "ppid": 59430,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 59441,
+                                  "ppid": 59414,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups > \"C:\\Users\\kiran.gupta\\AppData\\Local\\Temp\\who_bdb463b4.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 59443,
+                                      "ppid": 59441,
+                                      "name": "schtasks.exe",
+                                      "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+                                      "children": [
+                                        {
+                                          "pid": 59450,
+                                          "ppid": 59443,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Woodgrove\\Logs\\Security_90a1da7a.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 59453,
+                                              "ppid": 59450,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 59460,
+                                                  "ppid": 59453,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 59466,
+                                                      "ppid": 59460,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 16 /nobreak",
+                                                      "children": [
+                                                        {
+                                                          "pid": 59470,
+                                                          "ppid": 59466,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 59475,
+                                                              "ppid": 59470,
+                                                              "name": "cmd.exe",
+                                                              "command": "cmd.exe /c \"wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_c70b5cec.evtx\"\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 59481,
+                                                                  "ppid": 59475,
+                                                                  "name": "wevtutil.exe",
+                                                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Fabrikam\\Logs\\System_be34c482.evtx\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 59487,
+                                                                      "ppid": 59481,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\kiran.gupta\\AppData\\Local\\Temp\\host_7910f2a9.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 59488,
+                                                                          "ppid": 59487,
+                                                                          "name": "wevtutil.exe",
+                                                                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_80571ae1.evtx\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 59494,
+                                                                              "ppid": 59488,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

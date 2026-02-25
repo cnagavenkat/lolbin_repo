@@ -1,0 +1,166 @@
+{
+  "pid": 298583,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k Schedule",
+  "children": [
+    {
+      "pid": 298587,
+      "ppid": 298583,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"tasklist /svc\"",
+      "children": [
+        {
+          "pid": 298590,
+          "ppid": 298587,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+          "children": [
+            {
+              "pid": 298593,
+              "ppid": 298590,
+              "name": "reg.exe",
+              "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+              "children": [
+                {
+                  "pid": 298600,
+                  "ppid": 298593,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                  "children": [
+                    {
+                      "pid": 298622,
+                      "ppid": 298600,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+                      "children": [
+                        {
+                          "pid": 298625,
+                          "ppid": 298622,
+                          "name": "wevtutil.exe",
+                          "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Woodgrove\\Logs\\Application_3aa76993.evtx\"",
+                          "children": [
+                            {
+                              "pid": 298629,
+                              "ppid": 298625,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 3 > nul",
+                              "children": [
+                                {
+                                  "pid": 298630,
+                                  "ppid": 298629,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe",
+                                  "children": [
+                                    {
+                                      "pid": 298637,
+                                      "ppid": 298630,
+                                      "name": "makecab.exe",
+                                      "command": "makecab.exe \"C:\\Users\\karthik.reddy\\AppData\\Local\\Temp\\support.log\" \"C:\\Users\\karthik.reddy\\AppData\\Local\\Temp\\support.cab\"",
+                                      "children": [
+                                        {
+                                          "pid": 298639,
+                                          "ppid": 298637,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": [
+                                            {
+                                              "pid": 298640,
+                                              "ppid": 298639,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv > \"C:\\Users\\karthik.reddy\\AppData\\Local\\Temp\\who_58e7b695.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 298647,
+                                                  "ppid": 298640,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\karthik.reddy\\AppData\\Local\\Temp\\host_446b32da.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 298654,
+                                                      "ppid": 298647,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 298657,
+                                                          "ppid": 298654,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 298663,
+                                                              "ppid": 298657,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 298667,
+                                                                  "ppid": 298663,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 298601,
+      "ppid": 298583,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe",
+      "children": [
+        {
+          "pid": 298606,
+          "ppid": 298601,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 17 > nul",
+          "children": [
+            {
+              "pid": 298610,
+              "ppid": 298606,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 10 > nul",
+              "children": [
+                {
+                  "pid": 298616,
+                  "ppid": 298610,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

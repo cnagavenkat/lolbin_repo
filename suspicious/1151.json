@@ -1,0 +1,283 @@
+{
+  "pid": 191812,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 191817,
+      "ppid": 191812,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Deploy\\Cert_598677ee.wsf\" /verify",
+      "children": [
+        {
+          "pid": 191821,
+          "ppid": 191817,
+          "name": "cmd.exe",
+          "command": "cmd.exe /c \"whoami /all\"",
+          "children": [
+            {
+              "pid": 191826,
+              "ppid": 191821,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\who_0f93f8ca.txt\"",
+              "children": [
+                {
+                  "pid": 191833,
+                  "ppid": 191826,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                  "children": [
+                    {
+                      "pid": 191839,
+                      "ppid": 191833,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 191846,
+                          "ppid": 191839,
+                          "name": "cmd.exe",
+                          "command": "cmd.exe /c \"hostname.exe\"",
+                          "children": [
+                            {
+                              "pid": 191847,
+                              "ppid": 191846,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_d5067e1b.txt\"",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 191850,
+                  "ppid": 191826,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/all' -Wait\"",
+                  "children": [
+                    {
+                      "pid": 191855,
+                      "ppid": 191850,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv",
+                      "children": [
+                        {
+                          "pid": 191862,
+                          "ppid": 191855,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": [
+                            {
+                              "pid": 191869,
+                              "ppid": 191862,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\who_535e5a77.txt\"",
+                              "children": [
+                                {
+                                  "pid": 191872,
+                                  "ppid": 191869,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\who_b5e70f37.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 191876,
+                                      "ppid": 191872,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 191878,
+                      "ppid": 191850,
+                      "name": "certutil.exe",
+                      "command": "certutil.exe -addstore TrustedPublisher \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\corp_root.cer\"",
+                      "children": [
+                        {
+                          "pid": 191880,
+                          "ppid": 191878,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv",
+                          "children": [
+                            {
+                              "pid": 191881,
+                              "ppid": 191880,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 13 > nul",
+                              "children": [
+                                {
+                                  "pid": 191882,
+                                  "ppid": 191881,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 191885,
+                                      "ppid": 191882,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups",
+                                      "children": [
+                                        {
+                                          "pid": 191886,
+                                          "ppid": 191885,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Northwind\\Logs\\Security_435a7576.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 191892,
+                                              "ppid": 191886,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 4 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 191897,
+                                                  "ppid": 191892,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 191925,
+                                                      "ppid": 191897,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_a4ff0d27.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 191936,
+                                                          "ppid": 191925,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 191943,
+                                                              "ppid": 191936,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\who_df9b69a1.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 191945,
+                                                                  "ppid": 191943,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 191946,
+                                                                      "ppid": 191945,
+                                                                      "name": "cmd.exe",
+                                                                      "command": "cmd.exe /c \"hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_687dfb40.txt\"\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 191948,
+                                                                          "ppid": 191946,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\who_f2106a89.txt\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 191902,
+      "ppid": 191812,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"whoami.exe /priv\"",
+      "children": [
+        {
+          "pid": 191908,
+          "ppid": 191902,
+          "name": "whoami.exe",
+          "command": "whoami.exe",
+          "children": [
+            {
+              "pid": 191910,
+              "ppid": 191908,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\who_b83aeb83.txt\"",
+              "children": [
+                {
+                  "pid": 191914,
+                  "ppid": 191910,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 6 > nul",
+                  "children": [
+                    {
+                      "pid": 191920,
+                      "ppid": 191914,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_353fa1ec.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 191930,
+      "ppid": 191812,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+      "children": [
+        {
+          "pid": 191931,
+          "ppid": 191930,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_83b4a6c2.txt\"",
+          "children": [
+            {
+              "pid": 191933,
+              "ppid": 191931,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'timeout.exe' -ArgumentList '/t 22 /nobreak' -Wait\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

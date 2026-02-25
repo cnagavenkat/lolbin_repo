@@ -1,0 +1,149 @@
+{
+  "pid": 196100,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 196105,
+      "ppid": 196100,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\ProgramData\\BlueYonder\\Support\\Diag_73fe6963.vbs\" /verify",
+      "children": [
+        {
+          "pid": 196109,
+          "ppid": 196105,
+          "name": "ping.exe",
+          "command": "ping.exe -n 15 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 196114,
+              "ppid": 196109,
+              "name": "certutil.exe",
+              "command": "certutil.exe -verify \"C:\\Users\\vivaan.das\\AppData\\Local\\Temp\\corp_root.cer\"",
+              "children": [
+                {
+                  "pid": 196120,
+                  "ppid": 196114,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 196127,
+                      "ppid": 196120,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 11 > nul",
+                      "children": [
+                        {
+                          "pid": 196130,
+                          "ppid": 196127,
+                          "name": "regsvr32.exe",
+                          "command": "regsvr32.exe /s /n /i:user \"C:\\Users\\vivaan.das\\AppData\\Local\\Temp\\helper.dll\"",
+                          "children": [
+                            {
+                              "pid": 196133,
+                              "ppid": 196130,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe",
+                              "children": [
+                                {
+                                  "pid": 196146,
+                                  "ppid": 196133,
+                                  "name": "rundll32.exe",
+                                  "command": "rundll32.exe \"C:\\ProgramData\\Fabrikam\\Client\\diagext.dll\",DllRegisterServer",
+                                  "children": [
+                                    {
+                                      "pid": 196150,
+                                      "ppid": 196146,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups > \"C:\\Users\\vivaan.das\\AppData\\Local\\Temp\\who_6bf5d953.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 196153,
+                                          "ppid": 196150,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": [
+                                            {
+                                              "pid": 196160,
+                                              "ppid": 196153,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 4 127.0.0.1 > nul",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 196164,
+                                          "ppid": 196150,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"certificate\" \"C:\\ProgramData\\Contoso\\Logs\\support.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 196166,
+                                              "ppid": 196164,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 196168,
+                                                  "ppid": 196166,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 23 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 196171,
+                                                      "ppid": 196168,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /v",
+                                                      "children": [
+                                                        {
+                                                          "pid": 196173,
+                                                          "ppid": 196171,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 196135,
+      "ppid": 196100,
+      "name": "ping.exe",
+      "command": "ping.exe -n 23 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 196139,
+          "ppid": 196135,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,316 @@
+{
+  "pid": 155410,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k Schedule",
+  "children": [
+    {
+      "pid": 155411,
+      "ppid": 155410,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Hidden -File \"C:\\ProgramData\\Litware\\Client\\RunDiagnostics_81630abf.ps1\" -Host \"APP-507\" -Mode Delta",
+      "children": [
+        {
+          "pid": 155417,
+          "ppid": 155411,
+          "name": "reg.exe",
+          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+          "children": [
+            {
+              "pid": 155422,
+              "ppid": 155417,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups",
+              "children": [
+                {
+                  "pid": 155428,
+                  "ppid": 155422,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe",
+                  "children": [
+                    {
+                      "pid": 155433,
+                      "ppid": 155428,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 155439,
+                          "ppid": 155433,
+                          "name": "esentutl.exe",
+                          "command": "esentutl.exe /y \"C:\\Windows\\System32\\config\\SYSTEM\" /d \"C:\\Users\\kiran.jain\\AppData\\Local\\Temp\\SYSTEM_dac899ae.sav\" /o",
+                          "children": [
+                            {
+                              "pid": 155441,
+                              "ppid": 155439,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv > \"C:\\Users\\kiran.jain\\AppData\\Local\\Temp\\who_330b86e3.txt\"",
+                              "children": [
+                                {
+                                  "pid": 155448,
+                                  "ppid": 155441,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all > \"C:\\Users\\kiran.jain\\AppData\\Local\\Temp\\who_d082016f.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 155452,
+                                      "ppid": 155448,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+                                      "children": [
+                                        {
+                                          "pid": 155455,
+                                          "ppid": 155452,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 155457,
+                              "ppid": 155439,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 3 > nul",
+                              "children": [
+                                {
+                                  "pid": 155462,
+                                  "ppid": 155457,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 155468,
+                                      "ppid": 155462,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups > \"C:\\Users\\kiran.jain\\AppData\\Local\\Temp\\who_fa2be006.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 155469,
+                                          "ppid": 155468,
+                                          "name": "forfiles.exe",
+                                          "command": "forfiles.exe /P \"C:\\ProgramData\\Litware\\Logs\" /M *.cab /D -29 /C \"cmd /c echo archived @file\"",
+                                          "children": [
+                                            {
+                                              "pid": 155474,
+                                              "ppid": 155469,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe > \"C:\\Users\\kiran.jain\\AppData\\Local\\Temp\\who_32042d2a.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 155479,
+                                                  "ppid": 155474,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\kiran.jain\\AppData\\Local\\Temp\\host_3a18b6d5.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 155486,
+                                                      "ppid": 155479,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 8 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 155491,
+                                                          "ppid": 155486,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 4 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 155495,
+                                                              "ppid": 155491,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups > \"C:\\Users\\kiran.jain\\AppData\\Local\\Temp\\who_2e628a2f.txt\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 155501,
+                                                  "ppid": 155474,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 155502,
+                                                      "ppid": 155501,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 14 /nobreak",
+                                                      "children": [
+                                                        {
+                                                          "pid": 155505,
+                                                          "ppid": 155502,
+                                                          "name": "cmd.exe",
+                                                          "command": "cmd.exe /k \"echo maintenance step\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 155507,
+                                                              "ppid": 155505,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 155513,
+                                                                  "ppid": 155507,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 155517,
+                                                                      "ppid": 155513,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /groups > \"C:\\Users\\kiran.jain\\AppData\\Local\\Temp\\who_4cf48408.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 155522,
+                                                                          "ppid": 155517,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/all > \"C:\\Users\\kiran.jain\\AppData\\Local\\Temp\\who_224fce0f.txt\"' -Wait\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 155525,
+                                                                              "ppid": 155522,
+                                                                              "name": "ping.exe",
+                                                                              "command": "ping.exe -n 11 127.0.0.1 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 155527,
+                                                                                  "ppid": 155525,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /groups > \"C:\\Users\\kiran.jain\\AppData\\Local\\Temp\\who_7e76cb40.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 155534,
+                                                                                      "ppid": 155527,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 155538,
+                                                                                          "ppid": 155534,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 155540,
+                                                                                              "ppid": 155538,
+                                                                                              "name": "timeout.exe",
+                                                                                              "command": "timeout.exe /t 13 /nobreak",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 155545,
+                                                                                                  "ppid": 155540,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /all > \"C:\\Users\\kiran.jain\\AppData\\Local\\Temp\\who_b3d3589a.txt\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 155548,
+                                                                                                      "ppid": 155545,
+                                                                                                      "name": "whoami.exe",
+                                                                                                      "command": "whoami.exe /priv > \"C:\\Users\\kiran.jain\\AppData\\Local\\Temp\\who_a24ee26e.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 155550,
+                                                                                                          "ppid": 155548,
+                                                                                                          "name": "hostname.exe",
+                                                                                                          "command": "hostname.exe",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 155551,
+                                                                                                              "ppid": 155550,
+                                                                                                              "name": "powershell.exe",
+                                                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+                                                                                                              "children": []
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                },
+                                                                                                {
+                                                                                                  "pid": 155552,
+                                                                                                  "ppid": 155540,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /all",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 155557,
+                                                                                                      "ppid": 155552,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\kiran.jain\\AppData\\Local\\Temp\\host_cde13660.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 155563,
+                                                                                                          "ppid": 155557,
+                                                                                                          "name": "hostname.exe",
+                                                                                                          "command": "hostname.exe",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 155568,
+                                                                                                              "ppid": 155563,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe",
+                                                                                                              "children": []
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

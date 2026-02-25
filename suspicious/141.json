@@ -1,0 +1,259 @@
+{
+  "pid": 68291,
+  "ppid": 0,
+  "name": "ccmexec.exe",
+  "command": "ccmexec.exe -k Schedule",
+  "children": [
+    {
+      "pid": 68297,
+      "ppid": 68291,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"set\"",
+      "children": [
+        {
+          "pid": 68298,
+          "ppid": 68297,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+          "children": [
+            {
+              "pid": 68299,
+              "ppid": 68298,
+              "name": "rundll32.exe",
+              "command": "rundll32.exe \"C:\\Build\\obj\\8f6c01fd\\shellhook.dll\",Launch",
+              "children": [
+                {
+                  "pid": 68301,
+                  "ppid": 68299,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 68307,
+                      "ppid": 68301,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /svc",
+                      "children": [
+                        {
+                          "pid": 68314,
+                          "ppid": 68307,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                          "children": [
+                            {
+                              "pid": 68320,
+                              "ppid": 68314,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 68326,
+                          "ppid": 68307,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 16 /nobreak",
+                          "children": [
+                            {
+                              "pid": 68332,
+                              "ppid": 68326,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'regsvr32.exe' -ArgumentList '/s /n /i:user \"C:\\Users\\aarav.menon\\AppData\\Local\\Temp\\plugin.dll\"' -Wait\"",
+                              "children": [
+                                {
+                                  "pid": 68337,
+                                  "ppid": 68332,
+                                  "name": "findstr.exe",
+                                  "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Wingtip\\Logs\\deploy.log\"",
+                                  "children": [
+                                    {
+                                      "pid": 68342,
+                                      "ppid": 68337,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+                                      "children": [
+                                        {
+                                          "pid": 68344,
+                                          "ppid": 68342,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 68350,
+                                              "ppid": 68344,
+                                              "name": "cmd.exe",
+                                              "command": "cmd.exe /c \"findstr.exe /i \"task\" \"C:\\ProgramData\\Contoso\\Logs\\profile.log\"\"",
+                                              "children": [
+                                                {
+                                                  "pid": 68357,
+                                                  "ppid": 68350,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 68361,
+                                                      "ppid": 68357,
+                                                      "name": "cmd.exe",
+                                                      "command": "cmd.exe /c \"whoami.exe\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 68363,
+                                                  "ppid": 68350,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Northwind\\Logs\\update.log\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 68368,
+                                                      "ppid": 68363,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\Public\\BuildPack_0ffd7e64.ps1\" -Host \"APP-481\" -Mode Verify",
+                                                      "children": [
+                                                        {
+                                                          "pid": 68375,
+                                                          "ppid": 68368,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 8 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 68380,
+                                                              "ppid": 68375,
+                                                              "name": "findstr.exe",
+                                                              "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Litware\\Logs\\support.log\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 68382,
+                                                                  "ppid": 68380,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 68389,
+                                                                      "ppid": 68382,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /all",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 68390,
+                                                                          "ppid": 68389,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv > \"C:\\Users\\aarav.menon\\AppData\\Local\\Temp\\who_98b8063c.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 68395,
+                                                                              "ppid": 68390,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe /v",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 68401,
+                                                                                  "ppid": 68395,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /priv",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 68404,
+                                                                                      "ppid": 68401,
+                                                                                      "name": "choice.exe",
+                                                                                      "command": "choice.exe /d y /t 10 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 68406,
+                                                                                          "ppid": 68404,
+                                                                                          "name": "findstr.exe",
+                                                                                          "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Northwind\\Logs\\update.log\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 68412,
+                                                                                              "ppid": 68406,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /priv",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 68414,
+                                                                                                  "ppid": 68412,
+                                                                                                  "name": "choice.exe",
+                                                                                                  "command": "choice.exe /d y /t 24 > nul",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    },
+                                                                                    {
+                                                                                      "pid": 68419,
+                                                                                      "ppid": 68401,
+                                                                                      "name": "findstr.exe",
+                                                                                      "command": "findstr.exe /i \"certificate\" \"C:\\ProgramData\\Fabrikam\\Logs\\support.log\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 68425,
+                                                                                          "ppid": 68419,
+                                                                                          "name": "tasklist.exe",
+                                                                                          "command": "tasklist.exe",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 68334,
+      "ppid": 68291,
+      "name": "whoami.exe",
+      "command": "whoami.exe /groups > \"C:\\Users\\aarav.menon\\AppData\\Local\\Temp\\who_a961e36a.txt\"",
+      "children": [
+        {
+          "pid": 68335,
+          "ppid": 68334,
+          "name": "findstr.exe",
+          "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Woodgrove\\Logs\\update.log\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

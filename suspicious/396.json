@@ -1,0 +1,339 @@
+{
+  "pid": 103142,
+  "ppid": 0,
+  "name": "setup.exe",
+  "command": "setup.exe ",
+  "children": [
+    {
+      "pid": 103144,
+      "ppid": 103142,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"set\"",
+      "children": [
+        {
+          "pid": 103149,
+          "ppid": 103144,
+          "name": "msiexec.exe",
+          "command": "msiexec.exe /i \"C:\\Users\\Public\\support.msi\" /qn /l*v \"C:\\ProgramData\\Contoso\\Logs\\msi_bccf700a.log\"",
+          "children": [
+            {
+              "pid": 103154,
+              "ppid": 103149,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /v",
+              "children": [
+                {
+                  "pid": 103159,
+                  "ppid": 103154,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/priv' -Wait\"",
+                  "children": [
+                    {
+                      "pid": 103164,
+                      "ppid": 103159,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\host_3131417e.txt\"",
+                      "children": [
+                        {
+                          "pid": 103170,
+                          "ppid": 103164,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'certutil.exe' -ArgumentList '-addstore Root \"C:\\Users\\Public\\workstation.cer\"' -Wait\"",
+                          "children": [
+                            {
+                              "pid": 103176,
+                              "ppid": 103170,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /svc",
+                              "children": [
+                                {
+                                  "pid": 103183,
+                                  "ppid": 103176,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /svc",
+                                  "children": [
+                                    {
+                                      "pid": 103184,
+                                      "ppid": 103183,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\host_d2b31f82.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 103189,
+                                          "ppid": 103184,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 103190,
+                              "ppid": 103170,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 103191,
+                                  "ppid": 103190,
+                                  "name": "certutil.exe",
+                                  "command": "certutil.exe -store -user Root",
+                                  "children": [
+                                    {
+                                      "pid": 103197,
+                                      "ppid": 103191,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                      "children": [
+                                        {
+                                          "pid": 103200,
+                                          "ppid": 103197,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe",
+                                          "children": [
+                                            {
+                                              "pid": 103203,
+                                              "ppid": 103200,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\inv_2c7a2beb.txt'\"",
+                                              "children": [
+                                                {
+                                                  "pid": 103206,
+                                                  "ppid": 103203,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 103212,
+                                                      "ppid": 103206,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 103219,
+                                                          "ppid": 103212,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\host_dcd5e9e5.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 103223,
+                                                              "ppid": 103219,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\host_901fd61d.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 103226,
+                                                                  "ppid": 103223,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 25 127.0.0.1 > nul",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 103229,
+                                                      "ppid": 103206,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups",
+                                                      "children": [
+                                                        {
+                                                          "pid": 103257,
+                                                          "ppid": 103229,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 103258,
+                                                              "ppid": 103257,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\host_34e4f962.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 103263,
+                                                                  "ppid": 103258,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 103267,
+                                                                      "ppid": 103263,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 103268,
+                                                                          "ppid": 103267,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 3 /nobreak",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 103269,
+                                                                              "ppid": 103268,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 103273,
+                                                                                  "ppid": 103269,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 103275,
+                                                                                      "ppid": 103273,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /priv > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\who_866b2893.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 103278,
+                                                                                          "ppid": 103275,
+                                                                                          "name": "cmd.exe",
+                                                                                          "command": "cmd.exe /c \"hostname.exe > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\host_afdc5856.txt\"\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 103285,
+                                                                                              "ppid": 103278,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /groups",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "pid": 103291,
+                                                                              "ppid": 103268,
+                                                                              "name": "ping.exe",
+                                                                              "command": "ping.exe -n 16 127.0.0.1 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 103292,
+                                                                                  "ppid": 103291,
+                                                                                  "name": "powershell.exe",
+                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 103293,
+                                                                                      "ppid": 103292,
+                                                                                      "name": "tasklist.exe",
+                                                                                      "command": "tasklist.exe /svc",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 103299,
+                                                                                          "ppid": 103293,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /all",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 103305,
+                                                                                              "ppid": 103299,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /groups",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 103312,
+                                                                                                  "ppid": 103305,
+                                                                                                  "name": "powershell.exe",
+                                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 103235,
+      "ppid": 103142,
+      "name": "whoami.exe",
+      "command": "whoami.exe /all",
+      "children": [
+        {
+          "pid": 103239,
+          "ppid": 103235,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 103243,
+              "ppid": 103239,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\who_9408aaa9.txt\"",
+              "children": [
+                {
+                  "pid": 103246,
+                  "ppid": 103243,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\host_0baaea1c.txt\"",
+                  "children": [
+                    {
+                      "pid": 103252,
+                      "ppid": 103246,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\who_07005b98.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

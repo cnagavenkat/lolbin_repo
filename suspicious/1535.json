@@ -1,0 +1,220 @@
+{
+  "pid": 238418,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe /diag",
+  "children": [
+    {
+      "pid": 238421,
+      "ppid": 238418,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\Public\\Sync_3c6a11de.vbs\"",
+      "children": [
+        {
+          "pid": 238425,
+          "ppid": 238421,
+          "name": "mshta.exe",
+          "command": "mshta.exe \"http://helpdesk-tools.corp.local/diag/collect.hta\"",
+          "children": [
+            {
+              "pid": 238427,
+              "ppid": 238425,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"hostname.exe\"",
+              "children": [
+                {
+                  "pid": 238432,
+                  "ppid": 238427,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 7 /nobreak",
+                  "children": [
+                    {
+                      "pid": 238437,
+                      "ppid": 238432,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 13 /nobreak",
+                      "children": [
+                        {
+                          "pid": 238444,
+                          "ppid": 238437,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 238450,
+                  "ppid": 238427,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\host_c66be97f.txt\"",
+                  "children": [
+                    {
+                      "pid": 238452,
+                      "ppid": 238450,
+                      "name": "wmic.exe",
+                      "command": "wmic.exe os get Caption,Version,BuildNumber /value",
+                      "children": [
+                        {
+                          "pid": 238458,
+                          "ppid": 238452,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 12 /nobreak",
+                          "children": [
+                            {
+                              "pid": 238460,
+                              "ppid": 238458,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\who_115a3380.txt\"",
+                              "children": [
+                                {
+                                  "pid": 238467,
+                                  "ppid": 238460,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\who_604bfffd.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 238472,
+                                      "ppid": 238467,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\host_994d758e.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 238477,
+                                          "ppid": 238472,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 3 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 238479,
+                                              "ppid": 238477,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 238482,
+                              "ppid": 238458,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 10 /nobreak",
+                              "children": [
+                                {
+                                  "pid": 238483,
+                                  "ppid": 238482,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'ping.exe' -ArgumentList '-n 5 127.0.0.1 > nul' -Wait\"",
+                                  "children": [
+                                    {
+                                      "pid": 238507,
+                                      "ppid": 238483,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Litware\\Logs\\Application_20272af9.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 238513,
+                                          "ppid": 238507,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv",
+                                          "children": [
+                                            {
+                                              "pid": 238515,
+                                              "ppid": 238513,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+                                              "children": [
+                                                {
+                                                  "pid": 238521,
+                                                  "ppid": 238515,
+                                                  "name": "cmd.exe",
+                                                  "command": "cmd.exe /c \"findstr.exe /i \"ERROR\" \"C:\\ProgramData\\BlueYonder\\Logs\\diag.log\"\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 238526,
+                                                      "ppid": 238521,
+                                                      "name": "cmd.exe",
+                                                      "command": "cmd.exe /c \"whoami.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\who_be900bd7.txt\"\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 238532,
+                                                          "ppid": 238526,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\who_69444bfa.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 238487,
+      "ppid": 238418,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 238492,
+          "ppid": 238487,
+          "name": "ping.exe",
+          "command": "ping.exe -n 6 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 238495,
+              "ppid": 238492,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 19 /nobreak",
+              "children": [
+                {
+                  "pid": 238501,
+                  "ppid": 238495,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 238506,
+                      "ppid": 238501,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

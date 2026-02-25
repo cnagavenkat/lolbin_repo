@@ -1,0 +1,229 @@
+{
+  "pid": 122149,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 122155,
+      "ppid": 122149,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"tasklist /svc\"",
+      "children": [
+        {
+          "pid": 122161,
+          "ppid": 122155,
+          "name": "ping.exe",
+          "command": "ping.exe -n 4 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 122168,
+              "ppid": 122161,
+              "name": "nltest.exe",
+              "command": "nltest.exe /dsgetdc:CORP",
+              "children": [
+                {
+                  "pid": 122175,
+                  "ppid": 122168,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 14 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 122182,
+                      "ppid": 122175,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\who_091582a0.txt\"",
+                      "children": [
+                        {
+                          "pid": 122185,
+                          "ppid": 122182,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv",
+                          "children": [
+                            {
+                              "pid": 122189,
+                              "ppid": 122185,
+                              "name": "ipconfig.exe",
+                              "command": "ipconfig.exe /allcompartments /all",
+                              "children": [
+                                {
+                                  "pid": 122196,
+                                  "ppid": 122189,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 122200,
+                      "ppid": 122175,
+                      "name": "ipconfig.exe",
+                      "command": "ipconfig.exe /all",
+                      "children": [
+                        {
+                          "pid": 122207,
+                          "ppid": 122200,
+                          "name": "ipconfig.exe",
+                          "command": "ipconfig.exe /displaydns",
+                          "children": [
+                            {
+                              "pid": 122208,
+                              "ppid": 122207,
+                              "name": "cmd.exe",
+                              "command": "cmd.exe /c \"wmic.exe os get Caption,Version,BuildNumber /value\"",
+                              "children": [
+                                {
+                                  "pid": 122209,
+                                  "ppid": 122208,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 16 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 122211,
+                                      "ppid": 122209,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all",
+                                      "children": [
+                                        {
+                                          "pid": 122213,
+                                          "ppid": 122211,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 122219,
+                                              "ppid": 122213,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 122223,
+                                                  "ppid": 122219,
+                                                  "name": "ipconfig.exe",
+                                                  "command": "ipconfig.exe /allcompartments /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 122227,
+                                                      "ppid": 122223,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 122229,
+                                                          "ppid": 122227,
+                                                          "name": "wevtutil.exe",
+                                                          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Alpine\\Logs\\Microsoft-Windows-TaskScheduler_Operational_4d19bd35.evtx\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 122231,
+                                                              "ppid": 122229,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 4 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 122233,
+                                                                  "ppid": 122231,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /priv > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\who_5e14271e.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 122237,
+                                                                      "ppid": 122233,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /all > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\who_d206d6d0.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 122244,
+                                                                          "ppid": 122237,
+                                                                          "name": "ipconfig.exe",
+                                                                          "command": "ipconfig.exe /displaydns",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 122245,
+                                                                              "ppid": 122244,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\host_73166ac2.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 122251,
+                                                                                  "ppid": 122245,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\host_b8291344.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 122252,
+                                                                                      "ppid": 122251,
+                                                                                      "name": "ipconfig.exe",
+                                                                                      "command": "ipconfig.exe /all",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "pid": 122259,
+                                                                                  "ppid": 122245,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 122262,
+                                                                                      "ppid": 122259,
+                                                                                      "name": "ping.exe",
+                                                                                      "command": "ping.exe -n 6 127.0.0.1 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 122266,
+                                                                                          "ppid": 122262,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\host_a32eb23a.txt\"",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

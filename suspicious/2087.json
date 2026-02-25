@@ -1,0 +1,363 @@
+{
+  "pid": 312093,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 312094,
+      "ppid": 312093,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\IT\\Deploy\\BuildPack_5ecbe9e3.ps1\" -Host \"LAP-613\" -Mode Quick",
+      "children": [
+        {
+          "pid": 312099,
+          "ppid": 312094,
+          "name": "reg.exe",
+          "command": "reg.exe import \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\Runtime_03116136.reg\"",
+          "children": [
+            {
+              "pid": 312100,
+              "ppid": 312099,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 21\"",
+              "children": [
+                {
+                  "pid": 312102,
+                  "ppid": 312100,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 312103,
+                      "ppid": 312102,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 22 /nobreak",
+                      "children": [
+                        {
+                          "pid": 312106,
+                          "ppid": 312103,
+                          "name": "wscript.exe",
+                          "command": "wscript.exe //nologo \"C:\\Users\\Public\\Assist_9cda3b88.js\"",
+                          "children": [
+                            {
+                              "pid": 312116,
+                              "ppid": 312106,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\who_15ae62f8.txt\"",
+                              "children": [
+                                {
+                                  "pid": 312123,
+                                  "ppid": 312116,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                                  "children": [
+                                    {
+                                      "pid": 312125,
+                                      "ppid": 312123,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe",
+                                      "children": [
+                                        {
+                                          "pid": 312130,
+                                          "ppid": 312125,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\host_6fa34ad4.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 312137,
+                                              "ppid": 312130,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\who_113c2eaa.txt\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 312139,
+                                  "ppid": 312116,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 312144,
+                                      "ppid": 312139,
+                                      "name": "schtasks.exe",
+                                      "command": "schtasks.exe /create /tn \"\\Alpine\\Deploy\\Cleanup\" /tr \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\diag_d8cf94df.ps1\" /sc minute /mo 30 /f /ru \"ENG\\ananya.kulkarni\"",
+                                      "children": [
+                                        {
+                                          "pid": 312150,
+                                          "ppid": 312144,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 312156,
+                                              "ppid": 312150,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\who_850831aa.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 312160,
+                                                  "ppid": 312156,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\who_f90d4404.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 312165,
+                                                      "ppid": 312160,
+                                                      "name": "schtasks.exe",
+                                                      "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+                                                      "children": [
+                                                        {
+                                                          "pid": 312171,
+                                                          "ppid": 312165,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 312175,
+                                                              "ppid": 312171,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 312182,
+                                                                  "ppid": 312175,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 312183,
+                                                                      "ppid": 312182,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /groups > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\who_6d452cb0.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 312189,
+                                                                          "ppid": 312183,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\who_24e0e5f7.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 312193,
+                                                                              "ppid": 312189,
+                                                                              "name": "timeout.exe",
+                                                                              "command": "timeout.exe /t 19 /nobreak",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 312200,
+                                                                                  "ppid": 312193,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /all",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 312201,
+                                                                                      "ppid": 312200,
+                                                                                      "name": "timeout.exe",
+                                                                                      "command": "timeout.exe /t 21 /nobreak",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 312206,
+                                                                                          "ppid": 312201,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /groups",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 312213,
+                                                                                              "ppid": 312206,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\host_c400c3dd.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 312216,
+                                                                                                  "ppid": 312213,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\host_5d0c3f42.txt\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 312219,
+                                                                                                      "ppid": 312216,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\host_df7cf05f.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 312223,
+                                                                                                          "ppid": 312219,
+                                                                                                          "name": "whoami.exe",
+                                                                                                          "command": "whoami.exe /priv",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 312228,
+                                                                                                              "ppid": 312223,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\host_bc5bbdc0.txt\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 312229,
+                                                                                                                  "ppid": 312228,
+                                                                                                                  "name": "hostname.exe",
+                                                                                                                  "command": "hostname.exe > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\host_94a084cb.txt\"",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 312233,
+                                                                                                                      "ppid": 312229,
+                                                                                                                      "name": "powershell.exe",
+                                                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 312235,
+                                                                                                                          "ppid": 312233,
+                                                                                                                          "name": "whoami.exe",
+                                                                                                                          "command": "whoami.exe /priv > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\who_d63e3715.txt\"",
+                                                                                                                          "children": []
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                              "pid": 312236,
+                                                                                                              "ppid": 312223,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 312237,
+                                                                                                                  "ppid": 312236,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe /all > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\who_e1b1eafa.txt\"",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 312243,
+                                                                                                                      "ppid": 312237,
+                                                                                                                      "name": "whoami.exe",
+                                                                                                                      "command": "whoami.exe /groups > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\who_b384235c.txt\"",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 312247,
+                                                                                                                          "ppid": 312243,
+                                                                                                                          "name": "whoami.exe",
+                                                                                                                          "command": "whoami.exe /all",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "pid": 312249,
+                                                                                                                              "ppid": 312247,
+                                                                                                                              "name": "whoami.exe",
+                                                                                                                              "command": "whoami.exe /priv > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\who_749a1da2.txt\"",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "pid": 312254,
+                                                                                                                                  "ppid": 312249,
+                                                                                                                                  "name": "ping.exe",
+                                                                                                                                  "command": "ping.exe -n 25 127.0.0.1 > nul",
+                                                                                                                                  "children": []
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                      "pid": 312255,
+                                                                                                                      "ppid": 312237,
+                                                                                                                      "name": "whoami.exe",
+                                                                                                                      "command": "whoami.exe /priv",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 312260,
+                                                                                                                          "ppid": 312255,
+                                                                                                                          "name": "whoami.exe",
+                                                                                                                          "command": "whoami.exe /groups > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\who_168d7780.txt\"",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "pid": 312264,
+                                                                                                                              "ppid": 312260,
+                                                                                                                              "name": "hostname.exe",
+                                                                                                                              "command": "hostname.exe > \"C:\\Users\\isha.verma\\AppData\\Local\\Temp\\host_0ad2c032.txt\"",
+                                                                                                                              "children": []
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 312107,
+      "ppid": 312093,
+      "name": "whoami.exe",
+      "command": "whoami.exe /all",
+      "children": [
+        {
+          "pid": 312110,
+          "ppid": 312107,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

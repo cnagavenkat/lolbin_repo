@@ -1,0 +1,299 @@
+{
+  "pid": 70909,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 70911,
+      "ppid": 70909,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"set\"",
+      "children": [
+        {
+          "pid": 70915,
+          "ppid": 70911,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /fo LIST /v",
+          "children": [
+            {
+              "pid": 70917,
+              "ppid": 70915,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 70920,
+                  "ppid": 70917,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\Public\\RunDiagnostics_fde092fb.ps1\" -Host \"LAP-951\" -Mode Verify",
+                  "children": [
+                    {
+                      "pid": 70925,
+                      "ppid": 70920,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 70926,
+                          "ppid": 70925,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                          "children": [
+                            {
+                              "pid": 70929,
+                              "ppid": 70926,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe",
+                              "children": [
+                                {
+                                  "pid": 70952,
+                                  "ppid": 70929,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 70954,
+                                      "ppid": 70952,
+                                      "name": "nltest.exe",
+                                      "command": "nltest.exe /dsgetdc:CORP",
+                                      "children": [
+                                        {
+                                          "pid": 70960,
+                                          "ppid": 70954,
+                                          "name": "nltest.exe",
+                                          "command": "nltest.exe /sc_query:RESEARCH",
+                                          "children": [
+                                            {
+                                              "pid": 70966,
+                                              "ppid": 70960,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 70967,
+                                                  "ppid": 70966,
+                                                  "name": "nltest.exe",
+                                                  "command": "nltest.exe /dsgetdc:DEVOPS",
+                                                  "children": [
+                                                    {
+                                                      "pid": 70969,
+                                                      "ppid": 70967,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 12 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 70974,
+                                                          "ppid": 70969,
+                                                          "name": "nltest.exe",
+                                                          "command": "nltest.exe /dsgetdc:RESEARCH",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 70981,
+                                          "ppid": 70954,
+                                          "name": "nltest.exe",
+                                          "command": "nltest.exe /sc_query:ENG",
+                                          "children": [
+                                            {
+                                              "pid": 70983,
+                                              "ppid": 70981,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+                                              "children": [
+                                                {
+                                                  "pid": 70988,
+                                                  "ppid": 70983,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'wevtutil.exe' -ArgumentList 'epl \"System\" \"C:\\ProgramData\\Woodgrove\\Logs\\System_bcf233bd.evtx\"' -Wait\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 70994,
+                                                      "ppid": 70988,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\suresh.patel\\AppData\\Local\\Temp\\host_f30a9b00.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 71001,
+                                                          "ppid": 70994,
+                                                          "name": "nltest.exe",
+                                                          "command": "nltest.exe /sc_query:ACME",
+                                                          "children": [
+                                                            {
+                                                              "pid": 71008,
+                                                              "ppid": 71001,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 71012,
+                                                                  "ppid": 71008,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 71015,
+                                                                      "ppid": 71012,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /all",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 71019,
+                                                                          "ppid": 71015,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /all > \"C:\\Users\\suresh.patel\\AppData\\Local\\Temp\\who_af00c11d.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 71025,
+                                                                              "ppid": 71019,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\suresh.patel\\AppData\\Local\\Temp\\host_a686928f.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 71026,
+                                                                                  "ppid": 71025,
+                                                                                  "name": "powershell.exe",
+                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 71031,
+                                                                          "ppid": 71015,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 71038,
+                                                                              "ppid": 71031,
+                                                                              "name": "choice.exe",
+                                                                              "command": "choice.exe /d y /t 21 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 71042,
+                                                                                  "ppid": 71038,
+                                                                                  "name": "nltest.exe",
+                                                                                  "command": "nltest.exe /sc_query:OPS",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 71058,
+                                                                                      "ppid": 71042,
+                                                                                      "name": "powershell.exe",
+                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 71062,
+                                                                                          "ppid": 71058,
+                                                                                          "name": "nltest.exe",
+                                                                                          "command": "nltest.exe /dsgetdc:DEVOPS",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 71067,
+                                                                                              "ppid": 71062,
+                                                                                              "name": "tasklist.exe",
+                                                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 71073,
+                                                                                                  "ppid": 71067,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 70935,
+      "ppid": 70909,
+      "name": "nltest.exe",
+      "command": "nltest.exe /sc_query:FINLAB",
+      "children": [
+        {
+          "pid": 70939,
+          "ppid": 70935,
+          "name": "nltest.exe",
+          "command": "nltest.exe /dclist:RESEARCH",
+          "children": [
+            {
+              "pid": 70945,
+              "ppid": 70939,
+              "name": "whoami.exe",
+              "command": "whoami.exe > \"C:\\Users\\suresh.patel\\AppData\\Local\\Temp\\who_3024059b.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 71045,
+      "ppid": 70909,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe /svc",
+      "children": [
+        {
+          "pid": 71051,
+          "ppid": 71045,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 20 > nul",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

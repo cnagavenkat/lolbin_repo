@@ -1,0 +1,261 @@
+{
+  "pid": 311288,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k Schedule",
+  "children": [
+    {
+      "pid": 311291,
+      "ppid": 311288,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\Diag_4c1f167a.vbs\" /apply",
+      "children": [
+        {
+          "pid": 311293,
+          "ppid": 311291,
+          "name": "ping.exe",
+          "command": "ping.exe -n 5 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 311295,
+              "ppid": 311293,
+              "name": "sc.exe",
+              "command": "sc.exe query \"Schedule\"",
+              "children": [
+                {
+                  "pid": 311299,
+                  "ppid": 311295,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                  "children": [
+                    {
+                      "pid": 311305,
+                      "ppid": 311299,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\host_805cdcb2.txt\"",
+                      "children": [
+                        {
+                          "pid": 311307,
+                          "ppid": 311305,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\host_dcde73be.txt\"",
+                          "children": [
+                            {
+                              "pid": 311313,
+                              "ppid": 311307,
+                              "name": "wmic.exe",
+                              "command": "wmic.exe process get Name,ProcessId,ParentProcessId",
+                              "children": [
+                                {
+                                  "pid": 311316,
+                                  "ppid": 311313,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 311317,
+                                      "ppid": 311316,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\who_303fde2a.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 311322,
+                                          "ppid": 311317,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /v",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 311325,
+                                  "ppid": 311313,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /svc",
+                                  "children": [
+                                    {
+                                      "pid": 311326,
+                                      "ppid": 311325,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\host_a1a966a3.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 311328,
+                                          "ppid": 311326,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv",
+                                          "children": [
+                                            {
+                                              "pid": 311334,
+                                              "ppid": 311328,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 21 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 311338,
+                                                  "ppid": 311334,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 12 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 311343,
+                                                      "ppid": 311338,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 311348,
+                                                          "ppid": 311343,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /v",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 311355,
+                                              "ppid": 311328,
+                                              "name": "vssadmin.exe",
+                                              "command": "vssadmin.exe list providers",
+                                              "children": [
+                                                {
+                                                  "pid": 311362,
+                                                  "ppid": 311355,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 311365,
+                                                      "ppid": 311362,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 20 /nobreak",
+                                                      "children": [
+                                                        {
+                                                          "pid": 311366,
+                                                          "ppid": 311365,
+                                                          "name": "findstr.exe",
+                                                          "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Contoso\\Logs\\diag.log\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 311372,
+                                                              "ppid": 311366,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 16 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 311375,
+                                                                  "ppid": 311372,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /v",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 311379,
+                                                                      "ppid": 311375,
+                                                                      "name": "ping.exe",
+                                                                      "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 311386,
+                                                                          "ppid": 311379,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 311392,
+                                                                              "ppid": 311386,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 311395,
+                                                                                  "ppid": 311392,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /v",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 311399,
+                                                                                      "ppid": 311395,
+                                                                                      "name": "cmd.exe",
+                                                                                      "command": "cmd.exe /c \"hostname.exe\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 311401,
+                                                                                          "ppid": 311399,
+                                                                                          "name": "ping.exe",
+                                                                                          "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 311405,
+                                                                                              "ppid": 311401,
+                                                                                              "name": "choice.exe",
+                                                                                              "command": "choice.exe /d y /t 12 > nul",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 311411,
+                                                                                                  "ppid": 311405,
+                                                                                                  "name": "choice.exe",
+                                                                                                  "command": "choice.exe /d y /t 25 > nul",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 311415,
+                                                                                                      "ppid": 311411,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\nisha.nair\\AppData\\Local\\Temp\\host_29820374.txt\"",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

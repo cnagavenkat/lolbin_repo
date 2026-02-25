@@ -1,0 +1,158 @@
+{
+  "pid": 138458,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 138463,
+      "ppid": 138458,
+      "name": "certutil.exe",
+      "command": "certutil.exe -addstore CA \"C:\\ProgramData\\BlueYonder\\Support\\workstation.cer\"",
+      "children": [
+        {
+          "pid": 138470,
+          "ppid": 138463,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 2 /nobreak",
+          "children": [
+            {
+              "pid": 138473,
+              "ppid": 138470,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\host_bc1f2607.txt\"",
+              "children": [
+                {
+                  "pid": 138480,
+                  "ppid": 138473,
+                  "name": "wscript.exe",
+                  "command": "wscript.exe //nologo \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\LoginInit_8d03f5a9.vbs\"",
+                  "children": [
+                    {
+                      "pid": 138481,
+                      "ppid": 138480,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": [
+                        {
+                          "pid": 138487,
+                          "ppid": 138481,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 138488,
+                              "ppid": 138487,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                              "children": [
+                                {
+                                  "pid": 138491,
+                                  "ppid": 138488,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 138493,
+                                      "ppid": 138491,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\who_7eed9532.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 138494,
+                                          "ppid": 138493,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+                                          "children": [
+                                            {
+                                              "pid": 138501,
+                                              "ppid": 138494,
+                                              "name": "net.exe",
+                                              "command": "net.exe use Z: \"\\\\bldsrv\\drops\" /persistent:no",
+                                              "children": [
+                                                {
+                                                  "pid": 138508,
+                                                  "ppid": 138501,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 138509,
+                                                      "ppid": 138508,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 138516,
+                                          "ppid": 138493,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -File \"C:\\ProgramData\\Alpine\\Patch\\CollectInventory_c99c24c2.ps1\" -Host \"SUP-502\" -Mode Delta",
+                                          "children": [
+                                            {
+                                              "pid": 138520,
+                                              "ppid": 138516,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 8 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 138525,
+                                                  "ppid": 138520,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups",
+                                                  "children": [
+                                                    {
+                                                      "pid": 138532,
+                                                      "ppid": 138525,
+                                                      "name": "net.exe",
+                                                      "command": "net.exe use W: \"\\\\bldsrv\\drops\" /persistent:no",
+                                                      "children": [
+                                                        {
+                                                          "pid": 138534,
+                                                          "ppid": 138532,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 138536,
+                                                              "ppid": 138534,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\who_60340d4b.txt\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

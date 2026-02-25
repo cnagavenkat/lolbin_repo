@@ -1,0 +1,206 @@
+{
+  "pid": 252581,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 252587,
+      "ppid": 252581,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\Contoso\\Runtime\\Assist_b9e4f59e.wsf\"",
+      "children": [
+        {
+          "pid": 252589,
+          "ppid": 252587,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /fo LIST /v",
+          "children": [
+            {
+              "pid": 252595,
+              "ppid": 252589,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\aarav.das\\AppData\\Local\\Temp\\who_585379e7.txt\"",
+              "children": [
+                {
+                  "pid": 252602,
+                  "ppid": 252595,
+                  "name": "wevtutil.exe",
+                  "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Contoso\\Logs\\Application_789057cb.evtx\"",
+                  "children": [
+                    {
+                      "pid": 252606,
+                      "ppid": 252602,
+                      "name": "schtasks.exe",
+                      "command": "schtasks.exe /create /tn \"\\Wingtip\\Support\\Cleanup\" /tr \"C:\\Users\\aarav.das\\AppData\\Local\\Temp\\run_4d209650.ps1\" /sc daily /st 20:43 /f /ru SYSTEM",
+                      "children": [
+                        {
+                          "pid": 252609,
+                          "ppid": 252606,
+                          "name": "wevtutil.exe",
+                          "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Contoso\\Logs\\Application_6fdb3149.evtx\"",
+                          "children": [
+                            {
+                              "pid": 252611,
+                              "ppid": 252609,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 23 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 252615,
+                                  "ppid": 252611,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 252618,
+                          "ppid": 252606,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /groups",
+                          "children": [
+                            {
+                              "pid": 252624,
+                              "ppid": 252618,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /run /tn \"\\Microsoft\\Windows\\WDI\\ResolutionHost\"",
+                              "children": [
+                                {
+                                  "pid": 252627,
+                                  "ppid": 252624,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 252629,
+                                      "ppid": 252627,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Northwind\\Logs\\System_7675a7df.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 252633,
+                                          "ppid": 252629,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Litware\\Logs\\System_3928f0f9.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 252640,
+                                              "ppid": 252633,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -WindowStyle Minimized -Command \"Get-Service | Out-File 'C:\\Users\\aarav.das\\AppData\\Local\\Temp\\evt_cac1f0b0.txt'\"",
+                                              "children": [
+                                                {
+                                                  "pid": 252644,
+                                                  "ppid": 252640,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Northwind\\Logs\\Security_7294b09b.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 252645,
+                                                      "ppid": 252644,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 252652,
+                                                          "ppid": 252645,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 23 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 252659,
+                                                              "ppid": 252652,
+                                                              "name": "cmd.exe",
+                                                              "command": "cmd.exe /c \"wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Northwind\\Logs\\Application_f52cae03.evtx\"\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 252666,
+                                                                  "ppid": 252659,
+                                                                  "name": "cmd.exe",
+                                                                  "command": "cmd.exe /c \"wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Northwind\\Logs\\Application_ca913c3a.evtx\"\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 252672,
+                                                                      "ppid": 252666,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\aarav.das\\AppData\\Local\\Temp\\host_f920be08.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 252678,
+                                                                          "ppid": 252672,
+                                                                          "name": "wevtutil.exe",
+                                                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\BlueYonder\\Logs\\System_31b0e886.evtx\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 252683,
+                                                                              "ppid": 252678,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 252687,
+                                                                                  "ppid": 252683,
+                                                                                  "name": "choice.exe",
+                                                                                  "command": "choice.exe /d y /t 14 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 252693,
+                                                                                      "ppid": 252687,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 252700,
+                                                                                          "ppid": 252693,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /priv",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

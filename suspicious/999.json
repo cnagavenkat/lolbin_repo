@@ -1,0 +1,219 @@
+{
+  "pid": 175488,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 175491,
+      "ppid": 175488,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"hostname\"",
+      "children": [
+        {
+          "pid": 175497,
+          "ppid": 175491,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /create /tn \"\\Alpine\\Maint\\Sync\" /tr \"C:\\Users\\neha.iyer\\AppData\\Local\\Temp\\run_1f76cd1a.vbs\" /sc once /st 12:02 /f /ru \"OPS\\arjun.kulkarni\"",
+          "children": [
+            {
+              "pid": 175499,
+              "ppid": 175497,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe",
+              "children": [
+                {
+                  "pid": 175500,
+                  "ppid": 175499,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /v",
+                  "children": [
+                    {
+                      "pid": 175501,
+                      "ppid": 175500,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 175502,
+                          "ppid": 175501,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /run /tn \"\\Contoso\\Support\\Diag\"",
+                          "children": [
+                            {
+                              "pid": 175505,
+                              "ppid": 175502,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 13 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 175511,
+                                  "ppid": 175505,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 175513,
+                              "ppid": 175502,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 10 > nul",
+                              "children": [
+                                {
+                                  "pid": 175516,
+                                  "ppid": 175513,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 16 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 175517,
+                                      "ppid": 175516,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /svc",
+                                      "children": [
+                                        {
+                                          "pid": 175520,
+                                          "ppid": 175517,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Minimized -ExecutionPolicy Bypass -File \"C:\\Users\\Public\\CollectInventory_20ac0c91.ps1\" -Host \"LAP-553\" -Mode Delta",
+                                          "children": [
+                                            {
+                                              "pid": 175526,
+                                              "ppid": 175520,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 175527,
+                                                  "ppid": 175526,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\neha.iyer\\AppData\\Local\\Temp\\host_40cf5708.txt\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 175531,
+                                              "ppid": 175520,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                                              "children": [
+                                                {
+                                                  "pid": 175535,
+                                                  "ppid": 175531,
+                                                  "name": "reg.exe",
+                                                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                                  "children": [
+                                                    {
+                                                      "pid": 175539,
+                                                      "ppid": 175535,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 175545,
+                                                          "ppid": 175539,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 175550,
+                                                              "ppid": 175545,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 175554,
+                                                                  "ppid": 175550,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /priv > \"C:\\Users\\neha.iyer\\AppData\\Local\\Temp\\who_cfc426ed.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 175557,
+                                                                      "ppid": 175554,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 175563,
+                                                                          "ppid": 175557,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 175565,
+                                                              "ppid": 175545,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 175576,
+                                                                  "ppid": 175565,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 175583,
+                                                                      "ppid": 175576,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /svc",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 175568,
+      "ppid": 175488,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\neha.iyer\\AppData\\Local\\Temp\\host_d09bfbfb.txt\"",
+      "children": [
+        {
+          "pid": 175570,
+          "ppid": 175568,
+          "name": "whoami.exe",
+          "command": "whoami.exe /all",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

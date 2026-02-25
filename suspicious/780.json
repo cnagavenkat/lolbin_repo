@@ -1,0 +1,204 @@
+{
+  "pid": 146289,
+  "ppid": 0,
+  "name": "winlogon.exe",
+  "command": "winlogon.exe /service",
+  "children": [
+    {
+      "pid": 146290,
+      "ppid": 146289,
+      "name": "certutil.exe",
+      "command": "certutil.exe -addstore TrustedPublisher \"C:\\ProgramData\\Fabrikam\\Build\\intermediate.cer\"",
+      "children": [
+        {
+          "pid": 146294,
+          "ppid": 146290,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 9 > nul",
+          "children": [
+            {
+              "pid": 146301,
+              "ppid": 146294,
+              "name": "whoami.exe",
+              "command": "whoami.exe",
+              "children": [
+                {
+                  "pid": 146308,
+                  "ppid": 146301,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                  "children": [
+                    {
+                      "pid": 146312,
+                      "ppid": 146308,
+                      "name": "wscript.exe",
+                      "command": "wscript.exe //nologo \"C:\\ProgramData\\Fabrikam\\Patch\\TemplateRun_0d05b0ff.vbs\"",
+                      "children": [
+                        {
+                          "pid": 146319,
+                          "ppid": 146312,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 20 /nobreak",
+                          "children": [
+                            {
+                              "pid": 146323,
+                              "ppid": 146319,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\rohan.iyer\\AppData\\Local\\Temp\\host_559e33d9.txt\"' -Wait\"",
+                              "children": [
+                                {
+                                  "pid": 146346,
+                                  "ppid": 146323,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 22 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 146351,
+                                      "ppid": 146346,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe > \"C:\\Users\\rohan.iyer\\AppData\\Local\\Temp\\who_7fb5cc19.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 146353,
+                                          "ppid": 146351,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 146357,
+                                              "ppid": 146353,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\rohan.iyer\\AppData\\Local\\Temp\\host_18fd4a7d.txt\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 146361,
+                                      "ppid": 146346,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                      "children": [
+                                        {
+                                          "pid": 146368,
+                                          "ppid": 146361,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": [
+                                            {
+                                              "pid": 146370,
+                                              "ppid": 146368,
+                                              "name": "net.exe",
+                                              "command": "net.exe use Y: \"\\\\filesrv\\IT\\Scripts\" /persistent:no",
+                                              "children": [
+                                                {
+                                                  "pid": 146376,
+                                                  "ppid": 146370,
+                                                  "name": "net.exe",
+                                                  "command": "net.exe use X: \"\\\\bldsrv\\drops\" /persistent:no",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 146379,
+                                              "ppid": 146368,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe > \"C:\\Users\\rohan.iyer\\AppData\\Local\\Temp\\who_7e3fbd75.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 146385,
+                                                  "ppid": 146379,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\rohan.iyer\\AppData\\Local\\Temp\\host_65e35261.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 146389,
+                                                      "ppid": 146385,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Minimized -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\rohan.iyer\\AppData\\Local\\Temp\\evt_2e3952ae.txt'\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 146392,
+                                                          "ppid": 146389,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all > \"C:\\Users\\rohan.iyer\\AppData\\Local\\Temp\\who_781d7302.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 146393,
+                                                              "ppid": 146392,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 146328,
+      "ppid": 146289,
+      "name": "whoami.exe",
+      "command": "whoami.exe /priv",
+      "children": [
+        {
+          "pid": 146332,
+          "ppid": 146328,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv",
+          "children": [
+            {
+              "pid": 146339,
+              "ppid": 146332,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\rohan.iyer\\AppData\\Local\\Temp\\host_b61c05b5.txt\"",
+              "children": [
+                {
+                  "pid": 146340,
+                  "ppid": 146339,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe",
+                  "children": [
+                    {
+                      "pid": 146341,
+                      "ppid": 146340,
+                      "name": "net.exe",
+                      "command": "net.exe use X: /delete /y",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

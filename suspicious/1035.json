@@ -1,0 +1,253 @@
+{
+  "pid": 180175,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 180178,
+      "ppid": 180175,
+      "name": "ping.exe",
+      "command": "ping.exe -n 26 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 180185,
+          "ppid": 180178,
+          "name": "forfiles.exe",
+          "command": "forfiles.exe /P \"C:\\Users\\Public\" /M *.log /D -12 /C \"cmd /c type nul > @path\"",
+          "children": [
+            {
+              "pid": 180192,
+              "ppid": 180185,
+              "name": "ping.exe",
+              "command": "ping.exe -n 7 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 180196,
+                  "ppid": 180192,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /svc",
+                  "children": [
+                    {
+                      "pid": 180200,
+                      "ppid": 180196,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 180201,
+                          "ppid": 180200,
+                          "name": "cmd.exe",
+                          "command": "cmd.exe /c \"set\"",
+                          "children": [
+                            {
+                              "pid": 180205,
+                              "ppid": 180201,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\dev.gupta\\AppData\\Local\\Temp\\host_54e6c93e.txt\"",
+                              "children": [
+                                {
+                                  "pid": 180211,
+                                  "ppid": 180205,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 16 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 180217,
+                                      "ppid": 180211,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 180224,
+                                          "ppid": 180217,
+                                          "name": "schtasks.exe",
+                                          "command": "schtasks.exe /query /fo LIST /v",
+                                          "children": [
+                                            {
+                                              "pid": 180226,
+                                              "ppid": 180224,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups > \"C:\\Users\\dev.gupta\\AppData\\Local\\Temp\\who_4ca563fd.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 180230,
+                                                  "ppid": 180226,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Northwind\\Logs\\System_825b4faf.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 180233,
+                                                      "ppid": 180230,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 180234,
+                                                          "ppid": 180233,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 180238,
+                                                              "ppid": 180234,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 180240,
+                                                                  "ppid": 180238,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 180246,
+                                                                      "ppid": 180240,
+                                                                      "name": "timeout.exe",
+                                                                      "command": "timeout.exe /t 23 /nobreak",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 180264,
+                                                                          "ppid": 180246,
+                                                                          "name": "cmd.exe",
+                                                                          "command": "cmd.exe /c \"findstr.exe /i \"certificate\" \"C:\\ProgramData\\Litware\\Logs\\deploy.log\"\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 180268,
+                                                                              "ppid": 180264,
+                                                                              "name": "powershell.exe",
+                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 180272,
+                                                                                  "ppid": 180268,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 180274,
+                                                                                      "ppid": 180272,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\dev.gupta\\AppData\\Local\\Temp\\host_30b9e81a.txt\"",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "pid": 180275,
+                                                                              "ppid": 180264,
+                                                                              "name": "ping.exe",
+                                                                              "command": "ping.exe -n 16 127.0.0.1 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 180277,
+                                                                                  "ppid": 180275,
+                                                                                  "name": "choice.exe",
+                                                                                  "command": "choice.exe /d y /t 21 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 180278,
+                                                                                      "ppid": 180277,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /all",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 180283,
+                                                                                          "ppid": 180278,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 180286,
+                                                                                              "ppid": 180283,
+                                                                                              "name": "findstr.exe",
+                                                                                              "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Woodgrove\\Logs\\diag.log\"",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 180248,
+      "ppid": 180175,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 180253,
+          "ppid": 180248,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 180254,
+              "ppid": 180253,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+              "children": [
+                {
+                  "pid": 180258,
+                  "ppid": 180254,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 21 /nobreak",
+                  "children": [
+                    {
+                      "pid": 180261,
+                      "ppid": 180258,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "pid": 369021,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 369022,
+      "ppid": 369021,
+      "name": "sc.exe",
+      "command": "sc.exe query \"wuauserv\"",
+      "children": [
+        {
+          "pid": 369024,
+          "ppid": 369022,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 3 > nul",
+          "children": [
+            {
+              "pid": 369029,
+              "ppid": 369024,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv",
+              "children": [
+                {
+                  "pid": 369032,
+                  "ppid": 369029,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -ExecutionPolicy Bypass -File \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\TrustRefresh_31cffed6.ps1\" -Host \"SUP-972\" -Mode Delta",
+                  "children": [
+                    {
+                      "pid": 369035,
+                      "ppid": 369032,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 369036,
+                          "ppid": 369035,
+                          "name": "reg.exe",
+                          "command": "reg.exe import \"C:\\Build\\staging\\5efa1918\\Runtime_e8ada1bc.reg\"",
+                          "children": [
+                            {
+                              "pid": 369039,
+                              "ppid": 369036,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\who_e775662a.txt\"",
+                              "children": [
+                                {
+                                  "pid": 369041,
+                                  "ppid": 369039,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe",
+                                  "children": [
+                                    {
+                                      "pid": 369043,
+                                      "ppid": 369041,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /v",
+                                      "children": [
+                                        {
+                                          "pid": 369049,
+                                          "ppid": 369043,
+                                          "name": "rundll32.exe",
+                                          "command": "rundll32.exe \"C:\\Program Files\\BlueYonder\\Support\\bridge.dll\",RunPostSetup",
+                                          "children": [
+                                            {
+                                              "pid": 369053,
+                                              "ppid": 369049,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+                                              "children": [
+                                                {
+                                                  "pid": 369055,
+                                                  "ppid": 369053,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 11 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 369061,
+                                                      "ppid": 369055,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 8 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 369062,
+                                                          "ppid": 369061,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /v",
+                                                          "children": [
+                                                            {
+                                                              "pid": 369066,
+                                                              "ppid": 369062,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 369073,
+                                                                  "ppid": 369066,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 16 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 369078,
+                                                                      "ppid": 369073,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\host_25711561.txt\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 369085,
+                                                          "ppid": 369061,
+                                                          "name": "wevtutil.exe",
+                                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\BlueYonder\\Logs\\System_a83435b7.evtx\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 369092,
+                                                              "ppid": 369085,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 369098,
+                                                                  "ppid": 369092,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 8 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 369104,
+                                                                      "ppid": 369098,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\host_ad1a1842.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 369105,
+                                                                          "ppid": 369104,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\who_8cd87c7f.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 369111,
+                                                                              "ppid": 369105,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\host_40373703.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 369113,
+                                                                                  "ppid": 369111,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\who_ea72ced7.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 369120,
+                                                                                      "ppid": 369113,
+                                                                                      "name": "choice.exe",
+                                                                                      "command": "choice.exe /d y /t 8 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 369144,
+                                                                                          "ppid": 369120,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /all",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 369147,
+                                                                                              "ppid": 369144,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\host_5088e9d1.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 369148,
+                                                                                                  "ppid": 369147,
+                                                                                                  "name": "timeout.exe",
+                                                                                                  "command": "timeout.exe /t 8 /nobreak",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 369152,
+                                                                                                      "ppid": 369148,
+                                                                                                      "name": "whoami.exe",
+                                                                                                      "command": "whoami.exe /all > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\who_c53b1022.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 369154,
+                                                                                                          "ppid": 369152,
+                                                                                                          "name": "whoami.exe",
+                                                                                                          "command": "whoami.exe /priv > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\who_aa878d35.txt\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 369160,
+                                                                                                              "ppid": 369154,
+                                                                                                              "name": "whoami.exe",
+                                                                                                              "command": "whoami.exe /groups",
+                                                                                                              "children": []
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                },
+                                                                                                {
+                                                                                                  "pid": 369162,
+                                                                                                  "ppid": 369147,
+                                                                                                  "name": "powershell.exe",
+                                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 369165,
+                                                                                                      "ppid": 369162,
+                                                                                                      "name": "choice.exe",
+                                                                                                      "command": "choice.exe /d y /t 14 > nul",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 369126,
+      "ppid": 369021,
+      "name": "whoami.exe",
+      "command": "whoami.exe /all",
+      "children": [
+        {
+          "pid": 369129,
+          "ppid": 369126,
+          "name": "cmd.exe",
+          "command": "cmd.exe /c \"hostname.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\host_b009389e.txt\"\"",
+          "children": [
+            {
+              "pid": 369135,
+              "ppid": 369129,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 369141,
+                  "ppid": 369135,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 25 /nobreak",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "pid": 101229,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 101234,
+      "ppid": 101229,
+      "name": "msiexec.exe",
+      "command": "msiexec.exe /fvomus {b29cb329-544c-8e12-69ec-487091af143d} /qn",
+      "children": [
+        {
+          "pid": 101239,
+          "ppid": 101234,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 101242,
+              "ppid": 101239,
+              "name": "rundll32.exe",
+              "command": "rundll32.exe \"C:\\Program Files\\Wingtip\\Collector\\helper.dll\",RunPostSetup",
+              "children": [
+                {
+                  "pid": 101244,
+                  "ppid": 101242,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 101245,
+                      "ppid": 101244,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 18 > nul",
+                      "children": [
+                        {
+                          "pid": 101246,
+                          "ppid": 101245,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": [
+                            {
+                              "pid": 101253,
+                              "ppid": 101246,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all",
+                              "children": [
+                                {
+                                  "pid": 101254,
+                                  "ppid": 101253,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /svc",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 101257,
+                  "ppid": 101242,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\akash.verma\\AppData\\Local\\Temp\\host_a6e90378.txt\"",
+                  "children": [
+                    {
+                      "pid": 101263,
+                      "ppid": 101257,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 3 > nul",
+                      "children": [
+                        {
+                          "pid": 101270,
+                          "ppid": 101263,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                          "children": [
+                            {
+                              "pid": 101272,
+                              "ppid": 101270,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 18 > nul",
+                              "children": [
+                                {
+                                  "pid": 101276,
+                                  "ppid": 101272,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups > \"C:\\Users\\akash.verma\\AppData\\Local\\Temp\\who_9237a023.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 101281,
+                                      "ppid": 101276,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'wevtutil.exe' -ArgumentList 'epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_f4ce9f65.evtx\"' -Wait\"",
+                                      "children": [
+                                        {
+                                          "pid": 101304,
+                                          "ppid": 101281,
+                                          "name": "cmd.exe",
+                                          "command": "cmd.exe /c \"tasklist.exe /v\"",
+                                          "children": [
+                                            {
+                                              "pid": 101307,
+                                              "ppid": 101304,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups",
+                                              "children": [
+                                                {
+                                                  "pid": 101311,
+                                                  "ppid": 101307,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 101313,
+                                                      "ppid": 101311,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 4 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 101316,
+                                                          "ppid": 101313,
+                                                          "name": "cmd.exe",
+                                                          "command": "cmd.exe /c \"tasklist.exe\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 101319,
+                                                      "ppid": 101311,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /all > \"C:\\Users\\akash.verma\\AppData\\Local\\Temp\\who_3fa972a2.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 101326,
+                                                          "ppid": 101319,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\akash.verma\\AppData\\Local\\Temp\\host_d4769bbd.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 101333,
+                                                              "ppid": 101326,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 101334,
+                                                                  "ppid": 101333,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /svc",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 101335,
+                                                                      "ppid": 101334,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 13 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 101342,
+                                                                          "ppid": 101335,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 101286,
+      "ppid": 101229,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe /svc",
+      "children": [
+        {
+          "pid": 101291,
+          "ppid": 101286,
+          "name": "whoami.exe",
+          "command": "whoami.exe /groups",
+          "children": [
+            {
+              "pid": 101293,
+              "ppid": 101291,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 17 /nobreak",
+              "children": [
+                {
+                  "pid": 101298,
+                  "ppid": 101293,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 16 > nul",
+                  "children": [
+                    {
+                      "pid": 101299,
+                      "ppid": 101298,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

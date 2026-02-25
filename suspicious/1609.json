@@ -1,0 +1,134 @@
+{
+  "pid": 247758,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 247763,
+      "ppid": 247758,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\ananya.bose\\AppData\\Local\\Temp\\TemplateRun_4f3fd615.vbs\"",
+      "children": [
+        {
+          "pid": 247765,
+          "ppid": 247763,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 21\"",
+          "children": [
+            {
+              "pid": 247769,
+              "ppid": 247765,
+              "name": "certutil.exe",
+              "command": "certutil.exe -urlcache -split -f \"http://bldsrv.corp.local/pki/intermediate.cer\" \"C:\\Users\\ananya.bose\\AppData\\Local\\Temp\\cache.cer\"",
+              "children": [
+                {
+                  "pid": 247772,
+                  "ppid": 247769,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe",
+                  "children": [
+                    {
+                      "pid": 247778,
+                      "ppid": 247772,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 19 /nobreak",
+                      "children": [
+                        {
+                          "pid": 247780,
+                          "ppid": 247778,
+                          "name": "certutil.exe",
+                          "command": "certutil.exe -addstore Root \"C:\\Users\\ananya.bose\\AppData\\Local\\Temp\\workstation.cer\"",
+                          "children": [
+                            {
+                              "pid": 247784,
+                              "ppid": 247780,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 4 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 247785,
+                                  "ppid": 247784,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 247790,
+                                      "ppid": 247785,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 18 /nobreak",
+                                      "children": [
+                                        {
+                                          "pid": 247792,
+                                          "ppid": 247790,
+                                          "name": "certutil.exe",
+                                          "command": "certutil.exe -dump \"C:\\Users\\Public\\corp_root.cer\"",
+                                          "children": [
+                                            {
+                                              "pid": 247795,
+                                              "ppid": 247792,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 6 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 247797,
+                                                  "ppid": 247795,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\ananya.bose\\AppData\\Local\\Temp\\host_4cef9b14.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 247804,
+                                                      "ppid": 247797,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups > \"C:\\Users\\ananya.bose\\AppData\\Local\\Temp\\who_518ef0b9.txt\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 247806,
+                                              "ppid": 247792,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 247810,
+                                                  "ppid": 247806,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\ProgramData\\BlueYonder\\Collector\\ProfileInit_0173eb24.ps1\" -Host \"SUP-244\" -Mode Full",
+                                                  "children": [
+                                                    {
+                                                      "pid": 247815,
+                                                      "ppid": 247810,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\ananya.bose\\AppData\\Local\\Temp\\host_07e5a006.txt\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

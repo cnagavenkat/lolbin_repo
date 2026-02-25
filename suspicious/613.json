@@ -1,0 +1,220 @@
+{
+  "pid": 126970,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 126973,
+      "ppid": 126970,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\ProgramData\\Litware\\Assist\\Support_e4a53528.vbs\" /collect",
+      "children": [
+        {
+          "pid": 126979,
+          "ppid": 126973,
+          "name": "wmic.exe",
+          "command": "wmic.exe process get Name,ProcessId,ParentProcessId",
+          "children": [
+            {
+              "pid": 126980,
+              "ppid": 126979,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv",
+              "children": [
+                {
+                  "pid": 126984,
+                  "ppid": 126980,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe",
+                  "children": [
+                    {
+                      "pid": 126987,
+                      "ppid": 126984,
+                      "name": "reg.exe",
+                      "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                      "children": [
+                        {
+                          "pid": 126988,
+                          "ppid": 126987,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 126994,
+                              "ppid": 126988,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 23 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 126995,
+                                  "ppid": 126994,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\host_dbcdc91c.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 126997,
+                                      "ppid": 126995,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+                                      "children": [
+                                        {
+                                          "pid": 127001,
+                                          "ppid": 126997,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 23 > nul",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 127005,
+                          "ppid": 126987,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 10 > nul",
+                          "children": [
+                            {
+                              "pid": 127009,
+                              "ppid": 127005,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 5 > nul",
+                              "children": [
+                                {
+                                  "pid": 127020,
+                                  "ppid": 127009,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 21 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 127026,
+                                      "ppid": 127020,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Northwind\\Logs\\Microsoft-Windows-TaskScheduler_Operational_755749bf.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 127033,
+                                          "ppid": 127026,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\who_b4de4608.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 127039,
+                                              "ppid": 127033,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\host_336f04e2.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 127046,
+                                                  "ppid": 127039,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\host_e9b50dd7.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 127052,
+                                                      "ppid": 127046,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\host_dddd69e6.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 127057,
+                                                          "ppid": 127052,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /v",
+                                                          "children": [
+                                                            {
+                                                              "pid": 127062,
+                                                              "ppid": 127057,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\who_25e00ab1.txt\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 127064,
+                                              "ppid": 127033,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+                                              "children": [
+                                                {
+                                                  "pid": 127070,
+                                                  "ppid": 127064,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /svc",
+                                                  "children": [
+                                                    {
+                                                      "pid": 127072,
+                                                      "ppid": 127070,
+                                                      "name": "findstr.exe",
+                                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Woodgrove\\Logs\\profile.log\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 127015,
+      "ppid": 126970,
+      "name": "whoami.exe",
+      "command": "whoami.exe /priv > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\who_195ef981.txt\"",
+      "children": [
+        {
+          "pid": 127016,
+          "ppid": 127015,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+          "children": [
+            {
+              "pid": 127018,
+              "ppid": 127016,
+              "name": "whoami.exe",
+              "command": "whoami.exe",
+              "children": [
+                {
+                  "pid": 127019,
+                  "ppid": 127018,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\rahul.gupta\\AppData\\Local\\Temp\\host_ae46b136.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

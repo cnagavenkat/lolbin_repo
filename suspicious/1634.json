@@ -1,0 +1,243 @@
+{
+  "pid": 250397,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 250399,
+      "ppid": 250397,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\karthik.gupta\\AppData\\Local\\Temp\\Deploy_af28a61d.wsf\" /repair",
+      "children": [
+        {
+          "pid": 250404,
+          "ppid": 250399,
+          "name": "certutil.exe",
+          "command": "certutil.exe -urlcache -split -f \"http://helpdesk-tools.corp.local/support/collector.bin\" \"C:\\Users\\Public\\helper.dll\"",
+          "children": [
+            {
+              "pid": 250410,
+              "ppid": 250404,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all",
+              "children": [
+                {
+                  "pid": 250412,
+                  "ppid": 250410,
+                  "name": "certutil.exe",
+                  "command": "certutil.exe -addstore Root \"C:\\ProgramData\\Contoso\\Client\\workstation.cer\"",
+                  "children": [
+                    {
+                      "pid": 250414,
+                      "ppid": 250412,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\karthik.gupta\\AppData\\Local\\Temp\\who_d4716e08.txt\"",
+                      "children": [
+                        {
+                          "pid": 250420,
+                          "ppid": 250414,
+                          "name": "certutil.exe",
+                          "command": "certutil.exe -verify \"C:\\Users\\Public\\agent_signing.cer\"",
+                          "children": [
+                            {
+                              "pid": 250424,
+                              "ppid": 250420,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 11\"",
+                              "children": [
+                                {
+                                  "pid": 250425,
+                                  "ppid": 250424,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\karthik.gupta\\AppData\\Local\\Temp\\who_d6ff7226.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 250431,
+                                      "ppid": 250425,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 250436,
+                                  "ppid": 250424,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\karthik.gupta\\AppData\\Local\\Temp\\host_16e26464.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 250437,
+                                      "ppid": 250436,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                                      "children": [
+                                        {
+                                          "pid": 250439,
+                                          "ppid": 250437,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\ProgramData\\Wingtip\\Patch\\TrustRefresh_a060f7ec.ps1\" -Host \"ENG-358\" -Mode Delta",
+                                          "children": [
+                                            {
+                                              "pid": 250445,
+                                              "ppid": 250439,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\karthik.gupta\\AppData\\Local\\Temp\\host_efd9dca9.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 250452,
+                                                  "ppid": 250445,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 250456,
+                                                      "ppid": 250452,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 10 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 250457,
+                                                          "ppid": 250456,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv > \"C:\\Users\\karthik.gupta\\AppData\\Local\\Temp\\who_40d75fa4.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 250461,
+                                              "ppid": 250439,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 11 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 250466,
+                                                  "ppid": 250461,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups",
+                                                  "children": [
+                                                    {
+                                                      "pid": 250470,
+                                                      "ppid": 250466,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /priv",
+                                                      "children": [
+                                                        {
+                                                          "pid": 250492,
+                                                          "ppid": 250470,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 250513,
+                                                              "ppid": 250492,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 250519,
+                                                                  "ppid": 250513,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 250474,
+      "ppid": 250397,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 250475,
+          "ppid": 250474,
+          "name": "cmd.exe",
+          "command": "cmd.exe /c \"choice.exe /d y /t 9 > nul\"",
+          "children": [
+            {
+              "pid": 250480,
+              "ppid": 250475,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 11 /nobreak",
+              "children": [
+                {
+                  "pid": 250487,
+                  "ppid": 250480,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+                  "children": [
+                    {
+                      "pid": 250489,
+                      "ppid": 250487,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 250496,
+      "ppid": 250397,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'choice.exe' -ArgumentList '/d y /t 11 > nul' -Wait\"",
+      "children": [
+        {
+          "pid": 250503,
+          "ppid": 250496,
+          "name": "whoami.exe",
+          "command": "whoami.exe /all",
+          "children": [
+            {
+              "pid": 250507,
+              "ppid": 250503,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 8 > nul",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

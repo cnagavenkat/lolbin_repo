@@ -1,0 +1,189 @@
+{
+  "pid": 111189,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe /startup",
+  "children": [
+    {
+      "pid": 111196,
+      "ppid": 111189,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+      "children": [
+        {
+          "pid": 111200,
+          "ppid": 111196,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+          "children": [
+            {
+              "pid": 111206,
+              "ppid": 111200,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /v",
+              "children": [
+                {
+                  "pid": 111208,
+                  "ppid": 111206,
+                  "name": "wevtutil.exe",
+                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Northwind\\Logs\\Security_efd54038.evtx\"",
+                  "children": [
+                    {
+                      "pid": 111212,
+                      "ppid": 111208,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 111218,
+                          "ppid": 111212,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe",
+                          "children": [
+                            {
+                              "pid": 111225,
+                              "ppid": 111218,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                              "children": [
+                                {
+                                  "pid": 111229,
+                                  "ppid": 111225,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\rohan.mishra\\AppData\\Local\\Temp\\host_1104205c.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 111233,
+                                      "ppid": 111229,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /v",
+                                      "children": [
+                                        {
+                                          "pid": 111234,
+                                          "ppid": 111233,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 111240,
+                          "ppid": 111212,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 111243,
+                              "ppid": 111240,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Alpine\\Logs\\update.log\"",
+                              "children": [
+                                {
+                                  "pid": 111248,
+                                  "ppid": 111243,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /svc",
+                                  "children": [
+                                    {
+                                      "pid": 111251,
+                                      "ppid": 111248,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -File \"C:\\IT\\Maint\\ProfileInit_6d54d703.ps1\" -Host \"LAP-860\" -Mode Verify",
+                                      "children": [
+                                        {
+                                          "pid": 111253,
+                                          "ppid": 111251,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": [
+                                            {
+                                              "pid": 111255,
+                                              "ppid": 111253,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 10 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 111258,
+                                                  "ppid": 111255,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe > \"C:\\Users\\rohan.mishra\\AppData\\Local\\Temp\\who_dace78c4.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 111259,
+                                                      "ppid": 111258,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups",
+                                                      "children": [
+                                                        {
+                                                          "pid": 111263,
+                                                          "ppid": 111259,
+                                                          "name": "cmd.exe",
+                                                          "command": "cmd.exe /c \"whoami.exe /priv\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 111267,
+                                                              "ppid": 111263,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 111268,
+                                                                  "ppid": 111267,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 111269,
+                                                              "ppid": 111263,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 111275,
+                                                                  "ppid": 111269,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\rohan.mishra\\AppData\\Local\\Temp\\host_6481fb2f.txt\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

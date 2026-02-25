@@ -1,0 +1,166 @@
+{
+  "pid": 128699,
+  "ppid": 0,
+  "name": "userinit.exe",
+  "command": "userinit.exe /service",
+  "children": [
+    {
+      "pid": 128705,
+      "ppid": 128699,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Scripts\\Support_8116ace3.wsf\" /apply",
+      "children": [
+        {
+          "pid": 128712,
+          "ppid": 128705,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 20 /nobreak",
+          "children": [
+            {
+              "pid": 128717,
+              "ppid": 128712,
+              "name": "net.exe",
+              "command": "net.exe use Z: /delete /y",
+              "children": [
+                {
+                  "pid": 128723,
+                  "ppid": 128717,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\who_c9c6e670.txt\"",
+                  "children": [
+                    {
+                      "pid": 128726,
+                      "ppid": 128723,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 21 /nobreak",
+                      "children": [
+                        {
+                          "pid": 128728,
+                          "ppid": 128726,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /create /tn \"\\Litware\\Maint\\Verify\" /tr \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\run_378cf474.vbs\" /sc once /st 01:49 /f",
+                          "children": [
+                            {
+                              "pid": 128735,
+                              "ppid": 128728,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                              "children": [
+                                {
+                                  "pid": 128741,
+                                  "ppid": 128735,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 3 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 128745,
+                                      "ppid": 128741,
+                                      "name": "quser.exe",
+                                      "command": "quser.exe /server:BLD-455",
+                                      "children": [
+                                        {
+                                          "pid": 128746,
+                                          "ppid": 128745,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 128753,
+                                  "ppid": 128735,
+                                  "name": "schtasks.exe",
+                                  "command": "schtasks.exe /run /tn \"\\Litware\\Maint\\Cleanup\"",
+                                  "children": [
+                                    {
+                                      "pid": 128759,
+                                      "ppid": 128753,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 11 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 128766,
+                                          "ppid": 128759,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 128772,
+                                              "ppid": 128766,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\who_2b2b8966.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 128773,
+                                                  "ppid": 128772,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv",
+                                                  "children": [
+                                                    {
+                                                      "pid": 128780,
+                                                      "ppid": 128773,
+                                                      "name": "quser.exe",
+                                                      "command": "quser.exe /server:APP-272",
+                                                      "children": [
+                                                        {
+                                                          "pid": 128782,
+                                                          "ppid": 128780,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups",
+                                                          "children": [
+                                                            {
+                                                              "pid": 128784,
+                                                              "ppid": 128782,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\host_b2312ccd.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 128790,
+                                                                  "ppid": 128784,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 128794,
+                                                                      "ppid": 128790,
+                                                                      "name": "quser.exe",
+                                                                      "command": "quser.exe /server:SUP-498",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

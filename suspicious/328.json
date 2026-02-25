@@ -1,0 +1,309 @@
+{
+  "pid": 93690,
+  "ppid": 0,
+  "name": "setup.exe",
+  "command": "setup.exe ",
+  "children": [
+    {
+      "pid": 93692,
+      "ppid": 93690,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"ver\"",
+      "children": [
+        {
+          "pid": 93696,
+          "ppid": 93692,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+          "children": [
+            {
+              "pid": 93703,
+              "ppid": 93696,
+              "name": "mshta.exe",
+              "command": "mshta.exe \"C:\\Users\\Public\\diag_4a0f8481.hta\"",
+              "children": [
+                {
+                  "pid": 93707,
+                  "ppid": 93703,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 9 /nobreak",
+                  "children": [
+                    {
+                      "pid": 93714,
+                      "ppid": 93707,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 93720,
+                          "ppid": 93714,
+                          "name": "msiexec.exe",
+                          "command": "msiexec.exe /i \"C:\\Users\\akash.nair\\AppData\\Local\\Temp\\support.msi\" /qb /l*v \"C:\\ProgramData\\Litware\\Logs\\msi_67151c55.log\"",
+                          "children": [
+                            {
+                              "pid": 93723,
+                              "ppid": 93720,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\akash.nair\\AppData\\Local\\Temp\\host_90565e48.txt\"",
+                              "children": [
+                                {
+                                  "pid": 93730,
+                                  "ppid": 93723,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 93733,
+                                      "ppid": 93730,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\akash.nair\\AppData\\Local\\Temp\\host_15505ecb.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 93735,
+                                          "ppid": 93733,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 93736,
+                                              "ppid": 93735,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 23 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 93739,
+                                                  "ppid": 93736,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\IT\\Runbooks\\ProfileInit_26f3a687.ps1\" -Host \"LAP-227\" -Mode Quick",
+                                                  "children": [
+                                                    {
+                                                      "pid": 93742,
+                                                      "ppid": 93739,
+                                                      "name": "findstr.exe",
+                                                      "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Wingtip\\Logs\\deploy.log\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 93745,
+                                                          "ppid": 93742,
+                                                          "name": "findstr.exe",
+                                                          "command": "findstr.exe /i \"certificate\" \"C:\\ProgramData\\BlueYonder\\Logs\\support.log\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 93748,
+                                                              "ppid": 93745,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 93754,
+                                                                  "ppid": 93748,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 93758,
+                                                                      "ppid": 93754,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 93759,
+                                                                          "ppid": 93758,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups > \"C:\\Users\\akash.nair\\AppData\\Local\\Temp\\who_097952e7.txt\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 93762,
+                                                                  "ppid": 93748,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\akash.nair\\AppData\\Local\\Temp\\host_cf4f1bd0.txt\"' -Wait\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 93769,
+                                                                      "ppid": 93762,
+                                                                      "name": "findstr.exe",
+                                                                      "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Fabrikam\\Logs\\profile.log\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 93772,
+                                                                          "ppid": 93769,
+                                                                          "name": "findstr.exe",
+                                                                          "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Alpine\\Logs\\deploy.log\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 93778,
+                                                                              "ppid": 93772,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all > \"C:\\Users\\akash.nair\\AppData\\Local\\Temp\\who_d7a39597.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 93783,
+                                                                                  "ppid": 93778,
+                                                                                  "name": "choice.exe",
+                                                                                  "command": "choice.exe /d y /t 20 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 93788,
+                                                                                      "ppid": 93783,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\akash.nair\\AppData\\Local\\Temp\\host_5bddb781.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 93791,
+                                                                                          "ppid": 93788,
+                                                                                          "name": "findstr.exe",
+                                                                                          "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Northwind\\Logs\\update.log\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 93798,
+                                                                                              "ppid": 93791,
+                                                                                              "name": "timeout.exe",
+                                                                                              "command": "timeout.exe /t 23 /nobreak",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 93805,
+                                                                                                  "ppid": 93798,
+                                                                                                  "name": "cmd.exe",
+                                                                                                  "command": "cmd.exe /c \"findstr.exe /i \"task\" \"C:\\ProgramData\\Litware\\Logs\\deploy.log\"\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 93808,
+                                                                                                      "ppid": 93805,
+                                                                                                      "name": "choice.exe",
+                                                                                                      "command": "choice.exe /d y /t 23 > nul",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 93811,
+                                                                                                          "ppid": 93808,
+                                                                                                          "name": "ping.exe",
+                                                                                                          "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 93814,
+                                                                                                              "ppid": 93811,
+                                                                                                              "name": "whoami.exe",
+                                                                                                              "command": "whoami.exe /all",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 93815,
+                                                                                                                  "ppid": 93814,
+                                                                                                                  "name": "findstr.exe",
+                                                                                                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Northwind\\Logs\\profile.log\"",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 93820,
+                                                                                                                      "ppid": 93815,
+                                                                                                                      "name": "whoami.exe",
+                                                                                                                      "command": "whoami.exe /groups > \"C:\\Users\\akash.nair\\AppData\\Local\\Temp\\who_bbcc8c72.txt\"",
+                                                                                                                      "children": []
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "pid": 93821,
+                                                                                                      "ppid": 93805,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\akash.nair\\AppData\\Local\\Temp\\host_97273169.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 93826,
+                                                                                                          "ppid": 93821,
+                                                                                                          "name": "whoami.exe",
+                                                                                                          "command": "whoami.exe /all",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 93830,
+                                                                                                              "ppid": 93826,
+                                                                                                              "name": "findstr.exe",
+                                                                                                              "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Contoso\\Logs\\profile.log\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 93831,
+                                                                                                                  "ppid": 93830,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 93834,
+                                                                                                                      "ppid": 93831,
+                                                                                                                      "name": "findstr.exe",
+                                                                                                                      "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Fabrikam\\Logs\\deploy.log\"",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 93836,
+                                                                                                                          "ppid": 93834,
+                                                                                                                          "name": "findstr.exe",
+                                                                                                                          "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Alpine\\Logs\\deploy.log\"",
+                                                                                                                          "children": []
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

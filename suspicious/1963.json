@@ -1,0 +1,158 @@
+{
+  "pid": 297063,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 297069,
+      "ppid": 297063,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"hostname\"",
+      "children": [
+        {
+          "pid": 297074,
+          "ppid": 297069,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+          "children": [
+            {
+              "pid": 297080,
+              "ppid": 297074,
+              "name": "vssadmin.exe",
+              "command": "vssadmin.exe list shadowstorage",
+              "children": [
+                {
+                  "pid": 297104,
+                  "ppid": 297080,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 297106,
+                      "ppid": 297104,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                      "children": [
+                        {
+                          "pid": 297107,
+                          "ppid": 297106,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 297109,
+                              "ppid": 297107,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 12 > nul",
+                              "children": [
+                                {
+                                  "pid": 297110,
+                                  "ppid": 297109,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all > \"C:\\Users\\karthik.mishra\\AppData\\Local\\Temp\\who_e7f6fbba.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 297113,
+                                      "ppid": 297110,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 297115,
+                                          "ppid": 297113,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Woodgrove\\Logs\\System_12ac4a9f.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 297122,
+                                              "ppid": 297115,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 18 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 297128,
+                                                  "ppid": 297122,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 297130,
+                                                      "ppid": 297128,
+                                                      "name": "findstr.exe",
+                                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Wingtip\\Logs\\profile.log\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 297135,
+                                                          "ppid": 297130,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv > \"C:\\Users\\karthik.mishra\\AppData\\Local\\Temp\\who_2bf25532.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 297085,
+      "ppid": 297063,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 14 /nobreak",
+      "children": [
+        {
+          "pid": 297091,
+          "ppid": 297085,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 8 /nobreak",
+          "children": [
+            {
+              "pid": 297093,
+              "ppid": 297091,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\karthik.mishra\\AppData\\Local\\Temp\\host_b1f8b555.txt\"",
+              "children": [
+                {
+                  "pid": 297099,
+                  "ppid": 297093,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /svc",
+                  "children": [
+                    {
+                      "pid": 297102,
+                      "ppid": 297099,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /v",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

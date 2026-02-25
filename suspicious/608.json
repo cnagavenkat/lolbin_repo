@@ -1,0 +1,236 @@
+{
+  "pid": 126351,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe /diag",
+  "children": [
+    {
+      "pid": 126358,
+      "ppid": 126351,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 23 > nul",
+      "children": [
+        {
+          "pid": 126361,
+          "ppid": 126358,
+          "name": "reg.exe",
+          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+          "children": [
+            {
+              "pid": 126368,
+              "ppid": 126361,
+              "name": "quser.exe",
+              "command": "quser.exe /server:SUP-575",
+              "children": [
+                {
+                  "pid": 126374,
+                  "ppid": 126368,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /v",
+                  "children": [
+                    {
+                      "pid": 126378,
+                      "ppid": 126374,
+                      "name": "nltest.exe",
+                      "command": "nltest.exe /sc_query:DEVOPS",
+                      "children": [
+                        {
+                          "pid": 126384,
+                          "ppid": 126378,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '> \"C:\\Users\\rohan.sharma\\AppData\\Local\\Temp\\who_01bff8dc.txt\"' -Wait\"",
+                          "children": [
+                            {
+                              "pid": 126390,
+                              "ppid": 126384,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 126394,
+                                  "ppid": 126390,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\rohan.sharma\\AppData\\Local\\Temp\\evt_64f95316.txt'\"",
+                                  "children": [
+                                    {
+                                      "pid": 126396,
+                                      "ppid": 126394,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 4 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 126401,
+                                          "ppid": 126396,
+                                          "name": "nltest.exe",
+                                          "command": "nltest.exe /sc_query:ACME",
+                                          "children": [
+                                            {
+                                              "pid": 126407,
+                                              "ppid": 126401,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\rohan.sharma\\AppData\\Local\\Temp\\host_28eb494f.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 126411,
+                                                  "ppid": 126407,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\rohan.sharma\\AppData\\Local\\Temp\\host_e40999f4.txt\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 126416,
+                                      "ppid": 126394,
+                                      "name": "nltest.exe",
+                                      "command": "nltest.exe /dsgetdc:CORP",
+                                      "children": [
+                                        {
+                                          "pid": 126419,
+                                          "ppid": 126416,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all > \"C:\\Users\\rohan.sharma\\AppData\\Local\\Temp\\who_31129612.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 126425,
+                                              "ppid": 126419,
+                                              "name": "nltest.exe",
+                                              "command": "nltest.exe /dclist:OPS",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 126429,
+                                          "ppid": 126416,
+                                          "name": "nltest.exe",
+                                          "command": "nltest.exe /dclist:BFSI",
+                                          "children": [
+                                            {
+                                              "pid": 126433,
+                                              "ppid": 126429,
+                                              "name": "quser.exe",
+                                              "command": "quser.exe /server:SUP-169",
+                                              "children": [
+                                                {
+                                                  "pid": 126435,
+                                                  "ppid": 126433,
+                                                  "name": "cmd.exe",
+                                                  "command": "cmd.exe /c \"wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Contoso\\Logs\\Microsoft-Windows-TaskScheduler_Operational_04438cb7.evtx\"\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 126441,
+                                                      "ppid": 126435,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 16 /nobreak",
+                                                      "children": [
+                                                        {
+                                                          "pid": 126443,
+                                                          "ppid": 126441,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 6 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 126450,
+                                                              "ppid": 126443,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all > \"C:\\Users\\rohan.sharma\\AppData\\Local\\Temp\\who_605ba2ce.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 126452,
+                                                                  "ppid": 126450,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\rohan.sharma\\AppData\\Local\\Temp\\host_b94723f1.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 126453,
+                                                                      "ppid": 126452,
+                                                                      "name": "quser.exe",
+                                                                      "command": "quser.exe /server:LAP-582",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 126470,
+                                                                          "ppid": 126453,
+                                                                          "name": "nltest.exe",
+                                                                          "command": "nltest.exe /dsgetdc:BFSI",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 126477,
+                                                                              "ppid": 126470,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 126480,
+                                                                                  "ppid": 126477,
+                                                                                  "name": "nltest.exe",
+                                                                                  "command": "nltest.exe /sc_query:BFSI",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 126455,
+      "ppid": 126351,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\rohan.sharma\\AppData\\Local\\Temp\\host_8d97844f.txt\"",
+      "children": [
+        {
+          "pid": 126460,
+          "ppid": 126455,
+          "name": "quser.exe",
+          "command": "quser.exe /server:BLD-386",
+          "children": [
+            {
+              "pid": 126465,
+              "ppid": 126460,
+              "name": "quser.exe",
+              "command": "quser.exe /server:SUP-955",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

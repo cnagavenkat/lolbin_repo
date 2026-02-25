@@ -1,0 +1,142 @@
+{
+  "pid": 184212,
+  "ppid": 0,
+  "name": "CertMgrUI.exe",
+  "command": "CertMgrUI.exe /service",
+  "children": [
+    {
+      "pid": 184214,
+      "ppid": 184212,
+      "name": "certutil.exe",
+      "command": "certutil.exe -store -user Root",
+      "children": [
+        {
+          "pid": 184220,
+          "ppid": 184214,
+          "name": "ping.exe",
+          "command": "ping.exe -n 13 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 184226,
+              "ppid": 184220,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 7 /nobreak",
+              "children": [
+                {
+                  "pid": 184229,
+                  "ppid": 184226,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 184231,
+                      "ppid": 184229,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv",
+                      "children": [
+                        {
+                          "pid": 184233,
+                          "ppid": 184231,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 184236,
+                              "ppid": 184233,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 10 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 184240,
+                                  "ppid": 184236,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 184242,
+                                      "ppid": 184240,
+                                      "name": "cmd.exe",
+                                      "command": "cmd.exe /c \"hostname.exe > \"C:\\Users\\dev.menon\\AppData\\Local\\Temp\\host_e111e494.txt\"\"",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 184244,
+                      "ppid": 184229,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe  -File \"C:\\IT\\Runbooks\\RunDiagnostics_517db085.ps1\" -Host \"ENG-345\" -Mode Full",
+                      "children": [
+                        {
+                          "pid": 184247,
+                          "ppid": 184244,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\dev.menon\\AppData\\Local\\Temp\\host_0d41ebbb.txt\"",
+                          "children": [
+                            {
+                              "pid": 184254,
+                              "ppid": 184247,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 184259,
+                                  "ppid": 184254,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups",
+                                  "children": [
+                                    {
+                                      "pid": 184261,
+                                      "ppid": 184259,
+                                      "name": "makecab.exe",
+                                      "command": "makecab.exe \"C:\\ProgramData\\Contoso\\Logs\\support.log\" \"C:\\ProgramData\\Contoso\\Logs\\support.cab\"",
+                                      "children": [
+                                        {
+                                          "pid": 184267,
+                                          "ppid": 184261,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups",
+                                          "children": [
+                                            {
+                                              "pid": 184274,
+                                              "ppid": 184267,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Fabrikam\\Logs\\Application_6aa940a2.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 184280,
+                                                  "ppid": 184274,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "pid": 110455,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe ",
+  "children": [
+    {
+      "pid": 110461,
+      "ppid": 110455,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+      "children": [
+        {
+          "pid": 110468,
+          "ppid": 110461,
+          "name": "reg.exe",
+          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+          "children": [
+            {
+              "pid": 110475,
+              "ppid": 110468,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\pooja.sharma\\AppData\\Local\\Temp\\host_0a191912.txt\"",
+              "children": [
+                {
+                  "pid": 110480,
+                  "ppid": 110475,
+                  "name": "quser.exe",
+                  "command": "quser.exe /server:ENG-658",
+                  "children": [
+                    {
+                      "pid": 110485,
+                      "ppid": 110480,
+                      "name": "nltest.exe",
+                      "command": "nltest.exe /sc_query:ACME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "pid": 110491,
+                  "ppid": 110475,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /v",
+                  "children": [
+                    {
+                      "pid": 110495,
+                      "ppid": 110491,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\pooja.sharma\\AppData\\Local\\Temp\\host_6616f9ae.txt\"",
+                      "children": [
+                        {
+                          "pid": 110498,
+                          "ppid": 110495,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 8 > nul",
+                          "children": [
+                            {
+                              "pid": 110501,
+                              "ppid": 110498,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 22 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 110503,
+                                  "ppid": 110501,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\pooja.sharma\\AppData\\Local\\Temp\\host_1f5da506.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 110508,
+                                      "ppid": 110503,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+                                      "children": [
+                                        {
+                                          "pid": 110511,
+                                          "ppid": 110508,
+                                          "name": "quser.exe",
+                                          "command": "quser.exe",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 110514,
+                              "ppid": 110498,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -WindowStyle Minimized -File \"C:\\IT\\Scripts\\RunDiagnostics_56a136d9.ps1\" -Host \"WS-916\" -Mode Quick",
+                              "children": [
+                                {
+                                  "pid": 110520,
+                                  "ppid": 110514,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe > \"C:\\Users\\pooja.sharma\\AppData\\Local\\Temp\\who_93dd5701.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 110521,
+                                      "ppid": 110520,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Alpine\\Logs\\Microsoft-Windows-TaskScheduler_Operational_8201ef98.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 110527,
+                                          "ppid": 110521,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 10 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 110532,
+                                              "ppid": 110527,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups",
+                                              "children": [
+                                                {
+                                                  "pid": 110539,
+                                                  "ppid": 110532,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

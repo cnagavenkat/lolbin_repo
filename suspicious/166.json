@@ -1,0 +1,267 @@
+{
+  "pid": 71521,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 71528,
+      "ppid": 71521,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"hostname\"",
+      "children": [
+        {
+          "pid": 71534,
+          "ppid": 71528,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /fo LIST /v",
+          "children": [
+            {
+              "pid": 71541,
+              "ppid": 71534,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /v",
+              "children": [
+                {
+                  "pid": 71548,
+                  "ppid": 71541,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 71555,
+                      "ppid": 71548,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": [
+                        {
+                          "pid": 71562,
+                          "ppid": 71555,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\pooja.verma\\AppData\\Local\\Temp\\RunDiagnostics_6dbbc52e.ps1\" -Host \"ENG-404\" -Mode Verify",
+                          "children": [
+                            {
+                              "pid": 71566,
+                              "ppid": 71562,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 71571,
+                                  "ppid": 71566,
+                                  "name": "nltest.exe",
+                                  "command": "nltest.exe /dclist:ENG",
+                                  "children": [
+                                    {
+                                      "pid": 71578,
+                                      "ppid": 71571,
+                                      "name": "nltest.exe",
+                                      "command": "nltest.exe /dclist:CORP",
+                                      "children": [
+                                        {
+                                          "pid": 71584,
+                                          "ppid": 71578,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 71589,
+                                              "ppid": 71584,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv > \"C:\\Users\\pooja.verma\\AppData\\Local\\Temp\\who_e1cf9b6d.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 71591,
+                                                  "ppid": 71589,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 71597,
+                                              "ppid": 71584,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /v",
+                                              "children": [
+                                                {
+                                                  "pid": 71598,
+                                                  "ppid": 71597,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 71599,
+                                                      "ppid": 71598,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups > \"C:\\Users\\pooja.verma\\AppData\\Local\\Temp\\who_5b284f77.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 71600,
+                                                          "ppid": 71599,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv > \"C:\\Users\\pooja.verma\\AppData\\Local\\Temp\\who_a91c2838.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 71604,
+                                                              "ppid": 71600,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 71611,
+                                                                  "ppid": 71604,
+                                                                  "name": "timeout.exe",
+                                                                  "command": "timeout.exe /t 8 /nobreak",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 71615,
+                                                                      "ppid": 71611,
+                                                                      "name": "ping.exe",
+                                                                      "command": "ping.exe -n 19 127.0.0.1 > nul",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 71621,
+                                                          "ppid": 71599,
+                                                          "name": "wevtutil.exe",
+                                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\BlueYonder\\Logs\\System_25f75305.evtx\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 71623,
+                                                              "ppid": 71621,
+                                                              "name": "nltest.exe",
+                                                              "command": "nltest.exe /dclist:RESEARCH",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 71625,
+                                                                  "ppid": 71623,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 71627,
+                                                              "ppid": 71621,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'nltest.exe' -ArgumentList '/sc_query:RESEARCH' -Wait\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 71630,
+                                                                  "ppid": 71627,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\pooja.verma\\AppData\\Local\\Temp\\host_5418844d.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 71633,
+                                                                      "ppid": 71630,
+                                                                      "name": "ping.exe",
+                                                                      "command": "ping.exe -n 3 127.0.0.1 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 71637,
+                                                                          "ppid": 71633,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 71642,
+                                                                              "ppid": 71637,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 71644,
+                                                                                  "ppid": 71642,
+                                                                                  "name": "choice.exe",
+                                                                                  "command": "choice.exe /d y /t 10 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 71645,
+                                                                                      "ppid": 71644,
+                                                                                      "name": "nltest.exe",
+                                                                                      "command": "nltest.exe /dsgetdc:ACME",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 71648,
+                                                                                          "ppid": 71645,
+                                                                                          "name": "tasklist.exe",
+                                                                                          "command": "tasklist.exe /svc",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 71655,
+                                                                                              "ppid": 71648,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "pid": 71659,
+                                                                                  "ppid": 71642,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 71662,
+                                                                                      "ppid": 71659,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\pooja.verma\\AppData\\Local\\Temp\\host_6da186aa.txt\"",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

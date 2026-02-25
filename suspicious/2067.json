@@ -1,0 +1,190 @@
+{
+  "pid": 309574,
+  "ppid": 0,
+  "name": "BackupAgent.exe",
+  "command": "BackupAgent.exe /silent",
+  "children": [
+    {
+      "pid": 309576,
+      "ppid": 309574,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\Public\\Deploy_5c0c4677.wsf\" /apply",
+      "children": [
+        {
+          "pid": 309582,
+          "ppid": 309576,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+          "children": [
+            {
+              "pid": 309584,
+              "ppid": 309582,
+              "name": "certutil.exe",
+              "command": "certutil.exe -store -user Root",
+              "children": [
+                {
+                  "pid": 309589,
+                  "ppid": 309584,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 3 /nobreak",
+                  "children": [
+                    {
+                      "pid": 309590,
+                      "ppid": 309589,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\pooja.menon\\AppData\\Local\\Temp\\host_dc91113f.txt\"",
+                      "children": [
+                        {
+                          "pid": 309597,
+                          "ppid": 309590,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 309604,
+                      "ppid": 309589,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 309608,
+                          "ppid": 309604,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": [
+                            {
+                              "pid": 309614,
+                              "ppid": 309608,
+                              "name": "vssadmin.exe",
+                              "command": "vssadmin.exe list shadowstorage",
+                              "children": [
+                                {
+                                  "pid": 309615,
+                                  "ppid": 309614,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 309620,
+                                      "ppid": 309615,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv",
+                                      "children": [
+                                        {
+                                          "pid": 309623,
+                                          "ppid": 309620,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 309629,
+                                              "ppid": 309623,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 4 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 309635,
+                                                  "ppid": 309629,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 309640,
+                                                      "ppid": 309635,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -WindowStyle Hidden -File \"C:\\IT\\Scripts\\BuildPack_280ef937.ps1\" -Host \"LAP-514\" -Mode Delta",
+                                                      "children": [
+                                                        {
+                                                          "pid": 309641,
+                                                          "ppid": 309640,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe > \"C:\\Users\\pooja.menon\\AppData\\Local\\Temp\\who_eb2065b9.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 309648,
+                                                              "ppid": 309641,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 20 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 309653,
+                                                                  "ppid": 309648,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 309655,
+                                                                      "ppid": 309653,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 309661,
+                                                                          "ppid": 309655,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 309663,
+                                                                              "ppid": 309661,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe > \"C:\\Users\\pooja.menon\\AppData\\Local\\Temp\\who_06ac5cbb.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 309669,
+                                                                                  "ppid": 309663,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /all > \"C:\\Users\\pooja.menon\\AppData\\Local\\Temp\\who_dc1dc9f3.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 309676,
+                                                                                      "ppid": 309669,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

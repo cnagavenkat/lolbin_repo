@@ -1,0 +1,251 @@
+{
+  "pid": 54303,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 54306,
+      "ppid": 54303,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"tasklist /svc\"",
+      "children": [
+        {
+          "pid": 54308,
+          "ppid": 54306,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\host_18b4de74.txt\"",
+          "children": [
+            {
+              "pid": 54309,
+              "ppid": 54308,
+              "name": "whoami.exe",
+              "command": "whoami.exe",
+              "children": [
+                {
+                  "pid": 54315,
+                  "ppid": 54309,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /v",
+                  "children": [
+                    {
+                      "pid": 54322,
+                      "ppid": 54315,
+                      "name": "wevtutil.exe",
+                      "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Fabrikam\\Logs\\Security_85f103c9.evtx\"",
+                      "children": [
+                        {
+                          "pid": 54329,
+                          "ppid": 54322,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 54332,
+                  "ppid": 54309,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -File \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\CollectInventory_14c1f5ce.ps1\" -Host \"WS-135\" -Mode Delta",
+                  "children": [
+                    {
+                      "pid": 54337,
+                      "ppid": 54332,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 54339,
+                          "ppid": 54337,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\host_bb0ebdce.txt\"",
+                          "children": [
+                            {
+                              "pid": 54341,
+                              "ppid": 54339,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe",
+                              "children": [
+                                {
+                                  "pid": 54347,
+                                  "ppid": 54341,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 21 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 54351,
+                                      "ppid": 54347,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Litware\\Logs\\System_f6a1d1a7.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 54356,
+                                          "ppid": 54351,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 54360,
+                          "ppid": 54337,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                          "children": [
+                            {
+                              "pid": 54363,
+                              "ppid": 54360,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\host_02e267ea.txt\"",
+                              "children": [
+                                {
+                                  "pid": 54367,
+                                  "ppid": 54363,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /svc",
+                                  "children": [
+                                    {
+                                      "pid": 54373,
+                                      "ppid": 54367,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Northwind\\Logs\\Security_551e4bf1.evtx\"",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 54380,
+                                  "ppid": 54363,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\who_85c26e9d.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 54381,
+                                      "ppid": 54380,
+                                      "name": "schtasks.exe",
+                                      "command": "schtasks.exe /query /tn \"\\Contoso\\Support\\Diag\" /v /fo LIST",
+                                      "children": [
+                                        {
+                                          "pid": 54388,
+                                          "ppid": 54381,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Northwind\\Logs\\System_a330c05f.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 54392,
+                                              "ppid": 54388,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 54393,
+                                                  "ppid": 54392,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\dev.mishra\\AppData\\Local\\Temp\\host_a99696fc.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 54398,
+                                                      "ppid": 54393,
+                                                      "name": "wevtutil.exe",
+                                                      "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_0d8fd531.evtx\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 54404,
+                                                          "ppid": 54398,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 54409,
+                                                  "ppid": 54392,
+                                                  "name": "ping.exe",
+                                                  "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 54415,
+                                                      "ppid": 54409,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 54417,
+                                                          "ppid": 54415,
+                                                          "name": "wevtutil.exe",
+                                                          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Woodgrove\\Logs\\Microsoft-Windows-TaskScheduler_Operational_64ed9d15.evtx\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 54422,
+                                                              "ppid": 54417,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 54428,
+                                                                  "ppid": 54422,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /svc",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 54429,
+                                                                      "ppid": 54428,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /v",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 54434,
+                                                                          "ppid": 54429,
+                                                                          "name": "wevtutil.exe",
+                                                                          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Woodgrove\\Logs\\Microsoft-Windows-TaskScheduler_Operational_052fa9a8.evtx\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

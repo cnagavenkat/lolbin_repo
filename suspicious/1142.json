@@ -1,0 +1,158 @@
+{
+  "pid": 191006,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 191008,
+      "ppid": 191006,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"set\"",
+      "children": [
+        {
+          "pid": 191011,
+          "ppid": 191008,
+          "name": "certutil.exe",
+          "command": "certutil.exe -verify \"C:\\ProgramData\\Fabrikam\\Support\\vpn_gateway.cer\"",
+          "children": [
+            {
+              "pid": 191016,
+              "ppid": 191011,
+              "name": "whoami.exe",
+              "command": "whoami.exe",
+              "children": [
+                {
+                  "pid": 191017,
+                  "ppid": 191016,
+                  "name": "forfiles.exe",
+                  "command": "forfiles.exe /P \"C:\\Users\\Public\" /M *.tmp /D -29 /C \"cmd /c del /q @path\"",
+                  "children": [
+                    {
+                      "pid": 191044,
+                      "ppid": 191017,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 4 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 191047,
+                          "ppid": 191044,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": [
+                            {
+                              "pid": 191054,
+                              "ppid": 191047,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Litware\\Logs\\update.log\"",
+                              "children": [
+                                {
+                                  "pid": 191057,
+                                  "ppid": 191054,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 12 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 191060,
+                                      "ppid": 191057,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+                                      "children": [
+                                        {
+                                          "pid": 191064,
+                                          "ppid": 191060,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 191067,
+                                              "ppid": 191064,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                                              "children": [
+                                                {
+                                                  "pid": 191071,
+                                                  "ppid": 191067,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv > \"C:\\Users\\aarav.iyer\\AppData\\Local\\Temp\\who_a09bb9f4.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 191072,
+                                                      "ppid": 191071,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /all",
+                                                      "children": [
+                                                        {
+                                                          "pid": 191076,
+                                                          "ppid": 191072,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 16 > nul",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 191018,
+      "ppid": 191006,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\aarav.iyer\\AppData\\Local\\Temp\\host_c683e2db.txt\"",
+      "children": [
+        {
+          "pid": 191024,
+          "ppid": 191018,
+          "name": "whoami.exe",
+          "command": "whoami.exe",
+          "children": [
+            {
+              "pid": 191027,
+              "ppid": 191024,
+              "name": "whoami.exe",
+              "command": "whoami.exe > \"C:\\Users\\aarav.iyer\\AppData\\Local\\Temp\\who_91cd283d.txt\"",
+              "children": [
+                {
+                  "pid": 191033,
+                  "ppid": 191027,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\aarav.iyer\\AppData\\Local\\Temp\\host_3734c25f.txt\"",
+                  "children": [
+                    {
+                      "pid": 191038,
+                      "ppid": 191033,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\aarav.iyer\\AppData\\Local\\Temp\\who_425ede85.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

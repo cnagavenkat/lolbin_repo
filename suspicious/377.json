@@ -1,0 +1,244 @@
+{
+  "pid": 100546,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 100548,
+      "ppid": 100546,
+      "name": "certutil.exe",
+      "command": "certutil.exe -urlcache -split -f \"http://helpdesk-tools.corp.local/certs/workstation.cer\" \"C:\\ProgramData\\BlueYonder\\Support\\relay.bin\"",
+      "children": [
+        {
+          "pid": 100553,
+          "ppid": 100548,
+          "name": "whoami.exe",
+          "command": "whoami.exe",
+          "children": [
+            {
+              "pid": 100559,
+              "ppid": 100553,
+              "name": "makecab.exe",
+              "command": "makecab.exe \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\results.csv\" \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\results.cab\"",
+              "children": [
+                {
+                  "pid": 100566,
+                  "ppid": 100559,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\who_43bf7dea.txt\"",
+                  "children": [
+                    {
+                      "pid": 100573,
+                      "ppid": 100566,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\host_d71617e4.txt\"",
+                      "children": [
+                        {
+                          "pid": 100579,
+                          "ppid": 100573,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /create /tn \"\\Alpine\\Deploy\\Verify\" /tr \"C:\\IT\\Maint\\sync_43fca582.ps1\" /sc onlogon /f",
+                          "children": [
+                            {
+                              "pid": 100586,
+                              "ppid": 100579,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 10 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 100591,
+                                  "ppid": 100586,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /c \"schtasks.exe /run /tn \"\\Contoso\\Support\\Diag\"\"",
+                                  "children": [
+                                    {
+                                      "pid": 100595,
+                                      "ppid": 100591,
+                                      "name": "bitsadmin.exe",
+                                      "command": "bitsadmin.exe /info Job94bb0e7a /verbose",
+                                      "children": [
+                                        {
+                                          "pid": 100601,
+                                          "ppid": 100595,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 100608,
+                                              "ppid": 100601,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 11 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 100615,
+                                                  "ppid": 100608,
+                                                  "name": "bitsadmin.exe",
+                                                  "command": "bitsadmin.exe /info Jobede01c28 /verbose",
+                                                  "children": [
+                                                    {
+                                                      "pid": 100621,
+                                                      "ppid": 100615,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 100623,
+                                                          "ppid": 100621,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 100624,
+                                                  "ppid": 100608,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 5 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 100626,
+                                                      "ppid": 100624,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 100633,
+                                                          "ppid": 100626,
+                                                          "name": "bitsadmin.exe",
+                                                          "command": "bitsadmin.exe /info Job4ef9473f /verbose",
+                                                          "children": [
+                                                            {
+                                                              "pid": 100654,
+                                                              "ppid": 100633,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 100660,
+                                                                  "ppid": 100654,
+                                                                  "name": "bitsadmin.exe",
+                                                                  "command": "bitsadmin.exe /info Job8ab41f52 /verbose",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 100661,
+                                                                      "ppid": 100660,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 100663,
+                                                                          "ppid": 100661,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 4 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 100666,
+                                                                              "ppid": 100663,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\host_0edc0c83.txt\"",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 100670,
+                                                                          "ppid": 100661,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 10 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 100674,
+                                                                              "ppid": 100670,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 100675,
+                                                                                  "ppid": 100674,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\host_24a5c63a.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 100677,
+                                                                                      "ppid": 100675,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\host_e9e028b7.txt\"",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 100637,
+      "ppid": 100546,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 19 > nul",
+      "children": [
+        {
+          "pid": 100640,
+          "ppid": 100637,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\host_eae731b8.txt\"",
+          "children": [
+            {
+              "pid": 100646,
+              "ppid": 100640,
+              "name": "bitsadmin.exe",
+              "command": "bitsadmin.exe /info Jobed87eb64 /verbose",
+              "children": [
+                {
+                  "pid": 100647,
+                  "ppid": 100646,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

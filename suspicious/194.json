@@ -1,0 +1,252 @@
+{
+  "pid": 75044,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 75050,
+      "ppid": 75044,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\Contoso\\Bridge\\TemplateRun_609e7741.wsf\"",
+      "children": [
+        {
+          "pid": 75055,
+          "ppid": 75050,
+          "name": "rundll32.exe",
+          "command": "rundll32.exe advapi32.dll,ProcessIdleTasks",
+          "children": [
+            {
+              "pid": 75058,
+              "ppid": 75055,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 8 /nobreak",
+              "children": [
+                {
+                  "pid": 75059,
+                  "ppid": 75058,
+                  "name": "sc.exe",
+                  "command": "sc.exe query \"LanmanWorkstation\"",
+                  "children": [
+                    {
+                      "pid": 75064,
+                      "ppid": 75059,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /v",
+                      "children": [
+                        {
+                          "pid": 75067,
+                          "ppid": 75064,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 17 /nobreak",
+                          "children": [
+                            {
+                              "pid": 75069,
+                              "ppid": 75067,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 75073,
+                          "ppid": 75064,
+                          "name": "wevtutil.exe",
+                          "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Fabrikam\\Logs\\Application_3ac2851b.evtx\"",
+                          "children": [
+                            {
+                              "pid": 75076,
+                              "ppid": 75073,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 75079,
+                                  "ppid": 75076,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups",
+                                  "children": [
+                                    {
+                                      "pid": 75080,
+                                      "ppid": 75079,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 75087,
+                                          "ppid": 75080,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Get-Service | Out-File 'C:\\Users\\dev.gupta\\AppData\\Local\\Temp\\diag_f38d77bf.txt'\"",
+                                          "children": [
+                                            {
+                                              "pid": 75088,
+                                              "ppid": 75087,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 75091,
+                                                  "ppid": 75088,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 75094,
+                                                      "ppid": 75091,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\dev.gupta\\AppData\\Local\\Temp\\host_b8b74cb2.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 75100,
+                                                          "ppid": 75094,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /svc",
+                                                          "children": [
+                                                            {
+                                                              "pid": 75115,
+                                                              "ppid": 75100,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 75118,
+                                                                  "ppid": 75115,
+                                                                  "name": "cmd.exe",
+                                                                  "command": "cmd.exe /c \"tasklist.exe /v\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 75121,
+                                                                      "ppid": 75118,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 6 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 75127,
+                                                                          "ppid": 75121,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups > \"C:\\Users\\dev.gupta\\AppData\\Local\\Temp\\who_12cfbe5a.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 75129,
+                                                                              "ppid": 75127,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe /v",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 75130,
+                                                                                  "ppid": 75129,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /groups",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 75133,
+                                                                                      "ppid": 75130,
+                                                                                      "name": "tasklist.exe",
+                                                                                      "command": "tasklist.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 75136,
+                                                                                          "ppid": 75133,
+                                                                                          "name": "tasklist.exe",
+                                                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 75139,
+                                                                          "ppid": 75121,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 75142,
+                                                                              "ppid": 75139,
+                                                                              "name": "cmd.exe",
+                                                                              "command": "cmd.exe /c \"timeout.exe /t 10 /nobreak\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 75143,
+                                                                                  "ppid": 75142,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\dev.gupta\\AppData\\Local\\Temp\\host_51c7d021.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 75145,
+                                                                                      "ppid": 75143,
+                                                                                      "name": "powershell.exe",
+                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 75146,
+                                                                                          "ppid": 75145,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 75102,
+      "ppid": 75044,
+      "name": "whoami.exe",
+      "command": "whoami.exe > \"C:\\Users\\dev.gupta\\AppData\\Local\\Temp\\who_6ff5a295.txt\"",
+      "children": [
+        {
+          "pid": 75109,
+          "ppid": 75102,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

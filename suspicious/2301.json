@@ -1,0 +1,278 @@
+{
+  "pid": 342393,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Scripts\\Runbook_36221f96.ps1\"",
+  "children": [
+    {
+      "pid": 342398,
+      "ppid": 342393,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -Command \"Get-Service | Out-File 'C:\\Users\\akash.verma\\AppData\\Local\\Temp\\diag_4ee1777d.txt'\"",
+      "children": [
+        {
+          "pid": 342405,
+          "ppid": 342398,
+          "name": "bitsadmin.exe",
+          "command": "bitsadmin.exe /transfer Job07fd9e37 /download /priority NORMAL \"http://helpdesk-tools.corp.local/pki/root.cer\" \"C:\\Users\\akash.verma\\AppData\\Local\\Temp\\agent.cab\"",
+          "children": [
+            {
+              "pid": 342408,
+              "ppid": 342405,
+              "name": "whoami.exe",
+              "command": "whoami.exe",
+              "children": [
+                {
+                  "pid": 342411,
+                  "ppid": 342408,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": [
+                    {
+                      "pid": 342416,
+                      "ppid": 342411,
+                      "name": "expand.exe",
+                      "command": "expand.exe \"C:\\Users\\Public\\driver.cab\" -F:* \"C:\\Program Files\\Litware\\Collector\"",
+                      "children": [
+                        {
+                          "pid": 342418,
+                          "ppid": 342416,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 20 /nobreak",
+                          "children": [
+                            {
+                              "pid": 342421,
+                              "ppid": 342418,
+                              "name": "bitsadmin.exe",
+                              "command": "bitsadmin.exe /info Job9072b4c2 /verbose",
+                              "children": [
+                                {
+                                  "pid": 342425,
+                                  "ppid": 342421,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'regsvr32.exe' -ArgumentList '/s /n /i:user \"C:\\ProgramData\\Alpine\\Client\\bridge.dll\"' -Wait\"",
+                                  "children": [
+                                    {
+                                      "pid": 342427,
+                                      "ppid": 342425,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all",
+                                      "children": [
+                                        {
+                                          "pid": 342434,
+                                          "ppid": 342427,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups > \"C:\\Users\\akash.verma\\AppData\\Local\\Temp\\who_0b448927.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 342437,
+                                              "ppid": 342434,
+                                              "name": "msiexec.exe",
+                                              "command": "msiexec.exe /i \"C:\\Users\\akash.verma\\AppData\\Local\\Temp\\runtime.msi\" /passive /l*v \"C:\\ProgramData\\Wingtip\\Logs\\msi_c90a7a2b.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 342439,
+                                                  "ppid": 342437,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 342441,
+                                                      "ppid": 342439,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe > \"C:\\Users\\akash.verma\\AppData\\Local\\Temp\\who_a63195ce.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 342446,
+                                                          "ppid": 342441,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\akash.verma\\AppData\\Local\\Temp\\host_e020899c.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 342450,
+                                                              "ppid": 342446,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 24 /nobreak",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 342455,
+                                                      "ppid": 342439,
+                                                      "name": "bitsadmin.exe",
+                                                      "command": "bitsadmin.exe /info Job17bb3e45 /verbose",
+                                                      "children": [
+                                                        {
+                                                          "pid": 342461,
+                                                          "ppid": 342455,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -WindowStyle Hidden -File \"C:\\Users\\Public\\CollectInventory_1ca9062c.ps1\" -Host \"WS-734\" -Mode Quick",
+                                                          "children": [
+                                                            {
+                                                              "pid": 342462,
+                                                              "ppid": 342461,
+                                                              "name": "bitsadmin.exe",
+                                                              "command": "bitsadmin.exe /info Job168f919a /verbose",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 342467,
+                                                                  "ppid": 342462,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 342468,
+                                                                      "ppid": 342467,
+                                                                      "name": "bitsadmin.exe",
+                                                                      "command": "bitsadmin.exe /info Jobada53317 /verbose",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 342469,
+                                                                          "ppid": 342468,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 23 127.0.0.1 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 342474,
+                                                                              "ppid": 342469,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /groups > \"C:\\Users\\akash.verma\\AppData\\Local\\Temp\\who_08a02207.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 342481,
+                                                                                  "ppid": 342474,
+                                                                                  "name": "choice.exe",
+                                                                                  "command": "choice.exe /d y /t 16 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 342484,
+                                                                                      "ppid": 342481,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 342489,
+                                                                                          "ppid": 342484,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\akash.verma\\AppData\\Local\\Temp\\host_0f6b2e75.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 342490,
+                                                                                              "ppid": 342489,
+                                                                                              "name": "bitsadmin.exe",
+                                                                                              "command": "bitsadmin.exe /info Job0780b2aa /verbose",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 342492,
+                                                                                                  "ppid": 342490,
+                                                                                                  "name": "bitsadmin.exe",
+                                                                                                  "command": "bitsadmin.exe /info Jobb45c03c2 /verbose",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 342493,
+                                                                                                      "ppid": 342492,
+                                                                                                      "name": "bitsadmin.exe",
+                                                                                                      "command": "bitsadmin.exe /info Job070fb083 /verbose",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 342500,
+                                                                                                          "ppid": 342493,
+                                                                                                          "name": "ping.exe",
+                                                                                                          "command": "ping.exe -n 9 127.0.0.1 > nul",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 342503,
+                                                                                                              "ppid": 342500,
+                                                                                                              "name": "whoami.exe",
+                                                                                                              "command": "whoami.exe /priv",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 342509,
+                                                                                                                  "ppid": 342503,
+                                                                                                                  "name": "hostname.exe",
+                                                                                                                  "command": "hostname.exe > \"C:\\Users\\akash.verma\\AppData\\Local\\Temp\\host_b5625ca7.txt\"",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 342515,
+                                                                                                                      "ppid": 342509,
+                                                                                                                      "name": "bitsadmin.exe",
+                                                                                                                      "command": "bitsadmin.exe /info Job568d36b6 /verbose",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 342519,
+                                                                                                                          "ppid": 342515,
+                                                                                                                          "name": "powershell.exe",
+                                                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "pid": 342526,
+                                                                                                                              "ppid": 342519,
+                                                                                                                              "name": "bitsadmin.exe",
+                                                                                                                              "command": "bitsadmin.exe /info Job9b0b6413 /verbose",
+                                                                                                                              "children": []
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

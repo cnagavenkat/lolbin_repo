@@ -1,0 +1,237 @@
+{
+  "pid": 249902,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 249904,
+      "ppid": 249902,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"set\"",
+      "children": [
+        {
+          "pid": 249909,
+          "ppid": 249904,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 11 > nul",
+          "children": [
+            {
+              "pid": 249913,
+              "ppid": 249909,
+              "name": "schtasks.exe",
+              "command": "schtasks.exe /query /fo LIST /v",
+              "children": [
+                {
+                  "pid": 249916,
+                  "ppid": 249913,
+                  "name": "wevtutil.exe",
+                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Alpine\\Logs\\System_adfcd10d.evtx\"",
+                  "children": [
+                    {
+                      "pid": 249919,
+                      "ppid": 249916,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\host_f0fd1cb9.txt\"",
+                      "children": [
+                        {
+                          "pid": 249925,
+                          "ppid": 249919,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 249927,
+                              "ppid": 249925,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /create /tn \"\\Fabrikam\\Profile\\Cleanup\" /tr \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\post_1a3fb742.cmd\" /sc once /st 13:42 /f /ru \"BFSI\\akash.iyer\"",
+                              "children": [
+                                {
+                                  "pid": 249930,
+                                  "ppid": 249927,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Wingtip\\Logs\\Security_3ee4e6d4.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 249935,
+                                      "ppid": 249930,
+                                      "name": "schtasks.exe",
+                                      "command": "schtasks.exe /run /tn \"\\Microsoft\\Windows\\WDI\\ResolutionHost\"",
+                                      "children": [
+                                        {
+                                          "pid": 249939,
+                                          "ppid": 249935,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 249958,
+                                              "ppid": 249939,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\host_2c3afa22.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 249962,
+                                                  "ppid": 249958,
+                                                  "name": "cmd.exe",
+                                                  "command": "cmd.exe /c \"timeout.exe /t 7 /nobreak\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 249965,
+                                                      "ppid": 249962,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\host_08d17039.txt\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 249969,
+                                                  "ppid": 249958,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Minimized -ExecutionPolicy Bypass -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\diag_dca860ee.txt'\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 249974,
+                                                      "ppid": 249969,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 249975,
+                                                          "ppid": 249974,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 18 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 249978,
+                                                              "ppid": 249975,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 6 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 249981,
+                                                                  "ppid": 249978,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 8 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 249987,
+                                                                      "ppid": 249981,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /priv",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 249988,
+                                                                          "ppid": 249987,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 16 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 249994,
+                                                                              "ppid": 249988,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /groups",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 249995,
+                                                                                  "ppid": 249994,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 249998,
+                                                                                      "ppid": 249995,
+                                                                                      "name": "wevtutil.exe",
+                                                                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Woodgrove\\Logs\\Microsoft-Windows-TaskScheduler_Operational_230348dc.evtx\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 250003,
+                                                                                          "ppid": 249998,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 249944,
+      "ppid": 249902,
+      "name": "wevtutil.exe",
+      "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Northwind\\Logs\\System_ec190ae7.evtx\"",
+      "children": [
+        {
+          "pid": 249949,
+          "ppid": 249944,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 249950,
+              "ppid": 249949,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 249954,
+                  "ppid": 249950,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 249957,
+                      "ppid": 249954,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

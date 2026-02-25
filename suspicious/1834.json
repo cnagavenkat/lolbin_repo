@@ -1,0 +1,228 @@
+{
+  "pid": 279965,
+  "ppid": 0,
+  "name": "devenv.exe",
+  "command": "devenv.exe \"C:\\src\\Support\\Agent.sln\"",
+  "children": [
+    {
+      "pid": 279972,
+      "ppid": 279965,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Minimized -ExecutionPolicy Bypass -File \"C:\\Users\\Public\\BuildPack_ab45236e.ps1\" -Host \"WS-716\" -Mode Full",
+      "children": [
+        {
+          "pid": 279977,
+          "ppid": 279972,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 18 /nobreak",
+          "children": [
+            {
+              "pid": 279980,
+              "ppid": 279977,
+              "name": "cmd.exe",
+              "command": "cmd.exe /k \"whoami /all\"",
+              "children": [
+                {
+                  "pid": 279983,
+                  "ppid": 279980,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /svc",
+                  "children": [
+                    {
+                      "pid": 279984,
+                      "ppid": 279983,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "pid": 279990,
+                  "ppid": 279980,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 16 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 279995,
+                      "ppid": 279990,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+                      "children": [
+                        {
+                          "pid": 280000,
+                          "ppid": 279995,
+                          "name": "makecab.exe",
+                          "command": "makecab.exe \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\diag.txt\" \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\diag.cab\"",
+                          "children": [
+                            {
+                              "pid": 280014,
+                              "ppid": 280000,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\who_f031fb63.txt\"",
+                              "children": [
+                                {
+                                  "pid": 280018,
+                                  "ppid": 280014,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\who_38597385.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 280021,
+                                      "ppid": 280018,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 6 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 280024,
+                                          "ppid": 280021,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 280026,
+                                  "ppid": 280014,
+                                  "name": "expand.exe",
+                                  "command": "expand.exe \"C:\\ProgramData\\Fabrikam\\Runtime\\agent.cab\" -F:* \"C:\\Program Files\\Contoso\\Profile\"",
+                                  "children": [
+                                    {
+                                      "pid": 280033,
+                                      "ppid": 280026,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe",
+                                      "children": [
+                                        {
+                                          "pid": 280037,
+                                          "ppid": 280033,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 280040,
+                                              "ppid": 280037,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                              "children": [
+                                                {
+                                                  "pid": 280044,
+                                                  "ppid": 280040,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\BlueYonder\\Logs\\profile.log\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 280048,
+                                                      "ppid": 280044,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 280051,
+                                                          "ppid": 280048,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv",
+                                                          "children": [
+                                                            {
+                                                              "pid": 280057,
+                                                              "ppid": 280051,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\who_05f4f8b1.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 280062,
+                                                                  "ppid": 280057,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 280066,
+                                                                      "ppid": 280062,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 280068,
+                                                                          "ppid": 280066,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /all > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\who_ad49475a.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 280072,
+                                                                              "ppid": 280068,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\host_5ba7bfea.txt\"",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 280003,
+      "ppid": 279965,
+      "name": "whoami.exe",
+      "command": "whoami.exe /groups > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\who_31a79a6e.txt\"",
+      "children": [
+        {
+          "pid": 280006,
+          "ppid": 280003,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\host_5c97eb04.txt\"",
+          "children": [
+            {
+              "pid": 280010,
+              "ppid": 280006,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\who_3c951e2b.txt\"",
+              "children": [
+                {
+                  "pid": 280013,
+                  "ppid": 280010,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

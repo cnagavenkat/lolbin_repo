@@ -1,0 +1,246 @@
+{
+  "pid": 62998,
+  "ppid": 0,
+  "name": "ccmexec.exe",
+  "command": "ccmexec.exe -k Schedule",
+  "children": [
+    {
+      "pid": 63000,
+      "ppid": 62998,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"hostname\"",
+      "children": [
+        {
+          "pid": 63004,
+          "ppid": 63000,
+          "name": "wmic.exe",
+          "command": "wmic.exe service get Name,StartMode,State",
+          "children": [
+            {
+              "pid": 63009,
+              "ppid": 63004,
+              "name": "wevtutil.exe",
+              "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Alpine\\Logs\\System_4bc9a964.evtx\"",
+              "children": [
+                {
+                  "pid": 63015,
+                  "ppid": 63009,
+                  "name": "sc.exe",
+                  "command": "sc.exe query \"Spooler\"",
+                  "children": [
+                    {
+                      "pid": 63022,
+                      "ppid": 63015,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 23 > nul",
+                      "children": [
+                        {
+                          "pid": 63027,
+                          "ppid": 63022,
+                          "name": "sc.exe",
+                          "command": "sc.exe qc \"EventLog\"",
+                          "children": [
+                            {
+                              "pid": 63033,
+                              "ppid": 63027,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /v",
+                              "children": [
+                                {
+                                  "pid": 63037,
+                                  "ppid": 63033,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 22 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 63038,
+                                      "ppid": 63037,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Minimized -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\kiran.sharma\\AppData\\Local\\Temp\\diag_c8902a55.txt'\"",
+                                      "children": [
+                                        {
+                                          "pid": 63044,
+                                          "ppid": 63038,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Woodgrove\\Logs\\support.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 63050,
+                                              "ppid": 63044,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                              "children": [
+                                                {
+                                                  "pid": 63051,
+                                                  "ppid": 63050,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Woodgrove\\Logs\\diag.log\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 63058,
+                                              "ppid": 63044,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups",
+                                              "children": [
+                                                {
+                                                  "pid": 63063,
+                                                  "ppid": 63058,
+                                                  "name": "cmd.exe",
+                                                  "command": "cmd.exe /c \"whoami.exe /groups\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 63065,
+                                                      "ppid": 63063,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\kiran.sharma\\AppData\\Local\\Temp\\host_8beeced9.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 63071,
+                                                          "ppid": 63065,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 63073,
+                                                              "ppid": 63071,
+                                                              "name": "wevtutil.exe",
+                                                              "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Litware\\Logs\\Security_893893a2.evtx\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 63077,
+                                                                  "ppid": 63073,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 63082,
+                                                                      "ppid": 63077,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'ping.exe' -ArgumentList '-n 20 127.0.0.1 > nul' -Wait\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 63088,
+                                                                          "ppid": 63082,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 63089,
+                                                                              "ppid": 63088,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 63096,
+                                                                                  "ppid": 63089,
+                                                                                  "name": "wevtutil.exe",
+                                                                                  "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Northwind\\Logs\\Application_1584214a.evtx\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 63102,
+                                                                                      "ppid": 63096,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 63108,
+                                                                                          "ppid": 63102,
+                                                                                          "name": "tasklist.exe",
+                                                                                          "command": "tasklist.exe /v",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 63114,
+                                                                                              "ppid": 63108,
+                                                                                              "name": "powershell.exe",
+                                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 63116,
+                                                                                                  "ppid": 63114,
+                                                                                                  "name": "tasklist.exe",
+                                                                                                  "command": "tasklist.exe",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 63118,
+                                                                                                      "ppid": 63116,
+                                                                                                      "name": "findstr.exe",
+                                                                                                      "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Woodgrove\\Logs\\deploy.log\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 63125,
+                                                                                                          "ppid": 63118,
+                                                                                                          "name": "choice.exe",
+                                                                                                          "command": "choice.exe /d y /t 2 > nul",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 63129,
+                                                                                                              "ppid": 63125,
+                                                                                                              "name": "wevtutil.exe",
+                                                                                                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Wingtip\\Logs\\Application_d95d47ae.evtx\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 63131,
+                                                                                                                  "ppid": 63129,
+                                                                                                                  "name": "hostname.exe",
+                                                                                                                  "command": "hostname.exe",
+                                                                                                                  "children": []
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "pid": 308190,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 308197,
+      "ppid": 308190,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Minimized -ExecutionPolicy Bypass -File \"C:\\ProgramData\\Litware\\Collector\\CollectInventory_9d85c867.ps1\" -Host \"OPS-560\" -Mode Verify",
+      "children": [
+        {
+          "pid": 308203,
+          "ppid": 308197,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 15 > nul",
+          "children": [
+            {
+              "pid": 308209,
+              "ppid": 308203,
+              "name": "vssadmin.exe",
+              "command": "vssadmin.exe list shadows",
+              "children": [
+                {
+                  "pid": 308222,
+                  "ppid": 308209,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\host_5b5f2691.txt\"",
+                  "children": [
+                    {
+                      "pid": 308228,
+                      "ppid": 308222,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": [
+                        {
+                          "pid": 308234,
+                          "ppid": 308228,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\host_37ea4294.txt\"",
+                          "children": [
+                            {
+                              "pid": 308240,
+                              "ppid": 308234,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 308245,
+                                  "ppid": 308240,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /v",
+                                  "children": [
+                                    {
+                                      "pid": 308246,
+                                      "ppid": 308245,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 308247,
+                              "ppid": 308234,
+                              "name": "wmic.exe",
+                              "command": "wmic.exe service get Name,StartMode,State",
+                              "children": [
+                                {
+                                  "pid": 308250,
+                                  "ppid": 308247,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 308256,
+                                      "ppid": 308250,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Alpine\\Logs\\Application_9dc9de3c.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 308258,
+                                          "ppid": 308256,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 308269,
+                                              "ppid": 308258,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe  -File \"C:\\ProgramData\\Alpine\\Support\\BuildPack_582f9705.ps1\" -Host \"SUP-334\" -Mode Delta",
+                                              "children": [
+                                                {
+                                                  "pid": 308276,
+                                                  "ppid": 308269,
+                                                  "name": "ping.exe",
+                                                  "command": "ping.exe -n 4 127.0.0.1 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 308278,
+                                                      "ppid": 308276,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 308279,
+                                                          "ppid": 308278,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 308280,
+                                                              "ppid": 308279,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 308282,
+                                                                  "ppid": 308280,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 308283,
+                                                  "ppid": 308269,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 308289,
+                                                      "ppid": 308283,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": [
+                                                        {
+                                                          "pid": 308291,
+                                                          "ppid": 308289,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\who_45b20d99.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 308298,
+                                                              "ppid": 308291,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\host_cec2a241.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 308304,
+                                                                  "ppid": 308298,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /priv > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\who_980d7733.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 308311,
+                                                                      "ppid": 308304,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\host_b531ab6d.txt\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 308212,
+      "ppid": 308190,
+      "name": "whoami.exe",
+      "command": "whoami.exe > \"C:\\Users\\kiran.menon\\AppData\\Local\\Temp\\who_751a1e72.txt\"",
+      "children": [
+        {
+          "pid": 308217,
+          "ppid": 308212,
+          "name": "ping.exe",
+          "command": "ping.exe -n 22 127.0.0.1 > nul",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 308263,
+      "ppid": 308190,
+      "name": "ping.exe",
+      "command": "ping.exe -n 22 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 308265,
+          "ppid": 308263,
+          "name": "whoami.exe",
+          "command": "whoami.exe",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

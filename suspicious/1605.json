@@ -1,0 +1,267 @@
+{
+  "pid": 247156,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Tools\\Runbook_d1ef8358.ps1\"",
+  "children": [
+    {
+      "pid": 247157,
+      "ppid": 247156,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\Public\\Sync_2acd58d1.js\"",
+      "children": [
+        {
+          "pid": 247161,
+          "ppid": 247157,
+          "name": "cmd.exe",
+          "command": "cmd.exe /c \"quser.exe /server:OPS-620\"",
+          "children": [
+            {
+              "pid": 247162,
+              "ppid": 247161,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\dev.reddy\\AppData\\Local\\Temp\\host_627ff2b4.txt\"",
+              "children": [
+                {
+                  "pid": 247165,
+                  "ppid": 247162,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\dev.reddy\\AppData\\Local\\Temp\\who_e60e5e84.txt\"",
+                  "children": [
+                    {
+                      "pid": 247166,
+                      "ppid": 247165,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe",
+                      "children": [
+                        {
+                          "pid": 247167,
+                          "ppid": 247166,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 247170,
+                              "ppid": 247167,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 7 /nobreak",
+                              "children": [
+                                {
+                                  "pid": 247173,
+                                  "ppid": 247170,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\dev.reddy\\AppData\\Local\\Temp\\host_d04ce7c1.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 247178,
+                                      "ppid": 247173,
+                                      "name": "ipconfig.exe",
+                                      "command": "ipconfig.exe /displaydns",
+                                      "children": [
+                                        {
+                                          "pid": 247179,
+                                          "ppid": 247178,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 247186,
+                          "ppid": 247166,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /svc",
+                          "children": [
+                            {
+                              "pid": 247204,
+                              "ppid": 247186,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\dev.reddy\\AppData\\Local\\Temp\\host_309223ce.txt\"",
+                              "children": [
+                                {
+                                  "pid": 247211,
+                                  "ppid": 247204,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\dev.reddy\\AppData\\Local\\Temp\\host_37db75ad.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 247218,
+                                      "ppid": 247211,
+                                      "name": "wmic.exe",
+                                      "command": "wmic.exe service get Name,StartMode,State",
+                                      "children": [
+                                        {
+                                          "pid": 247225,
+                                          "ppid": 247218,
+                                          "name": "ipconfig.exe",
+                                          "command": "ipconfig.exe /displaydns",
+                                          "children": [
+                                            {
+                                              "pid": 247232,
+                                              "ppid": 247225,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 18 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 247237,
+                                                  "ppid": 247232,
+                                                  "name": "cmd.exe",
+                                                  "command": "cmd.exe /c \"whoami.exe /groups > \"C:\\Users\\dev.reddy\\AppData\\Local\\Temp\\who_906b0b0f.txt\"\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 247242,
+                                                      "ppid": 247237,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /all",
+                                                      "children": [
+                                                        {
+                                                          "pid": 247248,
+                                                          "ppid": 247242,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\dev.reddy\\AppData\\Local\\Temp\\host_4680ea89.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 247254,
+                                              "ppid": 247225,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv",
+                                              "children": [
+                                                {
+                                                  "pid": 247255,
+                                                  "ppid": 247254,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv > \"C:\\Users\\dev.reddy\\AppData\\Local\\Temp\\who_b43db659.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 247258,
+                                                      "ppid": 247255,
+                                                      "name": "wevtutil.exe",
+                                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Wingtip\\Logs\\Microsoft-Windows-TaskScheduler_Operational_280f37a0.evtx\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 247261,
+                                                          "ppid": 247258,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\dev.reddy\\AppData\\Local\\Temp\\host_c6db2cfe.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 247271,
+                                                              "ppid": 247261,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 247277,
+                                                                  "ppid": 247271,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 247283,
+                                                                      "ppid": 247277,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 247290,
+                                                                          "ppid": 247283,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 25 > nul",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 247191,
+      "ppid": 247156,
+      "name": "ping.exe",
+      "command": "ping.exe -n 21 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 247192,
+          "ppid": 247191,
+          "name": "whoami.exe",
+          "command": "whoami.exe /groups",
+          "children": [
+            {
+              "pid": 247198,
+              "ppid": 247192,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 12 /nobreak",
+              "children": [
+                {
+                  "pid": 247199,
+                  "ppid": 247198,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups > \"C:\\Users\\dev.reddy\\AppData\\Local\\Temp\\who_6521975a.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 247264,
+      "ppid": 247156,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+      "children": [
+        {
+          "pid": 247269,
+          "ppid": 247264,
+          "name": "ipconfig.exe",
+          "command": "ipconfig.exe /all",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "pid": 70507,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 70514,
+      "ppid": 70507,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -File \"C:\\Users\\Public\\BuildPack_389ed636.ps1\" -Host \"LAP-718\" -Mode Verify",
+      "children": [
+        {
+          "pid": 70519,
+          "ppid": 70514,
+          "name": "findstr.exe",
+          "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Contoso\\Logs\\update.log\"",
+          "children": [
+            {
+              "pid": 70520,
+              "ppid": 70519,
+              "name": "findstr.exe",
+              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Contoso\\Logs\\profile.log\"",
+              "children": [
+                {
+                  "pid": 70521,
+                  "ppid": 70520,
+                  "name": "ipconfig.exe",
+                  "command": "ipconfig.exe /allcompartments /all",
+                  "children": [
+                    {
+                      "pid": 70525,
+                      "ppid": 70521,
+                      "name": "wmic.exe",
+                      "command": "wmic.exe computersystem get Manufacturer,Model,Domain /value",
+                      "children": [
+                        {
+                          "pid": 70527,
+                          "ppid": 70525,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /query /fo LIST /v",
+                          "children": [
+                            {
+                              "pid": 70531,
+                              "ppid": 70527,
+                              "name": "ipconfig.exe",
+                              "command": "ipconfig.exe /all",
+                              "children": [
+                                {
+                                  "pid": 70537,
+                                  "ppid": 70531,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\aarav.bose\\AppData\\Local\\Temp\\host_e89ddbac.txt\"",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 70538,
+                              "ppid": 70527,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /query /fo LIST /v",
+                              "children": [
+                                {
+                                  "pid": 70545,
+                                  "ppid": 70538,
+                                  "name": "netsh.exe",
+                                  "command": "netsh.exe wlan show profiles",
+                                  "children": [
+                                    {
+                                      "pid": 70546,
+                                      "ppid": 70545,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                      "children": [
+                                        {
+                                          "pid": 70553,
+                                          "ppid": 70546,
+                                          "name": "cmd.exe",
+                                          "command": "cmd.exe /c \"findstr.exe /i \"certificate\" \"C:\\ProgramData\\Wingtip\\Logs\\update.log\"\"",
+                                          "children": [
+                                            {
+                                              "pid": 70558,
+                                              "ppid": 70553,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\aarav.bose\\AppData\\Local\\Temp\\host_e5813fa0.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 70559,
+                                                  "ppid": 70558,
+                                                  "name": "netsh.exe",
+                                                  "command": "netsh.exe winhttp show proxy > \"C:\\ProgramData\\Fabrikam\\Logs\\net_b89e2ca4.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 70563,
+                                                      "ppid": 70559,
+                                                      "name": "wevtutil.exe",
+                                                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Litware\\Logs\\Application_7068a675.evtx\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 70566,
+                                                          "ppid": 70563,
+                                                          "name": "ipconfig.exe",
+                                                          "command": "ipconfig.exe /allcompartments /all",
+                                                          "children": [
+                                                            {
+                                                              "pid": 70571,
+                                                              "ppid": 70566,
+                                                              "name": "schtasks.exe",
+                                                              "command": "schtasks.exe /query /fo LIST /v",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 70572,
+                                                                  "ppid": 70571,
+                                                                  "name": "cmd.exe",
+                                                                  "command": "cmd.exe /c \"ipconfig.exe /displaydns\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 70575,
+                                                                      "ppid": 70572,
+                                                                      "name": "schtasks.exe",
+                                                                      "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 70580,
+                                                                          "ppid": 70575,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 70587,
+                                                          "ppid": 70563,
+                                                          "name": "netsh.exe",
+                                                          "command": "netsh.exe advfirewall show allprofiles",
+                                                          "children": [
+                                                            {
+                                                              "pid": 70601,
+                                                              "ppid": 70587,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 13 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 70604,
+                                                                  "ppid": 70601,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 70611,
+                                                                      "ppid": 70604,
+                                                                      "name": "findstr.exe",
+                                                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Litware\\Logs\\deploy.log\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 70613,
+                                                                          "ppid": 70611,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe /svc",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 70635,
+                                                                              "ppid": 70613,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 70639,
+                                                                                  "ppid": 70635,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 70643,
+                                                                                      "ppid": 70639,
+                                                                                      "name": "powershell.exe",
+                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 70646,
+                                                                                          "ppid": 70643,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /all",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 70651,
+                                                                                              "ppid": 70646,
+                                                                                              "name": "cmd.exe",
+                                                                                              "command": "cmd.exe /c \"hostname.exe > \"C:\\Users\\aarav.bose\\AppData\\Local\\Temp\\host_5919809f.txt\"\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 70654,
+                                                                                                  "ppid": 70651,
+                                                                                                  "name": "tasklist.exe",
+                                                                                                  "command": "tasklist.exe",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 70657,
+                                                                                                      "ppid": 70654,
+                                                                                                      "name": "ping.exe",
+                                                                                                      "command": "ping.exe -n 5 127.0.0.1 > nul",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 70591,
+      "ppid": 70507,
+      "name": "findstr.exe",
+      "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Contoso\\Logs\\diag.log\"",
+      "children": [
+        {
+          "pid": 70598,
+          "ppid": 70591,
+          "name": "whoami.exe",
+          "command": "whoami.exe /all > \"C:\\Users\\aarav.bose\\AppData\\Local\\Temp\\who_2d0c6956.txt\"",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 70614,
+      "ppid": 70507,
+      "name": "schtasks.exe",
+      "command": "schtasks.exe /query /fo LIST /v",
+      "children": [
+        {
+          "pid": 70621,
+          "ppid": 70614,
+          "name": "findstr.exe",
+          "command": "findstr.exe /i \"certificate\" \"C:\\ProgramData\\Alpine\\Logs\\profile.log\"",
+          "children": [
+            {
+              "pid": 70628,
+              "ppid": 70621,
+              "name": "schtasks.exe",
+              "command": "schtasks.exe /query /fo LIST /v",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

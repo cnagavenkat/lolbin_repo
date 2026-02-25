@@ -1,0 +1,237 @@
+{
+  "pid": 120554,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Runbooks\\Runbook_595b4b4e.ps1\"",
+  "children": [
+    {
+      "pid": 120558,
+      "ppid": 120554,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"set\"",
+      "children": [
+        {
+          "pid": 120559,
+          "ppid": 120558,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 3 /nobreak",
+          "children": [
+            {
+              "pid": 120563,
+              "ppid": 120559,
+              "name": "wevtutil.exe",
+              "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\BlueYonder\\Logs\\System_5c98e099.evtx\"",
+              "children": [
+                {
+                  "pid": 120566,
+                  "ppid": 120563,
+                  "name": "quser.exe",
+                  "command": "quser.exe /server:OPS-149",
+                  "children": [
+                    {
+                      "pid": 120568,
+                      "ppid": 120566,
+                      "name": "makecab.exe",
+                      "command": "makecab.exe \"C:\\Build\\obj\\13c0a4cb\\trace.etl\" \"C:\\Build\\obj\\13c0a4cb\\trace.cab\"",
+                      "children": [
+                        {
+                          "pid": 120571,
+                          "ppid": 120568,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                          "children": [
+                            {
+                              "pid": 120576,
+                              "ppid": 120571,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\meera.singh\\AppData\\Local\\Temp\\host_320cc1fe.txt\"",
+                              "children": [
+                                {
+                                  "pid": 120577,
+                                  "ppid": 120576,
+                                  "name": "quser.exe",
+                                  "command": "quser.exe /server:APP-268",
+                                  "children": [
+                                    {
+                                      "pid": 120578,
+                                      "ppid": 120577,
+                                      "name": "quser.exe",
+                                      "command": "quser.exe /server:LAP-942",
+                                      "children": [
+                                        {
+                                          "pid": 120584,
+                                          "ppid": 120578,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\meera.singh\\AppData\\Local\\Temp\\host_a683fcf1.txt\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 120589,
+                              "ppid": 120571,
+                              "name": "quser.exe",
+                              "command": "quser.exe /server:APP-902",
+                              "children": [
+                                {
+                                  "pid": 120591,
+                                  "ppid": 120589,
+                                  "name": "quser.exe",
+                                  "command": "quser.exe /server:OPS-244",
+                                  "children": [
+                                    {
+                                      "pid": 120595,
+                                      "ppid": 120591,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                      "children": [
+                                        {
+                                          "pid": 120601,
+                                          "ppid": 120595,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups > \"C:\\Users\\meera.singh\\AppData\\Local\\Temp\\who_07a2946a.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 120606,
+                                              "ppid": 120601,
+                                              "name": "quser.exe",
+                                              "command": "quser.exe /server:SUP-899",
+                                              "children": [
+                                                {
+                                                  "pid": 120607,
+                                                  "ppid": 120606,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -WindowStyle Hidden -File \"C:\\ProgramData\\Litware\\Runtime\\CollectInventory_5ad07b4e.ps1\" -Host \"WS-135\" -Mode Delta",
+                                                  "children": [
+                                                    {
+                                                      "pid": 120609,
+                                                      "ppid": 120607,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups > \"C:\\Users\\meera.singh\\AppData\\Local\\Temp\\who_7759e31c.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 120611,
+                                                          "ppid": 120609,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv",
+                                                          "children": [
+                                                            {
+                                                              "pid": 120612,
+                                                              "ppid": 120611,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 120616,
+                                                                  "ppid": 120612,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 20 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 120617,
+                                                                      "ppid": 120616,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\meera.singh\\AppData\\Local\\Temp\\host_6fc4729d.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 120619,
+                                                                          "ppid": 120617,
+                                                                          "name": "quser.exe",
+                                                                          "command": "quser.exe /server:OPS-208",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "pid": 120620,
+                                                                      "ppid": 120616,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\meera.singh\\AppData\\Local\\Temp\\host_f8e2db7a.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 120626,
+                                                                          "ppid": 120620,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 9 /nobreak",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 120633,
+                                                                              "ppid": 120626,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 120639,
+                                                                                  "ppid": 120633,
+                                                                                  "name": "quser.exe",
+                                                                                  "command": "quser.exe /server:BLD-619",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 120641,
+                                                                                      "ppid": 120639,
+                                                                                      "name": "quser.exe",
+                                                                                      "command": "quser.exe /server:LAP-903",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 120647,
+                                                                                          "ppid": 120641,
+                                                                                          "name": "cmd.exe",
+                                                                                          "command": "cmd.exe /c \"whoami.exe /groups\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 120654,
+                                                                                              "ppid": 120647,
+                                                                                              "name": "quser.exe",
+                                                                                              "command": "quser.exe /server:LAP-329",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

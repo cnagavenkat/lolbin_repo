@@ -1,0 +1,229 @@
+{
+  "pid": 141859,
+  "ppid": 0,
+  "name": "winlogon.exe",
+  "command": "winlogon.exe /diag",
+  "children": [
+    {
+      "pid": 141862,
+      "ppid": 141859,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\Contoso\\Updater\\TemplateRun_85ff05ab.wsf\"",
+      "children": [
+        {
+          "pid": 141868,
+          "ppid": 141862,
+          "name": "whoami.exe",
+          "command": "whoami.exe",
+          "children": [
+            {
+              "pid": 141872,
+              "ppid": 141868,
+              "name": "whoami.exe",
+              "command": "whoami.exe > \"C:\\Users\\dev.sharma\\AppData\\Local\\Temp\\who_6ad741b3.txt\"",
+              "children": [
+                {
+                  "pid": 141874,
+                  "ppid": 141872,
+                  "name": "reg.exe",
+                  "command": "reg.exe add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"RuntimeAssist\" /t REG_SZ /d \"C:\\Users\\Public\\Profile_5afb7695.ps1\" /f",
+                  "children": [
+                    {
+                      "pid": 141879,
+                      "ppid": 141874,
+                      "name": "net.exe",
+                      "command": "net.exe use X: /delete /y",
+                      "children": [
+                        {
+                          "pid": 141885,
+                          "ppid": 141879,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 15 /nobreak",
+                          "children": [
+                            {
+                              "pid": 141889,
+                              "ppid": 141885,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                              "children": [
+                                {
+                                  "pid": 141891,
+                                  "ppid": 141889,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /k \"hostname\"",
+                                  "children": [
+                                    {
+                                      "pid": 141893,
+                                      "ppid": 141891,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all",
+                                      "children": [
+                                        {
+                                          "pid": 141896,
+                                          "ppid": 141893,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe > \"C:\\Users\\dev.sharma\\AppData\\Local\\Temp\\who_ab6bda13.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 141898,
+                                              "ppid": 141896,
+                                              "name": "net.exe",
+                                              "command": "net.exe use V: /delete /y",
+                                              "children": [
+                                                {
+                                                  "pid": 141920,
+                                                  "ppid": 141898,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -WindowStyle Minimized -File \"C:\\Users\\Public\\RunDiagnostics_f47f9ee0.ps1\" -Host \"WS-107\" -Mode Delta",
+                                                  "children": [
+                                                    {
+                                                      "pid": 141927,
+                                                      "ppid": 141920,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 17 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 141932,
+                                                          "ppid": 141927,
+                                                          "name": "net.exe",
+                                                          "command": "net.exe use R: \"\\\\ops\\maint\" /persistent:no",
+                                                          "children": [
+                                                            {
+                                                              "pid": 141936,
+                                                              "ppid": 141932,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 141939,
+                                                                  "ppid": 141936,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 141945,
+                                                                      "ppid": 141939,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\dev.sharma\\AppData\\Local\\Temp\\host_26aa8276.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 141952,
+                                                                          "ppid": 141945,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv > \"C:\\Users\\dev.sharma\\AppData\\Local\\Temp\\who_2921e307.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 141953,
+                                                                              "ppid": 141952,
+                                                                              "name": "net.exe",
+                                                                              "command": "net.exe use T: \"\\\\bldsrv\\drops\" /persistent:no",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 141958,
+                                                                                  "ppid": 141953,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /all",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 141965,
+                                                                                      "ppid": 141958,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\dev.sharma\\AppData\\Local\\Temp\\host_defed7a5.txt\"",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "pid": 141971,
+                                                                      "ppid": 141939,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /groups",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 141972,
+                                                                          "ppid": 141971,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\dev.sharma\\AppData\\Local\\Temp\\host_c31aac47.txt\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 141903,
+      "ppid": 141859,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/groups > \"C:\\Users\\dev.sharma\\AppData\\Local\\Temp\\who_37dc4a32.txt\"' -Wait\"",
+      "children": [
+        {
+          "pid": 141904,
+          "ppid": 141903,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 141909,
+              "ppid": 141904,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups > \"C:\\Users\\dev.sharma\\AppData\\Local\\Temp\\who_0b40f237.txt\"",
+              "children": [
+                {
+                  "pid": 141913,
+                  "ppid": 141909,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 141918,
+                      "ppid": 141913,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

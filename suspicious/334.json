@@ -1,0 +1,300 @@
+{
+  "pid": 94521,
+  "ppid": 0,
+  "name": "msiexec.exe",
+  "command": "msiexec.exe",
+  "children": [
+    {
+      "pid": 94525,
+      "ppid": 94521,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\IT\\Scripts\\RunDiagnostics_a87860de.ps1\" -Host \"APP-996\" -Mode Verify",
+      "children": [
+        {
+          "pid": 94529,
+          "ppid": 94525,
+          "name": "certutil.exe",
+          "command": "certutil.exe -urlcache -split -f \"http://pkirelay.corp.local/certs/workstation.cer\" \"C:\\ProgramData\\Contoso\\Patch\\agent.cab\"",
+          "children": [
+            {
+              "pid": 94531,
+              "ppid": 94529,
+              "name": "bitsadmin.exe",
+              "command": "bitsadmin.exe /info Job98994097 /verbose",
+              "children": [
+                {
+                  "pid": 94536,
+                  "ppid": 94531,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 94538,
+                      "ppid": 94536,
+                      "name": "makecab.exe",
+                      "command": "makecab.exe \"C:\\ProgramData\\Woodgrove\\Logs\\diag.txt\" \"C:\\ProgramData\\Woodgrove\\Logs\\diag.cab\"",
+                      "children": [
+                        {
+                          "pid": 94545,
+                          "ppid": 94538,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'bitsadmin.exe' -ArgumentList '/info Job5d0501d0 /verbose' -Wait\"",
+                          "children": [
+                            {
+                              "pid": 94552,
+                              "ppid": 94545,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all > \"C:\\Users\\suresh.kulkarni\\AppData\\Local\\Temp\\who_a9ead5fa.txt\"",
+                              "children": [
+                                {
+                                  "pid": 94559,
+                                  "ppid": 94552,
+                                  "name": "bitsadmin.exe",
+                                  "command": "bitsadmin.exe /info Job1d1dbb5a /verbose",
+                                  "children": [
+                                    {
+                                      "pid": 94560,
+                                      "ppid": 94559,
+                                      "name": "schtasks.exe",
+                                      "command": "schtasks.exe /create /tn \"\\Contoso\\Support\\Cleanup\" /tr \"C:\\Users\\suresh.kulkarni\\AppData\\Local\\Temp\\sync_5d0c35f6.vbs\" /sc once /st 04:04 /f /ru \"BFSI\\arjun.singh\"",
+                                      "children": [
+                                        {
+                                          "pid": 94566,
+                                          "ppid": 94560,
+                                          "name": "bitsadmin.exe",
+                                          "command": "bitsadmin.exe /info Job323c0bcc /verbose",
+                                          "children": [
+                                            {
+                                              "pid": 94572,
+                                              "ppid": 94566,
+                                              "name": "schtasks.exe",
+                                              "command": "schtasks.exe /run /tn \"\\Litware\\Maint\\Cleanup\"",
+                                              "children": [
+                                                {
+                                                  "pid": 94588,
+                                                  "ppid": 94572,
+                                                  "name": "bitsadmin.exe",
+                                                  "command": "bitsadmin.exe /info Job64d1451b /verbose",
+                                                  "children": [
+                                                    {
+                                                      "pid": 94591,
+                                                      "ppid": 94588,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 3 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 94596,
+                                                          "ppid": 94591,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\suresh.kulkarni\\AppData\\Local\\Temp\\host_a1cc4495.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 94601,
+                                                              "ppid": 94596,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 94602,
+                                                                  "ppid": 94601,
+                                                                  "name": "bitsadmin.exe",
+                                                                  "command": "bitsadmin.exe /info Job7ac2f237 /verbose",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 94609,
+                                                                      "ppid": 94602,
+                                                                      "name": "bitsadmin.exe",
+                                                                      "command": "bitsadmin.exe /info Job42311f58 /verbose",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 94611,
+                                                      "ppid": 94588,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups",
+                                                      "children": [
+                                                        {
+                                                          "pid": 94632,
+                                                          "ppid": 94611,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups > \"C:\\Users\\suresh.kulkarni\\AppData\\Local\\Temp\\who_6229f149.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 94637,
+                                                              "ppid": 94632,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 94639,
+                                                                  "ppid": 94637,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 94645,
+                                                                      "ppid": 94639,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /groups > \"C:\\Users\\suresh.kulkarni\\AppData\\Local\\Temp\\who_afddb185.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 94648,
+                                                                          "ppid": 94645,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 94652,
+                                                                              "ppid": 94648,
+                                                                              "name": "choice.exe",
+                                                                              "command": "choice.exe /d y /t 16 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 94657,
+                                                                                  "ppid": 94652,
+                                                                                  "name": "bitsadmin.exe",
+                                                                                  "command": "bitsadmin.exe /info Jobc04b0e6c /verbose",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 94662,
+                                                                                      "ppid": 94657,
+                                                                                      "name": "ping.exe",
+                                                                                      "command": "ping.exe -n 14 127.0.0.1 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 94664,
+                                                                                          "ppid": 94662,
+                                                                                          "name": "bitsadmin.exe",
+                                                                                          "command": "bitsadmin.exe /info Job2d2b539c /verbose",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 94575,
+      "ppid": 94521,
+      "name": "whoami.exe",
+      "command": "whoami.exe /groups",
+      "children": [
+        {
+          "pid": 94579,
+          "ppid": 94575,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 94583,
+              "ppid": 94579,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 94584,
+                  "ppid": 94583,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 94585,
+                      "ppid": 94584,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\suresh.kulkarni\\AppData\\Local\\Temp\\host_0c4addb4.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 94618,
+      "ppid": 94521,
+      "name": "bitsadmin.exe",
+      "command": "bitsadmin.exe /info Job1373c8b4 /verbose",
+      "children": [
+        {
+          "pid": 94620,
+          "ppid": 94618,
+          "name": "bitsadmin.exe",
+          "command": "bitsadmin.exe /info Jobcbd32742 /verbose",
+          "children": [
+            {
+              "pid": 94624,
+              "ppid": 94620,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\suresh.kulkarni\\AppData\\Local\\Temp\\who_9ef80eea.txt\"",
+              "children": [
+                {
+                  "pid": 94627,
+                  "ppid": 94624,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 19 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 94628,
+                      "ppid": 94627,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

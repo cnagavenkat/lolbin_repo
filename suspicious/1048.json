@@ -1,0 +1,149 @@
+{
+  "pid": 181908,
+  "ppid": 0,
+  "name": "mmc.exe",
+  "command": "mmc.exe /silent",
+  "children": [
+    {
+      "pid": 181913,
+      "ppid": 181908,
+      "name": "certutil.exe",
+      "command": "certutil.exe -store -user Root",
+      "children": [
+        {
+          "pid": 181914,
+          "ppid": 181913,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\varun.mishra\\AppData\\Local\\Temp\\host_512215e5.txt\"",
+          "children": [
+            {
+              "pid": 181916,
+              "ppid": 181914,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\varun.mishra\\AppData\\Local\\Temp\\diag_18b24afe.txt'\"",
+              "children": [
+                {
+                  "pid": 181917,
+                  "ppid": 181916,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": [
+                    {
+                      "pid": 181918,
+                      "ppid": 181917,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 181920,
+                          "ppid": 181918,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 25 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 181924,
+                              "ppid": 181920,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 16 > nul",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 181928,
+                      "ppid": 181917,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\varun.mishra\\AppData\\Local\\Temp\\who_a82d389e.txt\"",
+                      "children": [
+                        {
+                          "pid": 181932,
+                          "ppid": 181928,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 6 /nobreak",
+                          "children": [
+                            {
+                              "pid": 181935,
+                              "ppid": 181932,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 14 > nul",
+                              "children": [
+                                {
+                                  "pid": 181937,
+                                  "ppid": 181935,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all > \"C:\\Users\\varun.mishra\\AppData\\Local\\Temp\\who_9f31e260.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 181942,
+                                      "ppid": 181937,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 181946,
+                          "ppid": 181928,
+                          "name": "makecab.exe",
+                          "command": "makecab.exe \"C:\\Build\\staging\\60d7eed9\\results.csv\" \"C:\\Build\\staging\\60d7eed9\\results.cab\"",
+                          "children": [
+                            {
+                              "pid": 181952,
+                              "ppid": 181946,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 16 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 181959,
+                                  "ppid": 181952,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 181961,
+                                      "ppid": 181959,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_5364331b.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 181962,
+                                          "ppid": 181961,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 5 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 181965,
+                                              "ppid": 181962,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

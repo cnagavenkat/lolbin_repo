@@ -1,0 +1,150 @@
+{
+  "pid": 126271,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Runbooks\\Runbook_48ea1b40.ps1\"",
+  "children": [
+    {
+      "pid": 126277,
+      "ppid": 126271,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\vivaan.rao\\AppData\\Local\\Temp\\Assist_48b528c7.vbs\"",
+      "children": [
+        {
+          "pid": 126284,
+          "ppid": 126277,
+          "name": "sc.exe",
+          "command": "sc.exe query \"BITS\"",
+          "children": [
+            {
+              "pid": 126291,
+              "ppid": 126284,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 20 > nul",
+              "children": [
+                {
+                  "pid": 126294,
+                  "ppid": 126291,
+                  "name": "wevtutil.exe",
+                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_fc3b49be.evtx\"",
+                  "children": [
+                    {
+                      "pid": 126296,
+                      "ppid": 126294,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                      "children": [
+                        {
+                          "pid": 126300,
+                          "ppid": 126296,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+                          "children": [
+                            {
+                              "pid": 126306,
+                              "ppid": 126300,
+                              "name": "rundll32.exe",
+                              "command": "rundll32.exe shell32.dll,Control_RunDLL sysdm.cpl",
+                              "children": [
+                                {
+                                  "pid": 126309,
+                                  "ppid": 126306,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                  "children": [
+                                    {
+                                      "pid": 126328,
+                                      "ppid": 126309,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\vivaan.rao\\AppData\\Local\\Temp\\sched_3766884c.txt'\"",
+                                      "children": [
+                                        {
+                                          "pid": 126329,
+                                          "ppid": 126328,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups > \"C:\\Users\\vivaan.rao\\AppData\\Local\\Temp\\who_a609464e.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 126331,
+                                              "ppid": 126329,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 126337,
+                                                  "ppid": 126331,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 126342,
+                                                      "ppid": 126337,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 126344,
+                                                          "ppid": 126342,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /v",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 126316,
+      "ppid": 126271,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+      "children": [
+        {
+          "pid": 126318,
+          "ppid": 126316,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv",
+          "children": [
+            {
+              "pid": 126320,
+              "ppid": 126318,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+              "children": [
+                {
+                  "pid": 126323,
+                  "ppid": 126320,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\vivaan.rao\\AppData\\Local\\Temp\\who_dd6ad141.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

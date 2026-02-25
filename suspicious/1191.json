@@ -1,0 +1,251 @@
+{
+  "pid": 195562,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 195565,
+      "ppid": 195562,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -File \"C:\\ProgramData\\Contoso\\Client\\ProfileInit_4dda14fd.ps1\" -Host \"BLD-215\" -Mode Quick",
+      "children": [
+        {
+          "pid": 195571,
+          "ppid": 195565,
+          "name": "certutil.exe",
+          "command": "certutil.exe -urlcache -split -f \"http://bldsrv.corp.local/tools/runner.exe\" \"C:\\ProgramData\\BlueYonder\\Bridge\\helper.dll\"",
+          "children": [
+            {
+              "pid": 195573,
+              "ppid": 195571,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 18 /nobreak",
+              "children": [
+                {
+                  "pid": 195575,
+                  "ppid": 195573,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups > \"C:\\Users\\rahul.kulkarni\\AppData\\Local\\Temp\\who_3f4885b8.txt\"",
+                  "children": [
+                    {
+                      "pid": 195582,
+                      "ppid": 195575,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+                      "children": [
+                        {
+                          "pid": 195589,
+                          "ppid": 195582,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 12 /nobreak",
+                          "children": [
+                            {
+                              "pid": 195594,
+                              "ppid": 195589,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Alpine\\Logs\\profile.log\"",
+                              "children": [
+                                {
+                                  "pid": 195596,
+                                  "ppid": 195594,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /c \"ping.exe -n 4 127.0.0.1 > nul\"",
+                                  "children": [
+                                    {
+                                      "pid": 195600,
+                                      "ppid": 195596,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 195607,
+                      "ppid": 195575,
+                      "name": "certutil.exe",
+                      "command": "certutil.exe -verify \"C:\\Users\\Public\\corp_root.cer\"",
+                      "children": [
+                        {
+                          "pid": 195608,
+                          "ppid": 195607,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all > \"C:\\Users\\rahul.kulkarni\\AppData\\Local\\Temp\\who_cfd42732.txt\"",
+                          "children": [
+                            {
+                              "pid": 195615,
+                              "ppid": 195608,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Alpine\\Logs\\profile.log\"",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 195618,
+                          "ppid": 195607,
+                          "name": "findstr.exe",
+                          "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Woodgrove\\Logs\\deploy.log\"",
+                          "children": [
+                            {
+                              "pid": 195621,
+                              "ppid": 195618,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 195625,
+                                  "ppid": 195621,
+                                  "name": "findstr.exe",
+                                  "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\BlueYonder\\Logs\\update.log\"",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 195626,
+                              "ppid": 195618,
+                              "name": "certutil.exe",
+                              "command": "certutil.exe -addstore CA \"C:\\Users\\Public\\intermediate.cer\"",
+                              "children": [
+                                {
+                                  "pid": 195627,
+                                  "ppid": 195626,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\rahul.kulkarni\\AppData\\Local\\Temp\\host_249f6da8.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 195634,
+                                      "ppid": 195627,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -WindowStyle Minimized -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\rahul.kulkarni\\AppData\\Local\\Temp\\diag_d61d85fd.txt'\"",
+                                      "children": [
+                                        {
+                                          "pid": 195663,
+                                          "ppid": 195634,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 7 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 195666,
+                                              "ppid": 195663,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv > \"C:\\Users\\rahul.kulkarni\\AppData\\Local\\Temp\\who_cd0d2293.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 195669,
+                                                  "ppid": 195666,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 20 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 195675,
+                                                      "ppid": 195669,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 195679,
+                                                          "ppid": 195675,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 195684,
+                                                              "ppid": 195679,
+                                                              "name": "findstr.exe",
+                                                              "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Northwind\\Logs\\diag.log\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 195688,
+                                                                  "ppid": 195684,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /priv > \"C:\\Users\\rahul.kulkarni\\AppData\\Local\\Temp\\who_576555ad.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 195695,
+                                                                      "ppid": 195688,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 6 > nul",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 195640,
+      "ppid": 195562,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+      "children": [
+        {
+          "pid": 195646,
+          "ppid": 195640,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 13 /nobreak",
+          "children": [
+            {
+              "pid": 195650,
+              "ppid": 195646,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 195655,
+                  "ppid": 195650,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\rahul.kulkarni\\AppData\\Local\\Temp\\host_c53e6f05.txt\"",
+                  "children": [
+                    {
+                      "pid": 195661,
+                      "ppid": 195655,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 21 > nul",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

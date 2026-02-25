@@ -1,0 +1,205 @@
+{
+  "pid": 81697,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 81704,
+      "ppid": 81697,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 13 > nul",
+      "children": [
+        {
+          "pid": 81708,
+          "ppid": 81704,
+          "name": "msiexec.exe",
+          "command": "msiexec.exe /i \"C:\\ProgramData\\Woodgrove\\Patch\\runtime.msi\" /qn /l*v \"C:\\ProgramData\\Woodgrove\\Logs\\msi_3c25bdc1.log\"",
+          "children": [
+            {
+              "pid": 81709,
+              "ppid": 81708,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+              "children": [
+                {
+                  "pid": 81715,
+                  "ppid": 81709,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 81733,
+                      "ppid": 81715,
+                      "name": "reg.exe",
+                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                      "children": [
+                        {
+                          "pid": 81734,
+                          "ppid": 81733,
+                          "name": "wevtutil.exe",
+                          "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Fabrikam\\Logs\\Application_165b66ec.evtx\"",
+                          "children": [
+                            {
+                              "pid": 81738,
+                              "ppid": 81734,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /create /tn \"\\Northwind\\Support\\Diag\" /tr \"C:\\IT\\Tools\\run_f6e2fbff.cmd\" /sc onlogon /f /ru \"DEVOPS\\aditya.kulkarni\"",
+                              "children": [
+                                {
+                                  "pid": 81741,
+                                  "ppid": 81738,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Litware\\Logs\\Application_eddd90db.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 81745,
+                                      "ppid": 81741,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                                      "children": [
+                                        {
+                                          "pid": 81749,
+                                          "ppid": 81745,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv",
+                                          "children": [
+                                            {
+                                              "pid": 81752,
+                                              "ppid": 81749,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Contoso\\Logs\\Application_dccd4753.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 81757,
+                                                  "ppid": 81752,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 81761,
+                                                      "ppid": 81757,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /all > \"C:\\Users\\isha.das\\AppData\\Local\\Temp\\who_35bb0e83.txt\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 81763,
+                                      "ppid": 81741,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 81766,
+                                          "ppid": 81763,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\IT\\Tools\\CollectInventory_b1044d7d.ps1\" -Host \"APP-169\" -Mode Verify",
+                                          "children": [
+                                            {
+                                              "pid": 81772,
+                                              "ppid": 81766,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Wingtip\\Logs\\System_f6aa1fb0.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 81775,
+                                                  "ppid": 81772,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Wingtip\\Logs\\Microsoft-Windows-TaskScheduler_Operational_dda865b0.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 81782,
+                                                      "ppid": 81775,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 81788,
+                                                          "ppid": 81782,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 3 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 81789,
+                                                              "ppid": 81788,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 81796,
+                                                                  "ppid": 81789,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 81799,
+                                                                      "ppid": 81796,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 81722,
+      "ppid": 81697,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 81723,
+          "ppid": 81722,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\isha.das\\AppData\\Local\\Temp\\host_467f5dfb.txt\"",
+          "children": [
+            {
+              "pid": 81728,
+              "ppid": 81723,
+              "name": "wevtutil.exe",
+              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\BlueYonder\\Logs\\Microsoft-Windows-TaskScheduler_Operational_4af91155.evtx\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

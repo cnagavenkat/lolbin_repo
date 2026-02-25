@@ -1,0 +1,140 @@
+{
+  "pid": 190691,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 190695,
+      "ppid": 190691,
+      "name": "certutil.exe",
+      "command": "certutil.exe -store -user Root",
+      "children": [
+        {
+          "pid": 190701,
+          "ppid": 190695,
+          "name": "ping.exe",
+          "command": "ping.exe -n 7 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 190702,
+              "ppid": 190701,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"whoami.exe /all > \"C:\\Users\\karthik.das\\AppData\\Local\\Temp\\who_7438d237.txt\"\"",
+              "children": [
+                {
+                  "pid": 190709,
+                  "ppid": 190702,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe",
+                  "children": [
+                    {
+                      "pid": 190714,
+                      "ppid": 190709,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "pid": 190717,
+                  "ppid": 190702,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe",
+                  "children": [
+                    {
+                      "pid": 190720,
+                      "ppid": 190717,
+                      "name": "certutil.exe",
+                      "command": "certutil.exe -addstore TrustedPublisher \"C:\\Users\\Public\\intermediate.cer\"",
+                      "children": [
+                        {
+                          "pid": 190724,
+                          "ppid": 190720,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /groups",
+                          "children": [
+                            {
+                              "pid": 190728,
+                              "ppid": 190724,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                              "children": [
+                                {
+                                  "pid": 190732,
+                                  "ppid": 190728,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 22 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 190739,
+                                      "ppid": 190732,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv > \"C:\\Users\\karthik.das\\AppData\\Local\\Temp\\who_d91abfa4.txt\"",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 190743,
+                                  "ppid": 190728,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 190748,
+                                      "ppid": 190743,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 190750,
+                                          "ppid": 190748,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 190756,
+                                      "ppid": 190743,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe > \"C:\\Users\\karthik.das\\AppData\\Local\\Temp\\who_e19773ab.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 190759,
+                                          "ppid": 190756,
+                                          "name": "netsh.exe",
+                                          "command": "netsh.exe winhttp show proxy > \"C:\\ProgramData\\Contoso\\Logs\\net_33ee5931.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 190761,
+                                              "ppid": 190759,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /v",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

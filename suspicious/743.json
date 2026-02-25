@@ -1,0 +1,220 @@
+{
+  "pid": 142251,
+  "ppid": 0,
+  "name": "gpscript.exe",
+  "command": "gpscript.exe ",
+  "children": [
+    {
+      "pid": 142252,
+      "ppid": 142251,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"set\"",
+      "children": [
+        {
+          "pid": 142255,
+          "ppid": 142252,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 9 /nobreak",
+          "children": [
+            {
+              "pid": 142262,
+              "ppid": 142255,
+              "name": "forfiles.exe",
+              "command": "forfiles.exe /P \"C:\\ProgramData\\Alpine\\Logs\" /M *.log /D -27 /C \"cmd /c type nul > @path\"",
+              "children": [
+                {
+                  "pid": 142265,
+                  "ppid": 142262,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\who_1be0dae1.txt\"",
+                  "children": [
+                    {
+                      "pid": 142270,
+                      "ppid": 142265,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 12 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 142275,
+                          "ppid": 142270,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /groups",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 142279,
+                  "ppid": 142262,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\host_01496d17.txt\"",
+                  "children": [
+                    {
+                      "pid": 142281,
+                      "ppid": 142279,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\who_7792e37a.txt\"",
+                      "children": [
+                        {
+                          "pid": 142287,
+                          "ppid": 142281,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 17 /nobreak",
+                          "children": [
+                            {
+                              "pid": 142292,
+                              "ppid": 142287,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 142294,
+                                  "ppid": 142292,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /v",
+                                  "children": [
+                                    {
+                                      "pid": 142298,
+                                      "ppid": 142294,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 142304,
+                                          "ppid": 142298,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 25 > nul",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 142311,
+                          "ppid": 142281,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                          "children": [
+                            {
+                              "pid": 142317,
+                              "ppid": 142311,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\who_06e6fe5c.txt\"",
+                              "children": [
+                                {
+                                  "pid": 142324,
+                                  "ppid": 142317,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\who_33c99005.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 142330,
+                                      "ppid": 142324,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 142333,
+                                          "ppid": 142330,
+                                          "name": "schtasks.exe",
+                                          "command": "schtasks.exe /query /fo LIST /v",
+                                          "children": [
+                                            {
+                                              "pid": 142337,
+                                              "ppid": 142333,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\who_81c03a70.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 142343,
+                                                  "ppid": 142337,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups",
+                                                  "children": [
+                                                    {
+                                                      "pid": 142346,
+                                                      "ppid": 142343,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 142352,
+                                                          "ppid": 142346,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /svc",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 142355,
+                                                      "ppid": 142343,
+                                                      "name": "findstr.exe",
+                                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Woodgrove\\Logs\\update.log\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 142358,
+                                                          "ppid": 142355,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\rohan.bose\\AppData\\Local\\Temp\\host_bdba6703.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 142361,
+                                                              "ppid": 142358,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /svc",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 142363,
+                                                                  "ppid": 142361,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /priv",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 142365,
+                                                                      "ppid": 142363,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /all",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

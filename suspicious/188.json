@@ -1,0 +1,238 @@
+{
+  "pid": 74406,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 74412,
+      "ppid": 74406,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"ver\"",
+      "children": [
+        {
+          "pid": 74418,
+          "ppid": 74412,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 22 > nul",
+          "children": [
+            {
+              "pid": 74419,
+              "ppid": 74418,
+              "name": "reg.exe",
+              "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+              "children": [
+                {
+                  "pid": 74426,
+                  "ppid": 74419,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+                  "children": [
+                    {
+                      "pid": 74427,
+                      "ppid": 74426,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\varun.mishra\\AppData\\Local\\Temp\\host_17092622.txt\"",
+                      "children": [
+                        {
+                          "pid": 74429,
+                          "ppid": 74427,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 17 > nul",
+                          "children": [
+                            {
+                              "pid": 74435,
+                              "ppid": 74429,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -ExecutionPolicy Bypass -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\varun.mishra\\AppData\\Local\\Temp\\inv_5fb9e118.txt'\"",
+                              "children": [
+                                {
+                                  "pid": 74441,
+                                  "ppid": 74435,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\varun.mishra\\AppData\\Local\\Temp\\who_9ff618e2.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 74447,
+                                      "ppid": 74441,
+                                      "name": "netsh.exe",
+                                      "command": "netsh.exe advfirewall show allprofiles",
+                                      "children": [
+                                        {
+                                          "pid": 74454,
+                                          "ppid": 74447,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 5 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 74455,
+                                              "ppid": 74454,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\varun.mishra\\AppData\\Local\\Temp\\host_5a5f084c.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 74459,
+                                                  "ppid": 74455,
+                                                  "name": "nltest.exe",
+                                                  "command": "nltest.exe /dclist:ACME",
+                                                  "children": [
+                                                    {
+                                                      "pid": 74460,
+                                                      "ppid": 74459,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 6 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 74462,
+                                                          "ppid": 74460,
+                                                          "name": "nltest.exe",
+                                                          "command": "nltest.exe /sc_query:OPS",
+                                                          "children": [
+                                                            {
+                                                              "pid": 74466,
+                                                              "ppid": 74462,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 74468,
+                                                      "ppid": 74459,
+                                                      "name": "wevtutil.exe",
+                                                      "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\BlueYonder\\Logs\\Security_851a3dc6.evtx\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 74470,
+                                                          "ppid": 74468,
+                                                          "name": "nltest.exe",
+                                                          "command": "nltest.exe /dsgetdc:CORP",
+                                                          "children": [
+                                                            {
+                                                              "pid": 74476,
+                                                              "ppid": 74470,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 24 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 74477,
+                                                                  "ppid": 74476,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 74480,
+                                                                      "ppid": 74477,
+                                                                      "name": "timeout.exe",
+                                                                      "command": "timeout.exe /t 22 /nobreak",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 74487,
+                                                                          "ppid": 74480,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /all > \"C:\\Users\\varun.mishra\\AppData\\Local\\Temp\\who_4ee4520d.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 74492,
+                                                                              "ppid": 74487,
+                                                                              "name": "powershell.exe",
+                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 74494,
+                                                                                  "ppid": 74492,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 74500,
+                                                                                      "ppid": 74494,
+                                                                                      "name": "nltest.exe",
+                                                                                      "command": "nltest.exe /dsgetdc:CORP",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 74501,
+                                                                                          "ppid": 74500,
+                                                                                          "name": "nltest.exe",
+                                                                                          "command": "nltest.exe /dclist:DEVOPS",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 74505,
+                                                                                              "ppid": 74501,
+                                                                                              "name": "nltest.exe",
+                                                                                              "command": "nltest.exe /dsgetdc:CORP",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 74509,
+                                                                                                  "ppid": 74505,
+                                                                                                  "name": "nltest.exe",
+                                                                                                  "command": "nltest.exe /dsgetdc:ACME",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 74513,
+                                                                                                      "ppid": 74509,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\varun.mishra\\AppData\\Local\\Temp\\host_8f8a00bf.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 74514,
+                                                                                                          "ppid": 74513,
+                                                                                                          "name": "whoami.exe",
+                                                                                                          "command": "whoami.exe /groups > \"C:\\Users\\varun.mishra\\AppData\\Local\\Temp\\who_23e78198.txt\"",
+                                                                                                          "children": []
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

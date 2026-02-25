@@ -1,0 +1,173 @@
+{
+  "pid": 141979,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 141982,
+      "ppid": 141979,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"ver\"",
+      "children": [
+        {
+          "pid": 141983,
+          "ppid": 141982,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 3 /nobreak",
+          "children": [
+            {
+              "pid": 141989,
+              "ppid": 141983,
+              "name": "certutil.exe",
+              "command": "certutil.exe -addstore Root \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\workstation.cer\"",
+              "children": [
+                {
+                  "pid": 141994,
+                  "ppid": 141989,
+                  "name": "cmd.exe",
+                  "command": "cmd.exe /c \"hostname.exe\"",
+                  "children": [
+                    {
+                      "pid": 142000,
+                      "ppid": 141994,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\who_a71eae27.txt\"",
+                      "children": [
+                        {
+                          "pid": 142006,
+                          "ppid": 142000,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 142009,
+                      "ppid": 141994,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv",
+                      "children": [
+                        {
+                          "pid": 142031,
+                          "ppid": 142009,
+                          "name": "wscript.exe",
+                          "command": "wscript.exe //nologo \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\TemplateRun_a163f151.vbs\"",
+                          "children": [
+                            {
+                              "pid": 142034,
+                              "ppid": 142031,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\host_34ef0780.txt\"",
+                              "children": [
+                                {
+                                  "pid": 142035,
+                                  "ppid": 142034,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 142037,
+                                      "ppid": 142035,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 24 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 142039,
+                                          "ppid": 142037,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\CollectInventory_77bf0d53.ps1\" -Host \"ENG-233\" -Mode Verify",
+                                          "children": [
+                                            {
+                                              "pid": 142045,
+                                              "ppid": 142039,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv",
+                                              "children": [
+                                                {
+                                                  "pid": 142046,
+                                                  "ppid": 142045,
+                                                  "name": "net.exe",
+                                                  "command": "net.exe use Z: \"\\\\corp\\login\" /persistent:no",
+                                                  "children": [
+                                                    {
+                                                      "pid": 142051,
+                                                      "ppid": 142046,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\host_6fc252ed.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 142055,
+                                                          "ppid": 142051,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv",
+                                                          "children": [
+                                                            {
+                                                              "pid": 142062,
+                                                              "ppid": 142055,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\who_fead06c6.txt\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 142014,
+      "ppid": 141979,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 17 > nul",
+      "children": [
+        {
+          "pid": 142016,
+          "ppid": 142014,
+          "name": "net.exe",
+          "command": "net.exe use Y: /delete /y",
+          "children": [
+            {
+              "pid": 142017,
+              "ppid": 142016,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 142024,
+                  "ppid": 142017,
+                  "name": "net.exe",
+                  "command": "net.exe use U: /delete /y",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

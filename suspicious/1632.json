@@ -1,0 +1,299 @@
+{
+  "pid": 250144,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 250148,
+      "ppid": 250144,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+      "children": [
+        {
+          "pid": 250149,
+          "ppid": 250148,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+          "children": [
+            {
+              "pid": 250151,
+              "ppid": 250149,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all",
+              "children": [
+                {
+                  "pid": 250173,
+                  "ppid": 250151,
+                  "name": "schtasks.exe",
+                  "command": "schtasks.exe /create /tn \"\\Litware\\Maint\\Diag\" /tr \"C:\\Users\\neha.sharma\\AppData\\Local\\Temp\\post_0298455a.vbs\" /sc daily /st 06:45 /f /ru SYSTEM",
+                  "children": [
+                    {
+                      "pid": 250180,
+                      "ppid": 250173,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 250184,
+                          "ppid": 250180,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'schtasks.exe' -ArgumentList '/run /tn \"\\Contoso\\Support\\Diag\"' -Wait\"",
+                          "children": [
+                            {
+                              "pid": 250191,
+                              "ppid": 250184,
+                              "name": "wevtutil.exe",
+                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Alpine\\Logs\\Microsoft-Windows-TaskScheduler_Operational_f9357e40.evtx\"",
+                              "children": [
+                                {
+                                  "pid": 250192,
+                                  "ppid": 250191,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\neha.sharma\\AppData\\Local\\Temp\\host_e92c0a8e.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 250193,
+                                      "ppid": 250192,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Contoso\\Logs\\Microsoft-Windows-TaskScheduler_Operational_43fd5ac9.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 250196,
+                                          "ppid": 250193,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\neha.sharma\\AppData\\Local\\Temp\\host_fe8fc1d1.txt\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 250197,
+                                      "ppid": 250192,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\IT\\Deploy\\TrustRefresh_a3d4ee2b.ps1\" -Host \"ENG-474\" -Mode Quick",
+                                      "children": [
+                                        {
+                                          "pid": 250203,
+                                          "ppid": 250197,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                          "children": [
+                                            {
+                                              "pid": 250209,
+                                              "ppid": 250203,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\neha.sharma\\AppData\\Local\\Temp\\host_cfbc77e5.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 250212,
+                                                  "ppid": 250209,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 250215,
+                                          "ppid": 250197,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 250220,
+                                              "ppid": 250215,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Northwind\\Logs\\System_e64742d9.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 250225,
+                                                  "ppid": 250220,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 250226,
+                                                      "ppid": 250225,
+                                                      "name": "wevtutil.exe",
+                                                      "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_d72d4d36.evtx\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 250232,
+                                                          "ppid": 250226,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv",
+                                                          "children": [
+                                                            {
+                                                              "pid": 250237,
+                                                              "ppid": 250232,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 250240,
+                                                                  "ppid": 250237,
+                                                                  "name": "timeout.exe",
+                                                                  "command": "timeout.exe /t 14 /nobreak",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 250247,
+                                                                      "ppid": 250240,
+                                                                      "name": "wevtutil.exe",
+                                                                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Alpine\\Logs\\Application_c3b295ae.evtx\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 250249,
+                                                                          "ppid": 250247,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\neha.sharma\\AppData\\Local\\Temp\\host_a8100cf0.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 250256,
+                                                                              "ppid": 250249,
+                                                                              "name": "wevtutil.exe",
+                                                                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Fabrikam\\Logs\\Application_f4832100.evtx\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 250258,
+                                                                                  "ppid": 250256,
+                                                                                  "name": "wevtutil.exe",
+                                                                                  "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Wingtip\\Logs\\Microsoft-Windows-TaskScheduler_Operational_ae82121e.evtx\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 250260,
+                                                                                      "ppid": 250258,
+                                                                                      "name": "ping.exe",
+                                                                                      "command": "ping.exe -n 5 127.0.0.1 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 250267,
+                                                                                          "ppid": 250260,
+                                                                                          "name": "cmd.exe",
+                                                                                          "command": "cmd.exe /c \"whoami.exe /groups > \"C:\\Users\\neha.sharma\\AppData\\Local\\Temp\\who_90d6971e.txt\"\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 250270,
+                                                                                              "ppid": 250267,
+                                                                                              "name": "powershell.exe",
+                                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        },
+                                                                                        {
+                                                                                          "pid": 250272,
+                                                                                          "ppid": 250260,
+                                                                                          "name": "timeout.exe",
+                                                                                          "command": "timeout.exe /t 17 /nobreak",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 250277,
+                                                                                              "ppid": 250272,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe > \"C:\\Users\\neha.sharma\\AppData\\Local\\Temp\\who_dd90b69e.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 250278,
+                                                                                                  "ppid": 250277,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 250282,
+                                                                                                      "ppid": 250278,
+                                                                                                      "name": "powershell.exe",
+                                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 250152,
+      "ppid": 250144,
+      "name": "whoami.exe",
+      "command": "whoami.exe /priv",
+      "children": [
+        {
+          "pid": 250154,
+          "ppid": 250152,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\neha.sharma\\AppData\\Local\\Temp\\host_82c1cf0e.txt\"",
+          "children": [
+            {
+              "pid": 250157,
+              "ppid": 250154,
+              "name": "wevtutil.exe",
+              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Northwind\\Logs\\Microsoft-Windows-TaskScheduler_Operational_81c668bf.evtx\"",
+              "children": [
+                {
+                  "pid": 250162,
+                  "ppid": 250157,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\neha.sharma\\AppData\\Local\\Temp\\host_4f7a2c4b.txt\"",
+                  "children": [
+                    {
+                      "pid": 250166,
+                      "ppid": 250162,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\neha.sharma\\AppData\\Local\\Temp\\host_0131cd61.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

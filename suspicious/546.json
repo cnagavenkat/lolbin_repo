@@ -1,0 +1,157 @@
+{
+  "pid": 119890,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe ",
+  "children": [
+    {
+      "pid": 119895,
+      "ppid": 119890,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -File \"C:\\IT\\Deploy\\ProfileInit_f694dee7.ps1\" -Host \"OPS-283\" -Mode Verify",
+      "children": [
+        {
+          "pid": 119897,
+          "ppid": 119895,
+          "name": "netsh.exe",
+          "command": "netsh.exe advfirewall show allprofiles > \"C:\\ProgramData\\Wingtip\\Logs\\net_4a3a270b.txt\"",
+          "children": [
+            {
+              "pid": 119904,
+              "ppid": 119897,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /svc",
+              "children": [
+                {
+                  "pid": 119908,
+                  "ppid": 119904,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 119909,
+                      "ppid": 119908,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\rahul.nair\\AppData\\Local\\Temp\\host_38963ec1.txt\"' -Wait\"",
+                      "children": [
+                        {
+                          "pid": 119913,
+                          "ppid": 119909,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 119917,
+                  "ppid": 119904,
+                  "name": "reg.exe",
+                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                  "children": [
+                    {
+                      "pid": 119919,
+                      "ppid": 119917,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /svc",
+                      "children": [
+                        {
+                          "pid": 119920,
+                          "ppid": 119919,
+                          "name": "cmd.exe",
+                          "command": "cmd.exe /c \"set\"",
+                          "children": [
+                            {
+                              "pid": 119926,
+                              "ppid": 119920,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                              "children": [
+                                {
+                                  "pid": 119931,
+                                  "ppid": 119926,
+                                  "name": "makecab.exe",
+                                  "command": "makecab.exe \"C:\\ProgramData\\Woodgrove\\Logs\\support.log\" \"C:\\ProgramData\\Woodgrove\\Logs\\support.cab\"",
+                                  "children": [
+                                    {
+                                      "pid": 119932,
+                                      "ppid": 119931,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe",
+                                      "children": [
+                                        {
+                                          "pid": 119935,
+                                          "ppid": 119932,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 119942,
+                                              "ppid": 119935,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\rahul.nair\\AppData\\Local\\Temp\\host_b722ee4c.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 119944,
+                                                  "ppid": 119942,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe > \"C:\\Users\\rahul.nair\\AppData\\Local\\Temp\\who_7e2d0dad.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 119949,
+                                                      "ppid": 119944,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\rahul.nair\\AppData\\Local\\Temp\\host_bc4086d7.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 119955,
+                                                          "ppid": 119949,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 119958,
+                                          "ppid": 119932,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 119959,
+                                              "ppid": 119958,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 15 > nul",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

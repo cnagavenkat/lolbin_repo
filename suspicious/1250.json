@@ -1,0 +1,204 @@
+{
+  "pid": 201909,
+  "ppid": 0,
+  "name": "CertMgrUI.exe",
+  "command": "CertMgrUI.exe /startup",
+  "children": [
+    {
+      "pid": 201915,
+      "ppid": 201909,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+      "children": [
+        {
+          "pid": 201920,
+          "ppid": 201915,
+          "name": "cmd.exe",
+          "command": "cmd.exe /c \"echo maintenance step\"",
+          "children": [
+            {
+              "pid": 201927,
+              "ppid": 201920,
+              "name": "whoami.exe",
+              "command": "whoami.exe > \"C:\\Users\\ananya.bose\\AppData\\Local\\Temp\\who_f1c317af.txt\"",
+              "children": [
+                {
+                  "pid": 201934,
+                  "ppid": 201927,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 22 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 201938,
+                      "ppid": 201934,
+                      "name": "certutil.exe",
+                      "command": "certutil.exe -addstore Root \"C:\\Users\\Public\\intermediate.cer\"",
+                      "children": [
+                        {
+                          "pid": 201941,
+                          "ppid": 201938,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 201945,
+                              "ppid": 201941,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\ananya.bose\\AppData\\Local\\Temp\\host_12305ceb.txt\"",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 201946,
+                          "ppid": 201938,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe",
+                          "children": [
+                            {
+                              "pid": 201947,
+                              "ppid": 201946,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                              "children": [
+                                {
+                                  "pid": 201951,
+                                  "ppid": 201947,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\ananya.bose\\AppData\\Local\\Temp\\host_54cb71f9.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 201957,
+                                      "ppid": 201951,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\BlueYonder\\Logs\\Microsoft-Windows-TaskScheduler_Operational_6c7851e0.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 201961,
+                                          "ppid": 201957,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 201967,
+                                              "ppid": 201961,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\ananya.bose\\AppData\\Local\\Temp\\host_0270eb09.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 201969,
+                                                  "ppid": 201967,
+                                                  "name": "ping.exe",
+                                                  "command": "ping.exe -n 11 127.0.0.1 > nul",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 201973,
+                                          "ppid": 201957,
+                                          "name": "cmd.exe",
+                                          "command": "cmd.exe /c \"ping.exe -n 4 127.0.0.1 > nul\"",
+                                          "children": [
+                                            {
+                                              "pid": 201977,
+                                              "ppid": 201973,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all",
+                                              "children": [
+                                                {
+                                                  "pid": 201978,
+                                                  "ppid": 201977,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups",
+                                                  "children": [
+                                                    {
+                                                      "pid": 201984,
+                                                      "ppid": 201978,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 25 /nobreak",
+                                                      "children": [
+                                                        {
+                                                          "pid": 201991,
+                                                          "ppid": 201984,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv",
+                                                          "children": [
+                                                            {
+                                                              "pid": 201994,
+                                                              "ppid": 201991,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 201996,
+                                                      "ppid": 201978,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /all",
+                                                      "children": [
+                                                        {
+                                                          "pid": 202001,
+                                                          "ppid": 201996,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\ananya.bose\\AppData\\Local\\Temp\\host_852da86c.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 202008,
+                                                              "ppid": 202001,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 2 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 202011,
+                                                                  "ppid": 202008,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\ananya.bose\\AppData\\Local\\Temp\\host_f73ebeae.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 202018,
+                                                                      "ppid": 202011,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'timeout.exe' -ArgumentList '/t 14 /nobreak' -Wait\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

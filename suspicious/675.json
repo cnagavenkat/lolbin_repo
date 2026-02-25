@@ -1,0 +1,243 @@
+{
+  "pid": 134170,
+  "ppid": 0,
+  "name": "userinit.exe",
+  "command": "userinit.exe /service",
+  "children": [
+    {
+      "pid": 134173,
+      "ppid": 134170,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\Public\\Sync_143cc3a4.vbs\"",
+      "children": [
+        {
+          "pid": 134176,
+          "ppid": 134173,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /create /tn \"\\Wingtip\\Maint\\Cleanup\" /tr \"C:\\IT\\Runbooks\\post_5ded9ebd.vbs\" /sc daily /st 06:16 /f",
+          "children": [
+            {
+              "pid": 134181,
+              "ppid": 134176,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 4 /nobreak",
+              "children": [
+                {
+                  "pid": 134199,
+                  "ppid": 134181,
+                  "name": "cscript.exe",
+                  "command": "cscript.exe //nologo \"C:\\IT\\Maint\\Profile_180f4165.wsf\" /apply",
+                  "children": [
+                    {
+                      "pid": 134204,
+                      "ppid": 134199,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all",
+                      "children": [
+                        {
+                          "pid": 134206,
+                          "ppid": 134204,
+                          "name": "quser.exe",
+                          "command": "quser.exe /server:BLD-321",
+                          "children": [
+                            {
+                              "pid": 134209,
+                              "ppid": 134206,
+                              "name": "quser.exe",
+                              "command": "quser.exe /server:ENG-476",
+                              "children": [
+                                {
+                                  "pid": 134214,
+                                  "ppid": 134209,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"BridgeAssist\" /t REG_SZ /d \"C:\\ProgramData\\Alpine\\Patch\\Updater_caef2240.ps1\" /f",
+                                  "children": [
+                                    {
+                                      "pid": 134225,
+                                      "ppid": 134214,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 134226,
+                                          "ppid": 134225,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 134229,
+                                              "ppid": 134226,
+                                              "name": "schtasks.exe",
+                                              "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+                                              "children": [
+                                                {
+                                                  "pid": 134247,
+                                                  "ppid": 134229,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv > \"C:\\Users\\meera.rao\\AppData\\Local\\Temp\\who_2f25a162.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 134254,
+                                                      "ppid": 134247,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\meera.rao\\AppData\\Local\\Temp\\host_1e9c83e6.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 134260,
+                                                          "ppid": 134254,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\meera.rao\\AppData\\Local\\Temp\\host_65026a43.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 134263,
+                                                              "ppid": 134260,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 8 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 134297,
+                                                                  "ppid": 134263,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 17 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 134299,
+                                                                      "ppid": 134297,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 134184,
+      "ppid": 134170,
+      "name": "quser.exe",
+      "command": "quser.exe /server:SUP-374",
+      "children": [
+        {
+          "pid": 134190,
+          "ppid": 134184,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 22 > nul",
+          "children": [
+            {
+              "pid": 134196,
+              "ppid": 134190,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\meera.rao\\AppData\\Local\\Temp\\host_f8e3a81f.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 134219,
+      "ppid": 134170,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+      "children": [
+        {
+          "pid": 134222,
+          "ppid": 134219,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 134236,
+      "ppid": 134170,
+      "name": "quser.exe",
+      "command": "quser.exe /server:OPS-698",
+      "children": [
+        {
+          "pid": 134242,
+          "ppid": 134236,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\meera.rao\\AppData\\Local\\Temp\\host_00d29849.txt\"",
+          "children": [
+            {
+              "pid": 134244,
+              "ppid": 134242,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\meera.rao\\AppData\\Local\\Temp\\host_0bd5ec1f.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 134266,
+      "ppid": 134170,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 134273,
+          "ppid": 134266,
+          "name": "quser.exe",
+          "command": "quser.exe /server:SUP-696",
+          "children": [
+            {
+              "pid": 134278,
+              "ppid": 134273,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 134284,
+                  "ppid": 134278,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 16 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 134290,
+                      "ppid": 134284,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\meera.rao\\AppData\\Local\\Temp\\who_2450a5f2.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

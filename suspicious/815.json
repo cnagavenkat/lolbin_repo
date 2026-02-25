@@ -1,0 +1,292 @@
+{
+  "pid": 150590,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k Schedule",
+  "children": [
+    {
+      "pid": 150595,
+      "ppid": 150590,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\Sync_78994c95.vbs\"",
+      "children": [
+        {
+          "pid": 150601,
+          "ppid": 150595,
+          "name": "wscript.exe",
+          "command": "wscript.exe //nologo \"C:\\ProgramData\\Wingtip\\Client\\Sync_a8134099.wsf\"",
+          "children": [
+            {
+              "pid": 150608,
+              "ppid": 150601,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 150611,
+                  "ppid": 150608,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe",
+                  "children": [
+                    {
+                      "pid": 150616,
+                      "ppid": 150611,
+                      "name": "net.exe",
+                      "command": "net.exe use T: \"\\\\filesrv\\IT\\Scripts\" /persistent:no",
+                      "children": [
+                        {
+                          "pid": 150623,
+                          "ppid": 150616,
+                          "name": "net.exe",
+                          "command": "net.exe use R: \"\\\\ops\\maint\" /persistent:no",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 150628,
+                      "ppid": 150611,
+                      "name": "reg.exe",
+                      "command": "reg.exe add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"BuildAssist\" /t REG_SZ /d \"C:\\ProgramData\\Woodgrove\\Support\\Collector_cda4fc18.cmd\" /f",
+                      "children": [
+                        {
+                          "pid": 150634,
+                          "ppid": 150628,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 150637,
+                              "ppid": 150634,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+                              "children": [
+                                {
+                                  "pid": 150639,
+                                  "ppid": 150637,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 150640,
+                                      "ppid": 150639,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 16 127.0.0.1 > nul",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 150647,
+                                  "ppid": 150637,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /c \"net.exe use V: \"\\\\corp\\login\" /persistent:no\"",
+                                  "children": [
+                                    {
+                                      "pid": 150650,
+                                      "ppid": 150647,
+                                      "name": "net.exe",
+                                      "command": "net.exe use R: \"\\\\filesrv\\IT\\Scripts\" /persistent:no",
+                                      "children": [
+                                        {
+                                          "pid": 150655,
+                                          "ppid": 150650,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\who_6c315f3d.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 150660,
+                                              "ppid": 150655,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\who_30f264c3.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 150666,
+                                                  "ppid": 150660,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_04b56bab.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 150671,
+                                                      "ppid": 150666,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 150672,
+                                      "ppid": 150647,
+                                      "name": "cmd.exe",
+                                      "command": "cmd.exe /k \"set\"",
+                                      "children": [
+                                        {
+                                          "pid": 150675,
+                                          "ppid": 150672,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 150676,
+                                              "ppid": 150675,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -WindowStyle Hidden -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\priya.nair\\AppData\\Local\\Temp\\evt_72beefde.txt'\"",
+                                              "children": [
+                                                {
+                                                  "pid": 150677,
+                                                  "ppid": 150676,
+                                                  "name": "net.exe",
+                                                  "command": "net.exe use V: \"\\\\ops\\maint\" /persistent:no",
+                                                  "children": [
+                                                    {
+                                                      "pid": 150682,
+                                                      "ppid": 150677,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 150689,
+                                                          "ppid": 150682,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_de42e281.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 150692,
+                                                              "ppid": 150689,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 150695,
+                                                                  "ppid": 150692,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_21c17cf8.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 150696,
+                                                                      "ppid": 150695,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 150702,
+                                                                          "ppid": 150696,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 150704,
+                                                                              "ppid": 150702,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /groups",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 150708,
+                                                                                  "ppid": 150704,
+                                                                                  "name": "net.exe",
+                                                                                  "command": "net.exe use S: \"\\\\deploy\\packages\" /persistent:no",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 150710,
+                                                                                      "ppid": 150708,
+                                                                                      "name": "powershell.exe",
+                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 150712,
+                                                                                          "ppid": 150710,
+                                                                                          "name": "powershell.exe",
+                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 150715,
+                                                                                              "ppid": 150712,
+                                                                                              "name": "ping.exe",
+                                                                                              "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 150720,
+                                                                                                  "ppid": 150715,
+                                                                                                  "name": "net.exe",
+                                                                                                  "command": "net.exe use Z: /delete /y",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 150727,
+                                                                                                      "ppid": 150720,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_762dfdc5.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 150728,
+                                                                                                          "ppid": 150727,
+                                                                                                          "name": "ping.exe",
+                                                                                                          "command": "ping.exe -n 5 127.0.0.1 > nul",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 150730,
+                                                                                                              "ppid": 150728,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe > \"C:\\Users\\priya.nair\\AppData\\Local\\Temp\\host_5f7d11db.txt\"",
+                                                                                                              "children": []
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

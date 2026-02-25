@@ -1,0 +1,173 @@
+{
+  "pid": 231040,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 231043,
+      "ppid": 231040,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"whoami /all\"",
+      "children": [
+        {
+          "pid": 231049,
+          "ppid": 231043,
+          "name": "regsvr32.exe",
+          "command": "regsvr32.exe /s /n /i:user \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\helper.dll\"",
+          "children": [
+            {
+              "pid": 231050,
+              "ppid": 231049,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 23 /nobreak",
+              "children": [
+                {
+                  "pid": 231054,
+                  "ppid": 231050,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": [
+                    {
+                      "pid": 231061,
+                      "ppid": 231054,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 16 /nobreak",
+                      "children": [
+                        {
+                          "pid": 231066,
+                          "ppid": 231061,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 23 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 231070,
+                              "ppid": 231066,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\host_01ff5d28.txt\"",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 231073,
+                      "ppid": 231054,
+                      "name": "rundll32.exe",
+                      "command": "rundll32.exe \"C:\\Build\\staging\\bcddb3ac\\shellhook.dll\",RunPostSetup",
+                      "children": [
+                        {
+                          "pid": 231078,
+                          "ppid": 231073,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 4 /nobreak",
+                          "children": [
+                            {
+                              "pid": 231085,
+                              "ppid": 231078,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                              "children": [
+                                {
+                                  "pid": 231088,
+                                  "ppid": 231085,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /svc",
+                                  "children": [
+                                    {
+                                      "pid": 231111,
+                                      "ppid": 231088,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\host_6e4c07dc.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 231114,
+                                          "ppid": 231111,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 231115,
+                                              "ppid": 231114,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\who_37d72c55.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 231117,
+                                                  "ppid": 231115,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\who_5a131500.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 231118,
+                                                      "ppid": 231117,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 231091,
+      "ppid": 231040,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\host_64a01a71.txt\"",
+      "children": [
+        {
+          "pid": 231095,
+          "ppid": 231091,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\host_a365af22.txt\"' -Wait\"",
+          "children": [
+            {
+              "pid": 231099,
+              "ppid": 231095,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 12 > nul",
+              "children": [
+                {
+                  "pid": 231102,
+                  "ppid": 231099,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\host_09b4c67e.txt\"",
+                  "children": [
+                    {
+                      "pid": 231107,
+                      "ppid": 231102,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

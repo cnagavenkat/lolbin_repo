@@ -1,0 +1,260 @@
+{
+  "pid": 216463,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 216467,
+      "ppid": 216463,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"hostname\"",
+      "children": [
+        {
+          "pid": 216469,
+          "ppid": 216467,
+          "name": "bitsadmin.exe",
+          "command": "bitsadmin.exe /transfer Job479d580f /download /priority NORMAL \"http://bldsrv.corp.local/tools/runner.exe\" \"C:\\Users\\Public\\helper.dll\"",
+          "children": [
+            {
+              "pid": 216475,
+              "ppid": 216469,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all",
+              "children": [
+                {
+                  "pid": 216482,
+                  "ppid": 216475,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /svc",
+                  "children": [
+                    {
+                      "pid": 216485,
+                      "ppid": 216482,
+                      "name": "bitsadmin.exe",
+                      "command": "bitsadmin.exe /info Job0b4ee7af /verbose",
+                      "children": [
+                        {
+                          "pid": 216496,
+                          "ppid": 216485,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 2 /nobreak",
+                          "children": [
+                            {
+                              "pid": 216498,
+                              "ppid": 216496,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups",
+                              "children": [
+                                {
+                                  "pid": 216502,
+                                  "ppid": 216498,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 24 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 216503,
+                                      "ppid": 216502,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 216507,
+                                          "ppid": 216503,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 20 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 216513,
+                                              "ppid": 216507,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 216515,
+                                  "ppid": 216498,
+                                  "name": "extrac32.exe",
+                                  "command": "extrac32.exe /Y \"C:\\ProgramData\\Alpine\\Client\\tools.cab\" /E /L \"C:\\Users\\pooja.bose\\AppData\\Local\\Temp\"",
+                                  "children": [
+                                    {
+                                      "pid": 216521,
+                                      "ppid": 216515,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                      "children": [
+                                        {
+                                          "pid": 216524,
+                                          "ppid": 216521,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv",
+                                          "children": [
+                                            {
+                                              "pid": 216528,
+                                              "ppid": 216524,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all > \"C:\\Users\\pooja.bose\\AppData\\Local\\Temp\\who_1ddc84d8.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 216534,
+                                                  "ppid": 216528,
+                                                  "name": "cmd.exe",
+                                                  "command": "cmd.exe /c \"set\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 216539,
+                                                      "ppid": 216534,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\pooja.bose\\AppData\\Local\\Temp\\host_1adff6bf.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 216541,
+                                                          "ppid": 216539,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 13 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 216546,
+                                                              "ppid": 216541,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 216548,
+                                                                  "ppid": 216546,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\pooja.bose\\AppData\\Local\\Temp\\host_cef8321c.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 216555,
+                                                                      "ppid": 216548,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /priv > \"C:\\Users\\pooja.bose\\AppData\\Local\\Temp\\who_8490e8ab.txt\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 216556,
+                                                          "ppid": 216539,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/all' -Wait\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 216559,
+                                                              "ppid": 216556,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv > \"C:\\Users\\pooja.bose\\AppData\\Local\\Temp\\who_783db5e0.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 216561,
+                                                                  "ppid": 216559,
+                                                                  "name": "cmd.exe",
+                                                                  "command": "cmd.exe /c \"ping.exe -n 25 127.0.0.1 > nul\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 216564,
+                                                                      "ppid": 216561,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 216571,
+                                                                          "ppid": 216564,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 216575,
+                                                                              "ppid": 216571,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe /svc",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 216577,
+                                                                                  "ppid": 216575,
+                                                                                  "name": "powershell.exe",
+                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 216583,
+                                                                                      "ppid": 216577,
+                                                                                      "name": "powershell.exe",
+                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 216488,
+      "ppid": 216463,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+      "children": [
+        {
+          "pid": 216489,
+          "ppid": 216488,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+          "children": [
+            {
+              "pid": 216494,
+              "ppid": 216489,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 11 > nul",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

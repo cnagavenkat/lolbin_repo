@@ -1,0 +1,174 @@
+{
+  "pid": 144035,
+  "ppid": 0,
+  "name": "userinit.exe",
+  "command": "userinit.exe /diag",
+  "children": [
+    {
+      "pid": 144039,
+      "ppid": 144035,
+      "name": "pcalua.exe",
+      "command": "pcalua.exe -a \"C:\\Users\\dev.kulkarni\\AppData\\Local\\Temp\\legacy_setup.exe\"",
+      "children": [
+        {
+          "pid": 144040,
+          "ppid": 144039,
+          "name": "whoami.exe",
+          "command": "whoami.exe > \"C:\\Users\\dev.kulkarni\\AppData\\Local\\Temp\\who_6038ca38.txt\"",
+          "children": [
+            {
+              "pid": 144041,
+              "ppid": 144040,
+              "name": "reg.exe",
+              "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+              "children": [
+                {
+                  "pid": 144046,
+                  "ppid": 144041,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 20 > nul",
+                  "children": [
+                    {
+                      "pid": 144051,
+                      "ppid": 144046,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": [
+                        {
+                          "pid": 144057,
+                          "ppid": 144051,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                          "children": [
+                            {
+                              "pid": 144064,
+                              "ppid": 144057,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\dev.kulkarni\\AppData\\Local\\Temp\\who_30459de1.txt\"",
+                              "children": [
+                                {
+                                  "pid": 144069,
+                                  "ppid": 144064,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\dev.kulkarni\\AppData\\Local\\Temp\\host_3a40566e.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 144071,
+                                      "ppid": 144069,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+                                      "children": [
+                                        {
+                                          "pid": 144072,
+                                          "ppid": 144071,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups",
+                                          "children": [
+                                            {
+                                              "pid": 144074,
+                                              "ppid": 144072,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 10 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 144076,
+                                                  "ppid": 144074,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 7 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 144080,
+                                                      "ppid": 144076,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 144081,
+                                      "ppid": 144069,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe  -File \"C:\\ProgramData\\Northwind\\Patch\\CollectInventory_710d2109.ps1\" -Host \"WS-430\" -Mode Full",
+                                      "children": [
+                                        {
+                                          "pid": 144083,
+                                          "ppid": 144081,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all > \"C:\\Users\\dev.kulkarni\\AppData\\Local\\Temp\\who_185bb51f.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 144088,
+                                              "ppid": 144083,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe > \"C:\\Users\\dev.kulkarni\\AppData\\Local\\Temp\\who_7c66e767.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 144094,
+                                                  "ppid": 144088,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 144100,
+                                                      "ppid": 144094,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /priv",
+                                                      "children": [
+                                                        {
+                                                          "pid": 144103,
+                                                          "ppid": 144100,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 144104,
+                                                              "ppid": 144103,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\dev.kulkarni\\AppData\\Local\\Temp\\host_2b5efa97.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 144105,
+                                                                  "ppid": 144104,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

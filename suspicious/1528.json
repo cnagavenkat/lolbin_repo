@@ -1,0 +1,126 @@
+{
+  "pid": 237713,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe ",
+  "children": [
+    {
+      "pid": 237720,
+      "ppid": 237713,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\aditya.kulkarni\\AppData\\Local\\Temp\\diag_1f7b3fc0.txt'\"",
+      "children": [
+        {
+          "pid": 237723,
+          "ppid": 237720,
+          "name": "reg.exe",
+          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+          "children": [
+            {
+              "pid": 237725,
+              "ppid": 237723,
+              "name": "quser.exe",
+              "command": "quser.exe",
+              "children": [
+                {
+                  "pid": 237730,
+                  "ppid": 237725,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 237732,
+                      "ppid": 237730,
+                      "name": "reg.exe",
+                      "command": "reg.exe import \"C:\\Build\\dist\\db27bfc9\\Collector_26032045.reg\"",
+                      "children": [
+                        {
+                          "pid": 237734,
+                          "ppid": 237732,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\aditya.kulkarni\\AppData\\Local\\Temp\\host_de12edeb.txt\"",
+                          "children": [
+                            {
+                              "pid": 237739,
+                              "ppid": 237734,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+                              "children": [
+                                {
+                                  "pid": 237743,
+                                  "ppid": 237739,
+                                  "name": "quser.exe",
+                                  "command": "quser.exe",
+                                  "children": [
+                                    {
+                                      "pid": 237750,
+                                      "ppid": 237743,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\aditya.kulkarni\\AppData\\Local\\Temp\\host_dbda0b0b.txt\"",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 237757,
+                                  "ppid": 237739,
+                                  "name": "wscript.exe",
+                                  "command": "wscript.exe //nologo \"C:\\Users\\Public\\Sync_7f5cdeaf.vbs\"",
+                                  "children": [
+                                    {
+                                      "pid": 237764,
+                                      "ppid": 237757,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\aditya.kulkarni\\AppData\\Local\\Temp\\host_aaf5e121.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 237770,
+                                          "ppid": 237764,
+                                          "name": "quser.exe",
+                                          "command": "quser.exe",
+                                          "children": [
+                                            {
+                                              "pid": 237777,
+                                              "ppid": 237770,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 5 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 237782,
+                                                  "ppid": 237777,
+                                                  "name": "cmd.exe",
+                                                  "command": "cmd.exe /k \"tasklist /svc\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 237784,
+                                                      "ppid": 237782,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 14 /nobreak",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

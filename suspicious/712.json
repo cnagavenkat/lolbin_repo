@@ -1,0 +1,339 @@
+{
+  "pid": 138704,
+  "ppid": 0,
+  "name": "winlogon.exe",
+  "command": "winlogon.exe /diag",
+  "children": [
+    {
+      "pid": 138711,
+      "ppid": 138704,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\Public\\LoginInit_00280f8c.wsf\"",
+      "children": [
+        {
+          "pid": 138712,
+          "ppid": 138711,
+          "name": "ping.exe",
+          "command": "ping.exe -n 10 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 138713,
+              "ppid": 138712,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"forfiles.exe /P \"C:\\ProgramData\\BlueYonder\\Logs\" /M *.etl /D -11 /C \"cmd /c echo archived @file\"\"",
+              "children": [
+                {
+                  "pid": 138718,
+                  "ppid": 138713,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/groups > \"C:\\Users\\isha.jain\\AppData\\Local\\Temp\\who_b1ecd11d.txt\"' -Wait\"",
+                  "children": [
+                    {
+                      "pid": 138720,
+                      "ppid": 138718,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv",
+                      "children": [
+                        {
+                          "pid": 138727,
+                          "ppid": 138720,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 138729,
+                              "ppid": 138727,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                              "children": [
+                                {
+                                  "pid": 138731,
+                                  "ppid": 138729,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 138732,
+                                      "ppid": 138731,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /v",
+                                      "children": [
+                                        {
+                                          "pid": 138736,
+                                          "ppid": 138732,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": [
+                                            {
+                                              "pid": 138740,
+                                              "ppid": 138736,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 138744,
+                                                  "ppid": 138740,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 138746,
+                                                      "ppid": 138744,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 13 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 138753,
+                                                          "ppid": 138746,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 12 > nul",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 138759,
+                                          "ppid": 138732,
+                                          "name": "schtasks.exe",
+                                          "command": "schtasks.exe /query /fo LIST /v",
+                                          "children": [
+                                            {
+                                              "pid": 138763,
+                                              "ppid": 138759,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 21 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 138766,
+                                                  "ppid": 138763,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 138768,
+                                                      "ppid": 138766,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 17 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 138769,
+                                                          "ppid": 138768,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all > \"C:\\Users\\isha.jain\\AppData\\Local\\Temp\\who_802ec13d.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 138775,
+                                                              "ppid": 138769,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /svc",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 138781,
+                                                                  "ppid": 138775,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /all",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 138782,
+                                                                      "ppid": 138781,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe > \"C:\\Users\\isha.jain\\AppData\\Local\\Temp\\who_118a1544.txt\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 138783,
+                                                      "ppid": 138766,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /v",
+                                                      "children": [
+                                                        {
+                                                          "pid": 138788,
+                                                          "ppid": 138783,
+                                                          "name": "findstr.exe",
+                                                          "command": "findstr.exe /i \"certificate\" \"C:\\ProgramData\\Contoso\\Logs\\profile.log\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 138791,
+                                                              "ppid": 138788,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all > \"C:\\Users\\isha.jain\\AppData\\Local\\Temp\\who_45306dce.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 138798,
+                                                                  "ppid": 138791,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\isha.jain\\AppData\\Local\\Temp\\host_c8acd215.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 138801,
+                                                                      "ppid": 138798,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /priv",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 138802,
+                                                                          "ppid": 138801,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\isha.jain\\AppData\\Local\\Temp\\host_030db9d1.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 138815,
+                                                                              "ppid": 138802,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 138819,
+                                                                                  "ppid": 138815,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /all > \"C:\\Users\\isha.jain\\AppData\\Local\\Temp\\who_e11f3a86.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 138844,
+                                                                                      "ppid": 138819,
+                                                                                      "name": "timeout.exe",
+                                                                                      "command": "timeout.exe /t 18 /nobreak",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 138846,
+                                                                                          "ppid": 138844,
+                                                                                          "name": "tasklist.exe",
+                                                                                          "command": "tasklist.exe /v",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 138849,
+                                                                                              "ppid": 138846,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe > \"C:\\Users\\isha.jain\\AppData\\Local\\Temp\\host_fbc441c0.txt\"",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 138808,
+      "ppid": 138704,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 4 > nul",
+      "children": [
+        {
+          "pid": 138811,
+          "ppid": 138808,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /v",
+          "children": [
+            {
+              "pid": 138812,
+              "ppid": 138811,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /v",
+              "children": [
+                {
+                  "pid": 138814,
+                  "ppid": 138812,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\isha.jain\\AppData\\Local\\Temp\\host_1188e3ee.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 138823,
+      "ppid": 138704,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+      "children": [
+        {
+          "pid": 138828,
+          "ppid": 138823,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /v",
+          "children": [
+            {
+              "pid": 138835,
+              "ppid": 138828,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+              "children": [
+                {
+                  "pid": 138836,
+                  "ppid": 138835,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 3 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 138840,
+                      "ppid": 138836,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'tasklist.exe' -ArgumentList '/fi \"imagename eq svchost.exe\"' -Wait\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

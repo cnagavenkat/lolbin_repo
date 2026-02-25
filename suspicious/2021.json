@@ -1,0 +1,204 @@
+{
+  "pid": 304040,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 304047,
+      "ppid": 304040,
+      "name": "sc.exe",
+      "command": "sc.exe query \"EventLog\"",
+      "children": [
+        {
+          "pid": 304048,
+          "ppid": 304047,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /svc",
+          "children": [
+            {
+              "pid": 304050,
+              "ppid": 304048,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"choice.exe /d y /t 6 > nul\"",
+              "children": [
+                {
+                  "pid": 304053,
+                  "ppid": 304050,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /v",
+                  "children": [
+                    {
+                      "pid": 304060,
+                      "ppid": 304053,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 304066,
+                          "ppid": 304060,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /svc",
+                          "children": [
+                            {
+                              "pid": 304070,
+                              "ppid": 304066,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 9 /nobreak",
+                              "children": [
+                                {
+                                  "pid": 304076,
+                                  "ppid": 304070,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\karthik.singh\\AppData\\Local\\Temp\\host_e7a782d4.txt\"",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 304078,
+                  "ppid": 304050,
+                  "name": "wmic.exe",
+                  "command": "wmic.exe qfe get HotFixID,InstalledOn",
+                  "children": [
+                    {
+                      "pid": 304084,
+                      "ppid": 304078,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all",
+                      "children": [
+                        {
+                          "pid": 304086,
+                          "ppid": 304084,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": [
+                            {
+                              "pid": 304087,
+                              "ppid": 304086,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all",
+                              "children": [
+                                {
+                                  "pid": 304093,
+                                  "ppid": 304087,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 304095,
+                          "ppid": 304084,
+                          "name": "vssadmin.exe",
+                          "command": "vssadmin.exe list providers",
+                          "children": [
+                            {
+                              "pid": 304102,
+                              "ppid": 304095,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv > \"C:\\Users\\karthik.singh\\AppData\\Local\\Temp\\who_129a623b.txt\"",
+                              "children": [
+                                {
+                                  "pid": 304104,
+                                  "ppid": 304102,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\karthik.singh\\AppData\\Local\\Temp\\host_39e68b64.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 304111,
+                                      "ppid": 304104,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe > \"C:\\Users\\karthik.singh\\AppData\\Local\\Temp\\who_a309633a.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 304115,
+                                          "ppid": 304111,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 304122,
+                                  "ppid": 304102,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups",
+                                  "children": [
+                                    {
+                                      "pid": 304124,
+                                      "ppid": 304122,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Alpine\\Logs\\deploy.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 304129,
+                                          "ppid": 304124,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 3 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 304130,
+                                              "ppid": 304129,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 304136,
+                                                  "ppid": 304130,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 304140,
+                                                      "ppid": 304136,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 304142,
+                                                          "ppid": 304140,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

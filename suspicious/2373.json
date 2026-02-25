@@ -1,0 +1,286 @@
+{
+  "pid": 354779,
+  "ppid": 0,
+  "name": "IRRunner.exe",
+  "command": "IRRunner.exe /silent",
+  "children": [
+    {
+      "pid": 354785,
+      "ppid": 354779,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Hidden -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\diag_68e91186.txt'\"",
+      "children": [
+        {
+          "pid": 354786,
+          "ppid": 354785,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'certutil.exe' -ArgumentList '-urlcache -split -f \"http://intra-update.corp.local/tools/helper.dll\" \"C:\\Users\\Public\\cache.cer\"' -Wait\"",
+          "children": [
+            {
+              "pid": 354793,
+              "ppid": 354786,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\host_97ac3f92.txt\"",
+              "children": [
+                {
+                  "pid": 354800,
+                  "ppid": 354793,
+                  "name": "cmd.exe",
+                  "command": "cmd.exe /c \"certutil.exe -addstore CA \"C:\\ProgramData\\BlueYonder\\Runtime\\workstation.cer\"\"",
+                  "children": [
+                    {
+                      "pid": 354807,
+                      "ppid": 354800,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 354814,
+                          "ppid": 354807,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /v",
+                          "children": [
+                            {
+                              "pid": 354819,
+                              "ppid": 354814,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 20 > nul",
+                              "children": [
+                                {
+                                  "pid": 354820,
+                                  "ppid": 354819,
+                                  "name": "msiexec.exe",
+                                  "command": "msiexec.exe /i \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\bridge.msi\" /qb /l*v \"C:\\ProgramData\\Litware\\Logs\\msi_9d6bc0d7.log\"",
+                                  "children": [
+                                    {
+                                      "pid": 354827,
+                                      "ppid": 354820,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 2 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 354834,
+                                          "ppid": 354827,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Fabrikam\\Logs\\Security_6a305ffc.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 354835,
+                                              "ppid": 354834,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups",
+                                              "children": [
+                                                {
+                                                  "pid": 354839,
+                                                  "ppid": 354835,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /svc",
+                                                  "children": [
+                                                    {
+                                                      "pid": 354842,
+                                                      "ppid": 354839,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 354845,
+                                                          "ppid": 354842,
+                                                          "name": "schtasks.exe",
+                                                          "command": "schtasks.exe /query /fo LIST /v",
+                                                          "children": [
+                                                            {
+                                                              "pid": 354846,
+                                                              "ppid": 354845,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 354851,
+                                                                  "ppid": 354846,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 354855,
+                                                                      "ppid": 354851,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 354856,
+                                                              "ppid": 354845,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 18 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 354863,
+                                                                  "ppid": 354856,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe > \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\who_9037126c.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 354870,
+                                                                      "ppid": 354863,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 354872,
+                                                                          "ppid": 354870,
+                                                                          "name": "cmd.exe",
+                                                                          "command": "cmd.exe /c \"hostname.exe\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 354873,
+                                                                              "ppid": 354872,
+                                                                              "name": "powershell.exe",
+                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 354876,
+                                                                                  "ppid": 354873,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /v",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 354878,
+                                                                                      "ppid": 354876,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 354884,
+                                                                                          "ppid": 354878,
+                                                                                          "name": "tasklist.exe",
+                                                                                          "command": "tasklist.exe /svc",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 354888,
+                                                                                              "ppid": 354884,
+                                                                                              "name": "powershell.exe",
+                                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 354890,
+                                                                                                  "ppid": 354888,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /priv",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 354896,
+                                                                                                      "ppid": 354890,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 354898,
+                                                                                                          "ppid": 354896,
+                                                                                                          "name": "tasklist.exe",
+                                                                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 354901,
+                                                                                                              "ppid": 354898,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 354906,
+                                                                                                                  "ppid": 354901,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe > \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\who_df3efd13.txt\"",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 354908,
+                                                                                                                      "ppid": 354906,
+                                                                                                                      "name": "tasklist.exe",
+                                                                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 354915,
+                                                                                                                          "ppid": 354908,
+                                                                                                                          "name": "hostname.exe",
+                                                                                                                          "command": "hostname.exe > \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\host_114fb4c1.txt\"",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "pid": 354922,
+                                                                                                                              "ppid": 354915,
+                                                                                                                              "name": "whoami.exe",
+                                                                                                                              "command": "whoami.exe > \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\who_9825bbb4.txt\"",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "pid": 354927,
+                                                                                                                                  "ppid": 354922,
+                                                                                                                                  "name": "hostname.exe",
+                                                                                                                                  "command": "hostname.exe > \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\host_6d10fdaf.txt\"",
+                                                                                                                                  "children": []
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "pid": 194319,
+  "ppid": 0,
+  "name": "msiexec.exe",
+  "command": "msiexec.exe",
+  "children": [
+    {
+      "pid": 194325,
+      "ppid": 194319,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\Wingtip\\Updater\\Sync_f4fee5c1.wsf\"",
+      "children": [
+        {
+          "pid": 194330,
+          "ppid": 194325,
+          "name": "certutil.exe",
+          "command": "certutil.exe -verify \"C:\\ProgramData\\Fabrikam\\Profile\\vpn_gateway.cer\"",
+          "children": [
+            {
+              "pid": 194335,
+              "ppid": 194330,
+              "name": "ping.exe",
+              "command": "ping.exe -n 11 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 194342,
+                  "ppid": 194335,
+                  "name": "certutil.exe",
+                  "command": "certutil.exe -addstore CA \"C:\\ProgramData\\BlueYonder\\Profile\\workstation.cer\"",
+                  "children": [
+                    {
+                      "pid": 194347,
+                      "ppid": 194342,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 194349,
+                          "ppid": 194347,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                          "children": [
+                            {
+                              "pid": 194350,
+                              "ppid": 194349,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                              "children": [
+                                {
+                                  "pid": 194351,
+                                  "ppid": 194350,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 194355,
+                                      "ppid": 194351,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 5 /nobreak",
+                                      "children": [
+                                        {
+                                          "pid": 194360,
+                                          "ppid": 194355,
+                                          "name": "netsh.exe",
+                                          "command": "netsh.exe wlan show profiles > \"C:\\ProgramData\\Wingtip\\Logs\\net_2fcf944e.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 194365,
+                                              "ppid": 194360,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'ping.exe' -ArgumentList '-n 7 127.0.0.1 > nul' -Wait\"",
+                                              "children": [
+                                                {
+                                                  "pid": 194372,
+                                                  "ppid": 194365,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv",
+                                                  "children": [
+                                                    {
+                                                      "pid": 194375,
+                                                      "ppid": 194372,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 194378,
+                                                          "ppid": 194375,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\priya.rao\\AppData\\Local\\Temp\\host_6df299e6.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 194381,
+                                                              "ppid": 194378,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /svc",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 194401,
+                                                                  "ppid": 194381,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\priya.rao\\AppData\\Local\\Temp\\host_2e371b91.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 194406,
+                                                                      "ppid": 194401,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 194410,
+                                                                          "ppid": 194406,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe > \"C:\\Users\\priya.rao\\AppData\\Local\\Temp\\who_8fb53909.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 194411,
+                                                                              "ppid": 194410,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /groups",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 194385,
+      "ppid": 194319,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+      "children": [
+        {
+          "pid": 194391,
+          "ppid": 194385,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 194396,
+              "ppid": 194391,
+              "name": "whoami.exe",
+              "command": "whoami.exe > \"C:\\Users\\priya.rao\\AppData\\Local\\Temp\\who_c2f37ec6.txt\"",
+              "children": [
+                {
+                  "pid": 194400,
+                  "ppid": 194396,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups > \"C:\\Users\\priya.rao\\AppData\\Local\\Temp\\who_f5300eb3.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

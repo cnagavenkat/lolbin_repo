@@ -1,0 +1,331 @@
+{
+  "pid": 136296,
+  "ppid": 0,
+  "name": "gpscript.exe",
+  "command": "gpscript.exe /silent",
+  "children": [
+    {
+      "pid": 136301,
+      "ppid": 136296,
+      "name": "ping.exe",
+      "command": "ping.exe -n 12 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 136306,
+          "ppid": 136301,
+          "name": "wscript.exe",
+          "command": "wscript.exe //nologo \"C:\\ProgramData\\Northwind\\Bridge\\TemplateRun_4fadb297.js\"",
+          "children": [
+            {
+              "pid": 136307,
+              "ppid": 136306,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups",
+              "children": [
+                {
+                  "pid": 136308,
+                  "ppid": 136307,
+                  "name": "reg.exe",
+                  "command": "reg.exe add \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"AssistAssist\" /t REG_SZ /d \"C:\\Users\\Public\\Client_332617ce.cmd\" /f",
+                  "children": [
+                    {
+                      "pid": 136309,
+                      "ppid": 136308,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 18 /nobreak",
+                      "children": [
+                        {
+                          "pid": 136315,
+                          "ppid": 136309,
+                          "name": "net.exe",
+                          "command": "net.exe use Z: \"\\\\deploy\\packages\" /persistent:no",
+                          "children": [
+                            {
+                              "pid": 136322,
+                              "ppid": 136315,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\who_1ee85c22.txt\"",
+                              "children": [
+                                {
+                                  "pid": 136324,
+                                  "ppid": 136322,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /k \"tasklist /svc\"",
+                                  "children": [
+                                    {
+                                      "pid": 136331,
+                                      "ppid": 136324,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 6 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 136333,
+                                          "ppid": 136331,
+                                          "name": "net.exe",
+                                          "command": "net.exe use S: \"\\\\bldsrv\\drops\" /persistent:no",
+                                          "children": [
+                                            {
+                                              "pid": 136336,
+                                              "ppid": 136333,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\ProfileInit_a973e613.ps1\" -Host \"OPS-333\" -Mode Verify",
+                                              "children": [
+                                                {
+                                                  "pid": 136338,
+                                                  "ppid": 136336,
+                                                  "name": "net.exe",
+                                                  "command": "net.exe use W: /delete /y",
+                                                  "children": [
+                                                    {
+                                                      "pid": 136343,
+                                                      "ppid": 136338,
+                                                      "name": "net.exe",
+                                                      "command": "net.exe use W: \"\\\\filesrv\\IT\\Scripts\" /persistent:no",
+                                                      "children": [
+                                                        {
+                                                          "pid": 136344,
+                                                          "ppid": 136343,
+                                                          "name": "net.exe",
+                                                          "command": "net.exe use Z: \"\\\\corp\\login\" /persistent:no",
+                                                          "children": [
+                                                            {
+                                                              "pid": 136346,
+                                                              "ppid": 136344,
+                                                              "name": "net.exe",
+                                                              "command": "net.exe use V: \"\\\\bldsrv\\drops\" /persistent:no",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 136353,
+                                                                  "ppid": 136346,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 18 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 136355,
+                                                                      "ppid": 136353,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /priv > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\who_d5a3eb90.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 136360,
+                                                                          "ppid": 136355,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 136366,
+                                                              "ppid": 136344,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\host_2174e991.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 136370,
+                                                                  "ppid": 136366,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\who_e5a7cd0e.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 136371,
+                                                                      "ppid": 136370,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'net.exe' -ArgumentList 'use X: /delete /y' -Wait\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 136374,
+                                                                          "ppid": 136371,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 10 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 136376,
+                                                                              "ppid": 136374,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\host_7a4862af.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 136377,
+                                                                                  "ppid": 136376,
+                                                                                  "name": "choice.exe",
+                                                                                  "command": "choice.exe /d y /t 25 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 136378,
+                                                                                      "ppid": 136377,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\host_3bbcafe2.txt\"",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "pid": 136381,
+                                                                      "ppid": 136370,
+                                                                      "name": "timeout.exe",
+                                                                      "command": "timeout.exe /t 7 /nobreak",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 136386,
+                                                                          "ppid": 136381,
+                                                                          "name": "net.exe",
+                                                                          "command": "net.exe use T: \"\\\\corp\\login\" /persistent:no",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 136392,
+                                                                              "ppid": 136386,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\host_b889ca73.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 136398,
+                                                                                  "ppid": 136392,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /groups > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\who_1d1d4351.txt\"",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "pid": 136402,
+                                                                              "ppid": 136386,
+                                                                              "name": "net.exe",
+                                                                              "command": "net.exe use V: \"\\\\bldsrv\\drops\" /persistent:no",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 136406,
+                                                                                  "ppid": 136402,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 136409,
+                                                                                      "ppid": 136406,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 136410,
+                                                                                          "ppid": 136409,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /groups > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\who_2d0403d1.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 136411,
+                                                                                              "ppid": 136410,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\host_6b3553b3.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 136416,
+                                                                                                  "ppid": 136411,
+                                                                                                  "name": "powershell.exe",
+                                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "pid": 136423,
+                                                                                  "ppid": 136402,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /priv > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\who_7b0d4ac9.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 136429,
+                                                                                      "ppid": 136423,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 136435,
+                                                                                          "ppid": 136429,
+                                                                                          "name": "powershell.exe",
+                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 11\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 136440,
+                                                                                              "ppid": 136435,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /priv",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 136446,
+                                                                                                  "ppid": 136440,
+                                                                                                  "name": "net.exe",
+                                                                                                  "command": "net.exe use T: /delete /y",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 136450,
+                                                                                                      "ppid": 136446,
+                                                                                                      "name": "whoami.exe",
+                                                                                                      "command": "whoami.exe /priv > \"C:\\Users\\aditya.sharma\\AppData\\Local\\Temp\\who_201285dd.txt\"",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

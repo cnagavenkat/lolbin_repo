@@ -1,0 +1,268 @@
+{
+  "pid": 61428,
+  "ppid": 0,
+  "name": "taskhostw.exe",
+  "command": "taskhostw.exe -k Schedule",
+  "children": [
+    {
+      "pid": 61433,
+      "ppid": 61428,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"tasklist /svc\"",
+      "children": [
+        {
+          "pid": 61440,
+          "ppid": 61433,
+          "name": "wevtutil.exe",
+          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Northwind\\Logs\\System_980951ae.evtx\"",
+          "children": [
+            {
+              "pid": 61447,
+              "ppid": 61440,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -File \"C:\\IT\\Maint\\CollectInventory_06a7d4f2.ps1\" -Host \"ENG-318\" -Mode Quick",
+              "children": [
+                {
+                  "pid": 61451,
+                  "ppid": 61447,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 61453,
+                      "ppid": 61451,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                      "children": [
+                        {
+                          "pid": 61460,
+                          "ppid": 61453,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                          "children": [
+                            {
+                              "pid": 61465,
+                              "ppid": 61460,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 61472,
+                                  "ppid": 61465,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Woodgrove\\Logs\\System_06e37537.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 61474,
+                                      "ppid": 61472,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 61476,
+                              "ppid": 61460,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 5 > nul",
+                              "children": [
+                                {
+                                  "pid": 61480,
+                                  "ppid": 61476,
+                                  "name": "schtasks.exe",
+                                  "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+                                  "children": [
+                                    {
+                                      "pid": 61485,
+                                      "ppid": 61480,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 9 /nobreak",
+                                      "children": [
+                                        {
+                                          "pid": 61488,
+                                          "ppid": 61485,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\farhan.kulkarni\\AppData\\Local\\Temp\\host_16a29889.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 61490,
+                                              "ppid": 61488,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 12 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 61492,
+                                                  "ppid": 61490,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 61495,
+                                                      "ppid": 61492,
+                                                      "name": "wevtutil.exe",
+                                                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Alpine\\Logs\\Application_95ab6533.evtx\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 61502,
+                                                          "ppid": 61495,
+                                                          "name": "wevtutil.exe",
+                                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Wingtip\\Logs\\System_329e24bf.evtx\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 61506,
+                                                              "ppid": 61502,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 61507,
+                                                  "ppid": 61490,
+                                                  "name": "cmd.exe",
+                                                  "command": "cmd.exe /c \"wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Wingtip\\Logs\\Microsoft-Windows-TaskScheduler_Operational_e4f9ea19.evtx\"\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 61512,
+                                                      "ppid": 61507,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'tasklist.exe' -ArgumentList '/v' -Wait\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 61516,
+                                                          "ppid": 61512,
+                                                          "name": "wevtutil.exe",
+                                                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\BlueYonder\\Logs\\Security_3d3bc7d2.evtx\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 61520,
+                                                              "ppid": 61516,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 20 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 61523,
+                                                                  "ppid": 61520,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 4 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 61530,
+                                                                      "ppid": 61523,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 61532,
+                                                                          "ppid": 61530,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\farhan.kulkarni\\AppData\\Local\\Temp\\host_8567ca86.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 61537,
+                                                                              "ppid": 61532,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\farhan.kulkarni\\AppData\\Local\\Temp\\host_161f2a47.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 61542,
+                                                                                  "ppid": 61537,
+                                                                                  "name": "wevtutil.exe",
+                                                                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\BlueYonder\\Logs\\System_f436cdae.evtx\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 61546,
+                                                                                      "ppid": 61542,
+                                                                                      "name": "timeout.exe",
+                                                                                      "command": "timeout.exe /t 2 /nobreak",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 61553,
+                                                                                          "ppid": 61546,
+                                                                                          "name": "wevtutil.exe",
+                                                                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Northwind\\Logs\\System_a6850c26.evtx\"",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    },
+                                                                                    {
+                                                                                      "pid": 61556,
+                                                                                      "ppid": 61542,
+                                                                                      "name": "wevtutil.exe",
+                                                                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Contoso\\Logs\\Microsoft-Windows-TaskScheduler_Operational_acb8d7ee.evtx\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 61563,
+                                                                                          "ppid": 61556,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /groups",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 61565,
+                                                                                              "ppid": 61563,
+                                                                                              "name": "choice.exe",
+                                                                                              "command": "choice.exe /d y /t 10 > nul",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 61569,
+                                                                                                  "ppid": 61565,
+                                                                                                  "name": "timeout.exe",
+                                                                                                  "command": "timeout.exe /t 19 /nobreak",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

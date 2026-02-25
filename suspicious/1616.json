@@ -1,0 +1,150 @@
+{
+  "pid": 248449,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Tools\\Runbook_d50e786a.ps1\"",
+  "children": [
+    {
+      "pid": 248454,
+      "ppid": 248449,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\Public\\Profile_69390b82.wsf\" /repair",
+      "children": [
+        {
+          "pid": 248460,
+          "ppid": 248454,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 25 /nobreak",
+          "children": [
+            {
+              "pid": 248466,
+              "ppid": 248460,
+              "name": "ipconfig.exe",
+              "command": "ipconfig.exe /displaydns",
+              "children": [
+                {
+                  "pid": 248469,
+                  "ppid": 248466,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 3 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 248476,
+                      "ppid": 248469,
+                      "name": "netsh.exe",
+                      "command": "netsh.exe wlan show profiles",
+                      "children": [
+                        {
+                          "pid": 248482,
+                          "ppid": 248476,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 20 /nobreak",
+                          "children": [
+                            {
+                              "pid": 248484,
+                              "ppid": 248482,
+                              "name": "quser.exe",
+                              "command": "quser.exe /server:OPS-784",
+                              "children": [
+                                {
+                                  "pid": 248489,
+                                  "ppid": 248484,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /c \"whoami.exe\"",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 248490,
+                          "ppid": 248476,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe > \"C:\\Users\\meera.singh\\AppData\\Local\\Temp\\who_5386f83b.txt\"",
+                          "children": [
+                            {
+                              "pid": 248497,
+                              "ppid": 248490,
+                              "name": "nltest.exe",
+                              "command": "nltest.exe /sc_query:ACME",
+                              "children": [
+                                {
+                                  "pid": 248501,
+                                  "ppid": 248497,
+                                  "name": "quser.exe",
+                                  "command": "quser.exe",
+                                  "children": [
+                                    {
+                                      "pid": 248505,
+                                      "ppid": 248501,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\meera.singh\\AppData\\Local\\Temp\\host_e1f116ea.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 248511,
+                                          "ppid": 248505,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\meera.singh\\AppData\\Local\\Temp\\host_4fec4749.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 248517,
+                                              "ppid": 248511,
+                                              "name": "cmd.exe",
+                                              "command": "cmd.exe /c \"set\"",
+                                              "children": [
+                                                {
+                                                  "pid": 248520,
+                                                  "ppid": 248517,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 248523,
+                                                      "ppid": 248520,
+                                                      "name": "cmd.exe",
+                                                      "command": "cmd.exe /c \"quser.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 248529,
+                                                          "ppid": 248523,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 248531,
+                                                              "ppid": 248529,
+                                                              "name": "quser.exe",
+                                                              "command": "quser.exe /server:WS-453",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

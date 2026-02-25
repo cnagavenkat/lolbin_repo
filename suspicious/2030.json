@@ -1,0 +1,206 @@
+{
+  "pid": 304969,
+  "ppid": 0,
+  "name": "BackupAgent.exe",
+  "command": "BackupAgent.exe ",
+  "children": [
+    {
+      "pid": 304975,
+      "ppid": 304969,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"ver\"",
+      "children": [
+        {
+          "pid": 304982,
+          "ppid": 304975,
+          "name": "vssadmin.exe",
+          "command": "vssadmin.exe list shadows",
+          "children": [
+            {
+              "pid": 304985,
+              "ppid": 304982,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+              "children": [
+                {
+                  "pid": 304990,
+                  "ppid": 304985,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                  "children": [
+                    {
+                      "pid": 304995,
+                      "ppid": 304990,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\suresh.das\\AppData\\Local\\Temp\\host_d60e58d3.txt\"",
+                      "children": [
+                        {
+                          "pid": 304998,
+                          "ppid": 304995,
+                          "name": "sc.exe",
+                          "command": "sc.exe query \"Dnscache\"",
+                          "children": [
+                            {
+                              "pid": 305002,
+                              "ppid": 304998,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\suresh.das\\AppData\\Local\\Temp\\host_81dc1e5b.txt\"",
+                              "children": [
+                                {
+                                  "pid": 305004,
+                                  "ppid": 305002,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 305008,
+                                      "ppid": 305004,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all",
+                                      "children": [
+                                        {
+                                          "pid": 305013,
+                                          "ppid": 305008,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 25 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 305018,
+                                              "ppid": 305013,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups",
+                                              "children": [
+                                                {
+                                                  "pid": 305021,
+                                                  "ppid": 305018,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 4 /nobreak",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 305027,
+                                  "ppid": 305002,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 305028,
+                                      "ppid": 305027,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\BlueYonder\\Logs\\System_67f0a11c.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 305030,
+                                          "ppid": 305028,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\suresh.das\\AppData\\Local\\Temp\\host_02aa97ee.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 305035,
+                                              "ppid": 305030,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Fabrikam\\Logs\\diag.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 305037,
+                                                  "ppid": 305035,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 305044,
+                                                      "ppid": 305037,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /priv",
+                                                      "children": [
+                                                        {
+                                                          "pid": 305046,
+                                                          "ppid": 305044,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 5 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 305053,
+                                                              "ppid": 305046,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv > \"C:\\Users\\suresh.das\\AppData\\Local\\Temp\\who_4d1969ae.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 305060,
+                                                                  "ppid": 305053,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /priv > \"C:\\Users\\suresh.das\\AppData\\Local\\Temp\\who_8e91fd96.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 305062,
+                                                                      "ppid": 305060,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/all > \"C:\\Users\\suresh.das\\AppData\\Local\\Temp\\who_1f114250.txt\"' -Wait\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 305063,
+                                                                          "ppid": 305062,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 305064,
+                                                                              "ppid": 305063,
+                                                                              "name": "choice.exe",
+                                                                              "command": "choice.exe /d y /t 15 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 305066,
+                                                                                  "ppid": 305064,
+                                                                                  "name": "choice.exe",
+                                                                                  "command": "choice.exe /d y /t 19 > nul",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

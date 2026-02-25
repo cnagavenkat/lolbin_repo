@@ -1,0 +1,389 @@
+{
+  "pid": 348378,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Runbooks\\Runbook_04ced55f.ps1\"",
+  "children": [
+    {
+      "pid": 348385,
+      "ppid": 348378,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"tasklist /svc\"",
+      "children": [
+        {
+          "pid": 348387,
+          "ppid": 348385,
+          "name": "wmic.exe",
+          "command": "wmic.exe process call create \"powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\IT\\Tools\\SupportDiag_5deac2ef.ps1\" -Mode Quick\"",
+          "children": [
+            {
+              "pid": 348392,
+              "ppid": 348387,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /v",
+              "children": [
+                {
+                  "pid": 348396,
+                  "ppid": 348392,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\who_5fe2f5d2.txt\"",
+                  "children": [
+                    {
+                      "pid": 348401,
+                      "ppid": 348396,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -WindowStyle Minimized -Command \"Get-Service | Out-File 'C:\\Users\\meera.das\\AppData\\Local\\Temp\\diag_57376d93.txt'\"",
+                      "children": [
+                        {
+                          "pid": 348407,
+                          "ppid": 348401,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 348414,
+                              "ppid": 348407,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\who_cc86c43c.txt\"",
+                              "children": [
+                                {
+                                  "pid": 348416,
+                                  "ppid": 348414,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+                                  "children": [
+                                    {
+                                      "pid": 348417,
+                                      "ppid": 348416,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\BlueYonder\\Logs\\Application_c6aa48ae.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 348423,
+                                          "ppid": 348417,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\who_4d604683.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 348426,
+                                              "ppid": 348423,
+                                              "name": "makecab.exe",
+                                              "command": "makecab.exe \"C:\\Build\\dist\\93087de0\\diag.txt\" \"C:\\Build\\dist\\93087de0\\diag.cab\"",
+                                              "children": [
+                                                {
+                                                  "pid": 348451,
+                                                  "ppid": 348426,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 348452,
+                                                      "ppid": 348451,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": [
+                                                        {
+                                                          "pid": 348453,
+                                                          "ppid": 348452,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\host_835c0226.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 348458,
+                                                              "ppid": 348453,
+                                                              "name": "findstr.exe",
+                                                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Woodgrove\\Logs\\diag.log\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 348463,
+                                                                  "ppid": 348458,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /svc",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 348464,
+                                                                      "ppid": 348463,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /groups > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\who_3576f30f.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 348465,
+                                                                          "ppid": 348464,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 348468,
+                                                                              "ppid": 348465,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 348469,
+                                                                          "ppid": 348464,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 348473,
+                                                                              "ppid": 348469,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 348478,
+                                                                                  "ppid": 348473,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /v",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 348479,
+                                                                                      "ppid": 348478,
+                                                                                      "name": "ping.exe",
+                                                                                      "command": "ping.exe -n 22 127.0.0.1 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 348481,
+                                                                                          "ppid": 348479,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /all > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\who_8da5582c.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 348484,
+                                                                                              "ppid": 348481,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 348489,
+                                                                                                  "ppid": 348484,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /priv",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 348492,
+                                                                                                      "ppid": 348489,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\host_9d487a71.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 348496,
+                                                                                                          "ppid": 348492,
+                                                                                                          "name": "whoami.exe",
+                                                                                                          "command": "whoami.exe",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 348499,
+                                                                                                              "ppid": 348496,
+                                                                                                              "name": "timeout.exe",
+                                                                                                              "command": "timeout.exe /t 23 /nobreak",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 348502,
+                                                                                                                  "ppid": 348499,
+                                                                                                                  "name": "hostname.exe",
+                                                                                                                  "command": "hostname.exe",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 348504,
+                                                                                                                      "ppid": 348502,
+                                                                                                                      "name": "hostname.exe",
+                                                                                                                      "command": "hostname.exe > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\host_159729fa.txt\"",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 348508,
+                                                                                                                          "ppid": 348504,
+                                                                                                                          "name": "whoami.exe",
+                                                                                                                          "command": "whoami.exe",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "pid": 348512,
+                                                                                                                              "ppid": 348508,
+                                                                                                                              "name": "tasklist.exe",
+                                                                                                                              "command": "tasklist.exe",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "pid": 348513,
+                                                                                                                                  "ppid": 348512,
+                                                                                                                                  "name": "hostname.exe",
+                                                                                                                                  "command": "hostname.exe > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\host_404d32a7.txt\"",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "pid": 348520,
+                                                                                                                                      "ppid": 348513,
+                                                                                                                                      "name": "hostname.exe",
+                                                                                                                                      "command": "hostname.exe",
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "pid": 348522,
+                                                                                                                                          "ppid": 348520,
+                                                                                                                                          "name": "choice.exe",
+                                                                                                                                          "command": "choice.exe /d y /t 24 > nul",
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "pid": 348529,
+                                                                                                                                              "ppid": 348522,
+                                                                                                                                              "name": "whoami.exe",
+                                                                                                                                              "command": "whoami.exe /groups",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "pid": 348535,
+                                                                                                                                                  "ppid": 348529,
+                                                                                                                                                  "name": "hostname.exe",
+                                                                                                                                                  "command": "hostname.exe > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\host_6e062a97.txt\"",
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "pid": 348537,
+                                                                                                                                                      "ppid": 348535,
+                                                                                                                                                      "name": "tasklist.exe",
+                                                                                                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                                                                                      "children": [
+                                                                                                                                                        {
+                                                                                                                                                          "pid": 348543,
+                                                                                                                                                          "ppid": 348537,
+                                                                                                                                                          "name": "tasklist.exe",
+                                                                                                                                                          "command": "tasklist.exe /v",
+                                                                                                                                                          "children": [
+                                                                                                                                                            {
+                                                                                                                                                              "pid": 348544,
+                                                                                                                                                              "ppid": 348543,
+                                                                                                                                                              "name": "whoami.exe",
+                                                                                                                                                              "command": "whoami.exe /groups > \"C:\\Users\\meera.das\\AppData\\Local\\Temp\\who_3cd41b13.txt\"",
+                                                                                                                                                              "children": [
+                                                                                                                                                                {
+                                                                                                                                                                  "pid": 348546,
+                                                                                                                                                                  "ppid": 348544,
+                                                                                                                                                                  "name": "whoami.exe",
+                                                                                                                                                                  "command": "whoami.exe",
+                                                                                                                                                                  "children": [
+                                                                                                                                                                    {
+                                                                                                                                                                      "pid": 348553,
+                                                                                                                                                                      "ppid": 348546,
+                                                                                                                                                                      "name": "ping.exe",
+                                                                                                                                                                      "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                                                                                                                                                      "children": [
+                                                                                                                                                                        {
+                                                                                                                                                                          "pid": 348554,
+                                                                                                                                                                          "ppid": 348553,
+                                                                                                                                                                          "name": "tasklist.exe",
+                                                                                                                                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                                                                                                          "children": []
+                                                                                                                                                                        }
+                                                                                                                                                                      ]
+                                                                                                                                                                    }
+                                                                                                                                                                  ]
+                                                                                                                                                                }
+                                                                                                                                                              ]
+                                                                                                                                                            }
+                                                                                                                                                          ]
+                                                                                                                                                        }
+                                                                                                                                                      ]
+                                                                                                                                                    }
+                                                                                                                                                  ]
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            }
+                                                                                                                                          ]
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 348431,
+      "ppid": 348378,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 21\"",
+      "children": [
+        {
+          "pid": 348436,
+          "ppid": 348431,
+          "name": "whoami.exe",
+          "command": "whoami.exe /all",
+          "children": [
+            {
+              "pid": 348440,
+              "ppid": 348436,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe",
+              "children": [
+                {
+                  "pid": 348445,
+                  "ppid": 348440,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /svc",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

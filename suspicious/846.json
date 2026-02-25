@@ -1,0 +1,276 @@
+{
+  "pid": 154401,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 154404,
+      "ppid": 154401,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"tasklist /svc\"",
+      "children": [
+        {
+          "pid": 154407,
+          "ppid": 154404,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 10 > nul",
+          "children": [
+            {
+              "pid": 154413,
+              "ppid": 154407,
+              "name": "vssadmin.exe",
+              "command": "vssadmin.exe list providers",
+              "children": [
+                {
+                  "pid": 154415,
+                  "ppid": 154413,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe",
+                  "children": [
+                    {
+                      "pid": 154419,
+                      "ppid": 154415,
+                      "name": "cmd.exe",
+                      "command": "cmd.exe /c \"tasklist.exe /svc\"",
+                      "children": [
+                        {
+                          "pid": 154423,
+                          "ppid": 154419,
+                          "name": "cmd.exe",
+                          "command": "cmd.exe /c \"timeout.exe /t 13 /nobreak\"",
+                          "children": [
+                            {
+                              "pid": 154426,
+                              "ppid": 154423,
+                              "name": "wmic.exe",
+                              "command": "wmic.exe service get Name,StartMode,State",
+                              "children": [
+                                {
+                                  "pid": 154427,
+                                  "ppid": 154426,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\rahul.verma\\AppData\\Local\\Temp\\host_0e79964f.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 154431,
+                                      "ppid": 154427,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 154432,
+                                          "ppid": 154431,
+                                          "name": "schtasks.exe",
+                                          "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+                                          "children": [
+                                            {
+                                              "pid": 154436,
+                                              "ppid": 154432,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups > \"C:\\Users\\rahul.verma\\AppData\\Local\\Temp\\who_771ddd1f.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 154442,
+                                                  "ppid": 154436,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 154447,
+                                                      "ppid": 154442,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": [
+                                                        {
+                                                          "pid": 154450,
+                                                          "ppid": 154447,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 154451,
+                                                              "ppid": 154450,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 154455,
+                                                                  "ppid": 154451,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 154459,
+                                                          "ppid": 154447,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Minimized -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\rahul.verma\\AppData\\Local\\Temp\\inv_2b5006de.txt'\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 154465,
+                                                              "ppid": 154459,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 154467,
+                                                                  "ppid": 154465,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 154469,
+                                                                      "ppid": 154467,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\rahul.verma\\AppData\\Local\\Temp\\host_b9da4673.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 154475,
+                                                                          "ppid": 154469,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 154479,
+                                                                              "ppid": 154475,
+                                                                              "name": "timeout.exe",
+                                                                              "command": "timeout.exe /t 3 /nobreak",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 154493,
+                                                                                  "ppid": 154479,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\rahul.verma\\AppData\\Local\\Temp\\host_9bbc18ea.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 154497,
+                                                                                      "ppid": 154493,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 154501,
+                                                                                          "ppid": 154497,
+                                                                                          "name": "ping.exe",
+                                                                                          "command": "ping.exe -n 16 127.0.0.1 > nul",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 154504,
+                                                                                              "ppid": 154501,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 154510,
+                                                                                                  "ppid": 154504,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /groups > \"C:\\Users\\rahul.verma\\AppData\\Local\\Temp\\who_df1abeed.txt\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 154514,
+                                                                                                      "ppid": 154510,
+                                                                                                      "name": "whoami.exe",
+                                                                                                      "command": "whoami.exe /priv > \"C:\\Users\\rahul.verma\\AppData\\Local\\Temp\\who_3feb8703.txt\"",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            },
+                                                                                            {
+                                                                                              "pid": 154518,
+                                                                                              "ppid": 154501,
+                                                                                              "name": "tasklist.exe",
+                                                                                              "command": "tasklist.exe /svc",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 154519,
+                                                                                                  "ppid": 154518,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /groups",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 154522,
+                                                                                                      "ppid": 154519,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 154482,
+      "ppid": 154401,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+      "children": [
+        {
+          "pid": 154486,
+          "ppid": 154482,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\rahul.verma\\AppData\\Local\\Temp\\host_9ae86471.txt\"",
+          "children": [
+            {
+              "pid": 154487,
+              "ppid": 154486,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

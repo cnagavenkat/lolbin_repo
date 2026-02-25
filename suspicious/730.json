@@ -1,0 +1,205 @@
+{
+  "pid": 140867,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 140871,
+      "ppid": 140867,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 20 > nul",
+      "children": [
+        {
+          "pid": 140875,
+          "ppid": 140871,
+          "name": "net.exe",
+          "command": "net.exe use S: \"\\\\ops\\maint\" /persistent:no",
+          "children": [
+            {
+              "pid": 140877,
+              "ppid": 140875,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 17 /nobreak",
+              "children": [
+                {
+                  "pid": 140898,
+                  "ppid": 140877,
+                  "name": "quser.exe",
+                  "command": "quser.exe /server:LAP-278",
+                  "children": [
+                    {
+                      "pid": 140901,
+                      "ppid": 140898,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe",
+                      "children": [
+                        {
+                          "pid": 140902,
+                          "ppid": 140901,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /create /tn \"\\Alpine\\Support\\Cleanup\" /tr \"C:\\IT\\Runbooks\\diag_9d483b5a.cmd\" /sc minute /mo 30 /f",
+                          "children": [
+                            {
+                              "pid": 140907,
+                              "ppid": 140902,
+                              "name": "quser.exe",
+                              "command": "quser.exe /server:APP-281",
+                              "children": [
+                                {
+                                  "pid": 140913,
+                                  "ppid": 140907,
+                                  "name": "schtasks.exe",
+                                  "command": "schtasks.exe /run /tn \"\\Contoso\\Support\\Diag\"",
+                                  "children": [
+                                    {
+                                      "pid": 140917,
+                                      "ppid": 140913,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\farhan.mishra\\AppData\\Local\\Temp\\host_dee750ee.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 140922,
+                                          "ppid": 140917,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe > \"C:\\Users\\farhan.mishra\\AppData\\Local\\Temp\\who_110a0796.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 140927,
+                                              "ppid": 140922,
+                                              "name": "reg.exe",
+                                              "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                              "children": [
+                                                {
+                                                  "pid": 140928,
+                                                  "ppid": 140927,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\farhan.mishra\\AppData\\Local\\Temp\\host_7b935477.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 140946,
+                                                      "ppid": 140928,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /priv > \"C:\\Users\\farhan.mishra\\AppData\\Local\\Temp\\who_3878ea3c.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 140949,
+                                                          "ppid": 140946,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 140952,
+                                                              "ppid": 140949,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 140956,
+                                                                  "ppid": 140952,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\farhan.mishra\\AppData\\Local\\Temp\\host_f0fa5dc8.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 140957,
+                                                                      "ppid": 140956,
+                                                                      "name": "cmd.exe",
+                                                                      "command": "cmd.exe /c \"whoami.exe /priv\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 140880,
+      "ppid": 140867,
+      "name": "whoami.exe",
+      "command": "whoami.exe /groups > \"C:\\Users\\farhan.mishra\\AppData\\Local\\Temp\\who_005c341e.txt\"",
+      "children": [
+        {
+          "pid": 140885,
+          "ppid": 140880,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 140891,
+              "ppid": 140885,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 24 > nul",
+              "children": [
+                {
+                  "pid": 140895,
+                  "ppid": 140891,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 140934,
+      "ppid": 140867,
+      "name": "quser.exe",
+      "command": "quser.exe /server:APP-944",
+      "children": [
+        {
+          "pid": 140935,
+          "ppid": 140934,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\farhan.mishra\\AppData\\Local\\Temp\\host_58dcfa74.txt\"",
+          "children": [
+            {
+              "pid": 140938,
+              "ppid": 140935,
+              "name": "quser.exe",
+              "command": "quser.exe /server:OPS-438",
+              "children": [
+                {
+                  "pid": 140943,
+                  "ppid": 140938,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

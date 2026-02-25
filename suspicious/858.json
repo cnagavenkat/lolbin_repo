@@ -1,0 +1,182 @@
+{
+  "pid": 156119,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 156122,
+      "ppid": 156119,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\aditya.reddy\\AppData\\Local\\Temp\\TemplateRun_cd67cbc2.wsf\"",
+      "children": [
+        {
+          "pid": 156125,
+          "ppid": 156122,
+          "name": "ping.exe",
+          "command": "ping.exe -n 25 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 156132,
+              "ppid": 156125,
+              "name": "schtasks.exe",
+              "command": "schtasks.exe /create /tn \"\\Alpine\\Maint\\Verify\" /tr \"C:\\Users\\aditya.reddy\\AppData\\Local\\Temp\\run_d1fbdb90.vbs\" /sc once /st 14:45 /f",
+              "children": [
+                {
+                  "pid": 156139,
+                  "ppid": 156132,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all > \"C:\\Users\\aditya.reddy\\AppData\\Local\\Temp\\who_9ba96138.txt\"",
+                  "children": [
+                    {
+                      "pid": 156158,
+                      "ppid": 156139,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 156162,
+                          "ppid": 156158,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 13 /nobreak",
+                          "children": [
+                            {
+                              "pid": 156163,
+                              "ppid": 156162,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /run /tn \"\\Microsoft\\Windows\\WDI\\ResolutionHost\"",
+                              "children": [
+                                {
+                                  "pid": 156165,
+                                  "ppid": 156163,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 21 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 156167,
+                                      "ppid": 156165,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 21 /nobreak",
+                                      "children": [
+                                        {
+                                          "pid": 156169,
+                                          "ppid": 156167,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 10 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 156172,
+                                              "ppid": 156169,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\aditya.reddy\\AppData\\Local\\Temp\\inv_c5ba235a.txt'\"",
+                                              "children": [
+                                                {
+                                                  "pid": 156173,
+                                                  "ppid": 156172,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /v",
+                                                  "children": [
+                                                    {
+                                                      "pid": 156178,
+                                                      "ppid": 156173,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 156179,
+                                                          "ppid": 156178,
+                                                          "name": "reg.exe",
+                                                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                                          "children": [
+                                                            {
+                                                              "pid": 156182,
+                                                              "ppid": 156179,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 156188,
+                                                                  "ppid": 156182,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\aditya.reddy\\AppData\\Local\\Temp\\host_c8301886.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 156193,
+                                                                      "ppid": 156188,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 156195,
+                                                                          "ppid": 156193,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe /v",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 156140,
+      "ppid": 156119,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe /svc",
+      "children": [
+        {
+          "pid": 156144,
+          "ppid": 156140,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 22 > nul",
+          "children": [
+            {
+              "pid": 156151,
+              "ppid": 156144,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /svc",
+              "children": [
+                {
+                  "pid": 156153,
+                  "ppid": 156151,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups > \"C:\\Users\\aditya.reddy\\AppData\\Local\\Temp\\who_1d0fe3fc.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

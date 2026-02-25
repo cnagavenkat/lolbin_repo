@@ -1,0 +1,141 @@
+{
+  "pid": 118043,
+  "ppid": 0,
+  "name": "mmc.exe",
+  "command": "mmc.exe /silent",
+  "children": [
+    {
+      "pid": 118048,
+      "ppid": 118043,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\Public\\Support_d85169cf.wsf\" /apply",
+      "children": [
+        {
+          "pid": 118051,
+          "ppid": 118048,
+          "name": "nltest.exe",
+          "command": "nltest.exe /dclist:FINLAB",
+          "children": [
+            {
+              "pid": 118058,
+              "ppid": 118051,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 118062,
+                  "ppid": 118058,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\who_34277cce.txt\"",
+                  "children": [
+                    {
+                      "pid": 118063,
+                      "ppid": 118062,
+                      "name": "wmic.exe",
+                      "command": "wmic.exe qfe get HotFixID,InstalledOn",
+                      "children": [
+                        {
+                          "pid": 118073,
+                          "ppid": 118063,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\host_bfcc9869.txt\"",
+                          "children": [
+                            {
+                              "pid": 118078,
+                              "ppid": 118073,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all",
+                              "children": [
+                                {
+                                  "pid": 118099,
+                                  "ppid": 118078,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 118102,
+                                      "ppid": 118099,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 23 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 118107,
+                                          "ppid": 118102,
+                                          "name": "ipconfig.exe",
+                                          "command": "ipconfig.exe /allcompartments /all",
+                                          "children": [
+                                            {
+                                              "pid": 118110,
+                                              "ppid": 118107,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'wevtutil.exe' -ArgumentList 'epl \"System\" \"C:\\ProgramData\\Alpine\\Logs\\System_6a9cde69.evtx\"' -Wait\"",
+                                              "children": [
+                                                {
+                                                  "pid": 118113,
+                                                  "ppid": 118110,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 2 /nobreak",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 118065,
+      "ppid": 118043,
+      "name": "whoami.exe",
+      "command": "whoami.exe /priv",
+      "children": [
+        {
+          "pid": 118072,
+          "ppid": 118065,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 4 /nobreak",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 118082,
+      "ppid": 118043,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 8 /nobreak",
+      "children": [
+        {
+          "pid": 118089,
+          "ppid": 118082,
+          "name": "ipconfig.exe",
+          "command": "ipconfig.exe /displaydns",
+          "children": [
+            {
+              "pid": 118095,
+              "ppid": 118089,
+              "name": "whoami.exe",
+              "command": "whoami.exe > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\who_c2ce8276.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

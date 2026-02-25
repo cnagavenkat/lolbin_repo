@@ -1,0 +1,237 @@
+{
+  "pid": 107501,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Maint\\Runbook_aebafb4c.ps1\"",
+  "children": [
+    {
+      "pid": 107503,
+      "ppid": 107501,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\Fabrikam\\Client\\Assist_2b077c9d.wsf\"",
+      "children": [
+        {
+          "pid": 107509,
+          "ppid": 107503,
+          "name": "reg.exe",
+          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+          "children": [
+            {
+              "pid": 107510,
+              "ppid": 107509,
+              "name": "quser.exe",
+              "command": "quser.exe /server:LAP-140",
+              "children": [
+                {
+                  "pid": 107515,
+                  "ppid": 107510,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                  "children": [
+                    {
+                      "pid": 107522,
+                      "ppid": 107515,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\host_240ec136.txt\"",
+                      "children": [
+                        {
+                          "pid": 107524,
+                          "ppid": 107522,
+                          "name": "nltest.exe",
+                          "command": "nltest.exe /sc_query:OPS",
+                          "children": [
+                            {
+                              "pid": 107525,
+                              "ppid": 107524,
+                              "name": "quser.exe",
+                              "command": "quser.exe",
+                              "children": [
+                                {
+                                  "pid": 107530,
+                                  "ppid": 107525,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\who_9b9333a2.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 107536,
+                                      "ppid": 107530,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\who_4f2509c6.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 107542,
+                                          "ppid": 107536,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": [
+                                            {
+                                              "pid": 107544,
+                                              "ppid": 107542,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\host_20e37095.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 107551,
+                                                  "ppid": 107544,
+                                                  "name": "quser.exe",
+                                                  "command": "quser.exe",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 107553,
+                                  "ppid": 107525,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\ProgramData\\Northwind\\Bridge\\CollectInventory_86a5b614.ps1\" -Host \"LAP-842\" -Mode Full",
+                                  "children": [
+                                    {
+                                      "pid": 107555,
+                                      "ppid": 107553,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+                                      "children": [
+                                        {
+                                          "pid": 107557,
+                                          "ppid": 107555,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\host_14b00fcd.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 107559,
+                                              "ppid": 107557,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_2a190745.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 107564,
+                                                  "ppid": 107559,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'nltest.exe' -ArgumentList '/dclist:ENG' -Wait\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 107570,
+                                                      "ppid": 107564,
+                                                      "name": "quser.exe",
+                                                      "command": "quser.exe /server:BLD-779",
+                                                      "children": [
+                                                        {
+                                                          "pid": 107575,
+                                                          "ppid": 107570,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\who_8dfc8dca.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 107581,
+                                                              "ppid": 107575,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 107582,
+                                                      "ppid": 107564,
+                                                      "name": "cmd.exe",
+                                                      "command": "cmd.exe /c \"quser.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 107583,
+                                                          "ppid": 107582,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\host_b899054a.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 107585,
+                                                              "ppid": 107583,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\who_1922099a.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 107587,
+                                                                  "ppid": 107585,
+                                                                  "name": "nltest.exe",
+                                                                  "command": "nltest.exe /sc_query:CORP",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 107589,
+                                                                      "ppid": 107587,
+                                                                      "name": "nltest.exe",
+                                                                      "command": "nltest.exe /dclist:ACME",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 107594,
+                                                                          "ppid": 107589,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\who_aabed6bb.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 107600,
+                                                                              "ppid": 107594,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe > \"C:\\Users\\arjun.gupta\\AppData\\Local\\Temp\\who_bdc11701.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 107603,
+                                                                                  "ppid": 107600,
+                                                                                  "name": "choice.exe",
+                                                                                  "command": "choice.exe /d y /t 17 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 107610,
+                                                                                      "ppid": 107603,
+                                                                                      "name": "cmd.exe",
+                                                                                      "command": "cmd.exe /c \"timeout.exe /t 10 /nobreak\"",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

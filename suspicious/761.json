@@ -1,0 +1,172 @@
+{
+  "pid": 144207,
+  "ppid": 0,
+  "name": "winlogon.exe",
+  "command": "winlogon.exe /silent",
+  "children": [
+    {
+      "pid": 144214,
+      "ppid": 144207,
+      "name": "forfiles.exe",
+      "command": "forfiles.exe /P \"C:\\Users\\kiran.singh\\AppData\\Local\\Temp\" /M *.cab /D -20 /C \"cmd /c del /q @path\"",
+      "children": [
+        {
+          "pid": 144215,
+          "ppid": 144214,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe",
+          "children": [
+            {
+              "pid": 144221,
+              "ppid": 144215,
+              "name": "ping.exe",
+              "command": "ping.exe -n 8 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 144223,
+                  "ppid": 144221,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /svc",
+                  "children": [
+                    {
+                      "pid": 144227,
+                      "ppid": 144223,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "pid": 144228,
+                  "ppid": 144221,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe",
+                  "children": [
+                    {
+                      "pid": 144232,
+                      "ppid": 144228,
+                      "name": "reg.exe",
+                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                      "children": [
+                        {
+                          "pid": 144238,
+                          "ppid": 144232,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 144244,
+                              "ppid": 144238,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 144249,
+                                  "ppid": 144244,
+                                  "name": "schtasks.exe",
+                                  "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+                                  "children": [
+                                    {
+                                      "pid": 144254,
+                                      "ppid": 144249,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe > \"C:\\Users\\kiran.singh\\AppData\\Local\\Temp\\who_284a5727.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 144257,
+                                          "ppid": 144254,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all > \"C:\\Users\\kiran.singh\\AppData\\Local\\Temp\\who_6da78464.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 144258,
+                                              "ppid": 144257,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 144264,
+                                                  "ppid": 144258,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\kiran.singh\\AppData\\Local\\Temp\\host_baeed215.txt\"' -Wait\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 144267,
+                                              "ppid": 144257,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Wingtip\\Logs\\support.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 144271,
+                                                  "ppid": 144267,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 144276,
+                                                      "ppid": 144271,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 144278,
+                                                          "ppid": 144276,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all > \"C:\\Users\\kiran.singh\\AppData\\Local\\Temp\\who_f5425a04.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 144283,
+                                                  "ppid": 144267,
+                                                  "name": "ping.exe",
+                                                  "command": "ping.exe -n 11 127.0.0.1 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 144284,
+                                                      "ppid": 144283,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": [
+                                                        {
+                                                          "pid": 144291,
+                                                          "ppid": 144284,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

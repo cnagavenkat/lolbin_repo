@@ -1,0 +1,277 @@
+{
+  "pid": 73848,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 73852,
+      "ppid": 73848,
+      "name": "ping.exe",
+      "command": "ping.exe -n 20 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 73857,
+          "ppid": 73852,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /create /tn \"\\Litware\\Deploy\\Cleanup\" /tr \"C:\\Users\\kiran.patel\\AppData\\Local\\Temp\\diag_4946fd3e.vbs\" /sc daily /st 09:03 /f",
+          "children": [
+            {
+              "pid": 73859,
+              "ppid": 73857,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 13 > nul",
+              "children": [
+                {
+                  "pid": 73864,
+                  "ppid": 73859,
+                  "name": "schtasks.exe",
+                  "command": "schtasks.exe /run /tn \"\\Microsoft\\Windows\\WDI\\ResolutionHost\"",
+                  "children": [
+                    {
+                      "pid": 73866,
+                      "ppid": 73864,
+                      "name": "reg.exe",
+                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                      "children": [
+                        {
+                          "pid": 73871,
+                          "ppid": 73866,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\kiran.patel\\AppData\\Local\\Temp\\evt_1593dbe9.txt'\"",
+                          "children": [
+                            {
+                              "pid": 73874,
+                              "ppid": 73871,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe",
+                              "children": [
+                                {
+                                  "pid": 73875,
+                                  "ppid": 73874,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 73880,
+                                      "ppid": 73875,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 21 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 73881,
+                                          "ppid": 73880,
+                                          "name": "schtasks.exe",
+                                          "command": "schtasks.exe /query /tn \"\\Contoso\\Support\\Diag\" /v /fo LIST",
+                                          "children": [
+                                            {
+                                              "pid": 73883,
+                                              "ppid": 73881,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all > \"C:\\Users\\kiran.patel\\AppData\\Local\\Temp\\who_b5f0729c.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 73886,
+                                                  "ppid": 73883,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /v",
+                                                  "children": [
+                                                    {
+                                                      "pid": 73893,
+                                                      "ppid": 73886,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": [
+                                                        {
+                                                          "pid": 73898,
+                                                          "ppid": 73893,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 73901,
+                                                      "ppid": 73886,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 73904,
+                                                          "ppid": 73901,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 5 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 73907,
+                                                              "ppid": 73904,
+                                                              "name": "reg.exe",
+                                                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 73912,
+                                                                  "ppid": 73907,
+                                                                  "name": "timeout.exe",
+                                                                  "command": "timeout.exe /t 24 /nobreak",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 73913,
+                                                                      "ppid": 73912,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\kiran.patel\\AppData\\Local\\Temp\\host_f55c6fd4.txt\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 73915,
+                                                          "ppid": 73901,
+                                                          "name": "reg.exe",
+                                                          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                                          "children": [
+                                                            {
+                                                              "pid": 73919,
+                                                              "ppid": 73915,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 73921,
+                                                                  "ppid": 73919,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 25 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 73925,
+                                                                      "ppid": 73921,
+                                                                      "name": "reg.exe",
+                                                                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 73926,
+                                                                          "ppid": 73925,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 73927,
+                                                                              "ppid": 73926,
+                                                                              "name": "reg.exe",
+                                                                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 73933,
+                                                                                  "ppid": 73927,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe > \"C:\\Users\\kiran.patel\\AppData\\Local\\Temp\\who_d745fc04.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 73934,
+                                                                                      "ppid": 73933,
+                                                                                      "name": "ping.exe",
+                                                                                      "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 73935,
+                                                                                          "ppid": 73934,
+                                                                                          "name": "choice.exe",
+                                                                                          "command": "choice.exe /d y /t 18 > nul",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 73939,
+                                                                                              "ppid": 73935,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /priv",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 73944,
+                                                                                                  "ppid": 73939,
+                                                                                                  "name": "reg.exe",
+                                                                                                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 73945,
+                                                                                                      "ppid": 73944,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\kiran.patel\\AppData\\Local\\Temp\\host_c7207b53.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 73947,
+                                                                                                          "ppid": 73945,
+                                                                                                          "name": "choice.exe",
+                                                                                                          "command": "choice.exe /d y /t 20 > nul",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 73951,
+                                                                                                              "ppid": 73947,
+                                                                                                              "name": "tasklist.exe",
+                                                                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 73954,
+                                                                                                                  "ppid": 73951,
+                                                                                                                  "name": "reg.exe",
+                                                                                                                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                                                                                                  "children": []
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "pid": 134651,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 134655,
+      "ppid": 134651,
+      "name": "ping.exe",
+      "command": "ping.exe -n 9 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 134658,
+          "ppid": 134655,
+          "name": "certutil.exe",
+          "command": "certutil.exe -addstore CA \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\corp_root.cer\"",
+          "children": [
+            {
+              "pid": 134662,
+              "ppid": 134658,
+              "name": "net.exe",
+              "command": "net.exe use Z: /delete /y",
+              "children": [
+                {
+                  "pid": 134664,
+                  "ppid": 134662,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 3 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 134669,
+                      "ppid": 134664,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 25 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 134670,
+                          "ppid": 134669,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 134674,
+                              "ppid": 134670,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 11 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 134675,
+                                  "ppid": 134674,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 134680,
+                  "ppid": 134662,
+                  "name": "wscript.exe",
+                  "command": "wscript.exe //nologo \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\LoginInit_5dc53921.wsf\"",
+                  "children": [
+                    {
+                      "pid": 134687,
+                      "ppid": 134680,
+                      "name": "net.exe",
+                      "command": "net.exe use W: \"\\\\bldsrv\\drops\" /persistent:no",
+                      "children": [
+                        {
+                          "pid": 134689,
+                          "ppid": 134687,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 14 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 134693,
+                              "ppid": 134689,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                              "children": [
+                                {
+                                  "pid": 134698,
+                                  "ppid": 134693,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe > \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\who_5053fd11.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 134701,
+                                      "ppid": 134698,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups > \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\who_e5129ab5.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 134703,
+                                          "ppid": 134701,
+                                          "name": "net.exe",
+                                          "command": "net.exe use S: \"\\\\bldsrv\\drops\" /persistent:no",
+                                          "children": [
+                                            {
+                                              "pid": 134709,
+                                              "ppid": 134703,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 12 > nul",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 134711,
+                                          "ppid": 134701,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Minimized -ExecutionPolicy Bypass -File \"C:\\ProgramData\\Alpine\\Runtime\\RunDiagnostics_62623eb1.ps1\" -Host \"LAP-657\" -Mode Delta",
+                                          "children": [
+                                            {
+                                              "pid": 134714,
+                                              "ppid": 134711,
+                                              "name": "net.exe",
+                                              "command": "net.exe use S: /delete /y",
+                                              "children": [
+                                                {
+                                                  "pid": 134718,
+                                                  "ppid": 134714,
+                                                  "name": "net.exe",
+                                                  "command": "net.exe use R: \"\\\\corp\\login\" /persistent:no",
+                                                  "children": [
+                                                    {
+                                                      "pid": 134722,
+                                                      "ppid": 134718,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\host_dd4c23c4.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 134723,
+                                                          "ppid": 134722,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all > \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\who_d260c0bc.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 134726,
+                                              "ppid": 134711,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 134729,
+                                                  "ppid": 134726,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe > \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\who_41ccdc95.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 134732,
+                                                      "ppid": 134729,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 134739,
+                                                  "ppid": 134726,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 10 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 134740,
+                                                      "ppid": 134739,
+                                                      "name": "net.exe",
+                                                      "command": "net.exe use T: \"\\\\filesrv\\IT\\Scripts\" /persistent:no",
+                                                      "children": [
+                                                        {
+                                                          "pid": 134746,
+                                                          "ppid": 134740,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 134747,
+                                                              "ppid": 134746,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

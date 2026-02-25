@@ -1,0 +1,299 @@
+{
+  "pid": 306569,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 306571,
+      "ppid": 306569,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -File \"C:\\IT\\Runbooks\\RunDiagnostics_7b4c2349.ps1\" -Host \"WS-142\" -Mode Delta",
+      "children": [
+        {
+          "pid": 306574,
+          "ppid": 306571,
+          "name": "bitsadmin.exe",
+          "command": "bitsadmin.exe /transfer Job23ac3bd9 /download /priority NORMAL \"http://intra-update.corp.local/pki/root.cer\" \"C:\\Users\\karthik.jain\\AppData\\Local\\Temp\\bridge.bin\"",
+          "children": [
+            {
+              "pid": 306576,
+              "ppid": 306574,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv > \"C:\\Users\\karthik.jain\\AppData\\Local\\Temp\\who_50727648.txt\"",
+              "children": [
+                {
+                  "pid": 306598,
+                  "ppid": 306576,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 306599,
+                      "ppid": 306598,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": [
+                        {
+                          "pid": 306606,
+                          "ppid": 306599,
+                          "name": "expand.exe",
+                          "command": "expand.exe \"C:\\ProgramData\\Contoso\\Assist\\runtime.cab\" -F:* \"C:\\ProgramData\\Alpine\\Runtime\"",
+                          "children": [
+                            {
+                              "pid": 306611,
+                              "ppid": 306606,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 21 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 306617,
+                                  "ppid": 306611,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\karthik.jain\\AppData\\Local\\Temp\\host_e6b8a8f5.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 306620,
+                                      "ppid": 306617,
+                                      "name": "vssadmin.exe",
+                                      "command": "vssadmin.exe list shadowstorage",
+                                      "children": [
+                                        {
+                                          "pid": 306624,
+                                          "ppid": 306620,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\karthik.jain\\AppData\\Local\\Temp\\host_8c73da3d.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 306627,
+                                              "ppid": 306624,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 22 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 306631,
+                                                  "ppid": 306627,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 306637,
+                                                      "ppid": 306631,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 306640,
+                                                          "ppid": 306637,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups > \"C:\\Users\\karthik.jain\\AppData\\Local\\Temp\\who_cf0bbdcb.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 306643,
+                                                              "ppid": 306640,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\karthik.jain\\AppData\\Local\\Temp\\host_56757740.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 306649,
+                                                                  "ppid": 306643,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\karthik.jain\\AppData\\Local\\Temp\\host_8af39876.txt\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 306654,
+                                                  "ppid": 306627,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 13 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 306657,
+                                                      "ppid": 306654,
+                                                      "name": "wevtutil.exe",
+                                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\BlueYonder\\Logs\\Microsoft-Windows-TaskScheduler_Operational_2d5d8566.evtx\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 306658,
+                                                          "ppid": 306657,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 306661,
+                                                              "ppid": 306658,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 6 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 306666,
+                                                                  "ppid": 306661,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 306673,
+                                                                      "ppid": 306666,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 306679,
+                                                                          "ppid": 306673,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 8 /nobreak",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 306680,
+                                                                              "ppid": 306679,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv > \"C:\\Users\\karthik.jain\\AppData\\Local\\Temp\\who_5ee15119.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 306681,
+                                                                                  "ppid": 306680,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 306688,
+                                                                                      "ppid": 306681,
+                                                                                      "name": "choice.exe",
+                                                                                      "command": "choice.exe /d y /t 9 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 306692,
+                                                                                          "ppid": 306688,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\karthik.jain\\AppData\\Local\\Temp\\host_86bc653d.txt\"",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "pid": 306696,
+                                                                                  "ppid": 306680,
+                                                                                  "name": "ping.exe",
+                                                                                  "command": "ping.exe -n 16 127.0.0.1 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 306700,
+                                                                                      "ppid": 306696,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\karthik.jain\\AppData\\Local\\Temp\\host_de57335c.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 306701,
+                                                                                          "ppid": 306700,
+                                                                                          "name": "timeout.exe",
+                                                                                          "command": "timeout.exe /t 4 /nobreak",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 306703,
+                                                                                              "ppid": 306701,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /all > \"C:\\Users\\karthik.jain\\AppData\\Local\\Temp\\who_efcec6ff.txt\"",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    },
+                                                                                    {
+                                                                                      "pid": 306710,
+                                                                                      "ppid": 306696,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 306717,
+                                                                                          "ppid": 306710,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\karthik.jain\\AppData\\Local\\Temp\\host_95842dd3.txt\"",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 306581,
+      "ppid": 306569,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 6 /nobreak",
+      "children": [
+        {
+          "pid": 306583,
+          "ppid": 306581,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 306590,
+              "ppid": 306583,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv",
+              "children": [
+                {
+                  "pid": 306597,
+                  "ppid": 306590,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\karthik.jain\\AppData\\Local\\Temp\\host_46de476c.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

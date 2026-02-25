@@ -1,0 +1,142 @@
+{
+  "pid": 110698,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe /diag",
+  "children": [
+    {
+      "pid": 110701,
+      "ppid": 110698,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\ProfileInit_57b558bd.ps1\" -Host \"SUP-165\" -Mode Full",
+      "children": [
+        {
+          "pid": 110708,
+          "ppid": 110701,
+          "name": "quser.exe",
+          "command": "quser.exe /server:OPS-118",
+          "children": [
+            {
+              "pid": 110711,
+              "ppid": 110708,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv",
+              "children": [
+                {
+                  "pid": 110716,
+                  "ppid": 110711,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\who_14389458.txt\"",
+                  "children": [
+                    {
+                      "pid": 110720,
+                      "ppid": 110716,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all",
+                      "children": [
+                        {
+                          "pid": 110724,
+                          "ppid": 110720,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe",
+                          "children": [
+                            {
+                              "pid": 110731,
+                              "ppid": 110724,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\host_a31591ff.txt\"",
+                              "children": [
+                                {
+                                  "pid": 110736,
+                                  "ppid": 110731,
+                                  "name": "wmic.exe",
+                                  "command": "wmic.exe os get Caption,Version,BuildNumber /value",
+                                  "children": [
+                                    {
+                                      "pid": 110740,
+                                      "ppid": 110736,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Wingtip\\Logs\\Microsoft-Windows-TaskScheduler_Operational_3ed15a40.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 110744,
+                                          "ppid": 110740,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Northwind\\Logs\\Security_a8b18687.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 110748,
+                                              "ppid": 110744,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Wingtip\\Logs\\support.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 110751,
+                                                  "ppid": 110748,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 15 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 110756,
+                                                      "ppid": 110751,
+                                                      "name": "wevtutil.exe",
+                                                      "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Wingtip\\Logs\\Security_99d24145.evtx\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 110760,
+                                                  "ppid": 110748,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 110762,
+                                                      "ppid": 110760,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 110765,
+                                                          "ppid": 110762,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\host_f5d9f635.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 110770,
+                                                              "ppid": 110765,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

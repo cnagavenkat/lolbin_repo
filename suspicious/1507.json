@@ -1,0 +1,243 @@
+{
+  "pid": 235276,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Runbooks\\Runbook_fd9936e9.ps1\"",
+  "children": [
+    {
+      "pid": 235282,
+      "ppid": 235276,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\Public\\Cert_521d030f.vbs\" /repair",
+      "children": [
+        {
+          "pid": 235288,
+          "ppid": 235282,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 7 > nul",
+          "children": [
+            {
+              "pid": 235294,
+              "ppid": 235288,
+              "name": "regsvr32.exe",
+              "command": "regsvr32.exe /s \"C:\\Build\\dist\\c629582a\\plugin.dll\"",
+              "children": [
+                {
+                  "pid": 235298,
+                  "ppid": 235294,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\nisha.reddy\\AppData\\Local\\Temp\\who_24b915bb.txt\"",
+                  "children": [
+                    {
+                      "pid": 235305,
+                      "ppid": 235298,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                      "children": [
+                        {
+                          "pid": 235309,
+                          "ppid": 235305,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 235310,
+                      "ppid": 235298,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 235313,
+                          "ppid": 235310,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 2 /nobreak",
+                          "children": [
+                            {
+                              "pid": 235336,
+                              "ppid": 235313,
+                              "name": "rundll32.exe",
+                              "command": "rundll32.exe \"C:\\ProgramData\\Wingtip\\Profile\\helper.dll\",DllRegisterServer",
+                              "children": [
+                                {
+                                  "pid": 235342,
+                                  "ppid": 235336,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\nisha.reddy\\AppData\\Local\\Temp\\who_3413fcdd.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 235348,
+                                      "ppid": 235342,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\nisha.reddy\\AppData\\Local\\Temp\\host_68b254e2.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 235353,
+                                          "ppid": 235348,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 16 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 235360,
+                                              "ppid": 235353,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 235361,
+                                                  "ppid": 235360,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv",
+                                                  "children": [
+                                                    {
+                                                      "pid": 235365,
+                                                      "ppid": 235361,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\nisha.reddy\\AppData\\Local\\Temp\\host_4e105d0d.txt\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 235371,
+                                          "ppid": 235348,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 235376,
+                                              "ppid": 235371,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 235380,
+                                                  "ppid": 235376,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv > \"C:\\Users\\nisha.reddy\\AppData\\Local\\Temp\\who_e8f57c5e.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 235385,
+                                                      "ppid": 235380,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 235400,
+                                                          "ppid": 235385,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/all' -Wait\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 235407,
+                                                              "ppid": 235400,
+                                                              "name": "reg.exe",
+                                                              "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 235408,
+                                                                  "ppid": 235407,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 235319,
+      "ppid": 235276,
+      "name": "whoami.exe",
+      "command": "whoami.exe /all > \"C:\\Users\\nisha.reddy\\AppData\\Local\\Temp\\who_c1bf70e0.txt\"",
+      "children": [
+        {
+          "pid": 235323,
+          "ppid": 235319,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 235327,
+              "ppid": 235323,
+              "name": "ping.exe",
+              "command": "ping.exe -n 5 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 235334,
+                  "ppid": 235327,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups > \"C:\\Users\\nisha.reddy\\AppData\\Local\\Temp\\who_5c7e12f9.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 235387,
+      "ppid": 235276,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\nisha.reddy\\AppData\\Local\\Temp\\host_f203b00e.txt\"",
+      "children": [
+        {
+          "pid": 235391,
+          "ppid": 235387,
+          "name": "whoami.exe",
+          "command": "whoami.exe > \"C:\\Users\\nisha.reddy\\AppData\\Local\\Temp\\who_145cb9a6.txt\"",
+          "children": [
+            {
+              "pid": 235395,
+              "ppid": 235391,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups",
+              "children": [
+                {
+                  "pid": 235396,
+                  "ppid": 235395,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\nisha.reddy\\AppData\\Local\\Temp\\who_56d8c9cc.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

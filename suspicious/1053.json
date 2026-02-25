@@ -1,0 +1,102 @@
+{
+  "pid": 182339,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 182342,
+      "ppid": 182339,
+      "name": "certutil.exe",
+      "command": "certutil.exe -store -user Root",
+      "children": [
+        {
+          "pid": 182345,
+          "ppid": 182342,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+          "children": [
+            {
+              "pid": 182347,
+              "ppid": 182345,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\suresh.sharma\\AppData\\Local\\Temp\\who_0c561908.txt\"",
+              "children": [
+                {
+                  "pid": 182350,
+                  "ppid": 182347,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -File \"C:\\Users\\Public\\RunDiagnostics_c13ae0bb.ps1\" -Host \"LAP-711\" -Mode Full",
+                  "children": [
+                    {
+                      "pid": 182352,
+                      "ppid": 182350,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv > \"C:\\Users\\suresh.sharma\\AppData\\Local\\Temp\\who_11ff54ac.txt\"",
+                      "children": [
+                        {
+                          "pid": 182358,
+                          "ppid": 182352,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 5 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 182361,
+                              "ppid": 182358,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 182368,
+                          "ppid": 182352,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv > \"C:\\Users\\suresh.sharma\\AppData\\Local\\Temp\\who_9aa042c3.txt\"",
+                          "children": [
+                            {
+                              "pid": 182369,
+                              "ppid": 182368,
+                              "name": "makecab.exe",
+                              "command": "makecab.exe \"C:\\ProgramData\\BlueYonder\\Logs\\trace.etl\" \"C:\\ProgramData\\BlueYonder\\Logs\\trace.cab\"",
+                              "children": [
+                                {
+                                  "pid": 182371,
+                                  "ppid": 182369,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all > \"C:\\Users\\suresh.sharma\\AppData\\Local\\Temp\\who_9143b1f7.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 182374,
+                                      "ppid": 182371,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Litware\\Logs\\System_853e8bc1.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 182376,
+                                          "ppid": 182374,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

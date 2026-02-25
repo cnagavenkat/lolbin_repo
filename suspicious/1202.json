@@ -1,0 +1,156 @@
+{
+  "pid": 196940,
+  "ppid": 0,
+  "name": "mmc.exe",
+  "command": "mmc.exe /silent",
+  "children": [
+    {
+      "pid": 196945,
+      "ppid": 196940,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -File \"C:\\IT\\Runbooks\\ProfileInit_923c1fcc.ps1\" -Host \"ENG-197\" -Mode Full",
+      "children": [
+        {
+          "pid": 196952,
+          "ppid": 196945,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 24 > nul",
+          "children": [
+            {
+              "pid": 196959,
+              "ppid": 196952,
+              "name": "certutil.exe",
+              "command": "certutil.exe -dump \"C:\\Users\\isha.rao\\AppData\\Local\\Temp\\corp_root.cer\"",
+              "children": [
+                {
+                  "pid": 196963,
+                  "ppid": 196959,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": [
+                    {
+                      "pid": 196965,
+                      "ppid": 196963,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 7 127.0.0.1 > nul",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "pid": 196971,
+                  "ppid": 196959,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\isha.rao\\AppData\\Local\\Temp\\host_14a672c1.txt\"",
+                  "children": [
+                    {
+                      "pid": 196972,
+                      "ppid": 196971,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                      "children": [
+                        {
+                          "pid": 196974,
+                          "ppid": 196972,
+                          "name": "wevtutil.exe",
+                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Alpine\\Logs\\System_9dc8033a.evtx\"",
+                          "children": [
+                            {
+                              "pid": 196981,
+                              "ppid": 196974,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 196987,
+                                  "ppid": 196981,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 6 /nobreak",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 196992,
+                              "ppid": 196974,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\isha.rao\\AppData\\Local\\Temp\\evt_97c997e8.txt'\"",
+                              "children": [
+                                {
+                                  "pid": 196997,
+                                  "ppid": 196992,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 197000,
+                                      "ppid": 196997,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 5 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 197006,
+                                          "ppid": 197000,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": [
+                                            {
+                                              "pid": 197008,
+                                              "ppid": 197006,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 197010,
+                                                  "ppid": 197008,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all > \"C:\\Users\\isha.rao\\AppData\\Local\\Temp\\who_f5486e13.txt\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 197017,
+                                          "ppid": 197000,
+                                          "name": "makecab.exe",
+                                          "command": "makecab.exe \"C:\\Users\\isha.rao\\AppData\\Local\\Temp\\trace.etl\" \"C:\\Users\\isha.rao\\AppData\\Local\\Temp\\trace.cab\"",
+                                          "children": [
+                                            {
+                                              "pid": 197019,
+                                              "ppid": 197017,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 197025,
+                                                  "ppid": 197019,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

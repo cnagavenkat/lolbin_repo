@@ -1,0 +1,134 @@
+{
+  "pid": 110071,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 110075,
+      "ppid": 110071,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"set\"",
+      "children": [
+        {
+          "pid": 110077,
+          "ppid": 110075,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+          "children": [
+            {
+              "pid": 110084,
+              "ppid": 110077,
+              "name": "cmd.exe",
+              "command": "cmd.exe /k \"ver\"",
+              "children": [
+                {
+                  "pid": 110085,
+                  "ppid": 110084,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\farhan.das\\AppData\\Local\\Temp\\host_bb3cb55f.txt\"",
+                  "children": [
+                    {
+                      "pid": 110087,
+                      "ppid": 110085,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 12 /nobreak",
+                      "children": [
+                        {
+                          "pid": 110094,
+                          "ppid": 110087,
+                          "name": "ipconfig.exe",
+                          "command": "ipconfig.exe /allcompartments /all",
+                          "children": [
+                            {
+                              "pid": 110096,
+                              "ppid": 110094,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 110101,
+                  "ppid": 110084,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                  "children": [
+                    {
+                      "pid": 110102,
+                      "ppid": 110101,
+                      "name": "quser.exe",
+                      "command": "quser.exe",
+                      "children": [
+                        {
+                          "pid": 110107,
+                          "ppid": 110102,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 25 > nul",
+                          "children": [
+                            {
+                              "pid": 110111,
+                              "ppid": 110107,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                              "children": [
+                                {
+                                  "pid": 110112,
+                                  "ppid": 110111,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\farhan.das\\AppData\\Local\\Temp\\who_78adced9.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 110118,
+                                      "ppid": 110112,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\farhan.das\\AppData\\Local\\Temp\\host_8f773715.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 110125,
+                                          "ppid": 110118,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Litware\\Logs\\System_1828595a.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 110129,
+                                              "ppid": 110125,
+                                              "name": "wmic.exe",
+                                              "command": "wmic.exe process get Name,ProcessId,ParentProcessId",
+                                              "children": [
+                                                {
+                                                  "pid": 110133,
+                                                  "ppid": 110129,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

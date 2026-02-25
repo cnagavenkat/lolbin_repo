@@ -1,0 +1,275 @@
+{
+  "pid": 253410,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe /service",
+  "children": [
+    {
+      "pid": 253413,
+      "ppid": 253410,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"hostname\"",
+      "children": [
+        {
+          "pid": 253414,
+          "ppid": 253413,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'ping.exe' -ArgumentList '-n 26 127.0.0.1 > nul' -Wait\"",
+          "children": [
+            {
+              "pid": 253419,
+              "ppid": 253414,
+              "name": "sc.exe",
+              "command": "sc.exe query \"Schedule\"",
+              "children": [
+                {
+                  "pid": 253421,
+                  "ppid": 253419,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 253422,
+                      "ppid": 253421,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 8 /nobreak",
+                      "children": [
+                        {
+                          "pid": 253426,
+                          "ppid": 253422,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\dev.singh\\AppData\\Local\\Temp\\host_772696d9.txt\"",
+                          "children": [
+                            {
+                              "pid": 253427,
+                              "ppid": 253426,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 12 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 253430,
+                                  "ppid": 253427,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 253437,
+                  "ppid": 253419,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\dev.singh\\AppData\\Local\\Temp\\host_37b8b0c3.txt\"",
+                  "children": [
+                    {
+                      "pid": 253441,
+                      "ppid": 253437,
+                      "name": "sc.exe",
+                      "command": "sc.exe qc \"BITS\"",
+                      "children": [
+                        {
+                          "pid": 253474,
+                          "ppid": 253441,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": [
+                            {
+                              "pid": 253479,
+                              "ppid": 253474,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 253482,
+                                  "ppid": 253479,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 253484,
+                              "ppid": 253474,
+                              "name": "wmic.exe",
+                              "command": "wmic.exe service get Name,StartMode,State",
+                              "children": [
+                                {
+                                  "pid": 253490,
+                                  "ppid": 253484,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                  "children": [
+                                    {
+                                      "pid": 253491,
+                                      "ppid": 253490,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 4 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 253492,
+                                          "ppid": 253491,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\IT\\Deploy\\RunDiagnostics_703222c8.ps1\" -Host \"WS-294\" -Mode Verify",
+                                          "children": [
+                                            {
+                                              "pid": 253493,
+                                              "ppid": 253492,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 253499,
+                                                  "ppid": 253493,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 253504,
+                                                      "ppid": 253499,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 253507,
+                                                          "ppid": 253504,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 12 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 253510,
+                                                              "ppid": 253507,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 253516,
+                                                                  "ppid": 253510,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /priv > \"C:\\Users\\dev.singh\\AppData\\Local\\Temp\\who_561f771a.txt\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 253518,
+                                                  "ppid": 253493,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups > \"C:\\Users\\dev.singh\\AppData\\Local\\Temp\\who_597a9ae8.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 253519,
+                                                      "ppid": 253518,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups > \"C:\\Users\\dev.singh\\AppData\\Local\\Temp\\who_fd644c95.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 253522,
+                                                          "ppid": 253519,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 4 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 253524,
+                                                              "ppid": 253522,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 253525,
+                                                                  "ppid": 253524,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 8 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 253527,
+                                                                      "ppid": 253525,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe > \"C:\\Users\\dev.singh\\AppData\\Local\\Temp\\who_a33b71ac.txt\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 253448,
+      "ppid": 253410,
+      "name": "whoami.exe",
+      "command": "whoami.exe /all > \"C:\\Users\\dev.singh\\AppData\\Local\\Temp\\who_6106a048.txt\"",
+      "children": [
+        {
+          "pid": 253454,
+          "ppid": 253448,
+          "name": "whoami.exe",
+          "command": "whoami.exe /all > \"C:\\Users\\dev.singh\\AppData\\Local\\Temp\\who_706a0812.txt\"",
+          "children": [
+            {
+              "pid": 253456,
+              "ppid": 253454,
+              "name": "whoami.exe",
+              "command": "whoami.exe",
+              "children": [
+                {
+                  "pid": 253462,
+                  "ppid": 253456,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 253467,
+                      "ppid": 253462,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\dev.singh\\AppData\\Local\\Temp\\host_5c1959f8.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

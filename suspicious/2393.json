@@ -1,0 +1,261 @@
+{
+  "pid": 357975,
+  "ppid": 0,
+  "name": "IRRunner.exe",
+  "command": "IRRunner.exe /service",
+  "children": [
+    {
+      "pid": 357978,
+      "ppid": 357975,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"tasklist /svc\"",
+      "children": [
+        {
+          "pid": 357980,
+          "ppid": 357978,
+          "name": "ping.exe",
+          "command": "ping.exe -n 17 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 357983,
+              "ppid": 357980,
+              "name": "certutil.exe",
+              "command": "certutil.exe -urlcache -split -f \"http://intra-update.corp.local/pki/root.cer\" \"C:\\Users\\Public\\agent.cab\"",
+              "children": [
+                {
+                  "pid": 357984,
+                  "ppid": 357983,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\ananya.patel\\AppData\\Local\\Temp\\who_e4234794.txt\"",
+                  "children": [
+                    {
+                      "pid": 357991,
+                      "ppid": 357984,
+                      "name": "certutil.exe",
+                      "command": "certutil.exe -addstore CA \"C:\\Users\\Public\\intermediate.cer\"",
+                      "children": [
+                        {
+                          "pid": 357994,
+                          "ppid": 357991,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 10 /nobreak",
+                          "children": [
+                            {
+                              "pid": 357995,
+                              "ppid": 357994,
+                              "name": "msiexec.exe",
+                              "command": "msiexec.exe /i \"C:\\ProgramData\\Litware\\Updater\\agent.msi\" /qb /l*v \"C:\\ProgramData\\Northwind\\Logs\\msi_ca224b82.log\"",
+                              "children": [
+                                {
+                                  "pid": 357996,
+                                  "ppid": 357995,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\ananya.patel\\AppData\\Local\\Temp\\host_1012747c.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 358023,
+                                      "ppid": 357996,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Litware\\Logs\\Application_0a876a70.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 358027,
+                                          "ppid": 358023,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                          "children": [
+                                            {
+                                              "pid": 358031,
+                                              "ppid": 358027,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe > \"C:\\Users\\ananya.patel\\AppData\\Local\\Temp\\who_a3237034.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 358036,
+                                                  "ppid": 358031,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups",
+                                                  "children": [
+                                                    {
+                                                      "pid": 358037,
+                                                      "ppid": 358036,
+                                                      "name": "schtasks.exe",
+                                                      "command": "schtasks.exe /query /fo LIST /v",
+                                                      "children": [
+                                                        {
+                                                          "pid": 358042,
+                                                          "ppid": 358037,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 358044,
+                                                              "ppid": 358042,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all > \"C:\\Users\\ananya.patel\\AppData\\Local\\Temp\\who_404a31b5.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 358048,
+                                                                  "ppid": 358044,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /v",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 358050,
+                                                                      "ppid": 358048,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 358053,
+                                                                          "ppid": 358050,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 358057,
+                                                                              "ppid": 358053,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\ananya.patel\\AppData\\Local\\Temp\\host_48288624.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 358058,
+                                                                                  "ppid": 358057,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\ananya.patel\\AppData\\Local\\Temp\\host_b87b2b13.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 358062,
+                                                                                      "ppid": 358058,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\ananya.patel\\AppData\\Local\\Temp\\host_8b2fbe77.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 358067,
+                                                                                          "ppid": 358062,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "pid": 358069,
+                                                                              "ppid": 358053,
+                                                                              "name": "timeout.exe",
+                                                                              "command": "timeout.exe /t 10 /nobreak",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 358071,
+                                                                                  "ppid": 358069,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /groups > \"C:\\Users\\ananya.patel\\AppData\\Local\\Temp\\who_672268be.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 358073,
+                                                                                      "ppid": 358071,
+                                                                                      "name": "ping.exe",
+                                                                                      "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 358074,
+                                                                                          "ppid": 358073,
+                                                                                          "name": "powershell.exe",
+                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 358076,
+                                                                                              "ppid": 358074,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /priv > \"C:\\Users\\ananya.patel\\AppData\\Local\\Temp\\who_e2e4e56b.txt\"",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 358002,
+      "ppid": 357975,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 7 > nul",
+      "children": [
+        {
+          "pid": 358006,
+          "ppid": 358002,
+          "name": "whoami.exe",
+          "command": "whoami.exe /groups",
+          "children": [
+            {
+              "pid": 358013,
+              "ppid": 358006,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe",
+              "children": [
+                {
+                  "pid": 358014,
+                  "ppid": 358013,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 358017,
+                      "ppid": 358014,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

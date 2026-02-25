@@ -1,0 +1,158 @@
+{
+  "pid": 288292,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 288294,
+      "ppid": 288292,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 21 > nul",
+      "children": [
+        {
+          "pid": 288296,
+          "ppid": 288294,
+          "name": "vssadmin.exe",
+          "command": "vssadmin.exe list shadowstorage",
+          "children": [
+            {
+              "pid": 288299,
+              "ppid": 288296,
+              "name": "ping.exe",
+              "command": "ping.exe -n 20 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 288302,
+                  "ppid": 288299,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\meera.menon\\AppData\\Local\\Temp\\who_64780ae4.txt\"",
+                  "children": [
+                    {
+                      "pid": 288304,
+                      "ppid": 288302,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'choice.exe' -ArgumentList '/d y /t 5 > nul' -Wait\"",
+                      "children": [
+                        {
+                          "pid": 288305,
+                          "ppid": 288304,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 19 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 288312,
+                              "ppid": 288305,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'tasklist.exe' -ArgumentList '/fi \"imagename eq svchost.exe\"' -Wait\"",
+                              "children": [
+                                {
+                                  "pid": 288316,
+                                  "ppid": 288312,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                  "children": [
+                                    {
+                                      "pid": 288322,
+                                      "ppid": 288316,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 21\"",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 288326,
+                              "ppid": 288305,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 22 > nul",
+                              "children": [
+                                {
+                                  "pid": 288332,
+                                  "ppid": 288326,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Alpine\\Logs\\System_ab991a34.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 288337,
+                                      "ppid": 288332,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups > \"C:\\Users\\meera.menon\\AppData\\Local\\Temp\\who_152c520b.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 288342,
+                                          "ppid": 288337,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                          "children": [
+                                            {
+                                              "pid": 288349,
+                                              "ppid": 288342,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 21 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 288355,
+                                                  "ppid": 288349,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Contoso\\Logs\\profile.log\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 288359,
+                                                      "ppid": 288355,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 13 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 288361,
+                                                          "ppid": 288359,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv > \"C:\\Users\\meera.menon\\AppData\\Local\\Temp\\who_1daa08ae.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 288362,
+                                                              "ppid": 288361,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 288363,
+                                                                  "ppid": 288362,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 23 127.0.0.1 > nul",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

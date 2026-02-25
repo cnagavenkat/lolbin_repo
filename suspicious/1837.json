@@ -1,0 +1,317 @@
+{
+  "pid": 280432,
+  "ppid": 0,
+  "name": "msbuild.exe",
+  "command": "msbuild.exe \"C:\\src\\Agent\\Bridge.csproj\" /t:Build /p:Configuration=Release",
+  "children": [
+    {
+      "pid": 280438,
+      "ppid": 280432,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\IT\\Runbooks\\CollectInventory_e4d11416.ps1\" -Host \"LAP-850\" -Mode Delta",
+      "children": [
+        {
+          "pid": 280444,
+          "ppid": 280438,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+          "children": [
+            {
+              "pid": 280449,
+              "ppid": 280444,
+              "name": "extrac32.exe",
+              "command": "extrac32.exe /Y \"C:\\ProgramData\\Fabrikam\\Support\\tools.cab\" /E /L \"C:\\Build\\staging\\18cd7643\"",
+              "children": [
+                {
+                  "pid": 280452,
+                  "ppid": 280449,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 280455,
+                      "ppid": 280452,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\host_628cde94.txt\"",
+                      "children": [
+                        {
+                          "pid": 280457,
+                          "ppid": 280455,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 21 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 280459,
+                              "ppid": 280457,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Fabrikam\\Logs\\deploy.log\"",
+                              "children": [
+                                {
+                                  "pid": 280466,
+                                  "ppid": 280459,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 280468,
+                                      "ppid": 280466,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 15 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 280470,
+                                          "ppid": 280468,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\host_e4b79b96.txt\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 280474,
+                                  "ppid": 280459,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 280480,
+                                      "ppid": 280474,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /v",
+                                      "children": [
+                                        {
+                                          "pid": 280481,
+                                          "ppid": 280480,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\who_77e32dad.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 280484,
+                                              "ppid": 280481,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups",
+                                              "children": [
+                                                {
+                                                  "pid": 280490,
+                                                  "ppid": 280484,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\host_22f49e83.txt\"' -Wait\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 280491,
+                                                      "ppid": 280490,
+                                                      "name": "cmd.exe",
+                                                      "command": "cmd.exe /k \"echo maintenance step\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 280497,
+                                                          "ppid": 280491,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 280498,
+                                                              "ppid": 280497,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 17 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 280499,
+                                                                  "ppid": 280498,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /all > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\who_53c8135c.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 280502,
+                                                                      "ppid": 280499,
+                                                                      "name": "timeout.exe",
+                                                                      "command": "timeout.exe /t 5 /nobreak",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 280525,
+                                                                          "ppid": 280502,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\host_8538bc4d.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 280526,
+                                                                              "ppid": 280525,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 280530,
+                                                                                  "ppid": 280526,
+                                                                                  "name": "timeout.exe",
+                                                                                  "command": "timeout.exe /t 13 /nobreak",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 280532,
+                                                                                      "ppid": 280530,
+                                                                                      "name": "choice.exe",
+                                                                                      "command": "choice.exe /d y /t 23 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 280537,
+                                                                                          "ppid": 280532,
+                                                                                          "name": "powershell.exe",
+                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 280542,
+                                                                                              "ppid": 280537,
+                                                                                              "name": "powershell.exe",
+                                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 280545,
+                                                                                                  "ppid": 280542,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /groups",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 280551,
+                                                                                                      "ppid": 280545,
+                                                                                                      "name": "powershell.exe",
+                                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 280556,
+                                                                                                          "ppid": 280551,
+                                                                                                          "name": "whoami.exe",
+                                                                                                          "command": "whoami.exe /all > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\who_1b25dcb7.txt\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 280563,
+                                                                                                              "ppid": 280556,
+                                                                                                              "name": "choice.exe",
+                                                                                                              "command": "choice.exe /d y /t 2 > nul",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 280567,
+                                                                                                                  "ppid": 280563,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe /groups",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 280569,
+                                                                                                                      "ppid": 280567,
+                                                                                                                      "name": "whoami.exe",
+                                                                                                                      "command": "whoami.exe /groups > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\who_1b47dc2a.txt\"",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 280575,
+                                                                                                                          "ppid": 280569,
+                                                                                                                          "name": "whoami.exe",
+                                                                                                                          "command": "whoami.exe /all",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "pid": 280582,
+                                                                                                                              "ppid": 280575,
+                                                                                                                              "name": "timeout.exe",
+                                                                                                                              "command": "timeout.exe /t 15 /nobreak",
+                                                                                                                              "children": []
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 280509,
+      "ppid": 280432,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 280514,
+          "ppid": 280509,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 16 > nul",
+          "children": [
+            {
+              "pid": 280520,
+              "ppid": 280514,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\aarav.nair\\AppData\\Local\\Temp\\host_e8bf8dcf.txt\"",
+              "children": [
+                {
+                  "pid": 280521,
+                  "ppid": 280520,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 23 > nul",
+                  "children": [
+                    {
+                      "pid": 280523,
+                      "ppid": 280521,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 15 /nobreak",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "pid": 61026,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 61030,
+      "ppid": 61026,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"hostname\"",
+      "children": [
+        {
+          "pid": 61033,
+          "ppid": 61030,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+          "children": [
+            {
+              "pid": 61039,
+              "ppid": 61033,
+              "name": "rundll32.exe",
+              "command": "rundll32.exe advapi32.dll,ProcessIdleTasks",
+              "children": [
+                {
+                  "pid": 61042,
+                  "ppid": 61039,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all > \"C:\\Users\\karthik.kulkarni\\AppData\\Local\\Temp\\who_868d5783.txt\"",
+                  "children": [
+                    {
+                      "pid": 61048,
+                      "ppid": 61042,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 3 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 61054,
+                          "ppid": 61048,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 5 /nobreak",
+                          "children": [
+                            {
+                              "pid": 61057,
+                              "ppid": 61054,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all > \"C:\\Users\\karthik.kulkarni\\AppData\\Local\\Temp\\who_ee6a1f58.txt\"",
+                              "children": [
+                                {
+                                  "pid": 61064,
+                                  "ppid": 61057,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all > \"C:\\Users\\karthik.kulkarni\\AppData\\Local\\Temp\\who_e45152b9.txt\"",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 61065,
+                      "ppid": 61042,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 61070,
+                          "ppid": 61065,
+                          "name": "sc.exe",
+                          "command": "sc.exe query \"wuauserv\"",
+                          "children": [
+                            {
+                              "pid": 61075,
+                              "ppid": 61070,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe",
+                              "children": [
+                                {
+                                  "pid": 61080,
+                                  "ppid": 61075,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\karthik.kulkarni\\AppData\\Local\\Temp\\host_02f3b2cf.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 61086,
+                                      "ppid": 61080,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Contoso\\Logs\\Application_f6f9335e.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 61089,
+                                          "ppid": 61086,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 61092,
+                                              "ppid": 61089,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'timeout.exe' -ArgumentList '/t 5 /nobreak' -Wait\"",
+                                              "children": [
+                                                {
+                                                  "pid": 61096,
+                                                  "ppid": 61092,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv > \"C:\\Users\\karthik.kulkarni\\AppData\\Local\\Temp\\who_afc539bb.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 61102,
+                                                      "ppid": 61096,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 61105,
+                                                          "ppid": 61102,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 61110,
+                                          "ppid": 61086,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\karthik.kulkarni\\AppData\\Local\\Temp\\host_d2f935bd.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 61113,
+                                              "ppid": 61110,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 61118,
+                                                  "ppid": 61113,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 61119,
+                                                      "ppid": 61118,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 14 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 61126,
+                                                          "ppid": 61119,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 61129,
+                                              "ppid": 61110,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\IT\\Scripts\\CollectInventory_ca484162.ps1\" -Host \"BLD-582\" -Mode Full",
+                                              "children": [
+                                                {
+                                                  "pid": 61133,
+                                                  "ppid": 61129,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 61139,
+                                                      "ppid": 61133,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 61143,
+                                                          "ppid": 61139,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all > \"C:\\Users\\karthik.kulkarni\\AppData\\Local\\Temp\\who_0bb44bf0.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 61149,
+                                                              "ppid": 61143,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 13 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 61154,
+                                                                  "ppid": 61149,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\karthik.kulkarni\\AppData\\Local\\Temp\\host_6b0a6e93.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 61160,
+                                                                      "ppid": 61154,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /all > \"C:\\Users\\karthik.kulkarni\\AppData\\Local\\Temp\\who_74b64c87.txt\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "pid": 95424,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 95425,
+      "ppid": 95424,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\TemplateRun_04982493.js\"",
+      "children": [
+        {
+          "pid": 95432,
+          "ppid": 95425,
+          "name": "msiexec.exe",
+          "command": "msiexec.exe /i \"C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\bridge.msi\" /qb /l*v \"C:\\ProgramData\\Northwind\\Logs\\msi_b2cb0c16.log\"",
+          "children": [
+            {
+              "pid": 95434,
+              "ppid": 95432,
+              "name": "wevtutil.exe",
+              "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\BlueYonder\\Logs\\System_b39ac271.evtx\"",
+              "children": [
+                {
+                  "pid": 95438,
+                  "ppid": 95434,
+                  "name": "reg.exe",
+                  "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                  "children": [
+                    {
+                      "pid": 95444,
+                      "ppid": 95438,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 8 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 95445,
+                          "ppid": 95444,
+                          "name": "cmd.exe",
+                          "command": "cmd.exe /c \"tasklist.exe /svc\"",
+                          "children": [
+                            {
+                              "pid": 95447,
+                              "ppid": 95445,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /create /tn \"\\Northwind\\Deploy\\Cleanup\" /tr \"C:\\ProgramData\\Contoso\\Profile\\sync_2a8dbab8.cmd\" /sc daily /st 12:50 /f /ru SYSTEM",
+                              "children": [
+                                {
+                                  "pid": 95450,
+                                  "ppid": 95447,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /svc",
+                                  "children": [
+                                    {
+                                      "pid": 95456,
+                                      "ppid": 95450,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\sched_33a53c0f.txt'\"",
+                                      "children": [
+                                        {
+                                          "pid": 95463,
+                                          "ppid": 95456,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Woodgrove\\Logs\\System_f9cbd90f.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 95469,
+                                              "ppid": 95463,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all",
+                                              "children": [
+                                                {
+                                                  "pid": 95473,
+                                                  "ppid": 95469,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups > \"C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\who_23ebe93b.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 95476,
+                                                      "ppid": 95473,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 95478,
+                                                          "ppid": 95476,
+                                                          "name": "wevtutil.exe",
+                                                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Fabrikam\\Logs\\Security_badb2a02.evtx\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 95481,
+                                                              "ppid": 95478,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 95488,
+                                                                  "ppid": 95481,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 95490,
+                                                                      "ppid": 95488,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 95496,
+                                                                          "ppid": 95490,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 95499,
+                                                                  "ppid": 95481,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 95500,
+                                                                      "ppid": 95499,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\host_a8b2280a.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 95503,
+                                                                          "ppid": 95500,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 21 /nobreak",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 95504,
+                                                                              "ppid": 95503,
+                                                                              "name": "wevtutil.exe",
+                                                                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Woodgrove\\Logs\\Microsoft-Windows-TaskScheduler_Operational_538b0070.evtx\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 95507,
+                                                                                  "ppid": 95504,
+                                                                                  "name": "ping.exe",
+                                                                                  "command": "ping.exe -n 16 127.0.0.1 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 95510,
+                                                                                      "ppid": 95507,
+                                                                                      "name": "cmd.exe",
+                                                                                      "command": "cmd.exe /c \"wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Northwind\\Logs\\Application_534eb71a.evtx\"\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 95514,
+                                                                                          "ppid": 95510,
+                                                                                          "name": "tasklist.exe",
+                                                                                          "command": "tasklist.exe /svc",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "pid": 54043,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 54050,
+      "ppid": 54043,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"ver\"",
+      "children": [
+        {
+          "pid": 54053,
+          "ppid": 54050,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /fo LIST /v",
+          "children": [
+            {
+              "pid": 54056,
+              "ppid": 54053,
+              "name": "ping.exe",
+              "command": "ping.exe -n 12 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 54063,
+                  "ppid": 54056,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 24 /nobreak",
+                  "children": [
+                    {
+                      "pid": 54068,
+                      "ppid": 54063,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 54072,
+                          "ppid": 54068,
+                          "name": "nltest.exe",
+                          "command": "nltest.exe /sc_query:ENG",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 54076,
+                  "ppid": 54056,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\aditya.rao\\AppData\\Local\\Temp\\who_f93058a8.txt\"",
+                  "children": [
+                    {
+                      "pid": 54079,
+                      "ppid": 54076,
+                      "name": "nltest.exe",
+                      "command": "nltest.exe /dclist:FINLAB",
+                      "children": [
+                        {
+                          "pid": 54085,
+                          "ppid": 54079,
+                          "name": "nltest.exe",
+                          "command": "nltest.exe /dclist:DEVOPS",
+                          "children": [
+                            {
+                              "pid": 54086,
+                              "ppid": 54085,
+                              "name": "nltest.exe",
+                              "command": "nltest.exe /dsgetdc:DEVOPS",
+                              "children": [
+                                {
+                                  "pid": 54087,
+                                  "ppid": 54086,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 15 127.0.0.1 > nul",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 54088,
+                      "ppid": 54076,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\aditya.rao\\AppData\\Local\\Temp\\CollectInventory_b70e8a39.ps1\" -Host \"APP-214\" -Mode Full",
+                      "children": [
+                        {
+                          "pid": 54092,
+                          "ppid": 54088,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /groups > \"C:\\Users\\aditya.rao\\AppData\\Local\\Temp\\who_6cda43ae.txt\"",
+                          "children": [
+                            {
+                              "pid": 54096,
+                              "ppid": 54092,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                              "children": [
+                                {
+                                  "pid": 54100,
+                                  "ppid": 54096,
+                                  "name": "nltest.exe",
+                                  "command": "nltest.exe /domain_trusts",
+                                  "children": [
+                                    {
+                                      "pid": 54104,
+                                      "ppid": 54100,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 17 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 54109,
+                                          "ppid": 54104,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\aditya.rao\\AppData\\Local\\Temp\\host_356f0238.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 54111,
+                                              "ppid": 54109,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\aditya.rao\\AppData\\Local\\Temp\\host_7669f4bb.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 54114,
+                                                  "ppid": 54111,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 22 /nobreak",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 54119,
+                                              "ppid": 54109,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Alpine\\Logs\\Application_9f227fee.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 54122,
+                                                  "ppid": 54119,
+                                                  "name": "nltest.exe",
+                                                  "command": "nltest.exe /dclist:ENG",
+                                                  "children": [
+                                                    {
+                                                      "pid": 54129,
+                                                      "ppid": 54122,
+                                                      "name": "nltest.exe",
+                                                      "command": "nltest.exe /dclist:ENG",
+                                                      "children": [
+                                                        {
+                                                          "pid": 54134,
+                                                          "ppid": 54129,
+                                                          "name": "nltest.exe",
+                                                          "command": "nltest.exe /dsgetdc:ACME",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 54136,
+                                                  "ppid": 54119,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 54138,
+                                                      "ppid": 54136,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 20 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 54143,
+                                                          "ppid": 54138,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 54144,
+                                                              "ppid": 54143,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 54150,
+                                                                  "ppid": 54144,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 54152,
+                                                                      "ppid": 54150,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /v",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

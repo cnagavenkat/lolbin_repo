@@ -1,0 +1,276 @@
+{
+  "pid": 157960,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 157962,
+      "ppid": 157960,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"ver\"",
+      "children": [
+        {
+          "pid": 157969,
+          "ppid": 157962,
+          "name": "wevtutil.exe",
+          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Fabrikam\\Logs\\Security_4f94a684.evtx\"",
+          "children": [
+            {
+              "pid": 157970,
+              "ppid": 157969,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 13 /nobreak",
+              "children": [
+                {
+                  "pid": 157976,
+                  "ppid": 157970,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'ping.exe' -ArgumentList '-n 10 127.0.0.1 > nul' -Wait\"",
+                  "children": [
+                    {
+                      "pid": 157983,
+                      "ppid": 157976,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\ananya.gupta\\AppData\\Local\\Temp\\host_34a79946.txt\"",
+                      "children": [
+                        {
+                          "pid": 157989,
+                          "ppid": 157983,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /groups > \"C:\\Users\\ananya.gupta\\AppData\\Local\\Temp\\who_21ba6b22.txt\"",
+                          "children": [
+                            {
+                              "pid": 157991,
+                              "ppid": 157989,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\ananya.gupta\\AppData\\Local\\Temp\\host_f0cfff0f.txt\"",
+                              "children": [
+                                {
+                                  "pid": 157997,
+                                  "ppid": 157991,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 19 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 158001,
+                                      "ppid": 157997,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 20 /nobreak",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 158008,
+                      "ppid": 157976,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\ananya.gupta\\AppData\\Local\\Temp\\host_257fcb1a.txt\"",
+                      "children": [
+                        {
+                          "pid": 158011,
+                          "ppid": 158008,
+                          "name": "makecab.exe",
+                          "command": "makecab.exe \"C:\\ProgramData\\Contoso\\Logs\\diag.txt\" \"C:\\ProgramData\\Contoso\\Logs\\diag.cab\"",
+                          "children": [
+                            {
+                              "pid": 158014,
+                              "ppid": 158011,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\ananya.gupta\\AppData\\Local\\Temp\\who_98a471ae.txt\"",
+                              "children": [
+                                {
+                                  "pid": 158019,
+                                  "ppid": 158014,
+                                  "name": "findstr.exe",
+                                  "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\BlueYonder\\Logs\\profile.log\"",
+                                  "children": [
+                                    {
+                                      "pid": 158024,
+                                      "ppid": 158019,
+                                      "name": "cmd.exe",
+                                      "command": "cmd.exe /c \"hostname.exe > \"C:\\Users\\ananya.gupta\\AppData\\Local\\Temp\\host_15878907.txt\"\"",
+                                      "children": [
+                                        {
+                                          "pid": 158031,
+                                          "ppid": 158024,
+                                          "name": "forfiles.exe",
+                                          "command": "forfiles.exe /P \"C:\\Users\\Public\" /M *.cab /D -31 /C \"cmd /c del /q @path\"",
+                                          "children": [
+                                            {
+                                              "pid": 158035,
+                                              "ppid": 158031,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 22 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 158039,
+                                                  "ppid": 158035,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 158045,
+                                                      "ppid": 158039,
+                                                      "name": "schtasks.exe",
+                                                      "command": "schtasks.exe /create /tn \"\\Woodgrove\\Maint\\Cleanup\" /tr \"C:\\IT\\Tools\\sync_a8568ed1.vbs\" /sc onlogon /f",
+                                                      "children": [
+                                                        {
+                                                          "pid": 158049,
+                                                          "ppid": 158045,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\ananya.gupta\\AppData\\Local\\Temp\\host_50743990.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 158056,
+                                                              "ppid": 158049,
+                                                              "name": "findstr.exe",
+                                                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Woodgrove\\Logs\\update.log\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 158063,
+                                                                  "ppid": 158056,
+                                                                  "name": "findstr.exe",
+                                                                  "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Fabrikam\\Logs\\update.log\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 158067,
+                                                                      "ppid": 158063,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 25 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 158084,
+                                                                          "ppid": 158067,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\ananya.gupta\\AppData\\Local\\Temp\\host_6ea755ae.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 158087,
+                                                                              "ppid": 158084,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 158089,
+                                                                                  "ppid": 158087,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /all > \"C:\\Users\\ananya.gupta\\AppData\\Local\\Temp\\who_2ab9350e.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 158093,
+                                                                                      "ppid": 158089,
+                                                                                      "name": "choice.exe",
+                                                                                      "command": "choice.exe /d y /t 11 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 158094,
+                                                                                          "ppid": 158093,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "pid": 158101,
+                                                                              "ppid": 158084,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\ananya.gupta\\AppData\\Local\\Temp\\host_988d85d3.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 158106,
+                                                                                  "ppid": 158101,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 158111,
+                                                                                      "ppid": 158106,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /groups",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 158116,
+                                                                                          "ppid": 158111,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\ananya.gupta\\AppData\\Local\\Temp\\host_15060749.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 158123,
+                                                                                              "ppid": 158116,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /groups",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 158073,
+      "ppid": 157960,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\ananya.gupta\\AppData\\Local\\Temp\\host_a404cd55.txt\"",
+      "children": [
+        {
+          "pid": 158078,
+          "ppid": 158073,
+          "name": "findstr.exe",
+          "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Alpine\\Logs\\deploy.log\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

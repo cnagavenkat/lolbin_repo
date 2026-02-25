@@ -1,0 +1,189 @@
+{
+  "pid": 239620,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Runbooks\\Runbook_8c02641e.ps1\"",
+  "children": [
+    {
+      "pid": 239624,
+      "ppid": 239620,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"set\"",
+      "children": [
+        {
+          "pid": 239627,
+          "ppid": 239624,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+          "children": [
+            {
+              "pid": 239634,
+              "ppid": 239627,
+              "name": "schtasks.exe",
+              "command": "schtasks.exe /query /tn \"\\Contoso\\Support\\Diag\" /v /fo LIST",
+              "children": [
+                {
+                  "pid": 239639,
+                  "ppid": 239634,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 21 > nul",
+                  "children": [
+                    {
+                      "pid": 239646,
+                      "ppid": 239639,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 239651,
+                          "ppid": 239646,
+                          "name": "wevtutil.exe",
+                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\BlueYonder\\Logs\\Security_bd0934a2.evtx\"",
+                          "children": [
+                            {
+                              "pid": 239653,
+                              "ppid": 239651,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /create /tn \"\\Fabrikam\\Maint\\Diag\" /tr \"C:\\Users\\rohan.mishra\\AppData\\Local\\Temp\\run_6c51daa9.ps1\" /sc minute /mo 30 /f",
+                              "children": [
+                                {
+                                  "pid": 239658,
+                                  "ppid": 239653,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 239680,
+                                      "ppid": 239658,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+                                      "children": [
+                                        {
+                                          "pid": 239681,
+                                          "ppid": 239680,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 239688,
+                                              "ppid": 239681,
+                                              "name": "schtasks.exe",
+                                              "command": "schtasks.exe /run /tn \"\\Microsoft\\Windows\\WDI\\ResolutionHost\"",
+                                              "children": [
+                                                {
+                                                  "pid": 239690,
+                                                  "ppid": 239688,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 13 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 239691,
+                                                      "ppid": 239690,
+                                                      "name": "wevtutil.exe",
+                                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Alpine\\Logs\\Microsoft-Windows-TaskScheduler_Operational_aef1f99b.evtx\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 239692,
+                                                          "ppid": 239691,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\rohan.mishra\\AppData\\Local\\Temp\\host_aa92c0e5.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 239695,
+                                                      "ppid": 239690,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 11 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 239701,
+                                                          "ppid": 239695,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -WindowStyle Minimized -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\rohan.mishra\\AppData\\Local\\Temp\\diag_b5f9e10f.txt'\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 239706,
+                                                              "ppid": 239701,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 5 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 239711,
+                                                                  "ppid": 239706,
+                                                                  "name": "wevtutil.exe",
+                                                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\BlueYonder\\Logs\\System_2459f7ab.evtx\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 239712,
+                                                                      "ppid": 239711,
+                                                                      "name": "wevtutil.exe",
+                                                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Woodgrove\\Logs\\Microsoft-Windows-TaskScheduler_Operational_f26328a5.evtx\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 239661,
+      "ppid": 239620,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 239662,
+          "ppid": 239661,
+          "name": "ping.exe",
+          "command": "ping.exe -n 20 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 239669,
+              "ppid": 239662,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 239674,
+                  "ppid": 239669,
+                  "name": "wevtutil.exe",
+                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Woodgrove\\Logs\\Security_2c06bc9b.evtx\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

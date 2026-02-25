@@ -1,0 +1,150 @@
+{
+  "pid": 193702,
+  "ppid": 0,
+  "name": "mmc.exe",
+  "command": "mmc.exe /session",
+  "children": [
+    {
+      "pid": 193708,
+      "ppid": 193702,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Deploy\\Cert_55e27fe2.vbs\" /verify",
+      "children": [
+        {
+          "pid": 193712,
+          "ppid": 193708,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 12 /nobreak",
+          "children": [
+            {
+              "pid": 193716,
+              "ppid": 193712,
+              "name": "certutil.exe",
+              "command": "certutil.exe -verify \"C:\\Users\\Public\\corp_root.cer\"",
+              "children": [
+                {
+                  "pid": 193723,
+                  "ppid": 193716,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe",
+                  "children": [
+                    {
+                      "pid": 193724,
+                      "ppid": 193723,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 193728,
+                          "ppid": 193724,
+                          "name": "certutil.exe",
+                          "command": "certutil.exe -addstore Root \"C:\\Users\\Public\\corp_root.cer\"",
+                          "children": [
+                            {
+                              "pid": 193734,
+                              "ppid": 193728,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe > \"C:\\Users\\rohan.jain\\AppData\\Local\\Temp\\who_e1146057.txt\"",
+                              "children": [
+                                {
+                                  "pid": 193738,
+                                  "ppid": 193734,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\rohan.jain\\AppData\\Local\\Temp\\host_5bc53fc6.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 193741,
+                                      "ppid": 193738,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\rohan.jain\\AppData\\Local\\Temp\\host_8768201c.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 193747,
+                                          "ppid": 193741,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 193749,
+                                              "ppid": 193747,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /v",
+                                              "children": [
+                                                {
+                                                  "pid": 193751,
+                                                  "ppid": 193749,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\rohan.jain\\AppData\\Local\\Temp\\host_73819a04.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 193752,
+                                                      "ppid": 193751,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 193754,
+                                                          "ppid": 193752,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 193759,
+                                                              "ppid": 193754,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\rohan.jain\\AppData\\Local\\Temp\\host_2b6560bb.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 193762,
+                                                                  "ppid": 193759,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\rohan.jain\\AppData\\Local\\Temp\\host_16ca795b.txt\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 193766,
+                                                  "ppid": 193749,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Wingtip\\Logs\\Security_59f60ae3.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 193772,
+                                                      "ppid": 193766,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\rohan.jain\\AppData\\Local\\Temp\\host_48d9ba4a.txt\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

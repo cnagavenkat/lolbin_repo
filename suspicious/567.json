@@ -1,0 +1,244 @@
+{
+  "pid": 122038,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 122041,
+      "ppid": 122038,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\Public\\TemplateRun_949d6a1b.wsf\"",
+      "children": [
+        {
+          "pid": 122043,
+          "ppid": 122041,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 6 /nobreak",
+          "children": [
+            {
+              "pid": 122050,
+              "ppid": 122043,
+              "name": "quser.exe",
+              "command": "quser.exe /server:ENG-621",
+              "children": [
+                {
+                  "pid": 122070,
+                  "ppid": 122050,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 4 > nul",
+                  "children": [
+                    {
+                      "pid": 122073,
+                      "ppid": 122070,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe",
+                      "children": [
+                        {
+                          "pid": 122080,
+                          "ppid": 122073,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe",
+                          "children": [
+                            {
+                              "pid": 122081,
+                              "ppid": 122080,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 20 /nobreak",
+                              "children": [
+                                {
+                                  "pid": 122085,
+                                  "ppid": 122081,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 122092,
+                                      "ppid": 122085,
+                                      "name": "wmic.exe",
+                                      "command": "wmic.exe computersystem get Manufacturer,Model,Domain /value",
+                                      "children": [
+                                        {
+                                          "pid": 122093,
+                                          "ppid": 122092,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 7 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 122095,
+                                              "ppid": 122093,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Litware\\Logs\\Application_8bf286ae.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 122099,
+                                                  "ppid": 122095,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Contoso\\Logs\\update.log\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 122103,
+                                                      "ppid": 122099,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\neha.patel\\AppData\\Local\\Temp\\host_e491ba1c.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 122105,
+                                                          "ppid": 122103,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv",
+                                                          "children": [
+                                                            {
+                                                              "pid": 122109,
+                                                              "ppid": 122105,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all > \"C:\\Users\\neha.patel\\AppData\\Local\\Temp\\who_70f71696.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 122111,
+                                                                  "ppid": 122109,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /all",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 122112,
+                                                                      "ppid": 122111,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /priv > \"C:\\Users\\neha.patel\\AppData\\Local\\Temp\\who_419f7eb0.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 122113,
+                                                                          "ppid": 122112,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv > \"C:\\Users\\neha.patel\\AppData\\Local\\Temp\\who_bd467613.txt\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 122114,
+                                                          "ppid": 122103,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 122119,
+                                                              "ppid": 122114,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all > \"C:\\Users\\neha.patel\\AppData\\Local\\Temp\\who_491134d0.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 122124,
+                                                                  "ppid": 122119,
+                                                                  "name": "wevtutil.exe",
+                                                                  "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Fabrikam\\Logs\\Application_921e9a50.evtx\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 122125,
+                                                                      "ppid": 122124,
+                                                                      "name": "timeout.exe",
+                                                                      "command": "timeout.exe /t 14 /nobreak",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 122132,
+                                                                          "ppid": 122125,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 21 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 122137,
+                                                                              "ppid": 122132,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 122141,
+                                                                          "ppid": 122125,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 15 /nobreak",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 122144,
+                                                                              "ppid": 122141,
+                                                                              "name": "timeout.exe",
+                                                                              "command": "timeout.exe /t 17 /nobreak",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 122052,
+      "ppid": 122038,
+      "name": "whoami.exe",
+      "command": "whoami.exe /groups",
+      "children": [
+        {
+          "pid": 122058,
+          "ppid": 122052,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 7 /nobreak",
+          "children": [
+            {
+              "pid": 122061,
+              "ppid": 122058,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 122068,
+                  "ppid": 122061,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\neha.patel\\AppData\\Local\\Temp\\host_587bf1ec.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

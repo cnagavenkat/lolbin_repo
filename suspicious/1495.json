@@ -1,0 +1,227 @@
+{
+  "pid": 233659,
+  "ppid": 0,
+  "name": "HelpDeskAssist.exe",
+  "command": "HelpDeskAssist.exe /diag",
+  "children": [
+    {
+      "pid": 233666,
+      "ppid": 233659,
+      "name": "regsvr32.exe",
+      "command": "regsvr32.exe /s \"C:\\Users\\suresh.rao\\AppData\\Local\\Temp\\helper.dll\"",
+      "children": [
+        {
+          "pid": 233669,
+          "ppid": 233666,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv",
+          "children": [
+            {
+              "pid": 233675,
+              "ppid": 233669,
+              "name": "rundll32.exe",
+              "command": "rundll32.exe \"C:\\ProgramData\\BlueYonder\\Bridge\\diagext.dll\",DllRegisterServer",
+              "children": [
+                {
+                  "pid": 233676,
+                  "ppid": 233675,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 13 > nul",
+                  "children": [
+                    {
+                      "pid": 233692,
+                      "ppid": 233676,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 11 > nul",
+                      "children": [
+                        {
+                          "pid": 233695,
+                          "ppid": 233692,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 233699,
+                              "ppid": 233695,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe > \"C:\\Users\\suresh.rao\\AppData\\Local\\Temp\\who_a57d5952.txt\"",
+                              "children": [
+                                {
+                                  "pid": 233706,
+                                  "ppid": 233699,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\suresh.rao\\AppData\\Local\\Temp\\host_408f56a5.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 233713,
+                                      "ppid": 233706,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 233717,
+                          "ppid": 233692,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe",
+                          "children": [
+                            {
+                              "pid": 233732,
+                              "ppid": 233717,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 233736,
+                                  "ppid": 233732,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 233737,
+                                      "ppid": 233736,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all",
+                                      "children": [
+                                        {
+                                          "pid": 233738,
+                                          "ppid": 233737,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 233757,
+                                              "ppid": 233738,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 233762,
+                                                  "ppid": 233757,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 233765,
+                                                      "ppid": 233762,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /all",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 233679,
+      "ppid": 233659,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\suresh.rao\\AppData\\Local\\Temp\\host_e7e09779.txt\"",
+      "children": [
+        {
+          "pid": 233683,
+          "ppid": 233679,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\suresh.rao\\AppData\\Local\\Temp\\host_8528e143.txt\"",
+          "children": [
+            {
+              "pid": 233685,
+              "ppid": 233683,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv",
+              "children": [
+                {
+                  "pid": 233690,
+                  "ppid": 233685,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 25 /nobreak",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 233719,
+      "ppid": 233659,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/priv' -Wait\"",
+      "children": [
+        {
+          "pid": 233722,
+          "ppid": 233719,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+          "children": [
+            {
+              "pid": 233726,
+              "ppid": 233722,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 233741,
+      "ppid": 233659,
+      "name": "ping.exe",
+      "command": "ping.exe -n 9 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 233747,
+          "ppid": 233741,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv > \"C:\\Users\\suresh.rao\\AppData\\Local\\Temp\\who_a4973056.txt\"",
+          "children": [
+            {
+              "pid": 233752,
+              "ppid": 233747,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 233753,
+                  "ppid": 233752,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

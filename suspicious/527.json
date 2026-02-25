@@ -1,0 +1,211 @@
+{
+  "pid": 117793,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 117799,
+      "ppid": 117793,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\evt_382294de.txt'\"",
+      "children": [
+        {
+          "pid": 117803,
+          "ppid": 117799,
+          "name": "wmic.exe",
+          "command": "wmic.exe qfe get HotFixID,InstalledOn",
+          "children": [
+            {
+              "pid": 117804,
+              "ppid": 117803,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\host_7b08d849.txt\"",
+              "children": [
+                {
+                  "pid": 117807,
+                  "ppid": 117804,
+                  "name": "reg.exe",
+                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                  "children": [
+                    {
+                      "pid": 117810,
+                      "ppid": 117807,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /svc",
+                      "children": [
+                        {
+                          "pid": 117811,
+                          "ppid": 117810,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 23 > nul",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 117812,
+                      "ppid": 117807,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 25 /nobreak",
+                      "children": [
+                        {
+                          "pid": 117817,
+                          "ppid": 117812,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+                          "children": [
+                            {
+                              "pid": 117824,
+                              "ppid": 117817,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /svc",
+                              "children": [
+                                {
+                                  "pid": 117825,
+                                  "ppid": 117824,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 117830,
+                          "ppid": 117812,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 21 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 117836,
+                              "ppid": 117830,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe",
+                              "children": [
+                                {
+                                  "pid": 117848,
+                                  "ppid": 117836,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Woodgrove\\Logs\\Security_d5e64435.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 117854,
+                                      "ppid": 117848,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /v",
+                                      "children": [
+                                        {
+                                          "pid": 117857,
+                                          "ppid": 117854,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\host_e605b604.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 117863,
+                                              "ppid": 117857,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Wingtip\\Logs\\update.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 117869,
+                                                  "ppid": 117863,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups > \"C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\who_371b441f.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 117874,
+                                                      "ppid": 117869,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 117881,
+                                                          "ppid": 117874,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 5 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 117884,
+                                                              "ppid": 117881,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 22 > nul",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 117887,
+                                                  "ppid": 117863,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups",
+                                                  "children": [
+                                                    {
+                                                      "pid": 117889,
+                                                      "ppid": 117887,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /v",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 117839,
+      "ppid": 117793,
+      "name": "whoami.exe",
+      "command": "whoami.exe /all",
+      "children": [
+        {
+          "pid": 117840,
+          "ppid": 117839,
+          "name": "cmd.exe",
+          "command": "cmd.exe /c \"whoami.exe > \"C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\who_bda6d15e.txt\"\"",
+          "children": [
+            {
+              "pid": 117841,
+              "ppid": 117840,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+              "children": [
+                {
+                  "pid": 117844,
+                  "ppid": 117841,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\karthik.bose\\AppData\\Local\\Temp\\who_03c57485.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

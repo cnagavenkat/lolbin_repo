@@ -1,0 +1,214 @@
+{
+  "pid": 139989,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 139996,
+      "ppid": 139989,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\Public\\Sync_036c8d69.js\"",
+      "children": [
+        {
+          "pid": 139999,
+          "ppid": 139996,
+          "name": "net.exe",
+          "command": "net.exe use S: \"\\\\ops\\maint\" /persistent:no",
+          "children": [
+            {
+              "pid": 140005,
+              "ppid": 139999,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 3 > nul",
+              "children": [
+                {
+                  "pid": 140008,
+                  "ppid": 140005,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": [
+                    {
+                      "pid": 140014,
+                      "ppid": 140008,
+                      "name": "schtasks.exe",
+                      "command": "schtasks.exe /create /tn \"\\Wingtip\\Maint\\Diag\" /tr \"C:\\IT\\Deploy\\diag_3aa476a9.ps1\" /sc minute /mo 30 /f /ru SYSTEM",
+                      "children": [
+                        {
+                          "pid": 140018,
+                          "ppid": 140014,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv > \"C:\\Users\\meera.menon\\AppData\\Local\\Temp\\who_4b0707f9.txt\"",
+                          "children": [
+                            {
+                              "pid": 140020,
+                              "ppid": 140018,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+                              "children": [
+                                {
+                                  "pid": 140022,
+                                  "ppid": 140020,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\meera.menon\\AppData\\Local\\Temp\\who_6103a78b.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 140024,
+                                      "ppid": 140022,
+                                      "name": "schtasks.exe",
+                                      "command": "schtasks.exe /run /tn \"\\Litware\\Maint\\Cleanup\"",
+                                      "children": [
+                                        {
+                                          "pid": 140027,
+                                          "ppid": 140024,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv > \"C:\\Users\\meera.menon\\AppData\\Local\\Temp\\who_63b3fa3e.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 140030,
+                                              "ppid": 140027,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 7 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 140033,
+                                                  "ppid": 140030,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\meera.menon\\AppData\\Local\\Temp\\host_b561eaae.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 140035,
+                                                      "ppid": 140033,
+                                                      "name": "reg.exe",
+                                                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                                      "children": [
+                                                        {
+                                                          "pid": 140041,
+                                                          "ppid": 140035,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe > \"C:\\Users\\meera.menon\\AppData\\Local\\Temp\\who_50b911ea.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 140057,
+                                                              "ppid": 140041,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 140058,
+                                                                  "ppid": 140057,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 19 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 140063,
+                                                                      "ppid": 140058,
+                                                                      "name": "cmd.exe",
+                                                                      "command": "cmd.exe /c \"quser.exe /server:WS-104\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 140065,
+                                                                          "ppid": 140063,
+                                                                          "name": "quser.exe",
+                                                                          "command": "quser.exe /server:LAP-691",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 140068,
+                                                                              "ppid": 140065,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /groups > \"C:\\Users\\meera.menon\\AppData\\Local\\Temp\\who_5ca06b9c.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 140073,
+                                                                                  "ppid": 140068,
+                                                                                  "name": "cmd.exe",
+                                                                                  "command": "cmd.exe /c \"whoami.exe\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 140076,
+                                                                                      "ppid": 140073,
+                                                                                      "name": "choice.exe",
+                                                                                      "command": "choice.exe /d y /t 9 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 140077,
+                                                                                          "ppid": 140076,
+                                                                                          "name": "quser.exe",
+                                                                                          "command": "quser.exe /server:OPS-622",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 140043,
+      "ppid": 139989,
+      "name": "quser.exe",
+      "command": "quser.exe /server:SUP-174",
+      "children": [
+        {
+          "pid": 140049,
+          "ppid": 140043,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 5 > nul",
+          "children": [
+            {
+              "pid": 140050,
+              "ppid": 140049,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"quser.exe /server:ENG-555\"",
+              "children": [
+                {
+                  "pid": 140053,
+                  "ppid": 140050,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\meera.menon\\AppData\\Local\\Temp\\who_742d020d.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

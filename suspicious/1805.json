@@ -1,0 +1,235 @@
+{
+  "pid": 275548,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Runbooks\\Runbook_705481b9.ps1\"",
+  "children": [
+    {
+      "pid": 275550,
+      "ppid": 275548,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"echo maintenance step\"",
+      "children": [
+        {
+          "pid": 275557,
+          "ppid": 275550,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 2 /nobreak",
+          "children": [
+            {
+              "pid": 275563,
+              "ppid": 275557,
+              "name": "mshta.exe",
+              "command": "mshta.exe \"C:\\ProgramData\\Contoso\\Patch\\diag_11345a89.hta\"",
+              "children": [
+                {
+                  "pid": 275579,
+                  "ppid": 275563,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\aditya.nair\\AppData\\Local\\Temp\\host_b77ebe1b.txt\"",
+                  "children": [
+                    {
+                      "pid": 275585,
+                      "ppid": 275579,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all",
+                      "children": [
+                        {
+                          "pid": 275589,
+                          "ppid": 275585,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 16 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 275595,
+                              "ppid": 275589,
+                              "name": "regsvr32.exe",
+                              "command": "regsvr32.exe /s \"C:\\ProgramData\\Contoso\\Bridge\\bridge.dll\"",
+                              "children": [
+                                {
+                                  "pid": 275597,
+                                  "ppid": 275595,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 8 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 275602,
+                                      "ppid": 275597,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\aditya.nair\\AppData\\Local\\Temp\\host_0af737aa.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 275609,
+                                          "ppid": 275602,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 8 /nobreak",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 275614,
+                                      "ppid": 275597,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\aditya.nair\\AppData\\Local\\Temp\\host_176357db.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 275620,
+                                          "ppid": 275614,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 275622,
+                                              "ppid": 275620,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 21 127.0.0.1 > nul",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 275626,
+                                          "ppid": 275614,
+                                          "name": "rundll32.exe",
+                                          "command": "rundll32.exe \"C:\\Users\\aditya.nair\\AppData\\Local\\Temp\\shellhook.dll\",RunPostSetup",
+                                          "children": [
+                                            {
+                                              "pid": 275633,
+                                              "ppid": 275626,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 10 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 275640,
+                                                  "ppid": 275633,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 4 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 275647,
+                                                      "ppid": 275640,
+                                                      "name": "reg.exe",
+                                                      "command": "reg.exe import \"C:\\Build\\obj\\45ad659f\\Profile_a157c932.reg\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 275648,
+                                                          "ppid": 275647,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 6 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 275655,
+                                                              "ppid": 275648,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 275660,
+                                                                  "ppid": 275655,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 275670,
+                                                                      "ppid": 275660,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /priv",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 275671,
+                                                                          "ppid": 275670,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 6 /nobreak",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 275673,
+                                                                              "ppid": 275671,
+                                                                              "name": "powershell.exe",
+                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 275567,
+      "ppid": 275548,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 275571,
+          "ppid": 275567,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv",
+          "children": [
+            {
+              "pid": 275578,
+              "ppid": 275571,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\aditya.nair\\AppData\\Local\\Temp\\who_7ce61132.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 275663,
+      "ppid": 275548,
+      "name": "whoami.exe",
+      "command": "whoami.exe /groups",
+      "children": [
+        {
+          "pid": 275667,
+          "ppid": 275663,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 14 > nul",
+          "children": [
+            {
+              "pid": 275668,
+              "ppid": 275667,
+              "name": "whoami.exe",
+              "command": "whoami.exe > \"C:\\Users\\aditya.nair\\AppData\\Local\\Temp\\who_41a092dd.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

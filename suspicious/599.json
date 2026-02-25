@@ -1,0 +1,150 @@
+{
+  "pid": 125526,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe /startup",
+  "children": [
+    {
+      "pid": 125530,
+      "ppid": 125526,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"whoami /all\"",
+      "children": [
+        {
+          "pid": 125534,
+          "ppid": 125530,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'timeout.exe' -ArgumentList '/t 2 /nobreak' -Wait\"",
+          "children": [
+            {
+              "pid": 125535,
+              "ppid": 125534,
+              "name": "schtasks.exe",
+              "command": "schtasks.exe /query /fo LIST /v",
+              "children": [
+                {
+                  "pid": 125536,
+                  "ppid": 125535,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 20 > nul",
+                  "children": [
+                    {
+                      "pid": 125538,
+                      "ppid": 125536,
+                      "name": "wevtutil.exe",
+                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Contoso\\Logs\\Microsoft-Windows-TaskScheduler_Operational_f1b3676b.evtx\"",
+                      "children": [
+                        {
+                          "pid": 125544,
+                          "ppid": 125538,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 10 > nul",
+                          "children": [
+                            {
+                              "pid": 125546,
+                              "ppid": 125544,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Litware\\Logs\\deploy.log\"",
+                              "children": [
+                                {
+                                  "pid": 125550,
+                                  "ppid": 125546,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /c \"timeout.exe /t 15 /nobreak\"",
+                                  "children": [
+                                    {
+                                      "pid": 125552,
+                                      "ppid": 125550,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 20 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 125555,
+                                          "ppid": 125552,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 25 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 125561,
+                                              "ppid": 125555,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 125566,
+                                                  "ppid": 125561,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all > \"C:\\Users\\nisha.das\\AppData\\Local\\Temp\\who_8efcfa69.txt\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 125571,
+                                      "ppid": 125550,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -Command \"Get-Service | Out-File 'C:\\Users\\nisha.das\\AppData\\Local\\Temp\\inv_b266bd19.txt'\"",
+                                      "children": [
+                                        {
+                                          "pid": 125575,
+                                          "ppid": 125571,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\nisha.das\\AppData\\Local\\Temp\\host_45e15e8f.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 125578,
+                                              "ppid": 125575,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv > \"C:\\Users\\nisha.das\\AppData\\Local\\Temp\\who_c336e3c3.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 125579,
+                                                  "ppid": 125578,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\nisha.das\\AppData\\Local\\Temp\\host_73f1d8b7.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 125583,
+                                                      "ppid": 125579,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe > \"C:\\Users\\nisha.das\\AppData\\Local\\Temp\\who_6f45d316.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 125586,
+                                                          "ppid": 125583,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

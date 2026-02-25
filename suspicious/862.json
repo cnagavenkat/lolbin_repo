@@ -1,0 +1,230 @@
+{
+  "pid": 156691,
+  "ppid": 0,
+  "name": "taskhostw.exe",
+  "command": "taskhostw.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 156696,
+      "ppid": 156691,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\Users\\Public\\RunDiagnostics_c10028aa.ps1\" -Host \"APP-905\" -Mode Delta",
+      "children": [
+        {
+          "pid": 156703,
+          "ppid": 156696,
+          "name": "sc.exe",
+          "command": "sc.exe query \"wuauserv\"",
+          "children": [
+            {
+              "pid": 156704,
+              "ppid": 156703,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+              "children": [
+                {
+                  "pid": 156707,
+                  "ppid": 156704,
+                  "name": "wmic.exe",
+                  "command": "wmic.exe computersystem get Manufacturer,Model,Domain /value",
+                  "children": [
+                    {
+                      "pid": 156708,
+                      "ppid": 156707,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\rahul.reddy\\AppData\\Local\\Temp\\host_36d44246.txt\"",
+                      "children": [
+                        {
+                          "pid": 156713,
+                          "ppid": 156708,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 2 /nobreak",
+                          "children": [
+                            {
+                              "pid": 156715,
+                              "ppid": 156713,
+                              "name": "wevtutil.exe",
+                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Northwind\\Logs\\Application_8e6aa810.evtx\"",
+                              "children": [
+                                {
+                                  "pid": 156716,
+                                  "ppid": 156715,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                  "children": [
+                                    {
+                                      "pid": 156723,
+                                      "ppid": 156716,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                                      "children": [
+                                        {
+                                          "pid": 156724,
+                                          "ppid": 156723,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe > \"C:\\Users\\rahul.reddy\\AppData\\Local\\Temp\\who_aec7d848.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 156727,
+                                              "ppid": 156724,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 156731,
+                                                  "ppid": 156727,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 22 > nul",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 156736,
+                                  "ppid": 156715,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 156739,
+                                      "ppid": 156736,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Wingtip\\Logs\\support.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 156745,
+                                          "ppid": 156739,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /svc",
+                                          "children": [
+                                            {
+                                              "pid": 156747,
+                                              "ppid": 156745,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 156754,
+                                                  "ppid": 156747,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 156760,
+                                                      "ppid": 156754,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\rahul.reddy\\AppData\\Local\\Temp\\host_b3f2584e.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 156767,
+                                                          "ppid": 156760,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /svc",
+                                                          "children": [
+                                                            {
+                                                              "pid": 156770,
+                                                              "ppid": 156767,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 20 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 156771,
+                                                                  "ppid": 156770,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 11 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 156777,
+                                                                      "ppid": 156771,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /svc",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 156779,
+                                                                          "ppid": 156777,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /all",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 156783,
+                                                                              "ppid": 156779,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe > \"C:\\Users\\rahul.reddy\\AppData\\Local\\Temp\\who_0023b040.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 156785,
+                                                                                  "ppid": 156783,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /groups",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 156787,
+                                                                                      "ppid": 156785,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /all",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 156788,
+                                                                                          "ppid": 156787,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /all > \"C:\\Users\\rahul.reddy\\AppData\\Local\\Temp\\who_c2eae4e8.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 156790,
+                                                                                              "ppid": 156788,
+                                                                                              "name": "tasklist.exe",
+                                                                                              "command": "tasklist.exe",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "pid": 69684,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 69688,
+      "ppid": 69684,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\Users\\meera.nair\\AppData\\Local\\Temp\\CollectInventory_350d5b84.ps1\" -Host \"LAP-465\" -Mode Quick",
+      "children": [
+        {
+          "pid": 69695,
+          "ppid": 69688,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /create /tn \"\\Woodgrove\\Profile\\Sync\" /tr \"C:\\IT\\Maint\\post_9b80062a.cmd\" /sc onlogon /f /ru \"ENG\\vivaan.das\"",
+          "children": [
+            {
+              "pid": 69697,
+              "ppid": 69695,
+              "name": "reg.exe",
+              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+              "children": [
+                {
+                  "pid": 69711,
+                  "ppid": 69697,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe",
+                  "children": [
+                    {
+                      "pid": 69714,
+                      "ppid": 69711,
+                      "name": "reg.exe",
+                      "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                      "children": [
+                        {
+                          "pid": 69717,
+                          "ppid": 69714,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                          "children": [
+                            {
+                              "pid": 69718,
+                              "ppid": 69717,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups",
+                              "children": [
+                                {
+                                  "pid": 69724,
+                                  "ppid": 69718,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 69728,
+                      "ppid": 69711,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all > \"C:\\Users\\meera.nair\\AppData\\Local\\Temp\\who_f1fd2b67.txt\"",
+                      "children": [
+                        {
+                          "pid": 69733,
+                          "ppid": 69728,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /run /tn \"\\Microsoft\\Windows\\WDI\\ResolutionHost\"",
+                          "children": [
+                            {
+                              "pid": 69734,
+                              "ppid": 69733,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                              "children": [
+                                {
+                                  "pid": 69741,
+                                  "ppid": 69734,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -WindowStyle Minimized -ExecutionPolicy Bypass -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\meera.nair\\AppData\\Local\\Temp\\diag_3e0b685e.txt'\"",
+                                  "children": [
+                                    {
+                                      "pid": 69746,
+                                      "ppid": 69741,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                      "children": [
+                                        {
+                                          "pid": 69753,
+                                          "ppid": 69746,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                          "children": [
+                                            {
+                                              "pid": 69758,
+                                              "ppid": 69753,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                                              "children": [
+                                                {
+                                                  "pid": 69760,
+                                                  "ppid": 69758,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 69762,
+                                          "ppid": 69746,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 23 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 69763,
+                                              "ppid": 69762,
+                                              "name": "reg.exe",
+                                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                              "children": [
+                                                {
+                                                  "pid": 69770,
+                                                  "ppid": 69763,
+                                                  "name": "schtasks.exe",
+                                                  "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+                                                  "children": [
+                                                    {
+                                                      "pid": 69777,
+                                                      "ppid": 69770,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /priv > \"C:\\Users\\meera.nair\\AppData\\Local\\Temp\\who_6310faf5.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 69780,
+                                                          "ppid": 69777,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\meera.nair\\AppData\\Local\\Temp\\host_30d7c250.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 69781,
+                                                              "ppid": 69780,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 69783,
+                                                                  "ppid": 69781,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 10 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 69787,
+                                                                      "ppid": 69783,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\meera.nair\\AppData\\Local\\Temp\\host_b205085c.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 69788,
+                                                                          "ppid": 69787,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /all",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 69794,
+                                                                              "ppid": 69788,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 69796,
+                                                                                  "ppid": 69794,
+                                                                                  "name": "ping.exe",
+                                                                                  "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 69802,
+                                                                                      "ppid": 69796,
+                                                                                      "name": "ping.exe",
+                                                                                      "command": "ping.exe -n 14 127.0.0.1 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 69805,
+                                                                                          "ppid": 69802,
+                                                                                          "name": "ping.exe",
+                                                                                          "command": "ping.exe -n 6 127.0.0.1 > nul",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 69808,
+                                                                                              "ppid": 69805,
+                                                                                              "name": "ping.exe",
+                                                                                              "command": "ping.exe -n 19 127.0.0.1 > nul",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 69813,
+                                                                                                  "ppid": 69808,
+                                                                                                  "name": "tasklist.exe",
+                                                                                                  "command": "tasklist.exe /v",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 69816,
+                                                                                                      "ppid": 69813,
+                                                                                                      "name": "tasklist.exe",
+                                                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 69819,
+                                                                                                          "ppid": 69816,
+                                                                                                          "name": "reg.exe",
+                                                                                                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                                                                                          "children": []
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 69698,
+      "ppid": 69684,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"whoami.exe /groups > \"C:\\Users\\meera.nair\\AppData\\Local\\Temp\\who_9ade9c6a.txt\"\"",
+      "children": [
+        {
+          "pid": 69703,
+          "ppid": 69698,
+          "name": "ping.exe",
+          "command": "ping.exe -n 13 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 69705,
+              "ppid": 69703,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\meera.nair\\AppData\\Local\\Temp\\host_ae75482c.txt\"",
+              "children": [
+                {
+                  "pid": 69706,
+                  "ppid": 69705,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+                  "children": [
+                    {
+                      "pid": 69708,
+                      "ppid": 69706,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\meera.nair\\AppData\\Local\\Temp\\host_e3ea407e.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

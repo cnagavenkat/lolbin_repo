@@ -1,0 +1,212 @@
+{
+  "pid": 152692,
+  "ppid": 0,
+  "name": "userinit.exe",
+  "command": "userinit.exe /diag",
+  "children": [
+    {
+      "pid": 152697,
+      "ppid": 152692,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"echo maintenance step\"",
+      "children": [
+        {
+          "pid": 152698,
+          "ppid": 152697,
+          "name": "ping.exe",
+          "command": "ping.exe -n 25 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 152700,
+              "ppid": 152698,
+              "name": "forfiles.exe",
+              "command": "forfiles.exe /P \"C:\\Users\\Public\" /M *.log /D -39 /C \"cmd /c echo archived @file\"",
+              "children": [
+                {
+                  "pid": 152706,
+                  "ppid": 152700,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\pooja.patel\\AppData\\Local\\Temp\\who_24e2970c.txt\"",
+                  "children": [
+                    {
+                      "pid": 152713,
+                      "ppid": 152706,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                      "children": [
+                        {
+                          "pid": 152719,
+                          "ppid": 152713,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 23 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 152722,
+                              "ppid": 152719,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                              "children": [
+                                {
+                                  "pid": 152726,
+                                  "ppid": 152722,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                  "children": [
+                                    {
+                                      "pid": 152727,
+                                      "ppid": 152726,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 3 127.0.0.1 > nul",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 152734,
+                                  "ppid": 152722,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\pooja.patel\\AppData\\Local\\Temp\\host_eb2cde51.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 152740,
+                                      "ppid": 152734,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                      "children": [
+                                        {
+                                          "pid": 152746,
+                                          "ppid": 152740,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": [
+                                            {
+                                              "pid": 152750,
+                                              "ppid": 152746,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 152757,
+                                          "ppid": 152740,
+                                          "name": "schtasks.exe",
+                                          "command": "schtasks.exe /query /fo LIST /v",
+                                          "children": [
+                                            {
+                                              "pid": 152762,
+                                              "ppid": 152757,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /svc",
+                                              "children": [
+                                                {
+                                                  "pid": 152763,
+                                                  "ppid": 152762,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv > \"C:\\Users\\pooja.patel\\AppData\\Local\\Temp\\who_3b700685.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 152765,
+                                                      "ppid": 152763,
+                                                      "name": "findstr.exe",
+                                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Woodgrove\\Logs\\profile.log\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 152771,
+                                                          "ppid": 152765,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 14 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 152776,
+                                                              "ppid": 152771,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /svc",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 152783,
+                                                                  "ppid": 152776,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 152787,
+                                                                      "ppid": 152783,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /svc",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 152792,
+                                                                          "ppid": 152787,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 152798,
+                                                                              "ppid": 152792,
+                                                                              "name": "choice.exe",
+                                                                              "command": "choice.exe /d y /t 9 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 152803,
+                                                                                  "ppid": 152798,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\pooja.patel\\AppData\\Local\\Temp\\host_d171fcce.txt\"",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 152805,
+                                                                          "ppid": 152787,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 10 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 152810,
+                                                                              "ppid": 152805,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

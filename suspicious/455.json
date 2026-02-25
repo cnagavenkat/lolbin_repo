@@ -1,0 +1,219 @@
+{
+  "pid": 110244,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Maint\\Runbook_916f6e96.ps1\"",
+  "children": [
+    {
+      "pid": 110247,
+      "ppid": 110244,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"echo maintenance step\"",
+      "children": [
+        {
+          "pid": 110249,
+          "ppid": 110247,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 8 /nobreak",
+          "children": [
+            {
+              "pid": 110253,
+              "ppid": 110249,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"whoami /all\"",
+              "children": [
+                {
+                  "pid": 110260,
+                  "ppid": 110253,
+                  "name": "findstr.exe",
+                  "command": "findstr.exe /i \"certificate\" \"C:\\ProgramData\\Litware\\Logs\\profile.log\"",
+                  "children": [
+                    {
+                      "pid": 110262,
+                      "ppid": 110260,
+                      "name": "quser.exe",
+                      "command": "quser.exe /server:WS-198",
+                      "children": [
+                        {
+                          "pid": 110263,
+                          "ppid": 110262,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                          "children": [
+                            {
+                              "pid": 110266,
+                              "ppid": 110263,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 14 > nul",
+                              "children": [
+                                {
+                                  "pid": 110272,
+                                  "ppid": 110266,
+                                  "name": "quser.exe",
+                                  "command": "quser.exe",
+                                  "children": [
+                                    {
+                                      "pid": 110277,
+                                      "ppid": 110272,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 110279,
+                                          "ppid": 110277,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 20 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 110285,
+                                              "ppid": 110279,
+                                              "name": "ipconfig.exe",
+                                              "command": "ipconfig.exe /displaydns",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 110286,
+                              "ppid": 110263,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 25 > nul",
+                              "children": [
+                                {
+                                  "pid": 110287,
+                                  "ppid": 110286,
+                                  "name": "quser.exe",
+                                  "command": "quser.exe",
+                                  "children": [
+                                    {
+                                      "pid": 110290,
+                                      "ppid": 110287,
+                                      "name": "cmd.exe",
+                                      "command": "cmd.exe /c \"ipconfig.exe /displaydns\"",
+                                      "children": [
+                                        {
+                                          "pid": 110292,
+                                          "ppid": 110290,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 110295,
+                                  "ppid": 110286,
+                                  "name": "wmic.exe",
+                                  "command": "wmic.exe os get Caption,Version,BuildNumber /value",
+                                  "children": [
+                                    {
+                                      "pid": 110296,
+                                      "ppid": 110295,
+                                      "name": "cmd.exe",
+                                      "command": "cmd.exe /c \"ipconfig.exe /all\"",
+                                      "children": [
+                                        {
+                                          "pid": 110310,
+                                          "ppid": 110296,
+                                          "name": "quser.exe",
+                                          "command": "quser.exe /server:LAP-432",
+                                          "children": [
+                                            {
+                                              "pid": 110316,
+                                              "ppid": 110310,
+                                              "name": "ipconfig.exe",
+                                              "command": "ipconfig.exe /displaydns",
+                                              "children": [
+                                                {
+                                                  "pid": 110321,
+                                                  "ppid": 110316,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 110325,
+                                              "ppid": 110310,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Fabrikam\\Logs\\support.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 110326,
+                                                  "ppid": 110325,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Contoso\\Logs\\System_5c22278b.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 110328,
+                                                      "ppid": 110326,
+                                                      "name": "ipconfig.exe",
+                                                      "command": "ipconfig.exe /allcompartments /all",
+                                                      "children": [
+                                                        {
+                                                          "pid": 110332,
+                                                          "ppid": 110328,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 110300,
+      "ppid": 110244,
+      "name": "ping.exe",
+      "command": "ping.exe -n 24 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 110303,
+          "ppid": 110300,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 110308,
+              "ppid": 110303,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

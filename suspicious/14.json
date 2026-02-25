@@ -1,0 +1,245 @@
+{
+  "pid": 51989,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k Schedule",
+  "children": [
+    {
+      "pid": 51992,
+      "ppid": 51989,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\Alpine\\Assist\\Sync_a4497138.vbs\"",
+      "children": [
+        {
+          "pid": 51998,
+          "ppid": 51992,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 23 /nobreak",
+          "children": [
+            {
+              "pid": 52002,
+              "ppid": 51998,
+              "name": "cmd.exe",
+              "command": "cmd.exe /k \"hostname\"",
+              "children": [
+                {
+                  "pid": 52006,
+                  "ppid": 52002,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 16 /nobreak",
+                  "children": [
+                    {
+                      "pid": 52013,
+                      "ppid": 52006,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 52014,
+                          "ppid": 52013,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /groups > \"C:\\Users\\kiran.gupta\\AppData\\Local\\Temp\\who_6bae48c7.txt\"",
+                          "children": [
+                            {
+                              "pid": 52017,
+                              "ppid": 52014,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 52018,
+                                  "ppid": 52017,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 52021,
+                  "ppid": 52002,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /v",
+                  "children": [
+                    {
+                      "pid": 52022,
+                      "ppid": 52021,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe  -File \"C:\\ProgramData\\Northwind\\Profile\\BuildPack_85f23aac.ps1\" -Host \"OPS-633\" -Mode Delta",
+                      "children": [
+                        {
+                          "pid": 52025,
+                          "ppid": 52022,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/priv > \"C:\\Users\\kiran.gupta\\AppData\\Local\\Temp\\who_8ca96723.txt\"' -Wait\"",
+                          "children": [
+                            {
+                              "pid": 52026,
+                              "ppid": 52025,
+                              "name": "wevtutil.exe",
+                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Contoso\\Logs\\Microsoft-Windows-TaskScheduler_Operational_c26e73d7.evtx\"",
+                              "children": [
+                                {
+                                  "pid": 52028,
+                                  "ppid": 52026,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 14 /nobreak",
+                                  "children": [
+                                    {
+                                      "pid": 52031,
+                                      "ppid": 52028,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                      "children": [
+                                        {
+                                          "pid": 52038,
+                                          "ppid": 52031,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv > \"C:\\Users\\kiran.gupta\\AppData\\Local\\Temp\\who_cabf671c.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 52041,
+                                              "ppid": 52038,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups > \"C:\\Users\\kiran.gupta\\AppData\\Local\\Temp\\who_97b9e7d2.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 52048,
+                                                  "ppid": 52041,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 52055,
+                                                      "ppid": 52048,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 52062,
+                                          "ppid": 52031,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 21\"",
+                                          "children": [
+                                            {
+                                              "pid": 52063,
+                                              "ppid": 52062,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 52064,
+                                                  "ppid": 52063,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 52067,
+                                                      "ppid": 52064,
+                                                      "name": "schtasks.exe",
+                                                      "command": "schtasks.exe /query /tn \"\\Contoso\\Support\\Diag\" /v /fo LIST",
+                                                      "children": [
+                                                        {
+                                                          "pid": 52072,
+                                                          "ppid": 52067,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 22 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 52079,
+                                                              "ppid": 52072,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 52081,
+                                                                  "ppid": 52079,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\kiran.gupta\\AppData\\Local\\Temp\\host_43eb405f.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 52084,
+                                                                      "ppid": 52081,
+                                                                      "name": "wevtutil.exe",
+                                                                      "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Northwind\\Logs\\System_408d0141.evtx\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 52091,
+                                                                          "ppid": 52084,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 52096,
+                                                                              "ppid": 52091,
+                                                                              "name": "wevtutil.exe",
+                                                                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Northwind\\Logs\\Application_4b0b1042.evtx\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 52099,
+                                                                                  "ppid": 52096,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\kiran.gupta\\AppData\\Local\\Temp\\host_952a9db5.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 52101,
+                                                                                      "ppid": 52099,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /priv > \"C:\\Users\\kiran.gupta\\AppData\\Local\\Temp\\who_9c0398be.txt\"",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

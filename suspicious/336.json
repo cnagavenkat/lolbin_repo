@@ -1,0 +1,236 @@
+{
+  "pid": 94778,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 94780,
+      "ppid": 94778,
+      "name": "msiexec.exe",
+      "command": "msiexec.exe /i \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\bridge.msi\" /passive /l*v \"C:\\ProgramData\\Fabrikam\\Logs\\msi_197a6adf.log\"",
+      "children": [
+        {
+          "pid": 94786,
+          "ppid": 94780,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /v",
+          "children": [
+            {
+              "pid": 94792,
+              "ppid": 94786,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\host_9f5ea04d.txt\"",
+              "children": [
+                {
+                  "pid": 94793,
+                  "ppid": 94792,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\who_d33c1842.txt\"",
+                  "children": [
+                    {
+                      "pid": 94797,
+                      "ppid": 94793,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe",
+                      "children": [
+                        {
+                          "pid": 94804,
+                          "ppid": 94797,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 2 > nul",
+                          "children": [
+                            {
+                              "pid": 94809,
+                              "ppid": 94804,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups",
+                              "children": [
+                                {
+                                  "pid": 94815,
+                                  "ppid": 94809,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 94820,
+                  "ppid": 94792,
+                  "name": "certutil.exe",
+                  "command": "certutil.exe -addstore CA \"C:\\ProgramData\\Fabrikam\\Patch\\workstation.cer\"",
+                  "children": [
+                    {
+                      "pid": 94825,
+                      "ppid": 94820,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 4 > nul",
+                      "children": [
+                        {
+                          "pid": 94832,
+                          "ppid": 94825,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe",
+                          "children": [
+                            {
+                              "pid": 94839,
+                              "ppid": 94832,
+                              "name": "certutil.exe",
+                              "command": "certutil.exe -dump \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\corp_root.cer\"",
+                              "children": [
+                                {
+                                  "pid": 94842,
+                                  "ppid": 94839,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\host_4ead148d.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 94849,
+                                      "ppid": 94842,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /svc",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 94856,
+                                  "ppid": 94839,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 94857,
+                                      "ppid": 94856,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\inv_99fe2129.txt'\"",
+                                      "children": [
+                                        {
+                                          "pid": 94863,
+                                          "ppid": 94857,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 94865,
+                                              "ppid": 94863,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 94869,
+                                                  "ppid": 94865,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\who_d65110be.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 94871,
+                                                      "ppid": 94869,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /priv",
+                                                      "children": [
+                                                        {
+                                                          "pid": 94874,
+                                                          "ppid": 94871,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 25 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 94875,
+                                                              "ppid": 94874,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 94878,
+                                                                  "ppid": 94875,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 94881,
+                                                                      "ppid": 94878,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 94883,
+                                                                          "ppid": 94881,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\host_4ac8c65d.txt\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "pid": 94884,
+                                                                      "ppid": 94878,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /all",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 94885,
+                                                                          "ppid": 94884,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 94889,
+                                                                              "ppid": 94885,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 94896,
+                                                                                  "ppid": 94889,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\who_df7d5c1e.txt\"",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

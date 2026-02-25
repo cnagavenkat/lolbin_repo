@@ -1,0 +1,181 @@
+{
+  "pid": 179927,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k Schedule",
+  "children": [
+    {
+      "pid": 179930,
+      "ppid": 179927,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\Public\\Profile_fcd5c6c8.wsf\" /repair",
+      "children": [
+        {
+          "pid": 179937,
+          "ppid": 179930,
+          "name": "vssadmin.exe",
+          "command": "vssadmin.exe list providers",
+          "children": [
+            {
+              "pid": 179943,
+              "ppid": 179937,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 179945,
+                  "ppid": 179943,
+                  "name": "wmic.exe",
+                  "command": "wmic.exe computersystem get Manufacturer,Model,Domain /value",
+                  "children": [
+                    {
+                      "pid": 179950,
+                      "ppid": 179945,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 179954,
+                          "ppid": 179950,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 179958,
+                      "ppid": 179945,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 179963,
+                          "ppid": 179958,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /query /fo LIST /v",
+                          "children": [
+                            {
+                              "pid": 179967,
+                              "ppid": 179963,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 179970,
+                                  "ppid": 179967,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /v",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 179974,
+                              "ppid": 179963,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all",
+                              "children": [
+                                {
+                                  "pid": 179981,
+                                  "ppid": 179974,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe  -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\rohan.mishra\\AppData\\Local\\Temp\\inv_6a505a00.txt'\"",
+                                  "children": [
+                                    {
+                                      "pid": 179983,
+                                      "ppid": 179981,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups",
+                                      "children": [
+                                        {
+                                          "pid": 179988,
+                                          "ppid": 179983,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\rohan.mishra\\AppData\\Local\\Temp\\host_50a7e232.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 179991,
+                                              "ppid": 179988,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                              "children": [
+                                                {
+                                                  "pid": 179992,
+                                                  "ppid": 179991,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\rohan.mishra\\AppData\\Local\\Temp\\host_a62a9539.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 179995,
+                                                      "ppid": 179992,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 179998,
+                                                          "ppid": 179995,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 180000,
+                                                              "ppid": 179998,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 180003,
+                                                                  "ppid": 180000,
+                                                                  "name": "timeout.exe",
+                                                                  "command": "timeout.exe /t 4 /nobreak",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 180006,
+                                                                      "ppid": 180003,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 180010,
+                                                                          "ppid": 180006,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups > \"C:\\Users\\rohan.mishra\\AppData\\Local\\Temp\\who_629fa9d4.txt\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

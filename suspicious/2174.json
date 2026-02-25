@@ -1,0 +1,198 @@
+{
+  "pid": 324271,
+  "ppid": 0,
+  "name": "excel.exe",
+  "command": "excel.exe \"C:\\Users\\neha.jain\\Documents\\AssetList.xlsm\"",
+  "children": [
+    {
+      "pid": 324277,
+      "ppid": 324271,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -ExecutionPolicy Bypass -File \"C:\\IT\\Scripts\\CollectInventory_8e9d3994.ps1\" -Host \"BLD-136\" -Mode Full",
+      "children": [
+        {
+          "pid": 324280,
+          "ppid": 324277,
+          "name": "cscript.exe",
+          "command": "cscript.exe //nologo \"C:\\ProgramData\\Woodgrove\\Runtime\\Profile_68bc5ae2.vbs\" /repair",
+          "children": [
+            {
+              "pid": 324286,
+              "ppid": 324280,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 7 /nobreak",
+              "children": [
+                {
+                  "pid": 324292,
+                  "ppid": 324286,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups > \"C:\\Users\\neha.jain\\AppData\\Local\\Temp\\who_6f2da14e.txt\"",
+                  "children": [
+                    {
+                      "pid": 324298,
+                      "ppid": 324292,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 3 > nul",
+                      "children": [
+                        {
+                          "pid": 324304,
+                          "ppid": 324298,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                          "children": [
+                            {
+                              "pid": 324309,
+                              "ppid": 324304,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 324312,
+                                  "ppid": 324309,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 324315,
+                                      "ppid": 324312,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 12 /nobreak",
+                                      "children": [
+                                        {
+                                          "pid": 324322,
+                                          "ppid": 324315,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                          "children": [
+                                            {
+                                              "pid": 324326,
+                                              "ppid": 324322,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\neha.jain\\AppData\\Local\\Temp\\host_803e40c4.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 324333,
+                                                  "ppid": 324326,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Fabrikam\\Logs\\Microsoft-Windows-TaskScheduler_Operational_b917d95f.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 324358,
+                                                      "ppid": 324333,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 324361,
+                                                          "ppid": 324358,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 20 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 324364,
+                                                              "ppid": 324361,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 21 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 324368,
+                                                                  "ppid": 324364,
+                                                                  "name": "timeout.exe",
+                                                                  "command": "timeout.exe /t 15 /nobreak",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 324370,
+                                                                      "ppid": 324368,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 324372,
+                                                                          "ppid": 324370,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 324375,
+                                                                              "ppid": 324372,
+                                                                              "name": "ping.exe",
+                                                                              "command": "ping.exe -n 17 127.0.0.1 > nul",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 324338,
+      "ppid": 324271,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 324343,
+          "ppid": 324338,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\neha.jain\\AppData\\Local\\Temp\\host_4a8fb7f0.txt\"",
+          "children": [
+            {
+              "pid": 324348,
+              "ppid": 324343,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+              "children": [
+                {
+                  "pid": 324351,
+                  "ppid": 324348,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\neha.jain\\AppData\\Local\\Temp\\who_d47c34b5.txt\"",
+                  "children": [
+                    {
+                      "pid": 324355,
+                      "ppid": 324351,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

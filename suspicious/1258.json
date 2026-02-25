@@ -1,0 +1,252 @@
+{
+  "pid": 202787,
+  "ppid": 0,
+  "name": "scriptlauncher.exe",
+  "command": "scriptlauncher.exe ",
+  "children": [
+    {
+      "pid": 202794,
+      "ppid": 202787,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\ProgramData\\Wingtip\\Client\\Deploy_2a168663.vbs\" /apply",
+      "children": [
+        {
+          "pid": 202795,
+          "ppid": 202794,
+          "name": "ping.exe",
+          "command": "ping.exe -n 15 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 202800,
+              "ppid": 202795,
+              "name": "mshta.exe",
+              "command": "mshta.exe \"http://helpdesk-tools.corp.local/pkg/postreg.hta\"",
+              "children": [
+                {
+                  "pid": 202804,
+                  "ppid": 202800,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 5 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 202805,
+                      "ppid": 202804,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /v",
+                      "children": [
+                        {
+                          "pid": 202809,
+                          "ppid": 202805,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 5 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 202813,
+                              "ppid": 202809,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 202817,
+                          "ppid": 202805,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv > \"C:\\Users\\aarav.das\\AppData\\Local\\Temp\\who_b28822cc.txt\"",
+                          "children": [
+                            {
+                              "pid": 202820,
+                              "ppid": 202817,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 202826,
+                                  "ppid": 202820,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups > \"C:\\Users\\aarav.das\\AppData\\Local\\Temp\\who_6f8a967e.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 202833,
+                                      "ppid": 202826,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv > \"C:\\Users\\aarav.das\\AppData\\Local\\Temp\\who_65eb32fc.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 202834,
+                                          "ppid": 202833,
+                                          "name": "quser.exe",
+                                          "command": "quser.exe /server:SUP-777",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 202836,
+                              "ppid": 202817,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 12 /nobreak",
+                              "children": [
+                                {
+                                  "pid": 202839,
+                                  "ppid": 202836,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\BlueYonder\\Logs\\Application_0c2829fb.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 202845,
+                                      "ppid": 202839,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 9 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 202849,
+                                          "ppid": 202845,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": [
+                                            {
+                                              "pid": 202853,
+                                              "ppid": 202849,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 202856,
+                                                  "ppid": 202853,
+                                                  "name": "makecab.exe",
+                                                  "command": "makecab.exe \"C:\\ProgramData\\Alpine\\Logs\\results.csv\" \"C:\\ProgramData\\Alpine\\Logs\\results.cab\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 202859,
+                                                      "ppid": 202856,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\aarav.das\\AppData\\Local\\Temp\\host_392d0234.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 202866,
+                                                          "ppid": 202859,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\aarav.das\\AppData\\Local\\Temp\\host_af7008d4.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 202870,
+                                                              "ppid": 202866,
+                                                              "name": "quser.exe",
+                                                              "command": "quser.exe /server:APP-542",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 202875,
+                                                                  "ppid": 202870,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 202882,
+                                                                      "ppid": 202875,
+                                                                      "name": "ping.exe",
+                                                                      "command": "ping.exe -n 11 127.0.0.1 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 202888,
+                                                                          "ppid": 202882,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /all",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 202890,
+                                                                              "ppid": 202888,
+                                                                              "name": "quser.exe",
+                                                                              "command": "quser.exe /server:LAP-415",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 202893,
+                                                                          "ppid": 202882,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 24 /nobreak",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 202894,
+                                                                              "ppid": 202893,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 202898,
+                                                                                  "ppid": 202894,
+                                                                                  "name": "powershell.exe",
+                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '> \"C:\\Users\\aarav.das\\AppData\\Local\\Temp\\who_36696f9a.txt\"' -Wait\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 202899,
+                                                                                      "ppid": 202898,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /priv > \"C:\\Users\\aarav.das\\AppData\\Local\\Temp\\who_e74b1a1b.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 202904,
+                                                                                          "ppid": 202899,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 202906,
+                                                                                              "ppid": 202904,
+                                                                                              "name": "timeout.exe",
+                                                                                              "command": "timeout.exe /t 16 /nobreak",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

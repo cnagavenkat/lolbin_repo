@@ -1,0 +1,172 @@
+{
+  "pid": 185711,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 185712,
+      "ppid": 185711,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\Users\\nisha.singh\\AppData\\Local\\Temp\\RunDiagnostics_1cde103c.ps1\" -Host \"LAP-207\" -Mode Full",
+      "children": [
+        {
+          "pid": 185713,
+          "ppid": 185712,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 11 > nul",
+          "children": [
+            {
+              "pid": 185718,
+              "ppid": 185713,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"ver\"",
+              "children": [
+                {
+                  "pid": 185719,
+                  "ppid": 185718,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\nisha.singh\\AppData\\Local\\Temp\\who_14dd86b3.txt\"",
+                  "children": [
+                    {
+                      "pid": 185738,
+                      "ppid": 185719,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 185745,
+                          "ppid": 185738,
+                          "name": "wevtutil.exe",
+                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Litware\\Logs\\System_3c302141.evtx\"",
+                          "children": [
+                            {
+                              "pid": 185746,
+                              "ppid": 185745,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\nisha.singh\\AppData\\Local\\Temp\\host_aaf4a97e.txt\"",
+                              "children": [
+                                {
+                                  "pid": 185750,
+                                  "ppid": 185746,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe > \"C:\\Users\\nisha.singh\\AppData\\Local\\Temp\\who_2eb4ded5.txt\"",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 185752,
+                              "ppid": 185745,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe",
+                              "children": [
+                                {
+                                  "pid": 185759,
+                                  "ppid": 185752,
+                                  "name": "certutil.exe",
+                                  "command": "certutil.exe -addstore TrustedPublisher \"C:\\Users\\nisha.singh\\AppData\\Local\\Temp\\workstation.cer\"",
+                                  "children": [
+                                    {
+                                      "pid": 185760,
+                                      "ppid": 185759,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe",
+                                      "children": [
+                                        {
+                                          "pid": 185765,
+                                          "ppid": 185760,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 16 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 185772,
+                                              "ppid": 185765,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 20 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 185773,
+                                                  "ppid": 185772,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all > \"C:\\Users\\nisha.singh\\AppData\\Local\\Temp\\who_bfcd5f8d.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 185775,
+                                                      "ppid": 185773,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /priv",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 185782,
+                                      "ppid": 185759,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\nisha.singh\\AppData\\Local\\Temp\\host_64f41fb3.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 185786,
+                                          "ppid": 185782,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 185790,
+                                              "ppid": 185786,
+                                              "name": "reg.exe",
+                                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 185724,
+      "ppid": 185711,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\nisha.singh\\AppData\\Local\\Temp\\host_e04ea292.txt\"",
+      "children": [
+        {
+          "pid": 185729,
+          "ppid": 185724,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 185734,
+              "ppid": 185729,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

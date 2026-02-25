@@ -1,0 +1,253 @@
+{
+  "pid": 245935,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 245939,
+      "ppid": 245935,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"ver\"",
+      "children": [
+        {
+          "pid": 245946,
+          "ppid": 245939,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+          "children": [
+            {
+              "pid": 245952,
+              "ppid": 245946,
+              "name": "quser.exe",
+              "command": "quser.exe /server:ENG-198",
+              "children": [
+                {
+                  "pid": 245958,
+                  "ppid": 245952,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                  "children": [
+                    {
+                      "pid": 245959,
+                      "ppid": 245958,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /v",
+                      "children": [
+                        {
+                          "pid": 245962,
+                          "ppid": 245959,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/all > \"C:\\Users\\aarav.bose\\AppData\\Local\\Temp\\who_8553fab2.txt\"' -Wait\"",
+                          "children": [
+                            {
+                              "pid": 245965,
+                              "ppid": 245962,
+                              "name": "wmic.exe",
+                              "command": "wmic.exe os get Caption,Version,BuildNumber /value",
+                              "children": [
+                                {
+                                  "pid": 245969,
+                                  "ppid": 245965,
+                                  "name": "ipconfig.exe",
+                                  "command": "ipconfig.exe /allcompartments /all",
+                                  "children": [
+                                    {
+                                      "pid": 245971,
+                                      "ppid": 245969,
+                                      "name": "ipconfig.exe",
+                                      "command": "ipconfig.exe /displaydns",
+                                      "children": [
+                                        {
+                                          "pid": 245973,
+                                          "ppid": 245971,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 245979,
+                                              "ppid": 245973,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Northwind\\Logs\\Application_c7a296f9.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 245982,
+                                                  "ppid": 245979,
+                                                  "name": "ipconfig.exe",
+                                                  "command": "ipconfig.exe /displaydns",
+                                                  "children": [
+                                                    {
+                                                      "pid": 245985,
+                                                      "ppid": 245982,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 245989,
+                                                          "ppid": 245985,
+                                                          "name": "ipconfig.exe",
+                                                          "command": "ipconfig.exe /all",
+                                                          "children": [
+                                                            {
+                                                              "pid": 245995,
+                                                              "ppid": 245989,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 246000,
+                                                          "ppid": 245985,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 19 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 246006,
+                                                              "ppid": 246000,
+                                                              "name": "ipconfig.exe",
+                                                              "command": "ipconfig.exe /all",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 246009,
+                                                                  "ppid": 246006,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 246010,
+                                                                      "ppid": 246009,
+                                                                      "name": "ipconfig.exe",
+                                                                      "command": "ipconfig.exe /all",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 246016,
+                                                                          "ppid": 246010,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\aarav.bose\\AppData\\Local\\Temp\\host_04446ffc.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 246018,
+                                                                              "ppid": 246016,
+                                                                              "name": "timeout.exe",
+                                                                              "command": "timeout.exe /t 24 /nobreak",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 246019,
+                                                              "ppid": 246000,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\aarav.bose\\AppData\\Local\\Temp\\host_d8e97abd.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 246020,
+                                                                  "ppid": 246019,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 16 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 246021,
+                                                                      "ppid": 246020,
+                                                                      "name": "ipconfig.exe",
+                                                                      "command": "ipconfig.exe /allcompartments /all",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 246025,
+                                                                          "ppid": 246021,
+                                                                          "name": "cmd.exe",
+                                                                          "command": "cmd.exe /c \"choice.exe /d y /t 6 > nul\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 246027,
+                                                                              "ppid": 246025,
+                                                                              "name": "ipconfig.exe",
+                                                                              "command": "ipconfig.exe /displaydns",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 246028,
+                                                                                  "ppid": 246027,
+                                                                                  "name": "timeout.exe",
+                                                                                  "command": "timeout.exe /t 21 /nobreak",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 246033,
+                                                                                      "ppid": 246028,
+                                                                                      "name": "timeout.exe",
+                                                                                      "command": "timeout.exe /t 11 /nobreak",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 246040,
+                                                                                          "ppid": 246033,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\aarav.bose\\AppData\\Local\\Temp\\host_65cede4d.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 246046,
+                                                                                              "ppid": 246040,
+                                                                                              "name": "ipconfig.exe",
+                                                                                              "command": "ipconfig.exe /all",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 246048,
+                                                                                                  "ppid": 246046,
+                                                                                                  "name": "ipconfig.exe",
+                                                                                                  "command": "ipconfig.exe /all",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

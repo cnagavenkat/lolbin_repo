@@ -1,0 +1,277 @@
+{
+  "pid": 359967,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 359970,
+      "ppid": 359967,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\Alpine\\Runtime\\Sync_e13296b4.js\"",
+      "children": [
+        {
+          "pid": 359971,
+          "ppid": 359970,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\ProgramData\\Alpine\\Profile\\CollectInventory_3911ddef.ps1\" -Host \"APP-654\" -Mode Quick",
+          "children": [
+            {
+              "pid": 359973,
+              "ppid": 359971,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 7 /nobreak",
+              "children": [
+                {
+                  "pid": 359977,
+                  "ppid": 359973,
+                  "name": "wmic.exe",
+                  "command": "wmic.exe qfe get HotFixID,InstalledOn",
+                  "children": [
+                    {
+                      "pid": 359979,
+                      "ppid": 359977,
+                      "name": "ipconfig.exe",
+                      "command": "ipconfig.exe /all",
+                      "children": [
+                        {
+                          "pid": 359983,
+                          "ppid": 359979,
+                          "name": "cmd.exe",
+                          "command": "cmd.exe /c \"tasklist.exe /svc\"",
+                          "children": [
+                            {
+                              "pid": 359984,
+                              "ppid": 359983,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 359987,
+                                  "ppid": 359984,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Wingtip\\Logs\\Application_be643e3c.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 359988,
+                                      "ppid": 359987,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /svc",
+                                      "children": [
+                                        {
+                                          "pid": 359993,
+                                          "ppid": 359988,
+                                          "name": "makecab.exe",
+                                          "command": "makecab.exe \"C:\\ProgramData\\Contoso\\Logs\\trace.etl\" \"C:\\ProgramData\\Contoso\\Logs\\trace.cab\"",
+                                          "children": [
+                                            {
+                                              "pid": 359997,
+                                              "ppid": 359993,
+                                              "name": "ipconfig.exe",
+                                              "command": "ipconfig.exe /all",
+                                              "children": [
+                                                {
+                                                  "pid": 360004,
+                                                  "ppid": 359997,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\host_8c54dd5a.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 360008,
+                                                      "ppid": 360004,
+                                                      "name": "schtasks.exe",
+                                                      "command": "schtasks.exe /create /tn \"\\Alpine\\Deploy\\Diag\" /tr \"C:\\IT\\Tools\\sync_0ade24e9.ps1\" /sc onlogon /f /ru SYSTEM",
+                                                      "children": [
+                                                        {
+                                                          "pid": 360013,
+                                                          "ppid": 360008,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 360016,
+                                                              "ppid": 360013,
+                                                              "name": "netsh.exe",
+                                                              "command": "netsh.exe advfirewall show allprofiles > \"C:\\ProgramData\\Northwind\\Logs\\net_0b9b4ba1.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 360021,
+                                                                  "ppid": 360016,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups > \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\who_b2d8d130.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 360024,
+                                                                      "ppid": 360021,
+                                                                      "name": "findstr.exe",
+                                                                      "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Contoso\\Logs\\update.log\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 360027,
+                                                                          "ppid": 360024,
+                                                                          "name": "ipconfig.exe",
+                                                                          "command": "ipconfig.exe /all",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 360034,
+                                                                              "ppid": 360027,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 360036,
+                                                                                  "ppid": 360034,
+                                                                                  "name": "powershell.exe",
+                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'netsh.exe' -ArgumentList 'interface ipv4 show config > \"C:\\ProgramData\\Woodgrove\\Logs\\net_14af72f4.txt\"' -Wait\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 360038,
+                                                                                      "ppid": 360036,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 360041,
+                                                                                          "ppid": 360038,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /groups",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 360045,
+                                                                                              "ppid": 360041,
+                                                                                              "name": "tasklist.exe",
+                                                                                              "command": "tasklist.exe /v",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 360051,
+                                                                                                  "ppid": 360045,
+                                                                                                  "name": "netsh.exe",
+                                                                                                  "command": "netsh.exe wlan show profiles",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    },
+                                                                                    {
+                                                                                      "pid": 360056,
+                                                                                      "ppid": 360036,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\host_8dcbc6c7.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 360058,
+                                                                                          "ppid": 360056,
+                                                                                          "name": "ipconfig.exe",
+                                                                                          "command": "ipconfig.exe /displaydns",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 360065,
+                                                                                              "ppid": 360058,
+                                                                                              "name": "tasklist.exe",
+                                                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 360072,
+                                                                                                  "ppid": 360065,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /priv",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 360078,
+                                                                                                      "ppid": 360072,
+                                                                                                      "name": "tasklist.exe",
+                                                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        },
+                                                                                        {
+                                                                                          "pid": 360082,
+                                                                                          "ppid": 360056,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /priv > \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\who_a9decfd5.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 360087,
+                                                                                              "ppid": 360082,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /groups",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 360089,
+                                                                                                  "ppid": 360087,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /priv",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 360095,
+                                                                                                      "ppid": 360089,
+                                                                                                      "name": "findstr.exe",
+                                                                                                      "command": "findstr.exe /i \"certificate\" \"C:\\ProgramData\\Woodgrove\\Logs\\update.log\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 360099,
+                                                                                                          "ppid": 360095,
+                                                                                                          "name": "hostname.exe",
+                                                                                                          "command": "hostname.exe > \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\host_5b227d5c.txt\"",
+                                                                                                          "children": []
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

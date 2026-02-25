@@ -1,0 +1,173 @@
+{
+  "pid": 200174,
+  "ppid": 0,
+  "name": "mmc.exe",
+  "command": "mmc.exe /startup",
+  "children": [
+    {
+      "pid": 200181,
+      "ppid": 200174,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\ProgramData\\Contoso\\Client\\Support_5177e81e.vbs\" /collect",
+      "children": [
+        {
+          "pid": 200188,
+          "ppid": 200181,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 6 > nul",
+          "children": [
+            {
+              "pid": 200191,
+              "ppid": 200188,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'certutil.exe' -ArgumentList '-dump \"C:\\Users\\arjun.singh\\AppData\\Local\\Temp\\agent_signing.cer\"' -Wait\"",
+              "children": [
+                {
+                  "pid": 200195,
+                  "ppid": 200191,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe",
+                  "children": [
+                    {
+                      "pid": 200202,
+                      "ppid": 200195,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 200208,
+                          "ppid": 200202,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 7 /nobreak",
+                          "children": [
+                            {
+                              "pid": 200212,
+                              "ppid": 200208,
+                              "name": "certutil.exe",
+                              "command": "certutil.exe -addstore TrustedPublisher \"C:\\ProgramData\\Northwind\\Patch\\corp_root.cer\"",
+                              "children": [
+                                {
+                                  "pid": 200218,
+                                  "ppid": 200212,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 200220,
+                                      "ppid": 200218,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\arjun.singh\\AppData\\Local\\Temp\\host_9619d0e2.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 200221,
+                                          "ppid": 200220,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'tasklist.exe' -ArgumentList '' -Wait\"",
+                                          "children": [
+                                            {
+                                              "pid": 200225,
+                                              "ppid": 200221,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                              "children": [
+                                                {
+                                                  "pid": 200230,
+                                                  "ppid": 200225,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 25 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 200231,
+                                                      "ppid": 200230,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 200238,
+                                                          "ppid": 200231,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 200244,
+                                          "ppid": 200220,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 200246,
+                                              "ppid": 200244,
+                                              "name": "reg.exe",
+                                              "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                              "children": [
+                                                {
+                                                  "pid": 200252,
+                                                  "ppid": 200246,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv > \"C:\\Users\\arjun.singh\\AppData\\Local\\Temp\\who_efda0545.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 200256,
+                                                      "ppid": 200252,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 200258,
+                                                  "ppid": 200246,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 200260,
+                                                      "ppid": 200258,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 11\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 200265,
+                                                          "ppid": 200260,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'wevtutil.exe' -ArgumentList 'epl \"Security\" \"C:\\ProgramData\\Wingtip\\Logs\\Security_c219ce10.evtx\"' -Wait\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "pid": 192406,
+  "ppid": 0,
+  "name": "CertMgrUI.exe",
+  "command": "CertMgrUI.exe ",
+  "children": [
+    {
+      "pid": 192412,
+      "ppid": 192406,
+      "name": "certutil.exe",
+      "command": "certutil.exe -dump \"C:\\Users\\varun.patel\\AppData\\Local\\Temp\\corp_root.cer\"",
+      "children": [
+        {
+          "pid": 192417,
+          "ppid": 192412,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv",
+          "children": [
+            {
+              "pid": 192419,
+              "ppid": 192417,
+              "name": "reg.exe",
+              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+              "children": [
+                {
+                  "pid": 192423,
+                  "ppid": 192419,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                  "children": [
+                    {
+                      "pid": 192426,
+                      "ppid": 192423,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 192429,
+                          "ppid": 192426,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 8 > nul",
+                          "children": [
+                            {
+                              "pid": 192432,
+                              "ppid": 192429,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+                              "children": [
+                                {
+                                  "pid": 192436,
+                                  "ppid": 192432,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 192443,
+                      "ppid": 192423,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 23 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 192446,
+                          "ppid": 192443,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 20 > nul",
+                          "children": [
+                            {
+                              "pid": 192453,
+                              "ppid": 192446,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\varun.patel\\AppData\\Local\\Temp\\host_752ab743.txt\"",
+                              "children": [
+                                {
+                                  "pid": 192454,
+                                  "ppid": 192453,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 24 /nobreak",
+                                  "children": [
+                                    {
+                                      "pid": 192460,
+                                      "ppid": 192454,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'timeout.exe' -ArgumentList '/t 12 /nobreak' -Wait\"",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 192465,
+                          "ppid": 192443,
+                          "name": "forfiles.exe",
+                          "command": "forfiles.exe /P \"C:\\Build\\dist\\d4214f34\" /M *.tmp /D -9 /C \"cmd /c type nul > @path\"",
+                          "children": [
+                            {
+                              "pid": 192472,
+                              "ppid": 192465,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\varun.patel\\AppData\\Local\\Temp\\host_a457a17f.txt\"",
+                              "children": [
+                                {
+                                  "pid": 192476,
+                                  "ppid": 192472,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 192483,
+                                      "ppid": 192476,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Fabrikam\\Logs\\profile.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 192486,
+                                          "ppid": 192483,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 192491,
+                                              "ppid": 192486,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv > \"C:\\Users\\varun.patel\\AppData\\Local\\Temp\\who_09a0d4df.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 192493,
+                                                  "ppid": 192491,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe > \"C:\\Users\\varun.patel\\AppData\\Local\\Temp\\who_a7f33e52.txt\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 192500,
+                                              "ppid": 192486,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups",
+                                              "children": [
+                                                {
+                                                  "pid": 192504,
+                                                  "ppid": 192500,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\varun.patel\\AppData\\Local\\Temp\\host_91345e1a.txt\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

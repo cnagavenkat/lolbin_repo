@@ -1,0 +1,236 @@
+{
+  "pid": 117657,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Runbooks\\Runbook_053618eb.ps1\"",
+  "children": [
+    {
+      "pid": 117663,
+      "ppid": 117657,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\evt_fc3f5609.txt'\"",
+      "children": [
+        {
+          "pid": 117666,
+          "ppid": 117663,
+          "name": "cmd.exe",
+          "command": "cmd.exe /c \"ver\"",
+          "children": [
+            {
+              "pid": 117672,
+              "ppid": 117666,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all",
+              "children": [
+                {
+                  "pid": 117677,
+                  "ppid": 117672,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": [
+                    {
+                      "pid": 117699,
+                      "ppid": 117677,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe",
+                      "children": [
+                        {
+                          "pid": 117704,
+                          "ppid": 117699,
+                          "name": "quser.exe",
+                          "command": "quser.exe /server:LAP-503",
+                          "children": [
+                            {
+                              "pid": 117708,
+                              "ppid": 117704,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 117714,
+                                  "ppid": 117708,
+                                  "name": "wmic.exe",
+                                  "command": "wmic.exe qfe get HotFixID,InstalledOn",
+                                  "children": [
+                                    {
+                                      "pid": 117719,
+                                      "ppid": 117714,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\who_189d5c35.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 117721,
+                                          "ppid": 117719,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\BlueYonder\\Logs\\Application_b6b785fe.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 117743,
+                                              "ppid": 117721,
+                                              "name": "quser.exe",
+                                              "command": "quser.exe /server:SUP-408",
+                                              "children": [
+                                                {
+                                                  "pid": 117746,
+                                                  "ppid": 117743,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 12 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 117749,
+                                                      "ppid": 117746,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\who_0565f276.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 117770,
+                                                          "ppid": 117749,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\who_da33785c.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 117775,
+                                                              "ppid": 117770,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 117781,
+                                                                  "ppid": 117775,
+                                                                  "name": "findstr.exe",
+                                                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Contoso\\Logs\\support.log\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 117788,
+                                                                      "ppid": 117781,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /groups",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 117680,
+      "ppid": 117657,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 17 /nobreak",
+      "children": [
+        {
+          "pid": 117681,
+          "ppid": 117680,
+          "name": "whoami.exe",
+          "command": "whoami.exe /all",
+          "children": [
+            {
+              "pid": 117683,
+              "ppid": 117681,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\host_35e86bca.txt\"",
+              "children": [
+                {
+                  "pid": 117688,
+                  "ppid": 117683,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\who_5b553da9.txt\"",
+                  "children": [
+                    {
+                      "pid": 117695,
+                      "ppid": 117688,
+                      "name": "findstr.exe",
+                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Woodgrove\\Logs\\diag.log\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 117728,
+      "ppid": 117657,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 117734,
+          "ppid": 117728,
+          "name": "whoami.exe",
+          "command": "whoami.exe > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\who_4b385a38.txt\"",
+          "children": [
+            {
+              "pid": 117738,
+              "ppid": 117734,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 117750,
+      "ppid": 117657,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\rohan.kulkarni\\AppData\\Local\\Temp\\host_225e84ea.txt\"",
+      "children": [
+        {
+          "pid": 117752,
+          "ppid": 117750,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 21 /nobreak",
+          "children": [
+            {
+              "pid": 117756,
+              "ppid": 117752,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv",
+              "children": [
+                {
+                  "pid": 117763,
+                  "ppid": 117756,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 10 127.0.0.1 > nul",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

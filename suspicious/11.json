@@ -1,0 +1,291 @@
+{
+  "pid": 51589,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 51596,
+      "ppid": 51589,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\kiran.singh\\AppData\\Local\\Temp\\diag_9ee96bbc.txt'\"",
+      "children": [
+        {
+          "pid": 51602,
+          "ppid": 51596,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /fo LIST /v",
+          "children": [
+            {
+              "pid": 51603,
+              "ppid": 51602,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\kiran.singh\\AppData\\Local\\Temp\\host_cf71ec0a.txt\"",
+              "children": [
+                {
+                  "pid": 51607,
+                  "ppid": 51603,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\kiran.singh\\AppData\\Local\\Temp\\host_99402116.txt\"",
+                  "children": [
+                    {
+                      "pid": 51609,
+                      "ppid": 51607,
+                      "name": "wmic.exe",
+                      "command": "wmic.exe computersystem get Manufacturer,Model,Domain /value",
+                      "children": [
+                        {
+                          "pid": 51615,
+                          "ppid": 51609,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /groups > \"C:\\Users\\kiran.singh\\AppData\\Local\\Temp\\who_9c1d99db.txt\"",
+                          "children": [
+                            {
+                              "pid": 51617,
+                              "ppid": 51615,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /query /fo LIST /v",
+                              "children": [
+                                {
+                                  "pid": 51624,
+                                  "ppid": 51617,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 51627,
+                              "ppid": 51615,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 51645,
+                                  "ppid": 51627,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 51668,
+                                      "ppid": 51645,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe",
+                                      "children": [
+                                        {
+                                          "pid": 51673,
+                                          "ppid": 51668,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Wingtip\\Logs\\Microsoft-Windows-TaskScheduler_Operational_0b0088ab.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 51675,
+                                              "ppid": 51673,
+                                              "name": "netsh.exe",
+                                              "command": "netsh.exe wlan show profiles",
+                                              "children": [
+                                                {
+                                                  "pid": 51676,
+                                                  "ppid": 51675,
+                                                  "name": "schtasks.exe",
+                                                  "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+                                                  "children": [
+                                                    {
+                                                      "pid": 51677,
+                                                      "ppid": 51676,
+                                                      "name": "findstr.exe",
+                                                      "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Fabrikam\\Logs\\profile.log\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 51679,
+                                                          "ppid": 51677,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 51684,
+                                                              "ppid": 51679,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\kiran.singh\\AppData\\Local\\Temp\\host_fd927e36.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 51691,
+                                                                  "ppid": 51684,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /v",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 51696,
+                                                                      "ppid": 51691,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /svc",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 51700,
+                                                                          "ppid": 51696,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv > \"C:\\Users\\kiran.singh\\AppData\\Local\\Temp\\who_19ee413f.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 51703,
+                                                                              "ppid": 51700,
+                                                                              "name": "netsh.exe",
+                                                                              "command": "netsh.exe advfirewall show allprofiles",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 51715,
+                                                                                  "ppid": 51703,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\kiran.singh\\AppData\\Local\\Temp\\host_b5b9cc5a.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 51719,
+                                                                                      "ppid": 51715,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 51721,
+                                                                                          "ppid": 51719,
+                                                                                          "name": "timeout.exe",
+                                                                                          "command": "timeout.exe /t 6 /nobreak",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 51728,
+                                                                                              "ppid": 51721,
+                                                                                              "name": "netsh.exe",
+                                                                                              "command": "netsh.exe winhttp show proxy > \"C:\\ProgramData\\Alpine\\Logs\\net_7a648e94.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 51733,
+                                                                                                  "ppid": 51728,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 51739,
+                                                                                                      "ppid": 51733,
+                                                                                                      "name": "ipconfig.exe",
+                                                                                                      "command": "ipconfig.exe /all",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 51633,
+      "ppid": 51589,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+      "children": [
+        {
+          "pid": 51638,
+          "ppid": 51633,
+          "name": "ipconfig.exe",
+          "command": "ipconfig.exe /allcompartments /all",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 51652,
+      "ppid": 51589,
+      "name": "netsh.exe",
+      "command": "netsh.exe advfirewall show allprofiles",
+      "children": [
+        {
+          "pid": 51659,
+          "ppid": 51652,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+          "children": [
+            {
+              "pid": 51661,
+              "ppid": 51659,
+              "name": "ipconfig.exe",
+              "command": "ipconfig.exe /displaydns",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 51704,
+      "ppid": 51589,
+      "name": "findstr.exe",
+      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Woodgrove\\Logs\\support.log\"",
+      "children": [
+        {
+          "pid": 51711,
+          "ppid": 51704,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /svc",
+          "children": [
+            {
+              "pid": 51712,
+              "ppid": 51711,
+              "name": "ipconfig.exe",
+              "command": "ipconfig.exe /allcompartments /all",
+              "children": [
+                {
+                  "pid": 51713,
+                  "ppid": 51712,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\kiran.singh\\AppData\\Local\\Temp\\who_4c07fb52.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

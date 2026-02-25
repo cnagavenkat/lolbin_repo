@@ -1,0 +1,291 @@
+{
+  "pid": 120098,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 120100,
+      "ppid": 120098,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"whoami /all\"",
+      "children": [
+        {
+          "pid": 120101,
+          "ppid": 120100,
+          "name": "wmic.exe",
+          "command": "wmic.exe process get Name,ProcessId,ParentProcessId",
+          "children": [
+            {
+              "pid": 120108,
+              "ppid": 120101,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /v",
+              "children": [
+                {
+                  "pid": 120110,
+                  "ppid": 120108,
+                  "name": "reg.exe",
+                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                  "children": [
+                    {
+                      "pid": 120116,
+                      "ppid": 120110,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+                      "children": [
+                        {
+                          "pid": 120122,
+                          "ppid": 120116,
+                          "name": "wevtutil.exe",
+                          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\BlueYonder\\Logs\\Microsoft-Windows-TaskScheduler_Operational_d58a8397.evtx\"",
+                          "children": [
+                            {
+                              "pid": 120136,
+                              "ppid": 120122,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 13 /nobreak",
+                              "children": [
+                                {
+                                  "pid": 120138,
+                                  "ppid": 120136,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe",
+                                  "children": [
+                                    {
+                                      "pid": 120140,
+                                      "ppid": 120138,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 14 /nobreak",
+                                      "children": [
+                                        {
+                                          "pid": 120141,
+                                          "ppid": 120140,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                          "children": [
+                                            {
+                                              "pid": 120148,
+                                              "ppid": 120141,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\host_6a6c6f7c.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 120154,
+                                                  "ppid": 120148,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 18 > nul",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 120159,
+                                          "ppid": 120140,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Northwind\\Logs\\update.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 120163,
+                                              "ppid": 120159,
+                                              "name": "cmd.exe",
+                                              "command": "cmd.exe /c \"tasklist.exe /fi \"imagename eq svchost.exe\"\"",
+                                              "children": [
+                                                {
+                                                  "pid": 120168,
+                                                  "ppid": 120163,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /v",
+                                                  "children": [
+                                                    {
+                                                      "pid": 120173,
+                                                      "ppid": 120168,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 8 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 120175,
+                                                          "ppid": 120173,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'ping.exe' -ArgumentList '-n 24 127.0.0.1 > nul' -Wait\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 120197,
+                                                              "ppid": 120175,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 120200,
+                                                                  "ppid": 120197,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\who_7f647aee.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 120203,
+                                                                      "ppid": 120200,
+                                                                      "name": "cmd.exe",
+                                                                      "command": "cmd.exe /c \"hostname.exe\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 120208,
+                                                                          "ppid": 120203,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 120212,
+                                                                              "ppid": 120208,
+                                                                              "name": "timeout.exe",
+                                                                              "command": "timeout.exe /t 24 /nobreak",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 120219,
+                                                                                  "ppid": 120212,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 120226,
+                                                                  "ppid": 120197,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 4 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 120227,
+                                                                      "ppid": 120226,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\who_da5190c6.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 120232,
+                                                                          "ppid": 120227,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 8 /nobreak",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 120239,
+                                                                              "ppid": 120232,
+                                                                              "name": "timeout.exe",
+                                                                              "command": "timeout.exe /t 20 /nobreak",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 120245,
+                                                                                  "ppid": 120239,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /v",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 120246,
+                                                                                      "ppid": 120245,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 120126,
+      "ppid": 120098,
+      "name": "ping.exe",
+      "command": "ping.exe -n 26 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 120133,
+          "ppid": 120126,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\who_c13b76f6.txt\"",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 120181,
+      "ppid": 120098,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 5 > nul",
+      "children": [
+        {
+          "pid": 120186,
+          "ppid": 120181,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 11 > nul",
+          "children": [
+            {
+              "pid": 120191,
+              "ppid": 120186,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\who_c0948b7e.txt\"",
+              "children": [
+                {
+                  "pid": 120192,
+                  "ppid": 120191,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\vivaan.nair\\AppData\\Local\\Temp\\host_6e492d4c.txt\"",
+                  "children": [
+                    {
+                      "pid": 120193,
+                      "ppid": 120192,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

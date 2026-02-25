@@ -1,0 +1,283 @@
+{
+  "pid": 233921,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 233926,
+      "ppid": 233921,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\Public\\TemplateRun_68b2300a.js\"",
+      "children": [
+        {
+          "pid": 233929,
+          "ppid": 233926,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+          "children": [
+            {
+              "pid": 233931,
+              "ppid": 233929,
+              "name": "certutil.exe",
+              "command": "certutil.exe -urlcache -split -f \"http://intra-update.corp.local/tools/helper.dll\" \"C:\\Users\\Public\\agent.cab\"",
+              "children": [
+                {
+                  "pid": 233935,
+                  "ppid": 233931,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\host_d31cee1c.txt\"",
+                  "children": [
+                    {
+                      "pid": 233940,
+                      "ppid": 233935,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "pid": 233941,
+                  "ppid": 233931,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 20 > nul",
+                  "children": [
+                    {
+                      "pid": 233942,
+                      "ppid": 233941,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 233948,
+                          "ppid": 233942,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\host_7ffc8abf.txt\"",
+                          "children": [
+                            {
+                              "pid": 233951,
+                              "ppid": 233948,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                              "children": [
+                                {
+                                  "pid": 233953,
+                                  "ppid": 233951,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                  "children": [
+                                    {
+                                      "pid": 233954,
+                                      "ppid": 233953,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\host_f845a54a.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 233956,
+                                          "ppid": 233954,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 18 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 233957,
+                                              "ppid": 233956,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 233960,
+                              "ppid": 233948,
+                              "name": "certutil.exe",
+                              "command": "certutil.exe -addstore CA \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\corp_root.cer\"",
+                              "children": [
+                                {
+                                  "pid": 233964,
+                                  "ppid": 233960,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe > \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\who_9c3fae91.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 233991,
+                                      "ppid": 233964,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+                                      "children": [
+                                        {
+                                          "pid": 233998,
+                                          "ppid": 233991,
+                                          "name": "certutil.exe",
+                                          "command": "certutil.exe -dump \"C:\\ProgramData\\Northwind\\Updater\\corp_root.cer\"",
+                                          "children": [
+                                            {
+                                              "pid": 234001,
+                                              "ppid": 233998,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 234005,
+                                                  "ppid": 234001,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 5 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 234012,
+                                                      "ppid": 234005,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-Service | Out-File 'C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\diag_5aeb8b13.txt'\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 234040,
+                                                          "ppid": 234012,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 23 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 234047,
+                                                              "ppid": 234040,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/groups > \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\who_88248e9a.txt\"' -Wait\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 234048,
+                                                                  "ppid": 234047,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 234051,
+                                                                      "ppid": 234048,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\host_c0343159.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 234058,
+                                                                          "ppid": 234051,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 17 127.0.0.1 > nul",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 233970,
+      "ppid": 233921,
+      "name": "whoami.exe",
+      "command": "whoami.exe /priv",
+      "children": [
+        {
+          "pid": 233975,
+          "ppid": 233970,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+          "children": [
+            {
+              "pid": 233981,
+              "ppid": 233975,
+              "name": "ping.exe",
+              "command": "ping.exe -n 4 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 233984,
+                  "ppid": 233981,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                  "children": [
+                    {
+                      "pid": 233989,
+                      "ppid": 233984,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 234015,
+      "ppid": 233921,
+      "name": "whoami.exe",
+      "command": "whoami.exe /priv",
+      "children": [
+        {
+          "pid": 234021,
+          "ppid": 234015,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 234027,
+              "ppid": 234021,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 234031,
+                  "ppid": 234027,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\who_f808f42d.txt\"",
+                  "children": [
+                    {
+                      "pid": 234038,
+                      "ppid": 234031,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

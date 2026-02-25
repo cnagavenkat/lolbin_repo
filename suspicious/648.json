@@ -1,0 +1,237 @@
+{
+  "pid": 130927,
+  "ppid": 0,
+  "name": "userinit.exe",
+  "command": "userinit.exe /service",
+  "children": [
+    {
+      "pid": 130930,
+      "ppid": 130927,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\ProgramData\\Woodgrove\\Build\\Support_9be6ce5a.wsf\" /quiet",
+      "children": [
+        {
+          "pid": 130934,
+          "ppid": 130930,
+          "name": "wscript.exe",
+          "command": "wscript.exe //nologo \"C:\\Users\\Public\\Assist_6d3fa099.wsf\"",
+          "children": [
+            {
+              "pid": 130938,
+              "ppid": 130934,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 130944,
+                  "ppid": 130938,
+                  "name": "reg.exe",
+                  "command": "reg.exe add \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"CollectorAssist\" /t REG_SZ /d \"C:\\Users\\Public\\Bridge_61b60599.vbs\" /f",
+                  "children": [
+                    {
+                      "pid": 130947,
+                      "ppid": 130944,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 130949,
+                          "ppid": 130947,
+                          "name": "cmd.exe",
+                          "command": "cmd.exe /k \"whoami /all\"",
+                          "children": [
+                            {
+                              "pid": 130954,
+                              "ppid": 130949,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 8 /nobreak",
+                              "children": [
+                                {
+                                  "pid": 130973,
+                                  "ppid": 130954,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 130978,
+                                      "ppid": 130973,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\IT\\Deploy\\BuildPack_a76584ea.ps1\" -Host \"BLD-225\" -Mode Full",
+                                      "children": [
+                                        {
+                                          "pid": 130983,
+                                          "ppid": 130978,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 130989,
+                                              "ppid": 130983,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv",
+                                              "children": [
+                                                {
+                                                  "pid": 130994,
+                                                  "ppid": 130989,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 11 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 130997,
+                                                      "ppid": 130994,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 130999,
+                                                          "ppid": 130997,
+                                                          "name": "net.exe",
+                                                          "command": "net.exe use T: \"\\\\deploy\\packages\" /persistent:no",
+                                                          "children": [
+                                                            {
+                                                              "pid": 131006,
+                                                              "ppid": 130999,
+                                                              "name": "net.exe",
+                                                              "command": "net.exe use R: /delete /y",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 131009,
+                                                                  "ppid": 131006,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 131012,
+                                                                      "ppid": 131009,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\karthik.das\\AppData\\Local\\Temp\\host_f2828314.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 131016,
+                                                                          "ppid": 131012,
+                                                                          "name": "net.exe",
+                                                                          "command": "net.exe use Z: /delete /y",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 131030,
+                                                                              "ppid": 131016,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe > \"C:\\Users\\karthik.das\\AppData\\Local\\Temp\\who_00fd31d8.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 131035,
+                                                                                  "ppid": 131030,
+                                                                                  "name": "powershell.exe",
+                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 130955,
+      "ppid": 130927,
+      "name": "net.exe",
+      "command": "net.exe use W: \"\\\\filesrv\\IT\\Scripts\" /persistent:no",
+      "children": [
+        {
+          "pid": 130956,
+          "ppid": 130955,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 130958,
+              "ppid": 130956,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 130961,
+                  "ppid": 130958,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 9 > nul",
+                  "children": [
+                    {
+                      "pid": 130968,
+                      "ppid": 130961,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 131019,
+      "ppid": 130927,
+      "name": "net.exe",
+      "command": "net.exe use V: \"\\\\bldsrv\\drops\" /persistent:no",
+      "children": [
+        {
+          "pid": 131023,
+          "ppid": 131019,
+          "name": "whoami.exe",
+          "command": "whoami.exe",
+          "children": [
+            {
+              "pid": 131024,
+              "ppid": 131023,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\karthik.das\\AppData\\Local\\Temp\\host_5b0f4418.txt\"",
+              "children": [
+                {
+                  "pid": 131028,
+                  "ppid": 131024,
+                  "name": "net.exe",
+                  "command": "net.exe use U: \"\\\\corp\\login\" /persistent:no",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

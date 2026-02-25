@@ -1,0 +1,195 @@
+{
+  "pid": 113773,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Deploy\\Runbook_1034d936.ps1\"",
+  "children": [
+    {
+      "pid": 113777,
+      "ppid": 113773,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"hostname\"",
+      "children": [
+        {
+          "pid": 113779,
+          "ppid": 113777,
+          "name": "wmic.exe",
+          "command": "wmic.exe service get Name,StartMode,State",
+          "children": [
+            {
+              "pid": 113785,
+              "ppid": 113779,
+              "name": "ping.exe",
+              "command": "ping.exe -n 19 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 113788,
+                  "ppid": 113785,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups",
+                  "children": [
+                    {
+                      "pid": 113793,
+                      "ppid": 113788,
+                      "name": "reg.exe",
+                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                      "children": [
+                        {
+                          "pid": 113804,
+                          "ppid": 113793,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 22 /nobreak",
+                          "children": [
+                            {
+                              "pid": 113805,
+                              "ppid": 113804,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 4 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 113819,
+                                  "ppid": 113805,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                  "children": [
+                                    {
+                                      "pid": 113825,
+                                      "ppid": 113819,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\BlueYonder\\Logs\\Microsoft-Windows-TaskScheduler_Operational_36b8d89a.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 113830,
+                                          "ppid": 113825,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": [
+                                            {
+                                              "pid": 113831,
+                                              "ppid": 113830,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /svc",
+                                              "children": [
+                                                {
+                                                  "pid": 113836,
+                                                  "ppid": 113831,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\varun.jain\\AppData\\Local\\Temp\\host_0275d44a.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 113837,
+                                                      "ppid": 113836,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 113843,
+                                                          "ppid": 113837,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\varun.jain\\AppData\\Local\\Temp\\host_e7f53ca6.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 113844,
+                                          "ppid": 113825,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 113851,
+                                              "ppid": 113844,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 113852,
+                                                  "ppid": 113851,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 113858,
+                                              "ppid": 113844,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv",
+                                              "children": [
+                                                {
+                                                  "pid": 113864,
+                                                  "ppid": 113858,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Fabrikam\\Logs\\deploy.log\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 113795,
+      "ppid": 113773,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\varun.jain\\AppData\\Local\\Temp\\host_9163ae4e.txt\"",
+      "children": [
+        {
+          "pid": 113802,
+          "ppid": 113795,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 113807,
+      "ppid": 113773,
+      "name": "whoami.exe",
+      "command": "whoami.exe /priv",
+      "children": [
+        {
+          "pid": 113813,
+          "ppid": 113807,
+          "name": "whoami.exe",
+          "command": "whoami.exe",
+          "children": [
+            {
+              "pid": 113817,
+              "ppid": 113813,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

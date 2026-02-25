@@ -1,0 +1,267 @@
+{
+  "pid": 233771,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Scripts\\Runbook_c2a7b661.ps1\"",
+  "children": [
+    {
+      "pid": 233778,
+      "ppid": 233771,
+      "name": "sc.exe",
+      "command": "sc.exe query \"Schedule\"",
+      "children": [
+        {
+          "pid": 233784,
+          "ppid": 233778,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 2 > nul",
+          "children": [
+            {
+              "pid": 233791,
+              "ppid": 233784,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 233792,
+                  "ppid": 233791,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\pooja.kulkarni\\AppData\\Local\\Temp\\host_ef2e31e6.txt\"",
+                  "children": [
+                    {
+                      "pid": 233799,
+                      "ppid": 233792,
+                      "name": "sc.exe",
+                      "command": "sc.exe qc \"WinRM\"",
+                      "children": [
+                        {
+                          "pid": 233802,
+                          "ppid": 233799,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+                          "children": [
+                            {
+                              "pid": 233804,
+                              "ppid": 233802,
+                              "name": "wmic.exe",
+                              "command": "wmic.exe computersystem get Manufacturer,Model,Domain /value",
+                              "children": [
+                                {
+                                  "pid": 233805,
+                                  "ppid": 233804,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+                                  "children": [
+                                    {
+                                      "pid": 233809,
+                                      "ppid": 233805,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\Users\\pooja.kulkarni\\AppData\\Local\\Temp\\RunDiagnostics_c37be564.ps1\" -Host \"APP-818\" -Mode Quick",
+                                      "children": [
+                                        {
+                                          "pid": 233816,
+                                          "ppid": 233809,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 233821,
+                                              "ppid": 233816,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 10 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 233824,
+                                                  "ppid": 233821,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 233829,
+                                                      "ppid": 233824,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 233831,
+                                                          "ppid": 233829,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups",
+                                                          "children": [
+                                                            {
+                                                              "pid": 233835,
+                                                              "ppid": 233831,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv > \"C:\\Users\\pooja.kulkarni\\AppData\\Local\\Temp\\who_5d167eb0.txt\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 233841,
+                                              "ppid": 233816,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                                              "children": [
+                                                {
+                                                  "pid": 233848,
+                                                  "ppid": 233841,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 233853,
+                                                      "ppid": 233848,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /all > \"C:\\Users\\pooja.kulkarni\\AppData\\Local\\Temp\\who_e4dfef87.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 233859,
+                                                          "ppid": 233853,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all > \"C:\\Users\\pooja.kulkarni\\AppData\\Local\\Temp\\who_02a10748.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 233861,
+                                                              "ppid": 233859,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 233865,
+                                                                  "ppid": 233861,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\pooja.kulkarni\\AppData\\Local\\Temp\\host_1a110038.txt\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 233869,
+                                                          "ppid": 233853,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 233870,
+                                                              "ppid": 233869,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 233876,
+                                                                  "ppid": 233870,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\pooja.kulkarni\\AppData\\Local\\Temp\\host_872846bb.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 233880,
+                                                                      "ppid": 233876,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 6 > nul",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 233886,
+                                                                  "ppid": 233870,
+                                                                  "name": "timeout.exe",
+                                                                  "command": "timeout.exe /t 2 /nobreak",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 233890,
+                                                                      "ppid": 233886,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe > \"C:\\Users\\pooja.kulkarni\\AppData\\Local\\Temp\\who_19c49db8.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 233896,
+                                                                          "ppid": 233890,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 233901,
+                                                                              "ppid": 233896,
+                                                                              "name": "powershell.exe",
+                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 233907,
+                                                                                  "ppid": 233901,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /groups",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 233914,
+                                                                                      "ppid": 233907,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 233915,
+                                                                          "ppid": 233890,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /all > \"C:\\Users\\pooja.kulkarni\\AppData\\Local\\Temp\\who_f40e4ac6.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 233916,
+                                                                              "ppid": 233915,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all > \"C:\\Users\\pooja.kulkarni\\AppData\\Local\\Temp\\who_5813a43d.txt\"",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

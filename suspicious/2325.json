@@ -1,0 +1,222 @@
+{
+  "pid": 346677,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Scripts\\Runbook_8010d1e7.ps1\"",
+  "children": [
+    {
+      "pid": 346683,
+      "ppid": 346677,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\Cert_db6bb402.vbs\" /verify",
+      "children": [
+        {
+          "pid": 346689,
+          "ppid": 346683,
+          "name": "sc.exe",
+          "command": "sc.exe query \"WinRM\"",
+          "children": [
+            {
+              "pid": 346694,
+              "ppid": 346689,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 346701,
+                  "ppid": 346694,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /svc",
+                  "children": [
+                    {
+                      "pid": 346704,
+                      "ppid": 346701,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 346709,
+                          "ppid": 346704,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\Public\\RunDiagnostics_ed6cf3e5.ps1\" -Host \"LAP-231\" -Mode Verify",
+                          "children": [
+                            {
+                              "pid": 346712,
+                              "ppid": 346709,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /svc",
+                              "children": [
+                                {
+                                  "pid": 346716,
+                                  "ppid": 346712,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe import \"C:\\Build\\dist\\751c3031\\Collector_5ab5481d.reg\"",
+                                  "children": [
+                                    {
+                                      "pid": 346721,
+                                      "ppid": 346716,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 346722,
+                                          "ppid": 346721,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                                          "children": [
+                                            {
+                                              "pid": 346727,
+                                              "ppid": 346722,
+                                              "name": "rundll32.exe",
+                                              "command": "rundll32.exe \"C:\\Build\\staging\\ac592159\\bridge.dll\",EntryPoint",
+                                              "children": [
+                                                {
+                                                  "pid": 346734,
+                                                  "ppid": 346727,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 346739,
+                                                      "ppid": 346734,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 346744,
+                                                          "ppid": 346739,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 346746,
+                                                              "ppid": 346744,
+                                                              "name": "wevtutil.exe",
+                                                              "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_c6c25a5f.evtx\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 346752,
+                                                                  "ppid": 346746,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 346753,
+                                                                      "ppid": 346752,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /v",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 346756,
+                                                                          "ppid": 346753,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 21 /nobreak",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 346763,
+                                                                  "ppid": 346746,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\host_731a5240.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 346765,
+                                                                      "ppid": 346763,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /priv",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 346771,
+                                                                          "ppid": 346765,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 346777,
+                                                                              "ppid": 346771,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\who_f700294a.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 346782,
+                                                                                  "ppid": 346777,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /priv",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 346787,
+                                                                                      "ppid": 346782,
+                                                                                      "name": "powershell.exe",
+                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 346794,
+                                                                                          "ppid": 346787,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\who_283a9098.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 346796,
+                                                                                              "ppid": 346794,
+                                                                                              "name": "tasklist.exe",
+                                                                                              "command": "tasklist.exe",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 346799,
+                                                                                                  "ppid": 346796,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe > \"C:\\Users\\vivaan.gupta\\AppData\\Local\\Temp\\host_cb5a9ac1.txt\"",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

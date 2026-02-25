@@ -1,0 +1,164 @@
+{
+  "pid": 111520,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Tools\\Runbook_bce37645.ps1\"",
+  "children": [
+    {
+      "pid": 111523,
+      "ppid": 111520,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\Sync_62ec6d44.vbs\"",
+      "children": [
+        {
+          "pid": 111526,
+          "ppid": 111523,
+          "name": "sc.exe",
+          "command": "sc.exe query \"Spooler\"",
+          "children": [
+            {
+              "pid": 111533,
+              "ppid": 111526,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+              "children": [
+                {
+                  "pid": 111534,
+                  "ppid": 111533,
+                  "name": "wevtutil.exe",
+                  "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Alpine\\Logs\\Application_eaed3a41.evtx\"",
+                  "children": [
+                    {
+                      "pid": 111536,
+                      "ppid": 111534,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 111538,
+                          "ppid": 111536,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /svc",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 111544,
+                      "ppid": 111534,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\host_6472d9d5.txt\"",
+                      "children": [
+                        {
+                          "pid": 111548,
+                          "ppid": 111544,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /v",
+                          "children": [
+                            {
+                              "pid": 111552,
+                              "ppid": 111548,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 111556,
+                                  "ppid": 111552,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                  "children": [
+                                    {
+                                      "pid": 111563,
+                                      "ppid": 111556,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups > \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\who_2fe31245.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 111568,
+                                          "ppid": 111563,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 111569,
+                          "ppid": 111544,
+                          "name": "rundll32.exe",
+                          "command": "rundll32.exe advapi32.dll,ProcessIdleTasks",
+                          "children": [
+                            {
+                              "pid": 111573,
+                              "ppid": 111569,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 5 > nul",
+                              "children": [
+                                {
+                                  "pid": 111576,
+                                  "ppid": 111573,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /c \"whoami.exe /all > \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\who_4451e2a6.txt\"\"",
+                                  "children": [
+                                    {
+                                      "pid": 111580,
+                                      "ppid": 111576,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe",
+                                      "children": [
+                                        {
+                                          "pid": 111586,
+                                          "ppid": 111580,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 111591,
+                                  "ppid": 111573,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\sched_daaa2395.txt'\"",
+                                  "children": [
+                                    {
+                                      "pid": 111597,
+                                      "ppid": 111591,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\host_dccbd673.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 111603,
+                                          "ppid": 111597,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

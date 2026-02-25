@@ -1,0 +1,198 @@
+{
+  "pid": 122316,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe /startup",
+  "children": [
+    {
+      "pid": 122323,
+      "ppid": 122316,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\Public\\TemplateRun_ba415dc7.vbs\"",
+      "children": [
+        {
+          "pid": 122325,
+          "ppid": 122323,
+          "name": "reg.exe",
+          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+          "children": [
+            {
+              "pid": 122327,
+              "ppid": 122325,
+              "name": "nltest.exe",
+              "command": "nltest.exe /dsgetdc:FINLAB",
+              "children": [
+                {
+                  "pid": 122332,
+                  "ppid": 122327,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /v",
+                  "children": [
+                    {
+                      "pid": 122336,
+                      "ppid": 122332,
+                      "name": "nltest.exe",
+                      "command": "nltest.exe /dclist:ACME",
+                      "children": [
+                        {
+                          "pid": 122338,
+                          "ppid": 122336,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 16 /nobreak",
+                          "children": [
+                            {
+                              "pid": 122341,
+                              "ppid": 122338,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 122342,
+                                  "ppid": 122341,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\rohan.jain\\AppData\\Local\\Temp\\evt_044c5f52.txt'\"",
+                                  "children": [
+                                    {
+                                      "pid": 122344,
+                                      "ppid": 122342,
+                                      "name": "quser.exe",
+                                      "command": "quser.exe /server:APP-880",
+                                      "children": [
+                                        {
+                                          "pid": 122345,
+                                          "ppid": 122344,
+                                          "name": "nltest.exe",
+                                          "command": "nltest.exe /dsgetdc:CORP",
+                                          "children": [
+                                            {
+                                              "pid": 122350,
+                                              "ppid": 122345,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Alpine\\Logs\\Application_57d9fc0b.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 122351,
+                                                  "ppid": 122350,
+                                                  "name": "nltest.exe",
+                                                  "command": "nltest.exe /sc_query:BFSI",
+                                                  "children": [
+                                                    {
+                                                      "pid": 122352,
+                                                      "ppid": 122351,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /priv > \"C:\\Users\\rohan.jain\\AppData\\Local\\Temp\\who_ac57a551.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 122354,
+                                                          "ppid": 122352,
+                                                          "name": "quser.exe",
+                                                          "command": "quser.exe /server:LAP-204",
+                                                          "children": [
+                                                            {
+                                                              "pid": 122358,
+                                                              "ppid": 122354,
+                                                              "name": "nltest.exe",
+                                                              "command": "nltest.exe /sc_query:OPS",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 122363,
+                                                                  "ppid": 122358,
+                                                                  "name": "nltest.exe",
+                                                                  "command": "nltest.exe /dclist:RESEARCH",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 122370,
+                                                                      "ppid": 122363,
+                                                                      "name": "nltest.exe",
+                                                                      "command": "nltest.exe /sc_query:OPS",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 122374,
+                                                                          "ppid": 122370,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 2 /nobreak",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 122379,
+                                                                              "ppid": 122374,
+                                                                              "name": "quser.exe",
+                                                                              "command": "quser.exe /server:LAP-454",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 122380,
+                                                                                  "ppid": 122379,
+                                                                                  "name": "quser.exe",
+                                                                                  "command": "quser.exe /server:WS-246",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 122381,
+                                                                                      "ppid": 122380,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 122385,
+                                                                                          "ppid": 122381,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\rohan.jain\\AppData\\Local\\Temp\\host_777db41a.txt\"",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 122391,
+                                                                          "ppid": 122370,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\rohan.jain\\AppData\\Local\\Temp\\host_e9625359.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 122392,
+                                                                              "ppid": 122391,
+                                                                              "name": "timeout.exe",
+                                                                              "command": "timeout.exe /t 19 /nobreak",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

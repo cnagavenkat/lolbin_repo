@@ -1,0 +1,190 @@
+{
+  "pid": 289253,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 289259,
+      "ppid": 289253,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\evt_fd798b01.txt'\"",
+      "children": [
+        {
+          "pid": 289265,
+          "ppid": 289259,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 7 /nobreak",
+          "children": [
+            {
+              "pid": 289271,
+              "ppid": 289265,
+              "name": "sc.exe",
+              "command": "sc.exe query \"EventLog\"",
+              "children": [
+                {
+                  "pid": 289276,
+                  "ppid": 289271,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /svc",
+                  "children": [
+                    {
+                      "pid": 289283,
+                      "ppid": 289276,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv > \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\who_4c28dea4.txt\"",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "pid": 289289,
+                  "ppid": 289271,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 17 > nul",
+                  "children": [
+                    {
+                      "pid": 289292,
+                      "ppid": 289289,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe",
+                      "children": [
+                        {
+                          "pid": 289295,
+                          "ppid": 289292,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 23 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 289296,
+                              "ppid": 289295,
+                              "name": "wmic.exe",
+                              "command": "wmic.exe qfe get HotFixID,InstalledOn",
+                              "children": [
+                                {
+                                  "pid": 289297,
+                                  "ppid": 289296,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\host_b58412d0.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 289298,
+                                      "ppid": 289297,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all > \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\who_4cc120cd.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 289304,
+                                          "ppid": 289298,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe > \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\who_73e4704c.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 289307,
+                                              "ppid": 289304,
+                                              "name": "vssadmin.exe",
+                                              "command": "vssadmin.exe list writers",
+                                              "children": [
+                                                {
+                                                  "pid": 289310,
+                                                  "ppid": 289307,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups",
+                                                  "children": [
+                                                    {
+                                                      "pid": 289315,
+                                                      "ppid": 289310,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 6 /nobreak",
+                                                      "children": [
+                                                        {
+                                                          "pid": 289318,
+                                                          "ppid": 289315,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\host_fa60579a.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 289322,
+                                                              "ppid": 289318,
+                                                              "name": "findstr.exe",
+                                                              "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Fabrikam\\Logs\\update.log\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 289325,
+                                                                  "ppid": 289322,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /priv > \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\who_ea59668a.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 289332,
+                                                                      "ppid": 289325,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'tasklist.exe' -ArgumentList '' -Wait\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 289336,
+                                                                          "ppid": 289332,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 2 /nobreak",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 289339,
+                                                                              "ppid": 289336,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /groups > \"C:\\Users\\priya.sharma\\AppData\\Local\\Temp\\who_afa89a7a.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 289345,
+                                                                                  "ppid": 289339,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /priv",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 289350,
+                                                                                      "ppid": 289345,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "pid": 175264,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 175265,
+      "ppid": 175264,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Maint\\Deploy_a6dea591.wsf\" /repair",
+      "children": [
+        {
+          "pid": 175268,
+          "ppid": 175265,
+          "name": "wevtutil.exe",
+          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Wingtip\\Logs\\Microsoft-Windows-TaskScheduler_Operational_d707a4cf.evtx\"",
+          "children": [
+            {
+              "pid": 175273,
+              "ppid": 175268,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 175274,
+                  "ppid": 175273,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\suresh.jain\\AppData\\Local\\Temp\\who_61a88d69.txt\"",
+                  "children": [
+                    {
+                      "pid": 175280,
+                      "ppid": 175274,
+                      "name": "makecab.exe",
+                      "command": "makecab.exe \"C:\\Build\\dist\\1e8813eb\\trace.etl\" \"C:\\Build\\dist\\1e8813eb\\trace.cab\"",
+                      "children": [
+                        {
+                          "pid": 175282,
+                          "ppid": 175280,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 175284,
+                              "ppid": 175282,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 175287,
+                                  "ppid": 175284,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /c \"hostname.exe\"",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 175291,
+                          "ppid": 175280,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 175295,
+                              "ppid": 175291,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\suresh.jain\\AppData\\Local\\Temp\\host_b810f8aa.txt\"",
+                              "children": [
+                                {
+                                  "pid": 175298,
+                                  "ppid": 175295,
+                                  "name": "forfiles.exe",
+                                  "command": "forfiles.exe /P \"C:\\Build\\dist\\b2203b3e\" /M *.log /D -18 /C \"cmd /c type nul > @path\"",
+                                  "children": [
+                                    {
+                                      "pid": 175304,
+                                      "ppid": 175298,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\BlueYonder\\Logs\\profile.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 175309,
+                                          "ppid": 175304,
+                                          "name": "schtasks.exe",
+                                          "command": "schtasks.exe /create /tn \"\\Woodgrove\\Deploy\\Cleanup\" /tr \"C:\\Users\\suresh.jain\\AppData\\Local\\Temp\\post_edfb7c43.ps1\" /sc once /st 18:32 /f /ru SYSTEM",
+                                          "children": [
+                                            {
+                                              "pid": 175313,
+                                              "ppid": 175309,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 20 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 175318,
+                                                  "ppid": 175313,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 175320,
+                                                      "ppid": 175318,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 175343,
+                                                          "ppid": 175320,
+                                                          "name": "findstr.exe",
+                                                          "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Contoso\\Logs\\update.log\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 175349,
+                                                              "ppid": 175343,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'findstr.exe' -ArgumentList '/i \"task\" \"C:\\ProgramData\\Woodgrove\\Logs\\diag.log\"' -Wait\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 175355,
+                                                                  "ppid": 175349,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups > \"C:\\Users\\suresh.jain\\AppData\\Local\\Temp\\who_c066e474.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 175358,
+                                                                      "ppid": 175355,
+                                                                      "name": "findstr.exe",
+                                                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Litware\\Logs\\profile.log\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 175361,
+                                                                          "ppid": 175358,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\suresh.jain\\AppData\\Local\\Temp\\host_8ecfe389.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 175367,
+                                                                              "ppid": 175361,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe > \"C:\\Users\\suresh.jain\\AppData\\Local\\Temp\\who_f40d956a.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 175369,
+                                                                                  "ppid": 175367,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 175372,
+                                                                                      "ppid": 175369,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /groups > \"C:\\Users\\suresh.jain\\AppData\\Local\\Temp\\who_eac2030e.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 175374,
+                                                                                          "ppid": 175372,
+                                                                                          "name": "powershell.exe",
+                                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 21\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 175377,
+                                                                                              "ppid": 175374,
+                                                                                              "name": "timeout.exe",
+                                                                                              "command": "timeout.exe /t 16 /nobreak",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 175382,
+                                                                                                  "ppid": 175377,
+                                                                                                  "name": "powershell.exe",
+                                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 175321,
+      "ppid": 175264,
+      "name": "ping.exe",
+      "command": "ping.exe -n 23 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 175328,
+          "ppid": 175321,
+          "name": "findstr.exe",
+          "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Wingtip\\Logs\\support.log\"",
+          "children": [
+            {
+              "pid": 175333,
+              "ppid": 175328,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups",
+              "children": [
+                {
+                  "pid": 175338,
+                  "ppid": 175333,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\suresh.jain\\AppData\\Local\\Temp\\who_89a4cb3c.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "pid": 296956,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 296961,
+      "ppid": 296956,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\TemplateRun_7493d67b.vbs\"",
+      "children": [
+        {
+          "pid": 296964,
+          "ppid": 296961,
+          "name": "vssadmin.exe",
+          "command": "vssadmin.exe list writers",
+          "children": [
+            {
+              "pid": 296971,
+              "ppid": 296964,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\who_b987df11.txt\"",
+              "children": [
+                {
+                  "pid": 296975,
+                  "ppid": 296971,
+                  "name": "wmic.exe",
+                  "command": "wmic.exe computersystem get Manufacturer,Model,Domain /value",
+                  "children": [
+                    {
+                      "pid": 296977,
+                      "ppid": 296975,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 296978,
+                          "ppid": 296977,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 296981,
+                              "ppid": 296978,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv > \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\who_4c9d4201.txt\"",
+                              "children": [
+                                {
+                                  "pid": 296983,
+                                  "ppid": 296981,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 296990,
+                      "ppid": 296975,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv > \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\who_5c465cab.txt\"",
+                      "children": [
+                        {
+                          "pid": 296994,
+                          "ppid": 296990,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'tasklist.exe' -ArgumentList '/fi \"imagename eq svchost.exe\"' -Wait\"",
+                          "children": [
+                            {
+                              "pid": 296995,
+                              "ppid": 296994,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe",
+                              "children": [
+                                {
+                                  "pid": 297001,
+                                  "ppid": 296995,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Litware\\Logs\\System_5feebbf3.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 297008,
+                                      "ppid": 297001,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe",
+                                      "children": [
+                                        {
+                                          "pid": 297010,
+                                          "ppid": 297008,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\sched_0bbd89b6.txt'\"",
+                                          "children": [
+                                            {
+                                              "pid": 297017,
+                                              "ppid": 297010,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                                              "children": [
+                                                {
+                                                  "pid": 297021,
+                                                  "ppid": 297017,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 297022,
+                                                      "ppid": 297021,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 297027,
+                                                          "ppid": 297022,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 6 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 297032,
+                                                              "ppid": 297027,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 297039,
+                                                                  "ppid": 297032,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 297041,
+                                                              "ppid": 297027,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 297047,
+                                                                  "ppid": 297041,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 12 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 297054,
+                                                                      "ppid": 297047,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /priv",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 297060,
+                                                                          "ppid": 297054,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\host_1a18773c.txt\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

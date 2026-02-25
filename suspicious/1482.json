@@ -1,0 +1,181 @@
+{
+  "pid": 232318,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 232321,
+      "ppid": 232318,
+      "name": "ping.exe",
+      "command": "ping.exe -n 25 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 232323,
+          "ppid": 232321,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /fo LIST /v",
+          "children": [
+            {
+              "pid": 232330,
+              "ppid": 232323,
+              "name": "ping.exe",
+              "command": "ping.exe -n 15 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 232334,
+                  "ppid": 232330,
+                  "name": "cmd.exe",
+                  "command": "cmd.exe /c \"wevtutil.exe epl \"System\" \"C:\\ProgramData\\Fabrikam\\Logs\\System_170cb11e.evtx\"\"",
+                  "children": [
+                    {
+                      "pid": 232339,
+                      "ppid": 232334,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 11\"",
+                      "children": [
+                        {
+                          "pid": 232344,
+                          "ppid": 232339,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe > \"C:\\Users\\rahul.bose\\AppData\\Local\\Temp\\who_032c6dc2.txt\"",
+                          "children": [
+                            {
+                              "pid": 232351,
+                              "ppid": 232344,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 3 > nul",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 232353,
+                      "ppid": 232334,
+                      "name": "schtasks.exe",
+                      "command": "schtasks.exe /create /tn \"\\Northwind\\Support\\Sync\" /tr \"C:\\ProgramData\\Alpine\\Profile\\run_907a81c7.cmd\" /sc once /st 02:45 /f",
+                      "children": [
+                        {
+                          "pid": 232355,
+                          "ppid": 232353,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /groups > \"C:\\Users\\rahul.bose\\AppData\\Local\\Temp\\who_85ba4532.txt\"",
+                          "children": [
+                            {
+                              "pid": 232359,
+                              "ppid": 232355,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 232366,
+                                  "ppid": 232359,
+                                  "name": "schtasks.exe",
+                                  "command": "schtasks.exe /run /tn \"\\Microsoft\\Windows\\WDI\\ResolutionHost\"",
+                                  "children": [
+                                    {
+                                      "pid": 232370,
+                                      "ppid": 232366,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 232373,
+                                          "ppid": 232370,
+                                          "name": "cmd.exe",
+                                          "command": "cmd.exe /c \"whoami.exe > \"C:\\Users\\rahul.bose\\AppData\\Local\\Temp\\who_bd625f97.txt\"\"",
+                                          "children": [
+                                            {
+                                              "pid": 232374,
+                                              "ppid": 232373,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\rahul.bose\\AppData\\Local\\Temp\\host_e83a4f93.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 232381,
+                                                  "ppid": 232374,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Contoso\\Logs\\Application_f9c46046.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 232387,
+                                                      "ppid": 232381,
+                                                      "name": "wevtutil.exe",
+                                                      "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\BlueYonder\\Logs\\System_0dc75aac.evtx\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 232388,
+                                      "ppid": 232366,
+                                      "name": "cmd.exe",
+                                      "command": "cmd.exe /c \"ping.exe -n 23 127.0.0.1 > nul\"",
+                                      "children": [
+                                        {
+                                          "pid": 232392,
+                                          "ppid": 232388,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -WindowStyle Hidden -File \"C:\\Users\\rahul.bose\\AppData\\Local\\Temp\\CollectInventory_5cd1ed3b.ps1\" -Host \"SUP-607\" -Mode Verify",
+                                          "children": [
+                                            {
+                                              "pid": 232396,
+                                              "ppid": 232392,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 6 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 232398,
+                                                  "ppid": 232396,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Northwind\\Logs\\Security_b69a4cb3.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 232404,
+                                                      "ppid": 232398,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\rahul.bose\\AppData\\Local\\Temp\\host_beac52ac.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 232405,
+                                                          "ppid": 232404,
+                                                          "name": "wevtutil.exe",
+                                                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Woodgrove\\Logs\\Security_76685ba0.evtx\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

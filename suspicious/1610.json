@@ -1,0 +1,150 @@
+{
+  "pid": 247820,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Maint\\Runbook_797b463f.ps1\"",
+  "children": [
+    {
+      "pid": 247827,
+      "ppid": 247820,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"tasklist /svc\"",
+      "children": [
+        {
+          "pid": 247831,
+          "ppid": 247827,
+          "name": "quser.exe",
+          "command": "quser.exe",
+          "children": [
+            {
+              "pid": 247834,
+              "ppid": 247831,
+              "name": "ipconfig.exe",
+              "command": "ipconfig.exe /allcompartments /all",
+              "children": [
+                {
+                  "pid": 247837,
+                  "ppid": 247834,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 247838,
+                      "ppid": 247837,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /v",
+                      "children": [
+                        {
+                          "pid": 247840,
+                          "ppid": 247838,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv",
+                          "children": [
+                            {
+                              "pid": 247841,
+                              "ppid": 247840,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv > \"C:\\Users\\aditya.bose\\AppData\\Local\\Temp\\who_bd1936e2.txt\"",
+                              "children": [
+                                {
+                                  "pid": 247843,
+                                  "ppid": 247841,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /c \"ipconfig.exe /displaydns\"",
+                                  "children": [
+                                    {
+                                      "pid": 247845,
+                                      "ppid": 247843,
+                                      "name": "wmic.exe",
+                                      "command": "wmic.exe qfe get HotFixID,InstalledOn",
+                                      "children": [
+                                        {
+                                          "pid": 247851,
+                                          "ppid": 247845,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\aditya.bose\\AppData\\Local\\Temp\\host_a2be6bb5.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 247854,
+                                              "ppid": 247851,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Contoso\\Logs\\System_86934975.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 247858,
+                                                  "ppid": 247854,
+                                                  "name": "ipconfig.exe",
+                                                  "command": "ipconfig.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 247864,
+                                                      "ppid": 247858,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /all",
+                                                      "children": [
+                                                        {
+                                                          "pid": 247869,
+                                                          "ppid": 247864,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 247874,
+                                                              "ppid": 247869,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 247875,
+                                                          "ppid": 247864,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all",
+                                                          "children": [
+                                                            {
+                                                              "pid": 247876,
+                                                              "ppid": 247875,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 247879,
+                                                                  "ppid": 247876,
+                                                                  "name": "ipconfig.exe",
+                                                                  "command": "ipconfig.exe /displaydns",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

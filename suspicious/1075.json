@@ -1,0 +1,173 @@
+{
+  "pid": 184376,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 184378,
+      "ppid": 184376,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Runbooks\\Deploy_24f201c0.wsf\" /verify",
+      "children": [
+        {
+          "pid": 184379,
+          "ppid": 184378,
+          "name": "ping.exe",
+          "command": "ping.exe -n 10 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 184382,
+              "ppid": 184379,
+              "name": "certutil.exe",
+              "command": "certutil.exe -store -user Root",
+              "children": [
+                {
+                  "pid": 184388,
+                  "ppid": 184382,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\karthik.singh\\AppData\\Local\\Temp\\who_a66289fc.txt\"",
+                  "children": [
+                    {
+                      "pid": 184395,
+                      "ppid": 184388,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 184401,
+                          "ppid": 184395,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -File \"C:\\Users\\karthik.singh\\AppData\\Local\\Temp\\ProfileInit_96efe71d.ps1\" -Host \"ENG-933\" -Mode Full",
+                          "children": [
+                            {
+                              "pid": 184404,
+                              "ppid": 184401,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 16 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 184408,
+                                  "ppid": 184404,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 184411,
+                              "ppid": 184401,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 184415,
+                                  "ppid": 184411,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 16 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 184416,
+                                      "ppid": 184415,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv > \"C:\\Users\\karthik.singh\\AppData\\Local\\Temp\\who_8ac18446.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 184422,
+                                          "ppid": 184416,
+                                          "name": "makecab.exe",
+                                          "command": "makecab.exe \"C:\\ProgramData\\BlueYonder\\Logs\\diag.txt\" \"C:\\ProgramData\\BlueYonder\\Logs\\diag.cab\"",
+                                          "children": [
+                                            {
+                                              "pid": 184425,
+                                              "ppid": 184422,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\karthik.singh\\AppData\\Local\\Temp\\host_0904d069.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 184426,
+                                                  "ppid": 184425,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 8 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 184430,
+                                                      "ppid": 184426,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 184432,
+                                                          "ppid": 184430,
+                                                          "name": "wevtutil.exe",
+                                                          "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Fabrikam\\Logs\\Security_b10b306d.evtx\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 184433,
+                                                              "ppid": 184432,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all > \"C:\\Users\\karthik.singh\\AppData\\Local\\Temp\\who_db5fa91d.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 184436,
+                                                                  "ppid": 184433,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /all",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 184441,
+                                                                      "ppid": 184436,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 184448,
+                                                              "ppid": 184432,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 184449,
+                                                                  "ppid": 184448,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /priv > \"C:\\Users\\karthik.singh\\AppData\\Local\\Temp\\who_9a7a70ef.txt\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

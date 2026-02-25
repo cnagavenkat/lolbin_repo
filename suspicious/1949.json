@@ -1,0 +1,205 @@
+{
+  "pid": 295411,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 295414,
+      "ppid": 295411,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -File \"C:\\Users\\Public\\RunDiagnostics_d40348c2.ps1\" -Host \"SUP-350\" -Mode Full",
+      "children": [
+        {
+          "pid": 295419,
+          "ppid": 295414,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 12 /nobreak",
+          "children": [
+            {
+              "pid": 295425,
+              "ppid": 295419,
+              "name": "vssadmin.exe",
+              "command": "vssadmin.exe list shadows",
+              "children": [
+                {
+                  "pid": 295431,
+                  "ppid": 295425,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 295432,
+                      "ppid": 295431,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": [
+                        {
+                          "pid": 295438,
+                          "ppid": 295432,
+                          "name": "sc.exe",
+                          "command": "sc.exe query \"Spooler\"",
+                          "children": [
+                            {
+                              "pid": 295460,
+                              "ppid": 295438,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all",
+                              "children": [
+                                {
+                                  "pid": 295463,
+                                  "ppid": 295460,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 23 /nobreak",
+                                  "children": [
+                                    {
+                                      "pid": 295465,
+                                      "ppid": 295463,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 295471,
+                                          "ppid": 295465,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Woodgrove\\Logs\\Application_aadb7265.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 295475,
+                                              "ppid": 295471,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/groups > \"C:\\Users\\meera.nair\\AppData\\Local\\Temp\\who_c2c4e3ea.txt\"' -Wait\"",
+                                              "children": [
+                                                {
+                                                  "pid": 295481,
+                                                  "ppid": 295475,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 295486,
+                                              "ppid": 295471,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 295487,
+                                                  "ppid": 295486,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Wingtip\\Logs\\diag.log\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 295490,
+                                                      "ppid": 295487,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 12\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 295494,
+                                                          "ppid": 295490,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 7 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 295496,
+                                                              "ppid": 295494,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 295498,
+                                                                  "ppid": 295496,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 295501,
+                                                                      "ppid": 295498,
+                                                                      "name": "timeout.exe",
+                                                                      "command": "timeout.exe /t 5 /nobreak",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 295502,
+                                                                          "ppid": 295501,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 295505,
+                                                                              "ppid": 295502,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /groups",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 295443,
+      "ppid": 295411,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 8 > nul",
+      "children": [
+        {
+          "pid": 295449,
+          "ppid": 295443,
+          "name": "ping.exe",
+          "command": "ping.exe -n 14 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 295451,
+              "ppid": 295449,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\meera.nair\\AppData\\Local\\Temp\\host_98d0c683.txt\"",
+              "children": [
+                {
+                  "pid": 295458,
+                  "ppid": 295451,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups > \"C:\\Users\\meera.nair\\AppData\\Local\\Temp\\who_6597d0af.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

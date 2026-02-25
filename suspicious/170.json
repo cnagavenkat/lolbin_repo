@@ -1,0 +1,229 @@
+{
+  "pid": 72010,
+  "ppid": 0,
+  "name": "ccmexec.exe",
+  "command": "ccmexec.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 72015,
+      "ppid": 72010,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\ProgramData\\Woodgrove\\Profile\\CollectInventory_7d0bc5fc.ps1\" -Host \"LAP-545\" -Mode Quick",
+      "children": [
+        {
+          "pid": 72017,
+          "ppid": 72015,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 15 /nobreak",
+          "children": [
+            {
+              "pid": 72021,
+              "ppid": 72017,
+              "name": "cmd.exe",
+              "command": "cmd.exe /k \"echo maintenance step\"",
+              "children": [
+                {
+                  "pid": 72028,
+                  "ppid": 72021,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                  "children": [
+                    {
+                      "pid": 72029,
+                      "ppid": 72028,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\who_d04ec51c.txt\"",
+                      "children": [
+                        {
+                          "pid": 72035,
+                          "ppid": 72029,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -File \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\CollectInventory_7b5cb7ac.ps1\" -Host \"BLD-767\" -Mode Verify",
+                          "children": [
+                            {
+                              "pid": 72039,
+                              "ppid": 72035,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\who_cb299dc7.txt\"",
+                              "children": [
+                                {
+                                  "pid": 72040,
+                                  "ppid": 72039,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe",
+                                  "children": [
+                                    {
+                                      "pid": 72042,
+                                      "ppid": 72040,
+                                      "name": "cmd.exe",
+                                      "command": "cmd.exe /c \"whoami.exe /groups\"",
+                                      "children": [
+                                        {
+                                          "pid": 72046,
+                                          "ppid": 72042,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 72052,
+                                              "ppid": 72046,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe > \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\who_f159e118.txt\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 72057,
+                                      "ppid": 72040,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                      "children": [
+                                        {
+                                          "pid": 72064,
+                                          "ppid": 72057,
+                                          "name": "cmd.exe",
+                                          "command": "cmd.exe /c \"timeout.exe /t 9 /nobreak\"",
+                                          "children": [
+                                            {
+                                              "pid": 72066,
+                                              "ppid": 72064,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv > \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\who_1fdc4d3e.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 72067,
+                                                  "ppid": 72066,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Wingtip\\Logs\\Application_85fce61c.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 72069,
+                                                      "ppid": 72067,
+                                                      "name": "schtasks.exe",
+                                                      "command": "schtasks.exe /query /fo LIST /v",
+                                                      "children": [
+                                                        {
+                                                          "pid": 72071,
+                                                          "ppid": 72069,
+                                                          "name": "wevtutil.exe",
+                                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Woodgrove\\Logs\\System_3e999243.evtx\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 72077,
+                                                              "ppid": 72071,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\host_c7e7c92c.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 72082,
+                                                                  "ppid": 72077,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 72087,
+                                                                      "ppid": 72082,
+                                                                      "name": "ping.exe",
+                                                                      "command": "ping.exe -n 9 127.0.0.1 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 72089,
+                                                                          "ppid": 72087,
+                                                                          "name": "ping.exe",
+                                                                          "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 72092,
+                                                                              "ppid": 72089,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /groups",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 72095,
+                                                                                  "ppid": 72092,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /v",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 72102,
+                                                                                      "ppid": 72095,
+                                                                                      "name": "timeout.exe",
+                                                                                      "command": "timeout.exe /t 24 /nobreak",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 72107,
+                                                                                          "ppid": 72102,
+                                                                                          "name": "timeout.exe",
+                                                                                          "command": "timeout.exe /t 8 /nobreak",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 72114,
+                                                                                              "ppid": 72107,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /priv > \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\who_5371bcad.txt\"",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "pid": 72119,
+                                                                                  "ppid": 72092,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\isha.gupta\\AppData\\Local\\Temp\\host_b1265e96.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 72126,
+                                                                                      "ppid": 72119,
+                                                                                      "name": "cmd.exe",
+                                                                                      "command": "cmd.exe /c \"choice.exe /d y /t 22 > nul\"",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

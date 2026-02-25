@@ -1,0 +1,299 @@
+{
+  "pid": 287163,
+  "ppid": 0,
+  "name": "BackupAgent.exe",
+  "command": "BackupAgent.exe /diag",
+  "children": [
+    {
+      "pid": 287167,
+      "ppid": 287163,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\aarav.verma\\AppData\\Local\\Temp\\Support_0d339dd1.vbs\" /collect",
+      "children": [
+        {
+          "pid": 287170,
+          "ppid": 287167,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 24\"",
+          "children": [
+            {
+              "pid": 287172,
+              "ppid": 287170,
+              "name": "schtasks.exe",
+              "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+              "children": [
+                {
+                  "pid": 287175,
+                  "ppid": 287172,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe",
+                  "children": [
+                    {
+                      "pid": 287179,
+                      "ppid": 287175,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\aarav.verma\\AppData\\Local\\Temp\\host_ae24d3c8.txt\"",
+                      "children": [
+                        {
+                          "pid": 287186,
+                          "ppid": 287179,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": [
+                            {
+                              "pid": 287193,
+                              "ppid": 287186,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 22 127.0.0.1 > nul",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 287195,
+                      "ppid": 287175,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe",
+                      "children": [
+                        {
+                          "pid": 287201,
+                          "ppid": 287195,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 4 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 287208,
+                              "ppid": 287201,
+                              "name": "vssadmin.exe",
+                              "command": "vssadmin.exe list providers",
+                              "children": [
+                                {
+                                  "pid": 287212,
+                                  "ppid": 287208,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups",
+                                  "children": [
+                                    {
+                                      "pid": 287217,
+                                      "ppid": 287212,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 16 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 287221,
+                                          "ppid": 287217,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\aarav.verma\\AppData\\Local\\Temp\\host_81d0b908.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 287226,
+                                              "ppid": 287221,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 24 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 287231,
+                                                  "ppid": 287226,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 287236,
+                                  "ppid": 287208,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\aarav.verma\\AppData\\Local\\Temp\\host_462d09d0.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 287241,
+                                      "ppid": 287236,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Fabrikam\\Logs\\Security_6277926e.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 287260,
+                                          "ppid": 287241,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\aarav.verma\\AppData\\Local\\Temp\\host_d4eab44c.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 287264,
+                                              "ppid": 287260,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\ProgramData\\Litware\\Patch\\RunDiagnostics_f7f79188.ps1\" -Host \"BLD-839\" -Mode Delta",
+                                              "children": [
+                                                {
+                                                  "pid": 287269,
+                                                  "ppid": 287264,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 19 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 287288,
+                                                      "ppid": 287269,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 22 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 287293,
+                                                          "ppid": 287288,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 287298,
+                                                              "ppid": 287293,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 7 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 287305,
+                                                                  "ppid": 287298,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 287312,
+                                                                      "ppid": 287305,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe > \"C:\\Users\\aarav.verma\\AppData\\Local\\Temp\\who_8bf8efe9.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 287318,
+                                                                          "ppid": 287312,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 287323,
+                                                                              "ppid": 287318,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv > \"C:\\Users\\aarav.verma\\AppData\\Local\\Temp\\who_a59999da.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 287324,
+                                                                                  "ppid": 287323,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 287245,
+      "ppid": 287163,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+      "children": [
+        {
+          "pid": 287250,
+          "ppid": 287245,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\aarav.verma\\AppData\\Local\\Temp\\host_56b4dae5.txt\"",
+          "children": [
+            {
+              "pid": 287252,
+              "ppid": 287250,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+              "children": [
+                {
+                  "pid": 287259,
+                  "ppid": 287252,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\aarav.verma\\AppData\\Local\\Temp\\who_1f2b677e.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 287274,
+      "ppid": 287163,
+      "name": "ping.exe",
+      "command": "ping.exe -n 6 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 287275,
+          "ppid": 287274,
+          "name": "cmd.exe",
+          "command": "cmd.exe /c \"whoami.exe\"",
+          "children": [
+            {
+              "pid": 287278,
+              "ppid": 287275,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 287280,
+                  "ppid": 287278,
+                  "name": "cmd.exe",
+                  "command": "cmd.exe /c \"whoami.exe > \"C:\\Users\\aarav.verma\\AppData\\Local\\Temp\\who_5d126ab4.txt\"\"",
+                  "children": [
+                    {
+                      "pid": 287284,
+                      "ppid": 287280,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv > \"C:\\Users\\aarav.verma\\AppData\\Local\\Temp\\who_799d3743.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

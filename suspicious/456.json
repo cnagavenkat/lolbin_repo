@@ -1,0 +1,227 @@
+{
+  "pid": 110334,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Maint\\Runbook_0413bf5b.ps1\"",
+  "children": [
+    {
+      "pid": 110335,
+      "ppid": 110334,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\Northwind\\Runtime\\Sync_71faf820.vbs\"",
+      "children": [
+        {
+          "pid": 110339,
+          "ppid": 110335,
+          "name": "cmd.exe",
+          "command": "cmd.exe /k \"whoami /all\"",
+          "children": [
+            {
+              "pid": 110341,
+              "ppid": 110339,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 110342,
+                  "ppid": 110341,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 110349,
+                      "ppid": 110342,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 16 /nobreak",
+                      "children": [
+                        {
+                          "pid": 110355,
+                          "ppid": 110349,
+                          "name": "findstr.exe",
+                          "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Litware\\Logs\\diag.log\"",
+                          "children": [
+                            {
+                              "pid": 110357,
+                              "ppid": 110355,
+                              "name": "ipconfig.exe",
+                              "command": "ipconfig.exe /all",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 110364,
+                  "ppid": 110341,
+                  "name": "quser.exe",
+                  "command": "quser.exe /server:BLD-412",
+                  "children": [
+                    {
+                      "pid": 110374,
+                      "ppid": 110364,
+                      "name": "ipconfig.exe",
+                      "command": "ipconfig.exe /allcompartments /all",
+                      "children": [
+                        {
+                          "pid": 110379,
+                          "ppid": 110374,
+                          "name": "quser.exe",
+                          "command": "quser.exe /server:ENG-824",
+                          "children": [
+                            {
+                              "pid": 110382,
+                              "ppid": 110379,
+                              "name": "quser.exe",
+                              "command": "quser.exe /server:SUP-801",
+                              "children": [
+                                {
+                                  "pid": 110387,
+                                  "ppid": 110382,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all > \"C:\\Users\\farhan.kulkarni\\AppData\\Local\\Temp\\who_ccd599ec.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 110390,
+                                      "ppid": 110387,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 12 > nul",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 110392,
+                          "ppid": 110374,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                          "children": [
+                            {
+                              "pid": 110408,
+                              "ppid": 110392,
+                              "name": "ipconfig.exe",
+                              "command": "ipconfig.exe /all",
+                              "children": [
+                                {
+                                  "pid": 110411,
+                                  "ppid": 110408,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\farhan.kulkarni\\AppData\\Local\\Temp\\host_218718e8.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 110416,
+                                      "ppid": 110411,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 110423,
+                                          "ppid": 110416,
+                                          "name": "wmic.exe",
+                                          "command": "wmic.exe process get Name,ProcessId,ParentProcessId",
+                                          "children": [
+                                            {
+                                              "pid": 110430,
+                                              "ppid": 110423,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Alpine\\Logs\\Microsoft-Windows-TaskScheduler_Operational_8af20cf1.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 110436,
+                                                  "ppid": 110430,
+                                                  "name": "quser.exe",
+                                                  "command": "quser.exe /server:BLD-265",
+                                                  "children": [
+                                                    {
+                                                      "pid": 110443,
+                                                      "ppid": 110436,
+                                                      "name": "ipconfig.exe",
+                                                      "command": "ipconfig.exe /displaydns",
+                                                      "children": [
+                                                        {
+                                                          "pid": 110448,
+                                                          "ppid": 110443,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all > \"C:\\Users\\farhan.kulkarni\\AppData\\Local\\Temp\\who_70f81267.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 110368,
+      "ppid": 110334,
+      "name": "findstr.exe",
+      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Alpine\\Logs\\deploy.log\"",
+      "children": [
+        {
+          "pid": 110369,
+          "ppid": 110368,
+          "name": "ipconfig.exe",
+          "command": "ipconfig.exe /displaydns",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 110394,
+      "ppid": 110334,
+      "name": "ping.exe",
+      "command": "ping.exe -n 21 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 110396,
+          "ppid": 110394,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 110401,
+              "ppid": 110396,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 110406,
+                  "ppid": 110401,
+                  "name": "ipconfig.exe",
+                  "command": "ipconfig.exe /all",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

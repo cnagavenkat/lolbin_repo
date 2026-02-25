@@ -1,0 +1,236 @@
+{
+  "pid": 307529,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k Schedule",
+  "children": [
+    {
+      "pid": 307536,
+      "ppid": 307529,
+      "name": "sc.exe",
+      "command": "sc.exe query \"EventLog\"",
+      "children": [
+        {
+          "pid": 307543,
+          "ppid": 307536,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 23 /nobreak",
+          "children": [
+            {
+              "pid": 307550,
+              "ppid": 307543,
+              "name": "wmic.exe",
+              "command": "wmic.exe qfe get HotFixID,InstalledOn",
+              "children": [
+                {
+                  "pid": 307557,
+                  "ppid": 307550,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 19 > nul",
+                  "children": [
+                    {
+                      "pid": 307563,
+                      "ppid": 307557,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 2 > nul",
+                      "children": [
+                        {
+                          "pid": 307569,
+                          "ppid": 307563,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\priya.bose\\AppData\\Local\\Temp\\host_443c12bd.txt\"",
+                          "children": [
+                            {
+                              "pid": 307572,
+                              "ppid": 307569,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 16 /nobreak",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 307575,
+                      "ppid": 307557,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all",
+                      "children": [
+                        {
+                          "pid": 307581,
+                          "ppid": 307575,
+                          "name": "vssadmin.exe",
+                          "command": "vssadmin.exe list writers",
+                          "children": [
+                            {
+                              "pid": 307582,
+                              "ppid": 307581,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe > \"C:\\Users\\priya.bose\\AppData\\Local\\Temp\\who_1153776a.txt\"",
+                              "children": [
+                                {
+                                  "pid": 307586,
+                                  "ppid": 307582,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /v",
+                                  "children": [
+                                    {
+                                      "pid": 307593,
+                                      "ppid": 307586,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv",
+                                      "children": [
+                                        {
+                                          "pid": 307598,
+                                          "ppid": 307593,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\priya.bose\\AppData\\Local\\Temp\\host_c53c45c8.txt\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 307604,
+                              "ppid": 307581,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                              "children": [
+                                {
+                                  "pid": 307606,
+                                  "ppid": 307604,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 2 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 307607,
+                                      "ppid": 307606,
+                                      "name": "cmd.exe",
+                                      "command": "cmd.exe /c \"tasklist.exe\"",
+                                      "children": [
+                                        {
+                                          "pid": 307608,
+                                          "ppid": 307607,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /v",
+                                          "children": [
+                                            {
+                                              "pid": 307614,
+                                              "ppid": 307608,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 7 /nobreak",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 307619,
+                                  "ppid": 307604,
+                                  "name": "findstr.exe",
+                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Woodgrove\\Logs\\deploy.log\"",
+                                  "children": [
+                                    {
+                                      "pid": 307626,
+                                      "ppid": 307619,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 17 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 307627,
+                                          "ppid": 307626,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups",
+                                          "children": [
+                                            {
+                                              "pid": 307628,
+                                              "ppid": 307627,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\priya.bose\\AppData\\Local\\Temp\\host_b13964c9.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 307629,
+                                                  "ppid": 307628,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\priya.bose\\AppData\\Local\\Temp\\host_b8832df5.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 307633,
+                                                      "ppid": 307629,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": [
+                                                        {
+                                                          "pid": 307639,
+                                                          "ppid": 307633,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\priya.bose\\AppData\\Local\\Temp\\host_0256caf0.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 307643,
+                                                              "ppid": 307639,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 307649,
+                                                                  "ppid": 307643,
+                                                                  "name": "cmd.exe",
+                                                                  "command": "cmd.exe /c \"tasklist.exe /v\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 307650,
+                                                                      "ppid": 307649,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 307657,
+                                                                          "ppid": 307650,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

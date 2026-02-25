@@ -1,0 +1,220 @@
+{
+  "pid": 207847,
+  "ppid": 0,
+  "name": "scriptlauncher.exe",
+  "command": "scriptlauncher.exe /silent",
+  "children": [
+    {
+      "pid": 207851,
+      "ppid": 207847,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"echo maintenance step\"",
+      "children": [
+        {
+          "pid": 207852,
+          "ppid": 207851,
+          "name": "cscript.exe",
+          "command": "cscript.exe //nologo \"C:\\Users\\neha.iyer\\AppData\\Local\\Temp\\Cert_1eb03ffa.wsf\" /quiet",
+          "children": [
+            {
+              "pid": 207855,
+              "ppid": 207852,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 8 > nul",
+              "children": [
+                {
+                  "pid": 207862,
+                  "ppid": 207855,
+                  "name": "wscript.exe",
+                  "command": "wscript.exe //nologo \"C:\\ProgramData\\Fabrikam\\Updater\\Sync_c37eb916.wsf\"",
+                  "children": [
+                    {
+                      "pid": 207865,
+                      "ppid": 207862,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /v",
+                      "children": [
+                        {
+                          "pid": 207866,
+                          "ppid": 207865,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 13 /nobreak",
+                          "children": [
+                            {
+                              "pid": 207868,
+                              "ppid": 207866,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 13 127.0.0.1 > nul",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 207874,
+                      "ppid": 207862,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\neha.iyer\\AppData\\Local\\Temp\\host_3fb8a180.txt\"",
+                      "children": [
+                        {
+                          "pid": 207881,
+                          "ppid": 207874,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe",
+                          "children": [
+                            {
+                              "pid": 207883,
+                              "ppid": 207881,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                              "children": [
+                                {
+                                  "pid": 207893,
+                                  "ppid": 207883,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups > \"C:\\Users\\neha.iyer\\AppData\\Local\\Temp\\who_fa84d4d1.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 207894,
+                                      "ppid": 207893,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv > \"C:\\Users\\neha.iyer\\AppData\\Local\\Temp\\who_e542d577.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 207897,
+                                          "ppid": 207894,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\neha.iyer\\AppData\\Local\\Temp\\host_4e17ae57.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 207903,
+                                              "ppid": 207897,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\neha.iyer\\AppData\\Local\\Temp\\host_0e34bab4.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 207907,
+                                                  "ppid": 207903,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 22 /nobreak",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 207912,
+                                      "ppid": 207893,
+                                      "name": "cmd.exe",
+                                      "command": "cmd.exe /c \"hostname.exe\"",
+                                      "children": [
+                                        {
+                                          "pid": 207917,
+                                          "ppid": 207912,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                          "children": [
+                                            {
+                                              "pid": 207919,
+                                              "ppid": 207917,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Alpine\\Logs\\System_b524e35b.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 207920,
+                                                  "ppid": 207919,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 207927,
+                                                      "ppid": 207920,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 207928,
+                                                          "ppid": 207927,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 15 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 207935,
+                                                              "ppid": 207928,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\neha.iyer\\AppData\\Local\\Temp\\host_a6ff201c.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 207940,
+                                                                  "ppid": 207935,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 207947,
+                                                                      "ppid": 207940,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /v",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 207887,
+      "ppid": 207847,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe /v",
+      "children": [
+        {
+          "pid": 207889,
+          "ppid": 207887,
+          "name": "whoami.exe",
+          "command": "whoami.exe /groups",
+          "children": [
+            {
+              "pid": 207891,
+              "ppid": 207889,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

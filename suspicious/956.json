@@ -1,0 +1,339 @@
+{
+  "pid": 169351,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 169353,
+      "ppid": 169351,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\ProgramData\\Fabrikam\\Support\\RunDiagnostics_dbb49a4b.ps1\" -Host \"SUP-805\" -Mode Quick",
+      "children": [
+        {
+          "pid": 169355,
+          "ppid": 169353,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+          "children": [
+            {
+              "pid": 169356,
+              "ppid": 169355,
+              "name": "schtasks.exe",
+              "command": "schtasks.exe /create /tn \"\\Fabrikam\\Maint\\Cleanup\" /tr \"C:\\ProgramData\\Alpine\\Assist\\post_24347b5c.ps1\" /sc onlogon /f",
+              "children": [
+                {
+                  "pid": 169359,
+                  "ppid": 169356,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\host_70ed57b0.txt\"",
+                  "children": [
+                    {
+                      "pid": 169363,
+                      "ppid": 169359,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": [
+                        {
+                          "pid": 169370,
+                          "ppid": 169363,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /v",
+                          "children": [
+                            {
+                              "pid": 169375,
+                              "ppid": 169370,
+                              "name": "schtasks.exe",
+                              "command": "schtasks.exe /run /tn \"\\Contoso\\Support\\Diag\"",
+                              "children": [
+                                {
+                                  "pid": 169376,
+                                  "ppid": 169375,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 169378,
+                                      "ppid": 169376,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'tasklist.exe' -ArgumentList '/svc' -Wait\"",
+                                      "children": [
+                                        {
+                                          "pid": 169383,
+                                          "ppid": 169378,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\who_aae5eb2d.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 169386,
+                                              "ppid": 169383,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\host_fee296d7.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 169393,
+                                                  "ppid": 169386,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\host_2d79fcff.txt\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 169399,
+                                          "ppid": 169378,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\sched_388f7671.txt'\"",
+                                          "children": [
+                                            {
+                                              "pid": 169406,
+                                              "ppid": 169399,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\host_ffa7bcb5.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 169408,
+                                                  "ppid": 169406,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\who_f03c341d.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 169411,
+                                                      "ppid": 169408,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /all > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\who_5d78172b.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 169413,
+                                                          "ppid": 169411,
+                                                          "name": "reg.exe",
+                                                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                                          "children": [
+                                                            {
+                                                              "pid": 169418,
+                                                              "ppid": 169413,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 169423,
+                                                                  "ppid": 169418,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 169425,
+                                                                      "ppid": 169423,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /all > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\who_f11027ef.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 169426,
+                                                                          "ppid": 169425,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\host_99513840.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 169430,
+                                                                              "ppid": 169426,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 169436,
+                                                                                  "ppid": 169430,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /svc",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 169439,
+                                                                                      "ppid": 169436,
+                                                                                      "name": "powershell.exe",
+                                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 169444,
+                                                                                          "ppid": 169439,
+                                                                                          "name": "timeout.exe",
+                                                                                          "command": "timeout.exe /t 8 /nobreak",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 169448,
+                                                                                              "ppid": 169444,
+                                                                                              "name": "tasklist.exe",
+                                                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 169449,
+                                                                                                  "ppid": 169448,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /all",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    },
+                                                                                    {
+                                                                                      "pid": 169454,
+                                                                                      "ppid": 169436,
+                                                                                      "name": "tasklist.exe",
+                                                                                      "command": "tasklist.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 169481,
+                                                                                          "ppid": 169454,
+                                                                                          "name": "ping.exe",
+                                                                                          "command": "ping.exe -n 20 127.0.0.1 > nul",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 169483,
+                                                                                              "ppid": 169481,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 169490,
+                                                                                                  "ppid": 169483,
+                                                                                                  "name": "timeout.exe",
+                                                                                                  "command": "timeout.exe /t 20 /nobreak",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 169507,
+                                                                                                      "ppid": 169490,
+                                                                                                      "name": "timeout.exe",
+                                                                                                      "command": "timeout.exe /t 14 /nobreak",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 169514,
+                                                                                                          "ppid": 169507,
+                                                                                                          "name": "whoami.exe",
+                                                                                                          "command": "whoami.exe /groups",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 169517,
+                                                                                                              "ppid": 169514,
+                                                                                                              "name": "tasklist.exe",
+                                                                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                                              "children": []
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 169459,
+      "ppid": 169351,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"tasklist.exe /fi \"imagename eq svchost.exe\"\"",
+      "children": [
+        {
+          "pid": 169463,
+          "ppid": 169459,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+          "children": [
+            {
+              "pid": 169468,
+              "ppid": 169463,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /v",
+              "children": [
+                {
+                  "pid": 169473,
+                  "ppid": 169468,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\farhan.verma\\AppData\\Local\\Temp\\host_d9013eeb.txt\"",
+                  "children": [
+                    {
+                      "pid": 169474,
+                      "ppid": 169473,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 169495,
+      "ppid": 169351,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 169497,
+          "ppid": 169495,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+          "children": [
+            {
+              "pid": 169500,
+              "ppid": 169497,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

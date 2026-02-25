@@ -1,0 +1,212 @@
+{
+  "pid": 150209,
+  "ppid": 0,
+  "name": "gpscript.exe",
+  "command": "gpscript.exe /startup",
+  "children": [
+    {
+      "pid": 150213,
+      "ppid": 150209,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\inv_747e4424.txt'\"",
+      "children": [
+        {
+          "pid": 150220,
+          "ppid": 150213,
+          "name": "ping.exe",
+          "command": "ping.exe -n 10 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 150223,
+              "ppid": 150220,
+              "name": "rundll32.exe",
+              "command": "rundll32.exe \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\helper.dll\",RunPostSetup",
+              "children": [
+                {
+                  "pid": 150228,
+                  "ppid": 150223,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 2 > nul",
+                  "children": [
+                    {
+                      "pid": 150235,
+                      "ppid": 150228,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+                      "children": [
+                        {
+                          "pid": 150237,
+                          "ppid": 150235,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 150239,
+                      "ppid": 150228,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 150245,
+                          "ppid": 150239,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                          "children": [
+                            {
+                              "pid": 150248,
+                              "ppid": 150245,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe",
+                              "children": [
+                                {
+                                  "pid": 150252,
+                                  "ppid": 150248,
+                                  "name": "ie4uinit.exe",
+                                  "command": "ie4uinit.exe -show",
+                                  "children": [
+                                    {
+                                      "pid": 150258,
+                                      "ppid": 150252,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 20 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 150279,
+                                          "ppid": 150258,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\host_f1554ef9.txt\"' -Wait\"",
+                                          "children": [
+                                            {
+                                              "pid": 150280,
+                                              "ppid": 150279,
+                                              "name": "verclsid.exe",
+                                              "command": "verclsid.exe /S /C {e31b378d-7422-7b91-c0a1-529236eb390a}",
+                                              "children": [
+                                                {
+                                                  "pid": 150281,
+                                                  "ppid": 150280,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\who_81490d8a.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 150288,
+                                                      "ppid": 150281,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /priv > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\who_1606ac9e.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 150294,
+                                                          "ppid": 150288,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 4 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 150297,
+                                                              "ppid": 150294,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 20 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 150298,
+                                                                  "ppid": 150297,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\host_f8f2b741.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 150303,
+                                                                      "ppid": 150298,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /groups",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 150307,
+                                                              "ppid": 150294,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups > \"C:\\Users\\arjun.patel\\AppData\\Local\\Temp\\who_69b38ee0.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 150308,
+                                                                  "ppid": 150307,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 23 > nul",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 150260,
+      "ppid": 150209,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 25 /nobreak",
+      "children": [
+        {
+          "pid": 150265,
+          "ppid": 150260,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+          "children": [
+            {
+              "pid": 150270,
+              "ppid": 150265,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 150274,
+                  "ppid": 150270,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 7 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 150275,
+                      "ppid": 150274,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

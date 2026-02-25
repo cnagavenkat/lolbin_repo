@@ -1,0 +1,126 @@
+{
+  "pid": 186370,
+  "ppid": 0,
+  "name": "msiexec.exe",
+  "command": "msiexec.exe",
+  "children": [
+    {
+      "pid": 186376,
+      "ppid": 186370,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 7 > nul",
+      "children": [
+        {
+          "pid": 186381,
+          "ppid": 186376,
+          "name": "certutil.exe",
+          "command": "certutil.exe -dump \"C:\\ProgramData\\Contoso\\Profile\\vpn_gateway.cer\"",
+          "children": [
+            {
+              "pid": 186385,
+              "ppid": 186381,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv",
+              "children": [
+                {
+                  "pid": 186392,
+                  "ppid": 186385,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all > \"C:\\Users\\rahul.mishra\\AppData\\Local\\Temp\\who_f68dc961.txt\"",
+                  "children": [
+                    {
+                      "pid": 186398,
+                      "ppid": 186392,
+                      "name": "certutil.exe",
+                      "command": "certutil.exe -addstore TrustedPublisher \"C:\\Users\\Public\\corp_root.cer\"",
+                      "children": [
+                        {
+                          "pid": 186402,
+                          "ppid": 186398,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                          "children": [
+                            {
+                              "pid": 186409,
+                              "ppid": 186402,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                              "children": [
+                                {
+                                  "pid": 186416,
+                                  "ppid": 186409,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\rahul.mishra\\AppData\\Local\\Temp\\who_80b33bce.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 186419,
+                                      "ppid": 186416,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+                                      "children": [
+                                        {
+                                          "pid": 186423,
+                                          "ppid": 186419,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe",
+                                          "children": [
+                                            {
+                                              "pid": 186427,
+                                              "ppid": 186423,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe > \"C:\\Users\\rahul.mishra\\AppData\\Local\\Temp\\who_e6072421.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 186431,
+                                                  "ppid": 186427,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 186434,
+                                                      "ppid": 186431,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 10 /nobreak",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 186437,
+                                      "ppid": 186416,
+                                      "name": "netsh.exe",
+                                      "command": "netsh.exe interface ipv4 show config > \"C:\\ProgramData\\Contoso\\Logs\\net_8461b664.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 186440,
+                                          "ppid": 186437,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\rahul.mishra\\AppData\\Local\\Temp\\host_fe146805.txt\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

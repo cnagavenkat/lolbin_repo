@@ -1,0 +1,197 @@
+{
+  "pid": 186165,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 186169,
+      "ppid": 186165,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Minimized -File \"C:\\ProgramData\\Wingtip\\Patch\\BuildPack_f0f3b703.ps1\" -Host \"APP-210\" -Mode Verify",
+      "children": [
+        {
+          "pid": 186176,
+          "ppid": 186169,
+          "name": "certutil.exe",
+          "command": "certutil.exe -urlcache -split -f \"http://bldsrv.corp.local/support/collector.bin\" \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\agent.cab\"",
+          "children": [
+            {
+              "pid": 186182,
+              "ppid": 186176,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\who_3e775317.txt\"",
+              "children": [
+                {
+                  "pid": 186185,
+                  "ppid": 186182,
+                  "name": "certutil.exe",
+                  "command": "certutil.exe -store -user Root",
+                  "children": [
+                    {
+                      "pid": 186187,
+                      "ppid": 186185,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 2 /nobreak",
+                      "children": [
+                        {
+                          "pid": 186191,
+                          "ppid": 186187,
+                          "name": "ping.exe",
+                          "command": "ping.exe -n 10 127.0.0.1 > nul",
+                          "children": [
+                            {
+                              "pid": 186192,
+                              "ppid": 186191,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 24 > nul",
+                              "children": [
+                                {
+                                  "pid": 186195,
+                                  "ppid": 186192,
+                                  "name": "findstr.exe",
+                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Litware\\Logs\\deploy.log\"",
+                                  "children": [
+                                    {
+                                      "pid": 186199,
+                                      "ppid": 186195,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\host_b11d9919.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 186206,
+                                          "ppid": 186199,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 186209,
+                              "ppid": 186191,
+                              "name": "certutil.exe",
+                              "command": "certutil.exe -addstore TrustedPublisher \"C:\\ProgramData\\Litware\\Client\\workstation.cer\"",
+                              "children": [
+                                {
+                                  "pid": 186211,
+                                  "ppid": 186209,
+                                  "name": "findstr.exe",
+                                  "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Wingtip\\Logs\\support.log\"",
+                                  "children": [
+                                    {
+                                      "pid": 186218,
+                                      "ppid": 186211,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\Users\\Public\\RunDiagnostics_978b0ff4.ps1\" -Host \"SUP-629\" -Mode Delta",
+                                      "children": [
+                                        {
+                                          "pid": 186222,
+                                          "ppid": 186218,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups",
+                                          "children": [
+                                            {
+                                              "pid": 186227,
+                                              "ppid": 186222,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 186228,
+                                                  "ppid": 186227,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 186235,
+                                                      "ppid": 186228,
+                                                      "name": "findstr.exe",
+                                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Woodgrove\\Logs\\diag.log\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 186241,
+                                                          "ppid": 186235,
+                                                          "name": "findstr.exe",
+                                                          "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Alpine\\Logs\\support.log\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 186248,
+                                              "ppid": 186222,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 14 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 186253,
+                                                  "ppid": 186248,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups",
+                                                  "children": [
+                                                    {
+                                                      "pid": 186255,
+                                                      "ppid": 186253,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\meera.sharma\\AppData\\Local\\Temp\\host_83750056.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 186258,
+                                                          "ppid": 186255,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 186261,
+                                                              "ppid": 186258,
+                                                              "name": "findstr.exe",
+                                                              "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\BlueYonder\\Logs\\profile.log\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 186267,
+                                                                  "ppid": 186261,
+                                                                  "name": "findstr.exe",
+                                                                  "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Alpine\\Logs\\profile.log\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

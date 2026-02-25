@@ -1,0 +1,206 @@
+{
+  "pid": 52653,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 52656,
+      "ppid": 52653,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\Public\\LoginInit_88836397.js\"",
+      "children": [
+        {
+          "pid": 52658,
+          "ppid": 52656,
+          "name": "wmic.exe",
+          "command": "wmic.exe service get Name,StartMode,State",
+          "children": [
+            {
+              "pid": 52665,
+              "ppid": 52658,
+              "name": "findstr.exe",
+              "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Woodgrove\\Logs\\diag.log\"",
+              "children": [
+                {
+                  "pid": 52666,
+                  "ppid": 52665,
+                  "name": "sc.exe",
+                  "command": "sc.exe query \"Spooler\"",
+                  "children": [
+                    {
+                      "pid": 52671,
+                      "ppid": 52666,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv > \"C:\\Users\\farhan.mishra\\AppData\\Local\\Temp\\who_07a17a13.txt\"",
+                      "children": [
+                        {
+                          "pid": 52674,
+                          "ppid": 52671,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /groups > \"C:\\Users\\farhan.mishra\\AppData\\Local\\Temp\\who_eb065d52.txt\"",
+                          "children": [
+                            {
+                              "pid": 52681,
+                              "ppid": 52674,
+                              "name": "sc.exe",
+                              "command": "sc.exe qc \"Spooler\"",
+                              "children": [
+                                {
+                                  "pid": 52684,
+                                  "ppid": 52681,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                  "children": [
+                                    {
+                                      "pid": 52685,
+                                      "ppid": 52684,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 2 /nobreak",
+                                      "children": [
+                                        {
+                                          "pid": 52686,
+                                          "ppid": 52685,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups",
+                                          "children": [
+                                            {
+                                              "pid": 52692,
+                                              "ppid": 52686,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\farhan.mishra\\AppData\\Local\\Temp\\inv_248f3a21.txt'\"",
+                                              "children": [
+                                                {
+                                                  "pid": 52694,
+                                                  "ppid": 52692,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 18 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 52696,
+                                                      "ppid": 52694,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": [
+                                                        {
+                                                          "pid": 52698,
+                                                          "ppid": 52696,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 11 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 52701,
+                                                              "ppid": 52698,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 52706,
+                                                                  "ppid": 52701,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /svc",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 52710,
+                                                                      "ppid": 52706,
+                                                                      "name": "findstr.exe",
+                                                                      "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Contoso\\Logs\\diag.log\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 52711,
+                                                                          "ppid": 52710,
+                                                                          "name": "wevtutil.exe",
+                                                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Contoso\\Logs\\System_1a0ea774.evtx\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 52713,
+                                                                              "ppid": 52711,
+                                                                              "name": "choice.exe",
+                                                                              "command": "choice.exe /d y /t 13 > nul",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "pid": 52718,
+                                                                          "ppid": 52710,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe /v",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 52722,
+                                                                              "ppid": 52718,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 52726,
+                                                                                  "ppid": 52722,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /priv > \"C:\\Users\\farhan.mishra\\AppData\\Local\\Temp\\who_1d8937dc.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 52727,
+                                                                                      "ppid": 52726,
+                                                                                      "name": "findstr.exe",
+                                                                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\BlueYonder\\Logs\\support.log\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 52731,
+                                                                                          "ppid": 52727,
+                                                                                          "name": "timeout.exe",
+                                                                                          "command": "timeout.exe /t 10 /nobreak",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 52738,
+                                                                                              "ppid": 52731,
+                                                                                              "name": "wevtutil.exe",
+                                                                                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Woodgrove\\Logs\\Microsoft-Windows-TaskScheduler_Operational_43dea3e3.evtx\"",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

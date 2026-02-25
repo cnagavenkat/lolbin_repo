@@ -1,0 +1,237 @@
+{
+  "pid": 307319,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 307325,
+      "ppid": 307319,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\IT\\Tools\\TrustRefresh_ced4719f.ps1\" -Host \"OPS-363\" -Mode Quick",
+      "children": [
+        {
+          "pid": 307331,
+          "ppid": 307325,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /tn \"\\Contoso\\Support\\Diag\" /v /fo LIST",
+          "children": [
+            {
+              "pid": 307333,
+              "ppid": 307331,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\host_4a64c463.txt\"",
+              "children": [
+                {
+                  "pid": 307339,
+                  "ppid": 307333,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                  "children": [
+                    {
+                      "pid": 307343,
+                      "ppid": 307339,
+                      "name": "vssadmin.exe",
+                      "command": "vssadmin.exe list shadows",
+                      "children": [
+                        {
+                          "pid": 307345,
+                          "ppid": 307343,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 24 /nobreak",
+                          "children": [
+                            {
+                              "pid": 307349,
+                              "ppid": 307345,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+                              "children": [
+                                {
+                                  "pid": 307351,
+                                  "ppid": 307349,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /c \"wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Woodgrove\\Logs\\Application_057e0aa6.evtx\"\"",
+                                  "children": [
+                                    {
+                                      "pid": 307357,
+                                      "ppid": 307351,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\host_187363bc.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 307362,
+                                          "ppid": 307357,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": [
+                                            {
+                                              "pid": 307366,
+                                              "ppid": 307362,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\BuildPack_42cab3bf.ps1\" -Host \"ENG-785\" -Mode Full",
+                                              "children": [
+                                                {
+                                                  "pid": 307368,
+                                                  "ppid": 307366,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'timeout.exe' -ArgumentList '/t 23 /nobreak' -Wait\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 307372,
+                                                      "ppid": 307368,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /all > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\who_4efbf0d8.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 307377,
+                                                          "ppid": 307372,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 17 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 307385,
+                                                              "ppid": 307377,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\who_b9fbe00c.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 307387,
+                                                                  "ppid": 307385,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\who_e8add4f0.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 307394,
+                                                                      "ppid": 307387,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 307396,
+                                                                          "ppid": 307394,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 307399,
+                                                                              "ppid": 307396,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\who_a5b3dd5c.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 307400,
+                                                                                  "ppid": 307399,
+                                                                                  "name": "ping.exe",
+                                                                                  "command": "ping.exe -n 14 127.0.0.1 > nul",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "pid": 307403,
+                                                                      "ppid": 307387,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\host_31f5b9df.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 307407,
+                                                                          "ppid": 307403,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\who_46b3d39d.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 307409,
+                                                                              "ppid": 307407,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\who_8f9bf9b7.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 307416,
+                                                                                  "ppid": 307409,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\host_08d424dd.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 307421,
+                                                                                      "ppid": 307416,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\host_b1575fad.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 307428,
+                                                                                          "ppid": 307421,
+                                                                                          "name": "ping.exe",
+                                                                                          "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 307431,
+                                                                                              "ppid": 307428,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 307378,
+      "ppid": 307319,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\host_f6e478f4.txt\"",
+      "children": [
+        {
+          "pid": 307384,
+          "ppid": 307378,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv > \"C:\\Users\\neha.mishra\\AppData\\Local\\Temp\\who_1ba0bda6.txt\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

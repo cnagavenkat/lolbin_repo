@@ -1,0 +1,213 @@
+{
+  "pid": 169258,
+  "ppid": 0,
+  "name": "taskeng.exe",
+  "command": "taskeng.exe -k Schedule",
+  "children": [
+    {
+      "pid": 169259,
+      "ppid": 169258,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Scripts\\Deploy_0179937e.vbs\" /apply",
+      "children": [
+        {
+          "pid": 169260,
+          "ppid": 169259,
+          "name": "ping.exe",
+          "command": "ping.exe -n 12 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 169265,
+              "ppid": 169260,
+              "name": "wevtutil.exe",
+              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Litware\\Logs\\Microsoft-Windows-TaskScheduler_Operational_16e5ff47.evtx\"",
+              "children": [
+                {
+                  "pid": 169268,
+                  "ppid": 169265,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 169272,
+                      "ppid": 169268,
+                      "name": "findstr.exe",
+                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Fabrikam\\Logs\\support.log\"",
+                      "children": [
+                        {
+                          "pid": 169277,
+                          "ppid": 169272,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 2 > nul",
+                          "children": [
+                            {
+                              "pid": 169284,
+                              "ppid": 169277,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 13 /nobreak",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 169285,
+                      "ppid": 169268,
+                      "name": "findstr.exe",
+                      "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Litware\\Logs\\update.log\"",
+                      "children": [
+                        {
+                          "pid": 169289,
+                          "ppid": 169285,
+                          "name": "findstr.exe",
+                          "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Fabrikam\\Logs\\profile.log\"",
+                          "children": [
+                            {
+                              "pid": 169296,
+                              "ppid": 169289,
+                              "name": "makecab.exe",
+                              "command": "makecab.exe \"C:\\Build\\obj\\0887fcbc\\diag.txt\" \"C:\\Build\\obj\\0887fcbc\\diag.cab\"",
+                              "children": [
+                                {
+                                  "pid": 169297,
+                                  "ppid": 169296,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 6 /nobreak",
+                                  "children": [
+                                    {
+                                      "pid": 169299,
+                                      "ppid": 169297,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Alpine\\Logs\\support.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 169304,
+                                          "ppid": 169299,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 9 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 169305,
+                                              "ppid": 169304,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 17 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 169306,
+                                                  "ppid": 169305,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 169313,
+                                      "ppid": 169297,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\nisha.mishra\\AppData\\Local\\Temp\\host_e98ed464.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 169314,
+                                          "ppid": 169313,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv > \"C:\\Users\\nisha.mishra\\AppData\\Local\\Temp\\who_833793b5.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 169316,
+                                              "ppid": 169314,
+                                              "name": "forfiles.exe",
+                                              "command": "forfiles.exe /P \"C:\\Build\\obj\\c57cdb4a\" /M *.cab /D -10 /C \"cmd /c del /q @path\"",
+                                              "children": [
+                                                {
+                                                  "pid": 169317,
+                                                  "ppid": 169316,
+                                                  "name": "ping.exe",
+                                                  "command": "ping.exe -n 14 127.0.0.1 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 169320,
+                                                      "ppid": 169317,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 169324,
+                                                          "ppid": 169320,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 169328,
+                                                              "ppid": 169324,
+                                                              "name": "schtasks.exe",
+                                                              "command": "schtasks.exe /create /tn \"\\Fabrikam\\Support\\Verify\" /tr \"C:\\IT\\Deploy\\sync_16da9323.ps1\" /sc minute /mo 30 /f /ru SYSTEM",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 169332,
+                                                                  "ppid": 169328,
+                                                                  "name": "findstr.exe",
+                                                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Woodgrove\\Logs\\support.log\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 169334,
+                                                                      "ppid": 169332,
+                                                                      "name": "findstr.exe",
+                                                                      "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Woodgrove\\Logs\\diag.log\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 169337,
+                                                                          "ppid": 169334,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\nisha.mishra\\AppData\\Local\\Temp\\host_ce3a6450.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 169344,
+                                                                              "ppid": 169337,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe > \"C:\\Users\\nisha.mishra\\AppData\\Local\\Temp\\who_5540a270.txt\"",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

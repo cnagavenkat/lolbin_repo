@@ -1,0 +1,228 @@
+{
+  "pid": 185146,
+  "ppid": 0,
+  "name": "CertMgrUI.exe",
+  "command": "CertMgrUI.exe /startup",
+  "children": [
+    {
+      "pid": 185150,
+      "ppid": 185146,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\BlueYonder\\Client\\TemplateRun_0f1bd98e.vbs\"",
+      "children": [
+        {
+          "pid": 185153,
+          "ppid": 185150,
+          "name": "certutil.exe",
+          "command": "certutil.exe -dump \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\agent_signing.cer\"",
+          "children": [
+            {
+              "pid": 185155,
+              "ppid": 185153,
+              "name": "whoami.exe",
+              "command": "whoami.exe /priv > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\who_a29fa970.txt\"",
+              "children": [
+                {
+                  "pid": 185157,
+                  "ppid": 185155,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 185163,
+                      "ppid": 185157,
+                      "name": "certutil.exe",
+                      "command": "certutil.exe -addstore TrustedPublisher \"C:\\ProgramData\\Alpine\\Runtime\\corp_root.cer\"",
+                      "children": [
+                        {
+                          "pid": 185169,
+                          "ppid": 185163,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+                          "children": [
+                            {
+                              "pid": 185191,
+                              "ppid": 185169,
+                              "name": "reg.exe",
+                              "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                              "children": [
+                                {
+                                  "pid": 185198,
+                                  "ppid": 185191,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\host_79f56db9.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 185204,
+                                      "ppid": 185198,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /svc",
+                                      "children": [
+                                        {
+                                          "pid": 185209,
+                                          "ppid": 185204,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 5 /nobreak",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 185214,
+                                      "ppid": 185198,
+                                      "name": "netsh.exe",
+                                      "command": "netsh.exe advfirewall show allprofiles > \"C:\\ProgramData\\Woodgrove\\Logs\\net_033a0a68.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 185218,
+                                          "ppid": 185214,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv",
+                                          "children": [
+                                            {
+                                              "pid": 185222,
+                                              "ppid": 185218,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 185227,
+                                                  "ppid": 185222,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 185228,
+                                                      "ppid": 185227,
+                                                      "name": "cmd.exe",
+                                                      "command": "cmd.exe /c \"whoami.exe > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\who_c2998307.txt\"\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 185229,
+                                                          "ppid": 185228,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\host_3e1791fd.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 185233,
+                                                              "ppid": 185229,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 15 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 185234,
+                                                                  "ppid": 185233,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 19 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 185241,
+                                                                      "ppid": 185234,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 185247,
+                                                                          "ppid": 185241,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\host_58bc9ccd.txt\"' -Wait\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "pid": 185251,
+                                                          "ppid": 185228,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 185258,
+                                                              "ppid": 185251,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /svc",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 185261,
+                                                                  "ppid": 185258,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /v",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 185262,
+                                                                      "ppid": 185261,
+                                                                      "name": "timeout.exe",
+                                                                      "command": "timeout.exe /t 11 /nobreak",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 185172,
+      "ppid": 185146,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\host_eafbbe9f.txt\"",
+      "children": [
+        {
+          "pid": 185178,
+          "ppid": 185172,
+          "name": "whoami.exe",
+          "command": "whoami.exe /groups > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\who_396161fb.txt\"",
+          "children": [
+            {
+              "pid": 185183,
+              "ppid": 185178,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 185188,
+                  "ppid": 185183,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 22 127.0.0.1 > nul",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

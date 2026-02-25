@@ -1,0 +1,133 @@
+{
+  "pid": 201537,
+  "ppid": 0,
+  "name": "mmc.exe",
+  "command": "mmc.exe /diag",
+  "children": [
+    {
+      "pid": 201538,
+      "ppid": 201537,
+      "name": "certutil.exe",
+      "command": "certutil.exe -urlcache -split -f \"http://bldsrv.corp.local/pki/intermediate.cer\" \"C:\\Users\\Public\\helper.dll\"",
+      "children": [
+        {
+          "pid": 201543,
+          "ppid": 201538,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\aditya.gupta\\AppData\\Local\\Temp\\host_3422b0e9.txt\"",
+          "children": [
+            {
+              "pid": 201544,
+              "ppid": 201543,
+              "name": "certutil.exe",
+              "command": "certutil.exe -verify \"C:\\Users\\Public\\corp_root.cer\"",
+              "children": [
+                {
+                  "pid": 201559,
+                  "ppid": 201544,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 201564,
+                      "ppid": 201559,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv",
+                      "children": [
+                        {
+                          "pid": 201570,
+                          "ppid": 201564,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 13 > nul",
+                          "children": [
+                            {
+                              "pid": 201574,
+                              "ppid": 201570,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\aditya.gupta\\AppData\\Local\\Temp\\who_fb8c89e9.txt\"",
+                              "children": [
+                                {
+                                  "pid": 201580,
+                                  "ppid": 201574,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 15 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 201587,
+                                      "ppid": 201580,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\aditya.gupta\\AppData\\Local\\Temp\\host_d27d3627.txt\"",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 201588,
+                              "ppid": 201570,
+                              "name": "reg.exe",
+                              "command": "reg.exe import \"C:\\ProgramData\\Northwind\\Build\\Runtime_30f61df6.reg\"",
+                              "children": [
+                                {
+                                  "pid": 201591,
+                                  "ppid": 201588,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 201594,
+                                      "ppid": 201591,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-Service | Out-File 'C:\\Users\\aditya.gupta\\AppData\\Local\\Temp\\sched_c1cb970d.txt'\"",
+                                      "children": [
+                                        {
+                                          "pid": 201601,
+                                          "ppid": 201594,
+                                          "name": "cmd.exe",
+                                          "command": "cmd.exe /c \"whoami.exe\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 201547,
+      "ppid": 201537,
+      "name": "ping.exe",
+      "command": "ping.exe -n 26 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 201551,
+          "ppid": 201547,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 20 /nobreak",
+          "children": [
+            {
+              "pid": 201554,
+              "ppid": 201551,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\aditya.gupta\\AppData\\Local\\Temp\\host_ffef42fb.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

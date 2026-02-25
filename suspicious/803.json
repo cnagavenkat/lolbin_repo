@@ -1,0 +1,182 @@
+{
+  "pid": 149216,
+  "ppid": 0,
+  "name": "winlogon.exe",
+  "command": "winlogon.exe /session",
+  "children": [
+    {
+      "pid": 149217,
+      "ppid": 149216,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Hidden -File \"C:\\IT\\Maint\\TrustRefresh_2c1c13a9.ps1\" -Host \"SUP-722\" -Mode Full",
+      "children": [
+        {
+          "pid": 149218,
+          "ppid": 149217,
+          "name": "forfiles.exe",
+          "command": "forfiles.exe /P \"C:\\Build\\dist\\b83f0a2f\" /M *.cab /D -17 /C \"cmd /c echo archived @file\"",
+          "children": [
+            {
+              "pid": 149224,
+              "ppid": 149218,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe",
+              "children": [
+                {
+                  "pid": 149229,
+                  "ppid": 149224,
+                  "name": "reg.exe",
+                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                  "children": [
+                    {
+                      "pid": 149233,
+                      "ppid": 149229,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /svc",
+                      "children": [
+                        {
+                          "pid": 149237,
+                          "ppid": 149233,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+                          "children": [
+                            {
+                              "pid": 149243,
+                              "ppid": 149237,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 20 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 149244,
+                                  "ppid": 149243,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 149247,
+                                      "ppid": 149244,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 149251,
+                                          "ppid": 149247,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups > \"C:\\Users\\meera.bose\\AppData\\Local\\Temp\\who_85388a8e.txt\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 149256,
+                              "ppid": 149237,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /v",
+                              "children": [
+                                {
+                                  "pid": 149261,
+                                  "ppid": 149256,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe",
+                                  "children": [
+                                    {
+                                      "pid": 149267,
+                                      "ppid": 149261,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe",
+                                      "children": [
+                                        {
+                                          "pid": 149273,
+                                          "ppid": 149267,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Fabrikam\\Logs\\support.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 149278,
+                                              "ppid": 149273,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all > \"C:\\Users\\meera.bose\\AppData\\Local\\Temp\\who_a3c0e7c0.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 149283,
+                                                  "ppid": 149278,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /v",
+                                                  "children": [
+                                                    {
+                                                      "pid": 149285,
+                                                      "ppid": 149283,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /v",
+                                                      "children": [
+                                                        {
+                                                          "pid": 149291,
+                                                          "ppid": 149285,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\meera.bose\\AppData\\Local\\Temp\\host_6927e4d4.txt\"' -Wait\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 149295,
+                                                              "ppid": 149291,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 8 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 149300,
+                                                                  "ppid": 149295,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 149301,
+                                                                      "ppid": 149300,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 21\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 149306,
+                                                                          "ppid": 149301,
+                                                                          "name": "powershell.exe",
+                                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "pid": 233478,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 233484,
+      "ppid": 233478,
+      "name": "ipconfig.exe",
+      "command": "ipconfig.exe /all",
+      "children": [
+        {
+          "pid": 233486,
+          "ppid": 233484,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 20 /nobreak",
+          "children": [
+            {
+              "pid": 233487,
+              "ppid": 233486,
+              "name": "ping.exe",
+              "command": "ping.exe -n 11 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 233492,
+                  "ppid": 233487,
+                  "name": "netsh.exe",
+                  "command": "netsh.exe interface ipv4 show config > \"C:\\ProgramData\\Fabrikam\\Logs\\net_0d7c3d18.txt\"",
+                  "children": [
+                    {
+                      "pid": 233497,
+                      "ppid": 233492,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": [
+                        {
+                          "pid": 233507,
+                          "ppid": 233497,
+                          "name": "nltest.exe",
+                          "command": "nltest.exe /dsgetdc:ENG",
+                          "children": [
+                            {
+                              "pid": 233510,
+                              "ppid": 233507,
+                              "name": "quser.exe",
+                              "command": "quser.exe /server:OPS-258",
+                              "children": [
+                                {
+                                  "pid": 233511,
+                                  "ppid": 233510,
+                                  "name": "cmd.exe",
+                                  "command": "cmd.exe /k \"tasklist /svc\"",
+                                  "children": [
+                                    {
+                                      "pid": 233513,
+                                      "ppid": 233511,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups",
+                                      "children": [
+                                        {
+                                          "pid": 233520,
+                                          "ppid": 233513,
+                                          "name": "quser.exe",
+                                          "command": "quser.exe",
+                                          "children": [
+                                            {
+                                              "pid": 233532,
+                                              "ppid": 233520,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\akash.mishra\\AppData\\Local\\Temp\\host_31ca89fc.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 233539,
+                                                  "ppid": 233532,
+                                                  "name": "ping.exe",
+                                                  "command": "ping.exe -n 11 127.0.0.1 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 233542,
+                                                      "ppid": 233539,
+                                                      "name": "quser.exe",
+                                                      "command": "quser.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 233547,
+                                                          "ppid": 233542,
+                                                          "name": "quser.exe",
+                                                          "command": "quser.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 233553,
+                                                              "ppid": 233547,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 9 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 233556,
+                                                                  "ppid": 233553,
+                                                                  "name": "cmd.exe",
+                                                                  "command": "cmd.exe /c \"hostname.exe\"",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 233499,
+      "ppid": 233478,
+      "name": "quser.exe",
+      "command": "quser.exe",
+      "children": [
+        {
+          "pid": 233503,
+          "ppid": 233499,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\akash.mishra\\AppData\\Local\\Temp\\host_6b296238.txt\"",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 233524,
+      "ppid": 233478,
+      "name": "whoami.exe",
+      "command": "whoami.exe /groups > \"C:\\Users\\akash.mishra\\AppData\\Local\\Temp\\who_925b7ea9.txt\"",
+      "children": [
+        {
+          "pid": 233525,
+          "ppid": 233524,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 9 /nobreak",
+          "children": [
+            {
+              "pid": 233528,
+              "ppid": 233525,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\akash.mishra\\AppData\\Local\\Temp\\who_aa4417f1.txt\"",
+              "children": [
+                {
+                  "pid": 233531,
+                  "ppid": 233528,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\akash.mishra\\AppData\\Local\\Temp\\host_9459a680.txt\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

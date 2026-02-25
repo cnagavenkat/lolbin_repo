@@ -1,0 +1,267 @@
+{
+  "pid": 130790,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 130793,
+      "ppid": 130790,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\ananya.sharma\\AppData\\Local\\Temp\\inv_cc74d14a.txt'\"",
+      "children": [
+        {
+          "pid": 130794,
+          "ppid": 130793,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 22 /nobreak",
+          "children": [
+            {
+              "pid": 130799,
+              "ppid": 130794,
+              "name": "schtasks.exe",
+              "command": "schtasks.exe /create /tn \"\\Contoso\\Deploy\\Cleanup\" /tr \"C:\\Users\\ananya.sharma\\AppData\\Local\\Temp\\run_6e70e99e.cmd\" /sc once /st 02:41 /f /ru \"FINLAB\\suresh.verma\"",
+              "children": [
+                {
+                  "pid": 130801,
+                  "ppid": 130799,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all > \"C:\\Users\\ananya.sharma\\AppData\\Local\\Temp\\who_33dfaa7d.txt\"",
+                  "children": [
+                    {
+                      "pid": 130803,
+                      "ppid": 130801,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\ananya.sharma\\AppData\\Local\\Temp\\host_a714a14f.txt\"",
+                      "children": [
+                        {
+                          "pid": 130806,
+                          "ppid": 130803,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 22 > nul",
+                          "children": [
+                            {
+                              "pid": 130812,
+                              "ppid": 130806,
+                              "name": "cmd.exe",
+                              "command": "cmd.exe /c \"hostname.exe > \"C:\\Users\\ananya.sharma\\AppData\\Local\\Temp\\host_db3b2987.txt\"\"",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 130818,
+                  "ppid": 130799,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 19 /nobreak",
+                  "children": [
+                    {
+                      "pid": 130823,
+                      "ppid": 130818,
+                      "name": "cscript.exe",
+                      "command": "cscript.exe //nologo \"C:\\Users\\Public\\Diag_3fc8773d.vbs\" /verify",
+                      "children": [
+                        {
+                          "pid": 130830,
+                          "ppid": 130823,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 8 /nobreak",
+                          "children": [
+                            {
+                              "pid": 130834,
+                              "ppid": 130830,
+                              "name": "reg.exe",
+                              "command": "reg.exe add \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"SupportAssist\" /t REG_SZ /d \"C:\\Users\\Public\\Updater_db3ae444.cmd\" /f",
+                              "children": [
+                                {
+                                  "pid": 130839,
+                                  "ppid": 130834,
+                                  "name": "quser.exe",
+                                  "command": "quser.exe /server:APP-939",
+                                  "children": [
+                                    {
+                                      "pid": 130840,
+                                      "ppid": 130839,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 21 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 130847,
+                                          "ppid": 130840,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": [
+                                            {
+                                              "pid": 130849,
+                                              "ppid": 130847,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'ping.exe' -ArgumentList '-n 20 127.0.0.1 > nul' -Wait\"",
+                                              "children": [
+                                                {
+                                                  "pid": 130854,
+                                                  "ppid": 130849,
+                                                  "name": "quser.exe",
+                                                  "command": "quser.exe /server:OPS-431",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 130856,
+                                          "ppid": 130840,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": [
+                                            {
+                                              "pid": 130861,
+                                              "ppid": 130856,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv > \"C:\\Users\\ananya.sharma\\AppData\\Local\\Temp\\who_c1cf549b.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 130864,
+                                                  "ppid": 130861,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv",
+                                                  "children": [
+                                                    {
+                                                      "pid": 130867,
+                                                      "ppid": 130864,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 130874,
+                                                          "ppid": 130867,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 22\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 130881,
+                                              "ppid": 130856,
+                                              "name": "schtasks.exe",
+                                              "command": "schtasks.exe /query /tn \"\\Contoso\\Support\\Diag\" /v /fo LIST",
+                                              "children": [
+                                                {
+                                                  "pid": 130885,
+                                                  "ppid": 130881,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 21 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 130891,
+                                                      "ppid": 130885,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 130892,
+                                                          "ppid": 130891,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\ananya.sharma\\AppData\\Local\\Temp\\host_bc47a12c.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 130897,
+                                                              "ppid": 130892,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\ananya.sharma\\AppData\\Local\\Temp\\host_2314a334.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 130914,
+                                                                  "ppid": 130897,
+                                                                  "name": "quser.exe",
+                                                                  "command": "quser.exe /server:LAP-761",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 130919,
+                                                                      "ppid": 130914,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 13 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 130924,
+                                                                          "ppid": 130919,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 14 /nobreak",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 130925,
+                                                                              "ppid": 130924,
+                                                                              "name": "ping.exe",
+                                                                              "command": "ping.exe -n 4 127.0.0.1 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 130926,
+                                                                                  "ppid": 130925,
+                                                                                  "name": "timeout.exe",
+                                                                                  "command": "timeout.exe /t 25 /nobreak",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 130902,
+      "ppid": 130790,
+      "name": "quser.exe",
+      "command": "quser.exe /server:BLD-640",
+      "children": [
+        {
+          "pid": 130907,
+          "ppid": 130902,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv > \"C:\\Users\\ananya.sharma\\AppData\\Local\\Temp\\who_feb05331.txt\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

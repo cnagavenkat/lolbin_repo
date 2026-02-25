@@ -1,0 +1,187 @@
+{
+  "pid": 106636,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe /silent",
+  "children": [
+    {
+      "pid": 106638,
+      "ppid": 106636,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"echo maintenance step\"",
+      "children": [
+        {
+          "pid": 106641,
+          "ppid": 106638,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+          "children": [
+            {
+              "pid": 106644,
+              "ppid": 106641,
+              "name": "reg.exe",
+              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+              "children": [
+                {
+                  "pid": 106649,
+                  "ppid": 106644,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 18 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 106655,
+                      "ppid": 106649,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 5 > nul",
+                      "children": [
+                        {
+                          "pid": 106661,
+                          "ppid": 106655,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 106663,
+                              "ppid": 106661,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 10 /nobreak",
+                              "children": [
+                                {
+                                  "pid": 106668,
+                                  "ppid": 106663,
+                                  "name": "quser.exe",
+                                  "command": "quser.exe /server:BLD-774",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 106670,
+                          "ppid": 106655,
+                          "name": "quser.exe",
+                          "command": "quser.exe /server:WS-186",
+                          "children": [
+                            {
+                              "pid": 106675,
+                              "ppid": 106670,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                              "children": [
+                                {
+                                  "pid": 106678,
+                                  "ppid": 106675,
+                                  "name": "quser.exe",
+                                  "command": "quser.exe",
+                                  "children": [
+                                    {
+                                      "pid": 106680,
+                                      "ppid": 106678,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+                                      "children": [
+                                        {
+                                          "pid": 106681,
+                                          "ppid": 106680,
+                                          "name": "nltest.exe",
+                                          "command": "nltest.exe /dclist:OPS",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 106682,
+                                  "ppid": 106675,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Alpine\\Logs\\Application_f86a4a72.evtx\"",
+                                  "children": [
+                                    {
+                                      "pid": 106686,
+                                      "ppid": 106682,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups",
+                                      "children": [
+                                        {
+                                          "pid": 106693,
+                                          "ppid": 106686,
+                                          "name": "nltest.exe",
+                                          "command": "nltest.exe /dsgetdc:CORP",
+                                          "children": [
+                                            {
+                                              "pid": 106694,
+                                              "ppid": 106693,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 106701,
+                                          "ppid": 106686,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 9 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 106705,
+                                              "ppid": 106701,
+                                              "name": "nltest.exe",
+                                              "command": "nltest.exe /sc_query:BFSI",
+                                              "children": [
+                                                {
+                                                  "pid": 106712,
+                                                  "ppid": 106705,
+                                                  "name": "quser.exe",
+                                                  "command": "quser.exe /server:LAP-280",
+                                                  "children": [
+                                                    {
+                                                      "pid": 106713,
+                                                      "ppid": 106712,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /all > \"C:\\Users\\vivaan.sharma\\AppData\\Local\\Temp\\who_e2a6c69e.txt\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 106719,
+                                              "ppid": 106701,
+                                              "name": "quser.exe",
+                                              "command": "quser.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 106725,
+                                                  "ppid": 106719,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Minimized -ExecutionPolicy Bypass -File \"C:\\Users\\Public\\CollectInventory_2b452e8a.ps1\" -Host \"APP-763\" -Mode Delta",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

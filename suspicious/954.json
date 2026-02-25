@@ -1,0 +1,276 @@
+{
+  "pid": 169131,
+  "ppid": 0,
+  "name": "svchost.exe",
+  "command": "svchost.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 169137,
+      "ppid": 169131,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\Public\\TemplateRun_ae83d8e1.vbs\"",
+      "children": [
+        {
+          "pid": 169139,
+          "ppid": 169137,
+          "name": "powershell.exe",
+          "command": "powershell.exe -WindowStyle Hidden -Command \"Get-Service | Out-File 'C:\\Users\\isha.sharma\\AppData\\Local\\Temp\\diag_da8e428e.txt'\"",
+          "children": [
+            {
+              "pid": 169145,
+              "ppid": 169139,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /svc",
+              "children": [
+                {
+                  "pid": 169148,
+                  "ppid": 169145,
+                  "name": "schtasks.exe",
+                  "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+                  "children": [
+                    {
+                      "pid": 169149,
+                      "ppid": 169148,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv > \"C:\\Users\\isha.sharma\\AppData\\Local\\Temp\\who_f34ab905.txt\"",
+                      "children": [
+                        {
+                          "pid": 169150,
+                          "ppid": 169149,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\isha.sharma\\AppData\\Local\\Temp\\host_5e001bb0.txt\"",
+                          "children": [
+                            {
+                              "pid": 169153,
+                              "ppid": 169150,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                              "children": [
+                                {
+                                  "pid": 169158,
+                                  "ppid": 169153,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\isha.sharma\\AppData\\Local\\Temp\\who_e6a6dd21.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 169163,
+                                      "ppid": 169158,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 169170,
+                      "ppid": 169148,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+                      "children": [
+                        {
+                          "pid": 169177,
+                          "ppid": 169170,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\isha.sharma\\AppData\\Local\\Temp\\host_a7d5528b.txt\"",
+                          "children": [
+                            {
+                              "pid": 169183,
+                              "ppid": 169177,
+                              "name": "wevtutil.exe",
+                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Contoso\\Logs\\Application_c287e578.evtx\"",
+                              "children": [
+                                {
+                                  "pid": 169185,
+                                  "ppid": 169183,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all > \"C:\\Users\\isha.sharma\\AppData\\Local\\Temp\\who_815c07d6.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 169190,
+                                      "ppid": 169185,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 21 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 169195,
+                                          "ppid": 169190,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe > \"C:\\Users\\isha.sharma\\AppData\\Local\\Temp\\who_fe0b252d.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 169197,
+                                              "ppid": 169195,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"certificate\" \"C:\\ProgramData\\Contoso\\Logs\\profile.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 169211,
+                                                  "ppid": 169197,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv",
+                                                  "children": [
+                                                    {
+                                                      "pid": 169212,
+                                                      "ppid": 169211,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 169216,
+                                                          "ppid": 169212,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 169217,
+                                                              "ppid": 169216,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 169219,
+                                                                  "ppid": 169217,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /all > \"C:\\Users\\isha.sharma\\AppData\\Local\\Temp\\who_ff7b7120.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 169224,
+                                                                      "ppid": 169219,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 169226,
+                                                                          "ppid": 169224,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv > \"C:\\Users\\isha.sharma\\AppData\\Local\\Temp\\who_1f010956.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 169227,
+                                                                              "ppid": 169226,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\isha.sharma\\AppData\\Local\\Temp\\host_7a1e28da.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 169229,
+                                                                                  "ppid": 169227,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 169235,
+                                                                                      "ppid": 169229,
+                                                                                      "name": "choice.exe",
+                                                                                      "command": "choice.exe /d y /t 15 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 169237,
+                                                                                          "ppid": 169235,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /all > \"C:\\Users\\isha.sharma\\AppData\\Local\\Temp\\who_d16772dc.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 169240,
+                                                                                              "ppid": 169237,
+                                                                                              "name": "tasklist.exe",
+                                                                                              "command": "tasklist.exe /svc",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "pid": 169247,
+                                                                                  "ppid": 169227,
+                                                                                  "name": "timeout.exe",
+                                                                                  "command": "timeout.exe /t 23 /nobreak",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 169251,
+                                                                                      "ppid": 169247,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /priv > \"C:\\Users\\isha.sharma\\AppData\\Local\\Temp\\who_b8777dae.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 169254,
+                                                                                          "ppid": 169251,
+                                                                                          "name": "tasklist.exe",
+                                                                                          "command": "tasklist.exe /v",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 169201,
+      "ppid": 169131,
+      "name": "whoami.exe",
+      "command": "whoami.exe /groups",
+      "children": [
+        {
+          "pid": 169202,
+          "ppid": 169201,
+          "name": "ping.exe",
+          "command": "ping.exe -n 9 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 169205,
+              "ppid": 169202,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\isha.sharma\\AppData\\Local\\Temp\\host_81734f1f.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

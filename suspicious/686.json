@@ -1,0 +1,283 @@
+{
+  "pid": 135482,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 135486,
+      "ppid": 135482,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\Fabrikam\\Collector\\Sync_f7c82dcf.vbs\"",
+      "children": [
+        {
+          "pid": 135492,
+          "ppid": 135486,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 5 /nobreak",
+          "children": [
+            {
+              "pid": 135494,
+              "ppid": 135492,
+              "name": "forfiles.exe",
+              "command": "forfiles.exe /P \"C:\\Users\\kiran.das\\AppData\\Local\\Temp\" /M *.tmp /D -12 /C \"cmd /c echo archived @file\"",
+              "children": [
+                {
+                  "pid": 135496,
+                  "ppid": 135494,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 135503,
+                      "ppid": 135496,
+                      "name": "reg.exe",
+                      "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                      "children": [
+                        {
+                          "pid": 135505,
+                          "ppid": 135503,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 3 /nobreak",
+                          "children": [
+                            {
+                              "pid": 135509,
+                              "ppid": 135505,
+                              "name": "ping.exe",
+                              "command": "ping.exe -n 18 127.0.0.1 > nul",
+                              "children": [
+                                {
+                                  "pid": 135511,
+                                  "ppid": 135509,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all > \"C:\\Users\\kiran.das\\AppData\\Local\\Temp\\who_0db1d02b.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 135517,
+                                      "ppid": 135511,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all > \"C:\\Users\\kiran.das\\AppData\\Local\\Temp\\who_2d06d0ca.txt\"",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 135524,
+                                  "ppid": 135509,
+                                  "name": "schtasks.exe",
+                                  "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+                                  "children": [
+                                    {
+                                      "pid": 135527,
+                                      "ppid": 135524,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 7 /nobreak",
+                                      "children": [
+                                        {
+                                          "pid": 135530,
+                                          "ppid": 135527,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 21 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 135534,
+                                              "ppid": 135530,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                              "children": [
+                                                {
+                                                  "pid": 135537,
+                                                  "ppid": 135534,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 13 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 135543,
+                                                      "ppid": 135537,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 135544,
+                                                          "ppid": 135543,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe > \"C:\\Users\\kiran.das\\AppData\\Local\\Temp\\who_c7bcb64d.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 135550,
+                                              "ppid": 135530,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Northwind\\Logs\\deploy.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 135556,
+                                                  "ppid": 135550,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv",
+                                                  "children": [
+                                                    {
+                                                      "pid": 135562,
+                                                      "ppid": 135556,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": [
+                                                        {
+                                                          "pid": 135567,
+                                                          "ppid": 135562,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 6\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 135572,
+                                                              "ppid": 135567,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 135579,
+                                                                  "ppid": 135572,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 135595,
+                                                                      "ppid": 135579,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\kiran.das\\AppData\\Local\\Temp\\host_36dfc180.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 135596,
+                                                                          "ppid": 135595,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 135602,
+                                                                              "ppid": 135596,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all > \"C:\\Users\\kiran.das\\AppData\\Local\\Temp\\who_22ccfd16.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 135606,
+                                                                                  "ppid": 135602,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\kiran.das\\AppData\\Local\\Temp\\host_ae39b134.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 135613,
+                                                                                      "ppid": 135606,
+                                                                                      "name": "tasklist.exe",
+                                                                                      "command": "tasklist.exe /v",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 135620,
+                                                                                          "ppid": 135613,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /all > \"C:\\Users\\kiran.das\\AppData\\Local\\Temp\\who_3ca52f22.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 135624,
+                                                                                              "ppid": 135620,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe",
+                                                                                              "children": []
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "pid": 135629,
+                                                                                  "ppid": 135602,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /v",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 135631,
+                                                                                      "ppid": 135629,
+                                                                                      "name": "ping.exe",
+                                                                                      "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 135633,
+                                                                                          "ppid": 135631,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /all",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 135581,
+      "ppid": 135482,
+      "name": "whoami.exe",
+      "command": "whoami.exe > \"C:\\Users\\kiran.das\\AppData\\Local\\Temp\\who_7c74bf95.txt\"",
+      "children": [
+        {
+          "pid": 135583,
+          "ppid": 135581,
+          "name": "whoami.exe",
+          "command": "whoami.exe",
+          "children": [
+            {
+              "pid": 135589,
+              "ppid": 135583,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

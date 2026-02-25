@@ -1,0 +1,158 @@
+{
+  "pid": 246405,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe /diag",
+  "children": [
+    {
+      "pid": 246412,
+      "ppid": 246405,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\LoginInit_34e09108.vbs\"",
+      "children": [
+        {
+          "pid": 246413,
+          "ppid": 246412,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -EncodedCommand mh+yR5Th9CT4pyP+Fuyowb0r6ZhZ/o0VQHw09NoX6",
+          "children": [
+            {
+              "pid": 246416,
+              "ppid": 246413,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\who_62c81ae8.txt\"",
+              "children": [
+                {
+                  "pid": 246419,
+                  "ppid": 246416,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\who_361acd7e.txt\"",
+                  "children": [
+                    {
+                      "pid": 246423,
+                      "ppid": 246419,
+                      "name": "wmic.exe",
+                      "command": "wmic.exe process get Name,ProcessId,ParentProcessId",
+                      "children": [
+                        {
+                          "pid": 246443,
+                          "ppid": 246423,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /groups > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\who_fbbd9854.txt\"",
+                          "children": [
+                            {
+                              "pid": 246450,
+                              "ppid": 246443,
+                              "name": "makecab.exe",
+                              "command": "makecab.exe \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\trace.etl\" \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\trace.cab\"",
+                              "children": [
+                                {
+                                  "pid": 246451,
+                                  "ppid": 246450,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 246458,
+                                      "ppid": 246451,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Fabrikam\\Logs\\Microsoft-Windows-TaskScheduler_Operational_fcb6303c.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 246462,
+                                          "ppid": 246458,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\host_d0d37f58.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 246468,
+                                              "ppid": 246462,
+                                              "name": "choice.exe",
+                                              "command": "choice.exe /d y /t 25 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 246475,
+                                                  "ppid": 246468,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\host_4537d34f.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 246478,
+                                                      "ppid": 246475,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\host_862c7a41.txt\"' -Wait\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 246484,
+                                                          "ppid": 246478,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 9 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 246487,
+                                                              "ppid": 246484,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 246425,
+      "ppid": 246405,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+      "children": [
+        {
+          "pid": 246432,
+          "ppid": 246425,
+          "name": "whoami.exe",
+          "command": "whoami.exe /priv > \"C:\\Users\\aarav.jain\\AppData\\Local\\Temp\\who_5537d573.txt\"",
+          "children": [
+            {
+              "pid": 246434,
+              "ppid": 246432,
+              "name": "ping.exe",
+              "command": "ping.exe -n 5 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 246436,
+                  "ppid": 246434,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

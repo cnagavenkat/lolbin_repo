@@ -1,0 +1,268 @@
+{
+  "pid": 50301,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 50303,
+      "ppid": 50301,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 2 /nobreak",
+      "children": [
+        {
+          "pid": 50309,
+          "ppid": 50303,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /create /tn \"\\Litware\\Profile\\Diag\" /tr \"C:\\IT\\Scripts\\diag_3e45cd19.vbs\" /sc onlogon /f /ru \"CORP\\rahul.reddy\"",
+          "children": [
+            {
+              "pid": 50312,
+              "ppid": 50309,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 50319,
+                  "ppid": 50312,
+                  "name": "reg.exe",
+                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                  "children": [
+                    {
+                      "pid": 50326,
+                      "ppid": 50319,
+                      "name": "reg.exe",
+                      "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "pid": 50330,
+                  "ppid": 50312,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\aarav.mishra\\AppData\\Local\\Temp\\host_dde588e4.txt\"",
+                  "children": [
+                    {
+                      "pid": 50331,
+                      "ppid": 50330,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\aarav.mishra\\AppData\\Local\\Temp\\host_0a3f356c.txt\"",
+                      "children": [
+                        {
+                          "pid": 50334,
+                          "ppid": 50331,
+                          "name": "schtasks.exe",
+                          "command": "schtasks.exe /run /tn \"\\Contoso\\Support\\Diag\"",
+                          "children": [
+                            {
+                              "pid": 50340,
+                              "ppid": 50334,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+                              "children": [
+                                {
+                                  "pid": 50346,
+                                  "ppid": 50340,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe",
+                                  "children": [
+                                    {
+                                      "pid": 50352,
+                                      "ppid": 50346,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /groups",
+                                      "children": [
+                                        {
+                                          "pid": 50358,
+                                          "ppid": 50352,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\aarav.mishra\\AppData\\Local\\Temp\\evt_1aee8953.txt'\"",
+                                          "children": [
+                                            {
+                                              "pid": 50362,
+                                              "ppid": 50358,
+                                              "name": "reg.exe",
+                                              "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                              "children": [
+                                                {
+                                                  "pid": 50369,
+                                                  "ppid": 50362,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv > \"C:\\Users\\aarav.mishra\\AppData\\Local\\Temp\\who_7024704e.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 50374,
+                                                      "ppid": 50369,
+                                                      "name": "reg.exe",
+                                                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                                                      "children": [
+                                                        {
+                                                          "pid": 50375,
+                                                          "ppid": 50374,
+                                                          "name": "schtasks.exe",
+                                                          "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+                                                          "children": [
+                                                            {
+                                                              "pid": 50379,
+                                                              "ppid": 50375,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 50383,
+                                                                  "ppid": 50379,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 18 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 50385,
+                                                                      "ppid": 50383,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 50413,
+                                                                          "ppid": 50385,
+                                                                          "name": "reg.exe",
+                                                                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 50439,
+                                                                              "ppid": 50413,
+                                                                              "name": "cmd.exe",
+                                                                              "command": "cmd.exe /c \"hostname.exe > \"C:\\Users\\aarav.mishra\\AppData\\Local\\Temp\\host_97c37e67.txt\"\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 50443,
+                                                                                  "ppid": 50439,
+                                                                                  "name": "powershell.exe",
+                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 50445,
+                                                                                      "ppid": 50443,
+                                                                                      "name": "tasklist.exe",
+                                                                                      "command": "tasklist.exe /v",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 50387,
+      "ppid": 50301,
+      "name": "whoami.exe",
+      "command": "whoami.exe /priv",
+      "children": [
+        {
+          "pid": 50394,
+          "ppid": 50387,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /v",
+          "children": [
+            {
+              "pid": 50396,
+              "ppid": 50394,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 50403,
+                  "ppid": 50396,
+                  "name": "reg.exe",
+                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                  "children": [
+                    {
+                      "pid": 50409,
+                      "ppid": 50403,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /v",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 50417,
+      "ppid": 50301,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 50423,
+          "ppid": 50417,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+          "children": [
+            {
+              "pid": 50429,
+              "ppid": 50423,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 50430,
+                  "ppid": 50429,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 13 > nul",
+                  "children": [
+                    {
+                      "pid": 50434,
+                      "ppid": 50430,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\aarav.mishra\\AppData\\Local\\Temp\\host_b39788a8.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "pid": 202115,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 202121,
+      "ppid": 202115,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"set\"",
+      "children": [
+        {
+          "pid": 202128,
+          "ppid": 202121,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 16\"",
+          "children": [
+            {
+              "pid": 202133,
+              "ppid": 202128,
+              "name": "cmd.exe",
+              "command": "cmd.exe /k \"echo maintenance step\"",
+              "children": [
+                {
+                  "pid": 202137,
+                  "ppid": 202133,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 16 > nul",
+                  "children": [
+                    {
+                      "pid": 202138,
+                      "ppid": 202137,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 202140,
+                          "ppid": 202138,
+                          "name": "certutil.exe",
+                          "command": "certutil.exe -addstore CA \"C:\\ProgramData\\Fabrikam\\Updater\\intermediate.cer\"",
+                          "children": [
+                            {
+                              "pid": 202159,
+                              "ppid": 202140,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe > \"C:\\Users\\rahul.singh\\AppData\\Local\\Temp\\host_644cf8f4.txt\"",
+                              "children": [
+                                {
+                                  "pid": 202164,
+                                  "ppid": 202159,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 202170,
+                                      "ppid": 202164,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 22 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 202172,
+                                          "ppid": 202170,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Alpine\\Logs\\Application_68e4f1ff.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 202175,
+                                              "ppid": 202172,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups",
+                                              "children": [
+                                                {
+                                                  "pid": 202180,
+                                                  "ppid": 202175,
+                                                  "name": "timeout.exe",
+                                                  "command": "timeout.exe /t 2 /nobreak",
+                                                  "children": [
+                                                    {
+                                                      "pid": 202185,
+                                                      "ppid": 202180,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 202189,
+                                                          "ppid": 202185,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv > \"C:\\Users\\rahul.singh\\AppData\\Local\\Temp\\who_5db00054.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 202192,
+                                                              "ppid": 202189,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all > \"C:\\Users\\rahul.singh\\AppData\\Local\\Temp\\who_fd491143.txt\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 202142,
+      "ppid": 202115,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"hostname.exe\"",
+      "children": [
+        {
+          "pid": 202147,
+          "ppid": 202142,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 4\"",
+          "children": [
+            {
+              "pid": 202153,
+              "ppid": 202147,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 202154,
+                  "ppid": 202153,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

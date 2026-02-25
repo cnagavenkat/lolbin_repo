@@ -1,0 +1,165 @@
+{
+  "pid": 308825,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 308828,
+      "ppid": 308825,
+      "name": "cmd.exe",
+      "command": "cmd.exe /k \"echo maintenance step\"",
+      "children": [
+        {
+          "pid": 308829,
+          "ppid": 308828,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+          "children": [
+            {
+              "pid": 308832,
+              "ppid": 308829,
+              "name": "sc.exe",
+              "command": "sc.exe query \"LanmanWorkstation\"",
+              "children": [
+                {
+                  "pid": 308836,
+                  "ppid": 308832,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 308841,
+                      "ppid": 308836,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 16 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 308843,
+                          "ppid": 308841,
+                          "name": "wmic.exe",
+                          "command": "wmic.exe process get Name,ProcessId,ParentProcessId",
+                          "children": [
+                            {
+                              "pid": 308848,
+                              "ppid": 308843,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe > \"C:\\Users\\aditya.jain\\AppData\\Local\\Temp\\who_80637dc1.txt\"",
+                              "children": [
+                                {
+                                  "pid": 308851,
+                                  "ppid": 308848,
+                                  "name": "vssadmin.exe",
+                                  "command": "vssadmin.exe list writers",
+                                  "children": [
+                                    {
+                                      "pid": 308854,
+                                      "ppid": 308851,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe",
+                                      "children": [
+                                        {
+                                          "pid": 308855,
+                                          "ppid": 308854,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 17 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 308857,
+                                              "ppid": 308855,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 308858,
+                                          "ppid": 308854,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Litware\\Logs\\support.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 308860,
+                                              "ppid": 308858,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 308874,
+                                                  "ppid": 308860,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /svc",
+                                                  "children": [
+                                                    {
+                                                      "pid": 308876,
+                                                      "ppid": 308874,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '/groups > \"C:\\Users\\aditya.jain\\AppData\\Local\\Temp\\who_cfdff3f4.txt\"' -Wait\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 308879,
+                                                          "ppid": 308876,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all > \"C:\\Users\\aditya.jain\\AppData\\Local\\Temp\\who_d42ea48a.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 308882,
+                                                              "ppid": 308879,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 308861,
+      "ppid": 308825,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe /v",
+      "children": [
+        {
+          "pid": 308866,
+          "ppid": 308861,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /v",
+          "children": [
+            {
+              "pid": 308869,
+              "ppid": 308866,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

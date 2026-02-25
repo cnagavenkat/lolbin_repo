@@ -1,0 +1,205 @@
+{
+  "pid": 223210,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 223214,
+      "ppid": 223210,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 19 /nobreak",
+      "children": [
+        {
+          "pid": 223218,
+          "ppid": 223214,
+          "name": "cscript.exe",
+          "command": "cscript.exe //nologo \"C:\\IT\\Runbooks\\Diag_103a774e.wsf\" /repair",
+          "children": [
+            {
+              "pid": 223221,
+              "ppid": 223218,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\dev.rao\\AppData\\Local\\Temp\\who_841a1a1a.txt\"",
+              "children": [
+                {
+                  "pid": 223240,
+                  "ppid": 223221,
+                  "name": "wscript.exe",
+                  "command": "wscript.exe //nologo \"C:\\Users\\dev.rao\\AppData\\Local\\Temp\\Assist_93c7cb4e.js\"",
+                  "children": [
+                    {
+                      "pid": 223241,
+                      "ppid": 223240,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe",
+                      "children": [
+                        {
+                          "pid": 223244,
+                          "ppid": 223241,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": [
+                            {
+                              "pid": 223251,
+                              "ppid": 223244,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 223252,
+                                  "ppid": 223251,
+                                  "name": "reg.exe",
+                                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                  "children": [
+                                    {
+                                      "pid": 223258,
+                                      "ppid": 223252,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 223264,
+                                          "ppid": 223258,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe",
+                                          "children": [
+                                            {
+                                              "pid": 223268,
+                                              "ppid": 223264,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Litware\\Logs\\Security_e4e16890.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 223275,
+                                                  "ppid": 223268,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 11 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 223278,
+                                                      "ppid": 223275,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 223285,
+                                                          "ppid": 223278,
+                                                          "name": "cmd.exe",
+                                                          "command": "cmd.exe /c \"hostname.exe\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 223292,
+                                                              "ppid": 223285,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 223294,
+                                                                  "ppid": 223292,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 25 > nul",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 223301,
+                                                              "ppid": 223285,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv > \"C:\\Users\\dev.rao\\AppData\\Local\\Temp\\who_65279775.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 223305,
+                                                                  "ppid": 223301,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 11 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 223310,
+                                                                      "ppid": 223305,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 223314,
+                                                                          "ppid": 223310,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 223224,
+      "ppid": 223210,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 11 > nul",
+      "children": [
+        {
+          "pid": 223227,
+          "ppid": 223224,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe",
+          "children": [
+            {
+              "pid": 223228,
+              "ppid": 223227,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 223231,
+                  "ppid": 223228,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 223235,
+                      "ppid": 223231,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /svc",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

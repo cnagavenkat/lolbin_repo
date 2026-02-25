@@ -1,0 +1,150 @@
+{
+  "pid": 193127,
+  "ppid": 0,
+  "name": "msiexec.exe",
+  "command": "msiexec.exe",
+  "children": [
+    {
+      "pid": 193128,
+      "ppid": 193127,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Runbooks\\Diag_48728f38.vbs\" /verify",
+      "children": [
+        {
+          "pid": 193135,
+          "ppid": 193128,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 11 > nul",
+          "children": [
+            {
+              "pid": 193138,
+              "ppid": 193135,
+              "name": "certutil.exe",
+              "command": "certutil.exe -verify \"C:\\Users\\Public\\vpn_gateway.cer\"",
+              "children": [
+                {
+                  "pid": 193143,
+                  "ppid": 193138,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all > \"C:\\Users\\ananya.reddy\\AppData\\Local\\Temp\\who_195a3201.txt\"",
+                  "children": [
+                    {
+                      "pid": 193145,
+                      "ppid": 193143,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe",
+                      "children": [
+                        {
+                          "pid": 193150,
+                          "ppid": 193145,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 193154,
+                  "ppid": 193138,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 4 /nobreak",
+                  "children": [
+                    {
+                      "pid": 193156,
+                      "ppid": 193154,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 193163,
+                          "ppid": 193156,
+                          "name": "certutil.exe",
+                          "command": "certutil.exe -addstore TrustedPublisher \"C:\\Users\\Public\\corp_root.cer\"",
+                          "children": [
+                            {
+                              "pid": 193165,
+                              "ppid": 193163,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 193170,
+                                  "ppid": 193165,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 8 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 193176,
+                                      "ppid": 193170,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                      "children": [
+                                        {
+                                          "pid": 193178,
+                                          "ppid": 193176,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups",
+                                          "children": [
+                                            {
+                                              "pid": 193183,
+                                              "ppid": 193178,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 193188,
+                                                  "ppid": 193183,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 193190,
+                                                      "ppid": 193188,
+                                                      "name": "netsh.exe",
+                                                      "command": "netsh.exe advfirewall show allprofiles > \"C:\\ProgramData\\BlueYonder\\Logs\\net_dff617d1.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 193192,
+                                                          "ppid": 193190,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 193197,
+                                                              "ppid": 193192,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 22 > nul",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

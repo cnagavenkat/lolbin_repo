@@ -1,0 +1,182 @@
+{
+  "pid": 140219,
+  "ppid": 0,
+  "name": "winlogon.exe",
+  "command": "winlogon.exe /diag",
+  "children": [
+    {
+      "pid": 140224,
+      "ppid": 140219,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\suresh.menon\\AppData\\Local\\Temp\\LoginInit_2d690042.js\"",
+      "children": [
+        {
+          "pid": 140231,
+          "ppid": 140224,
+          "name": "regsvr32.exe",
+          "command": "regsvr32.exe /s \"C:\\Build\\dist\\2f018a4f\\bridge.dll\"",
+          "children": [
+            {
+              "pid": 140234,
+              "ppid": 140231,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /v",
+              "children": [
+                {
+                  "pid": 140237,
+                  "ppid": 140234,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 21 > nul",
+                  "children": [
+                    {
+                      "pid": 140241,
+                      "ppid": 140237,
+                      "name": "reg.exe",
+                      "command": "reg.exe add \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"PatchAssist\" /t REG_SZ /d \"C:\\ProgramData\\Fabrikam\\Bridge\\Profile_0e91d833.vbs\" /f",
+                      "children": [
+                        {
+                          "pid": 140259,
+                          "ppid": 140241,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /groups",
+                          "children": [
+                            {
+                              "pid": 140261,
+                              "ppid": 140259,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 140264,
+                                  "ppid": 140261,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 11 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 140269,
+                                      "ppid": 140264,
+                                      "name": "rundll32.exe",
+                                      "command": "rundll32.exe \"C:\\Build\\staging\\2dc83e0b\\bridge.dll\",EntryPoint",
+                                      "children": [
+                                        {
+                                          "pid": 140272,
+                                          "ppid": 140269,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 140278,
+                                              "ppid": 140272,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-ScheduledTask | Out-File 'C:\\Users\\suresh.menon\\AppData\\Local\\Temp\\diag_5ceaeb70.txt'\"",
+                                              "children": [
+                                                {
+                                                  "pid": 140281,
+                                                  "ppid": 140278,
+                                                  "name": "choice.exe",
+                                                  "command": "choice.exe /d y /t 6 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 140287,
+                                                      "ppid": 140281,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 2 /nobreak",
+                                                      "children": [
+                                                        {
+                                                          "pid": 140289,
+                                                          "ppid": 140287,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 140293,
+                                                              "ppid": 140289,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 14 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 140296,
+                                                                  "ppid": 140293,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 140303,
+                                                                      "ppid": 140296,
+                                                                      "name": "choice.exe",
+                                                                      "command": "choice.exe /d y /t 22 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 140309,
+                                                                          "ppid": 140303,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv > \"C:\\Users\\suresh.menon\\AppData\\Local\\Temp\\who_41a96590.txt\"",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 140242,
+      "ppid": 140219,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 23 > nul",
+      "children": [
+        {
+          "pid": 140244,
+          "ppid": 140242,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 2 /nobreak",
+          "children": [
+            {
+              "pid": 140247,
+              "ppid": 140244,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe /v",
+              "children": [
+                {
+                  "pid": 140253,
+                  "ppid": 140247,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'tasklist.exe' -ArgumentList '' -Wait\"",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

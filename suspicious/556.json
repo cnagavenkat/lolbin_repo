@@ -1,0 +1,188 @@
+{
+  "pid": 121034,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 121038,
+      "ppid": 121034,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\Public\\Diag_f2dd9888.wsf\" /repair",
+      "children": [
+        {
+          "pid": 121040,
+          "ppid": 121038,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /fo LIST /v",
+          "children": [
+            {
+              "pid": 121046,
+              "ppid": 121040,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\meera.kulkarni\\AppData\\Local\\Temp\\host_ccfebe7c.txt\"",
+              "children": [
+                {
+                  "pid": 121052,
+                  "ppid": 121046,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /all",
+                  "children": [
+                    {
+                      "pid": 121058,
+                      "ppid": 121052,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "pid": 121060,
+                  "ppid": 121046,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\meera.kulkarni\\AppData\\Local\\Temp\\host_cc54fb9f.txt\"",
+                  "children": [
+                    {
+                      "pid": 121066,
+                      "ppid": 121060,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /svc",
+                      "children": [
+                        {
+                          "pid": 121071,
+                          "ppid": 121066,
+                          "name": "wevtutil.exe",
+                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\BlueYonder\\Logs\\System_92178056.evtx\"",
+                          "children": [
+                            {
+                              "pid": 121077,
+                              "ppid": 121071,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe  -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\meera.kulkarni\\AppData\\Local\\Temp\\diag_04a8c841.txt'\"",
+                              "children": [
+                                {
+                                  "pid": 121084,
+                                  "ppid": 121077,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 121090,
+                                      "ppid": 121084,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\meera.kulkarni\\AppData\\Local\\Temp\\host_60812266.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 121096,
+                                          "ppid": 121090,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe /svc",
+                                          "children": [
+                                            {
+                                              "pid": 121102,
+                                              "ppid": 121096,
+                                              "name": "cmd.exe",
+                                              "command": "cmd.exe /c \"hostname.exe\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 121108,
+                                  "ppid": 121077,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 121110,
+                                      "ppid": 121108,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 9 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 121115,
+                                          "ppid": 121110,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe",
+                                          "children": [
+                                            {
+                                              "pid": 121118,
+                                              "ppid": 121115,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 121119,
+                                                  "ppid": 121118,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 121122,
+                                                      "ppid": 121119,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe > \"C:\\Users\\meera.kulkarni\\AppData\\Local\\Temp\\who_13a8bf95.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 121129,
+                                                          "ppid": 121122,
+                                                          "name": "tasklist.exe",
+                                                          "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 121132,
+                                          "ppid": 121110,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 121138,
+                                              "ppid": 121132,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"certificate\" \"C:\\ProgramData\\Northwind\\Logs\\profile.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 121142,
+                                                  "ppid": 121138,
+                                                  "name": "ping.exe",
+                                                  "command": "ping.exe -n 12 127.0.0.1 > nul",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

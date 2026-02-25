@@ -1,0 +1,126 @@
+{
+  "pid": 110776,
+  "ppid": 0,
+  "name": "RemoteSupportHost.exe",
+  "command": "RemoteSupportHost.exe /session",
+  "children": [
+    {
+      "pid": 110778,
+      "ppid": 110776,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\ananya.jain\\AppData\\Local\\Temp\\Assist_b29e38b1.wsf\"",
+      "children": [
+        {
+          "pid": 110785,
+          "ppid": 110778,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 25 > nul",
+          "children": [
+            {
+              "pid": 110786,
+              "ppid": 110785,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"tasklist /svc\"",
+              "children": [
+                {
+                  "pid": 110790,
+                  "ppid": 110786,
+                  "name": "quser.exe",
+                  "command": "quser.exe /server:BLD-739",
+                  "children": [
+                    {
+                      "pid": 110794,
+                      "ppid": 110790,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups",
+                      "children": [
+                        {
+                          "pid": 110797,
+                          "ppid": 110794,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /svc",
+                          "children": [
+                            {
+                              "pid": 110798,
+                              "ppid": 110797,
+                              "name": "quser.exe",
+                              "command": "quser.exe",
+                              "children": [
+                                {
+                                  "pid": 110803,
+                                  "ppid": 110798,
+                                  "name": "findstr.exe",
+                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Wingtip\\Logs\\support.log\"",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 110804,
+                              "ppid": 110797,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Litware\\Logs\\support.log\"",
+                              "children": [
+                                {
+                                  "pid": 110809,
+                                  "ppid": 110804,
+                                  "name": "wmic.exe",
+                                  "command": "wmic.exe service get Name,StartMode,State",
+                                  "children": [
+                                    {
+                                      "pid": 110816,
+                                      "ppid": 110809,
+                                      "name": "quser.exe",
+                                      "command": "quser.exe",
+                                      "children": [
+                                        {
+                                          "pid": 110819,
+                                          "ppid": 110816,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+                                          "children": [
+                                            {
+                                              "pid": 110820,
+                                              "ppid": 110819,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Fabrikam\\Logs\\Application_c9321843.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 110827,
+                                                  "ppid": 110820,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 110833,
+                                                      "ppid": 110827,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 6 > nul",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

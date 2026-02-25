@@ -1,0 +1,229 @@
+{
+  "pid": 192114,
+  "ppid": 0,
+  "name": "msiexec.exe",
+  "command": "msiexec.exe",
+  "children": [
+    {
+      "pid": 192116,
+      "ppid": 192114,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Tools\\Deploy_c24358fb.wsf\" /repair",
+      "children": [
+        {
+          "pid": 192117,
+          "ppid": 192116,
+          "name": "certutil.exe",
+          "command": "certutil.exe -urlcache -split -f \"http://pkirelay.corp.local/patch/runtime.cab\" \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\agent.cab\"",
+          "children": [
+            {
+              "pid": 192119,
+              "ppid": 192117,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\host_4e641ed0.txt\"",
+              "children": [
+                {
+                  "pid": 192123,
+                  "ppid": 192119,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\host_d9c57e08.txt\"",
+                  "children": [
+                    {
+                      "pid": 192129,
+                      "ppid": 192123,
+                      "name": "powershell.exe",
+                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                      "children": [
+                        {
+                          "pid": 192133,
+                          "ppid": 192129,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -WindowStyle Minimized -ExecutionPolicy Bypass -File \"C:\\IT\\Tools\\TrustRefresh_adb326af.ps1\" -Host \"APP-603\" -Mode Delta",
+                          "children": [
+                            {
+                              "pid": 192136,
+                              "ppid": 192133,
+                              "name": "hostname.exe",
+                              "command": "hostname.exe",
+                              "children": [
+                                {
+                                  "pid": 192140,
+                                  "ppid": 192136,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                  "children": [
+                                    {
+                                      "pid": 192147,
+                                      "ppid": 192140,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Litware\\Logs\\deploy.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 192152,
+                                          "ppid": 192147,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 15 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 192154,
+                                              "ppid": 192152,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 192180,
+                                                  "ppid": 192154,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\host_58d4bb4b.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 192182,
+                                                      "ppid": 192180,
+                                                      "name": "makecab.exe",
+                                                      "command": "makecab.exe \"C:\\Build\\dist\\fa17b08a\\diag.txt\" \"C:\\Build\\dist\\fa17b08a\\diag.cab\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 192187,
+                                                          "ppid": 192182,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 14 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 192191,
+                                                              "ppid": 192187,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 192197,
+                                                                  "ppid": 192191,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 192203,
+                                                                      "ppid": 192197,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\host_f0e07ae6.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 192209,
+                                                                          "ppid": 192203,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /all",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 192211,
+                                                                              "ppid": 192209,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\host_78877a13.txt\"",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 192215,
+                                                              "ppid": 192187,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 19 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 192221,
+                                                                  "ppid": 192215,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 7 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 192223,
+                                                                      "ppid": 192221,
+                                                                      "name": "timeout.exe",
+                                                                      "command": "timeout.exe /t 14 /nobreak",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 192225,
+                                                                          "ppid": 192223,
+                                                                          "name": "timeout.exe",
+                                                                          "command": "timeout.exe /t 6 /nobreak",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 192159,
+      "ppid": 192114,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 17\"",
+      "children": [
+        {
+          "pid": 192163,
+          "ppid": 192159,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 192169,
+              "ppid": 192163,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+              "children": [
+                {
+                  "pid": 192174,
+                  "ppid": 192169,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 192179,
+                      "ppid": 192174,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\farhan.jain\\AppData\\Local\\Temp\\who_f1daf277.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

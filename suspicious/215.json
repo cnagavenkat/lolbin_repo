@@ -1,0 +1,308 @@
+{
+  "pid": 77835,
+  "ppid": 0,
+  "name": "msiexec.exe",
+  "command": "msiexec.exe",
+  "children": [
+    {
+      "pid": 77838,
+      "ppid": 77835,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\Users\\Public\\Support_928f10da.wsf\" /quiet",
+      "children": [
+        {
+          "pid": 77841,
+          "ppid": 77838,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 19 > nul",
+          "children": [
+            {
+              "pid": 77843,
+              "ppid": 77841,
+              "name": "msiexec.exe",
+              "command": "msiexec.exe /i \"C:\\ProgramData\\Woodgrove\\Updater\\support.msi\" /passive /l*v \"C:\\ProgramData\\Contoso\\Logs\\msi_3b1095ad.log\"",
+              "children": [
+                {
+                  "pid": 77844,
+                  "ppid": 77843,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 7 > nul",
+                  "children": [
+                    {
+                      "pid": 77848,
+                      "ppid": 77844,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 24 > nul",
+                      "children": [
+                        {
+                          "pid": 77854,
+                          "ppid": 77848,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 23 /nobreak",
+                          "children": [
+                            {
+                              "pid": 77856,
+                              "ppid": 77854,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\vivaan.iyer\\AppData\\Local\\Temp\\who_78e7ed15.txt\"",
+                              "children": [
+                                {
+                                  "pid": 77858,
+                                  "ppid": 77856,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe > \"C:\\Users\\vivaan.iyer\\AppData\\Local\\Temp\\who_6a32b957.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 77860,
+                                      "ppid": 77858,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Woodgrove\\Logs\\Microsoft-Windows-TaskScheduler_Operational_8a80f75a.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 77865,
+                                          "ppid": 77860,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /priv > \"C:\\Users\\vivaan.iyer\\AppData\\Local\\Temp\\who_db006bef.txt\"",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 77869,
+                          "ppid": 77848,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                          "children": [
+                            {
+                              "pid": 77870,
+                              "ppid": 77869,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'whoami.exe' -ArgumentList '> \"C:\\Users\\vivaan.iyer\\AppData\\Local\\Temp\\who_b96f2b84.txt\"' -Wait\"",
+                              "children": [
+                                {
+                                  "pid": 77875,
+                                  "ppid": 77870,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\vivaan.iyer\\AppData\\Local\\Temp\\host_7b19e22a.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 77880,
+                                      "ppid": 77875,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 2 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 77885,
+                                          "ppid": 77880,
+                                          "name": "schtasks.exe",
+                                          "command": "schtasks.exe /create /tn \"\\Alpine\\Profile\\Diag\" /tr \"C:\\Users\\vivaan.iyer\\AppData\\Local\\Temp\\diag_a18d9f7e.ps1\" /sc onlogon /f /ru \"BFSI\\meera.reddy\"",
+                                          "children": [
+                                            {
+                                              "pid": 77888,
+                                              "ppid": 77885,
+                                              "name": "cmd.exe",
+                                              "command": "cmd.exe /c \"wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Fabrikam\\Logs\\Security_72ccd3fa.evtx\"\"",
+                                              "children": [
+                                                {
+                                                  "pid": 77889,
+                                                  "ppid": 77888,
+                                                  "name": "wevtutil.exe",
+                                                  "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Litware\\Logs\\System_19799075.evtx\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 77891,
+                                                      "ppid": 77889,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 77897,
+                                                          "ppid": 77891,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /groups > \"C:\\Users\\vivaan.iyer\\AppData\\Local\\Temp\\who_78026e7a.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 77901,
+                                              "ppid": 77885,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\vivaan.iyer\\AppData\\Local\\Temp\\host_f0525771.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 77903,
+                                                  "ppid": 77901,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\IT\\Scripts\\BuildPack_66ea54bb.ps1\" -Host \"APP-663\" -Mode Delta",
+                                                  "children": [
+                                                    {
+                                                      "pid": 77904,
+                                                      "ppid": 77903,
+                                                      "name": "wevtutil.exe",
+                                                      "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Woodgrove\\Logs\\Application_bac5b16f.evtx\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 77907,
+                                                          "ppid": 77904,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '' -Wait\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 77914,
+                                                              "ppid": 77907,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\vivaan.iyer\\AppData\\Local\\Temp\\host_b4eaf1ec.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 77917,
+                                                                  "ppid": 77914,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /svc",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 77918,
+                                                                      "ppid": 77917,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /svc",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 77925,
+                                                                          "ppid": 77918,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /priv > \"C:\\Users\\vivaan.iyer\\AppData\\Local\\Temp\\who_4871a6d0.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 77931,
+                                                                              "ppid": 77925,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe > \"C:\\Users\\vivaan.iyer\\AppData\\Local\\Temp\\host_8774e2c3.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 77938,
+                                                                                  "ppid": 77931,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 77939,
+                                                                                      "ppid": 77938,
+                                                                                      "name": "wevtutil.exe",
+                                                                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Fabrikam\\Logs\\Microsoft-Windows-TaskScheduler_Operational_daec5061.evtx\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 77942,
+                                                                                          "ppid": 77939,
+                                                                                          "name": "wevtutil.exe",
+                                                                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Woodgrove\\Logs\\System_402ed450.evtx\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 77943,
+                                                                                              "ppid": 77942,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe > \"C:\\Users\\vivaan.iyer\\AppData\\Local\\Temp\\who_ac080442.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 77947,
+                                                                                                  "ppid": 77943,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /priv",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 77954,
+                                                                                                      "ppid": 77947,
+                                                                                                      "name": "tasklist.exe",
+                                                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 77959,
+                                                                                                          "ppid": 77954,
+                                                                                                          "name": "tasklist.exe",
+                                                                                                          "command": "tasklist.exe /v",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 77966,
+                                                                                                              "ppid": 77959,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe",
+                                                                                                              "children": []
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 77919,
+      "ppid": 77835,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe /svc",
+      "children": [
+        {
+          "pid": 77923,
+          "ppid": 77919,
+          "name": "wevtutil.exe",
+          "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Wingtip\\Logs\\Microsoft-Windows-TaskScheduler_Operational_7b9c8c86.evtx\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

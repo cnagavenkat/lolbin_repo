@@ -1,0 +1,228 @@
+{
+  "pid": 67196,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 67199,
+      "ppid": 67196,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Maint\\Diag_26830075.vbs\" /quiet",
+      "children": [
+        {
+          "pid": 67204,
+          "ppid": 67199,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+          "children": [
+            {
+              "pid": 67206,
+              "ppid": 67204,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe",
+              "children": [
+                {
+                  "pid": 67208,
+                  "ppid": 67206,
+                  "name": "cmd.exe",
+                  "command": "cmd.exe /c \"hostname.exe > \"C:\\Users\\priya.bose\\AppData\\Local\\Temp\\host_9d07d63d.txt\"\"",
+                  "children": [
+                    {
+                      "pid": 67214,
+                      "ppid": 67208,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                      "children": [
+                        {
+                          "pid": 67220,
+                          "ppid": 67214,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\priya.bose\\AppData\\Local\\Temp\\CollectInventory_cb3fd1e1.ps1\" -Host \"APP-946\" -Mode Quick",
+                          "children": [
+                            {
+                              "pid": 67225,
+                              "ppid": 67220,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /v",
+                              "children": [
+                                {
+                                  "pid": 67229,
+                                  "ppid": 67225,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 5 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 67235,
+                                      "ppid": 67229,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                      "children": [
+                                        {
+                                          "pid": 67236,
+                                          "ppid": 67235,
+                                          "name": "nltest.exe",
+                                          "command": "nltest.exe /sc_query:DEVOPS",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 67240,
+                              "ppid": 67220,
+                              "name": "nltest.exe",
+                              "command": "nltest.exe /domain_trusts",
+                              "children": [
+                                {
+                                  "pid": 67247,
+                                  "ppid": 67240,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 67254,
+                                      "ppid": 67247,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                      "children": [
+                                        {
+                                          "pid": 67257,
+                                          "ppid": 67254,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\priya.bose\\AppData\\Local\\Temp\\host_42ff5494.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 67264,
+                                              "ppid": 67257,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe /svc",
+                                              "children": [
+                                                {
+                                                  "pid": 67270,
+                                                  "ppid": 67264,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /svc",
+                                                  "children": [
+                                                    {
+                                                      "pid": 67274,
+                                                      "ppid": 67270,
+                                                      "name": "wevtutil.exe",
+                                                      "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Litware\\Logs\\Security_c46cb8d7.evtx\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 67280,
+                                                          "ppid": 67274,
+                                                          "name": "nltest.exe",
+                                                          "command": "nltest.exe /dclist:FINLAB",
+                                                          "children": [
+                                                            {
+                                                              "pid": 67286,
+                                                              "ppid": 67280,
+                                                              "name": "nltest.exe",
+                                                              "command": "nltest.exe /domain_trusts",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 67291,
+                                                                  "ppid": 67286,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 67298,
+                                                                      "ppid": 67291,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /svc",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 67302,
+                                                              "ppid": 67280,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 67318,
+                                                                  "ppid": 67302,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 13 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 67322,
+                                                                      "ppid": 67318,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 67327,
+                                                                          "ppid": 67322,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe /svc",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 67307,
+      "ppid": 67196,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe",
+      "children": [
+        {
+          "pid": 67314,
+          "ppid": 67307,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe",
+          "children": [
+            {
+              "pid": 67315,
+              "ppid": 67314,
+              "name": "whoami.exe",
+              "command": "whoami.exe",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

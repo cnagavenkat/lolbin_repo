@@ -1,0 +1,214 @@
+{
+  "pid": 149883,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 149888,
+      "ppid": 149883,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\Sync_43c014d8.js\"",
+      "children": [
+        {
+          "pid": 149895,
+          "ppid": 149888,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 23 /nobreak",
+          "children": [
+            {
+              "pid": 149900,
+              "ppid": 149895,
+              "name": "schtasks.exe",
+              "command": "schtasks.exe /create /tn \"\\Alpine\\Deploy\\Verify\" /tr \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\sync_9ee63002.vbs\" /sc daily /st 23:26 /f /ru SYSTEM",
+              "children": [
+                {
+                  "pid": 149901,
+                  "ppid": 149900,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\host_e4aa25b9.txt\"",
+                  "children": [
+                    {
+                      "pid": 149903,
+                      "ppid": 149901,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\who_1bcc4946.txt\"",
+                      "children": [
+                        {
+                          "pid": 149905,
+                          "ppid": 149903,
+                          "name": "cscript.exe",
+                          "command": "cscript.exe //nologo \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\Deploy_d2bbf056.wsf\" /quiet",
+                          "children": [
+                            {
+                              "pid": 149906,
+                              "ppid": 149905,
+                              "name": "quser.exe",
+                              "command": "quser.exe /server:WS-901",
+                              "children": [
+                                {
+                                  "pid": 149911,
+                                  "ppid": 149906,
+                                  "name": "timeout.exe",
+                                  "command": "timeout.exe /t 18 /nobreak",
+                                  "children": [
+                                    {
+                                      "pid": 149916,
+                                      "ppid": 149911,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe add \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"UpdaterAssist\" /t REG_SZ /d \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\Runtime_6d78f858.vbs\" /f",
+                                      "children": [
+                                        {
+                                          "pid": 149918,
+                                          "ppid": 149916,
+                                          "name": "powershell.exe",
+                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 21\"",
+                                          "children": [
+                                            {
+                                              "pid": 149919,
+                                              "ppid": 149918,
+                                              "name": "quser.exe",
+                                              "command": "quser.exe /server:SUP-200",
+                                              "children": [
+                                                {
+                                                  "pid": 149923,
+                                                  "ppid": 149919,
+                                                  "name": "quser.exe",
+                                                  "command": "quser.exe /server:BLD-441",
+                                                  "children": [
+                                                    {
+                                                      "pid": 149928,
+                                                      "ppid": 149923,
+                                                      "name": "schtasks.exe",
+                                                      "command": "schtasks.exe /query /tn \"\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Scan\" /v /fo LIST",
+                                                      "children": [
+                                                        {
+                                                          "pid": 149929,
+                                                          "ppid": 149928,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 13 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 149935,
+                                                              "ppid": 149929,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 7 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 149938,
+                                                                  "ppid": 149935,
+                                                                  "name": "quser.exe",
+                                                                  "command": "quser.exe /server:OPS-116",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 149939,
+                                                                      "ppid": 149938,
+                                                                      "name": "ping.exe",
+                                                                      "command": "ping.exe -n 7 127.0.0.1 > nul",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 149944,
+                                                                          "ppid": 149939,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 149945,
+                                                                              "ppid": 149944,
+                                                                              "name": "cmd.exe",
+                                                                              "command": "cmd.exe /c \"hostname.exe > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\host_fce54d2c.txt\"\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 149963,
+                                                                                  "ppid": 149945,
+                                                                                  "name": "powershell.exe",
+                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 7\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 149970,
+                                                                                      "ppid": 149963,
+                                                                                      "name": "quser.exe",
+                                                                                      "command": "quser.exe /server:SUP-986",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 149949,
+      "ppid": 149883,
+      "name": "quser.exe",
+      "command": "quser.exe /server:LAP-482",
+      "children": [
+        {
+          "pid": 149953,
+          "ppid": 149949,
+          "name": "whoami.exe",
+          "command": "whoami.exe /all",
+          "children": [
+            {
+              "pid": 149956,
+              "ppid": 149953,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+              "children": [
+                {
+                  "pid": 149960,
+                  "ppid": 149956,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 14 > nul",
+                  "children": [
+                    {
+                      "pid": 149961,
+                      "ppid": 149960,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /groups > \"C:\\Users\\rohan.gupta\\AppData\\Local\\Temp\\who_90e7cb25.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

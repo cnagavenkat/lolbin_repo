@@ -1,0 +1,235 @@
+{
+  "pid": 127553,
+  "ppid": 0,
+  "name": "mmc.exe",
+  "command": "mmc.exe /session",
+  "children": [
+    {
+      "pid": 127556,
+      "ppid": 127553,
+      "name": "ping.exe",
+      "command": "ping.exe -n 11 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 127561,
+          "ppid": 127556,
+          "name": "quser.exe",
+          "command": "quser.exe /server:ENG-845",
+          "children": [
+            {
+              "pid": 127566,
+              "ppid": 127561,
+              "name": "ping.exe",
+              "command": "ping.exe -n 19 127.0.0.1 > nul",
+              "children": [
+                {
+                  "pid": 127567,
+                  "ppid": 127566,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /v",
+                  "children": [
+                    {
+                      "pid": 127568,
+                      "ppid": 127567,
+                      "name": "choice.exe",
+                      "command": "choice.exe /d y /t 15 > nul",
+                      "children": [
+                        {
+                          "pid": 127572,
+                          "ppid": 127568,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all > \"C:\\Users\\priya.gupta\\AppData\\Local\\Temp\\who_48151875.txt\"",
+                          "children": [
+                            {
+                              "pid": 127573,
+                              "ppid": 127572,
+                              "name": "wevtutil.exe",
+                              "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Wingtip\\Logs\\Security_d2e45085.evtx\"",
+                              "children": [
+                                {
+                                  "pid": 127574,
+                                  "ppid": 127573,
+                                  "name": "wevtutil.exe",
+                                  "command": "wevtutil.exe epl \"Application\" \"C:\\ProgramData\\Wingtip\\Logs\\Application_96cba350.evtx\"",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 127578,
+                          "ppid": 127568,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 127582,
+                              "ppid": 127578,
+                              "name": "wevtutil.exe",
+                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\BlueYonder\\Logs\\Microsoft-Windows-TaskScheduler_Operational_b0950262.evtx\"",
+                              "children": [
+                                {
+                                  "pid": 127586,
+                                  "ppid": 127582,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe > \"C:\\Users\\priya.gupta\\AppData\\Local\\Temp\\who_5b8bd473.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 127590,
+                                      "ppid": 127586,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe",
+                                      "children": [
+                                        {
+                                          "pid": 127596,
+                                          "ppid": 127590,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 127598,
+                              "ppid": 127578,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all",
+                              "children": [
+                                {
+                                  "pid": 127605,
+                                  "ppid": 127598,
+                                  "name": "wmic.exe",
+                                  "command": "wmic.exe process get Name,ProcessId,ParentProcessId",
+                                  "children": [
+                                    {
+                                      "pid": 127606,
+                                      "ppid": 127605,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all > \"C:\\Users\\priya.gupta\\AppData\\Local\\Temp\\who_fbca5461.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 127609,
+                                          "ppid": 127606,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 127611,
+                                              "ppid": 127609,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"Security\" \"C:\\ProgramData\\Litware\\Logs\\Security_c68a30ab.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 127613,
+                                                  "ppid": 127611,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all > \"C:\\Users\\priya.gupta\\AppData\\Local\\Temp\\who_3d291260.txt\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 127615,
+                                      "ppid": 127605,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'wevtutil.exe' -ArgumentList 'epl \"Security\" \"C:\\ProgramData\\Contoso\\Logs\\Security_48aaefff.evtx\"' -Wait\"",
+                                      "children": [
+                                        {
+                                          "pid": 127618,
+                                          "ppid": 127615,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all > \"C:\\Users\\priya.gupta\\AppData\\Local\\Temp\\who_37a89c26.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 127621,
+                                              "ppid": 127618,
+                                              "name": "ping.exe",
+                                              "command": "ping.exe -n 10 127.0.0.1 > nul",
+                                              "children": [
+                                                {
+                                                  "pid": 127622,
+                                                  "ppid": 127621,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 9\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 127628,
+                                                      "ppid": 127622,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 127629,
+                                                          "ppid": 127628,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 127633,
+                                          "ppid": 127615,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 3 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 127637,
+                                              "ppid": 127633,
+                                              "name": "wevtutil.exe",
+                                              "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Woodgrove\\Logs\\System_b83af644.evtx\"",
+                                              "children": [
+                                                {
+                                                  "pid": 127639,
+                                                  "ppid": 127637,
+                                                  "name": "findstr.exe",
+                                                  "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Alpine\\Logs\\diag.log\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 127644,
+                                                      "ppid": 127639,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 20 /nobreak",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

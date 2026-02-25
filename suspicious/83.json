@@ -1,0 +1,292 @@
+{
+  "pid": 60722,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k DcomLaunch",
+  "children": [
+    {
+      "pid": 60728,
+      "ppid": 60722,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\diag_d67cfe9f.txt'\"",
+      "children": [
+        {
+          "pid": 60735,
+          "ppid": 60728,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /create /tn \"\\Alpine\\Profile\\Cleanup\" /tr \"C:\\IT\\Scripts\\diag_f9f101e9.cmd\" /sc minute /mo 30 /f /ru SYSTEM",
+          "children": [
+            {
+              "pid": 60736,
+              "ppid": 60735,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 14 /nobreak",
+              "children": [
+                {
+                  "pid": 60741,
+                  "ppid": 60736,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe",
+                  "children": [
+                    {
+                      "pid": 60747,
+                      "ppid": 60741,
+                      "name": "schtasks.exe",
+                      "command": "schtasks.exe /run /tn \"\\Litware\\Maint\\Cleanup\"",
+                      "children": [
+                        {
+                          "pid": 60751,
+                          "ppid": 60747,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\host_ed4b6298.txt\"",
+                          "children": [
+                            {
+                              "pid": 60754,
+                              "ppid": 60751,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /groups > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\who_62048185.txt\"",
+                              "children": [
+                                {
+                                  "pid": 60759,
+                                  "ppid": 60754,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\who_475acfc9.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 60760,
+                                      "ppid": 60759,
+                                      "name": "timeout.exe",
+                                      "command": "timeout.exe /t 10 /nobreak",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 60765,
+                                  "ppid": 60754,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 26 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 60768,
+                                      "ppid": 60765,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\sched_5f8f9113.txt'\"",
+                                      "children": [
+                                        {
+                                          "pid": 60775,
+                                          "ppid": 60768,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\who_d4ea063d.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 60780,
+                                              "ppid": 60775,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /all > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\who_76f4195d.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 60786,
+                                                  "ppid": 60780,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 60793,
+                                                      "ppid": 60786,
+                                                      "name": "schtasks.exe",
+                                                      "command": "schtasks.exe /query /tn \"\\Contoso\\Support\\Diag\" /v /fo LIST",
+                                                      "children": [
+                                                        {
+                                                          "pid": 60795,
+                                                          "ppid": 60793,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 60802,
+                                                              "ppid": 60795,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\who_1bcd81f4.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 60809,
+                                                                  "ppid": 60802,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /v",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 60822,
+                                                                      "ppid": 60809,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 60824,
+                                                                          "ppid": 60822,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\who_9e6b739d.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 60828,
+                                                                              "ppid": 60824,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\who_821a1a3a.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 60830,
+                                                                                  "ppid": 60828,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\host_50cf1c03.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 60834,
+                                                                                      "ppid": 60830,
+                                                                                      "name": "reg.exe",
+                                                                                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 60840,
+                                                                                          "ppid": 60834,
+                                                                                          "name": "reg.exe",
+                                                                                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                                                                          "children": []
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "pid": 60844,
+                                                                              "ppid": 60824,
+                                                                              "name": "ping.exe",
+                                                                              "command": "ping.exe -n 3 127.0.0.1 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 60850,
+                                                                                  "ppid": 60844,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /groups > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\who_817837ec.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 60857,
+                                                                                      "ppid": 60850,
+                                                                                      "name": "hostname.exe",
+                                                                                      "command": "hostname.exe > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\host_acd5c913.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 60864,
+                                                                                          "ppid": 60857,
+                                                                                          "name": "ping.exe",
+                                                                                          "command": "ping.exe -n 3 127.0.0.1 > nul",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 60869,
+                                                                                              "ppid": 60864,
+                                                                                              "name": "reg.exe",
+                                                                                              "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 60870,
+                                                                                                  "ppid": 60869,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 60874,
+                                                                                                      "ppid": 60870,
+                                                                                                      "name": "whoami.exe",
+                                                                                                      "command": "whoami.exe /groups > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\who_a89a77dc.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 60881,
+                                                                                                          "ppid": 60874,
+                                                                                                          "name": "whoami.exe",
+                                                                                                          "command": "whoami.exe > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\who_83bdf299.txt\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 60885,
+                                                                                                              "ppid": 60881,
+                                                                                                              "name": "tasklist.exe",
+                                                                                                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 60892,
+                                                                                                                  "ppid": 60885,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe /groups > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\who_0ecf52ef.txt\"",
+                                                                                                                  "children": []
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 60814,
+      "ppid": 60722,
+      "name": "tasklist.exe",
+      "command": "tasklist.exe",
+      "children": [
+        {
+          "pid": 60819,
+          "ppid": 60814,
+          "name": "whoami.exe",
+          "command": "whoami.exe /groups > \"C:\\Users\\suresh.reddy\\AppData\\Local\\Temp\\who_a601d6e3.txt\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

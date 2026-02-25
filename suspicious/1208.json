@@ -1,0 +1,243 @@
+{
+  "pid": 197553,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 197557,
+      "ppid": 197553,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 25\"",
+      "children": [
+        {
+          "pid": 197562,
+          "ppid": 197557,
+          "name": "certutil.exe",
+          "command": "certutil.exe -urlcache -split -f \"http://intra-update.corp.local/tools/helper.dll\" \"C:\\Users\\Public\\cache.cer\"",
+          "children": [
+            {
+              "pid": 197567,
+              "ppid": 197562,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\varun.sharma\\AppData\\Local\\Temp\\host_7b2339a1.txt\"",
+              "children": [
+                {
+                  "pid": 197588,
+                  "ppid": 197567,
+                  "name": "powershell.exe",
+                  "command": "powershell.exe -NoProfile -WindowStyle Minimized -ExecutionPolicy Bypass -Command \"Get-Service | Out-File 'C:\\Users\\varun.sharma\\AppData\\Local\\Temp\\sched_cc7a2bcd.txt'\"",
+                  "children": [
+                    {
+                      "pid": 197592,
+                      "ppid": 197588,
+                      "name": "hostname.exe",
+                      "command": "hostname.exe > \"C:\\Users\\varun.sharma\\AppData\\Local\\Temp\\host_04a58eb5.txt\"",
+                      "children": [
+                        {
+                          "pid": 197594,
+                          "ppid": 197592,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv > \"C:\\Users\\varun.sharma\\AppData\\Local\\Temp\\who_38298387.txt\"",
+                          "children": [
+                            {
+                              "pid": 197601,
+                              "ppid": 197594,
+                              "name": "timeout.exe",
+                              "command": "timeout.exe /t 25 /nobreak",
+                              "children": [
+                                {
+                                  "pid": 197607,
+                                  "ppid": 197601,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 197610,
+                                      "ppid": 197607,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\varun.sharma\\AppData\\Local\\Temp\\host_b77e6678.txt\"",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 197613,
+                              "ppid": 197594,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Contoso\\Logs\\support.log\"",
+                              "children": [
+                                {
+                                  "pid": 197619,
+                                  "ppid": 197613,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 5 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 197626,
+                                      "ppid": 197619,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe > \"C:\\Users\\varun.sharma\\AppData\\Local\\Temp\\host_62af755a.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 197633,
+                                          "ppid": 197626,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups > \"C:\\Users\\varun.sharma\\AppData\\Local\\Temp\\who_188639ff.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 197635,
+                                              "ppid": 197633,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\varun.sharma\\AppData\\Local\\Temp\\host_57f24002.txt\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 197636,
+                                  "ppid": 197613,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+                                  "children": [
+                                    {
+                                      "pid": 197643,
+                                      "ppid": 197636,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                      "children": [
+                                        {
+                                          "pid": 197647,
+                                          "ppid": 197643,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\varun.sharma\\AppData\\Local\\Temp\\host_9005aec1.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 197648,
+                                              "ppid": 197647,
+                                              "name": "makecab.exe",
+                                              "command": "makecab.exe \"C:\\ProgramData\\Woodgrove\\Logs\\trace.etl\" \"C:\\ProgramData\\Woodgrove\\Logs\\trace.cab\"",
+                                              "children": [
+                                                {
+                                                  "pid": 197649,
+                                                  "ppid": 197648,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 197677,
+                                                      "ppid": 197649,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe /all",
+                                                      "children": [
+                                                        {
+                                                          "pid": 197679,
+                                                          "ppid": 197677,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 24 /nobreak",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 197572,
+      "ppid": 197553,
+      "name": "choice.exe",
+      "command": "choice.exe /d y /t 2 > nul",
+      "children": [
+        {
+          "pid": 197575,
+          "ppid": 197572,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 8 > nul",
+          "children": [
+            {
+              "pid": 197579,
+              "ppid": 197575,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 25 > nul",
+              "children": [
+                {
+                  "pid": 197582,
+                  "ppid": 197579,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 197655,
+      "ppid": 197553,
+      "name": "whoami.exe",
+      "command": "whoami.exe /groups",
+      "children": [
+        {
+          "pid": 197657,
+          "ppid": 197655,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 23 /nobreak",
+          "children": [
+            {
+              "pid": 197661,
+              "ppid": 197657,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 2 > nul",
+              "children": [
+                {
+                  "pid": 197666,
+                  "ppid": 197661,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\varun.sharma\\AppData\\Local\\Temp\\who_2f7aeb0c.txt\"",
+                  "children": [
+                    {
+                      "pid": 197672,
+                      "ppid": 197666,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all > \"C:\\Users\\varun.sharma\\AppData\\Local\\Temp\\who_47922cb0.txt\"",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

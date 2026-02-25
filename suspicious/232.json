@@ -1,0 +1,284 @@
+{
+  "pid": 80288,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 80295,
+      "ppid": 80288,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'cmstp.exe' -ArgumentList '/s \"C:\\Users\\Public\\proxyprofile.inf\"' -Wait\"",
+      "children": [
+        {
+          "pid": 80301,
+          "ppid": 80295,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 4 /nobreak",
+          "children": [
+            {
+              "pid": 80304,
+              "ppid": 80301,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s\"",
+              "children": [
+                {
+                  "pid": 80310,
+                  "ppid": 80304,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /v",
+                  "children": [
+                    {
+                      "pid": 80313,
+                      "ppid": 80310,
+                      "name": "netsh.exe",
+                      "command": "netsh.exe interface ipv4 show config > \"C:\\ProgramData\\Northwind\\Logs\\net_848ef8a1.txt\"",
+                      "children": [
+                        {
+                          "pid": 80316,
+                          "ppid": 80313,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 22 /nobreak",
+                          "children": [
+                            {
+                              "pid": 80323,
+                              "ppid": 80316,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                              "children": [
+                                {
+                                  "pid": 80325,
+                                  "ppid": 80323,
+                                  "name": "ping.exe",
+                                  "command": "ping.exe -n 11 127.0.0.1 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 80328,
+                                      "ppid": 80325,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Wingtip\\Logs\\Microsoft-Windows-TaskScheduler_Operational_000ea068.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 80335,
+                                          "ppid": 80328,
+                                          "name": "tasklist.exe",
+                                          "command": "tasklist.exe",
+                                          "children": [
+                                            {
+                                              "pid": 80341,
+                                              "ppid": 80335,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 6 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 80347,
+                                                  "ppid": 80341,
+                                                  "name": "ping.exe",
+                                                  "command": "ping.exe -n 17 127.0.0.1 > nul",
+                                                  "children": [
+                                                    {
+                                                      "pid": 80369,
+                                                      "ppid": 80347,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": [
+                                                        {
+                                                          "pid": 80376,
+                                                          "ppid": 80369,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 80383,
+                                                              "ppid": 80376,
+                                                              "name": "choice.exe",
+                                                              "command": "choice.exe /d y /t 24 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 80385,
+                                                                  "ppid": 80383,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 80387,
+                                                                      "ppid": 80385,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /all",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 80388,
+                                                                          "ppid": 80387,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 80389,
+                                                                              "ppid": 80388,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\who_196f42e8.txt\"",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "pid": 80395,
+                                                              "ppid": 80376,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 80402,
+                                                                  "ppid": 80395,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\host_4ff0bc38.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 80409,
+                                                                      "ppid": 80402,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /all",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 80412,
+                                                                          "ppid": 80409,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe /svc",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 80413,
+                                                                              "ppid": 80412,
+                                                                              "name": "powershell.exe",
+                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 2\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 80414,
+                                                                                  "ppid": 80413,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\host_e49ddc25.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 80419,
+                                                                                      "ppid": 80414,
+                                                                                      "name": "tasklist.exe",
+                                                                                      "command": "tasklist.exe",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 80434,
+                                                                                          "ppid": 80419,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\host_1230e292.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 80438,
+                                                                                              "ppid": 80434,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\host_8cfec87f.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 80443,
+                                                                                                  "ppid": 80438,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /groups > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\who_da954b42.txt\"",
+                                                                                                  "children": []
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 80352,
+      "ppid": 80288,
+      "name": "whoami.exe",
+      "command": "whoami.exe /groups > \"C:\\Users\\aditya.das\\AppData\\Local\\Temp\\who_551cf2b6.txt\"",
+      "children": [
+        {
+          "pid": 80357,
+          "ppid": 80352,
+          "name": "ping.exe",
+          "command": "ping.exe -n 6 127.0.0.1 > nul",
+          "children": [
+            {
+              "pid": 80363,
+              "ppid": 80357,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 9 > nul",
+              "children": [
+                {
+                  "pid": 80365,
+                  "ppid": 80363,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe /svc",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 80421,
+      "ppid": 80288,
+      "name": "ping.exe",
+      "command": "ping.exe -n 6 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 80428,
+          "ppid": 80421,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "pid": 121424,
+  "ppid": 0,
+  "name": "powershell.exe",
+  "command": "powershell.exe -NoProfile -File \"C:\\IT\\Tools\\Runbook_31320aa6.ps1\"",
+  "children": [
+    {
+      "pid": 121428,
+      "ppid": 121424,
+      "name": "cscript.exe",
+      "command": "cscript.exe //nologo \"C:\\IT\\Deploy\\Diag_90a4a276.wsf\" /apply",
+      "children": [
+        {
+          "pid": 121429,
+          "ppid": 121428,
+          "name": "cmd.exe",
+          "command": "cmd.exe /c \"echo maintenance step\"",
+          "children": [
+            {
+              "pid": 121431,
+              "ppid": 121429,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": [
+                {
+                  "pid": 121433,
+                  "ppid": 121431,
+                  "name": "wevtutil.exe",
+                  "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Litware\\Logs\\Microsoft-Windows-TaskScheduler_Operational_1904847e.evtx\"",
+                  "children": [
+                    {
+                      "pid": 121439,
+                      "ppid": 121433,
+                      "name": "findstr.exe",
+                      "command": "findstr.exe /i \"task\" \"C:\\ProgramData\\Northwind\\Logs\\update.log\"",
+                      "children": [
+                        {
+                          "pid": 121443,
+                          "ppid": 121439,
+                          "name": "ipconfig.exe",
+                          "command": "ipconfig.exe /displaydns",
+                          "children": [
+                            {
+                              "pid": 121445,
+                              "ppid": 121443,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /svc",
+                              "children": [
+                                {
+                                  "pid": 121467,
+                                  "ppid": 121445,
+                                  "name": "quser.exe",
+                                  "command": "quser.exe /server:BLD-971",
+                                  "children": [
+                                    {
+                                      "pid": 121473,
+                                      "ppid": 121467,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all > \"C:\\Users\\meera.bose\\AppData\\Local\\Temp\\who_2ef42eaf.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 121477,
+                                          "ppid": 121473,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe > \"C:\\Users\\meera.bose\\AppData\\Local\\Temp\\who_4ef8f60d.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 121482,
+                                              "ppid": 121477,
+                                              "name": "wmic.exe",
+                                              "command": "wmic.exe os get Caption,Version,BuildNumber /value",
+                                              "children": [
+                                                {
+                                                  "pid": 121483,
+                                                  "ppid": 121482,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": [
+                                                    {
+                                                      "pid": 121487,
+                                                      "ppid": 121483,
+                                                      "name": "findstr.exe",
+                                                      "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Fabrikam\\Logs\\support.log\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 121451,
+      "ppid": 121424,
+      "name": "ipconfig.exe",
+      "command": "ipconfig.exe /allcompartments /all",
+      "children": [
+        {
+          "pid": 121453,
+          "ppid": 121451,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\meera.bose\\AppData\\Local\\Temp\\host_9a209636.txt\"",
+          "children": [
+            {
+              "pid": 121460,
+              "ppid": 121453,
+              "name": "whoami.exe",
+              "command": "whoami.exe /all > \"C:\\Users\\meera.bose\\AppData\\Local\\Temp\\who_d34f3aef.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

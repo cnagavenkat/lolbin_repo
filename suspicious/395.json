@@ -1,0 +1,270 @@
+{
+  "pid": 103005,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k Schedule",
+  "children": [
+    {
+      "pid": 103007,
+      "ppid": 103005,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\Public\\LoginInit_1b11cabc.vbs\"",
+      "children": [
+        {
+          "pid": 103012,
+          "ppid": 103007,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 16 /nobreak",
+          "children": [
+            {
+              "pid": 103013,
+              "ppid": 103012,
+              "name": "msiexec.exe",
+              "command": "msiexec.exe /i \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\runtime.msi\" /qn /l*v \"C:\\ProgramData\\Alpine\\Logs\\msi_c135ba28.log\"",
+              "children": [
+                {
+                  "pid": 103016,
+                  "ppid": 103013,
+                  "name": "tasklist.exe",
+                  "command": "tasklist.exe",
+                  "children": [
+                    {
+                      "pid": 103023,
+                      "ppid": 103016,
+                      "name": "certutil.exe",
+                      "command": "certutil.exe -addstore CA \"C:\\Users\\Public\\workstation.cer\"",
+                      "children": [
+                        {
+                          "pid": 103030,
+                          "ppid": 103023,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /all",
+                          "children": [
+                            {
+                              "pid": 103035,
+                              "ppid": 103030,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all",
+                              "children": [
+                                {
+                                  "pid": 103039,
+                                  "ppid": 103035,
+                                  "name": "certutil.exe",
+                                  "command": "certutil.exe -store -user Root",
+                                  "children": [
+                                    {
+                                      "pid": 103041,
+                                      "ppid": 103039,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 9 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 103043,
+                                          "ppid": 103041,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe > \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\who_a57b691c.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 103045,
+                                              "ppid": 103043,
+                                              "name": "powershell.exe",
+                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 3\"",
+                                              "children": [
+                                                {
+                                                  "pid": 103047,
+                                                  "ppid": 103045,
+                                                  "name": "powershell.exe",
+                                                  "command": "powershell.exe -ExecutionPolicy Bypass -File \"C:\\ProgramData\\Wingtip\\Support\\BuildPack_6aa47bb3.ps1\" -Host \"BLD-542\" -Mode Verify",
+                                                  "children": [
+                                                    {
+                                                      "pid": 103053,
+                                                      "ppid": 103047,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": [
+                                                        {
+                                                          "pid": 103056,
+                                                          "ppid": 103053,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 103061,
+                                                              "ppid": 103056,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /svc",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 103067,
+                                                                  "ppid": 103061,
+                                                                  "name": "cmd.exe",
+                                                                  "command": "cmd.exe /c \"hostname.exe\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 103072,
+                                                                      "ppid": 103067,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 103078,
+                                                                  "ppid": 103061,
+                                                                  "name": "ping.exe",
+                                                                  "command": "ping.exe -n 23 127.0.0.1 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 103083,
+                                                                      "ppid": 103078,
+                                                                      "name": "tasklist.exe",
+                                                                      "command": "tasklist.exe /v",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 103086,
+                                                                          "ppid": 103083,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 12 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 103091,
+                                                                              "ppid": 103086,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe /v",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 103094,
+                                                                                  "ppid": 103091,
+                                                                                  "name": "tasklist.exe",
+                                                                                  "command": "tasklist.exe /v",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 103097,
+                                                                                      "ppid": 103094,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /all > \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\who_2289f0d5.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 103104,
+                                                                                          "ppid": 103097,
+                                                                                          "name": "tasklist.exe",
+                                                                                          "command": "tasklist.exe /v",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 103107,
+                                                                                              "ppid": 103104,
+                                                                                              "name": "hostname.exe",
+                                                                                              "command": "hostname.exe > \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\host_d4d099a5.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 103111,
+                                                                                                  "ppid": 103107,
+                                                                                                  "name": "powershell.exe",
+                                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'tasklist.exe' -ArgumentList '' -Wait\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 103118,
+                                                                                                      "ppid": 103111,
+                                                                                                      "name": "tasklist.exe",
+                                                                                                      "command": "tasklist.exe /svc",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 103123,
+                                                                                                          "ppid": 103118,
+                                                                                                          "name": "hostname.exe",
+                                                                                                          "command": "hostname.exe",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 103125,
+                                                                                                              "ppid": 103123,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 103129,
+                                                                                                                  "ppid": 103125,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe /priv > \"C:\\Users\\vivaan.bose\\AppData\\Local\\Temp\\who_bec0f6e7.txt\"",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 103132,
+                                                                                                                      "ppid": 103129,
+                                                                                                                      "name": "tasklist.exe",
+                                                                                                                      "command": "tasklist.exe",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 103133,
+                                                                                                                          "ppid": 103132,
+                                                                                                                          "name": "tasklist.exe",
+                                                                                                                          "command": "tasklist.exe /svc",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "pid": 103136,
+                                                                                                                              "ppid": 103133,
+                                                                                                                              "name": "tasklist.exe",
+                                                                                                                              "command": "tasklist.exe /svc",
+                                                                                                                              "children": []
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

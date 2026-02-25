@@ -1,0 +1,260 @@
+{
+  "pid": 172171,
+  "ppid": 0,
+  "name": "taskhostw.exe",
+  "command": "taskhostw.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 172173,
+      "ppid": 172171,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\TemplateRun_fc91ec37.vbs\"",
+      "children": [
+        {
+          "pid": 172178,
+          "ppid": 172173,
+          "name": "forfiles.exe",
+          "command": "forfiles.exe /P \"C:\\Users\\Public\" /M *.log /D -24 /C \"cmd /c echo archived @file\"",
+          "children": [
+            {
+              "pid": 172185,
+              "ppid": 172178,
+              "name": "timeout.exe",
+              "command": "timeout.exe /t 13 /nobreak",
+              "children": [
+                {
+                  "pid": 172192,
+                  "ppid": 172185,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /priv",
+                  "children": [
+                    {
+                      "pid": 172199,
+                      "ppid": 172192,
+                      "name": "findstr.exe",
+                      "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Wingtip\\Logs\\deploy.log\"",
+                      "children": [
+                        {
+                          "pid": 172202,
+                          "ppid": 172199,
+                          "name": "timeout.exe",
+                          "command": "timeout.exe /t 19 /nobreak",
+                          "children": [
+                            {
+                              "pid": 172204,
+                              "ppid": 172202,
+                              "name": "tasklist.exe",
+                              "command": "tasklist.exe /svc",
+                              "children": [
+                                {
+                                  "pid": 172206,
+                                  "ppid": 172204,
+                                  "name": "tasklist.exe",
+                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "pid": 172211,
+                          "ppid": 172199,
+                          "name": "cmd.exe",
+                          "command": "cmd.exe /c \"tasklist /svc\"",
+                          "children": [
+                            {
+                              "pid": 172212,
+                              "ppid": 172211,
+                              "name": "findstr.exe",
+                              "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Wingtip\\Logs\\update.log\"",
+                              "children": [
+                                {
+                                  "pid": 172218,
+                                  "ppid": 172212,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'schtasks.exe' -ArgumentList '/query /fo LIST /v' -Wait\"",
+                                  "children": [
+                                    {
+                                      "pid": 172222,
+                                      "ppid": 172218,
+                                      "name": "powershell.exe",
+                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 23\"",
+                                      "children": [
+                                        {
+                                          "pid": 172224,
+                                          "ppid": 172222,
+                                          "name": "wevtutil.exe",
+                                          "command": "wevtutil.exe epl \"System\" \"C:\\ProgramData\\Northwind\\Logs\\System_fb1b251b.evtx\"",
+                                          "children": [
+                                            {
+                                              "pid": 172226,
+                                              "ppid": 172224,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\host_2bc1c29d.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 172232,
+                                                  "ppid": 172226,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 172239,
+                                                      "ppid": 172232,
+                                                      "name": "tasklist.exe",
+                                                      "command": "tasklist.exe /svc",
+                                                      "children": [
+                                                        {
+                                                          "pid": 172243,
+                                                          "ppid": 172239,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe",
+                                                          "children": [
+                                                            {
+                                                              "pid": 172247,
+                                                              "ppid": 172243,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /all > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\who_c9040279.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 172252,
+                                                                  "ppid": 172247,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /all",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 172258,
+                                                                      "ppid": 172252,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 15\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 172262,
+                                                                          "ppid": 172258,
+                                                                          "name": "whoami.exe",
+                                                                          "command": "whoami.exe /groups",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 172269,
+                                                                              "ppid": 172262,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\who_1806e96c.txt\"",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "pid": 172270,
+                                                                  "ppid": 172247,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\host_a13c8bd7.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 172277,
+                                                                      "ppid": 172270,
+                                                                      "name": "timeout.exe",
+                                                                      "command": "timeout.exe /t 15 /nobreak",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 172281,
+                                                                          "ppid": 172277,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 172301,
+                                                                              "ppid": 172281,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\who_036ed7ea.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 172307,
+                                                                                  "ppid": 172301,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\dev.nair\\AppData\\Local\\Temp\\host_37aa394a.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 172308,
+                                                                                      "ppid": 172307,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /priv",
+                                                                                      "children": []
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 172287,
+      "ppid": 172171,
+      "name": "hostname.exe",
+      "command": "hostname.exe",
+      "children": [
+        {
+          "pid": 172289,
+          "ppid": 172287,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 172294,
+              "ppid": 172289,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 5 > nul",
+              "children": [
+                {
+                  "pid": 172297,
+                  "ppid": 172294,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 24 > nul",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

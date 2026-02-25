@@ -1,0 +1,339 @@
+{
+  "pid": 269139,
+  "ppid": 0,
+  "name": "msbuild.exe",
+  "command": "msbuild.exe \"C:\\src\\Bridge\\Support.csproj\" /t:Build /p:Configuration=Release",
+  "children": [
+    {
+      "pid": 269144,
+      "ppid": 269139,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -ExecutionPolicy Bypass -File \"C:\\IT\\Scripts\\BuildPack_7221c930.ps1\" -Host \"WS-127\" -Mode Delta",
+      "children": [
+        {
+          "pid": 269145,
+          "ppid": 269144,
+          "name": "msiexec.exe",
+          "command": "msiexec.exe /i \"C:\\ProgramData\\Alpine\\Support\\agent.msi\" /qn /l*v \"C:\\ProgramData\\Litware\\Logs\\msi_902fb71e.log\"",
+          "children": [
+            {
+              "pid": 269146,
+              "ppid": 269145,
+              "name": "choice.exe",
+              "command": "choice.exe /d y /t 17 > nul",
+              "children": [
+                {
+                  "pid": 269147,
+                  "ppid": 269146,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\host_ea217c9f.txt\"",
+                  "children": [
+                    {
+                      "pid": 269154,
+                      "ppid": 269147,
+                      "name": "schtasks.exe",
+                      "command": "schtasks.exe /create /tn \"\\Contoso\\Deploy\\Diag\" /tr \"C:\\IT\\Scripts\\run_dfe1d39c.ps1\" /sc once /st 22:20 /f /ru \"FINLAB\\vivaan.mishra\"",
+                      "children": [
+                        {
+                          "pid": 269159,
+                          "ppid": 269154,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /groups > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\who_d664dca5.txt\"",
+                          "children": [
+                            {
+                              "pid": 269165,
+                              "ppid": 269159,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 269166,
+                                  "ppid": 269165,
+                                  "name": "choice.exe",
+                                  "command": "choice.exe /d y /t 9 > nul",
+                                  "children": [
+                                    {
+                                      "pid": 269168,
+                                      "ppid": 269166,
+                                      "name": "schtasks.exe",
+                                      "command": "schtasks.exe /run /tn \"\\Litware\\Maint\\Cleanup\"",
+                                      "children": [
+                                        {
+                                          "pid": 269173,
+                                          "ppid": 269168,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 269176,
+                                              "ppid": 269173,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\who_29248af3.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 269177,
+                                                  "ppid": 269176,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\host_cd0d111c.txt\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 269180,
+                                          "ppid": 269168,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 21 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 269185,
+                                              "ppid": 269180,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\who_d8e22a2b.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 269190,
+                                                  "ppid": 269185,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv",
+                                                  "children": [
+                                                    {
+                                                      "pid": 269192,
+                                                      "ppid": 269190,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe",
+                                                      "children": [
+                                                        {
+                                                          "pid": 269197,
+                                                          "ppid": 269192,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 11\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 269203,
+                                                              "ppid": 269197,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\host_62f90dcf.txt\"",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 269210,
+                                                      "ppid": 269190,
+                                                      "name": "findstr.exe",
+                                                      "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Woodgrove\\Logs\\profile.log\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 269212,
+                                                          "ppid": 269210,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 12 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 269217,
+                                                              "ppid": 269212,
+                                                              "name": "powershell.exe",
+                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 269223,
+                                                                  "ppid": 269217,
+                                                                  "name": "choice.exe",
+                                                                  "command": "choice.exe /d y /t 14 > nul",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 269228,
+                                                                      "ppid": 269223,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /groups > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\who_0e4757ac.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 269233,
+                                                                          "ppid": 269228,
+                                                                          "name": "choice.exe",
+                                                                          "command": "choice.exe /d y /t 5 > nul",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 269234,
+                                                                              "ppid": 269233,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /all > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\who_8b9686d3.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 269256,
+                                                                                  "ppid": 269234,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /groups > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\who_eb8f72f3.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 269259,
+                                                                                      "ppid": 269256,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /all > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\who_0d4e209d.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 269260,
+                                                                                          "ppid": 269259,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\host_c18aed05.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 269263,
+                                                                                              "ppid": 269260,
+                                                                                              "name": "powershell.exe",
+                                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 269268,
+                                                                                                  "ppid": 269263,
+                                                                                                  "name": "whoami.exe",
+                                                                                                  "command": "whoami.exe /priv",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 269275,
+                                                                                                      "ppid": 269268,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\host_dfee3aae.txt\"",
+                                                                                                      "children": []
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            },
+                                                                                            {
+                                                                                              "pid": 269277,
+                                                                                              "ppid": 269260,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /groups",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 269279,
+                                                                                                  "ppid": 269277,
+                                                                                                  "name": "hostname.exe",
+                                                                                                  "command": "hostname.exe",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 269284,
+                                                                                                      "ppid": 269279,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\host_925fc76b.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 269287,
+                                                                                                          "ppid": 269284,
+                                                                                                          "name": "hostname.exe",
+                                                                                                          "command": "hostname.exe",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 269290,
+                                                                                                              "ppid": 269287,
+                                                                                                              "name": "hostname.exe",
+                                                                                                              "command": "hostname.exe",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 269295,
+                                                                                                                  "ppid": 269290,
+                                                                                                                  "name": "powershell.exe",
+                                                                                                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'hostname.exe' -ArgumentList '> \"C:\\Users\\neha.das\\AppData\\Local\\Temp\\host_2315c33b.txt\"' -Wait\"",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 269300,
+                                                                                                                      "ppid": 269295,
+                                                                                                                      "name": "ping.exe",
+                                                                                                                      "command": "ping.exe -n 17 127.0.0.1 > nul",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 269304,
+                                                                                                                          "ppid": 269300,
+                                                                                                                          "name": "hostname.exe",
+                                                                                                                          "command": "hostname.exe",
+                                                                                                                          "children": []
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 269239,
+      "ppid": 269139,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 4 /nobreak",
+      "children": [
+        {
+          "pid": 269246,
+          "ppid": 269239,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+          "children": [
+            {
+              "pid": 269249,
+              "ppid": 269246,
+              "name": "hostname.exe",
+              "command": "hostname.exe",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

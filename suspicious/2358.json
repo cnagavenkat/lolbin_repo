@@ -1,0 +1,349 @@
+{
+  "pid": 352199,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k netsvcs",
+  "children": [
+    {
+      "pid": 352200,
+      "ppid": 352199,
+      "name": "wscript.exe",
+      "command": "wscript.exe //nologo \"C:\\ProgramData\\Alpine\\Updater\\LoginInit_ef5977f2.vbs\"",
+      "children": [
+        {
+          "pid": 352201,
+          "ppid": 352200,
+          "name": "powershell.exe",
+          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 20\"",
+          "children": [
+            {
+              "pid": 352204,
+              "ppid": 352201,
+              "name": "cmd.exe",
+              "command": "cmd.exe /c \"bitsadmin.exe /transfer Job5e48322b /download /priority NORMAL \"http://pkirelay.corp.local/certs/workstation.cer\" \"C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\root.cer\"\"",
+              "children": [
+                {
+                  "pid": 352211,
+                  "ppid": 352204,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe > \"C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\who_c15d7b47.txt\"",
+                  "children": [
+                    {
+                      "pid": 352215,
+                      "ppid": 352211,
+                      "name": "ping.exe",
+                      "command": "ping.exe -n 15 127.0.0.1 > nul",
+                      "children": [
+                        {
+                          "pid": 352222,
+                          "ppid": 352215,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe",
+                          "children": [
+                            {
+                              "pid": 352223,
+                              "ppid": 352222,
+                              "name": "expand.exe",
+                              "command": "expand.exe \"C:\\ProgramData\\Litware\\Collector\\driver.cab\" -F:* \"C:\\Program Files\\Alpine\\Patch\"",
+                              "children": [
+                                {
+                                  "pid": 352227,
+                                  "ppid": 352223,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv",
+                                  "children": [
+                                    {
+                                      "pid": 352232,
+                                      "ppid": 352227,
+                                      "name": "regsvr32.exe",
+                                      "command": "regsvr32.exe /s \"C:\\ProgramData\\Wingtip\\Support\\helper.dll\"",
+                                      "children": [
+                                        {
+                                          "pid": 352234,
+                                          "ppid": 352232,
+                                          "name": "cmd.exe",
+                                          "command": "cmd.exe /c \"whoami.exe /all > \"C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\who_8caeae5a.txt\"\"",
+                                          "children": [
+                                            {
+                                              "pid": 352236,
+                                              "ppid": 352234,
+                                              "name": "bitsadmin.exe",
+                                              "command": "bitsadmin.exe /info Job8b3d7a5c /verbose",
+                                              "children": [
+                                                {
+                                                  "pid": 352241,
+                                                  "ppid": 352236,
+                                                  "name": "msiexec.exe",
+                                                  "command": "msiexec.exe /i \"C:\\ProgramData\\Alpine\\Build\\agent.msi\" /qn /l*v \"C:\\ProgramData\\Woodgrove\\Logs\\msi_b8e44423.log\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 352243,
+                                                      "ppid": 352241,
+                                                      "name": "bitsadmin.exe",
+                                                      "command": "bitsadmin.exe /info Job066274a9 /verbose",
+                                                      "children": [
+                                                        {
+                                                          "pid": 352248,
+                                                          "ppid": 352243,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 19\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 352250,
+                                                              "ppid": 352248,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 14 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 352253,
+                                                                  "ppid": 352250,
+                                                                  "name": "powershell.exe",
+                                                                  "command": "powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\sched_038cb156.txt'\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 352256,
+                                                                      "ppid": 352253,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 352258,
+                                                                          "ppid": 352256,
+                                                                          "name": "bitsadmin.exe",
+                                                                          "command": "bitsadmin.exe /info Job54abf082 /verbose",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 352265,
+                                                                              "ppid": 352258,
+                                                                              "name": "powershell.exe",
+                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 352270,
+                                                                                  "ppid": 352265,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe > \"C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\host_c23b71b5.txt\"",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 352276,
+                                                                                      "ppid": 352270,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /groups > \"C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\who_ad64f43e.txt\"",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 352282,
+                                                                                          "ppid": 352276,
+                                                                                          "name": "hostname.exe",
+                                                                                          "command": "hostname.exe > \"C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\host_b8343c7c.txt\"",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 352286,
+                                                                                              "ppid": 352282,
+                                                                                              "name": "bitsadmin.exe",
+                                                                                              "command": "bitsadmin.exe /info Job32ee7643 /verbose",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 352287,
+                                                                                                  "ppid": 352286,
+                                                                                                  "name": "bitsadmin.exe",
+                                                                                                  "command": "bitsadmin.exe /info Jobe9cc3c2a /verbose",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 352290,
+                                                                                                      "ppid": 352287,
+                                                                                                      "name": "hostname.exe",
+                                                                                                      "command": "hostname.exe > \"C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\host_4a130168.txt\"",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 352296,
+                                                                                                          "ppid": 352290,
+                                                                                                          "name": "whoami.exe",
+                                                                                                          "command": "whoami.exe /all > \"C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\who_b1e3ecc4.txt\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 352297,
+                                                                                                              "ppid": 352296,
+                                                                                                              "name": "whoami.exe",
+                                                                                                              "command": "whoami.exe /priv > \"C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\who_1a30bf7e.txt\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 352302,
+                                                                                                                  "ppid": 352297,
+                                                                                                                  "name": "hostname.exe",
+                                                                                                                  "command": "hostname.exe",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 352324,
+                                                                                                                      "ppid": 352302,
+                                                                                                                      "name": "choice.exe",
+                                                                                                                      "command": "choice.exe /d y /t 9 > nul",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 352331,
+                                                                                                                          "ppid": 352324,
+                                                                                                                          "name": "bitsadmin.exe",
+                                                                                                                          "command": "bitsadmin.exe /info Job79515171 /verbose",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "pid": 352333,
+                                                                                                                              "ppid": 352331,
+                                                                                                                              "name": "cmd.exe",
+                                                                                                                              "command": "cmd.exe /c \"bitsadmin.exe /info Jobe1b9bb83 /verbose\"",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "pid": 352340,
+                                                                                                                                  "ppid": 352333,
+                                                                                                                                  "name": "bitsadmin.exe",
+                                                                                                                                  "command": "bitsadmin.exe /info Job99b891cb /verbose",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "pid": 352346,
+                                                                                                                                      "ppid": 352340,
+                                                                                                                                      "name": "hostname.exe",
+                                                                                                                                      "command": "hostname.exe > \"C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\host_39aec356.txt\"",
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "pid": 352366,
+                                                                                                                                          "ppid": 352346,
+                                                                                                                                          "name": "bitsadmin.exe",
+                                                                                                                                          "command": "bitsadmin.exe /info Jobc115a3c2 /verbose",
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "pid": 352372,
+                                                                                                                                              "ppid": 352366,
+                                                                                                                                              "name": "bitsadmin.exe",
+                                                                                                                                              "command": "bitsadmin.exe /info Job8c712e2a /verbose",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "pid": 352378,
+                                                                                                                                                  "ppid": 352372,
+                                                                                                                                                  "name": "timeout.exe",
+                                                                                                                                                  "command": "timeout.exe /t 11 /nobreak",
+                                                                                                                                                  "children": []
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            }
+                                                                                                                                          ]
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 352304,
+      "ppid": 352199,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\host_b9341dc5.txt\"",
+      "children": [
+        {
+          "pid": 352311,
+          "ppid": 352304,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\host_428497af.txt\"",
+          "children": [
+            {
+              "pid": 352318,
+              "ppid": 352311,
+              "name": "bitsadmin.exe",
+              "command": "bitsadmin.exe /info Job508f8278 /verbose",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 352348,
+      "ppid": 352199,
+      "name": "bitsadmin.exe",
+      "command": "bitsadmin.exe /info Jobcbb7ed68 /verbose",
+      "children": [
+        {
+          "pid": 352354,
+          "ppid": 352348,
+          "name": "whoami.exe",
+          "command": "whoami.exe",
+          "children": [
+            {
+              "pid": 352361,
+              "ppid": 352354,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\farhan.iyer\\AppData\\Local\\Temp\\host_553b2fce.txt\"",
+              "children": [
+                {
+                  "pid": 352363,
+                  "ppid": 352361,
+                  "name": "bitsadmin.exe",
+                  "command": "bitsadmin.exe /info Job19ef3ea5 /verbose",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

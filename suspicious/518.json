@@ -1,0 +1,237 @@
+{
+  "pid": 116799,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 116803,
+      "ppid": 116799,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 19 /nobreak",
+      "children": [
+        {
+          "pid": 116809,
+          "ppid": 116803,
+          "name": "wmic.exe",
+          "command": "wmic.exe process get Name,ProcessId,ParentProcessId",
+          "children": [
+            {
+              "pid": 116812,
+              "ppid": 116809,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\host_8d02936e.txt\"",
+              "children": [
+                {
+                  "pid": 116814,
+                  "ppid": 116812,
+                  "name": "reg.exe",
+                  "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                  "children": [
+                    {
+                      "pid": 116816,
+                      "ppid": 116814,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /priv > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\who_5112dc1a.txt\"",
+                      "children": [
+                        {
+                          "pid": 116820,
+                          "ppid": 116816,
+                          "name": "powershell.exe",
+                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 5\"",
+                          "children": [
+                            {
+                              "pid": 116824,
+                              "ppid": 116820,
+                              "name": "wevtutil.exe",
+                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Alpine\\Logs\\Microsoft-Windows-TaskScheduler_Operational_52de806a.evtx\"",
+                              "children": [
+                                {
+                                  "pid": 116827,
+                                  "ppid": 116824,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 116828,
+                                      "ppid": 116827,
+                                      "name": "ping.exe",
+                                      "command": "ping.exe -n 15 127.0.0.1 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 116833,
+                                          "ppid": 116828,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\who_1ec8e9f9.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 116837,
+                                              "ppid": 116833,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 17 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 116840,
+                                                  "ppid": 116837,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups",
+                                                  "children": [
+                                                    {
+                                                      "pid": 116846,
+                                                      "ppid": 116840,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\host_aacb93c0.txt\"",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 116849,
+                                      "ppid": 116827,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                      "children": [
+                                        {
+                                          "pid": 116852,
+                                          "ppid": 116849,
+                                          "name": "findstr.exe",
+                                          "command": "findstr.exe /i \"WARN\" \"C:\\ProgramData\\Contoso\\Logs\\diag.log\"",
+                                          "children": [
+                                            {
+                                              "pid": 116857,
+                                              "ppid": 116852,
+                                              "name": "timeout.exe",
+                                              "command": "timeout.exe /t 6 /nobreak",
+                                              "children": [
+                                                {
+                                                  "pid": 116858,
+                                                  "ppid": 116857,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /v",
+                                                  "children": [
+                                                    {
+                                                      "pid": 116859,
+                                                      "ppid": 116858,
+                                                      "name": "timeout.exe",
+                                                      "command": "timeout.exe /t 16 /nobreak",
+                                                      "children": [
+                                                        {
+                                                          "pid": 116879,
+                                                          "ppid": 116859,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\host_f03b473f.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 116881,
+                                                              "ppid": 116879,
+                                                              "name": "timeout.exe",
+                                                              "command": "timeout.exe /t 5 /nobreak",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 116888,
+                                                                  "ppid": 116881,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 116895,
+                                                                      "ppid": 116888,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\host_fa3a6898.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 116899,
+                                                                          "ppid": 116895,
+                                                                          "name": "tasklist.exe",
+                                                                          "command": "tasklist.exe /v",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 116904,
+                                                                              "ppid": 116899,
+                                                                              "name": "tasklist.exe",
+                                                                              "command": "tasklist.exe /svc",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 116911,
+                                                                                  "ppid": 116904,
+                                                                                  "name": "hostname.exe",
+                                                                                  "command": "hostname.exe",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 116861,
+      "ppid": 116799,
+      "name": "whoami.exe",
+      "command": "whoami.exe /all > \"C:\\Users\\farhan.bose\\AppData\\Local\\Temp\\who_2c7fc086.txt\"",
+      "children": [
+        {
+          "pid": 116868,
+          "ppid": 116861,
+          "name": "tasklist.exe",
+          "command": "tasklist.exe /svc",
+          "children": [
+            {
+              "pid": 116870,
+              "ppid": 116868,
+              "name": "tasklist.exe",
+              "command": "tasklist.exe",
+              "children": [
+                {
+                  "pid": 116876,
+                  "ppid": 116870,
+                  "name": "choice.exe",
+                  "command": "choice.exe /d y /t 15 > nul",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

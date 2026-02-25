@@ -1,0 +1,285 @@
+{
+  "pid": 90274,
+  "ppid": 0,
+  "name": "services.exe",
+  "command": "services.exe -k WdiServiceHost",
+  "children": [
+    {
+      "pid": 90281,
+      "ppid": 90274,
+      "name": "timeout.exe",
+      "command": "timeout.exe /t 10 /nobreak",
+      "children": [
+        {
+          "pid": 90284,
+          "ppid": 90281,
+          "name": "mshta.exe",
+          "command": "mshta.exe \"C:\\ProgramData\\Alpine\\Assist\\diag_c60d4be2.hta\"",
+          "children": [
+            {
+              "pid": 90291,
+              "ppid": 90284,
+              "name": "whoami.exe",
+              "command": "whoami.exe /groups",
+              "children": [
+                {
+                  "pid": 90295,
+                  "ppid": 90291,
+                  "name": "hostname.exe",
+                  "command": "hostname.exe",
+                  "children": [
+                    {
+                      "pid": 90301,
+                      "ppid": 90295,
+                      "name": "findstr.exe",
+                      "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\BlueYonder\\Logs\\support.log\"",
+                      "children": [
+                        {
+                          "pid": 90305,
+                          "ppid": 90301,
+                          "name": "findstr.exe",
+                          "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\Contoso\\Logs\\profile.log\"",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "pid": 90307,
+                  "ppid": 90291,
+                  "name": "findstr.exe",
+                  "command": "findstr.exe /i \"ERROR\" \"C:\\ProgramData\\Woodgrove\\Logs\\deploy.log\"",
+                  "children": [
+                    {
+                      "pid": 90309,
+                      "ppid": 90307,
+                      "name": "whoami.exe",
+                      "command": "whoami.exe /all > \"C:\\Users\\neha.singh\\AppData\\Local\\Temp\\who_98722f81.txt\"",
+                      "children": [
+                        {
+                          "pid": 90316,
+                          "ppid": 90309,
+                          "name": "msiexec.exe",
+                          "command": "msiexec.exe /i \"C:\\ProgramData\\Alpine\\Build\\support.msi\" /passive /l*v \"C:\\ProgramData\\Contoso\\Logs\\msi_900ba58d.log\"",
+                          "children": [
+                            {
+                              "pid": 90317,
+                              "ppid": 90316,
+                              "name": "cmd.exe",
+                              "command": "cmd.exe /c \"whoami.exe /priv\"",
+                              "children": [
+                                {
+                                  "pid": 90322,
+                                  "ppid": 90317,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\neha.singh\\AppData\\Local\\Temp\\host_ae0e01f3.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 90324,
+                                      "ppid": 90322,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /s",
+                                      "children": [
+                                        {
+                                          "pid": 90328,
+                                          "ppid": 90324,
+                                          "name": "timeout.exe",
+                                          "command": "timeout.exe /t 7 /nobreak",
+                                          "children": [
+                                            {
+                                              "pid": 90335,
+                                              "ppid": 90328,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\BlueYonder\\Logs\\support.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 90339,
+                                                  "ppid": 90335,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 90342,
+                                                      "ppid": 90339,
+                                                      "name": "powershell.exe",
+                                                      "command": "powershell.exe -WindowStyle Hidden -File \"C:\\Users\\neha.singh\\AppData\\Local\\Temp\\BuildPack_1c25a37a.ps1\" -Host \"ENG-868\" -Mode Delta",
+                                                      "children": [
+                                                        {
+                                                          "pid": 90349,
+                                                          "ppid": 90342,
+                                                          "name": "findstr.exe",
+                                                          "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Woodgrove\\Logs\\deploy.log\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 90355,
+                                                              "ppid": 90349,
+                                                              "name": "ping.exe",
+                                                              "command": "ping.exe -n 10 127.0.0.1 > nul",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 90360,
+                                                                  "ppid": 90355,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /all",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 90366,
+                                                                      "ppid": 90360,
+                                                                      "name": "findstr.exe",
+                                                                      "command": "findstr.exe /i \"certificate\" \"C:\\ProgramData\\Wingtip\\Logs\\support.log\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 90383,
+                                                                          "ppid": 90366,
+                                                                          "name": "findstr.exe",
+                                                                          "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Northwind\\Logs\\support.log\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 90390,
+                                                                              "ppid": 90383,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 90397,
+                                                                                  "ppid": 90390,
+                                                                                  "name": "whoami.exe",
+                                                                                  "command": "whoami.exe /groups",
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "pid": 90399,
+                                                                                      "ppid": 90397,
+                                                                                      "name": "whoami.exe",
+                                                                                      "command": "whoami.exe /priv",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "pid": 90405,
+                                                                                          "ppid": 90399,
+                                                                                          "name": "whoami.exe",
+                                                                                          "command": "whoami.exe /priv",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "pid": 90410,
+                                                                                              "ppid": 90405,
+                                                                                              "name": "whoami.exe",
+                                                                                              "command": "whoami.exe /groups > \"C:\\Users\\neha.singh\\AppData\\Local\\Temp\\who_9371dbe0.txt\"",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "pid": 90412,
+                                                                                                  "ppid": 90410,
+                                                                                                  "name": "findstr.exe",
+                                                                                                  "command": "findstr.exe /i \"timeout\" \"C:\\ProgramData\\BlueYonder\\Logs\\update.log\"",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "pid": 90413,
+                                                                                                      "ppid": 90412,
+                                                                                                      "name": "whoami.exe",
+                                                                                                      "command": "whoami.exe",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "pid": 90415,
+                                                                                                          "ppid": 90413,
+                                                                                                          "name": "whoami.exe",
+                                                                                                          "command": "whoami.exe /priv > \"C:\\Users\\neha.singh\\AppData\\Local\\Temp\\who_f13c3a0f.txt\"",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "pid": 90419,
+                                                                                                              "ppid": 90415,
+                                                                                                              "name": "powershell.exe",
+                                                                                                              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 13\"",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "pid": 90425,
+                                                                                                                  "ppid": 90419,
+                                                                                                                  "name": "whoami.exe",
+                                                                                                                  "command": "whoami.exe",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "pid": 90431,
+                                                                                                                      "ppid": 90425,
+                                                                                                                      "name": "whoami.exe",
+                                                                                                                      "command": "whoami.exe /priv > \"C:\\Users\\neha.singh\\AppData\\Local\\Temp\\who_a9d0cd5f.txt\"",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "pid": 90433,
+                                                                                                                          "ppid": 90431,
+                                                                                                                          "name": "whoami.exe",
+                                                                                                                          "command": "whoami.exe /priv",
+                                                                                                                          "children": []
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      ]
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 90371,
+      "ppid": 90274,
+      "name": "whoami.exe",
+      "command": "whoami.exe",
+      "children": [
+        {
+          "pid": 90376,
+          "ppid": 90371,
+          "name": "whoami.exe",
+          "command": "whoami.exe /all > \"C:\\Users\\neha.singh\\AppData\\Local\\Temp\\who_e435e6b0.txt\"",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

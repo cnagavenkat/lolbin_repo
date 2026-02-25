@@ -1,0 +1,235 @@
+{
+  "pid": 293773,
+  "ppid": 0,
+  "name": "cmd.exe",
+  "command": "cmd.exe /c \"echo runbook\"",
+  "children": [
+    {
+      "pid": 293780,
+      "ppid": 293773,
+      "name": "powershell.exe",
+      "command": "powershell.exe -WindowStyle Minimized -ExecutionPolicy Bypass -File \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\RunDiagnostics_277c7084.ps1\" -Host \"WS-642\" -Mode Verify",
+      "children": [
+        {
+          "pid": 293781,
+          "ppid": 293780,
+          "name": "cmd.exe",
+          "command": "cmd.exe /c \"hostname\"",
+          "children": [
+            {
+              "pid": 293784,
+              "ppid": 293781,
+              "name": "powershell.exe",
+              "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 8\"",
+              "children": [
+                {
+                  "pid": 293787,
+                  "ppid": 293784,
+                  "name": "ping.exe",
+                  "command": "ping.exe -n 4 127.0.0.1 > nul",
+                  "children": [
+                    {
+                      "pid": 293792,
+                      "ppid": 293787,
+                      "name": "tasklist.exe",
+                      "command": "tasklist.exe /v",
+                      "children": [
+                        {
+                          "pid": 293798,
+                          "ppid": 293792,
+                          "name": "reg.exe",
+                          "command": "reg.exe query \"HKLM\\System\\CurrentControlSet\\Services\" /s",
+                          "children": [
+                            {
+                              "pid": 293799,
+                              "ppid": 293798,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /priv",
+                              "children": [
+                                {
+                                  "pid": 293814,
+                                  "ppid": 293799,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 11\"",
+                                  "children": [
+                                    {
+                                      "pid": 293818,
+                                      "ppid": 293814,
+                                      "name": "hostname.exe",
+                                      "command": "hostname.exe",
+                                      "children": [
+                                        {
+                                          "pid": 293824,
+                                          "ppid": 293818,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 293831,
+                                              "ppid": 293824,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups > \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\who_c7faaf2f.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 293832,
+                                                  "ppid": 293831,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 293839,
+                                      "ppid": 293814,
+                                      "name": "wevtutil.exe",
+                                      "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Wingtip\\Logs\\Microsoft-Windows-TaskScheduler_Operational_8f6760b3.evtx\"",
+                                      "children": [
+                                        {
+                                          "pid": 293844,
+                                          "ppid": 293839,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 7 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 293847,
+                                              "ppid": 293844,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe > \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\who_ef013c2b.txt\"",
+                                              "children": [
+                                                {
+                                                  "pid": 293854,
+                                                  "ppid": 293847,
+                                                  "name": "tasklist.exe",
+                                                  "command": "tasklist.exe /fi \"imagename eq svchost.exe\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 293856,
+                                                      "ppid": 293854,
+                                                      "name": "whoami.exe",
+                                                      "command": "whoami.exe > \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\who_93160859.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 293862,
+                                                          "ppid": 293856,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /all > \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\who_e888d870.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 293864,
+                                                              "ppid": 293862,
+                                                              "name": "tasklist.exe",
+                                                              "command": "tasklist.exe /svc",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 293871,
+                                                      "ppid": 293854,
+                                                      "name": "makecab.exe",
+                                                      "command": "makecab.exe \"C:\\ProgramData\\Alpine\\Logs\\diag.txt\" \"C:\\ProgramData\\Alpine\\Logs\\diag.cab\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 293876,
+                                                          "ppid": 293871,
+                                                          "name": "ping.exe",
+                                                          "command": "ping.exe -n 6 127.0.0.1 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 293879,
+                                                              "ppid": 293876,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe > \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\who_6dbaa751.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 293892,
+                                                                  "ppid": 293879,
+                                                                  "name": "tasklist.exe",
+                                                                  "command": "tasklist.exe /svc",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 293896,
+                                                                      "ppid": 293892,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 293805,
+      "ppid": 293773,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 14\"",
+      "children": [
+        {
+          "pid": 293807,
+          "ppid": 293805,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": [
+            {
+              "pid": 293808,
+              "ppid": 293807,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\host_4268f94e.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 293881,
+      "ppid": 293773,
+      "name": "hostname.exe",
+      "command": "hostname.exe > \"C:\\Users\\neha.kulkarni\\AppData\\Local\\Temp\\host_86d1993b.txt\"",
+      "children": [
+        {
+          "pid": 293888,
+          "ppid": 293881,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 19 /nobreak",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "pid": 131041,
+  "ppid": 0,
+  "name": "userinit.exe",
+  "command": "userinit.exe /service",
+  "children": [
+    {
+      "pid": 131042,
+      "ppid": 131041,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -Command \"Get-WinEvent -LogName System -MaxEvents 100 | Out-File 'C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\evt_64e71aca.txt'\"",
+      "children": [
+        {
+          "pid": 131045,
+          "ppid": 131042,
+          "name": "schtasks.exe",
+          "command": "schtasks.exe /create /tn \"\\Contoso\\Maint\\Verify\" /tr \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\sync_8d613622.cmd\" /sc daily /st 05:05 /f /ru \"OPS\\meera.singh\"",
+          "children": [
+            {
+              "pid": 131048,
+              "ppid": 131045,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\host_f91f8e88.txt\"",
+              "children": [
+                {
+                  "pid": 131051,
+                  "ppid": 131048,
+                  "name": "whoami.exe",
+                  "command": "whoami.exe /groups > \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\who_c1af268a.txt\"",
+                  "children": [
+                    {
+                      "pid": 131057,
+                      "ppid": 131051,
+                      "name": "cscript.exe",
+                      "command": "cscript.exe //nologo \"C:\\Users\\Public\\Support_45cbe4a7.vbs\" /apply",
+                      "children": [
+                        {
+                          "pid": 131064,
+                          "ppid": 131057,
+                          "name": "whoami.exe",
+                          "command": "whoami.exe /priv > \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\who_a1e959b9.txt\"",
+                          "children": [
+                            {
+                              "pid": 131068,
+                              "ppid": 131064,
+                              "name": "cmd.exe",
+                              "command": "cmd.exe /c \"whoami.exe /groups\"",
+                              "children": [
+                                {
+                                  "pid": 131070,
+                                  "ppid": 131068,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /priv > \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\who_6bb63150.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 131076,
+                                      "ppid": 131070,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /priv",
+                                      "children": [
+                                        {
+                                          "pid": 131077,
+                                          "ppid": 131076,
+                                          "name": "ping.exe",
+                                          "command": "ping.exe -n 5 127.0.0.1 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 131078,
+                                              "ppid": 131077,
+                                              "name": "quser.exe",
+                                              "command": "quser.exe /server:LAP-144",
+                                              "children": [
+                                                {
+                                                  "pid": 131081,
+                                                  "ppid": 131078,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /all",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "pid": 131084,
+                                  "ppid": 131068,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /all",
+                                  "children": [
+                                    {
+                                      "pid": 131095,
+                                      "ppid": 131084,
+                                      "name": "reg.exe",
+                                      "command": "reg.exe add \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"RuntimeAssist\" /t REG_SZ /d \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\Patch_18777e77.ps1\" /f",
+                                      "children": [
+                                        {
+                                          "pid": 131098,
+                                          "ppid": 131095,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe",
+                                          "children": [
+                                            {
+                                              "pid": 131101,
+                                              "ppid": 131098,
+                                              "name": "schtasks.exe",
+                                              "command": "schtasks.exe /query /tn \"\\Acme\\Maintenance\\Cleanup\" /v /fo LIST",
+                                              "children": [
+                                                {
+                                                  "pid": 131104,
+                                                  "ppid": 131101,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe",
+                                                  "children": [
+                                                    {
+                                                      "pid": 131107,
+                                                      "ppid": 131104,
+                                                      "name": "quser.exe",
+                                                      "command": "quser.exe /server:OPS-148",
+                                                      "children": [
+                                                        {
+                                                          "pid": 131112,
+                                                          "ppid": 131107,
+                                                          "name": "timeout.exe",
+                                                          "command": "timeout.exe /t 3 /nobreak",
+                                                          "children": [
+                                                            {
+                                                              "pid": 131116,
+                                                              "ppid": 131112,
+                                                              "name": "hostname.exe",
+                                                              "command": "hostname.exe > \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\host_864b212e.txt\"",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 131118,
+                                                                  "ppid": 131116,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups > \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\who_59fea123.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 131123,
+                                                                      "ppid": 131118,
+                                                                      "name": "quser.exe",
+                                                                      "command": "quser.exe /server:SUP-276",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 131130,
+                                                                          "ppid": 131123,
+                                                                          "name": "quser.exe",
+                                                                          "command": "quser.exe /server:LAP-310",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 131136,
+                                                                              "ppid": 131130,
+                                                                              "name": "whoami.exe",
+                                                                              "command": "whoami.exe /priv > \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\who_1ef92e30.txt\"",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 131143,
+                                                                                  "ppid": 131136,
+                                                                                  "name": "timeout.exe",
+                                                                                  "command": "timeout.exe /t 8 /nobreak",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "pid": 131148,
+                                                                      "ppid": 131118,
+                                                                      "name": "hostname.exe",
+                                                                      "command": "hostname.exe > \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\host_3fd84a78.txt\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 131150,
+                                                                          "ppid": 131148,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\nisha.sharma\\AppData\\Local\\Temp\\host_20d89272.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 131161,
+                                                                              "ppid": 131150,
+                                                                              "name": "choice.exe",
+                                                                              "command": "choice.exe /d y /t 17 > nul",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 131165,
+                                                                                  "ppid": 131161,
+                                                                                  "name": "ping.exe",
+                                                                                  "command": "ping.exe -n 3 127.0.0.1 > nul",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 131087,
+      "ppid": 131041,
+      "name": "quser.exe",
+      "command": "quser.exe /server:SUP-150",
+      "children": [
+        {
+          "pid": 131090,
+          "ppid": 131087,
+          "name": "hostname.exe",
+          "command": "hostname.exe",
+          "children": []
+        }
+      ]
+    },
+    {
+      "pid": 131154,
+      "ppid": 131041,
+      "name": "quser.exe",
+      "command": "quser.exe /server:LAP-605",
+      "children": [
+        {
+          "pid": 131158,
+          "ppid": 131154,
+          "name": "choice.exe",
+          "command": "choice.exe /d y /t 11 > nul",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

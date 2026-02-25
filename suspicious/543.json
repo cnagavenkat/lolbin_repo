@@ -1,0 +1,196 @@
+{
+  "pid": 119609,
+  "ppid": 0,
+  "name": "mmc.exe",
+  "command": "mmc.exe /session",
+  "children": [
+    {
+      "pid": 119613,
+      "ppid": 119609,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Minimized -File \"C:\\IT\\Deploy\\ProfileInit_c753608e.ps1\" -Host \"OPS-238\" -Mode Delta",
+      "children": [
+        {
+          "pid": 119614,
+          "ppid": 119613,
+          "name": "wmic.exe",
+          "command": "wmic.exe process get Name,ProcessId,ParentProcessId",
+          "children": [
+            {
+              "pid": 119620,
+              "ppid": 119614,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\suresh.bose\\AppData\\Local\\Temp\\host_4e1c4aca.txt\"",
+              "children": [
+                {
+                  "pid": 119627,
+                  "ppid": 119620,
+                  "name": "timeout.exe",
+                  "command": "timeout.exe /t 4 /nobreak",
+                  "children": [
+                    {
+                      "pid": 119630,
+                      "ppid": 119627,
+                      "name": "reg.exe",
+                      "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\" /s",
+                      "children": [
+                        {
+                          "pid": 119636,
+                          "ppid": 119630,
+                          "name": "tasklist.exe",
+                          "command": "tasklist.exe /v",
+                          "children": [
+                            {
+                              "pid": 119641,
+                              "ppid": 119636,
+                              "name": "whoami.exe",
+                              "command": "whoami.exe /all > \"C:\\Users\\suresh.bose\\AppData\\Local\\Temp\\who_bb9236ed.txt\"",
+                              "children": [
+                                {
+                                  "pid": 119643,
+                                  "ppid": 119641,
+                                  "name": "powershell.exe",
+                                  "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 10\"",
+                                  "children": [
+                                    {
+                                      "pid": 119647,
+                                      "ppid": 119643,
+                                      "name": "whoami.exe",
+                                      "command": "whoami.exe /all > \"C:\\Users\\suresh.bose\\AppData\\Local\\Temp\\who_ef7d9b8a.txt\"",
+                                      "children": [
+                                        {
+                                          "pid": 119652,
+                                          "ppid": 119647,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /all",
+                                          "children": [
+                                            {
+                                              "pid": 119655,
+                                              "ppid": 119652,
+                                              "name": "whoami.exe",
+                                              "command": "whoami.exe /groups > \"C:\\Users\\suresh.bose\\AppData\\Local\\Temp\\who_65a6c503.txt\"",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "pid": 119662,
+                              "ppid": 119636,
+                              "name": "wevtutil.exe",
+                              "command": "wevtutil.exe epl \"Microsoft-Windows-TaskScheduler/Operational\" \"C:\\ProgramData\\Northwind\\Logs\\Microsoft-Windows-TaskScheduler_Operational_ff7fa86b.evtx\"",
+                              "children": [
+                                {
+                                  "pid": 119664,
+                                  "ppid": 119662,
+                                  "name": "hostname.exe",
+                                  "command": "hostname.exe > \"C:\\Users\\suresh.bose\\AppData\\Local\\Temp\\host_169c2ad4.txt\"",
+                                  "children": [
+                                    {
+                                      "pid": 119665,
+                                      "ppid": 119664,
+                                      "name": "choice.exe",
+                                      "command": "choice.exe /d y /t 19 > nul",
+                                      "children": [
+                                        {
+                                          "pid": 119667,
+                                          "ppid": 119665,
+                                          "name": "whoami.exe",
+                                          "command": "whoami.exe /groups",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "pid": 119669,
+                                      "ppid": 119664,
+                                      "name": "tasklist.exe",
+                                      "command": "tasklist.exe",
+                                      "children": [
+                                        {
+                                          "pid": 119673,
+                                          "ppid": 119669,
+                                          "name": "hostname.exe",
+                                          "command": "hostname.exe > \"C:\\Users\\suresh.bose\\AppData\\Local\\Temp\\host_28845e36.txt\"",
+                                          "children": [
+                                            {
+                                              "pid": 119676,
+                                              "ppid": 119673,
+                                              "name": "tasklist.exe",
+                                              "command": "tasklist.exe",
+                                              "children": [
+                                                {
+                                                  "pid": 119677,
+                                                  "ppid": 119676,
+                                                  "name": "cmd.exe",
+                                                  "command": "cmd.exe /c \"whoami.exe > \"C:\\Users\\suresh.bose\\AppData\\Local\\Temp\\who_6e050f05.txt\"\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 119684,
+                                                      "ppid": 119677,
+                                                      "name": "choice.exe",
+                                                      "command": "choice.exe /d y /t 9 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 119687,
+                                                          "ppid": 119684,
+                                                          "name": "whoami.exe",
+                                                          "command": "whoami.exe /priv",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "pid": 119694,
+                                          "ppid": 119669,
+                                          "name": "choice.exe",
+                                          "command": "choice.exe /d y /t 12 > nul",
+                                          "children": [
+                                            {
+                                              "pid": 119698,
+                                              "ppid": 119694,
+                                              "name": "findstr.exe",
+                                              "command": "findstr.exe /i \"failed\" \"C:\\ProgramData\\Litware\\Logs\\support.log\"",
+                                              "children": [
+                                                {
+                                                  "pid": 119703,
+                                                  "ppid": 119698,
+                                                  "name": "whoami.exe",
+                                                  "command": "whoami.exe /groups > \"C:\\Users\\suresh.bose\\AppData\\Local\\Temp\\who_7dcb2fa9.txt\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

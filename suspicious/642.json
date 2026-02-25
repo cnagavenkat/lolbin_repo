@@ -1,0 +1,283 @@
+{
+  "pid": 130111,
+  "ppid": 0,
+  "name": "winlogon.exe",
+  "command": "winlogon.exe /startup",
+  "children": [
+    {
+      "pid": 130117,
+      "ppid": 130111,
+      "name": "powershell.exe",
+      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Get-ComputerInfo | Out-File 'C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\sched_6d3020d9.txt'\"",
+      "children": [
+        {
+          "pid": 130119,
+          "ppid": 130117,
+          "name": "timeout.exe",
+          "command": "timeout.exe /t 19 /nobreak",
+          "children": [
+            {
+              "pid": 130123,
+              "ppid": 130119,
+              "name": "certutil.exe",
+              "command": "certutil.exe -addstore TrustedPublisher \"C:\\Users\\Public\\intermediate.cer\"",
+              "children": [
+                {
+                  "pid": 130138,
+                  "ppid": 130123,
+                  "name": "net.exe",
+                  "command": "net.exe use Y: \"\\\\filesrv\\IT\\Scripts\" /persistent:no",
+                  "children": [
+                    {
+                      "pid": 130142,
+                      "ppid": 130138,
+                      "name": "net.exe",
+                      "command": "net.exe use U: \"\\\\filesrv\\IT\\Scripts\" /persistent:no",
+                      "children": [
+                        {
+                          "pid": 130149,
+                          "ppid": 130142,
+                          "name": "hostname.exe",
+                          "command": "hostname.exe > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\host_dcecf55c.txt\"",
+                          "children": [
+                            {
+                              "pid": 130153,
+                              "ppid": 130149,
+                              "name": "wscript.exe",
+                              "command": "wscript.exe //nologo \"C:\\Users\\Public\\LoginInit_2105be41.wsf\"",
+                              "children": [
+                                {
+                                  "pid": 130156,
+                                  "ppid": 130153,
+                                  "name": "whoami.exe",
+                                  "command": "whoami.exe /groups",
+                                  "children": [
+                                    {
+                                      "pid": 130163,
+                                      "ppid": 130156,
+                                      "name": "net.exe",
+                                      "command": "net.exe use X: \"\\\\corp\\login\" /persistent:no",
+                                      "children": [
+                                        {
+                                          "pid": 130165,
+                                          "ppid": 130163,
+                                          "name": "reg.exe",
+                                          "command": "reg.exe query \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\" /s",
+                                          "children": [
+                                            {
+                                              "pid": 130166,
+                                              "ppid": 130165,
+                                              "name": "net.exe",
+                                              "command": "net.exe use T: \"\\\\deploy\\packages\" /persistent:no",
+                                              "children": [
+                                                {
+                                                  "pid": 130173,
+                                                  "ppid": 130166,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\host_3655bb3a.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 130178,
+                                                      "ppid": 130173,
+                                                      "name": "hostname.exe",
+                                                      "command": "hostname.exe > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\host_95c13e3d.txt\"",
+                                                      "children": [
+                                                        {
+                                                          "pid": 130183,
+                                                          "ppid": 130178,
+                                                          "name": "choice.exe",
+                                                          "command": "choice.exe /d y /t 17 > nul",
+                                                          "children": [
+                                                            {
+                                                              "pid": 130189,
+                                                              "ppid": 130183,
+                                                              "name": "net.exe",
+                                                              "command": "net.exe use W: \"\\\\filesrv\\IT\\Scripts\" /persistent:no",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "pid": 130190,
+                                                  "ppid": 130166,
+                                                  "name": "hostname.exe",
+                                                  "command": "hostname.exe > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\host_97dbe91f.txt\"",
+                                                  "children": [
+                                                    {
+                                                      "pid": 130192,
+                                                      "ppid": 130190,
+                                                      "name": "ping.exe",
+                                                      "command": "ping.exe -n 22 127.0.0.1 > nul",
+                                                      "children": [
+                                                        {
+                                                          "pid": 130196,
+                                                          "ppid": 130192,
+                                                          "name": "hostname.exe",
+                                                          "command": "hostname.exe > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\host_05857469.txt\"",
+                                                          "children": [
+                                                            {
+                                                              "pid": 130200,
+                                                              "ppid": 130196,
+                                                              "name": "net.exe",
+                                                              "command": "net.exe use S: \"\\\\filesrv\\IT\\Scripts\" /persistent:no",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 130207,
+                                                                  "ppid": 130200,
+                                                                  "name": "whoami.exe",
+                                                                  "command": "whoami.exe /groups > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\who_47c323bb.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 130208,
+                                                                      "ppid": 130207,
+                                                                      "name": "whoami.exe",
+                                                                      "command": "whoami.exe /groups",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "pid": 130212,
+                                                      "ppid": 130190,
+                                                      "name": "net.exe",
+                                                      "command": "net.exe use W: /delete /y",
+                                                      "children": [
+                                                        {
+                                                          "pid": 130217,
+                                                          "ppid": 130212,
+                                                          "name": "powershell.exe",
+                                                          "command": "powershell.exe -NoProfile -WindowStyle Hidden -File \"C:\\ProgramData\\Northwind\\Bridge\\RunDiagnostics_3da09e23.ps1\" -Host \"WS-113\" -Mode Verify",
+                                                          "children": [
+                                                            {
+                                                              "pid": 130220,
+                                                              "ppid": 130217,
+                                                              "name": "whoami.exe",
+                                                              "command": "whoami.exe /groups",
+                                                              "children": [
+                                                                {
+                                                                  "pid": 130222,
+                                                                  "ppid": 130220,
+                                                                  "name": "hostname.exe",
+                                                                  "command": "hostname.exe > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\host_5d5cc657.txt\"",
+                                                                  "children": [
+                                                                    {
+                                                                      "pid": 130225,
+                                                                      "ppid": 130222,
+                                                                      "name": "powershell.exe",
+                                                                      "command": "powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Sleep -Seconds 18\"",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 130228,
+                                                                          "ppid": 130225,
+                                                                          "name": "hostname.exe",
+                                                                          "command": "hostname.exe > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\host_7906c24c.txt\"",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 130229,
+                                                                              "ppid": 130228,
+                                                                              "name": "net.exe",
+                                                                              "command": "net.exe use R: \"\\\\bldsrv\\drops\" /persistent:no",
+                                                                              "children": [
+                                                                                {
+                                                                                  "pid": 130234,
+                                                                                  "ppid": 130229,
+                                                                                  "name": "choice.exe",
+                                                                                  "command": "choice.exe /d y /t 16 > nul",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "pid": 130241,
+                                                                      "ppid": 130222,
+                                                                      "name": "timeout.exe",
+                                                                      "command": "timeout.exe /t 13 /nobreak",
+                                                                      "children": [
+                                                                        {
+                                                                          "pid": 130245,
+                                                                          "ppid": 130241,
+                                                                          "name": "net.exe",
+                                                                          "command": "net.exe use Y: \"\\\\ops\\maint\" /persistent:no",
+                                                                          "children": [
+                                                                            {
+                                                                              "pid": 130251,
+                                                                              "ppid": 130245,
+                                                                              "name": "hostname.exe",
+                                                                              "command": "hostname.exe",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pid": 130127,
+      "ppid": 130111,
+      "name": "ping.exe",
+      "command": "ping.exe -n 17 127.0.0.1 > nul",
+      "children": [
+        {
+          "pid": 130133,
+          "ppid": 130127,
+          "name": "hostname.exe",
+          "command": "hostname.exe > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\host_0c3ec9ff.txt\"",
+          "children": [
+            {
+              "pid": 130137,
+              "ppid": 130133,
+              "name": "hostname.exe",
+              "command": "hostname.exe > \"C:\\Users\\arjun.nair\\AppData\\Local\\Temp\\host_42240397.txt\"",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
